@@ -1,0 +1,2 @@
+* hrtim timer c, при генерации кода, куб забывает указать ф-ю: LL_HRTIM_TIM_SetCountingMode
+* makefile при генерации кода, куб забывает указать строку после #cpu: CPU = -mcpu=cortex-m4 

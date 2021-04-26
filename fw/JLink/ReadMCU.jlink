@@ -1,0 +1,4 @@
+savebin build\motor_controller_g474.bin, 0x00, 0x4000
+r
+g
+q

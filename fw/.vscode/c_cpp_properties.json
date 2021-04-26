@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "arm_c_cpp_properties",
+            "compilerPath": "D:/apps/embedded_gcc/arm_gcc/bin/arm-none-eabi-gcc.exe",
+            "includePath": [
+                "D:/apps/embedded_gcc/arm_gcc/arm-none-eabi/include",
+                "D:/apps/embedded_gcc/arm_gcc/arm-none-eabi/include/sys/",
+                "D:/apps/embedded_gcc/arm_gcc/lib/**",
+                "${workspaceRoot}/Drivers/**",
+                "${workspaceRoot}/Inc/**",
+                "${workspaceRoot}/Src/**"
+            ],
+            "defines": [
+                "STM32G474xx",
+                "M4",
+                "GCC_ARMCM4"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}

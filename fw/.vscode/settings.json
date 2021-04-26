@@ -1,0 +1,30 @@
+{
+	"cortex-debug.enableTelemetry": false,
+	"cortex-debug.JLinkGDBServerPath": "C:/Program Files (x86)/SEGGER/JLink/JLinkGDBServerCL.exe",
+	"files.associations": {
+		"stm32f3xx.h": "c",
+		"main.h": "c",
+		"ledandbutton.h": "c",
+		"stm32f334x8.h": "c",
+		"systemandclock.h": "c",
+		"usart.h": "c",
+		"stdio.h": "c",
+		"highresolutionpwm.h": "c",
+		"debugoutput.h": "c",
+		"delay.h": "c",
+		"voltageandcurrentadc.h": "c",
+		"basicinit.h": "c",
+		"systemmonitor.h": "c",
+		"chargeforbattery.h": "c",
+		"stm32g4xx_ll_adc.h": "c",
+		"qep_g474.h": "c",
+		"ipark.h": "c",
+		"pid_reg3.h": "c",
+		"clarke.h": "c",
+		"pi.h": "c",
+		"encoder.h": "c",
+		"stm32g4xx_it.h": "c",
+		"limits": "cpp",
+		"sys.h": "c"
+	}
+}
