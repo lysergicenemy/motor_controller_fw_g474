@@ -1,0 +1,1 @@
+[{"node":"FPU.FPCCR","expanded":true,"format":0},{"node":"FPU.FPSCR","expanded":true,"format":0},{"node":"FLASH.SR","expanded":true,"format":0},{"node":"FLASH.CR","expanded":true,"format":0},{"node":"USART2","expanded":true,"format":0},{"node":"USART2.BRR","expanded":true,"format":2},{"node":"USART2.TDR","expanded":true,"format":0}]

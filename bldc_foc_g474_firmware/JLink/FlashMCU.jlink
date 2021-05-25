@@ -1,0 +1,6 @@
+r
+loadbin build\bldc_foc_g474_firmware.bin, 0x00
+verifybin build\bldc_foc_g474_firmware.bin, 0x00
+r
+g
+q

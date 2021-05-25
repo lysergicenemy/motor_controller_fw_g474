@@ -1,0 +1,4 @@
+savebin build\bldc_foc_g474_firmware.bin, 0x00, 0x4000
+r
+g
+q

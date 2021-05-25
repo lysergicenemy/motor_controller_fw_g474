@@ -1,6 +1,0 @@
-r
-loadbin build\motor_controller_g474.bin, 0x00
-verifybin build\motor_controller_g474.bin, 0x00
-r
-g
-q
