@@ -87,7 +87,8 @@ void MX_TIM2_Init(void)
 }
 /* USER CODE END 0 */
 
-/* TIM7 init function */
+/** TIM7 init function
+ *  Used for 1ms ISR*/
 void MX_TIM7_Init(void)
 {
   LL_TIM_InitTypeDef TIM_InitStruct = {0};
@@ -96,12 +97,12 @@ void MX_TIM7_Init(void)
   LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_TIM7);
 
   /* TIM7 interrupt Init */
-  NVIC_SetPriority(TIM7_DAC_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),0, 0));
+  NVIC_SetPriority(TIM7_DAC_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),1, 0));
   NVIC_EnableIRQ(TIM7_DAC_IRQn);
 
-  TIM_InitStruct.Prescaler = 1699;
+  TIM_InitStruct.Prescaler = 169;
   TIM_InitStruct.CounterMode = LL_TIM_COUNTERMODE_UP;
-  TIM_InitStruct.Autoreload = 9999;
+  TIM_InitStruct.Autoreload = 999;
   LL_TIM_Init(TIM7, &TIM_InitStruct);
   LL_TIM_EnableARRPreload(TIM7);
   LL_TIM_SetTriggerOutput(TIM7, LL_TIM_TRGO_RESET);

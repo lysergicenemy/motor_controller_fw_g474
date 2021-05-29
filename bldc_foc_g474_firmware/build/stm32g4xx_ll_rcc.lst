@@ -1,4 +1,4 @@
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
   29:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #include "stm32g4xx.h"
   30:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** 
   31:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** /** @addtogroup STM32G4xx_LL_Driver
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 2
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 2
 
 
   32:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @{
@@ -118,7 +118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
   86:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** {
   87:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   uint32_t SYSCLK_Frequency;        /*!< SYSCLK clock frequency */
   88:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   uint32_t HCLK_Frequency;          /*!< HCLK clock frequency */
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 3
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 3
 
 
   89:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   uint32_t PCLK1_Frequency;         /*!< PCLK1 clock frequency */
@@ -146,7 +146,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  111:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @{
  112:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
  113:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #if !defined  (HSE_VALUE)
- 114:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define HSE_VALUE    8000000U   /*!< Value of the HSE oscillator in Hz */
+ 114:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define HSE_VALUE    10000000U   /*!< Value of the HSE oscillator in Hz */
  115:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #endif /* HSE_VALUE */
  116:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** 
  117:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #if !defined  (HSI_VALUE)
@@ -178,7 +178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  143:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @{
  144:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
  145:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_CICR_LSIRDYC                RCC_CICR_LSIRDYC     /*!< LSI Ready Interrupt Clear */
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 4
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 4
 
 
  146:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_CICR_LSERDYC                RCC_CICR_LSERDYC     /*!< LSE Ready Interrupt Clear */
@@ -238,7 +238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  200:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_LSEDRIVE_MEDIUMHIGH         RCC_BDCR_LSEDRV_1       /*!< Xtal mode medium high drivi
  201:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_LSEDRIVE_HIGH               RCC_BDCR_LSEDRV         /*!< Xtal mode higher driving ca
  202:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 5
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 5
 
 
  203:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @}
@@ -298,7 +298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  257:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_APB1_DIV_8                  RCC_CFGR_PPRE1_DIV8  /*!< HCLK divided by 8 */
  258:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_APB1_DIV_16                 RCC_CFGR_PPRE1_DIV16 /*!< HCLK divided by 16 */
  259:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 6
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 6
 
 
  260:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @}
@@ -358,7 +358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  314:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @{
  315:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
  316:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_USART1_CLKSOURCE_PCLK2      (RCC_CCIPR_USART1SEL << 16U)                           /
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 7
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 7
 
 
  317:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_USART1_CLKSOURCE_SYSCLK     ((RCC_CCIPR_USART1SEL << 16U) | RCC_CCIPR_USART1SEL_0) /
@@ -418,7 +418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  371:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_I2C3_CLKSOURCE_PCLK1        ((RCC_OFFSET_CCIPR << 24U) | (RCC_CCIPR_I2C3SEL_Pos << 1
  372:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_I2C3_CLKSOURCE_SYSCLK       ((RCC_OFFSET_CCIPR << 24U) | (RCC_CCIPR_I2C3SEL_Pos << 1
  373:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_I2C3_CLKSOURCE_HSI          ((RCC_OFFSET_CCIPR << 24U) | (RCC_CCIPR_I2C3SEL_Pos << 1
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 8
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 8
 
 
  374:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #if defined(RCC_CCIPR2_I2C4SEL)
@@ -478,7 +478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  428:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** /** @defgroup RCC_LL_EC_RNG_CLKSOURCE  Peripheral RNG clock source selection
  429:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @{
  430:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 9
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 9
 
 
  431:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_RNG_CLKSOURCE_HSI48        0x00000000U             /*!< HSI48 clock used as RNG cloc
@@ -538,7 +538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  485:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #if defined(RCC_CCIPR_UART4SEL)
  486:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_UART4_CLKSOURCE             RCC_CCIPR_UART4SEL /*!< UART4 Clock source selection */
  487:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #endif /* RCC_CCIPR_UART4SEL */
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 10
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 10
 
 
  488:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #if defined(RCC_CCIPR_UART5SEL)
@@ -598,7 +598,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  542:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @{
  543:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
  544:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_FDCAN_CLKSOURCE             RCC_CCIPR_FDCANSEL /*!< FDCAN Clock source selection */
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 11
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 11
 
 
  545:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #endif /* FDCAN1 */
@@ -658,7 +658,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  599:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @{
  600:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
  601:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_PLLSOURCE_NONE              0x00000000U             /*!< No clock */
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 12
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 12
 
 
  602:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_PLLSOURCE_HSI               RCC_PLLCFGR_PLLSRC_HSI  /*!< HSI16 clock selected as PLL
@@ -718,7 +718,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  656:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_PLLP_DIV_13                 (RCC_PLLCFGR_PLLPDIV_3|RCC_PLLCFGR_PLLPDIV_2|RCC_PLLCFGR
  657:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_PLLP_DIV_14                 (RCC_PLLCFGR_PLLPDIV_3|RCC_PLLCFGR_PLLPDIV_2|RCC_PLLCFGR
  658:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_PLLP_DIV_15                 (RCC_PLLCFGR_PLLPDIV_3|RCC_PLLCFGR_PLLPDIV_2|RCC_PLLCFGR
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 13
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 13
 
 
  659:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_PLLP_DIV_16                 (RCC_PLLCFGR_PLLPDIV_4)                                 
@@ -778,7 +778,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  713:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @param  __REG__ Register to be read
  714:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @retval Register value
  715:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 14
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 14
 
 
  716:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_ReadReg(__REG__) READ_REG(RCC->__REG__)
@@ -838,7 +838,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  770:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLM_DIV_7
  771:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLM_DIV_8
  772:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLM_DIV_9
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 15
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 15
 
 
  773:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLM_DIV_10
@@ -898,7 +898,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  827:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLM_DIV_4
  828:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLM_DIV_5
  829:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLM_DIV_6
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 16
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 16
 
 
  830:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLM_DIV_7
@@ -958,7 +958,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  884:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @param  __APB2PRESCALER__ This parameter can be one of the following values:
  885:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_APB2_DIV_1
  886:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_APB2_DIV_2
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 17
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 17
 
 
  887:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_APB2_DIV_4
@@ -1018,7 +1018,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  941:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** /**
  942:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @brief  Enable HSE crystal oscillator (HSE ON)
  943:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @rmtoll CR           HSEON         LL_RCC_HSE_Enable
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 18
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 18
 
 
  944:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @retval None
@@ -1078,7 +1078,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
   56 001a BD46     		mov	sp, r7
   57              	.LCFI2:
   58              		.cfi_def_cfa_register 13
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 19
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 19
 
 
   59              		@ sp needed
@@ -1138,7 +1138,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
 1004:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
 1005:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** __STATIC_INLINE void LL_RCC_HSI_Enable(void)
 1006:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** {
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 20
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 20
 
 
   81              		.loc 1 1006 1
@@ -1198,7 +1198,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
 1018:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
 1019:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** 
 1020:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 21
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 21
 
 
 1021:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @brief  Check if HSI clock is ready
@@ -1258,7 +1258,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  173              		.thumb
  174              		.thumb_func
  175              		.fpu fpv4-sp-d16
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 22
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 22
 
 
  177              	LL_RCC_HSI_SetCalibTrimming:
@@ -1318,7 +1318,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  205 001a 00BF     		nop
  206 001c 0C37     		adds	r7, r7, #12
  207              	.LCFI15:
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 23
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 23
 
 
  208              		.cfi_def_cfa_offset 4
@@ -1378,7 +1378,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
 1085:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @brief  Disable HSI48
 1086:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @rmtoll CRRCR          HSI48ON       LL_RCC_HSI48_Disable
 1087:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @retval None
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 24
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 24
 
 
 1088:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
@@ -1438,7 +1438,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  273              	.L23:
  274 0024 00100240 		.word	1073876992
  275              		.cfi_endproc
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 25
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 25
 
 
  276              	.LFE146:
@@ -1498,7 +1498,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
 1148:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** {
 1149:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   SET_BIT(RCC->BDCR, RCC_BDCR_LSEBYP);
 1150:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 26
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 26
 
 
 1151:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** 
@@ -1558,7 +1558,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
 1205:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *       failure detection. In that case it MUST be disabled by software.
 1206:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @rmtoll BDCR         LSECSSON      LL_RCC_LSE_DisableCSS
 1207:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @retval None
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 27
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 27
 
 
 1208:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
@@ -1618,7 +1618,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  326              	.L29:
  327 0024 00100240 		.word	1073876992
  328              		.cfi_endproc
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 28
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 28
 
 
  329              	.LFE156:
@@ -1678,7 +1678,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
 1268:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** {
  340              		.loc 1 1268 1
  341              		.cfi_startproc
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 29
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 29
 
 
  342              		@ args = 0, pretend = 0, frame = 0
@@ -1738,7 +1738,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
 1274:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
 1275:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** 
 1276:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** /** @defgroup RCC_LL_EF_LSCO LSCO
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 30
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 30
 
 
 1277:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @{
@@ -1798,7 +1798,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
 1331:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
 1332:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** 
 1333:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 31
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 31
 
 
 1334:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @brief  Configure the system clock source
@@ -1858,7 +1858,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  422 0016 00BF     		.align	2
  423              	.L39:
  424 0018 00100240 		.word	1073876992
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 32
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 32
 
 
  425              		.cfi_endproc
@@ -1918,7 +1918,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
 1403:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_APB2_DIV_8
 1404:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_APB2_DIV_16
 1405:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @retval None
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 33
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 33
 
 
 1406:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
@@ -1978,7 +1978,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  467              	.L43:
  468 0018 00100240 		.word	1073876992
  469              		.cfi_endproc
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 34
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 34
 
 
  470              	.LFE170:
@@ -2038,7 +2038,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  511              	.L47:
  512 0018 00100240 		.word	1073876992
  513              		.cfi_endproc
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 35
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 35
 
 
  514              	.LFE171:
@@ -2098,7 +2098,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  555              	.L51:
  556 0018 00100240 		.word	1073876992
  557              		.cfi_endproc
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 36
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 36
 
 
  558              	.LFE172:
@@ -2158,7 +2158,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
 1505:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** /**
 1506:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @brief  Configure USARTx clock source
 1507:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @rmtoll CCIPR        USARTxSEL     LL_RCC_SetUSARTClockSource
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 37
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 37
 
 
 1508:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @param  USARTxSource This parameter can be one of the following values:
@@ -2218,7 +2218,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
 1562:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** {
 1563:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   MODIFY_REG(RCC->CCIPR, RCC_CCIPR_LPUART1SEL, LPUARTxSource);
 1564:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 38
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 38
 
 
 1565:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** 
@@ -2278,7 +2278,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
 1619:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** __STATIC_INLINE void LL_RCC_SetSAIClockSource(uint32_t SAIxSource)
 1620:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** {
 1621:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   MODIFY_REG(RCC->CCIPR, RCC_CCIPR_SAI1SEL, SAIxSource);
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 39
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 39
 
 
 1622:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
@@ -2338,7 +2338,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
 1676:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** __STATIC_INLINE void LL_RCC_SetUSBClockSource(uint32_t USBxSource)
 1677:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** {
 1678:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   MODIFY_REG(RCC->CCIPR, RCC_CCIPR_CLK48SEL, USBxSource);
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 40
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 40
 
 
 1679:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
@@ -2398,7 +2398,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
 1733:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_USART3_CLKSOURCE_PCLK1
 1734:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_USART3_CLKSOURCE_SYSCLK
 1735:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_USART3_CLKSOURCE_HSI
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 41
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 41
 
 
 1736:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_USART3_CLKSOURCE_LSE
@@ -2458,7 +2458,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  618              		.syntax unified
  619              		.thumb
  620              		.thumb_func
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 42
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 42
 
 
  621              		.fpu fpv4-sp-d16
@@ -2518,7 +2518,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  652 0018 1846     		mov	r0, r3
  653 001a 0C37     		adds	r7, r7, #12
  654              	.LCFI55:
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 43
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 43
 
 
  655              		.cfi_def_cfa_offset 4
@@ -2578,7 +2578,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  696 0006 7860     		str	r0, [r7, #4]
 1781:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   return (uint32_t)(READ_BIT(RCC->CCIPR, LPUARTx));
  697              		.loc 1 1781 21
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 44
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 44
 
 
  698 0008 054B     		ldr	r3, .L63
@@ -2638,7 +2638,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
 1803:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_I2C3_CLKSOURCE_HSI
 1804:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_I2C4_CLKSOURCE_PCLK1 (*)
 1805:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_I2C4_CLKSOURCE_SYSCLK (*)
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 45
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 45
 
 
 1806:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_I2C4_CLKSOURCE_HSI (*)
@@ -2698,7 +2698,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  778              		.loc 1 1814 1
  779 0038 1846     		mov	r0, r3
  780 003a 1437     		adds	r7, r7, #20
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 46
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 46
 
 
  781              	.LCFI67:
@@ -2758,7 +2758,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  823 0006 7860     		str	r0, [r7, #4]
 1829:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   return (uint32_t)(READ_BIT(RCC->CCIPR, LPTIMx));
  824              		.loc 1 1829 21
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 47
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 47
 
 
  825 0008 054B     		ldr	r3, .L71
@@ -2818,7 +2818,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  862              		@ args = 0, pretend = 0, frame = 8
  863              		@ frame_needed = 1, uses_anonymous_args = 0
  864              		@ link register save eliminated.
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 48
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 48
 
 
  865 0000 80B4     		push	{r7}
@@ -2878,7 +2878,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
 1858:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_I2S_CLKSOURCE_SYSCLK
 1859:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_I2S_CLKSOURCE_PLL
 1860:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_I2S_CLKSOURCE_PIN
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 49
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 49
 
 
 1861:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_I2S_CLKSOURCE_HSI
@@ -2938,7 +2938,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  962              	LL_RCC_GetFDCANClockSource:
  963              	.LFB193:
 1867:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 50
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 50
 
 
 1868:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #if defined(FDCAN1)
@@ -2998,7 +2998,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  1002              	.L83:
  1003 0020 00100240 		.word	1073876992
  1004              		.cfi_endproc
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 51
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 51
 
 
  1005              	.LFE193:
@@ -3058,7 +3058,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  1046              		@ sp needed
  1047 0018 5DF8047B 		ldr	r7, [sp], #4
  1048              	.LCFI99:
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 52
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 52
 
 
  1049              		.cfi_restore 7
@@ -3118,7 +3118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  1091 0012 1846     		mov	r0, r3
  1092 0014 0C37     		adds	r7, r7, #12
  1093              	.LCFI103:
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 53
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 53
 
 
  1094              		.cfi_def_cfa_offset 4
@@ -3178,7 +3178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  1131              		.cfi_def_cfa_offset 16
  1132 0004 00AF     		add	r7, sp, #0
  1133              	.LCFI108:
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 54
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 54
 
 
  1134              		.cfi_def_cfa_register 7
@@ -3238,7 +3238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
 1935:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #if defined(QUADSPI)
 1936:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** /**
 1937:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @brief  Get QUADSPI clock source
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 55
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 55
 
 
 1938:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @rmtoll CCIPR2         QSPISEL     LL_RCC_GetQUADSPIClockSource
@@ -3298,7 +3298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  1230              		.section	.text.LL_RCC_PLL_IsReady,"ax",%progbits
  1231              		.align	1
  1232              		.syntax unified
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 56
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 56
 
 
  1233              		.thumb
@@ -3358,7 +3358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
 1999:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
 2000:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** 
 2001:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 57
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 57
 
 
 2002:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @brief  Disable RTC
@@ -3418,7 +3418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
 2056:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** {
 2057:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   SET_BIT(RCC->CR, RCC_CR_PLLON);
 2058:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 58
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 58
 
 
 2059:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** 
@@ -3478,7 +3478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  1272              	.LCFI121:
  1273              		.cfi_restore 7
  1274              		.cfi_def_cfa_offset 0
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 59
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 59
 
 
  1275 0020 7047     		bx	lr
@@ -3538,7 +3538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
 2119:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** __STATIC_INLINE void LL_RCC_PLL_ConfigDomain_SYS(uint32_t Source, uint32_t PLLM, uint32_t PLLN, uin
 2120:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** {
 2121:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   MODIFY_REG(RCC->PLLCFGR, RCC_PLLCFGR_PLLSRC | RCC_PLLCFGR_PLLM | RCC_PLLCFGR_PLLN | RCC_PLLCFGR_P
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 60
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 60
 
 
 2122:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****              Source | PLLM | (PLLN << RCC_PLLCFGR_PLLN_Pos) | PLLR);
@@ -3598,7 +3598,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
 2176:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLP_DIV_21
 2177:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLP_DIV_22
 2178:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLP_DIV_23
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 61
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 61
 
 
 2179:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLP_DIV_24
@@ -3658,7 +3658,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
 2233:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
 2234:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** __STATIC_INLINE void LL_RCC_PLL_ConfigDomain_48M(uint32_t Source, uint32_t PLLM, uint32_t PLLN, uin
 2235:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** {
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 62
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 62
 
 
 2236:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   MODIFY_REG(RCC->PLLCFGR, RCC_PLLCFGR_PLLSRC | RCC_PLLCFGR_PLLM | RCC_PLLCFGR_PLLN | RCC_PLLCFGR_P
@@ -3718,7 +3718,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  1316              	.LCFI125:
  1317              		.cfi_restore 7
  1318              		.cfi_def_cfa_offset 0
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 63
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 63
 
 
  1319 0014 7047     		bx	lr
@@ -3778,7 +3778,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  1365              	.L114:
  1366              		.align	2
  1367              	.L113:
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 64
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 64
 
 
  1368 0018 00100240 		.word	1073876992
@@ -3838,7 +3838,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  1384              		@ frame_needed = 1, uses_anonymous_args = 0
  1385              		@ link register save eliminated.
  1386 0000 80B4     		push	{r7}
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 65
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 65
 
 
  1387              	.LCFI130:
@@ -3898,7 +3898,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  1440              		.align	1
  1441              		.syntax unified
  1442              		.thumb
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 66
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 66
 
 
  1443              		.thumb_func
@@ -3958,7 +3958,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  1484              		.align	1
  1485              		.syntax unified
  1486              		.thumb
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 67
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 67
 
 
  1487              		.thumb_func
@@ -4018,7 +4018,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  1528              		.align	1
  1529              		.syntax unified
  1530              		.thumb
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 68
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 68
 
 
  1531              		.thumb_func
@@ -4078,7 +4078,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  1560              	.LCFI145:
  1561              		.cfi_restore 7
  1562              		.cfi_def_cfa_offset 0
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 69
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 69
 
 
  1563 0014 7047     		bx	lr
@@ -4138,7 +4138,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
 2413:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @note In order to save power, when the PLLCLK  of the PLL is
 2414:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *       not used,  should be 0
 2415:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @rmtoll PLLCFGR      PLLQEN        LL_RCC_PLL_DisableDomain_48M
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 70
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 70
 
 
 2416:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @retval None
@@ -4198,7 +4198,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
 2470:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** __STATIC_INLINE void LL_RCC_ClearFlag_LSERDY(void)
 2471:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** {
 2472:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   SET_BIT(RCC->CICR, RCC_CICR_LSERDYC);
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 71
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 71
 
 
 2473:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
@@ -4258,7 +4258,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
 2527:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @rmtoll CICR         LSECSSC       LL_RCC_ClearFlag_LSECSS
 2528:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @retval None
 2529:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 72
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 72
 
 
 2530:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** __STATIC_INLINE void LL_RCC_ClearFlag_LSECSS(void)
@@ -4318,7 +4318,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
 2584:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** 
 2585:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** /**
 2586:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @brief  Check if HSI48 ready interrupt occurred or not
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 73
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 73
 
 
 2587:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @rmtoll CIR          HSI48RDYF     LL_RCC_IsActiveFlag_HSI48RDY
@@ -4378,7 +4378,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
 2641:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** {
 2642:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   return ((READ_BIT(RCC->CSR, RCC_CSR_OBLRSTF) == (RCC_CSR_OBLRSTF)) ? 1UL : 0UL);
 2643:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 74
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 74
 
 
 2644:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** 
@@ -4438,7 +4438,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  1586              	.LCFI146:
  1587              		.cfi_def_cfa_offset 4
  1588              		.cfi_offset 7, -4
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 75
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 75
 
 
  1589 0002 00AF     		add	r7, sp, #0
@@ -4498,7 +4498,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
   17:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   ******************************************************************************
   18:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   */
   19:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** #if defined(USE_FULL_LL_DRIVER)
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 76
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 76
 
 
   20:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
@@ -4558,7 +4558,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
   74:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** #define IS_LL_RCC_USB_CLKSOURCE(__VALUE__)    (((__VALUE__) == LL_RCC_USB_CLKSOURCE))
   75:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
   76:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** #if defined(ADC345_COMMON)
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 77
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 77
 
 
   77:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** #define IS_LL_RCC_ADC_CLKSOURCE(__VALUE__)    (((__VALUE__) == LL_RCC_ADC12_CLKSOURCE) \
@@ -4618,7 +4618,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  131:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   * @retval An ErrorStatus enumeration value:
  132:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   *          - SUCCESS: RCC registers are de-initialized
  133:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   *          - ERROR: not applicable
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 78
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 78
 
 
  134:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   */
@@ -4678,7 +4678,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  1665 0028 0346     		mov	r3, r0
  1666              		.loc 2 149 8 discriminator 1
  1667 002a 042B     		cmp	r3, #4
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 79
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 79
 
 
  1668 002c FAD1     		bne	.L140
@@ -4738,7 +4738,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  171:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   /* Clear reset flags */
  172:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   LL_RCC_ClearResetFlags();
  1701              		.loc 2 172 3
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 80
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 80
 
 
  1702 0064 FFF7FEFF 		bl	LL_RCC_ClearResetFlags
@@ -4798,7 +4798,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  199:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   * @{
  200:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   */
  201:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 81
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 81
 
 
  202:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** /**
@@ -4858,7 +4858,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  1768 002c 0246     		mov	r2, r0
  1769              		.loc 2 219 32
  1770 002e 7B68     		ldr	r3, [r7, #4]
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 82
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 82
 
 
  1771 0030 9A60     		str	r2, [r3, #8]
@@ -4918,7 +4918,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  1810              		.cfi_def_cfa_offset 8
  1811              		.cfi_offset 7, -8
  1812              		.cfi_offset 14, -4
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 83
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 83
 
 
  1813 0002 84B0     		sub	sp, sp, #16
@@ -4978,7 +4978,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  1851 003c 7BD0     		beq	.L168
  253:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****         {
  254:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****           usart_frequency = HSI_VALUE;
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 84
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 84
 
 
  1852              		.loc 2 254 27
@@ -5038,7 +5038,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  274:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****     switch (LL_RCC_GetUSARTClockSource(USARTxSource))
  1887              		.loc 2 274 13
  1888 0076 7868     		ldr	r0, [r7, #4]
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 85
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 85
 
 
  1889 0078 FFF7FEFF 		bl	LL_RCC_GetUSARTClockSource
@@ -5098,7 +5098,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  291:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****         }
  292:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****         break;
  1927              		.loc 2 292 9
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 86
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 86
 
 
  1928 00b8 43E0     		b	.L171
@@ -5158,7 +5158,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  1965              	.L162:
  310:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
  311:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****         case LL_RCC_USART3_CLKSOURCE_HSI:    /* USART3 Clock is HSI Osc. */
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 87
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 87
 
 
  312:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****           if (LL_RCC_HSI_IsReady() != 0U)
@@ -5218,7 +5218,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  2002              		.loc 2 256 9
  2003 0136 00BF     		nop
  2004 0138 0AE0     		b	.L154
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 88
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 88
 
 
  2005              	.L169:
@@ -5278,7 +5278,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  2049 0170 20003000 		.word	3145760
  2050 0174 10003000 		.word	3145744
  2051              		.cfi_endproc
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 89
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 89
 
 
  2052              	.LFE271:
@@ -5338,7 +5338,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  355:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****     /* UART4CLK clock frequency */
  356:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****     switch (LL_RCC_GetUARTClockSource(UARTxSource))
  2087              		.loc 2 356 13
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 90
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 90
 
 
  2088 0012 7868     		ldr	r0, [r7, #4]
@@ -5398,7 +5398,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  2126 0052 FB60     		str	r3, [r7, #12]
  373:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****         }
  374:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****         break;
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 91
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 91
 
 
  2127              		.loc 2 374 9
@@ -5458,7 +5458,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  2166 0092 0ED0     		beq	.L186
  2167 0094 1A4A     		ldr	r2, .L197+16
  2168 0096 9342     		cmp	r3, r2
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 92
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 92
 
 
  2169 0098 14D1     		bne	.L187
@@ -5518,7 +5518,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  2201 00c4 FFF7FEFF 		bl	RCC_GetSystemClockFreq
  2202 00c8 0346     		mov	r3, r0
  2203 00ca 1846     		mov	r0, r3
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 93
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 93
 
 
  2204 00cc FFF7FEFF 		bl	RCC_GetHCLKClockFreq
@@ -5578,7 +5578,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  2250              		.thumb
  2251              		.thumb_func
  2252              		.fpu fpv4-sp-d16
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 94
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 94
 
 
  2254              	LL_RCC_GetI2CClockFreq:
@@ -5638,7 +5638,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  2283 001a 0346     		mov	r3, r0
  2284              		.loc 2 441 5
  2285 001c 534A     		ldr	r2, .L233+4
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 95
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 95
 
 
  2286 001e 9342     		cmp	r3, r2
@@ -5698,7 +5698,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  458:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****     }
  459:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   }
  460:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   else if (I2CxSource == LL_RCC_I2C2_CLKSOURCE)
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 96
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 96
 
 
  2324              		.loc 2 460 11
@@ -5758,7 +5758,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  2360              		.loc 2 478 25
  2361 0094 FFF7FEFF 		bl	RCC_GetSystemClockFreq
  2362 0098 0346     		mov	r3, r0
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 97
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 97
 
 
  2363 009a 1846     		mov	r0, r3
@@ -5818,7 +5818,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  2401 00da 002B     		cmp	r3, #0
  2402 00dc 3AD0     		beq	.L230
  495:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****           {
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 98
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 98
 
 
  496:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****             i2c_frequency = HSI_VALUE;
@@ -5878,7 +5878,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  513:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****         {
  514:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****           case LL_RCC_I2C4_CLKSOURCE_SYSCLK: /* I2C4 Clock is System Clock */
  515:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****             i2c_frequency = RCC_GetSystemClockFreq();
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 99
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 99
 
 
  2440              		.loc 2 515 29
@@ -5938,7 +5938,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  2478              		.loc 2 498 11
  2479 0154 00BF     		nop
  2480 0156 02E0     		b	.L206
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 100
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 100
 
 
  2481              	.L231:
@@ -5998,7 +5998,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  2528              	LL_RCC_GetLPUARTClockFreq:
  2529              	.LFB274:
  537:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 101
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 101
 
 
  538:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
@@ -6058,7 +6058,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  2563              		.loc 2 558 7
  2564 002c 1FE0     		b	.L239
  2565              	.L236:
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 102
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 102
 
 
  559:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
@@ -6118,7 +6118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  2601              	.L243:
  565:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
  2602              		.loc 2 565 7
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 103
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 103
 
 
  2603 0068 00BF     		nop
@@ -6178,7 +6178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  2644              		.cfi_def_cfa_offset 8
  2645              		.cfi_offset 7, -8
  2646              		.cfi_offset 14, -4
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 104
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 104
 
 
  2647 0002 84B0     		sub	sp, sp, #16
@@ -6238,7 +6238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  609:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****       case LL_RCC_LPTIM1_CLKSOURCE_HSI:    /* LPTIM1 Clock is HSI Osc. */
  610:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****         if (LL_RCC_HSI_IsReady() != 0U)
  2684              		.loc 2 610 13
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 105
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 105
 
 
  2685 0040 FFF7FEFF 		bl	LL_RCC_HSI_IsReady
@@ -6298,7 +6298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  2721 007a 00BF     		nop
  2722 007c 04E0     		b	.L248
  2723              	.L257:
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 106
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 106
 
 
  607:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
@@ -6358,7 +6358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  642:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** {
  2764              		.loc 2 642 1
  2765              		.cfi_startproc
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 107
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 107
 
 
  2766              		@ args = 0, pretend = 0, frame = 16
@@ -6418,7 +6418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  2804              		.loc 2 658 13
  2805 0034 FFF7FEFF 		bl	LL_RCC_PLL_IsReady
  2806 0038 0346     		mov	r3, r0
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 108
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 108
 
 
  2807              		.loc 2 658 12
@@ -6478,7 +6478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  2841              	.L272:
  674:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
  2842              		.loc 2 674 9
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 109
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 109
 
 
  2843 0064 00BF     		nop
@@ -6538,7 +6538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  2886              		.cfi_def_cfa_offset 24
  2887 0004 00AF     		add	r7, sp, #0
  2888              	.LCFI192:
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 110
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 110
 
 
  2889              		.cfi_def_cfa_register 7
@@ -6598,7 +6598,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  710:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****       break;
  2924              		.loc 2 710 7
  2925 0044 0CE0     		b	.L284
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 111
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 111
 
 
  2926              	.L278:
@@ -6658,7 +6658,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  2961              	.LCFI193:
  2962              		.cfi_def_cfa_offset 8
  2963 006c BD46     		mov	sp, r7
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 112
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 112
 
 
  2964              	.LCFI194:
@@ -6718,7 +6718,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  743:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   assert_param(IS_LL_RCC_FDCAN_CLKSOURCE(FDCANxSource));
  744:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
  745:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   /* FDCAN kernel clock frequency */
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 113
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 113
 
 
  746:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   switch (LL_RCC_GetFDCANClockSource(FDCANxSource))
@@ -6778,7 +6778,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  3041 0046 FFF7FEFF 		bl	RCC_GetSystemClockFreq
  3042 004a 0346     		mov	r3, r0
  3043 004c 1846     		mov	r0, r3
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 114
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 114
 
 
  3044 004e FFF7FEFF 		bl	RCC_GetHCLKClockFreq
@@ -6827,7 +6827,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  3077              	.L299:
  3078 0076 00BF     		.align	2
  3079              	.L298:
- 3080 0078 00127A00 		.word	8000000
+ 3080 0078 80969800 		.word	10000000
  3081              		.cfi_endproc
  3082              	.LFE278:
  3084              		.section	.text.LL_RCC_GetRNGClockFreq,"ax",%progbits
@@ -6838,7 +6838,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  3089              		.thumb_func
  3090              		.fpu fpv4-sp-d16
  3092              	LL_RCC_GetRNGClockFreq:
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 115
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 115
 
 
  3093              	.LFB279:
@@ -6898,7 +6898,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  3125              		.loc 2 793 10
  3126 0024 002B     		cmp	r3, #0
  3127 0026 0FD0     		beq	.L307
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 116
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 116
 
 
  794:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****       {
@@ -6958,7 +6958,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  813:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** }
  3161              		.loc 2 813 1
  3162 0050 1846     		mov	r0, r3
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 117
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 117
 
 
  3163 0052 1037     		adds	r7, r7, #16
@@ -7018,7 +7018,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  826:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
  827:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   /* Check parameter */
  828:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   assert_param(IS_LL_RCC_USB_CLKSOURCE(USBxSource));
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 118
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 118
 
 
  829:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
@@ -7078,7 +7078,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  3241 0040 4FF0FF33 		mov	r3, #-1
  3242 0044 FB60     		str	r3, [r7, #12]
  849:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****       break;
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 119
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 119
 
 
  3243              		.loc 2 849 7
@@ -7138,7 +7138,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  865:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   */
  866:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** uint32_t LL_RCC_GetADCClockFreq(uint32_t ADCxSource)
  867:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** {
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 120
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 120
 
 
  3282              		.loc 2 867 1
@@ -7198,7 +7198,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  3324 0032 28D0     		beq	.L337
  880:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****         {
  881:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****           adc_frequency = RCC_PLL_GetFreqDomain_ADC();
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 121
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 121
 
 
  3325              		.loc 2 881 27
@@ -7258,7 +7258,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  3358 0064 FFF7FEFF 		bl	LL_RCC_PLL_IsReady
  3359 0068 0346     		mov	r3, r0
  3360              		.loc 2 902 12
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 122
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 122
 
 
  3361 006a 002B     		cmp	r3, #0
@@ -7318,7 +7318,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  3394              		.cfi_def_cfa_offset 8
  3395 0092 BD46     		mov	sp, r7
  3396              	.LCFI214:
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 123
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 123
 
 
  3397              		.cfi_def_cfa_register 13
@@ -7378,7 +7378,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  935:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   /* Check parameter */
  936:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   assert_param(IS_LL_RCC_QUADSPI_CLKSOURCE(QUADSPIxSource));
  937:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 124
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 124
 
 
  938:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   /* QUADSPI clock frequency */
@@ -7438,7 +7438,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  3476 0046 FFF7FEFF 		bl	RCC_PLL_GetFreqDomain_48M
  3477 004a F860     		str	r0, [r7, #12]
  956:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****       }
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 125
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 125
 
 
  957:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****       break;
@@ -7498,7 +7498,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  968:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** /**
  969:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   * @}
  970:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 126
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 126
 
 
  971:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
@@ -7558,7 +7558,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  994:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
  995:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****     case LL_RCC_SYS_CLKSOURCE_STATUS_HSE:  /* HSE used as system clock  source */
  996:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****       frequency = HSE_VALUE;
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 127
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 127
 
 
  3552              		.loc 2 996 17
@@ -7608,7 +7608,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  3583              		.align	2
  3584              	.L360:
  3585 003c 0024F400 		.word	16000000
- 3586 0040 00127A00 		.word	8000000
+ 3586 0040 80969800 		.word	10000000
  3587              		.cfi_endproc
  3588              	.LFE283:
  3590              		.section	.text.RCC_GetHCLKClockFreq,"ax",%progbits
@@ -7618,7 +7618,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  3594              		.thumb
  3595              		.thumb_func
  3596              		.fpu fpv4-sp-d16
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 128
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 128
 
 
  3598              	RCC_GetHCLKClockFreq:
@@ -7678,7 +7678,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  3641              	.LFE284:
  3643              		.section	.text.RCC_GetPCLK1ClockFreq,"ax",%progbits
  3644              		.align	1
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 129
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 129
 
 
  3645              		.global	RCC_GetPCLK1ClockFreq
@@ -7738,7 +7738,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  3689 0026 00BF     		.align	2
  3690              	.L368:
  3691 0028 00000000 		.word	APBPrescTable
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 130
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 130
 
 
  3692              		.cfi_endproc
@@ -7798,7 +7798,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  3737              		.cfi_def_cfa_register 13
  3738              		@ sp needed
  3739 0024 80BD     		pop	{r7, pc}
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 131
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 131
 
 
  3740              	.L373:
@@ -7858,7 +7858,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  3781 0014 032B     		cmp	r3, #3
  3782 0016 03D0     		beq	.L376
  3783 0018 05E0     		b	.L380
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 132
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 132
 
 
  3784              	.L375:
@@ -7918,7 +7918,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  3822              	.LCFI243:
  3823              		.cfi_def_cfa_offset 12
  3824 005a BD46     		mov	sp, r7
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 133
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 133
 
 
  3825              	.LCFI244:
@@ -7929,7 +7929,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  3830 005e 00BF     		.align	2
  3831              	.L381:
  3832 0060 0024F400 		.word	16000000
- 3833 0064 00127A00 		.word	8000000
+ 3833 0064 80969800 		.word	10000000
  3834              		.cfi_endproc
  3835              	.LFE287:
  3837              		.section	.text.RCC_PLL_GetFreqDomain_ADC,"ax",%progbits
@@ -7978,7 +7978,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  3866              		.loc 2 1088 3
  3867 000c 3B68     		ldr	r3, [r7]
  3868 000e 022B     		cmp	r3, #2
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 134
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 134
 
 
  3869 0010 03D0     		beq	.L384
@@ -8038,7 +8038,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  3907              		.loc 2 1104 1
  3908 0052 1846     		mov	r0, r3
  3909 0054 0C37     		adds	r7, r7, #12
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 135
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 135
 
 
  3910              	.LCFI248:
@@ -8052,7 +8052,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  3918 005a 00BF     		.align	2
  3919              	.L390:
  3920 005c 0024F400 		.word	16000000
- 3921 0060 00127A00 		.word	8000000
+ 3921 0060 80969800 		.word	10000000
  3922              		.cfi_endproc
  3923              	.LFE288:
  3925              		.section	.text.RCC_PLL_GetFreqDomain_48M,"ax",%progbits
@@ -8098,7 +8098,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  3953 000a 3860     		str	r0, [r7]
 1118:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
 1119:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   switch (pllsource)
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 136
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 136
 
 
  3954              		.loc 2 1119 3
@@ -8158,7 +8158,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  3994 004e 0133     		adds	r3, r3, #1
  3995 0050 5B00     		lsls	r3, r3, #1
  3996 0052 B4FBF3F3 		udiv	r3, r4, r3
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 137
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 137
 
 
 1134:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****                                         LL_RCC_PLL_GetN(), LL_RCC_PLL_GetQ());
@@ -8177,7 +8177,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  4008 005e 00BF     		.align	2
  4009              	.L399:
  4010 0060 0024F400 		.word	16000000
- 4011 0064 00127A00 		.word	8000000
+ 4011 0064 80969800 		.word	10000000
  4012              		.cfi_endproc
  4013              	.LFE289:
  4015              		.text
@@ -8188,172 +8188,172 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 1
  4020              		.file 6 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h"
  4021              		.file 7 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h"
  4022              		.file 8 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h"
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 138
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 138
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32g4xx_ll_rcc.c
-D:\apps\VSCode\data\tmp\ccahcE2K.s:18     .text.LL_RCC_HSE_IsReady:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:25     .text.LL_RCC_HSE_IsReady:0000000000000000 LL_RCC_HSE_IsReady
-D:\apps\VSCode\data\tmp\ccahcE2K.s:68     .text.LL_RCC_HSE_IsReady:0000000000000024 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:73     .text.LL_RCC_HSI_Enable:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:79     .text.LL_RCC_HSI_Enable:0000000000000000 LL_RCC_HSI_Enable
-D:\apps\VSCode\data\tmp\ccahcE2K.s:113    .text.LL_RCC_HSI_Enable:000000000000001c $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:118    .text.LL_RCC_HSI_IsReady:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:124    .text.LL_RCC_HSI_IsReady:0000000000000000 LL_RCC_HSI_IsReady
-D:\apps\VSCode\data\tmp\ccahcE2K.s:166    .text.LL_RCC_HSI_IsReady:0000000000000024 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:171    .text.LL_RCC_HSI_SetCalibTrimming:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:177    .text.LL_RCC_HSI_SetCalibTrimming:0000000000000000 LL_RCC_HSI_SetCalibTrimming
-D:\apps\VSCode\data\tmp\ccahcE2K.s:221    .text.LL_RCC_HSI_SetCalibTrimming:0000000000000028 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:226    .text.LL_RCC_HSI48_IsReady:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:232    .text.LL_RCC_HSI48_IsReady:0000000000000000 LL_RCC_HSI48_IsReady
-D:\apps\VSCode\data\tmp\ccahcE2K.s:274    .text.LL_RCC_HSI48_IsReady:0000000000000024 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:279    .text.LL_RCC_LSE_IsReady:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:285    .text.LL_RCC_LSE_IsReady:0000000000000000 LL_RCC_LSE_IsReady
-D:\apps\VSCode\data\tmp\ccahcE2K.s:327    .text.LL_RCC_LSE_IsReady:0000000000000024 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:332    .text.LL_RCC_LSI_IsReady:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:338    .text.LL_RCC_LSI_IsReady:0000000000000000 LL_RCC_LSI_IsReady
-D:\apps\VSCode\data\tmp\ccahcE2K.s:380    .text.LL_RCC_LSI_IsReady:0000000000000024 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:385    .text.LL_RCC_GetSysClkSource:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:391    .text.LL_RCC_GetSysClkSource:0000000000000000 LL_RCC_GetSysClkSource
-D:\apps\VSCode\data\tmp\ccahcE2K.s:424    .text.LL_RCC_GetSysClkSource:0000000000000018 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:429    .text.LL_RCC_GetAHBPrescaler:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:435    .text.LL_RCC_GetAHBPrescaler:0000000000000000 LL_RCC_GetAHBPrescaler
-D:\apps\VSCode\data\tmp\ccahcE2K.s:468    .text.LL_RCC_GetAHBPrescaler:0000000000000018 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:473    .text.LL_RCC_GetAPB1Prescaler:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:479    .text.LL_RCC_GetAPB1Prescaler:0000000000000000 LL_RCC_GetAPB1Prescaler
-D:\apps\VSCode\data\tmp\ccahcE2K.s:512    .text.LL_RCC_GetAPB1Prescaler:0000000000000018 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:517    .text.LL_RCC_GetAPB2Prescaler:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:523    .text.LL_RCC_GetAPB2Prescaler:0000000000000000 LL_RCC_GetAPB2Prescaler
-D:\apps\VSCode\data\tmp\ccahcE2K.s:556    .text.LL_RCC_GetAPB2Prescaler:0000000000000018 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:561    .text.LL_RCC_GetUSARTClockSource:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:567    .text.LL_RCC_GetUSARTClockSource:0000000000000000 LL_RCC_GetUSARTClockSource
-D:\apps\VSCode\data\tmp\ccahcE2K.s:612    .text.LL_RCC_GetUSARTClockSource:0000000000000024 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:617    .text.LL_RCC_GetUARTClockSource:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:623    .text.LL_RCC_GetUARTClockSource:0000000000000000 LL_RCC_GetUARTClockSource
-D:\apps\VSCode\data\tmp\ccahcE2K.s:668    .text.LL_RCC_GetUARTClockSource:0000000000000024 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:673    .text.LL_RCC_GetLPUARTClockSource:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:679    .text.LL_RCC_GetLPUARTClockSource:0000000000000000 LL_RCC_GetLPUARTClockSource
-D:\apps\VSCode\data\tmp\ccahcE2K.s:720    .text.LL_RCC_GetLPUARTClockSource:0000000000000020 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:725    .text.LL_RCC_GetI2CClockSource:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:731    .text.LL_RCC_GetI2CClockSource:0000000000000000 LL_RCC_GetI2CClockSource
-D:\apps\VSCode\data\tmp\ccahcE2K.s:795    .text.LL_RCC_GetI2CClockSource:0000000000000044 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:800    .text.LL_RCC_GetLPTIMClockSource:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:806    .text.LL_RCC_GetLPTIMClockSource:0000000000000000 LL_RCC_GetLPTIMClockSource
-D:\apps\VSCode\data\tmp\ccahcE2K.s:847    .text.LL_RCC_GetLPTIMClockSource:0000000000000020 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:852    .text.LL_RCC_GetSAIClockSource:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:858    .text.LL_RCC_GetSAIClockSource:0000000000000000 LL_RCC_GetSAIClockSource
-D:\apps\VSCode\data\tmp\ccahcE2K.s:899    .text.LL_RCC_GetSAIClockSource:0000000000000020 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:904    .text.LL_RCC_GetI2SClockSource:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:910    .text.LL_RCC_GetI2SClockSource:0000000000000000 LL_RCC_GetI2SClockSource
-D:\apps\VSCode\data\tmp\ccahcE2K.s:951    .text.LL_RCC_GetI2SClockSource:0000000000000020 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:956    .text.LL_RCC_GetFDCANClockSource:0000000000000000 $t
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 139
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:18     .text.LL_RCC_HSE_IsReady:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:25     .text.LL_RCC_HSE_IsReady:0000000000000000 LL_RCC_HSE_IsReady
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:68     .text.LL_RCC_HSE_IsReady:0000000000000024 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:73     .text.LL_RCC_HSI_Enable:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:79     .text.LL_RCC_HSI_Enable:0000000000000000 LL_RCC_HSI_Enable
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:113    .text.LL_RCC_HSI_Enable:000000000000001c $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:118    .text.LL_RCC_HSI_IsReady:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:124    .text.LL_RCC_HSI_IsReady:0000000000000000 LL_RCC_HSI_IsReady
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:166    .text.LL_RCC_HSI_IsReady:0000000000000024 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:171    .text.LL_RCC_HSI_SetCalibTrimming:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:177    .text.LL_RCC_HSI_SetCalibTrimming:0000000000000000 LL_RCC_HSI_SetCalibTrimming
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:221    .text.LL_RCC_HSI_SetCalibTrimming:0000000000000028 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:226    .text.LL_RCC_HSI48_IsReady:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:232    .text.LL_RCC_HSI48_IsReady:0000000000000000 LL_RCC_HSI48_IsReady
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:274    .text.LL_RCC_HSI48_IsReady:0000000000000024 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:279    .text.LL_RCC_LSE_IsReady:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:285    .text.LL_RCC_LSE_IsReady:0000000000000000 LL_RCC_LSE_IsReady
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:327    .text.LL_RCC_LSE_IsReady:0000000000000024 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:332    .text.LL_RCC_LSI_IsReady:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:338    .text.LL_RCC_LSI_IsReady:0000000000000000 LL_RCC_LSI_IsReady
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:380    .text.LL_RCC_LSI_IsReady:0000000000000024 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:385    .text.LL_RCC_GetSysClkSource:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:391    .text.LL_RCC_GetSysClkSource:0000000000000000 LL_RCC_GetSysClkSource
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:424    .text.LL_RCC_GetSysClkSource:0000000000000018 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:429    .text.LL_RCC_GetAHBPrescaler:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:435    .text.LL_RCC_GetAHBPrescaler:0000000000000000 LL_RCC_GetAHBPrescaler
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:468    .text.LL_RCC_GetAHBPrescaler:0000000000000018 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:473    .text.LL_RCC_GetAPB1Prescaler:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:479    .text.LL_RCC_GetAPB1Prescaler:0000000000000000 LL_RCC_GetAPB1Prescaler
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:512    .text.LL_RCC_GetAPB1Prescaler:0000000000000018 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:517    .text.LL_RCC_GetAPB2Prescaler:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:523    .text.LL_RCC_GetAPB2Prescaler:0000000000000000 LL_RCC_GetAPB2Prescaler
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:556    .text.LL_RCC_GetAPB2Prescaler:0000000000000018 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:561    .text.LL_RCC_GetUSARTClockSource:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:567    .text.LL_RCC_GetUSARTClockSource:0000000000000000 LL_RCC_GetUSARTClockSource
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:612    .text.LL_RCC_GetUSARTClockSource:0000000000000024 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:617    .text.LL_RCC_GetUARTClockSource:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:623    .text.LL_RCC_GetUARTClockSource:0000000000000000 LL_RCC_GetUARTClockSource
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:668    .text.LL_RCC_GetUARTClockSource:0000000000000024 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:673    .text.LL_RCC_GetLPUARTClockSource:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:679    .text.LL_RCC_GetLPUARTClockSource:0000000000000000 LL_RCC_GetLPUARTClockSource
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:720    .text.LL_RCC_GetLPUARTClockSource:0000000000000020 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:725    .text.LL_RCC_GetI2CClockSource:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:731    .text.LL_RCC_GetI2CClockSource:0000000000000000 LL_RCC_GetI2CClockSource
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:795    .text.LL_RCC_GetI2CClockSource:0000000000000044 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:800    .text.LL_RCC_GetLPTIMClockSource:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:806    .text.LL_RCC_GetLPTIMClockSource:0000000000000000 LL_RCC_GetLPTIMClockSource
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:847    .text.LL_RCC_GetLPTIMClockSource:0000000000000020 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:852    .text.LL_RCC_GetSAIClockSource:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:858    .text.LL_RCC_GetSAIClockSource:0000000000000000 LL_RCC_GetSAIClockSource
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:899    .text.LL_RCC_GetSAIClockSource:0000000000000020 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:904    .text.LL_RCC_GetI2SClockSource:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:910    .text.LL_RCC_GetI2SClockSource:0000000000000000 LL_RCC_GetI2SClockSource
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:951    .text.LL_RCC_GetI2SClockSource:0000000000000020 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:956    .text.LL_RCC_GetFDCANClockSource:0000000000000000 $t
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 139
 
 
-D:\apps\VSCode\data\tmp\ccahcE2K.s:962    .text.LL_RCC_GetFDCANClockSource:0000000000000000 LL_RCC_GetFDCANClockSource
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1003   .text.LL_RCC_GetFDCANClockSource:0000000000000020 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1008   .text.LL_RCC_GetRNGClockSource:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1014   .text.LL_RCC_GetRNGClockSource:0000000000000000 LL_RCC_GetRNGClockSource
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1055   .text.LL_RCC_GetRNGClockSource:0000000000000020 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1060   .text.LL_RCC_GetUSBClockSource:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1066   .text.LL_RCC_GetUSBClockSource:0000000000000000 LL_RCC_GetUSBClockSource
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1107   .text.LL_RCC_GetUSBClockSource:0000000000000020 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1112   .text.LL_RCC_GetADCClockSource:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1118   .text.LL_RCC_GetADCClockSource:0000000000000000 LL_RCC_GetADCClockSource
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1174   .text.LL_RCC_GetADCClockSource:000000000000003c $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1179   .text.LL_RCC_GetQUADSPIClockSource:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1185   .text.LL_RCC_GetQUADSPIClockSource:0000000000000000 LL_RCC_GetQUADSPIClockSource
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1226   .text.LL_RCC_GetQUADSPIClockSource:0000000000000020 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1231   .text.LL_RCC_PLL_IsReady:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1237   .text.LL_RCC_PLL_IsReady:0000000000000000 LL_RCC_PLL_IsReady
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1279   .text.LL_RCC_PLL_IsReady:0000000000000024 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1284   .text.LL_RCC_PLL_GetMainSource:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1290   .text.LL_RCC_PLL_GetMainSource:0000000000000000 LL_RCC_PLL_GetMainSource
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1323   .text.LL_RCC_PLL_GetMainSource:0000000000000018 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1328   .text.LL_RCC_PLL_GetN:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1334   .text.LL_RCC_PLL_GetN:0000000000000000 LL_RCC_PLL_GetN
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1368   .text.LL_RCC_PLL_GetN:0000000000000018 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1373   .text.LL_RCC_PLL_GetP:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1379   .text.LL_RCC_PLL_GetP:0000000000000000 LL_RCC_PLL_GetP
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1435   .text.LL_RCC_PLL_GetP:000000000000003c $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1440   .text.LL_RCC_PLL_GetQ:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1446   .text.LL_RCC_PLL_GetQ:0000000000000000 LL_RCC_PLL_GetQ
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1479   .text.LL_RCC_PLL_GetQ:0000000000000018 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1484   .text.LL_RCC_PLL_GetR:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1490   .text.LL_RCC_PLL_GetR:0000000000000000 LL_RCC_PLL_GetR
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1523   .text.LL_RCC_PLL_GetR:0000000000000018 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1528   .text.LL_RCC_PLL_GetDivider:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1534   .text.LL_RCC_PLL_GetDivider:0000000000000000 LL_RCC_PLL_GetDivider
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1567   .text.LL_RCC_PLL_GetDivider:0000000000000018 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1572   .text.LL_RCC_ClearResetFlags:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1578   .text.LL_RCC_ClearResetFlags:0000000000000000 LL_RCC_ClearResetFlags
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1612   .text.LL_RCC_ClearResetFlags:0000000000000020 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1617   .text.LL_RCC_DeInit:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1624   .text.LL_RCC_DeInit:0000000000000000 LL_RCC_DeInit
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1718   .text.LL_RCC_DeInit:0000000000000074 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1723   .text.LL_RCC_GetSystemClocksFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1730   .text.LL_RCC_GetSystemClocksFreq:0000000000000000 LL_RCC_GetSystemClocksFreq
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3519   .text.RCC_GetSystemClockFreq:0000000000000000 RCC_GetSystemClockFreq
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3598   .text.RCC_GetHCLKClockFreq:0000000000000000 RCC_GetHCLKClockFreq
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3651   .text.RCC_GetPCLK1ClockFreq:0000000000000000 RCC_GetPCLK1ClockFreq
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3703   .text.RCC_GetPCLK2ClockFreq:0000000000000000 RCC_GetPCLK2ClockFreq
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1795   .text.LL_RCC_GetUSARTClockFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:1802   .text.LL_RCC_GetUSARTClockFreq:0000000000000000 LL_RCC_GetUSARTClockFreq
-D:\apps\VSCode\data\tmp\ccahcE2K.s:2044   .text.LL_RCC_GetUSARTClockFreq:000000000000015c $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:2055   .text.LL_RCC_GetUARTClockFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:2062   .text.LL_RCC_GetUARTClockFreq:0000000000000000 LL_RCC_GetUARTClockFreq
-D:\apps\VSCode\data\tmp\ccahcE2K.s:2238   .text.LL_RCC_GetUARTClockFreq:00000000000000f0 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:2247   .text.LL_RCC_GetI2CClockFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:2254   .text.LL_RCC_GetI2CClockFreq:0000000000000000 LL_RCC_GetI2CClockFreq
-D:\apps\VSCode\data\tmp\ccahcE2K.s:2504   .text.LL_RCC_GetI2CClockFreq:0000000000000168 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:2521   .text.LL_RCC_GetLPUARTClockFreq:0000000000000000 $t
-ARM GAS  D:\apps\VSCode\data\tmp\ccahcE2K.s 			page 140
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:962    .text.LL_RCC_GetFDCANClockSource:0000000000000000 LL_RCC_GetFDCANClockSource
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1003   .text.LL_RCC_GetFDCANClockSource:0000000000000020 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1008   .text.LL_RCC_GetRNGClockSource:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1014   .text.LL_RCC_GetRNGClockSource:0000000000000000 LL_RCC_GetRNGClockSource
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1055   .text.LL_RCC_GetRNGClockSource:0000000000000020 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1060   .text.LL_RCC_GetUSBClockSource:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1066   .text.LL_RCC_GetUSBClockSource:0000000000000000 LL_RCC_GetUSBClockSource
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1107   .text.LL_RCC_GetUSBClockSource:0000000000000020 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1112   .text.LL_RCC_GetADCClockSource:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1118   .text.LL_RCC_GetADCClockSource:0000000000000000 LL_RCC_GetADCClockSource
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1174   .text.LL_RCC_GetADCClockSource:000000000000003c $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1179   .text.LL_RCC_GetQUADSPIClockSource:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1185   .text.LL_RCC_GetQUADSPIClockSource:0000000000000000 LL_RCC_GetQUADSPIClockSource
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1226   .text.LL_RCC_GetQUADSPIClockSource:0000000000000020 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1231   .text.LL_RCC_PLL_IsReady:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1237   .text.LL_RCC_PLL_IsReady:0000000000000000 LL_RCC_PLL_IsReady
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1279   .text.LL_RCC_PLL_IsReady:0000000000000024 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1284   .text.LL_RCC_PLL_GetMainSource:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1290   .text.LL_RCC_PLL_GetMainSource:0000000000000000 LL_RCC_PLL_GetMainSource
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1323   .text.LL_RCC_PLL_GetMainSource:0000000000000018 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1328   .text.LL_RCC_PLL_GetN:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1334   .text.LL_RCC_PLL_GetN:0000000000000000 LL_RCC_PLL_GetN
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1368   .text.LL_RCC_PLL_GetN:0000000000000018 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1373   .text.LL_RCC_PLL_GetP:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1379   .text.LL_RCC_PLL_GetP:0000000000000000 LL_RCC_PLL_GetP
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1435   .text.LL_RCC_PLL_GetP:000000000000003c $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1440   .text.LL_RCC_PLL_GetQ:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1446   .text.LL_RCC_PLL_GetQ:0000000000000000 LL_RCC_PLL_GetQ
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1479   .text.LL_RCC_PLL_GetQ:0000000000000018 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1484   .text.LL_RCC_PLL_GetR:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1490   .text.LL_RCC_PLL_GetR:0000000000000000 LL_RCC_PLL_GetR
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1523   .text.LL_RCC_PLL_GetR:0000000000000018 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1528   .text.LL_RCC_PLL_GetDivider:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1534   .text.LL_RCC_PLL_GetDivider:0000000000000000 LL_RCC_PLL_GetDivider
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1567   .text.LL_RCC_PLL_GetDivider:0000000000000018 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1572   .text.LL_RCC_ClearResetFlags:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1578   .text.LL_RCC_ClearResetFlags:0000000000000000 LL_RCC_ClearResetFlags
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1612   .text.LL_RCC_ClearResetFlags:0000000000000020 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1617   .text.LL_RCC_DeInit:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1624   .text.LL_RCC_DeInit:0000000000000000 LL_RCC_DeInit
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1718   .text.LL_RCC_DeInit:0000000000000074 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1723   .text.LL_RCC_GetSystemClocksFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1730   .text.LL_RCC_GetSystemClocksFreq:0000000000000000 LL_RCC_GetSystemClocksFreq
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3519   .text.RCC_GetSystemClockFreq:0000000000000000 RCC_GetSystemClockFreq
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3598   .text.RCC_GetHCLKClockFreq:0000000000000000 RCC_GetHCLKClockFreq
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3651   .text.RCC_GetPCLK1ClockFreq:0000000000000000 RCC_GetPCLK1ClockFreq
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3703   .text.RCC_GetPCLK2ClockFreq:0000000000000000 RCC_GetPCLK2ClockFreq
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1795   .text.LL_RCC_GetUSARTClockFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:1802   .text.LL_RCC_GetUSARTClockFreq:0000000000000000 LL_RCC_GetUSARTClockFreq
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:2044   .text.LL_RCC_GetUSARTClockFreq:000000000000015c $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:2055   .text.LL_RCC_GetUARTClockFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:2062   .text.LL_RCC_GetUARTClockFreq:0000000000000000 LL_RCC_GetUARTClockFreq
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:2238   .text.LL_RCC_GetUARTClockFreq:00000000000000f0 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:2247   .text.LL_RCC_GetI2CClockFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:2254   .text.LL_RCC_GetI2CClockFreq:0000000000000000 LL_RCC_GetI2CClockFreq
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:2504   .text.LL_RCC_GetI2CClockFreq:0000000000000168 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:2521   .text.LL_RCC_GetLPUARTClockFreq:0000000000000000 $t
+ARM GAS  D:\apps\VSCode\data\tmp\ccp8wNGf.s 			page 140
 
 
-D:\apps\VSCode\data\tmp\ccahcE2K.s:2528   .text.LL_RCC_GetLPUARTClockFreq:0000000000000000 LL_RCC_GetLPUARTClockFreq
-D:\apps\VSCode\data\tmp\ccahcE2K.s:2624   .text.LL_RCC_GetLPUARTClockFreq:0000000000000078 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:2629   .text.LL_RCC_GetLPTIMClockFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:2636   .text.LL_RCC_GetLPTIMClockFreq:0000000000000000 LL_RCC_GetLPTIMClockFreq
-D:\apps\VSCode\data\tmp\ccahcE2K.s:2750   .text.LL_RCC_GetLPTIMClockFreq:0000000000000094 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:2755   .text.LL_RCC_GetSAIClockFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:2762   .text.LL_RCC_GetSAIClockFreq:0000000000000000 LL_RCC_GetSAIClockFreq
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3933   .text.RCC_PLL_GetFreqDomain_48M:0000000000000000 RCC_PLL_GetFreqDomain_48M
-D:\apps\VSCode\data\tmp\ccahcE2K.s:2860   .text.LL_RCC_GetSAIClockFreq:0000000000000070 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:2866   .text.LL_RCC_GetI2SClockFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:2873   .text.LL_RCC_GetI2SClockFreq:0000000000000000 LL_RCC_GetI2SClockFreq
-D:\apps\VSCode\data\tmp\ccahcE2K.s:2971   .text.LL_RCC_GetI2SClockFreq:0000000000000070 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:2977   .text.LL_RCC_GetFDCANClockFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:2984   .text.LL_RCC_GetFDCANClockFreq:0000000000000000 LL_RCC_GetFDCANClockFreq
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3080   .text.LL_RCC_GetFDCANClockFreq:0000000000000078 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3085   .text.LL_RCC_GetRNGClockFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3092   .text.LL_RCC_GetRNGClockFreq:0000000000000000 LL_RCC_GetRNGClockFreq
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3174   .text.LL_RCC_GetRNGClockFreq:0000000000000058 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3179   .text.LL_RCC_GetUSBClockFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3186   .text.LL_RCC_GetUSBClockFreq:0000000000000000 LL_RCC_GetUSBClockFreq
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3268   .text.LL_RCC_GetUSBClockFreq:0000000000000058 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3273   .text.LL_RCC_GetADCClockFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3280   .text.LL_RCC_GetADCClockFreq:0000000000000000 LL_RCC_GetADCClockFreq
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3845   .text.RCC_PLL_GetFreqDomain_ADC:0000000000000000 RCC_PLL_GetFreqDomain_ADC
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3403   .text.LL_RCC_GetADCClockFreq:0000000000000098 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3412   .text.LL_RCC_GetQUADSPIClockFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3419   .text.LL_RCC_GetQUADSPIClockFreq:0000000000000000 LL_RCC_GetQUADSPIClockFreq
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3507   .text.LL_RCC_GetQUADSPIClockFreq:0000000000000064 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3512   .text.RCC_GetSystemClockFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3755   .text.RCC_PLL_GetFreqDomain_SYS:0000000000000000 RCC_PLL_GetFreqDomain_SYS
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3585   .text.RCC_GetSystemClockFreq:000000000000003c $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3591   .text.RCC_GetHCLKClockFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3639   .text.RCC_GetHCLKClockFreq:000000000000002c $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3644   .text.RCC_GetPCLK1ClockFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3691   .text.RCC_GetPCLK1ClockFreq:0000000000000028 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3696   .text.RCC_GetPCLK2ClockFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3743   .text.RCC_GetPCLK2ClockFreq:0000000000000028 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3748   .text.RCC_PLL_GetFreqDomain_SYS:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3832   .text.RCC_PLL_GetFreqDomain_SYS:0000000000000060 $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3838   .text.RCC_PLL_GetFreqDomain_ADC:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3920   .text.RCC_PLL_GetFreqDomain_ADC:000000000000005c $d
-D:\apps\VSCode\data\tmp\ccahcE2K.s:3926   .text.RCC_PLL_GetFreqDomain_48M:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccahcE2K.s:4010   .text.RCC_PLL_GetFreqDomain_48M:0000000000000060 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:2528   .text.LL_RCC_GetLPUARTClockFreq:0000000000000000 LL_RCC_GetLPUARTClockFreq
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:2624   .text.LL_RCC_GetLPUARTClockFreq:0000000000000078 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:2629   .text.LL_RCC_GetLPTIMClockFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:2636   .text.LL_RCC_GetLPTIMClockFreq:0000000000000000 LL_RCC_GetLPTIMClockFreq
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:2750   .text.LL_RCC_GetLPTIMClockFreq:0000000000000094 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:2755   .text.LL_RCC_GetSAIClockFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:2762   .text.LL_RCC_GetSAIClockFreq:0000000000000000 LL_RCC_GetSAIClockFreq
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3933   .text.RCC_PLL_GetFreqDomain_48M:0000000000000000 RCC_PLL_GetFreqDomain_48M
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:2860   .text.LL_RCC_GetSAIClockFreq:0000000000000070 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:2866   .text.LL_RCC_GetI2SClockFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:2873   .text.LL_RCC_GetI2SClockFreq:0000000000000000 LL_RCC_GetI2SClockFreq
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:2971   .text.LL_RCC_GetI2SClockFreq:0000000000000070 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:2977   .text.LL_RCC_GetFDCANClockFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:2984   .text.LL_RCC_GetFDCANClockFreq:0000000000000000 LL_RCC_GetFDCANClockFreq
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3080   .text.LL_RCC_GetFDCANClockFreq:0000000000000078 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3085   .text.LL_RCC_GetRNGClockFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3092   .text.LL_RCC_GetRNGClockFreq:0000000000000000 LL_RCC_GetRNGClockFreq
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3174   .text.LL_RCC_GetRNGClockFreq:0000000000000058 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3179   .text.LL_RCC_GetUSBClockFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3186   .text.LL_RCC_GetUSBClockFreq:0000000000000000 LL_RCC_GetUSBClockFreq
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3268   .text.LL_RCC_GetUSBClockFreq:0000000000000058 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3273   .text.LL_RCC_GetADCClockFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3280   .text.LL_RCC_GetADCClockFreq:0000000000000000 LL_RCC_GetADCClockFreq
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3845   .text.RCC_PLL_GetFreqDomain_ADC:0000000000000000 RCC_PLL_GetFreqDomain_ADC
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3403   .text.LL_RCC_GetADCClockFreq:0000000000000098 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3412   .text.LL_RCC_GetQUADSPIClockFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3419   .text.LL_RCC_GetQUADSPIClockFreq:0000000000000000 LL_RCC_GetQUADSPIClockFreq
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3507   .text.LL_RCC_GetQUADSPIClockFreq:0000000000000064 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3512   .text.RCC_GetSystemClockFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3755   .text.RCC_PLL_GetFreqDomain_SYS:0000000000000000 RCC_PLL_GetFreqDomain_SYS
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3585   .text.RCC_GetSystemClockFreq:000000000000003c $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3591   .text.RCC_GetHCLKClockFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3639   .text.RCC_GetHCLKClockFreq:000000000000002c $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3644   .text.RCC_GetPCLK1ClockFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3691   .text.RCC_GetPCLK1ClockFreq:0000000000000028 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3696   .text.RCC_GetPCLK2ClockFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3743   .text.RCC_GetPCLK2ClockFreq:0000000000000028 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3748   .text.RCC_PLL_GetFreqDomain_SYS:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3832   .text.RCC_PLL_GetFreqDomain_SYS:0000000000000060 $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3838   .text.RCC_PLL_GetFreqDomain_ADC:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3920   .text.RCC_PLL_GetFreqDomain_ADC:000000000000005c $d
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:3926   .text.RCC_PLL_GetFreqDomain_48M:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccp8wNGf.s:4010   .text.RCC_PLL_GetFreqDomain_48M:0000000000000060 $d
 
 UNDEFINED SYMBOLS
 AHBPrescTable

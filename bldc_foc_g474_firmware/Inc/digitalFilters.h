@@ -6,8 +6,8 @@
  * for HPF: T = Tf/(Tf + Ts)
  * 
  * cast example:
- * in main: lpf1.T = T_S / (1.0f / (M_2PI * F_CUT) + T_S);
- * in ISR: lpf1.in = adcData;
+ * Init: lpf1.T = T_S / (1.0f / (M_2PI * F_CUT) + T_S);
+ * Update: lpf1.in = adcData;
  *  	   LPF_calc(&lpf1);
  *		   filteredData = lpf1.out;
  */

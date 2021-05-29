@@ -34,11 +34,10 @@
 
 /* USER CODE END Private defines */
 
-void MX_TIM7_Init(void);
-void tim2_start(void);
-
 /* USER CODE BEGIN Prototypes */
 void MX_TIM2_Init(void);
+void MX_TIM7_Init(void);
+void tim2_start(void);
 void tim7_start(void);
 
 /* USER CODE END Prototypes */

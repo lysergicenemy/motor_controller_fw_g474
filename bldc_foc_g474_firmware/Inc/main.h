@@ -156,7 +156,6 @@ void Error_Handler(void);
 #endif
 /* USER CODE BEGIN Private defines */
 
-
 #define FLASH_CONFIG_ADR_START 0x0807F000
 #define FLASH_CONFIG_ADR_END (FLASH_CONFIG_ADR_START + sizeof(flashData_t))
 #define FLASH_CONFIG_PG_NMB 127U

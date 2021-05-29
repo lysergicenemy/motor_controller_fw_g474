@@ -95,65 +95,68 @@ void FLASH_Program_DoubleWord(uint32_t Address, uint64_t Data)
 }
 void FLASH_UpdateConfig(foc_t *p, hall_t *hp)
 {
-  __disable_irq();
-  /* Clear OPTVERR bit set on virgin samples */
-  SET_BIT(FLASH->SR, FLASH_SR_OPTVERR);
-  flashUnlock();
-  FLASH_PageErase(FLASH_CONFIG_PG_NMB);
-  uint32_t Address = FLASH_CONFIG_ADR_START;
-  // Stator resistance, DQ inductance *(uint32_t*)
-  FLASH_Program_DoubleWord(Address, *(uint32_t *)&p->config.Rs);
-  FLASH_Program_DoubleWord(Address + 8, *(uint32_t *)&p->config.Ld);
-  FLASH_Program_DoubleWord(Address + 8 * 2, *(uint32_t *)&p->config.Lq);
-  // Hall table offset angles
-  FLASH_Program_DoubleWord(Address + 8 * 3, *(uint32_t *)&hp->offsetAvg[0]);
-  FLASH_Program_DoubleWord(Address + 8 * 4, *(uint32_t *)&hp->offsetAvg[1]);
-  FLASH_Program_DoubleWord(Address + 8 * 5, *(uint32_t *)&hp->offsetAvg[2]);
-  FLASH_Program_DoubleWord(Address + 8 * 6, *(uint32_t *)&hp->offsetAvg[3]);
-  FLASH_Program_DoubleWord(Address + 8 * 7, *(uint32_t *)&hp->offsetAvg[4]);
-  FLASH_Program_DoubleWord(Address + 8 * 8, *(uint32_t *)&hp->offsetAvg[5]);
-  FLASH_Program_DoubleWord(Address + 8 * 9, *(uint32_t *)&hp->offset);
-  // End
-  flashLock();
-  p->paramIdState = Enter;
-  hp->offsetState = 0;
-  p->driveState = STOP;
-  p->data.flashUpdateFlag = 1;
-  __enable_irq();
+  if (p->driveState == STOP)
+  {
+    __disable_irq();
+    /* Clear OPTVERR bit set on virgin samples */
+    SET_BIT(FLASH->SR, FLASH_SR_OPTVERR);
+    flashUnlock();
+    FLASH_PageErase(FLASH_CONFIG_PG_NMB);
+    uint32_t Address = FLASH_CONFIG_ADR_START;
+    // Stator resistance, DQ inductance *(uint32_t*)
+    FLASH_Program_DoubleWord(Address, *(uint32_t *)&p->config.Rs);
+    FLASH_Program_DoubleWord(Address + 8, *(uint32_t *)&p->config.Ld);
+    FLASH_Program_DoubleWord(Address + 8 * 2, *(uint32_t *)&p->config.Lq);
+    // Hall table offset angles
+    FLASH_Program_DoubleWord(Address + 8 * 3, *(uint32_t *)&hp->offsetAvg[0]);
+    FLASH_Program_DoubleWord(Address + 8 * 4, *(uint32_t *)&hp->offsetAvg[1]);
+    FLASH_Program_DoubleWord(Address + 8 * 5, *(uint32_t *)&hp->offsetAvg[2]);
+    FLASH_Program_DoubleWord(Address + 8 * 6, *(uint32_t *)&hp->offsetAvg[3]);
+    FLASH_Program_DoubleWord(Address + 8 * 7, *(uint32_t *)&hp->offsetAvg[4]);
+    FLASH_Program_DoubleWord(Address + 8 * 8, *(uint32_t *)&hp->offsetAvg[5]);
+    FLASH_Program_DoubleWord(Address + 8 * 9, *(uint32_t *)&hp->offset);
+    // End
+    flashLock();
+    p->paramIdState = Enter;
+    hp->offsetState = 0;
+    p->driveState = STOP;
+    p->data.flashUpdateFlag = 1;
+    __enable_irq();
+  }
 }
 
 void FLASH_LoadConfig(foc_t *p, hall_t *hp)
 {
   uint32_t Address = FLASH_CONFIG_ADR_START;
-  
+
   uint32_t u = flashReadData(Address);
   p->config.Rs = *(float *)&u;
 
   u = flashReadData(Address + 8);
   p->config.Ld = *(float *)&u;
 
-  u = flashReadData(Address + 8*2);
+  u = flashReadData(Address + 8 * 2);
   p->config.Lq = *(float *)&u;
 
-  u = flashReadData(Address + 8*3);
+  u = flashReadData(Address + 8 * 3);
   hp->offsetAvg[0] = *(float *)&u;
 
-  u = flashReadData(Address + 8*4);
+  u = flashReadData(Address + 8 * 4);
   hp->offsetAvg[1] = *(float *)&u;
 
-  u = flashReadData(Address + 8*5);
+  u = flashReadData(Address + 8 * 5);
   hp->offsetAvg[2] = *(float *)&u;
 
-  u = flashReadData(Address + 8*6);
+  u = flashReadData(Address + 8 * 6);
   hp->offsetAvg[3] = *(float *)&u;
 
-  u = flashReadData(Address + 8*7);
+  u = flashReadData(Address + 8 * 7);
   hp->offsetAvg[4] = *(float *)&u;
 
-  u = flashReadData(Address + 8*8);
+  u = flashReadData(Address + 8 * 8);
   hp->offsetAvg[5] = *(float *)&u;
 
-  u = flashReadData(Address + 8*9);
+  u = flashReadData(Address + 8 * 9);
   hp->offset = *(float *)&u;
 }
 /* USER CODE END 1 */

@@ -33,12 +33,6 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 
-#define STOP 0
-#define ALIGN 1
-#define ENCODER_CALIB 2
-#define RUN_CURR_LOOP 3
-#define RUN_SPD_LOOP 4
-
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -53,7 +47,7 @@
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN PFP */
-
+void slowCalc(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -64,7 +58,9 @@
 /* External variables --------------------------------------------------------*/
 
 /* USER CODE BEGIN EV */
+extern dataLogVars_t dataLog;
 
+extern volatile uint32_t sysclck2;
 /* USER CODE END EV */
 
 /******************************************************************************/
@@ -250,6 +246,7 @@ void TIM7_DAC_IRQHandler(void)
   if (LL_TIM_IsActiveFlag_UPDATE(TIM7))
   {
     LL_TIM_ClearFlag_UPDATE(TIM7);
+    slowCalc();
   }
 
   /* USER CODE END TIM7_DAC_IRQn 0 */
@@ -258,6 +255,7 @@ void TIM7_DAC_IRQHandler(void)
 
   /* USER CODE END TIM7_DAC_IRQn 1 */
 }
+
 
 /**
   * @brief This function handles HRTIM fault global interrupt.
@@ -284,16 +282,11 @@ void DMA1_Channel6_IRQHandler(void)
   if (LL_DMA_IsActiveFlag_TC6(DMA1))
   {
     LL_DMA_ClearFlag_GI6(DMA1);
-    /* Call function Transmission complete Callback */
-    //LL_DMA_DisableChannel(DMA1,LL_DMA_CHANNEL_2);
-    //DMA1_TransmitComplete_Callback();
+    dataLog.tcFlag = 1;
   }
   if (LL_DMA_IsActiveFlag_TE6(DMA1))
   {
     LL_DMA_ClearFlag_TE6(DMA1);
-    /* Call function Transmission complete Callback */
-    //LL_DMA_DisableChannel(DMA1,LL_DMA_CHANNEL_1);
-    //DMA1_TransmitComplete_Callback();
   }
 }
 

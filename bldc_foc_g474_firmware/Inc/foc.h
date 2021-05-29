@@ -10,7 +10,7 @@
 #ifndef FOC_H
 #define FOC_H
 
-#define FOC_TS 1.0f / 20000.0f // Calc frequency
+#define FOC_TS 1.0f / 32000.0f // Calc frequency
 
 #define SQRT3_DIV2 0.8660254f
 #define SAT(A, Pos, Neg) (((A) > (Pos)) ? (Pos) : (((A) < (Neg)) ? (Neg) : (A)))
@@ -201,17 +201,6 @@ typedef volatile struct fluxObs_s fluxObs_t;
 // See http://cas.ensmp.fr/~praly/Telechargement/Journaux/2010-IEEE_TPEL-Lee-Hong-Nam-Ortega-Praly-Astolfi.pdf
 static inline void FluxObs_calc(fluxObs_t *p)
 {
-
-    // // Saturation compensation
-    // const float sign = (motor->m_motor_state.iq * motor->m_motor_state.vq) >= 0.0 ? 1.0 : -1.0;
-    // R -= R * sign * conf_now->foc_sat_comp * (motor->m_motor_state.i_abs_filter / conf_now->l_current_max);
-
-    // // Temperature compensation
-    // const float t = mc_interface_temp_motor_filtered();
-    // if (conf_now->foc_temp_comp && t > -25.0) {
-    // 	R += R * 0.00386 * (t - conf_now->foc_temp_comp_base_temp);
-    // }
-
     const float L_ia = p->L * p->i_alpha;
     const float L_ib = p->L * p->i_beta;
     const float R_ia = p->R * p->i_alpha;
@@ -224,15 +213,14 @@ static inline void FluxObs_calc(fluxObs_t *p)
     p->x1 += x1_dot * p->dt;
     p->x2 += x2_dot * p->dt;
 
-    //motor_now->m_phase_now_observer = utils_fast_atan2(motor_now->m_x2_prev + motor_now->m_observer_x2,
-    //													   motor_now->m_x1_prev + motor_now->m_observer_x1);
-
     //p->phase = utils_fast_atan2(-(p->x2 - L_ib), -(p->x1 - L_ia));
     p->phase = utils_fast_atan2(p->x2 - L_ib, p->x1 - L_ia);
 }
 /*********************************************************************
  * Sliding mode rotor position observer
- * with zero phase delay filter for estimated BEMF signal
+ * with zero phase delay filter for estimated BEMF signal:
+ * Current Error -> SMC -> LPF(Tf) -> HPF(Tf)
+ * Tf dynamically adjustment depends on field frequency for provide filter f_cut = f_signal
  * Input: Valpha, Vbeta, Ialpha, Ibeta - phase voltages and currents in A-B reference frame
  * Output: Theta - observed angle
  ****************************************************************** */
@@ -296,20 +284,18 @@ static inline void Smopos_calc(smopos_t *p)
     p->lpf_alpha.in = p->Zalpha;
     p->lpf_alpha.T = FOC_TS / (p->tmp_Tf + FOC_TS); // time constant in descrete time dominian for LPF
     LPF_calc(&p->lpf_alpha);
-    p->tmp_Ealpha = p->lpf_alpha.out * 1.41421603665f;
     p->hpf_alpha.T = p->tmp_Tf / (p->tmp_Tf + FOC_TS); // time constant in descrete time dominian for HPF
-    p->hpf_alpha.in = p->tmp_Ealpha + 1e-20f;          // 1e-20f for avoid QNAN
+    p->hpf_alpha.in = p->lpf_alpha.out + 1e-20f;       // 1e-20f for avoid QNAN
     HPF_calc(&p->hpf_alpha);
-    p->tmp_Ealpha = p->hpf_alpha.out * 1.41421603665f; // final value
+    p->tmp_Ealpha = p->hpf_alpha.out * 2.f; // final value
     // /*------------- calc BEMF beta ----------------------------*/
     p->lpf_beta.in = p->Zbeta;
     p->lpf_beta.T = p->lpf_alpha.T; // time constant in descrete time dominian for LPF
     LPF_calc(&p->lpf_beta);
-    p->tmp_Ebeta = p->lpf_beta.out * 1.41421603665f;
-    p->hpf_beta.T = p->hpf_alpha.T;         // time constant in descrete time dominian for HPF
-    p->hpf_beta.in = p->tmp_Ebeta + 1e-20f; // 1e-20f for avoid QNAN
+    p->hpf_beta.T = p->hpf_alpha.T;            // time constant in descrete time dominian for HPF
+    p->hpf_beta.in = p->lpf_beta.out + 1e-20f; // 1e-20f for avoid QNAN
     HPF_calc(&p->hpf_beta);
-    p->tmp_Ebeta = p->hpf_beta.out * 1.41421603665f; // final value
+    p->tmp_Ebeta = p->hpf_beta.out * 2.f; // final value
 
     p->Ealpha = p->Ealpha + (p->Kslf * (p->Zalpha - p->Ealpha));
     p->Ebeta = p->Ebeta + (p->Kslf * (p->Zbeta - p->Ebeta));
@@ -726,7 +712,7 @@ typedef volatile enum paramIdState_e paramIdState_t;
 struct data_s
 {
     float udRef, uqRef;                           // Input: reference D/Q-axis voltages (V)
-    float idRef, iqRef, iqRmp;                    // Input: reference D/Q-axis currents, id ramp rate
+    float idRef, iqRef, iqRmp;                    // Input: reference D/Q-axis currents, id ramp rate (A/s)
     float speedRef, thetaRef, spdRmp, speedRpm;   // Input: reference speed, angle, speed ramp, measured speed in RPM
     float iPhaseA, iPhaseB, iPhaseC;              // Input: ABC currents (A)
     float iAvg, iAvgFiltered, iStrtp;             // Input: Total current (A)
@@ -856,6 +842,8 @@ struct foc_s
     filterData_t lpf_id;             // Low-pass filter for total current calc
     filterData_t lpf_iq;             // Low-pass filter for total current calc
     filterData_t lpf_vdc;            // Low-pass filter for total current calc
+    filterData_t lpf_Pe;             // Low-pass filter for total current calc
+    filterData_t lpf_NTC;            // Low-pass filter for total current calc
     calc_t calc;                     // Struct with methods of FOC class (calc functions)
 };
 typedef volatile struct foc_s foc_t;
@@ -881,11 +869,13 @@ typedef volatile struct foc_s foc_t;
             FILTER_DEFAULTS,     \
             FILTER_DEFAULTS,     \
             FILTER_DEFAULTS,     \
+            FILTER_DEFAULTS,     \
+            FILTER_DEFAULTS,     \
             CALC_DEFAULTS,       \
     }
 static inline void Foc_Init(foc_t *p)
 {
-    p->config.tS = (1.f / p->config.pwmFreq) * 2.f;
+    p->config.tS = (1.f / p->config.pwmFreq) * 2.f; // multiply by 2 cuz has 2 PWM cycles for 1 ADC ISR
     p->data.freqStep = M_2PI * p->config.tS;
     /* Max duty cycle*/
     p->volt.dutyMax = 0.975f;
@@ -901,16 +891,16 @@ static inline void Foc_Init(foc_t *p)
     p->pi_iq.Kc = 0.5f;
     p->pi_iq.OutMin = (p->config.mode == FOC) ? -p->config.adcFullScaleVoltage : 0; // -1.f
     p->pi_iq.OutMax = (p->config.mode == FOC) ? p->config.adcFullScaleVoltage : 1.f;
-    /* Automatic calc PI gains*/
-    float wcc = (0.05f * p->config.pwmFreq) * M_2PI;    // if current sampling 1 times for 1 PWM period use wcc 5%
+    /* Automatic calc PI gains depends on motor RL parameters */
+    float wcc = (0.05f * p->config.pwmFreq) * M_2PI; // if current sampling 1 times for 1 PWM period use wcc 5%
     p->pi_id.Kp = p->pi_iq.Kp = (p->config.Ld * wcc) * 0.5f;
     p->pi_id.Ki = p->pi_iq.Ki = p->config.Rs * wcc * p->config.tS * 0.5f; // Rs * bw, bw = 1.0 / tc, Ki = 𝜔𝑐𝑅 × 𝑇𝑆
     p->pi_id.Kc = 1.f / p->pi_id.Kp;
     p->pi_iq.Kc = 1.f / p->pi_iq.Kp;
     p->data.iqRmp = 10.f;
     /* Init speed PI controller */
-    p->pi_spd.Kp = (p->config.mode == FOC) ? 0.1f : 0.01f;
-    p->pi_spd.Ki = (p->config.mode == FOC) ? 0.001f : 0.0005f;
+    p->pi_spd.Kp = (p->config.mode == FOC) ? 0.05f : 0.01f;
+    p->pi_spd.Ki = (p->config.mode == FOC) ? 0.005f : 0.0005f;
     p->pi_spd.Kc = 1.f / p->pi_spd.Kp;
     p->pi_spd.OutMin = (p->config.mode == FOC) ? -p->config.adcFullScaleCurrent : 0.f;
     p->pi_spd.OutMax = (p->config.mode == FOC) ? p->config.adcFullScaleCurrent : 0.99f;
@@ -919,7 +909,7 @@ static inline void Foc_Init(foc_t *p)
     p->smo.Fsmopos = exp((-p->config.Rs / p->config.Ld) * p->config.tS);
     p->smo.Gsmopos = (1 / p->config.Rs) * (1 - p->smo.Fsmopos);
     p->smo.Kslide = 0.5308703613f;
-    /* Init SMOPOS constants */
+    /* Init Flux observer constants */
     p->flux.R = p->config.Rs * 1.5f;
     p->flux.L = p->config.Ld * 1.5f;
     p->flux.fluxLeakage = 60.0f / (SQRT3 * M_2PI * p->config.Kv * p->config.pp);
@@ -939,14 +929,17 @@ static inline void Foc_Init(foc_t *p)
     p->cmtn.lpf_bemfB.T = p->cmtn.lpf_bemfA.T;
     p->cmtn.lpf_bemfC.T = p->cmtn.lpf_bemfA.T;
     p->cmtn.cmtnTh = 0.0001f;
-    //
+    // BLDC mode settings
     p->data.bldc_commCntrRef = 350.f;
     p->data.bldc_dutyStart = 0.1f; // 10% of max value
-    // Filters data init
-    p->lpf_Iavg.T = 0.001f;                              // time constant in descrete time dominian for total current LPF
-    p->lpf_id.T = p->config.tS / (0.02f + p->config.tS); // time constant in descrete time dominian for D-axis current LPF
-    p->lpf_iq.T = p->config.tS / (0.02f + p->config.tS); // time constant in descrete time dominian for Q-axis current LPF
+    // Filters data init which execute in main ADC-ISR
+    p->lpf_id.T = p->config.tS / (0.001f + p->config.tS); // time constant in descrete time dominian for D-axis current LPF
+    p->lpf_iq.T = p->config.tS / (0.001f + p->config.tS); // time constant in descrete time dominian for Q-axis current LPF
     p->lpf_vdc.T = p->config.tS / (0.2f + p->config.tS); // time constant in descrete time dominian for DC-Bus voltage LPF
+    // Filters data init which execute in 1ms SYSTICK-Callback
+    p->lpf_Iavg.T = 0.001f / (0.1f + 0.001f); // time constant in descrete time dominian for total current LPF
+    p->lpf_Pe.T = 0.001f / (0.1f + 0.001f);   // time constant in descrete time dominian for total current LPF
+    p->lpf_NTC.T = 0.001f / (0.1f + 0.001f);  // time constant in descrete time dominian for total current LPF
 }
 
 #endif

@@ -85,7 +85,6 @@
 #if !defined  (HSI_VALUE)
   #define HSI_VALUE    16000000U /*!< Value of the Internal oscillator in Hz*/
 #endif /* HSI_VALUE */
-
 /**
   * @}
   */

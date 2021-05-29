@@ -1,4 +1,4 @@
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
   14:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * License. You may obtain a copy of the License at:
   15:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   *                        opensource.org/licenses/BSD-3-Clause
   16:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   *
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 2
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 2
 
 
   17:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   ******************************************************************************
@@ -118,7 +118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
   71:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   */
   72:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** /**
   73:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @}
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 3
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 3
 
 
   74:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   */
@@ -178,7 +178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  128:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** 
  129:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** /**
  130:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @brief LL USART Clock Init Structure definition
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 4
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 4
 
 
  131:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   */
@@ -238,7 +238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  185:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** #define LL_USART_ICR_CTSCF                      USART_ICR_CTSCF               /*!< CTS flag */
  186:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** #define LL_USART_ICR_RTOCF                      USART_ICR_RTOCF               /*!< Receiver timeout
  187:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** #define LL_USART_ICR_EOBCF                      USART_ICR_EOBCF               /*!< End of block fla
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 5
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 5
 
 
  188:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** #define LL_USART_ICR_UDRCF                      USART_ICR_UDRCF               /*!< SPI Slave Underr
@@ -298,7 +298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  242:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** #define LL_USART_CR1_EOBIE                      USART_CR1_EOBIE               /*!< End of Block int
  243:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** #define LL_USART_CR1_TXFEIE                     USART_CR1_TXFEIE              /*!< TX FIFO empty in
  244:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** #define LL_USART_CR1_RXFFIE                     USART_CR1_RXFFIE              /*!< RX FIFO full int
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 6
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 6
 
 
  245:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** #define LL_USART_CR2_LBDIE                      USART_CR2_LBDIE               /*!< LIN break detect
@@ -358,7 +358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  299:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** /** @defgroup USART_LL_EC_DATAWIDTH Datawidth
  300:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @{
  301:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 7
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 7
 
 
  302:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** #define LL_USART_DATAWIDTH_7B                   USART_CR1_M1            /*!< 7 bits word length : S
@@ -418,7 +418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  356:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** 
  357:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** /** @defgroup USART_LL_EC_PRESCALER Clock Source Prescaler
  358:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @{
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 8
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 8
 
 
  359:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   */
@@ -478,7 +478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  413:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** 
  414:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** /** @defgroup USART_LL_EC_BINARY_LOGIC Binary Data Inversion
  415:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @{
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 9
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 9
 
 
  416:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   */
@@ -538,7 +538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  470:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @}
  471:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   */
  472:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 10
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 10
 
 
  473:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** /** @defgroup USART_LL_EC_IRDA_POWER IrDA Power
@@ -598,7 +598,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  527:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @retval None
  528:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   */
  529:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** #define LL_USART_WriteReg(__INSTANCE__, __REG__, __VALUE__) WRITE_REG(__INSTANCE__->__REG__, (__VAL
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 11
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 11
 
 
  530:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** 
@@ -658,7 +658,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  584:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   *         @arg @ref LL_USART_PRESCALER_DIV128
  585:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   *         @arg @ref LL_USART_PRESCALER_DIV256
  586:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @param  __BAUDRATE__ Baud rate value to achieve
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 12
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 12
 
 
  587:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @retval USARTDIV value to be used for BRR register filling in OverSampling_16 case
@@ -718,7 +718,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  641:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** __STATIC_INLINE uint32_t LL_USART_IsEnabled(USART_TypeDef *USARTx)
  642:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** {
   45              		.loc 1 642 1
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 13
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 13
 
 
   46              		.cfi_startproc
@@ -778,7 +778,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  100              	.LFB168:
  645:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** 
  646:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 14
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 14
 
 
  647:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @brief  FIFO Mode Enable
@@ -838,7 +838,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  701:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** {
  702:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   MODIFY_REG(USARTx->CR3, USART_CR3_TXFTCFG, Threshold << USART_CR3_TXFTCFG_Pos);
  703:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 15
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 15
 
 
  704:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** 
@@ -898,7 +898,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  758:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** __STATIC_INLINE uint32_t LL_USART_GetRXFIFOThreshold(USART_TypeDef *USARTx)
  759:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** {
  760:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   return (uint32_t)(READ_BIT(USARTx->CR3, USART_CR3_RXFTCFG) >> USART_CR3_RXFTCFG_Pos);
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 16
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 16
 
 
  761:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** }
@@ -958,7 +958,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  815:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** __STATIC_INLINE void LL_USART_DisableInStopMode(USART_TypeDef *USARTx)
  816:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** {
  817:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   CLEAR_BIT(USARTx->CR1, USART_CR1_UESM);
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 17
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 17
 
 
  818:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** }
@@ -1018,7 +1018,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  872:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** __STATIC_INLINE void LL_USART_DisableDirectionTx(USART_TypeDef *USARTx)
  873:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** {
  874:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   CLEAR_BIT(USARTx->CR1, USART_CR1_TE);
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 18
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 18
 
 
  875:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** }
@@ -1078,7 +1078,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  929:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** 
  930:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** /**
  931:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @brief  Return Parity configuration (enabled/disabled and parity mode if enabled)
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 19
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 19
 
 
  932:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @rmtoll CR1          PS            LL_USART_GetParity\n
@@ -1138,7 +1138,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  986:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** }
  987:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** 
  988:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 20
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 20
 
 
  989:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @brief  Return Word length (i.e. nb of data bits, excluding start and stop bits)
@@ -1198,7 +1198,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
 1043:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @retval None
 1044:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   */
 1045:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** __STATIC_INLINE void LL_USART_SetOverSampling(USART_TypeDef *USARTx, uint32_t OverSampling)
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 21
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 21
 
 
 1046:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** {
@@ -1258,7 +1258,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
 1100:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @param  USARTx USART Instance
 1101:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @param  ClockPhase This parameter can be one of the following values:
 1102:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   *         @arg @ref LL_USART_PHASE_1EDGE
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 22
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 22
 
 
 1103:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   *         @arg @ref LL_USART_PHASE_2EDGE
@@ -1318,7 +1318,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
 1157:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** /**
 1158:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @brief  Configure Clock signal format (Phase Polarity and choice about output of last bit clock
 1159:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @note   Macro @ref IS_USART_INSTANCE(USARTx) can be used to check whether or not
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 23
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 23
 
 
 1160:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   *         Synchronous mode is supported by the USARTx instance.
@@ -1378,7 +1378,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  107              	.LCFI6:
  108              		.cfi_def_cfa_offset 4
  109              		.cfi_offset 7, -4
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 24
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 24
 
 
  110 0002 83B0     		sub	sp, sp, #12
@@ -1438,7 +1438,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
 1221:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   *         @arg @ref LL_USART_PRESCALER_DIV6
 1222:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   *         @arg @ref LL_USART_PRESCALER_DIV8
 1223:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   *         @arg @ref LL_USART_PRESCALER_DIV10
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 25
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 25
 
 
 1224:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   *         @arg @ref LL_USART_PRESCALER_DIV12
@@ -1498,7 +1498,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  171 000a 5B68     		ldr	r3, [r3, #4]
  172 000c 23F40062 		bic	r2, r3, #2048
  173 0010 7B68     		ldr	r3, [r7, #4]
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 26
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 26
 
 
  174 0012 5A60     		str	r2, [r3, #4]
@@ -1558,7 +1558,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  202              		.cfi_startproc
  203              		@ args = 0, pretend = 0, frame = 8
  204              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 27
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 27
 
 
  205              		@ link register save eliminated.
@@ -1618,7 +1618,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
 1297:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   *         @arg @ref LL_USART_STOPBITS_1
 1298:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   *         @arg @ref LL_USART_STOPBITS_1_5
 1299:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   *         @arg @ref LL_USART_STOPBITS_2
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 28
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 28
 
 
 1300:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   */
@@ -1678,7 +1678,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
 1354:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** /**
 1355:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @brief  Retrieve TX/RX pins swapping configuration.
 1356:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @rmtoll CR2          SWAP          LL_USART_GetTXRXSwap
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 29
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 29
 
 
 1357:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @param  USARTx USART Instance
@@ -1738,7 +1738,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
 1411:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @param  USARTx USART Instance
 1412:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @retval Returned value can be one of the following values:
 1413:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   *         @arg @ref LL_USART_TXPIN_LEVEL_STANDARD
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 30
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 30
 
 
 1414:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   *         @arg @ref LL_USART_TXPIN_LEVEL_INVERTED
@@ -1798,7 +1798,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
 1468:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @note   MSB First means data is transmitted/received with the MSB first, following the start bi
 1469:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   *         LSB First means data is transmitted/received with data bit 0 first, following the start
 1470:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @rmtoll CR2          MSBFIRST      LL_USART_GetTransferBitOrder
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 31
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 31
 
 
 1471:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @param  USARTx USART Instance
@@ -1858,7 +1858,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
 1525:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @param  USARTx USART Instance
 1526:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @param  AutoBaudRateMode This parameter can be one of the following values:
 1527:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   *         @arg @ref LL_USART_AUTOBAUD_DETECT_ON_STARTBIT
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 32
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 32
 
 
 1528:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   *         @arg @ref LL_USART_AUTOBAUD_DETECT_ON_FALLINGEDGE
@@ -1918,7 +1918,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
 1582:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   */
 1583:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** __STATIC_INLINE uint32_t LL_USART_IsEnabledRxTimeout(USART_TypeDef *USARTx)
 1584:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** {
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 33
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 33
 
 
 1585:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   return ((READ_BIT(USARTx->CR2, USART_CR2_RTOEN) == (USART_CR2_RTOEN)) ? 1UL : 0UL);
@@ -1978,7 +1978,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
 1639:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   */
 1640:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** __STATIC_INLINE uint32_t LL_USART_GetNodeAddressLen(USART_TypeDef *USARTx)
 1641:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** {
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 34
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 34
 
 
 1642:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   return (uint32_t)(READ_BIT(USARTx->CR2, USART_CR2_ADDM7));
@@ -2038,7 +2038,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
 1696:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** 
 1697:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** /**
 1698:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @brief  Configure HW Flow Control mode (both CTS and RTS)
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 35
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 35
 
 
 1699:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @note   Macro @ref IS_UART_HWFLOW_INSTANCE(USARTx) can be used to check whether or not
@@ -2098,7 +2098,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  290 0024 7047     		bx	lr
  291              		.cfi_endproc
  292              	.LFE201:
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 36
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 36
 
 
  294              		.section	.text.LL_USART_SetBaudRate,"ax",%progbits
@@ -2158,7 +2158,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
 1761:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   */
 1762:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** __STATIC_INLINE uint32_t LL_USART_IsEnabledOneBitSamp(USART_TypeDef *USARTx)
 1763:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h **** {
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 37
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 37
 
 
 1764:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   return ((READ_BIT(USARTx->CR3, USART_CR3_ONEBIT) == (USART_CR3_ONEBIT)) ? 1UL : 0UL);
@@ -2218,7 +2218,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
 1818:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @brief  Return event type for Wake UP Interrupt Flag (WUS[1:0] bits)
 1819:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @note   Macro @ref IS_UART_WAKEUP_FROMSTOP_INSTANCE(USARTx) can be used to check whether or not
 1820:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   *         Wake-up from Stop mode feature is supported by the USARTx instance.
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 38
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 38
 
 
 1821:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h ****   * @rmtoll CR3          WUS           LL_USART_GetWKUPType
@@ -2278,7 +2278,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  312              		.cfi_offset 7, -4
  313 0002 86B0     		sub	sp, sp, #24
  314              	.LCFI31:
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 39
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 39
 
 
  315              		.cfi_def_cfa_offset 32
@@ -2338,7 +2338,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  357 004c 9BB2     		uxth	r3, r3
  358 004e 03F00703 		and	r3, r3, #7
  359              		.loc 1 1877 13
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 40
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 40
 
 
  360 0052 1C43     		orrs	r4, r4, r3
@@ -2398,7 +2398,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  404              	.L13:
  405 008c 00000000 		.word	USART_PRESCALER_TAB
  406              		.cfi_endproc
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 41
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 41
 
 
  407              	.LFE211:
@@ -2458,7 +2458,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
   45:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /* Includes ------------------------------------------------------------------*/
   46:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #include "stm32g4xx.h"
   47:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 42
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 42
 
 
   48:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /** @addtogroup STM32G4xx_LL_Driver
@@ -2518,7 +2518,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  102:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_ADC345         RCC_AHB2ENR_ADC345EN
  103:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #endif /* ADC345_COMMON */
  104:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_DAC1           RCC_AHB2ENR_DAC1EN
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 43
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 43
 
 
  105:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #if defined(DAC2)
@@ -2578,7 +2578,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  159:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_I2C1           RCC_APB1ENR1_I2C1EN
  160:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_I2C2           RCC_APB1ENR1_I2C2EN
  161:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_USB            RCC_APB1ENR1_USBEN
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 44
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 44
 
 
  162:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #if defined(FDCAN1)
@@ -2638,7 +2638,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  216:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /* Exported macro ------------------------------------------------------------*/
  217:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /* Exported functions --------------------------------------------------------*/
  218:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /** @defgroup BUS_LL_Exported_Functions BUS Exported Functions
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 45
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 45
 
 
  219:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @{
@@ -2698,7 +2698,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  273:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** __STATIC_INLINE uint32_t LL_AHB1_GRP1_IsEnabledClock(uint32_t Periphs)
  274:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** {
  275:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   return ((READ_BIT(RCC->AHB1ENR, Periphs) == Periphs) ? 1UL : 0UL);
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 46
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 46
 
 
  276:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
@@ -2758,7 +2758,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  330:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1RSTR     DMA2RST       LL_AHB1_GRP1_ReleaseReset\n
  331:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1RSTR     DMAMUXRST     LL_AHB1_GRP1_ReleaseReset\n
  332:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1RSTR     CORDICRST     LL_AHB1_GRP1_ReleaseReset\n
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 47
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 47
 
 
  333:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1RSTR     FMACRST       LL_AHB1_GRP1_ReleaseReset\n
@@ -2818,7 +2818,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  387:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1SMENR    CORDICSMEN    LL_AHB1_GRP1_DisableClockStopSleep\n
  388:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1SMENR    FMACSMEN      LL_AHB1_GRP1_DisableClockStopSleep\n
  389:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1SMENR    FLASHSMEN     LL_AHB1_GRP1_DisableClockStopSleep\n
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 48
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 48
 
 
  390:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1SMENR    SRAM1SMEN     LL_AHB1_GRP1_DisableClockStopSleep\n
@@ -2878,7 +2878,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  444:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_DAC2 (*)
  445:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_DAC3
  446:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_DAC4 (*)
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 49
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 49
 
 
  447:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_AES (*)
@@ -2938,7 +2938,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  501:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   return ((READ_BIT(RCC->AHB2ENR, Periphs) == Periphs) ? 1UL : 0UL);
  502:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
  503:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 50
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 50
 
 
  504:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
@@ -2998,7 +2998,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  558:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2RSTR      DAC2RST        LL_AHB2_GRP1_ForceReset\n
  559:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2RSTR      DAC3RST        LL_AHB2_GRP1_ForceReset\n
  560:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2RSTR      DAC4RST        LL_AHB2_GRP1_ForceReset\n
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 51
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 51
 
 
  561:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2RSTR      AESRST         LL_AHB2_GRP1_ForceReset\n
@@ -3058,7 +3058,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  615:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_DAC1
  616:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_DAC2 (*)
  617:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_DAC3
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 52
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 52
 
 
  618:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_DAC4 (*)
@@ -3118,7 +3118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  672:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** {
  673:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   __IO uint32_t tmpreg;
  674:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   SET_BIT(RCC->AHB2SMENR, Periphs);
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 53
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 53
 
 
  675:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   /* Delay after an RCC peripheral clock enabling */
@@ -3178,7 +3178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  729:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
  730:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /** @defgroup BUS_LL_EF_AHB3 AHB3
  731:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @{
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 54
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 54
 
 
  732:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
@@ -3238,7 +3238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  786:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
  787:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @brief  Force AHB3 peripherals reset.
  788:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @rmtoll AHB3RSTR     FMCRST        LL_AHB3_GRP1_ForceReset\n
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 55
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 55
 
 
  789:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB3RSTR     QSPIRST       LL_AHB3_GRP1_ForceReset
@@ -3298,7 +3298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  843:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB3SMENR    QSPISMEN      LL_AHB3_GRP1_DisableClockStopSleep
  844:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
  845:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB3_GRP1_PERIPH_FMC (*)
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 56
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 56
 
 
  846:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB3_GRP1_PERIPH_QSPI (*)
@@ -3358,7 +3358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  900:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USART2
  901:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USART3
  902:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_UART4 (*)
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 57
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 57
 
 
  903:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_UART5 (*)
@@ -3418,7 +3418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  957:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     SPI2EN        LL_APB1_GRP1_IsEnabledClock\n
  958:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     SPI3EN        LL_APB1_GRP1_IsEnabledClock\n
  959:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     USART2EN      LL_APB1_GRP1_IsEnabledClock\n
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 58
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 58
 
 
  960:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     USART3EN      LL_APB1_GRP1_IsEnabledClock\n
@@ -3478,7 +3478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
 1014:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
 1015:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** __STATIC_INLINE uint32_t LL_APB1_GRP2_IsEnabledClock(uint32_t Periphs)
 1016:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** {
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 59
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 59
 
 
 1017:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   return ((READ_BIT(RCC->APB1ENR2, Periphs) == Periphs) ? 1UL : 0UL);
@@ -3538,7 +3538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
 1071:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** __STATIC_INLINE void LL_APB1_GRP1_DisableClock(uint32_t Periphs)
 1072:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** {
 1073:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   CLEAR_BIT(RCC->APB1ENR1, Periphs);
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 60
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 60
 
 
 1074:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
@@ -3598,7 +3598,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
 1128:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_UART4 (*)
 1129:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_UART5 (*)
 1130:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_I2C1
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 61
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 61
 
 
 1131:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_I2C2
@@ -3658,7 +3658,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  459 0020 00100240 		.word	1073876992
  460              		.cfi_endproc
  461              	.LFE545:
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 62
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 62
 
 
  463              		.section	.text.LL_APB1_GRP1_ReleaseReset,"ax",%progbits
@@ -3718,7 +3718,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
 1191:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_TIM6
 1192:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_TIM7
 1193:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_CRS
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 63
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 63
 
 
 1194:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_SPI2
@@ -3778,7 +3778,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  505 001c 5DF8047B 		ldr	r7, [sp], #4
  506              	.LCFI47:
  507              		.cfi_restore 7
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 64
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 64
 
 
  508              		.cfi_def_cfa_offset 0
@@ -3838,7 +3838,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
 1253:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1SMENR1     USBSMEN         LL_APB1_GRP1_EnableClockStopSleep\n
 1254:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1SMENR1     FDCANSMEN       LL_APB1_GRP1_EnableClockStopSleep\n
 1255:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1SMENR1     PWRSMEN         LL_APB1_GRP1_EnableClockStopSleep\n
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 65
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 65
 
 
 1256:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1SMENR1     I2C3SMEN        LL_APB1_GRP1_EnableClockStopSleep\n
@@ -3898,7 +3898,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
 1310:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   SET_BIT(RCC->APB1SMENR2, Periphs);
 1311:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   /* Delay after an RCC peripheral clock enabling */
 1312:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   tmpreg = READ_BIT(RCC->APB1SMENR2, Periphs);
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 66
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 66
 
 
 1313:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   (void)tmpreg;
@@ -3958,7 +3958,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
 1367:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** __STATIC_INLINE void LL_APB1_GRP1_DisableClockStopSleep(uint32_t Periphs)
 1368:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** {
 1369:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   CLEAR_BIT(RCC->APB1SMENR1, Periphs);
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 67
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 67
 
 
 1370:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
@@ -4018,7 +4018,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
 1424:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB2_GRP1_PERIPH_HRTIM1 (*)
 1425:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *
 1426:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         (*) value not defined in all devices.
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 68
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 68
 
 
 1427:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval None
@@ -4078,7 +4078,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
 1481:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB2ENR      SPI4EN        LL_APB2_GRP1_DisableClock\n
 1482:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB2ENR      TIM15EN       LL_APB2_GRP1_DisableClock\n
 1483:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB2ENR      TIM16EN       LL_APB2_GRP1_DisableClock\n
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 69
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 69
 
 
 1484:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB2ENR      TIM17EN       LL_APB2_GRP1_DisableClock\n
@@ -4138,7 +4138,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
 1538:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         (*) value not defined in all devices.
 1539:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval None
 1540:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 70
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 70
 
 
 1541:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** __STATIC_INLINE void LL_APB2_GRP1_ForceReset(uint32_t Periphs)
@@ -4198,7 +4198,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  578              	.LFB557:
 1545:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
 1546:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 71
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 71
 
 
 1547:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @brief  Release APB2 peripherals reset.
@@ -4258,7 +4258,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  600 0010 0449     		ldr	r1, .L25
  601 0012 1340     		ands	r3, r3, r2
  602 0014 0B64     		str	r3, [r1, #64]
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 72
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 72
 
 
 1580:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
@@ -4318,7 +4318,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
   24:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usart.c **** #include "stm32g4xx_ll_bus.h"
   25:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usart.c **** #ifdef USE_FULL_ASSERT
   26:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usart.c **** #include "stm32_assert.h"
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 73
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 73
 
 
   27:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usart.c **** #else
@@ -4378,7 +4378,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
   81:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usart.c **** #define IS_LL_USART_DATAWIDTH(__VALUE__) (((__VALUE__) == LL_USART_DATAWIDTH_7B) \
   82:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usart.c ****                                           || ((__VALUE__) == LL_USART_DATAWIDTH_8B) \
   83:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usart.c ****                                           || ((__VALUE__) == LL_USART_DATAWIDTH_9B))
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 74
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 74
 
 
   84:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usart.c **** 
@@ -4438,7 +4438,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  639 0000 80B5     		push	{r7, lr}
  640              	.LCFI60:
  641              		.cfi_def_cfa_offset 8
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 75
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 75
 
 
  642              		.cfi_offset 7, -8
@@ -4498,7 +4498,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  676 0036 4FF40030 		mov	r0, #131072
  677 003a FFF7FEFF 		bl	LL_APB1_GRP1_ReleaseReset
  678 003e 28E0     		b	.L29
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 76
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 76
 
 
  679              	.L30:
@@ -4558,7 +4558,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  176:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usart.c ****     /* Force reset of UART clock */
  177:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usart.c ****     LL_APB1_GRP1_ForceReset(LL_APB1_GRP1_PERIPH_UART5);
  711              		.loc 3 177 5
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 77
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 77
 
 
  712 007c 4FF48010 		mov	r0, #1048576
@@ -4618,7 +4618,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  190:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usart.c **** 
  191:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usart.c **** /**
  192:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usart.c ****   * @brief  Initialize USART registers according to the specified
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 78
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 78
 
 
  193:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usart.c ****   *         parameters in USART_InitStruct.
@@ -4678,7 +4678,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  780 0012 7868     		ldr	r0, [r7, #4]
  781 0014 FFF7FEFF 		bl	LL_USART_IsEnabled
  782 0018 0346     		mov	r3, r0
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 79
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 79
 
 
  783              		.loc 3 222 6
@@ -4738,7 +4738,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  811              		.loc 3 248 5
  812 004e 3B68     		ldr	r3, [r7]
  813 0050 9B69     		ldr	r3, [r3, #24]
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 80
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 80
 
 
  814 0052 1946     		mov	r1, r3
@@ -4798,7 +4798,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  850              		.loc 3 266 13
  851 0090 7B68     		ldr	r3, [r7, #4]
  852 0092 1C4A     		ldr	r2, .L46+16
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 81
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 81
 
 
  853 0094 9342     		cmp	r3, r2
@@ -4858,7 +4858,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  883 00c4 FB73     		strb	r3, [r7, #15]
  291:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usart.c ****       LL_USART_SetBaudRate(USARTx,
  884              		.loc 3 291 7
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 82
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 82
 
 
  885 00c6 3B68     		ldr	r3, [r7]
@@ -4918,7 +4918,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  917              		.align	2
  918              	.L46:
  919 00f4 F369FFEF 		.word	-268473869
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 83
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 83
 
 
  920 00f8 00380140 		.word	1073821696
@@ -4978,7 +4978,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  962              		.loc 3 327 41
  963 0016 7B68     		ldr	r3, [r7, #4]
  964 0018 0022     		movs	r2, #0
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 84
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 84
 
 
  965 001a 9A60     		str	r2, [r3, #8]
@@ -5038,7 +5038,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  336:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usart.c ****   * @brief  Initialize USART Clock related settings according to the
  337:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usart.c ****   *         specified parameters in the USART_ClockInitStruct.
  338:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usart.c ****   * @note   As some bits in USART configuration registers can only be written when the USART is dis
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 85
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 85
 
 
  339:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usart.c ****   *         USART Peripheral should be in disabled state prior calling this function. Otherwise, ER
@@ -5098,7 +5098,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  1044 001e 002B     		cmp	r3, #0
  1045 0020 03D1     		bne	.L51
  362:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usart.c ****     {
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 86
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 86
 
 
  363:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usart.c ****       /* Deactivate Clock signal delivery :
@@ -5158,7 +5158,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  394:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usart.c ****     status = ERROR;
  1069              		.loc 3 394 12
  1070 004e 0123     		movs	r3, #1
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 87
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 87
 
 
  1071 0050 FB73     		strb	r3, [r7, #15]
@@ -5218,7 +5218,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  408:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usart.c ****   /* Set LL_USART_ClockInitStruct fields with default values */
  409:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usart.c ****   USART_ClockInitStruct->ClockOutput       = LL_USART_CLOCK_DISABLE;
  1114              		.loc 3 409 44
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 88
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 88
 
 
  1115 0008 7B68     		ldr	r3, [r7, #4]
@@ -5264,50 +5264,50 @@ ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 1
  1152              		.file 7 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h"
  1153              		.file 8 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h"
  1154              		.file 9 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h"
-ARM GAS  D:\apps\VSCode\data\tmp\cccQophJ.s 			page 89
+ARM GAS  D:\apps\VSCode\data\tmp\cc09PLP6.s 			page 89
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32g4xx_ll_usart.c
-D:\apps\VSCode\data\tmp\cccQophJ.s:18     .rodata.USART_PRESCALER_TAB:0000000000000000 $d
-D:\apps\VSCode\data\tmp\cccQophJ.s:21     .rodata.USART_PRESCALER_TAB:0000000000000000 USART_PRESCALER_TAB
-D:\apps\VSCode\data\tmp\cccQophJ.s:35     .text.LL_USART_IsEnabled:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cccQophJ.s:42     .text.LL_USART_IsEnabled:0000000000000000 LL_USART_IsEnabled
-D:\apps\VSCode\data\tmp\cccQophJ.s:93     .text.LL_USART_SetPrescaler:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cccQophJ.s:99     .text.LL_USART_SetPrescaler:0000000000000000 LL_USART_SetPrescaler
-D:\apps\VSCode\data\tmp\cccQophJ.s:145    .text.LL_USART_DisableSCLKOutput:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cccQophJ.s:151    .text.LL_USART_DisableSCLKOutput:0000000000000000 LL_USART_DisableSCLKOutput
-D:\apps\VSCode\data\tmp\cccQophJ.s:193    .text.LL_USART_SetStopBitsLength:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cccQophJ.s:199    .text.LL_USART_SetStopBitsLength:0000000000000000 LL_USART_SetStopBitsLength
-D:\apps\VSCode\data\tmp\cccQophJ.s:244    .text.LL_USART_SetHWFlowCtrl:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cccQophJ.s:250    .text.LL_USART_SetHWFlowCtrl:0000000000000000 LL_USART_SetHWFlowCtrl
-D:\apps\VSCode\data\tmp\cccQophJ.s:295    .text.LL_USART_SetBaudRate:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cccQophJ.s:301    .text.LL_USART_SetBaudRate:0000000000000000 LL_USART_SetBaudRate
-D:\apps\VSCode\data\tmp\cccQophJ.s:405    .text.LL_USART_SetBaudRate:000000000000008c $d
-D:\apps\VSCode\data\tmp\cccQophJ.s:410    .text.LL_APB1_GRP1_ForceReset:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cccQophJ.s:416    .text.LL_APB1_GRP1_ForceReset:0000000000000000 LL_APB1_GRP1_ForceReset
-D:\apps\VSCode\data\tmp\cccQophJ.s:459    .text.LL_APB1_GRP1_ForceReset:0000000000000020 $d
-D:\apps\VSCode\data\tmp\cccQophJ.s:464    .text.LL_APB1_GRP1_ReleaseReset:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cccQophJ.s:470    .text.LL_APB1_GRP1_ReleaseReset:0000000000000000 LL_APB1_GRP1_ReleaseReset
-D:\apps\VSCode\data\tmp\cccQophJ.s:513    .text.LL_APB1_GRP1_ReleaseReset:0000000000000024 $d
-D:\apps\VSCode\data\tmp\cccQophJ.s:518    .text.LL_APB2_GRP1_ForceReset:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cccQophJ.s:524    .text.LL_APB2_GRP1_ForceReset:0000000000000000 LL_APB2_GRP1_ForceReset
-D:\apps\VSCode\data\tmp\cccQophJ.s:566    .text.LL_APB2_GRP1_ForceReset:0000000000000020 $d
-D:\apps\VSCode\data\tmp\cccQophJ.s:571    .text.LL_APB2_GRP1_ReleaseReset:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cccQophJ.s:577    .text.LL_APB2_GRP1_ReleaseReset:0000000000000000 LL_APB2_GRP1_ReleaseReset
-D:\apps\VSCode\data\tmp\cccQophJ.s:620    .text.LL_APB2_GRP1_ReleaseReset:0000000000000024 $d
-D:\apps\VSCode\data\tmp\cccQophJ.s:625    .text.LL_USART_DeInit:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cccQophJ.s:632    .text.LL_USART_DeInit:0000000000000000 LL_USART_DeInit
-D:\apps\VSCode\data\tmp\cccQophJ.s:738    .text.LL_USART_DeInit:000000000000009c $d
-D:\apps\VSCode\data\tmp\cccQophJ.s:747    .text.LL_USART_Init:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cccQophJ.s:754    .text.LL_USART_Init:0000000000000000 LL_USART_Init
-D:\apps\VSCode\data\tmp\cccQophJ.s:919    .text.LL_USART_Init:00000000000000f4 $d
-D:\apps\VSCode\data\tmp\cccQophJ.s:929    .text.LL_USART_StructInit:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cccQophJ.s:936    .text.LL_USART_StructInit:0000000000000000 LL_USART_StructInit
-D:\apps\VSCode\data\tmp\cccQophJ.s:1004   .text.LL_USART_ClockInit:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cccQophJ.s:1011   .text.LL_USART_ClockInit:0000000000000000 LL_USART_ClockInit
-D:\apps\VSCode\data\tmp\cccQophJ.s:1089   .text.LL_USART_ClockStructInit:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cccQophJ.s:1096   .text.LL_USART_ClockStructInit:0000000000000000 LL_USART_ClockStructInit
+D:\apps\VSCode\data\tmp\cc09PLP6.s:18     .rodata.USART_PRESCALER_TAB:0000000000000000 $d
+D:\apps\VSCode\data\tmp\cc09PLP6.s:21     .rodata.USART_PRESCALER_TAB:0000000000000000 USART_PRESCALER_TAB
+D:\apps\VSCode\data\tmp\cc09PLP6.s:35     .text.LL_USART_IsEnabled:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cc09PLP6.s:42     .text.LL_USART_IsEnabled:0000000000000000 LL_USART_IsEnabled
+D:\apps\VSCode\data\tmp\cc09PLP6.s:93     .text.LL_USART_SetPrescaler:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cc09PLP6.s:99     .text.LL_USART_SetPrescaler:0000000000000000 LL_USART_SetPrescaler
+D:\apps\VSCode\data\tmp\cc09PLP6.s:145    .text.LL_USART_DisableSCLKOutput:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cc09PLP6.s:151    .text.LL_USART_DisableSCLKOutput:0000000000000000 LL_USART_DisableSCLKOutput
+D:\apps\VSCode\data\tmp\cc09PLP6.s:193    .text.LL_USART_SetStopBitsLength:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cc09PLP6.s:199    .text.LL_USART_SetStopBitsLength:0000000000000000 LL_USART_SetStopBitsLength
+D:\apps\VSCode\data\tmp\cc09PLP6.s:244    .text.LL_USART_SetHWFlowCtrl:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cc09PLP6.s:250    .text.LL_USART_SetHWFlowCtrl:0000000000000000 LL_USART_SetHWFlowCtrl
+D:\apps\VSCode\data\tmp\cc09PLP6.s:295    .text.LL_USART_SetBaudRate:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cc09PLP6.s:301    .text.LL_USART_SetBaudRate:0000000000000000 LL_USART_SetBaudRate
+D:\apps\VSCode\data\tmp\cc09PLP6.s:405    .text.LL_USART_SetBaudRate:000000000000008c $d
+D:\apps\VSCode\data\tmp\cc09PLP6.s:410    .text.LL_APB1_GRP1_ForceReset:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cc09PLP6.s:416    .text.LL_APB1_GRP1_ForceReset:0000000000000000 LL_APB1_GRP1_ForceReset
+D:\apps\VSCode\data\tmp\cc09PLP6.s:459    .text.LL_APB1_GRP1_ForceReset:0000000000000020 $d
+D:\apps\VSCode\data\tmp\cc09PLP6.s:464    .text.LL_APB1_GRP1_ReleaseReset:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cc09PLP6.s:470    .text.LL_APB1_GRP1_ReleaseReset:0000000000000000 LL_APB1_GRP1_ReleaseReset
+D:\apps\VSCode\data\tmp\cc09PLP6.s:513    .text.LL_APB1_GRP1_ReleaseReset:0000000000000024 $d
+D:\apps\VSCode\data\tmp\cc09PLP6.s:518    .text.LL_APB2_GRP1_ForceReset:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cc09PLP6.s:524    .text.LL_APB2_GRP1_ForceReset:0000000000000000 LL_APB2_GRP1_ForceReset
+D:\apps\VSCode\data\tmp\cc09PLP6.s:566    .text.LL_APB2_GRP1_ForceReset:0000000000000020 $d
+D:\apps\VSCode\data\tmp\cc09PLP6.s:571    .text.LL_APB2_GRP1_ReleaseReset:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cc09PLP6.s:577    .text.LL_APB2_GRP1_ReleaseReset:0000000000000000 LL_APB2_GRP1_ReleaseReset
+D:\apps\VSCode\data\tmp\cc09PLP6.s:620    .text.LL_APB2_GRP1_ReleaseReset:0000000000000024 $d
+D:\apps\VSCode\data\tmp\cc09PLP6.s:625    .text.LL_USART_DeInit:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cc09PLP6.s:632    .text.LL_USART_DeInit:0000000000000000 LL_USART_DeInit
+D:\apps\VSCode\data\tmp\cc09PLP6.s:738    .text.LL_USART_DeInit:000000000000009c $d
+D:\apps\VSCode\data\tmp\cc09PLP6.s:747    .text.LL_USART_Init:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cc09PLP6.s:754    .text.LL_USART_Init:0000000000000000 LL_USART_Init
+D:\apps\VSCode\data\tmp\cc09PLP6.s:919    .text.LL_USART_Init:00000000000000f4 $d
+D:\apps\VSCode\data\tmp\cc09PLP6.s:929    .text.LL_USART_StructInit:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cc09PLP6.s:936    .text.LL_USART_StructInit:0000000000000000 LL_USART_StructInit
+D:\apps\VSCode\data\tmp\cc09PLP6.s:1004   .text.LL_USART_ClockInit:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cc09PLP6.s:1011   .text.LL_USART_ClockInit:0000000000000000 LL_USART_ClockInit
+D:\apps\VSCode\data\tmp\cc09PLP6.s:1089   .text.LL_USART_ClockStructInit:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cc09PLP6.s:1096   .text.LL_USART_ClockStructInit:0000000000000000 LL_USART_ClockStructInit
 
 UNDEFINED SYMBOLS
 LL_RCC_GetUSARTClockFreq

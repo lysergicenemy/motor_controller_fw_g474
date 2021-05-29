@@ -1,4 +1,4 @@
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
   29:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** #include "stm32g4xx.h"
   30:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** 
   31:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** /** @addtogroup STM32G4xx_LL_Driver
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 2
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 2
 
 
   32:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @{
@@ -118,7 +118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
   86:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** 
   87:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   uint32_t OutputType;   /*!< Specifies the operating output type for the selected pins.
   88:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****                               This parameter can be a value of @ref GPIO_LL_EC_OUTPUT.
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 3
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 3
 
 
   89:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** 
@@ -178,7 +178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  143:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @{
  144:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   */
  145:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** #define LL_GPIO_MODE_INPUT                 (0x00000000U) /*!< Select input mode */
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 4
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 4
 
 
  146:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** #define LL_GPIO_MODE_OUTPUT                GPIO_MODER_MODE0_0  /*!< Select output mode */
@@ -238,7 +238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  200:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** #define LL_GPIO_AF_10                      (0x000000AU) /*!< Select alternate function 10 */
  201:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** #define LL_GPIO_AF_11                      (0x000000BU) /*!< Select alternate function 11 */
  202:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** #define LL_GPIO_AF_12                      (0x000000CU) /*!< Select alternate function 12 */
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 5
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 5
 
 
  203:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** #define LL_GPIO_AF_13                      (0x000000DU) /*!< Select alternate function 13 */
@@ -298,7 +298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  257:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @brief  Configure gpio mode for a dedicated pin on dedicated port.
  258:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @note   I/O mode can be Input mode, General purpose output, Alternate function mode or Analog.
  259:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @note   Warning: only one pin can be passed as parameter.
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 6
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 6
 
 
  260:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @rmtoll MODER        MODEy         LL_GPIO_SetPinMode
@@ -358,7 +358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
   53              		.file 2 "Drivers/CMSIS/Include/cmsis_gcc.h"
    1:Drivers/CMSIS/Include/cmsis_gcc.h **** /**************************************************************************//**
    2:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @file     cmsis_gcc.h
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 7
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 7
 
 
    3:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @brief    CMSIS compiler GCC header file
@@ -418,7 +418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
   57:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
   58:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __WEAK
   59:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __WEAK                                 __attribute__((weak))
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 8
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 8
 
 
   60:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -478,7 +478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  114:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __RESTRICT                             __restrict
  115:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  116:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 9
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 9
 
 
  117:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -538,7 +538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  171:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
  172:Drivers/CMSIS/Include/cmsis_gcc.h **** }
  173:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 10
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 10
 
 
  174:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -598,7 +598,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  228:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  229:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get xPSR Register
  230:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the content of the xPSR Register.
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 11
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 11
 
 
  231:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               xPSR Register value
@@ -658,7 +658,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  285:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Process Stack Pointer (non-secure)
  286:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the non-secure Process Stack Pointer (PSP) when in secure sta
  287:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    topOfProcStack  Process Stack Pointer value to set
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 12
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 12
 
 
  288:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
@@ -718,7 +718,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  342:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  343:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_MSP_NS(uint32_t topOfMainStack)
  344:Drivers/CMSIS/Include/cmsis_gcc.h **** {
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 13
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 13
 
 
  345:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR msp_ns, %0" : : "r" (topOfMainStack) : );
@@ -778,7 +778,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  399:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
  400:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  401:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, primask_ns" : "=r" (result) :: "memory");
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 14
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 14
 
 
  402:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
@@ -838,7 +838,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  456:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  457:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Base Priority
  458:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the Base Priority register.
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 15
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 15
 
 
  459:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Base Priority register value
@@ -898,7 +898,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  513:Drivers/CMSIS/Include/cmsis_gcc.h ****            or the new value increases the BASEPRI priority level.
  514:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    basePri  Base Priority value to set
  515:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 16
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 16
 
 
  516:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_BASEPRI_MAX(uint32_t basePri)
@@ -958,7 +958,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  570:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  571:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR faultmask_ns, %0" : : "r" (faultMask) : "memory");
  572:Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 17
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 17
 
 
  573:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -1018,7 +1018,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  627:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  628:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  629:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Process Stack Pointer Limit
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 18
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 18
 
 
  630:Drivers/CMSIS/Include/cmsis_gcc.h ****   Devices without ARMv8-M Main Extensions (i.e. Cortex-M23) lack the non-secure
@@ -1078,7 +1078,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  684:Drivers/CMSIS/Include/cmsis_gcc.h ****   return 0U;
  685:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
  686:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 19
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 19
 
 
  687:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, msplim" : "=r" (result) );
@@ -1138,7 +1138,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  741:Drivers/CMSIS/Include/cmsis_gcc.h ****   Stack Pointer Limit register hence the write is silently ignored.
  742:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  743:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the non-secure Main Stack Pointer Limit (MSPLIM) when in secu
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 20
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 20
 
 
  744:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    MainStackPtrLimit  Main Stack Pointer value to set
@@ -1198,7 +1198,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  798:Drivers/CMSIS/Include/cmsis_gcc.h **** // || (__GNUC__ > 7) || (__GNUC__ == 7 && __GNUC_MINOR__ >= 2)
  799:Drivers/CMSIS/Include/cmsis_gcc.h ****   /* see https://gcc.gnu.org/ml/gcc-patches/2017-04/msg00443.html */
  800:Drivers/CMSIS/Include/cmsis_gcc.h ****   __builtin_arm_set_fpscr(fpscr);
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 21
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 21
 
 
  801:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
@@ -1258,7 +1258,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  855:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Send Event is a hint instruction. It causes an event to be signaled to the CPU.
  856:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  857:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __SEV()                             __ASM volatile ("sev")
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 22
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 22
 
 
  858:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -1318,7 +1318,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  912:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  913:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  914:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Reverse byte order (16 bit)
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 23
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 23
 
 
  915:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Reverses the byte order within each halfword of a word. For example, 0x12345678 becomes 
@@ -1378,7 +1378,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  969:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    value  is ignored by the processor.
  970:Drivers/CMSIS/Include/cmsis_gcc.h ****                  If required, a debugger can use it to store additional information about the break
  971:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 24
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 24
 
 
  972:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __BKPT(value)                       __ASM volatile ("bkpt "#value)
@@ -1438,7 +1438,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
   78              	.LBB27:
  988:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
   79              		.loc 2 988 4
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 25
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 25
 
 
   80 0034 FB69     		ldr	r3, [r7, #28]
@@ -1498,7 +1498,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  298:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_0
  299:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_1
  300:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_2
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 26
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 26
 
 
  301:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_3
@@ -1558,7 +1558,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  355:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** __STATIC_INLINE void LL_GPIO_SetPinOutputType(GPIO_TypeDef *GPIOx, uint32_t PinMask, uint32_t Outpu
  356:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** {
  127              		.loc 1 356 1
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 27
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 27
 
 
  128              		.cfi_startproc
@@ -1618,7 +1618,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  182              	.LFB134:
  359:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** 
  360:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 28
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 28
 
 
  361:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @brief  Return gpio output type for several pins on dedicated port.
@@ -1678,7 +1678,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  415:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_12
  416:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_13
  417:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_14
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 29
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 29
 
 
  418:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_15
@@ -1738,7 +1738,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  225 0026 0321     		movs	r1, #3
  226 0028 01FA03F3 		lsl	r3, r1, r3
  227 002c DB43     		mvns	r3, r3
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 30
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 30
 
 
  228 002e 1A40     		ands	r2, r2, r3
@@ -1798,7 +1798,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  431:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** 
  432:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** /**
  433:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @brief  Return gpio speed for a dedicated pin on dedicated port.
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 31
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 31
 
 
  434:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @note   I/O speed can be Low, Medium, Fast or High speed.
@@ -1858,7 +1858,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  488:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_13
  489:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_14
  490:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_15
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 32
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 32
 
 
  491:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @param  Pull This parameter can be one of the following values:
@@ -1918,7 +1918,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  325 002c DB43     		mvns	r3, r3
  326 002e 1A40     		ands	r2, r2, r3
  327 0030 BB68     		ldr	r3, [r7, #8]
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 33
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 33
 
 
  328 0032 FB61     		str	r3, [r7, #28]
@@ -1978,7 +1978,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  504:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @note   Warning: only one pin can be passed as parameter.
  505:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @rmtoll PUPDR        PUPDy         LL_GPIO_GetPinPull
  506:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @param  GPIOx GPIO Port
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 34
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 34
 
 
  507:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @param  Pin This parameter can be one of the following values:
@@ -2038,7 +2038,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  561:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_AF_10
  562:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_AF_11
  563:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_AF_12
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 35
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 35
 
 
  564:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_AF_13
@@ -2098,7 +2098,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  424 002e 1A40     		ands	r2, r2, r3
  425 0030 BB68     		ldr	r3, [r7, #8]
  426 0032 FB61     		str	r3, [r7, #28]
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 36
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 36
 
 
  427              	.LBB38:
@@ -2158,7 +2158,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  577:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @rmtoll AFRL         AFSELy        LL_GPIO_GetAFPin_0_7
  578:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @param  GPIOx GPIO Port
  579:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @param  Pin This parameter can be one of the following values:
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 37
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 37
 
 
  580:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_0
@@ -2218,7 +2218,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  634:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_AF_6
  635:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_AF_7
  636:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_AF_8
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 38
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 38
 
 
  637:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_AF_9
@@ -2278,7 +2278,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  518 0024 DBB2     		uxtb	r3, r3
  519 0026 9B00     		lsls	r3, r3, #2
  520 0028 0F21     		movs	r1, #15
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 39
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 39
 
 
  521 002a 01FA03F3 		lsl	r3, r1, r3
@@ -2338,7 +2338,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  573              		.fpu fpv4-sp-d16
  575              	LL_AHB2_GRP1_ForceReset:
  576              	.LFB163:
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 40
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 40
 
 
  577              		.file 3 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h"
@@ -2398,7 +2398,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
   54:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /** @defgroup BUS_LL BUS
   55:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @{
   56:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 41
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 41
 
 
   57:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
@@ -2458,7 +2458,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  111:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #endif /* DAC4 */
  112:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #if defined(AES)
  113:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_AES            RCC_AHB2ENR_AESEN
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 42
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 42
 
 
  114:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #endif /* AES */
@@ -2518,7 +2518,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  168:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
  169:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @}
  170:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 43
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 43
 
 
  171:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
@@ -2578,7 +2578,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  225:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
  226:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
  227:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @brief  Enable AHB1 peripherals clock.
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 44
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 44
 
 
  228:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @rmtoll AHB1ENR      DMA1EN        LL_AHB1_GRP1_EnableClock\n
@@ -2638,7 +2638,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  282:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1ENR      DMAMUXEN      LL_AHB1_GRP1_DisableClock\n
  283:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1ENR      CORDICEN      LL_AHB1_GRP1_DisableClock\n
  284:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1ENR      FMACEN        LL_AHB1_GRP1_DisableClock\n
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 45
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 45
 
 
  285:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1ENR      FLASHEN       LL_AHB1_GRP1_DisableClock\n
@@ -2698,7 +2698,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  339:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA2
  340:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMAMUX1
  341:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CORDIC
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 46
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 46
 
 
  342:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_FMAC
@@ -2758,7 +2758,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  396:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CORDIC
  397:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_FMAC
  398:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_FLASH
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 47
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 47
 
 
  399:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_SRAM1
@@ -2818,7 +2818,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  453:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** __STATIC_INLINE void LL_AHB2_GRP1_EnableClock(uint32_t Periphs)
  454:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** {
  455:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   __IO uint32_t tmpreg;
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 48
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 48
 
 
  456:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   SET_BIT(RCC->AHB2ENR, Periphs);
@@ -2878,7 +2878,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  510:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2ENR      GPIOEEN       LL_AHB2_GRP1_DisableClock\n
  511:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2ENR      GPIOFEN       LL_AHB2_GRP1_DisableClock\n
  512:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2ENR      GPIOGEN       LL_AHB2_GRP1_DisableClock\n
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 49
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 49
 
 
  513:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2ENR      ADC12EN       LL_AHB2_GRP1_DisableClock\n
@@ -2938,7 +2938,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  567:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOD
  568:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOE
  569:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOF
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 50
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 50
 
 
  570:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOG
@@ -2998,7 +2998,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  615              	.L19:
  616              		.align	2
  617              	.L18:
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 51
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 51
 
 
  618 0020 00100240 		.word	1073876992
@@ -3058,7 +3058,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  634              		@ frame_needed = 1, uses_anonymous_args = 0
  635              		@ link register save eliminated.
  636 0000 80B4     		push	{r7}
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 52
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 52
 
 
  637              	.LCFI42:
@@ -3118,7 +3118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
    5:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.c ****   * @brief   GPIO LL module driver.
    6:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.c ****   ******************************************************************************
    7:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.c ****   * @attention
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 53
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 53
 
 
    8:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.c ****   *
@@ -3178,7 +3178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
   62:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.c **** #define IS_LL_GPIO_SPEED(__VALUE__)        (((__VALUE__) == LL_GPIO_SPEED_FREQ_LOW)       ||\
   63:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.c ****                                             ((__VALUE__) == LL_GPIO_SPEED_FREQ_MEDIUM)    ||\
   64:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.c ****                                             ((__VALUE__) == LL_GPIO_SPEED_FREQ_HIGH)      ||\
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 54
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 54
 
 
   65:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.c ****                                             ((__VALUE__) == LL_GPIO_SPEED_FREQ_VERY_HIGH))
@@ -3238,7 +3238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  695              		.cfi_offset 14, -4
  696 0002 84B0     		sub	sp, sp, #16
  697              	.LCFI49:
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 55
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 55
 
 
  698              		.cfi_def_cfa_offset 24
@@ -3298,7 +3298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  735 003e 06D1     		bne	.L27
  128:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.c ****   {
  129:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.c ****     LL_AHB2_GRP1_ForceReset(LL_AHB2_GRP1_PERIPH_GPIOC);
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 56
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 56
 
 
  736              		.loc 4 129 5
@@ -3358,7 +3358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  775              		.loc 4 144 5
  776 0082 2020     		movs	r0, #32
  777 0084 FFF7FEFF 		bl	LL_AHB2_GRP1_ForceReset
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 57
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 57
 
 
  145:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.c ****     LL_AHB2_GRP1_ReleaseReset(LL_AHB2_GRP1_PERIPH_GPIOF);
@@ -3418,7 +3418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  818 00c0 00100048 		.word	1207963648
  819 00c4 00140048 		.word	1207964672
  820 00c8 00180048 		.word	1207965696
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 58
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 58
 
 
  821              		.cfi_endproc
@@ -3478,7 +3478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  853 000c 1B68     		ldr	r3, [r3]
  854 000e FB60     		str	r3, [r7, #12]
  855              	.LBB44:
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 59
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 59
 
 
  856              	.LBB45:
@@ -3538,7 +3538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  898 0044 FFF7FEFF 		bl	LL_GPIO_SetPinMode
  194:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.c **** 
  195:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.c ****       if ((GPIO_InitStruct->Mode == LL_GPIO_MODE_OUTPUT) || (GPIO_InitStruct->Mode == LL_GPIO_MODE_
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 60
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 60
 
 
  899              		.loc 4 195 27
@@ -3598,7 +3598,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  935 007e FF2B     		cmp	r3, #255
  936 0080 07D8     		bhi	.L41
  214:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.c ****         {
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 61
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 61
 
 
  215:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.c ****           LL_GPIO_SetAFPin_0_7(GPIOx, currentpin, GPIO_InitStruct->Alternate);
@@ -3658,7 +3658,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  976 00be 5B68     		ldr	r3, [r3, #4]
  977              		.loc 4 226 54 discriminator 1
  978 00c0 022B     		cmp	r3, #2
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 62
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 62
 
 
  979 00c2 07D1     		bne	.L44
@@ -3718,7 +3718,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  1015              		.loc 4 246 1
  1016              		.cfi_startproc
  1017              		@ args = 0, pretend = 0, frame = 8
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 63
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 63
 
 
  1018              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -3778,7 +3778,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  1064 0034 5DF8047B 		ldr	r7, [sp], #4
  1065              	.LCFI63:
  1066              		.cfi_restore 7
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 64
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 64
 
 
  1067              		.cfi_def_cfa_offset 0
@@ -3793,35 +3793,35 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 1
  1077              		.file 8 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h"
  1078              		.file 9 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h"
  1079              		.file 10 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h"
-ARM GAS  D:\apps\VSCode\data\tmp\ccFf6kqO.s 			page 65
+ARM GAS  D:\apps\VSCode\data\tmp\ccxr59Zs.s 			page 65
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32g4xx_ll_gpio.c
-D:\apps\VSCode\data\tmp\ccFf6kqO.s:18     .text.LL_GPIO_SetPinMode:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccFf6kqO.s:25     .text.LL_GPIO_SetPinMode:0000000000000000 LL_GPIO_SetPinMode
-D:\apps\VSCode\data\tmp\ccFf6kqO.s:119    .text.LL_GPIO_SetPinOutputType:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccFf6kqO.s:125    .text.LL_GPIO_SetPinOutputType:0000000000000000 LL_GPIO_SetPinOutputType
-D:\apps\VSCode\data\tmp\ccFf6kqO.s:175    .text.LL_GPIO_SetPinSpeed:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccFf6kqO.s:181    .text.LL_GPIO_SetPinSpeed:0000000000000000 LL_GPIO_SetPinSpeed
-D:\apps\VSCode\data\tmp\ccFf6kqO.s:273    .text.LL_GPIO_SetPinPull:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccFf6kqO.s:279    .text.LL_GPIO_SetPinPull:0000000000000000 LL_GPIO_SetPinPull
-D:\apps\VSCode\data\tmp\ccFf6kqO.s:371    .text.LL_GPIO_SetAFPin_0_7:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccFf6kqO.s:377    .text.LL_GPIO_SetAFPin_0_7:0000000000000000 LL_GPIO_SetAFPin_0_7
-D:\apps\VSCode\data\tmp\ccFf6kqO.s:469    .text.LL_GPIO_SetAFPin_8_15:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccFf6kqO.s:475    .text.LL_GPIO_SetAFPin_8_15:0000000000000000 LL_GPIO_SetAFPin_8_15
-D:\apps\VSCode\data\tmp\ccFf6kqO.s:569    .text.LL_AHB2_GRP1_ForceReset:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccFf6kqO.s:575    .text.LL_AHB2_GRP1_ForceReset:0000000000000000 LL_AHB2_GRP1_ForceReset
-D:\apps\VSCode\data\tmp\ccFf6kqO.s:618    .text.LL_AHB2_GRP1_ForceReset:0000000000000020 $d
-D:\apps\VSCode\data\tmp\ccFf6kqO.s:623    .text.LL_AHB2_GRP1_ReleaseReset:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccFf6kqO.s:629    .text.LL_AHB2_GRP1_ReleaseReset:0000000000000000 LL_AHB2_GRP1_ReleaseReset
-D:\apps\VSCode\data\tmp\ccFf6kqO.s:672    .text.LL_AHB2_GRP1_ReleaseReset:0000000000000024 $d
-D:\apps\VSCode\data\tmp\ccFf6kqO.s:677    .text.LL_GPIO_DeInit:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccFf6kqO.s:684    .text.LL_GPIO_DeInit:0000000000000000 LL_GPIO_DeInit
-D:\apps\VSCode\data\tmp\ccFf6kqO.s:815    .text.LL_GPIO_DeInit:00000000000000b4 $d
-D:\apps\VSCode\data\tmp\ccFf6kqO.s:825    .text.LL_GPIO_Init:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccFf6kqO.s:832    .text.LL_GPIO_Init:0000000000000000 LL_GPIO_Init
-D:\apps\VSCode\data\tmp\ccFf6kqO.s:1006   .text.LL_GPIO_StructInit:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccFf6kqO.s:1013   .text.LL_GPIO_StructInit:0000000000000000 LL_GPIO_StructInit
+D:\apps\VSCode\data\tmp\ccxr59Zs.s:18     .text.LL_GPIO_SetPinMode:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccxr59Zs.s:25     .text.LL_GPIO_SetPinMode:0000000000000000 LL_GPIO_SetPinMode
+D:\apps\VSCode\data\tmp\ccxr59Zs.s:119    .text.LL_GPIO_SetPinOutputType:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccxr59Zs.s:125    .text.LL_GPIO_SetPinOutputType:0000000000000000 LL_GPIO_SetPinOutputType
+D:\apps\VSCode\data\tmp\ccxr59Zs.s:175    .text.LL_GPIO_SetPinSpeed:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccxr59Zs.s:181    .text.LL_GPIO_SetPinSpeed:0000000000000000 LL_GPIO_SetPinSpeed
+D:\apps\VSCode\data\tmp\ccxr59Zs.s:273    .text.LL_GPIO_SetPinPull:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccxr59Zs.s:279    .text.LL_GPIO_SetPinPull:0000000000000000 LL_GPIO_SetPinPull
+D:\apps\VSCode\data\tmp\ccxr59Zs.s:371    .text.LL_GPIO_SetAFPin_0_7:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccxr59Zs.s:377    .text.LL_GPIO_SetAFPin_0_7:0000000000000000 LL_GPIO_SetAFPin_0_7
+D:\apps\VSCode\data\tmp\ccxr59Zs.s:469    .text.LL_GPIO_SetAFPin_8_15:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccxr59Zs.s:475    .text.LL_GPIO_SetAFPin_8_15:0000000000000000 LL_GPIO_SetAFPin_8_15
+D:\apps\VSCode\data\tmp\ccxr59Zs.s:569    .text.LL_AHB2_GRP1_ForceReset:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccxr59Zs.s:575    .text.LL_AHB2_GRP1_ForceReset:0000000000000000 LL_AHB2_GRP1_ForceReset
+D:\apps\VSCode\data\tmp\ccxr59Zs.s:618    .text.LL_AHB2_GRP1_ForceReset:0000000000000020 $d
+D:\apps\VSCode\data\tmp\ccxr59Zs.s:623    .text.LL_AHB2_GRP1_ReleaseReset:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccxr59Zs.s:629    .text.LL_AHB2_GRP1_ReleaseReset:0000000000000000 LL_AHB2_GRP1_ReleaseReset
+D:\apps\VSCode\data\tmp\ccxr59Zs.s:672    .text.LL_AHB2_GRP1_ReleaseReset:0000000000000024 $d
+D:\apps\VSCode\data\tmp\ccxr59Zs.s:677    .text.LL_GPIO_DeInit:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccxr59Zs.s:684    .text.LL_GPIO_DeInit:0000000000000000 LL_GPIO_DeInit
+D:\apps\VSCode\data\tmp\ccxr59Zs.s:815    .text.LL_GPIO_DeInit:00000000000000b4 $d
+D:\apps\VSCode\data\tmp\ccxr59Zs.s:825    .text.LL_GPIO_Init:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccxr59Zs.s:832    .text.LL_GPIO_Init:0000000000000000 LL_GPIO_Init
+D:\apps\VSCode\data\tmp\ccxr59Zs.s:1006   .text.LL_GPIO_StructInit:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccxr59Zs.s:1013   .text.LL_GPIO_StructInit:0000000000000000 LL_GPIO_StructInit
 
 NO UNDEFINED SYMBOLS
