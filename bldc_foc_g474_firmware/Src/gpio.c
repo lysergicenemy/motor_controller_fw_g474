@@ -117,23 +117,53 @@ void MX_GPIO_Init(void)
   // HALL
   GPIO_InitStruct.Pin = HALL_PHASE_A_Pin;
   GPIO_InitStruct.Mode = LL_GPIO_MODE_INPUT;
+  GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_HIGH;
   GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
   LL_GPIO_Init(HALL_PHASE_A_GPIO_Port, &GPIO_InitStruct);
-
+  /**/
   GPIO_InitStruct.Pin = HALL_PHASE_B_Pin;
   GPIO_InitStruct.Mode = LL_GPIO_MODE_INPUT;
+  GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_HIGH;
   GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
   LL_GPIO_Init(HALL_PHASE_B_GPIO_Port, &GPIO_InitStruct);
   /**/
   GPIO_InitStruct.Pin = HALL_PHASE_C_Pin;
   GPIO_InitStruct.Mode = LL_GPIO_MODE_INPUT;
+  GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_HIGH;
   GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
   LL_GPIO_Init(HALL_PHASE_C_GPIO_Port, &GPIO_InitStruct);
+
   /**/
   GPIO_InitStruct.Pin = DIR_Pin;
   GPIO_InitStruct.Mode = LL_GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
   LL_GPIO_Init(DIR_GPIO_Port, &GPIO_InitStruct);
+
+  // /* External interrupts */
+  // LL_SYSCFG_SetEXTISource(LL_SYSCFG_EXTI_PORTB, LL_SYSCFG_EXTI_LINE7);
+  // LL_SYSCFG_SetEXTISource(LL_SYSCFG_EXTI_PORTB, LL_SYSCFG_EXTI_LINE8);
+  // LL_SYSCFG_SetEXTISource(LL_SYSCFG_EXTI_PORTB, LL_SYSCFG_EXTI_LINE9);
+  // /**/
+  // EXTI_InitStruct.Line_0_31 = LL_EXTI_LINE_7;
+  // EXTI_InitStruct.LineCommand = ENABLE;
+  // EXTI_InitStruct.Mode = LL_EXTI_MODE_IT;
+  // EXTI_InitStruct.Trigger = LL_EXTI_TRIGGER_RISING_FALLING;
+  // LL_EXTI_Init(&EXTI_InitStruct);
+  // /**/
+  // EXTI_InitStruct.Line_0_31 = LL_EXTI_LINE_8;
+  // EXTI_InitStruct.LineCommand = ENABLE;
+  // EXTI_InitStruct.Mode = LL_EXTI_MODE_IT;
+  // EXTI_InitStruct.Trigger = LL_EXTI_TRIGGER_RISING_FALLING;
+  // LL_EXTI_Init(&EXTI_InitStruct);
+  // /**/
+  // EXTI_InitStruct.Line_0_31 = LL_EXTI_LINE_9;
+  // EXTI_InitStruct.LineCommand = ENABLE;
+  // EXTI_InitStruct.Mode = LL_EXTI_MODE_IT;
+  // EXTI_InitStruct.Trigger = LL_EXTI_TRIGGER_RISING_FALLING;
+  // LL_EXTI_Init(&EXTI_InitStruct);
+  // /* EXTI interrupt init*/
+  // NVIC_SetPriority(EXTI9_5_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),0, 0));
+  // NVIC_EnableIRQ(EXTI9_5_IRQn);
 }
 
 /* USER CODE BEGIN 2 */
@@ -158,24 +188,7 @@ void MX_GPIO_Init(void)
 // if (sensorType == ENCODER_ABZ)
 // {
 //   /**/
-//   LL_SYSCFG_SetEXTISource(LL_SYSCFG_EXTI_PORTB, LL_SYSCFG_EXTI_LINE6);
 
-//   /**/
-//   EXTI_InitStruct.Line_0_31 = LL_EXTI_LINE_6;
-//   EXTI_InitStruct.LineCommand = ENABLE;
-//   EXTI_InitStruct.Mode = LL_EXTI_MODE_IT;
-//   EXTI_InitStruct.Trigger = LL_EXTI_TRIGGER_RISING;
-//   LL_EXTI_Init(&EXTI_InitStruct);
-
-//   /**/
-//   LL_GPIO_SetPinPull(GPIOB, LL_GPIO_PIN_6, LL_GPIO_PULL_NO);
-
-//   /**/
-//   LL_GPIO_SetPinMode(GPIOB, LL_GPIO_PIN_6, LL_GPIO_MODE_INPUT);
-
-//   /* EXTI interrupt init*/
-//   NVIC_SetPriority(EXTI9_5_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(), 0, 0));
-//   NVIC_EnableIRQ(EXTI9_5_IRQn);
 // }
 /* USER CODE END 2 */
 

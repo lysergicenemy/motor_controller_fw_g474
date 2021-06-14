@@ -22,7 +22,7 @@ TARGET = bldc_foc_g474_firmware
 # debug build?
 DEBUG = 1
 # optimization
-OPT = -O0
+OPT = -Og
 
 
 #######################################
@@ -42,6 +42,7 @@ Src/adc.c \
 Src/hrtim.c \
 Src/sys.c \
 Src/usart.c \
+Src/cordic.c \
 Src/stm32g4xx_it.c \
 Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.c \
 Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_exti.c \
@@ -52,6 +53,7 @@ Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c \
 Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_pwr.c \
 Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usart.c \
 Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c \
+Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c \
 Src/system_stm32g4xx.c \
 Src/tim.c \
 Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c \

@@ -26,6 +26,7 @@
 		"stm32g4xx_it.h": "c",
 		"limits": "cpp",
 		"sys.h": "c",
-		"stm32_assert.h": "c"
+		"stm32_assert.h": "c",
+		"stm32g4xx_ll_cordic.h": "c"
 	}
 }

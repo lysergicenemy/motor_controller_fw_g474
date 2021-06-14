@@ -253,6 +253,18 @@ float utils_avg_angles_rad_fast(float *angles, float *weights, int angles_num)
 	return utils_fast_atan2(s_sum, c_sum);
 }
 
+/* Returns average value of 2 angles */
+float utils_avg_angle_rad_fast(float angle1, float angle2)
+{
+		float s1, c1, s2, c2;
+		s1 = utSin(angle1);
+		c1 = utCos(angle1);
+		s2 = utSin(angle2);
+		c2 = utCos(angle2);
+
+	return utils_fast_atan2(s1 + s2, c1 + c2);
+}
+
 /**
  * Get the middle value of three values
  *
@@ -339,7 +351,7 @@ float utils_fast_inv_sqrt(float x)
 
 /**
  * Fast atan2
- *
+ * ~160 CPU ticks on Cortex-M4F
  * See http://www.dspguru.com/dsp/tricks/fixed-point-atan2-with-self-normalization
  *
  * @param y
@@ -472,7 +484,6 @@ void utils_fast_sincos(float angle, float *sin, float *cos)
 	}
 }
 
-
 /**
  * Fast sine implementation. (~100 cycles)
  *
@@ -497,11 +508,11 @@ float utSin(float angle)
 		angle -= M_2PI;
 	}
 
-	if (angle < 0.0f)
+	if (angle < 0.f)
 	{
 		fsin = 1.27323954f * angle + 0.405284735f * angle * angle;
 
-		if (fsin < 0.0f)
+		if (fsin < 0.f)
 		{
 			fsin = 0.225f * (fsin * -fsin - fsin) + fsin;
 		}
@@ -514,7 +525,7 @@ float utSin(float angle)
 	{
 		fsin = 1.27323954f * angle - 0.405284735f * angle * angle;
 
-		if (fsin < 0.0f)
+		if (fsin < 0.f)
 		{
 			fsin = 0.225f * (fsin * -fsin - fsin) + fsin;
 		}
@@ -741,7 +752,6 @@ float utils_throttle_curve(float val, float curve_acc, float curve_brake, int mo
 	return ret;
 }
 
-
 uint32_t utils_crc32c(uint8_t *data, uint32_t len)
 {
 	uint32_t crc = 0xFFFFFFFF;
@@ -775,7 +785,6 @@ void utils_fft32_bin0(float *real_in, float *real, float *imag)
 	*real /= 32.0;
 }
 
-
 void utils_fft16_bin0(float *real_in, float *real, float *imag)
 {
 	*real = 0.0;
@@ -788,7 +797,6 @@ void utils_fft16_bin0(float *real_in, float *real, float *imag)
 
 	*real /= 16.0;
 }
-
 
 void utils_fft8_bin0(float *real_in, float *real, float *imag)
 {

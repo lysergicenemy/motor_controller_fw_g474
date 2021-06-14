@@ -1,4 +1,4 @@
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -10,340 +10,102 @@ ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
    7              		.eabi_attribute 24, 1
    8              		.eabi_attribute 25, 1
    9              		.eabi_attribute 26, 1
-  10              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 30, 1
   11              		.eabi_attribute 34, 1
   12              		.eabi_attribute 18, 4
   13              		.file	"stm32g4xx_ll_hrtim.c"
   14              		.text
   15              	.Ltext0:
   16              		.cfi_sections	.debug_frame
-  17              		.section	.rodata.REG_OFFSET_TAB_TIMER,"a"
-  18              		.align	2
-  21              	REG_OFFSET_TAB_TIMER:
-  22 0000 0000     		.short	0
-  23 0002 8000     		.short	128
-  24 0004 0001     		.short	256
-  25 0006 8001     		.short	384
-  26 0008 0002     		.short	512
-  27 000a 8002     		.short	640
-  28 000c 0003     		.short	768
-  29              		.section	.rodata.REG_OFFSET_TAB_ADCER,"a"
-  30              		.align	2
-  33              	REG_OFFSET_TAB_ADCER:
-  34 0000 00       		.byte	0
-  35 0001 04       		.byte	4
-  36 0002 08       		.byte	8
-  37 0003 0C       		.byte	12
-  38 0004 3C       		.byte	60
-  39 0005 3C       		.byte	60
-  40 0006 3C       		.byte	60
-  41 0007 3C       		.byte	60
-  42 0008 3C       		.byte	60
-  43 0009 3C       		.byte	60
-  44              		.section	.rodata.REG_OFFSET_TAB_ADCUR,"a"
-  45              		.align	2
-  48              	REG_OFFSET_TAB_ADCUR:
-  49 0000 00       		.byte	0
-  50 0001 00       		.byte	0
-  51 0002 00       		.byte	0
-  52 0003 00       		.byte	0
-  53 0004 7C       		.byte	124
-  54 0005 7C       		.byte	124
-  55 0006 7C       		.byte	124
-  56 0007 7C       		.byte	124
-  57 0008 7C       		.byte	124
-  58 0009 7C       		.byte	124
-  59              		.section	.rodata.REG_SHIFT_TAB_ADCER,"a"
-  60              		.align	2
-  63              	REG_SHIFT_TAB_ADCER:
-  64 0000 00       		.byte	0
-  65 0001 00       		.byte	0
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 2
+  17              		.section	.text.LL_HRTIM_DeInit,"ax",%progbits
+  18              		.align	1
+  19              		.global	LL_HRTIM_DeInit
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv4-sp-d16
+  26              	LL_HRTIM_DeInit:
+  27              	.LVL0:
+  28              	.LFB580:
+  29              		.file 1 "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c"
+   1:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** /**
+   2:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   ******************************************************************************
+   3:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   * @file    stm32g4xx_ll_hrtim.c
+   4:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   * @author  MCD Application Team
+   5:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   * @brief   HRTIM LL module driver.
+   6:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   ******************************************************************************
+   7:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   * @attention
+   8:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   *
+   9:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   * <h2><center>&copy; Copyright (c) 2019 STMicroelectronics.
+  10:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   * All rights reserved.</center></h2>
+  11:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   *
+  12:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   * This software component is licensed by ST under BSD 3-Clause license,
+  13:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   * the "License"; You may not use this file except in compliance with the
+  14:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   * License. You may obtain a copy of the License at:
+  15:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   *                        opensource.org/licenses/BSD-3-Clause
+  16:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   *
+  17:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   ******************************************************************************
+  18:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   */
+  19:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** #if defined(USE_FULL_LL_DRIVER)
+  20:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** 
+  21:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** /* Includes ------------------------------------------------------------------*/
+  22:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** #include "stm32g4xx_ll_hrtim.h"
+  23:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** #include "stm32g4xx_ll_bus.h"
+  24:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** 
+  25:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** #ifdef  USE_FULL_ASSERT
+  26:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** #include "stm32_assert.h"
+  27:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** #else
+  28:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** #define assert_param(expr) ((void)0U)
+  29:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** #endif
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 2
 
 
-  66 0002 00       		.byte	0
-  67 0003 00       		.byte	0
-  68 0004 00       		.byte	0
-  69 0005 05       		.byte	5
-  70 0006 0A       		.byte	10
-  71 0007 10       		.byte	16
-  72 0008 15       		.byte	21
-  73 0009 1A       		.byte	26
-  74              		.section	.rodata.REG_SHIFT_TAB_ADCUR,"a"
-  75              		.align	2
-  78              	REG_SHIFT_TAB_ADCUR:
-  79 0000 10       		.byte	16
-  80 0001 13       		.byte	19
-  81 0002 16       		.byte	22
-  82 0003 19       		.byte	25
-  83 0004 00       		.byte	0
-  84 0005 04       		.byte	4
-  85 0006 08       		.byte	8
-  86 0007 0C       		.byte	12
-  87 0008 10       		.byte	16
-  88 0009 14       		.byte	20
-  89              		.section	.rodata.REG_MASK_TAB_ADCER,"a"
-  90              		.align	2
-  93              	REG_MASK_TAB_ADCER:
-  94 0000 FFFFFFFF 		.word	-1
-  95 0004 FFFFFFFF 		.word	-1
-  96 0008 FFFFFFFF 		.word	-1
-  97 000c FFFFFFFF 		.word	-1
-  98 0010 1F000000 		.word	31
-  99 0014 E0030000 		.word	992
- 100 0018 007C0000 		.word	31744
- 101 001c 00001F00 		.word	2031616
- 102 0020 0000E003 		.word	65011712
- 103 0024 0000007C 		.word	2080374784
- 104              		.section	.rodata.REG_MASK_TAB_ADCUR,"a"
- 105              		.align	2
- 108              	REG_MASK_TAB_ADCUR:
- 109 0000 00000700 		.word	458752
- 110 0004 00003800 		.word	3670016
- 111 0008 0000C001 		.word	29360128
- 112 000c 0000000E 		.word	234881024
- 113 0010 07000000 		.word	7
- 114 0014 70000000 		.word	112
- 115 0018 00070000 		.word	1792
- 116 001c 00700000 		.word	28672
- 117 0020 00000700 		.word	458752
- 118 0024 00007000 		.word	7340032
- 119              		.section	.rodata.REG_OFFSET_TAB_ADCPSx,"a"
- 120              		.align	2
- 123              	REG_OFFSET_TAB_ADCPSx:
- 124 0000 00       		.byte	0
- 125 0001 06       		.byte	6
- 126 0002 0C       		.byte	12
- 127 0003 12       		.byte	18
- 128 0004 18       		.byte	24
- 129 0005 20       		.byte	32
- 130 0006 26       		.byte	38
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 3
-
-
- 131 0007 2C       		.byte	44
- 132 0008 32       		.byte	50
- 133 0009 38       		.byte	56
- 134              		.section	.rodata.REG_OFFSET_TAB_SETxR,"a"
- 135              		.align	2
- 138              	REG_OFFSET_TAB_SETxR:
- 139 0000 0000     		.short	0
- 140 0002 0800     		.short	8
- 141 0004 8000     		.short	128
- 142 0006 8800     		.short	136
- 143 0008 0001     		.short	256
- 144 000a 0801     		.short	264
- 145 000c 8001     		.short	384
- 146 000e 8801     		.short	392
- 147 0010 0002     		.short	512
- 148 0012 0802     		.short	520
- 149 0014 8002     		.short	640
- 150 0016 8802     		.short	648
- 151              		.section	.rodata.REG_OFFSET_TAB_OUTxR,"a"
- 152              		.align	2
- 155              	REG_OFFSET_TAB_OUTxR:
- 156 0000 0000     		.short	0
- 157 0002 0000     		.short	0
- 158 0004 8000     		.short	128
- 159 0006 8000     		.short	128
- 160 0008 0001     		.short	256
- 161 000a 0001     		.short	256
- 162 000c 8001     		.short	384
- 163 000e 8001     		.short	384
- 164 0010 0002     		.short	512
- 165 0012 0002     		.short	512
- 166 0014 8002     		.short	640
- 167 0016 8002     		.short	640
- 168              		.section	.rodata.REG_OFFSET_TAB_EECR,"a"
- 169              		.align	2
- 172              	REG_OFFSET_TAB_EECR:
- 173 0000 00       		.byte	0
- 174 0001 00       		.byte	0
- 175 0002 00       		.byte	0
- 176 0003 00       		.byte	0
- 177 0004 00       		.byte	0
- 178 0005 04       		.byte	4
- 179 0006 04       		.byte	4
- 180 0007 04       		.byte	4
- 181 0008 04       		.byte	4
- 182 0009 04       		.byte	4
- 183              		.section	.rodata.REG_OFFSET_TAB_FLTINR,"a"
- 184              		.align	2
- 187              	REG_OFFSET_TAB_FLTINR:
- 188 0000 00       		.byte	0
- 189 0001 00       		.byte	0
- 190 0002 00       		.byte	0
- 191 0003 00       		.byte	0
- 192 0004 04       		.byte	4
- 193 0005 04       		.byte	4
- 194              		.section	.rodata.REG_MASK_TAB_UPDATETRIG,"a"
- 195              		.align	2
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 4
-
-
- 198              	REG_MASK_TAB_UPDATETRIG:
- 199 0000 00000020 		.word	536870912
- 200 0004 0000FF01 		.word	33488896
- 201 0008 0000FF01 		.word	33488896
- 202 000c 0000FF01 		.word	33488896
- 203 0010 0000FF01 		.word	33488896
- 204 0014 0000FF01 		.word	33488896
- 205 0018 0000FF01 		.word	33488896
- 206 001c 0000FF01 		.word	33488896
- 207              		.section	.rodata.REG_SHIFT_TAB_UPDATETRIG,"a"
- 208              		.align	2
- 211              	REG_SHIFT_TAB_UPDATETRIG:
- 212 0000 0C       		.byte	12
- 213 0001 00       		.byte	0
- 214 0002 00       		.byte	0
- 215 0003 00       		.byte	0
- 216 0004 00       		.byte	0
- 217 0005 00       		.byte	0
- 218 0006 00       		.byte	0
- 219              		.section	.rodata.REG_SHIFT_TAB_EExSRC,"a"
- 220              		.align	2
- 223              	REG_SHIFT_TAB_EExSRC:
- 224 0000 00       		.byte	0
- 225 0001 06       		.byte	6
- 226 0002 0C       		.byte	12
- 227 0003 12       		.byte	18
- 228 0004 18       		.byte	24
- 229 0005 00       		.byte	0
- 230 0006 06       		.byte	6
- 231 0007 0C       		.byte	12
- 232 0008 12       		.byte	18
- 233 0009 18       		.byte	24
- 234              		.section	.rodata.REG_MASK_TAB_UPDATEGATING,"a"
- 235              		.align	2
- 238              	REG_MASK_TAB_UPDATEGATING:
- 239 0000 000000C0 		.word	-1073741824
- 240 0004 000000F0 		.word	-268435456
- 241 0008 000000F0 		.word	-268435456
- 242 000c 000000F0 		.word	-268435456
- 243 0010 000000F0 		.word	-268435456
- 244 0014 000000F0 		.word	-268435456
- 245 0018 000000F0 		.word	-268435456
- 246              		.section	.rodata.REG_SHIFT_TAB_UPDATEGATING,"a"
- 247              		.align	2
- 250              	REG_SHIFT_TAB_UPDATEGATING:
- 251 0000 02       		.byte	2
- 252 0001 00       		.byte	0
- 253 0002 00       		.byte	0
- 254 0003 00       		.byte	0
- 255 0004 00       		.byte	0
- 256 0005 00       		.byte	0
- 257 0006 00       		.byte	0
- 258              		.section	.rodata.REG_SHIFT_TAB_OUTxR,"a"
- 259              		.align	2
- 262              	REG_SHIFT_TAB_OUTxR:
- 263 0000 00       		.byte	0
- 264 0001 10       		.byte	16
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 5
-
-
- 265 0002 00       		.byte	0
- 266 0003 10       		.byte	16
- 267 0004 00       		.byte	0
- 268 0005 10       		.byte	16
- 269 0006 00       		.byte	0
- 270 0007 10       		.byte	16
- 271 0008 00       		.byte	0
- 272 0009 10       		.byte	16
- 273 000a 00       		.byte	0
- 274 000b 10       		.byte	16
- 275              		.section	.rodata.REG_SHIFT_TAB_OxSTAT,"a"
- 276              		.align	2
- 279              	REG_SHIFT_TAB_OxSTAT:
- 280 0000 00       		.byte	0
- 281 0001 01       		.byte	1
- 282 0002 00       		.byte	0
- 283 0003 01       		.byte	1
- 284 0004 00       		.byte	0
- 285 0005 01       		.byte	1
- 286 0006 00       		.byte	0
- 287 0007 01       		.byte	1
- 288 0008 00       		.byte	0
- 289 0009 01       		.byte	1
- 290 000a 00       		.byte	0
- 291 000b 01       		.byte	1
- 292              		.section	.rodata.REG_SHIFT_TAB_FLTxE,"a"
- 293              		.align	2
- 296              	REG_SHIFT_TAB_FLTxE:
- 297 0000 00       		.byte	0
- 298 0001 08       		.byte	8
- 299 0002 10       		.byte	16
- 300 0003 18       		.byte	24
- 301 0004 00       		.byte	0
- 302 0005 08       		.byte	8
- 303              		.section	.rodata.REG_SHIFT_TAB_FLTxF,"a"
- 304              		.align	2
- 307              	REG_SHIFT_TAB_FLTxF:
- 308 0000 00       		.byte	0
- 309 0001 08       		.byte	8
- 310 0002 10       		.byte	16
- 311 0003 18       		.byte	24
- 312 0004 20       		.byte	32
- 313 0005 28       		.byte	40
- 314              		.section	.rodata.REG_SHIFT_TAB_FLTx,"a"
- 315              		.align	2
- 318              	REG_SHIFT_TAB_FLTx:
- 319 0000 00       		.byte	0
- 320 0001 01       		.byte	1
- 321 0002 02       		.byte	2
- 322 0003 03       		.byte	3
- 323 0004 04       		.byte	4
- 324 0005 05       		.byte	5
- 325              		.section	.rodata.REG_SHIFT_TAB_INTLVD,"a"
- 326              		.align	2
- 329              	REG_SHIFT_TAB_INTLVD:
- 330 0000 00       		.byte	0
- 331 0001 01       		.byte	1
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 6
-
-
- 332 0002 01       		.byte	1
- 333 0003 01       		.byte	1
- 334 0004 01       		.byte	1
- 335 0005 01       		.byte	1
- 336 0006 01       		.byte	1
- 337              		.section	.rodata.REG_MASK_TAB_INTLVD,"a"
- 338              		.align	2
- 341              	REG_MASK_TAB_INTLVD:
- 342 0000 E0000000 		.word	224
- 343 0004 A0010000 		.word	416
- 344 0008 A0010000 		.word	416
- 345 000c A0010000 		.word	416
- 346 0010 A0010000 		.word	416
- 347 0014 A0010000 		.word	416
- 348 0018 A0010000 		.word	416
- 349              		.section	.rodata.REG_SHIFT_TAB_CPT,"a"
- 350              		.align	2
- 353              	REG_SHIFT_TAB_CPT:
- 354 0000 0C       		.byte	12
- 355 0001 10       		.byte	16
- 356 0002 14       		.byte	20
- 357 0003 18       		.byte	24
- 358 0004 1C       		.byte	28
- 359 0005 20       		.byte	32
- 360              		.section	.rodata.REG_MASK_TAB_CPT,"a"
- 361              		.align	2
- 364              	REG_MASK_TAB_CPT:
- 365 0000 0000FFFF 		.word	-65536
- 366 0004 00F0F0FF 		.word	-987136
- 367 0008 00F00FFF 		.word	-15732736
- 368 000c 00F0FFF0 		.word	-251662336
- 369 0010 00F0FF0F 		.word	268431360
- 370 0014 00F0FFFF 		.word	-4096
- 371              		.section	.text.LL_APB2_GRP1_ForceReset,"ax",%progbits
- 372              		.align	1
- 373              		.arch armv7e-m
- 374              		.syntax unified
- 375              		.thumb
- 376              		.thumb_func
- 377              		.fpu fpv4-sp-d16
- 379              	LL_APB2_GRP1_ForceReset:
- 380              	.LFB576:
- 381              		.file 1 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h"
+  30:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** 
+  31:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** /** @addtogroup STM32G4xx_LL_Driver
+  32:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   * @{
+  33:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   */
+  34:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** 
+  35:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** #if defined (HRTIM1)
+  36:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** 
+  37:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** /** @addtogroup HRTIM_LL
+  38:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   * @{
+  39:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   */
+  40:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** 
+  41:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** /* Private types -------------------------------------------------------------*/
+  42:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** /* Private variables ---------------------------------------------------------*/
+  43:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** /* Private constants ---------------------------------------------------------*/
+  44:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** /* Private macros ------------------------------------------------------------*/
+  45:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** /* Private function prototypes -----------------------------------------------*/
+  46:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** /* Exported functions --------------------------------------------------------*/
+  47:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** /** @addtogroup HRTIM_LL_Exported_Functions
+  48:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   * @{
+  49:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   */
+  50:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** /**
+  51:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   * @brief  Set HRTIM instance registers to their reset values.
+  52:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   * @param  HRTIMx High Resolution Timer instance
+  53:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   * @retval ErrorStatus enumeration value:
+  54:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   *          - SUCCESS: HRTIMx registers are de-initialized
+  55:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   *          - ERROR: invalid HRTIMx instance
+  56:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   */
+  57:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** ErrorStatus LL_HRTIM_DeInit(HRTIM_TypeDef *HRTIMx)
+  58:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** {
+  30              		.loc 1 58 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+  59:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   ErrorStatus result = SUCCESS;
+  35              		.loc 1 59 3 view .LVU1
+  60:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** 
+  61:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   /* Check the parameters */
+  62:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   assert_param(IS_HRTIM_ALL_INSTANCE(HRTIMx));
+  36              		.loc 1 62 3 view .LVU2
+  63:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   LL_APB2_GRP1_ForceReset(LL_APB2_GRP1_PERIPH_HRTIM1);
+  37              		.loc 1 63 3 view .LVU3
+  38              	.LBB6:
+  39              	.LBI6:
+  40              		.file 2 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h"
    1:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
    2:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   ******************************************************************************
    3:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @file    stm32g4xx_ll_bus.h
@@ -356,11 +118,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
   10:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****     [..]
   11:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****       A delay between an RCC peripheral clock enable and the effective peripheral
   12:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****       enabling should be taken into account in order to manage the peripheral read/write
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 3
+
+
   13:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****       from/to registers.
   14:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****       (+) This delay depends on the peripheral mapping.
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 7
-
-
   15:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****         (++) AHB & APB peripherals, 1 dummy read is necessary
   16:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
   17:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****     [..]
@@ -416,11 +178,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
   67:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /** @defgroup BUS_LL_Exported_Constants BUS Exported Constants
   68:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @{
   69:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 4
+
+
   70:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
   71:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /** @defgroup BUS_LL_EC_AHB1_GRP1_PERIPH  AHB1 GRP1 PERIPH
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 8
-
-
   72:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @{
   73:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
   74:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB1_GRP1_PERIPH_ALL            0xFFFFFFFFU
@@ -476,11 +238,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
  124:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #if defined(FMC_Bank1_R)
  125:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB3_GRP1_PERIPH_FMC            RCC_AHB3ENR_FMCEN
  126:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #endif /* FMC_Bank1_R */
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 5
+
+
  127:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #if defined(QUADSPI)
  128:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB3_GRP1_PERIPH_QSPI           RCC_AHB3ENR_QSPIEN
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 9
-
-
  129:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #endif /* QUADSPI */
  130:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
  131:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @}
@@ -536,11 +298,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
  181:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB1_GRP2_PERIPH_UCPD1         RCC_APB1ENR2_UCPD1EN
  182:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
  183:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @}
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 6
+
+
  184:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
  185:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 10
-
-
  186:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /** @defgroup BUS_LL_EC_APB2_GRP1_PERIPH  APB2 GRP1 PERIPH
  187:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @{
  188:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
@@ -596,11 +358,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
  238:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMAMUX1
  239:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CORDIC
  240:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_FMAC
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 7
+
+
  241:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_FLASH
  242:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CRC
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 11
-
-
  243:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval None
  244:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
  245:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** __STATIC_INLINE void LL_AHB1_GRP1_EnableClock(uint32_t Periphs)
@@ -656,11 +418,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
  295:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval None
  296:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
  297:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** __STATIC_INLINE void LL_AHB1_GRP1_DisableClock(uint32_t Periphs)
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 8
+
+
  298:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** {
  299:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   CLEAR_BIT(RCC->AHB1ENR, Periphs);
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 12
-
-
  300:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
  301:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
  302:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
@@ -716,11 +478,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
  352:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
  353:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @brief  Enable AHB1 peripheral clocks in Sleep and Stop modes
  354:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @rmtoll AHB1SMENR    DMA1SMEN      LL_AHB1_GRP1_EnableClockStopSleep\n
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 9
+
+
  355:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1SMENR    DMA2SMEN      LL_AHB1_GRP1_EnableClockStopSleep\n
  356:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1SMENR    DMAMUXSMEN    LL_AHB1_GRP1_EnableClockStopSleep\n
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 13
-
-
  357:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1SMENR    CORDICSMEN    LL_AHB1_GRP1_EnableClockStopSleep\n
  358:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1SMENR    FMACSMEN      LL_AHB1_GRP1_EnableClockStopSleep\n
  359:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1SMENR    FLASHSMEN     LL_AHB1_GRP1_EnableClockStopSleep\n
@@ -776,11 +538,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
  409:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @}
  410:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
  411:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 10
+
+
  412:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /** @defgroup BUS_LL_EF_AHB2 AHB2
  413:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @{
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 14
-
-
  414:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
  415:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
  416:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
@@ -836,11 +598,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
  466:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2ENR      GPIOCEN       LL_AHB2_GRP1_IsEnabledClock\n
  467:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2ENR      GPIODEN       LL_AHB2_GRP1_IsEnabledClock\n
  468:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2ENR      GPIOEEN       LL_AHB2_GRP1_IsEnabledClock\n
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 11
+
+
  469:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2ENR      GPIOFEN       LL_AHB2_GRP1_IsEnabledClock\n
  470:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2ENR      GPIOGEN       LL_AHB2_GRP1_IsEnabledClock\n
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 15
-
-
  471:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2ENR      ADC12EN       LL_AHB2_GRP1_IsEnabledClock\n
  472:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2ENR      ADC345EN      LL_AHB2_GRP1_IsEnabledClock\n
  473:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2ENR      DAC1EN        LL_AHB2_GRP1_IsEnabledClock\n
@@ -896,11 +658,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
  523:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOB
  524:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOC
  525:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOD
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 12
+
+
  526:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOE
  527:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOF
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 16
-
-
  528:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOG
  529:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_ADC12
  530:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_ADC345 (*)
@@ -956,11 +718,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
  580:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         (*) value not defined in all devices.
  581:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval None
  582:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 13
+
+
  583:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** __STATIC_INLINE void LL_AHB2_GRP1_ForceReset(uint32_t Periphs)
  584:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** {
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 17
-
-
  585:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   SET_BIT(RCC->AHB2RSTR, Periphs);
  586:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
  587:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
@@ -1016,11 +778,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
  637:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2SMENR    GPIOFSMEN     LL_AHB2_GRP1_EnableClockStopSleep\n
  638:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2SMENR    GPIOGSMEN     LL_AHB2_GRP1_EnableClockStopSleep\n
  639:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2SMENR    SRAM2SMEN     LL_AHB2_GRP1_EnableClockStopSleep\n
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 14
+
+
  640:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2SMENR    CCMSMEN       LL_AHB2_GRP1_EnableClockStopSleep\n
  641:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2SMENR    ADC12SMEN     LL_AHB2_GRP1_EnableClockStopSleep\n
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 18
-
-
  642:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2SMENR    ADC345SMEN    LL_AHB2_GRP1_EnableClockStopSleep\n
  643:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2SMENR    DAC1SMEN      LL_AHB2_GRP1_EnableClockStopSleep\n
  644:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2SMENR    DAC2SMEN      LL_AHB2_GRP1_EnableClockStopSleep\n
@@ -1076,11 +838,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
  694:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2SMENR    DAC2SMEN      LL_AHB2_GRP1_DisableClockStopSleep\n
  695:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2SMENR    DAC3SMEN      LL_AHB2_GRP1_DisableClockStopSleep\n
  696:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2SMENR    DAC4SMEN      LL_AHB2_GRP1_DisableClockStopSleep\n
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 15
+
+
  697:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2SMENR    AESSMEN       LL_AHB2_GRP1_DisableClockStopSleep\n
  698:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2SMENR    RNGSMEN       LL_AHB2_GRP1_DisableClockStopSleep
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 19
-
-
  699:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
  700:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOA
  701:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOB
@@ -1136,11 +898,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
  751:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   (void)tmpreg;
  752:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
  753:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 16
+
+
  754:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
  755:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @brief  Check if AHB3 peripheral clock is enabled or not
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 20
-
-
  756:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @rmtoll AHB3ENR      FMCEN         LL_AHB3_GRP1_IsEnabledClock\n
  757:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB3ENR      QSPIEN        LL_AHB3_GRP1_IsEnabledClock
  758:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
@@ -1196,11 +958,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
  808:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB3_GRP1_PERIPH_ALL
  809:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB3_GRP1_PERIPH_FMC (*)
  810:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB3_GRP1_PERIPH_QSPI (*)
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 17
+
+
  811:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *
  812:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         (*) value not defined in all devices.
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 21
-
-
  813:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval None
  814:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
  815:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** __STATIC_INLINE void LL_AHB3_GRP1_ReleaseReset(uint32_t Periphs)
@@ -1256,11 +1018,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
  865:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @brief  Enable APB1 peripherals clock.
  866:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @rmtoll APB1ENR1     TIM2EN        LL_APB1_GRP1_EnableClock\n
  867:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     TIM3EN        LL_APB1_GRP1_EnableClock\n
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 18
+
+
  868:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     TIM4EN        LL_APB1_GRP1_EnableClock\n
  869:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     TIM5EN        LL_APB1_GRP1_EnableClock\n
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 22
-
-
  870:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     TIM6EN        LL_APB1_GRP1_EnableClock\n
  871:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     TIM7EN        LL_APB1_GRP1_EnableClock\n
  872:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     CRSEN         LL_APB1_GRP1_EnableClock\n
@@ -1316,11 +1078,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
  922:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
  923:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
  924:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 19
+
+
  925:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @brief  Enable APB1 peripherals clock.
  926:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @rmtoll APB1ENR2     LPUART1EN     LL_APB1_GRP2_EnableClock\n
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 23
-
-
  927:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR2     I2C4EN        LL_APB1_GRP2_EnableClock\n
  928:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR2     UCPD1EN       LL_APB1_GRP2_EnableClock
  929:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
@@ -1376,11 +1138,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
  979:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_WWDG
  980:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_SPI2
  981:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_SPI3
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 20
+
+
  982:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USART2
  983:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USART3
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 24
-
-
  984:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_UART4 (*)
  985:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_UART5 (*)
  986:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_I2C1
@@ -1436,11 +1198,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
 1036:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     UART5EN       LL_APB1_GRP1_DisableClock\n
 1037:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     I2C1EN        LL_APB1_GRP1_DisableClock\n
 1038:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     I2C2EN        LL_APB1_GRP1_DisableClock\n
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 21
+
+
 1039:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     USBEN         LL_APB1_GRP1_DisableClock\n
 1040:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     FDCANEN       LL_APB1_GRP1_DisableClock\n
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 25
-
-
 1041:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     PWREN         LL_APB1_GRP1_DisableClock\n
 1042:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     I2C3EN        LL_APB1_GRP1_DisableClock\n
 1043:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     LPTIM1EN      LL_APB1_GRP1_DisableClock
@@ -1496,11 +1258,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
 1093:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
 1094:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
 1095:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @brief  Force APB1 peripherals reset.
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 22
+
+
 1096:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @rmtoll APB1RSTR1     TIM2RST        LL_APB1_GRP1_ForceReset\n
 1097:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1RSTR1     TIM3RST        LL_APB1_GRP1_ForceReset\n
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 26
-
-
 1098:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1RSTR1     TIM4RST        LL_APB1_GRP1_ForceReset\n
 1099:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1RSTR1     TIM5RST        LL_APB1_GRP1_ForceReset\n
 1100:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1RSTR1     TIM6RST        LL_APB1_GRP1_ForceReset\n
@@ -1556,11 +1318,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
 1150:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1RSTR2     UCPD1RST       LL_APB1_GRP2_ForceReset
 1151:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
 1152:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP2_PERIPH_LPUART1
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 23
+
+
 1153:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP2_PERIPH_I2C4 (*)
 1154:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP2_PERIPH_UCPD1
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 27
-
-
 1155:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *
 1156:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         (*) value not defined in all devices.
 1157:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval None
@@ -1616,11 +1378,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
 1207:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *
 1208:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         (*) value not defined in all devices.
 1209:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval None
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 24
+
+
 1210:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
 1211:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** __STATIC_INLINE void LL_APB1_GRP1_ReleaseReset(uint32_t Periphs)
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 28
-
-
 1212:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** {
 1213:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   CLEAR_BIT(RCC->APB1RSTR1, Periphs);
 1214:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
@@ -1676,11 +1438,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
 1264:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_TIM7
 1265:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_CRS
 1266:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_RTCAPB
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 25
+
+
 1267:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_WWDG
 1268:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_SPI2
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 29
-
-
 1269:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_SPI3
 1270:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USART2
 1271:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USART3
@@ -1736,11 +1498,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
 1321:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1SMENR1     TIM5SMEN        LL_APB1_GRP1_DisableClockStopSleep\n
 1322:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1SMENR1     TIM6SMEN        LL_APB1_GRP1_DisableClockStopSleep\n
 1323:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1SMENR1     TIM7SMEN        LL_APB1_GRP1_DisableClockStopSleep\n
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 26
+
+
 1324:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1SMENR1     CRSSMEN         LL_APB1_GRP1_DisableClockStopSleep\n
 1325:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1SMENR1     RTCAPBSMEN      LL_APB1_GRP1_DisableClockStopSleep\n
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 30
-
-
 1326:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1SMENR1     WWDGSMEN        LL_APB1_GRP1_DisableClockStopSleep\n
 1327:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1SMENR1     SPI2SMEN        LL_APB1_GRP1_DisableClockStopSleep\n
 1328:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1SMENR1     SPI3SMEN        LL_APB1_GRP1_DisableClockStopSleep\n
@@ -1796,11 +1558,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
 1378:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP2_PERIPH_LPUART1
 1379:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP2_PERIPH_I2C4 (*)
 1380:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP2_PERIPH_UCPD1 (*)
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 27
+
+
 1381:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *
 1382:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         (*) value not defined in all devices.
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 31
-
-
 1383:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval None
 1384:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
 1385:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** __STATIC_INLINE void LL_APB1_GRP2_DisableClockStopSleep(uint32_t Periphs)
@@ -1856,11 +1618,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
 1435:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   (void)tmpreg;
 1436:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
 1437:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 28
+
+
 1438:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
 1439:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @brief  Check if APB2 peripheral clock is enabled or not
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 32
-
-
 1440:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @rmtoll APB2ENR      SYSCFGEN      LL_APB2_GRP1_IsEnabledClock\n
 1441:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB2ENR      TIM1EN        LL_APB2_GRP1_IsEnabledClock\n
 1442:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB2ENR      SPI1EN        LL_APB2_GRP1_IsEnabledClock\n
@@ -1916,11 +1678,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
 1492:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB2_GRP1_PERIPH_TIM8
 1493:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB2_GRP1_PERIPH_USART1
 1494:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB2_GRP1_PERIPH_SPI4 (*)
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 29
+
+
 1495:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB2_GRP1_PERIPH_TIM15
 1496:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB2_GRP1_PERIPH_TIM16
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 33
-
-
 1497:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB2_GRP1_PERIPH_TIM17
 1498:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB2_GRP1_PERIPH_TIM20 (*)
 1499:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB2_GRP1_PERIPH_SAI1
@@ -1966,63 +1728,27 @@ ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
 1539:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval None
 1540:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
 1541:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** __STATIC_INLINE void LL_APB2_GRP1_ForceReset(uint32_t Periphs)
+  41              		.loc 2 1541 22 view .LVU4
+  42              	.LBB7:
 1542:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** {
- 382              		.loc 1 1542 1
- 383              		.cfi_startproc
- 384              		@ args = 0, pretend = 0, frame = 8
- 385              		@ frame_needed = 1, uses_anonymous_args = 0
- 386              		@ link register save eliminated.
- 387 0000 80B4     		push	{r7}
- 388              	.LCFI0:
- 389              		.cfi_def_cfa_offset 4
- 390              		.cfi_offset 7, -4
- 391 0002 83B0     		sub	sp, sp, #12
- 392              	.LCFI1:
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 34
-
-
- 393              		.cfi_def_cfa_offset 16
- 394 0004 00AF     		add	r7, sp, #0
- 395              	.LCFI2:
- 396              		.cfi_def_cfa_register 7
- 397 0006 7860     		str	r0, [r7, #4]
 1543:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   SET_BIT(RCC->APB2RSTR, Periphs);
- 398              		.loc 1 1543 3
- 399 0008 054B     		ldr	r3, .L2
- 400 000a 1A6C     		ldr	r2, [r3, #64]
- 401 000c 0449     		ldr	r1, .L2
- 402 000e 7B68     		ldr	r3, [r7, #4]
- 403 0010 1343     		orrs	r3, r3, r2
- 404 0012 0B64     		str	r3, [r1, #64]
+  43              		.loc 2 1543 3 view .LVU5
+  44 0000 054B     		ldr	r3, .L2
+  45 0002 1A6C     		ldr	r2, [r3, #64]
+  46 0004 42F08062 		orr	r2, r2, #67108864
+  47 0008 1A64     		str	r2, [r3, #64]
+  48              	.LVL1:
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 30
+
+
+  49              		.loc 2 1543 3 is_stmt 0 view .LVU6
+  50              	.LBE7:
+  51              	.LBE6:
+  64:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   LL_APB2_GRP1_ReleaseReset(LL_APB2_GRP1_PERIPH_HRTIM1);
+  52              		.loc 1 64 3 is_stmt 1 view .LVU7
+  53              	.LBB8:
+  54              	.LBI8:
 1544:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
- 405              		.loc 1 1544 1
- 406 0014 00BF     		nop
- 407 0016 0C37     		adds	r7, r7, #12
- 408              	.LCFI3:
- 409              		.cfi_def_cfa_offset 4
- 410 0018 BD46     		mov	sp, r7
- 411              	.LCFI4:
- 412              		.cfi_def_cfa_register 13
- 413              		@ sp needed
- 414 001a 5DF8047B 		ldr	r7, [sp], #4
- 415              	.LCFI5:
- 416              		.cfi_restore 7
- 417              		.cfi_def_cfa_offset 0
- 418 001e 7047     		bx	lr
- 419              	.L3:
- 420              		.align	2
- 421              	.L2:
- 422 0020 00100240 		.word	1073876992
- 423              		.cfi_endproc
- 424              	.LFE576:
- 426              		.section	.text.LL_APB2_GRP1_ReleaseReset,"ax",%progbits
- 427              		.align	1
- 428              		.syntax unified
- 429              		.thumb
- 430              		.thumb_func
- 431              		.fpu fpv4-sp-d16
- 433              	LL_APB2_GRP1_ReleaseReset:
- 434              	.LFB577:
 1545:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
 1546:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
 1547:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @brief  Release APB2 peripherals reset.
@@ -2038,9 +1764,6 @@ ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
 1557:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB2RSTR      TIM20RST       LL_APB2_GRP1_ForceReset\n
 1558:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB2RSTR      SAI1RST        LL_APB2_GRP1_ForceReset\n
 1559:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB2RSTR      HRTIM1RST      LL_APB2_GRP1_ForceReset
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 35
-
-
 1560:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
 1561:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB2_GRP1_PERIPH_SYSCFG
 1562:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB2_GRP1_PERIPH_TIM1
@@ -2059,253 +1782,51 @@ ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 1
 1575:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval None
 1576:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
 1577:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** __STATIC_INLINE void LL_APB2_GRP1_ReleaseReset(uint32_t Periphs)
+  55              		.loc 2 1577 22 view .LVU8
+  56              	.LBB9:
 1578:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** {
- 435              		.loc 1 1578 1
- 436              		.cfi_startproc
- 437              		@ args = 0, pretend = 0, frame = 8
- 438              		@ frame_needed = 1, uses_anonymous_args = 0
- 439              		@ link register save eliminated.
- 440 0000 80B4     		push	{r7}
- 441              	.LCFI6:
- 442              		.cfi_def_cfa_offset 4
- 443              		.cfi_offset 7, -4
- 444 0002 83B0     		sub	sp, sp, #12
- 445              	.LCFI7:
- 446              		.cfi_def_cfa_offset 16
- 447 0004 00AF     		add	r7, sp, #0
- 448              	.LCFI8:
- 449              		.cfi_def_cfa_register 7
- 450 0006 7860     		str	r0, [r7, #4]
 1579:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   CLEAR_BIT(RCC->APB2RSTR, Periphs);
- 451              		.loc 1 1579 3
- 452 0008 064B     		ldr	r3, .L5
- 453 000a 1A6C     		ldr	r2, [r3, #64]
- 454 000c 7B68     		ldr	r3, [r7, #4]
- 455 000e DB43     		mvns	r3, r3
- 456 0010 0449     		ldr	r1, .L5
- 457 0012 1340     		ands	r3, r3, r2
- 458 0014 0B64     		str	r3, [r1, #64]
-1580:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
- 459              		.loc 1 1580 1
- 460 0016 00BF     		nop
- 461 0018 0C37     		adds	r7, r7, #12
- 462              	.LCFI9:
- 463              		.cfi_def_cfa_offset 4
- 464 001a BD46     		mov	sp, r7
- 465              	.LCFI10:
- 466              		.cfi_def_cfa_register 13
- 467              		@ sp needed
- 468 001c 5DF8047B 		ldr	r7, [sp], #4
- 469              	.LCFI11:
- 470              		.cfi_restore 7
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 36
-
-
- 471              		.cfi_def_cfa_offset 0
- 472 0020 7047     		bx	lr
- 473              	.L6:
- 474 0022 00BF     		.align	2
- 475              	.L5:
- 476 0024 00100240 		.word	1073876992
- 477              		.cfi_endproc
- 478              	.LFE577:
- 480              		.section	.text.LL_HRTIM_DeInit,"ax",%progbits
- 481              		.align	1
- 482              		.global	LL_HRTIM_DeInit
- 483              		.syntax unified
- 484              		.thumb
- 485              		.thumb_func
- 486              		.fpu fpv4-sp-d16
- 488              	LL_HRTIM_DeInit:
- 489              	.LFB580:
- 490              		.file 2 "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c"
-   1:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** /**
-   2:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   ******************************************************************************
-   3:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   * @file    stm32g4xx_ll_hrtim.c
-   4:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   * @author  MCD Application Team
-   5:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   * @brief   HRTIM LL module driver.
-   6:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   ******************************************************************************
-   7:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   * @attention
-   8:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   *
-   9:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   * <h2><center>&copy; Copyright (c) 2019 STMicroelectronics.
-  10:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   * All rights reserved.</center></h2>
-  11:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   *
-  12:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   * This software component is licensed by ST under BSD 3-Clause license,
-  13:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   * the "License"; You may not use this file except in compliance with the
-  14:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   * License. You may obtain a copy of the License at:
-  15:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   *                        opensource.org/licenses/BSD-3-Clause
-  16:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   *
-  17:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   ******************************************************************************
-  18:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   */
-  19:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** #if defined(USE_FULL_LL_DRIVER)
-  20:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** 
-  21:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** /* Includes ------------------------------------------------------------------*/
-  22:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** #include "stm32g4xx_ll_hrtim.h"
-  23:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** #include "stm32g4xx_ll_bus.h"
-  24:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** 
-  25:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** #ifdef  USE_FULL_ASSERT
-  26:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** #include "stm32_assert.h"
-  27:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** #else
-  28:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** #define assert_param(expr) ((void)0U)
-  29:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** #endif
-  30:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** 
-  31:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** /** @addtogroup STM32G4xx_LL_Driver
-  32:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   * @{
-  33:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   */
-  34:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** 
-  35:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** #if defined (HRTIM1)
-  36:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** 
-  37:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** /** @addtogroup HRTIM_LL
-  38:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   * @{
-  39:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 37
-
-
-  40:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** 
-  41:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** /* Private types -------------------------------------------------------------*/
-  42:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** /* Private variables ---------------------------------------------------------*/
-  43:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** /* Private constants ---------------------------------------------------------*/
-  44:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** /* Private macros ------------------------------------------------------------*/
-  45:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** /* Private function prototypes -----------------------------------------------*/
-  46:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** /* Exported functions --------------------------------------------------------*/
-  47:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** /** @addtogroup HRTIM_LL_Exported_Functions
-  48:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   * @{
-  49:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   */
-  50:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** /**
-  51:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   * @brief  Set HRTIM instance registers to their reset values.
-  52:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   * @param  HRTIMx High Resolution Timer instance
-  53:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   * @retval ErrorStatus enumeration value:
-  54:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   *          - SUCCESS: HRTIMx registers are de-initialized
-  55:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   *          - ERROR: invalid HRTIMx instance
-  56:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   */
-  57:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** ErrorStatus LL_HRTIM_DeInit(HRTIM_TypeDef *HRTIMx)
-  58:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** {
- 491              		.loc 2 58 1
- 492              		.cfi_startproc
- 493              		@ args = 0, pretend = 0, frame = 16
- 494              		@ frame_needed = 1, uses_anonymous_args = 0
- 495 0000 80B5     		push	{r7, lr}
- 496              	.LCFI12:
- 497              		.cfi_def_cfa_offset 8
- 498              		.cfi_offset 7, -8
- 499              		.cfi_offset 14, -4
- 500 0002 84B0     		sub	sp, sp, #16
- 501              	.LCFI13:
- 502              		.cfi_def_cfa_offset 24
- 503 0004 00AF     		add	r7, sp, #0
- 504              	.LCFI14:
- 505              		.cfi_def_cfa_register 7
- 506 0006 7860     		str	r0, [r7, #4]
-  59:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   ErrorStatus result = SUCCESS;
- 507              		.loc 2 59 15
- 508 0008 0023     		movs	r3, #0
- 509 000a FB73     		strb	r3, [r7, #15]
-  60:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** 
-  61:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   /* Check the parameters */
-  62:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   assert_param(IS_HRTIM_ALL_INSTANCE(HRTIMx));
-  63:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   LL_APB2_GRP1_ForceReset(LL_APB2_GRP1_PERIPH_HRTIM1);
- 510              		.loc 2 63 3
- 511 000c 4FF08060 		mov	r0, #67108864
- 512 0010 FFF7FEFF 		bl	LL_APB2_GRP1_ForceReset
-  64:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   LL_APB2_GRP1_ReleaseReset(LL_APB2_GRP1_PERIPH_HRTIM1);
- 513              		.loc 2 64 3
- 514 0014 4FF08060 		mov	r0, #67108864
- 515 0018 FFF7FEFF 		bl	LL_APB2_GRP1_ReleaseReset
+  57              		.loc 2 1579 3 view .LVU9
+  58 000a 1A6C     		ldr	r2, [r3, #64]
+  59 000c 22F08062 		bic	r2, r2, #67108864
+  60 0010 1A64     		str	r2, [r3, #64]
+  61              	.LVL2:
+  62              		.loc 2 1579 3 is_stmt 0 view .LVU10
+  63              	.LBE9:
+  64              	.LBE8:
   65:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c ****   return result;
- 516              		.loc 2 65 10
- 517 001c FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+  65              		.loc 1 65 3 is_stmt 1 view .LVU11
   66:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_hrtim.c **** }
- 518              		.loc 2 66 1
- 519 001e 1846     		mov	r0, r3
- 520 0020 1037     		adds	r7, r7, #16
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 38
+  66              		.loc 1 66 1 is_stmt 0 view .LVU12
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 31
 
 
- 521              	.LCFI15:
- 522              		.cfi_def_cfa_offset 8
- 523 0022 BD46     		mov	sp, r7
- 524              	.LCFI16:
- 525              		.cfi_def_cfa_register 13
- 526              		@ sp needed
- 527 0024 80BD     		pop	{r7, pc}
- 528              		.cfi_endproc
- 529              	.LFE580:
- 531              		.text
- 532              	.Letext0:
- 533              		.file 3 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\machine\\_default_types.h"
- 534              		.file 4 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\_stdint.h"
- 535              		.file 5 "Drivers/CMSIS/Include/core_cm4.h"
- 536              		.file 6 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h"
- 537              		.file 7 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h"
- 538              		.file 8 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h"
- 539              		.file 9 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_hrtim.h"
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 39
+  67 0012 0020     		movs	r0, #0
+  68              	.LVL3:
+  69              		.loc 1 66 1 view .LVU13
+  70 0014 7047     		bx	lr
+  71              	.L3:
+  72 0016 00BF     		.align	2
+  73              	.L2:
+  74 0018 00100240 		.word	1073876992
+  75              		.cfi_endproc
+  76              	.LFE580:
+  78              		.text
+  79              	.Letext0:
+  80              		.file 3 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\machine\\_default_types.h"
+  81              		.file 4 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\_stdint.h"
+  82              		.file 5 "Drivers/CMSIS/Include/core_cm4.h"
+  83              		.file 6 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h"
+  84              		.file 7 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h"
+  85              		.file 8 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h"
+  86              		.file 9 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_hrtim.h"
+ARM GAS  D:\apps\VSCode\data\tmp\ccXCwfre.s 			page 32
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32g4xx_ll_hrtim.c
-D:\apps\VSCode\data\tmp\cckoXe34.s:18     .rodata.REG_OFFSET_TAB_TIMER:0000000000000000 $d
-D:\apps\VSCode\data\tmp\cckoXe34.s:21     .rodata.REG_OFFSET_TAB_TIMER:0000000000000000 REG_OFFSET_TAB_TIMER
-D:\apps\VSCode\data\tmp\cckoXe34.s:30     .rodata.REG_OFFSET_TAB_ADCER:0000000000000000 $d
-D:\apps\VSCode\data\tmp\cckoXe34.s:33     .rodata.REG_OFFSET_TAB_ADCER:0000000000000000 REG_OFFSET_TAB_ADCER
-D:\apps\VSCode\data\tmp\cckoXe34.s:45     .rodata.REG_OFFSET_TAB_ADCUR:0000000000000000 $d
-D:\apps\VSCode\data\tmp\cckoXe34.s:48     .rodata.REG_OFFSET_TAB_ADCUR:0000000000000000 REG_OFFSET_TAB_ADCUR
-D:\apps\VSCode\data\tmp\cckoXe34.s:60     .rodata.REG_SHIFT_TAB_ADCER:0000000000000000 $d
-D:\apps\VSCode\data\tmp\cckoXe34.s:63     .rodata.REG_SHIFT_TAB_ADCER:0000000000000000 REG_SHIFT_TAB_ADCER
-D:\apps\VSCode\data\tmp\cckoXe34.s:75     .rodata.REG_SHIFT_TAB_ADCUR:0000000000000000 $d
-D:\apps\VSCode\data\tmp\cckoXe34.s:78     .rodata.REG_SHIFT_TAB_ADCUR:0000000000000000 REG_SHIFT_TAB_ADCUR
-D:\apps\VSCode\data\tmp\cckoXe34.s:90     .rodata.REG_MASK_TAB_ADCER:0000000000000000 $d
-D:\apps\VSCode\data\tmp\cckoXe34.s:93     .rodata.REG_MASK_TAB_ADCER:0000000000000000 REG_MASK_TAB_ADCER
-D:\apps\VSCode\data\tmp\cckoXe34.s:105    .rodata.REG_MASK_TAB_ADCUR:0000000000000000 $d
-D:\apps\VSCode\data\tmp\cckoXe34.s:108    .rodata.REG_MASK_TAB_ADCUR:0000000000000000 REG_MASK_TAB_ADCUR
-D:\apps\VSCode\data\tmp\cckoXe34.s:120    .rodata.REG_OFFSET_TAB_ADCPSx:0000000000000000 $d
-D:\apps\VSCode\data\tmp\cckoXe34.s:123    .rodata.REG_OFFSET_TAB_ADCPSx:0000000000000000 REG_OFFSET_TAB_ADCPSx
-D:\apps\VSCode\data\tmp\cckoXe34.s:135    .rodata.REG_OFFSET_TAB_SETxR:0000000000000000 $d
-D:\apps\VSCode\data\tmp\cckoXe34.s:138    .rodata.REG_OFFSET_TAB_SETxR:0000000000000000 REG_OFFSET_TAB_SETxR
-D:\apps\VSCode\data\tmp\cckoXe34.s:152    .rodata.REG_OFFSET_TAB_OUTxR:0000000000000000 $d
-D:\apps\VSCode\data\tmp\cckoXe34.s:155    .rodata.REG_OFFSET_TAB_OUTxR:0000000000000000 REG_OFFSET_TAB_OUTxR
-D:\apps\VSCode\data\tmp\cckoXe34.s:169    .rodata.REG_OFFSET_TAB_EECR:0000000000000000 $d
-D:\apps\VSCode\data\tmp\cckoXe34.s:172    .rodata.REG_OFFSET_TAB_EECR:0000000000000000 REG_OFFSET_TAB_EECR
-D:\apps\VSCode\data\tmp\cckoXe34.s:184    .rodata.REG_OFFSET_TAB_FLTINR:0000000000000000 $d
-D:\apps\VSCode\data\tmp\cckoXe34.s:187    .rodata.REG_OFFSET_TAB_FLTINR:0000000000000000 REG_OFFSET_TAB_FLTINR
-D:\apps\VSCode\data\tmp\cckoXe34.s:195    .rodata.REG_MASK_TAB_UPDATETRIG:0000000000000000 $d
-D:\apps\VSCode\data\tmp\cckoXe34.s:198    .rodata.REG_MASK_TAB_UPDATETRIG:0000000000000000 REG_MASK_TAB_UPDATETRIG
-D:\apps\VSCode\data\tmp\cckoXe34.s:208    .rodata.REG_SHIFT_TAB_UPDATETRIG:0000000000000000 $d
-D:\apps\VSCode\data\tmp\cckoXe34.s:211    .rodata.REG_SHIFT_TAB_UPDATETRIG:0000000000000000 REG_SHIFT_TAB_UPDATETRIG
-D:\apps\VSCode\data\tmp\cckoXe34.s:220    .rodata.REG_SHIFT_TAB_EExSRC:0000000000000000 $d
-D:\apps\VSCode\data\tmp\cckoXe34.s:223    .rodata.REG_SHIFT_TAB_EExSRC:0000000000000000 REG_SHIFT_TAB_EExSRC
-D:\apps\VSCode\data\tmp\cckoXe34.s:235    .rodata.REG_MASK_TAB_UPDATEGATING:0000000000000000 $d
-D:\apps\VSCode\data\tmp\cckoXe34.s:238    .rodata.REG_MASK_TAB_UPDATEGATING:0000000000000000 REG_MASK_TAB_UPDATEGATING
-D:\apps\VSCode\data\tmp\cckoXe34.s:247    .rodata.REG_SHIFT_TAB_UPDATEGATING:0000000000000000 $d
-D:\apps\VSCode\data\tmp\cckoXe34.s:250    .rodata.REG_SHIFT_TAB_UPDATEGATING:0000000000000000 REG_SHIFT_TAB_UPDATEGATING
-D:\apps\VSCode\data\tmp\cckoXe34.s:259    .rodata.REG_SHIFT_TAB_OUTxR:0000000000000000 $d
-D:\apps\VSCode\data\tmp\cckoXe34.s:262    .rodata.REG_SHIFT_TAB_OUTxR:0000000000000000 REG_SHIFT_TAB_OUTxR
-D:\apps\VSCode\data\tmp\cckoXe34.s:276    .rodata.REG_SHIFT_TAB_OxSTAT:0000000000000000 $d
-D:\apps\VSCode\data\tmp\cckoXe34.s:279    .rodata.REG_SHIFT_TAB_OxSTAT:0000000000000000 REG_SHIFT_TAB_OxSTAT
-D:\apps\VSCode\data\tmp\cckoXe34.s:293    .rodata.REG_SHIFT_TAB_FLTxE:0000000000000000 $d
-D:\apps\VSCode\data\tmp\cckoXe34.s:296    .rodata.REG_SHIFT_TAB_FLTxE:0000000000000000 REG_SHIFT_TAB_FLTxE
-D:\apps\VSCode\data\tmp\cckoXe34.s:304    .rodata.REG_SHIFT_TAB_FLTxF:0000000000000000 $d
-D:\apps\VSCode\data\tmp\cckoXe34.s:307    .rodata.REG_SHIFT_TAB_FLTxF:0000000000000000 REG_SHIFT_TAB_FLTxF
-D:\apps\VSCode\data\tmp\cckoXe34.s:315    .rodata.REG_SHIFT_TAB_FLTx:0000000000000000 $d
-D:\apps\VSCode\data\tmp\cckoXe34.s:318    .rodata.REG_SHIFT_TAB_FLTx:0000000000000000 REG_SHIFT_TAB_FLTx
-D:\apps\VSCode\data\tmp\cckoXe34.s:326    .rodata.REG_SHIFT_TAB_INTLVD:0000000000000000 $d
-D:\apps\VSCode\data\tmp\cckoXe34.s:329    .rodata.REG_SHIFT_TAB_INTLVD:0000000000000000 REG_SHIFT_TAB_INTLVD
-D:\apps\VSCode\data\tmp\cckoXe34.s:338    .rodata.REG_MASK_TAB_INTLVD:0000000000000000 $d
-D:\apps\VSCode\data\tmp\cckoXe34.s:341    .rodata.REG_MASK_TAB_INTLVD:0000000000000000 REG_MASK_TAB_INTLVD
-D:\apps\VSCode\data\tmp\cckoXe34.s:350    .rodata.REG_SHIFT_TAB_CPT:0000000000000000 $d
-D:\apps\VSCode\data\tmp\cckoXe34.s:353    .rodata.REG_SHIFT_TAB_CPT:0000000000000000 REG_SHIFT_TAB_CPT
-D:\apps\VSCode\data\tmp\cckoXe34.s:361    .rodata.REG_MASK_TAB_CPT:0000000000000000 $d
-D:\apps\VSCode\data\tmp\cckoXe34.s:364    .rodata.REG_MASK_TAB_CPT:0000000000000000 REG_MASK_TAB_CPT
-D:\apps\VSCode\data\tmp\cckoXe34.s:372    .text.LL_APB2_GRP1_ForceReset:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cckoXe34.s:379    .text.LL_APB2_GRP1_ForceReset:0000000000000000 LL_APB2_GRP1_ForceReset
-D:\apps\VSCode\data\tmp\cckoXe34.s:422    .text.LL_APB2_GRP1_ForceReset:0000000000000020 $d
-ARM GAS  D:\apps\VSCode\data\tmp\cckoXe34.s 			page 40
-
-
-D:\apps\VSCode\data\tmp\cckoXe34.s:427    .text.LL_APB2_GRP1_ReleaseReset:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cckoXe34.s:433    .text.LL_APB2_GRP1_ReleaseReset:0000000000000000 LL_APB2_GRP1_ReleaseReset
-D:\apps\VSCode\data\tmp\cckoXe34.s:476    .text.LL_APB2_GRP1_ReleaseReset:0000000000000024 $d
-D:\apps\VSCode\data\tmp\cckoXe34.s:481    .text.LL_HRTIM_DeInit:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cckoXe34.s:488    .text.LL_HRTIM_DeInit:0000000000000000 LL_HRTIM_DeInit
+D:\apps\VSCode\data\tmp\ccXCwfre.s:18     .text.LL_HRTIM_DeInit:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccXCwfre.s:26     .text.LL_HRTIM_DeInit:0000000000000000 LL_HRTIM_DeInit
+D:\apps\VSCode\data\tmp\ccXCwfre.s:74     .text.LL_HRTIM_DeInit:0000000000000018 $d
 
 NO UNDEFINED SYMBOLS

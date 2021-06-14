@@ -40,6 +40,7 @@ void utils_deadband(float *value, float tres, float max);
 float utils_angle_difference(float angle1, float angle2);
 float utils_angle_difference_rad(float angle1, float angle2);
 float utils_avg_angles_rad_fast(float *angles, float *weights, int angles_num);
+float utils_avg_angle_rad_fast(float angle1, float angle2);
 float utils_middle_of_3(float a, float b, float c);
 int utils_middle_of_3_int(int a, int b, int c);
 float utils_fast_inv_sqrt(float x);
@@ -69,9 +70,9 @@ uint16_t utils_median_filter_uint16_run(uint16_t *buffer,
 #define SQ(x) ((x) * (x))
 
 // nan and infinity check for floats
-#define UTILS_IS_INF(x) ((x) == (1.0 / 0.0) || (x) == (-1.0 / 0.0))
+#define UTILS_IS_INF(x) ((x) == (1.0f / 0.0f) || (x) == (-1.0f / 0.0f))
 #define UTILS_IS_NAN(x) ((x) != (x))
-#define UTILS_NAN_ZERO(x) (x = UTILS_IS_NAN(x) ? 0.0 : x)
+#define UTILS_NAN_ZERO(x) (x = UTILS_IS_NAN(x) ? 0.0f : x)
 
 /**
  * A simple low pass filter.
@@ -100,14 +101,18 @@ uint16_t utils_median_filter_uint16_run(uint16_t *buffer,
 #define RPM2RADS (1.f / RADS2RPM)
 
 #define MF_PI 3.14159265358979f
-#define M_2PI MF_PI * 2.0f
-#define M_PI2 MF_PI * 0.5f
-#define M_PI4 MF_PI * 0.25f
-#define M_PI3 MF_PI / 3.0f
+#define M_2PI (MF_PI * 2.0f)
+#define M_PI2 (MF_PI * 0.5f)
+#define M_PI4 (MF_PI * 0.25f)
+#define M_PI3 (MF_PI / 3.0f)
+#define ONE_BY_PI (0.318309886f)
 
 #define _IQ(A) (int32_t)((A)*16777216.0f)
+#define _IQ31(A) (int32_t)((A)*2147483648.f)
 #define _IQmpy(A, B) (int32_t)(((int64_t)(A) * (B)) >> 24)
 #define _IQtoF(A) ((float)(A) * (1.0f / 16777216.0f))
+#define _IQ31toF(A) ((float)(A) * (1.0f / 2147483648.f))
+#define _IQ31toF_FAST(A) ((float)(A) * (0.0000000004656612873f))
 
 /** Fast fixed point sin()
  * ~12-bit, ~30 CPU cycles

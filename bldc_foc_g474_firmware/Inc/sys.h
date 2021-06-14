@@ -20,34 +20,35 @@
 #ifndef __sys_H
 #define __sys_H
 #ifdef __cplusplus
- extern "C" {
+extern "C"
+{
 #endif
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 
-/* USER CODE BEGIN Includes */
+  /* USER CODE BEGIN Includes */
 
-/* USER CODE END Includes */
+  /* USER CODE END Includes */
 
-/* USER CODE BEGIN Private defines */
+  /* USER CODE BEGIN Private defines */
 
-/* USER CODE END Private defines */
+  /* USER CODE END Private defines */
 
-void MX_SYS_Init(void);
+  void MX_SYS_Init(void);
 
-/* USER CODE BEGIN Prototypes */
-void flashUnlock (void);
-void flashLock (void);
-uint32_t flashReadData (uint32_t address);
-void flashWriteData(uint32_t address, uint64_t data);
-void FLASH_PageErase(uint32_t PageAddress);
-void Flash_Write(unsigned char* data, unsigned int address, unsigned int count);
-void FLASH_Program_DoubleWord(uint32_t Address, uint64_t Data);
-void FLASH_PageErase(uint32_t Page);
-void FLASH_UpdateConfig(foc_t *p, hall_t *hp);
-void FLASH_LoadConfig(foc_t *p, hall_t *hp);
-/* USER CODE END Prototypes */
+  /* USER CODE BEGIN Prototypes */
+  void flashUnlock(void);
+  void flashLock(void);
+  uint32_t flashReadData(uint32_t address);
+  void flashWriteData(uint32_t address, uint64_t data);
+  void FLASH_PageErase(uint32_t PageAddress);
+  void Flash_Write(unsigned char *data, unsigned int address, unsigned int count);
+  void FLASH_Program_DoubleWord(uint32_t Address, uint64_t Data);
+  void FLASH_PageErase(uint32_t Page);
+  void FLASH_UpdateConfig(foc_t *p, hall_t *hp);
+  void FLASH_LoadConfig(foc_t *p, hall_t *hp);
+  /* USER CODE END Prototypes */
 
 #ifdef __cplusplus
 }

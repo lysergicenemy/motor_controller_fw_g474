@@ -21,10 +21,11 @@ build/main.o: Src/main.c Inc/main.h \
  Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h \
  Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h \
  Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h \
+ Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h \
  Inc/digitalFilters.h Inc/utils.h Inc/model_bldc.h Inc/bldcpwm.h \
- Inc/bldc.h Inc/foc.h Inc/dataLog.h Inc/stm32g4xx_it.h Inc/ntc.h \
- Inc/hall.h Inc/main.h Inc/adc.h Inc/hrtim.h Inc/lptim.h Inc/tim.h \
- Inc/usart.h Inc/gpio.h Inc/sys.h
+ Inc/foc.h Inc/dataLog.h Inc/stm32g4xx_it.h Inc/ntc.h Inc/hall.h \
+ Inc/main.h Inc/adc.h Inc/hrtim.h Inc/lptim.h Inc/tim.h Inc/usart.h \
+ Inc/gpio.h Inc/cordic.h Inc/sys.h
 
 Inc/main.h:
 
@@ -76,6 +77,8 @@ Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h:
 
 Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h:
 
+Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h:
+
 Inc/digitalFilters.h:
 
 Inc/utils.h:
@@ -83,8 +86,6 @@ Inc/utils.h:
 Inc/model_bldc.h:
 
 Inc/bldcpwm.h:
-
-Inc/bldc.h:
 
 Inc/foc.h:
 
@@ -109,5 +110,7 @@ Inc/tim.h:
 Inc/usart.h:
 
 Inc/gpio.h:
+
+Inc/cordic.h:
 
 Inc/sys.h:

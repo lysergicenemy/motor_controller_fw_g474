@@ -44,6 +44,7 @@ extern "C" {
 #include "stm32g4xx_ll_usart.h"
 #include "stm32g4xx.h"
 #include "stm32g4xx_ll_gpio.h"
+#include "stm32g4xx_ll_cordic.h"
 
 #if defined(USE_FULL_ASSERT)
 #include "stm32_assert.h"
@@ -56,7 +57,6 @@ extern "C" {
 #include "utils.h"
 #include "model_bldc.h"
 #include "bldcpwm.h"
-#include "bldc.h"
 #include "foc.h"
 #include "dataLog.h"
 #include "stm32g4xx_it.h"

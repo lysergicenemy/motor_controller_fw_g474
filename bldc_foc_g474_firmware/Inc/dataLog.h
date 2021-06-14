@@ -22,7 +22,7 @@ struct dataLogVars_s
   uint16_t psc;
   uint32_t frameCntr;
   uint32_t isrCntr;
-  uint8_t txData[18]; // 4 32-bit channels + 16-bit start frame = 18 bytes
+  uint8_t txData[18]; // 4 * 32-bit channels + 2 * 8-bit start frames = 18 bytes
   uint8_t tcFlag;     // transfer CMPLT flag
   float trackedValue; // tracked value for datalog triggering
   float buffChannel1[DATALOG_STERAM_SIZE];

@@ -37,6 +37,11 @@ void tim7_start(void)
   LL_TIM_EnableCounter(TIM7);
 }
 
+void tim6_start(void)
+{
+  LL_TIM_EnableCounter(TIM6);
+}
+
 /* TIM2 init function */
 void MX_TIM2_Init(void)
 {
@@ -60,7 +65,7 @@ void MX_TIM2_Init(void)
   LL_GPIO_Init(BRAKE_PWM_GPIO_Port, &GPIO_InitStruct);
 
   /* TIM2 interrupt Init */
-  NVIC_SetPriority(TIM2_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),0, 0));
+  NVIC_SetPriority(TIM2_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),1, 0));
   NVIC_EnableIRQ(TIM2_IRQn);
 
   TIM_InitStruct.Prescaler = 169;
@@ -97,7 +102,7 @@ void MX_TIM7_Init(void)
   LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_TIM7);
 
   /* TIM7 interrupt Init */
-  NVIC_SetPriority(TIM7_DAC_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),1, 0));
+  NVIC_SetPriority(TIM7_DAC_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),2, 0));
   NVIC_EnableIRQ(TIM7_DAC_IRQn);
 
   TIM_InitStruct.Prescaler = 169;
@@ -107,7 +112,23 @@ void MX_TIM7_Init(void)
   LL_TIM_EnableARRPreload(TIM7);
   LL_TIM_SetTriggerOutput(TIM7, LL_TIM_TRGO_RESET);
   LL_TIM_DisableMasterSlaveMode(TIM7);
+}
 
+/** TIM7 init function
+ *  Used for Hall sensors speed estimation */
+void MX_TIM6_Init(void)
+{
+  LL_TIM_InitTypeDef TIM_InitStruct = {0};
+
+  /* Peripheral clock enable */
+  LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_TIM6);
+
+  TIM_InitStruct.Prescaler = 56; // 2.982456 Mhz (APB1 = 170Mhz)
+  TIM_InitStruct.CounterMode = LL_TIM_COUNTERMODE_UP;
+  TIM_InitStruct.Autoreload = 65535;
+  LL_TIM_Init(TIM6, &TIM_InitStruct);
+  LL_TIM_EnableARRPreload(TIM6);
+  LL_TIM_DisableMasterSlaveMode(TIM6);
 }
 
 /* USER CODE BEGIN 1 */

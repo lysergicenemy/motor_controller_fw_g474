@@ -37,8 +37,10 @@
 /* USER CODE BEGIN Prototypes */
 void MX_TIM2_Init(void);
 void MX_TIM7_Init(void);
+void MX_TIM6_Init(void);
 void tim2_start(void);
 void tim7_start(void);
+void tim6_start(void);
 
 /* USER CODE END Prototypes */
 

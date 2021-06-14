@@ -59,8 +59,8 @@ void slowCalc(void);
 
 /* USER CODE BEGIN EV */
 extern dataLogVars_t dataLog;
+extern hall_t hall;
 
-extern volatile uint32_t sysclck2;
 /* USER CODE END EV */
 
 /******************************************************************************/
@@ -222,19 +222,28 @@ void SysTick_Handler(void)
   */
 void EXTI9_5_IRQHandler(void)
 {
-  /* USER CODE BEGIN EXTI9_5_IRQn 0 */
 
-  /* USER CODE END EXTI9_5_IRQn 0 */
-  if (LL_EXTI_IsActiveFlag_0_31(LL_EXTI_LINE_6) != RESET)
-  {
-    LL_EXTI_ClearFlag_0_31(LL_EXTI_LINE_6);
-    /* USER CODE BEGIN LL_EXTI_LINE_6 */
-
-    /* USER CODE END LL_EXTI_LINE_6 */
-  }
-  /* USER CODE BEGIN EXTI9_5_IRQn 1 */
-
-  /* USER CODE END EXTI9_5_IRQn 1 */
+  // if (LL_EXTI_IsActiveFlag_0_31(LL_EXTI_LINE_7) != RESET)
+  // {
+  //   LL_EXTI_ClearFlag_0_31(LL_EXTI_LINE_7);
+  //   hall.A = (hall.A == 0) ? 1 : 0;
+  //   hall.cyclesCntPr = hall.cyclesCnt;
+  //   hall.cyclesCnt = DWT->CYCCNT;
+  // }
+  // if (LL_EXTI_IsActiveFlag_0_31(LL_EXTI_LINE_8) != RESET)
+  // {
+  //   LL_EXTI_ClearFlag_0_31(LL_EXTI_LINE_8);
+  //   hall.B = (hall.B == 0) ? 1 : 0;
+  //   hall.cyclesCntPr = hall.cyclesCnt;
+  //   hall.cyclesCnt = DWT->CYCCNT;
+  // }
+  // if (LL_EXTI_IsActiveFlag_0_31(LL_EXTI_LINE_9) != RESET)
+  // {
+  //   LL_EXTI_ClearFlag_0_31(LL_EXTI_LINE_9);
+  //   hall.C = (hall.C == 0) ? 1 : 0;
+  //   hall.cyclesCntPr = hall.cyclesCnt;
+  //   hall.cyclesCnt = DWT->CYCCNT;
+  // }
 }
 
 /**
@@ -255,7 +264,6 @@ void TIM7_DAC_IRQHandler(void)
 
   /* USER CODE END TIM7_DAC_IRQn 1 */
 }
-
 
 /**
   * @brief This function handles HRTIM fault global interrupt.

@@ -106,19 +106,21 @@ typedef volatile struct pidReg_s pidReg_t;
 
 static inline void PI_calc(pidReg_t *p)
 {
-    p->Err = p->Ref - p->Fdb;                         /* Compute the error */
-    p->Up = p->Kp * p->Err;                           /* Compute the proportional output */
-    p->Ui += p->Ki * p->Up + p->Kc * p->SatErr;       /* Compute the integral output */
+    // p->Err = p->Ref - p->Fdb;                         /* Compute the error */
+    // p->Up = p->Kp * p->Err;                           /* Compute the proportional output */
+    // UTILS_NAN_ZERO(p->Ui);
+    // p->Ui += p->Ki * p->Err;                          /* Compute the integral output */
+    // p->Ui = SAT(p->Ui, p->OutMax, p->OutMin);         /* Saturate the integral output */
+    // p->OutPreSat = p->Up + p->Ui;                     /* Compute the pre-saturated output */
+    // p->Out = SAT(p->OutPreSat, p->OutMax, p->OutMin); /* Saturate the output */
+
+    p->Err = p->Ref - p->Fdb; /* Compute the error */
+    p->Up = p->Kp * p->Err;   /* Compute the proportional output */
+    p->Ui += p->Ki * p->Up + p->Kc * p->SatErr; /* Compute the integral output */
+    UTILS_NAN_ZERO(p->Ui);
     p->OutPreSat = p->Up + p->Ui;                     /* Compute the pre-saturated output */
     p->Out = SAT(p->OutPreSat, p->OutMax, p->OutMin); /* Saturate the output */
     p->SatErr = p->Out - p->OutPreSat;                /* Compute the saturate difference */
-    p->Up1 = p->Up;                                   /* Update the previous proportional output */
-
-    // p->Err = p->Ref - p->Fdb;                          /* Compute the error */
-    // p->Up = p->Kp * p->Err;                            /* Compute the proportional output */
-    // p->Ui += p->Ki * p->Err;                    /* Compute the integral output */
-    // p->OutPreSat = p->Up + p->Ui;                      /* Compute the pre-saturated output */
-    // p->Out = SAT(p->OutPreSat, p->OutMax, p->OutMin);  /* Saturate the output */
 }
 /*********************************************************************
  * Phase voltages calculation
@@ -139,6 +141,7 @@ struct voltCalc_s
     float usb;              // Output: Stationary beta-axis phase voltage
     float usd, usq;         // Output: DQ-axis phase voltages
     float vMagMax, dutyMax; // Output: DQ-axis phase voltages
+    float dutyQ, dutyD;     // Output: DQ-axis duty cycles
     float temp;             // Variable: temp variable
 };
 typedef volatile struct voltCalc_s voltCalc_t;
@@ -148,6 +151,7 @@ typedef volatile struct voltCalc_s voltCalc_t;
             0, 0, 0,      \
             0,            \
             0, 0, 0,      \
+            0, 0,         \
             0, 0,         \
             0, 0,         \
             0, 0,         \
@@ -174,8 +178,9 @@ static inline void Volt_calc(voltCalc_t *p)
 
 /*********************************************************************
  * Flux observer
- * Input: 
- * Output: 
+ * Input: alfa-beta currents and voltages
+ * Parameters: fluxLeakage, gamma
+ * Output: phase
  ****************************************************************** */
 struct fluxObs_s
 {
@@ -186,8 +191,9 @@ struct fluxObs_s
     float fluxLeakage;
     float R;
     float L;
-    float x1;
-    float x2;
+    float x1, x1_prev;
+    float x2, x2_prev;
+    float err;
     float dt;
     float phase;
     float gamma;
@@ -195,26 +201,33 @@ struct fluxObs_s
 typedef volatile struct fluxObs_s fluxObs_t;
 #define FLUX_OBS_DEFAULTS           \
     {                               \
-        0, 0, 0, 0,                 \
+        0, 0, 0, 0, 0, 0, 0,        \
             0, 0, 0, 0, 0, 0, 0, 0, \
     }
 // See http://cas.ensmp.fr/~praly/Telechargement/Journaux/2010-IEEE_TPEL-Lee-Hong-Nam-Ortega-Praly-Astolfi.pdf
 static inline void FluxObs_calc(fluxObs_t *p)
 {
-    const float L_ia = p->L * p->i_alpha;
-    const float L_ib = p->L * p->i_beta;
-    const float R_ia = p->R * p->i_alpha;
-    const float R_ib = p->R * p->i_beta;
-    const float lambda_2 = SQ(p->fluxLeakage);
+    float L_ia = p->L * p->i_alpha;
+    float L_ib = p->L * p->i_beta;
+    float R_ia = p->R * p->i_alpha;
+    float R_ib = p->R * p->i_beta;
+    float lambda_2 = SQ(p->fluxLeakage);
 
-    float err = lambda_2 - (SQ(p->x1 - L_ia) + SQ(p->x2 - L_ib));
-    float x1_dot = -R_ia + p->v_alpha + p->gamma * (p->x1 - L_ia) * err;
-    float x2_dot = -R_ib + p->v_beta + p->gamma * (p->x2 - L_ib) * err;
+    p->err = lambda_2 - (SQ(p->x1 - L_ia) + SQ(p->x2 - L_ib));
+    float x1_dot = -R_ia + p->v_alpha + p->gamma * (p->x1 - L_ia) * p->err;
+    float x2_dot = -R_ib + p->v_beta + p->gamma * (p->x2 - L_ib) * p->err;
     p->x1 += x1_dot * p->dt;
     p->x2 += x2_dot * p->dt;
 
-    //p->phase = utils_fast_atan2(-(p->x2 - L_ib), -(p->x1 - L_ia));
+    UTILS_NAN_ZERO(p->x1);
+    UTILS_NAN_ZERO(p->x2);
+
+    /* 1: Original */
     p->phase = utils_fast_atan2(p->x2 - L_ib, p->x1 - L_ia);
+    /* 2: Like VESC  */
+    //p->phase = utils_fast_atan2(p->x2_prev + p->x2, p->x1_prev + p->x1);
+    //p->x1_prev = p->x1;
+    //p->x1_prev = p->x2;
 }
 /*********************************************************************
  * Sliding mode rotor position observer
@@ -295,7 +308,7 @@ static inline void Smopos_calc(smopos_t *p)
     p->hpf_beta.T = p->hpf_alpha.T;            // time constant in descrete time dominian for HPF
     p->hpf_beta.in = p->lpf_beta.out + 1e-20f; // 1e-20f for avoid QNAN
     HPF_calc(&p->hpf_beta);
-    p->tmp_Ebeta = p->hpf_beta.out * 2.f; // final value
+    p->tmp_Ebeta = p->hpf_beta.out * 2.f; // final value (1.41*1.41=2)
 
     p->Ealpha = p->Ealpha + (p->Kslf * (p->Zalpha - p->Ealpha));
     p->Ebeta = p->Ebeta + (p->Kslf * (p->Zbeta - p->Ebeta));
@@ -307,16 +320,28 @@ static inline void Smopos_calc(smopos_t *p)
 }
 
 /*********************************************************************
+ * Enum with decoupling modes
+ ****************************************************************** */
+enum decMode_e
+{
+    DEC_DISABLE,   // Decoupling mode: No decoupling
+    DEC_CROSS,     // Decoupling mode: cross links
+    DEC_BEMF,      // Decoupling mode: bemf
+    DEC_CROSS_BEMF // Decoupling mode: cross links + bemf
+};
+typedef volatile enum decMode_e decMode_t;
+
+/*********************************************************************
  * Enum with fault codes
  ****************************************************************** */
 enum faultCode_e
 {
-    NONE,      // Fault code: No fault
-    OCP_FLT_U, // Fault code: Overcurrent phase A
-    OCP_FLT_V, // Fault code: Overcurrent phase B
-    OVP_FLT,   // Fault code: Overvoltage DC-Link
-    OVT_FLT,   // Fault code: PCB Overtemperature
-    UVLO_FLT   // Fault code: Undervoltage DC-Link
+    FLT_NONE,  // Fault code: No fault
+    FLT_OCP_U, // Fault code: Overcurrent phase A
+    FLT_OCP_V, // Fault code: Overcurrent phase B
+    FLT_OVP,   // Fault code: Overvoltage DC-Link
+    FLT_OVT,   // Fault code: PCB Overtemperature
+    FLT_UVLO   // Fault code: Undervoltage DC-Link
 };
 typedef volatile enum faultCode_e faultCode_t;
 
@@ -347,24 +372,24 @@ static inline void Prot_calc(prot_t *p)
     {
         if (p->currPhU >= p->ocpThld || p->currPhU <= -p->ocpThld)
         {
-            p->fltCode = OCP_FLT_U;
+            p->fltCode = FLT_OCP_U;
             p->protFlag = 1;
         }
         if (p->currPhV >= p->ocpThld || p->currPhV <= -p->ocpThld)
         {
-            p->fltCode = OCP_FLT_V;
+            p->fltCode = FLT_OCP_V;
             p->protFlag = 1;
         }
         if (p->udc >= p->ovpThld)
         {
-            p->fltCode = OVP_FLT;
+            p->fltCode = FLT_OVP;
             p->protFlag = 1;
         }
         if (p->udc <= p->uvloThld)
         {
             if (p->prechargeFlag != 0)
             {
-                p->fltCode = UVLO_FLT;
+                p->fltCode = FLT_UVLO;
                 p->protFlag = 1;
             }
         }
@@ -372,7 +397,7 @@ static inline void Prot_calc(prot_t *p)
         {
             if (p->prechargeFlag != 0)
             {
-                p->fltCode = OVT_FLT;
+                p->fltCode = FLT_OVT;
                 p->protFlag = 1;
             }
         }
@@ -404,13 +429,15 @@ Default initalizer for the SPEED_MEAS_QEP object.
 
 static inline void Pll_calc(pll_t *p)
 {
-    p->Err = p->AngleRaw - p->AnglePll + 1e-20f; // for avoid QNAN
+    UTILS_NAN_ZERO(p->AnglePll);
+    p->Err = (p->AngleRaw - p->AnglePll); // for avoid QNAN
     /* Normalize to range -PI to PI */
     if (p->Err < -MF_PI)
         p->Err = p->Err + M_2PI;
     else if (p->Err > MF_PI)
         p->Err = p->Err - M_2PI;
     /* calc pll angle */
+    UTILS_NAN_ZERO(p->SpeedPll);
     p->AnglePll += (p->SpeedPll + p->Err * p->Kp) * p->dt;
     /* Normalize to range -PI to PI */
     if (p->AnglePll < -MF_PI)
@@ -418,7 +445,7 @@ static inline void Pll_calc(pll_t *p)
     else if (p->AnglePll > MF_PI)
         p->AnglePll = p->AnglePll - M_2PI;
     /* calc pll speed */
-    p->SpeedPll += p->Err * p->Ki * p->dt;
+    p->SpeedPll += (p->Err * p->Ki * p->dt);
 }
 
 /* **********************************************************************************
@@ -629,19 +656,19 @@ static inline void CMTN_run(volatile cmtn_t *obj)
     }
 }
 /*********************************************************************
- * Struct with data for ramp func
+ * Ramp func
  ****************************************************************** */
-static inline float ramp(float in, float out, float rampDelta)
+static inline void ramp_calc(volatile float *in, volatile float *out, volatile float rampRate, volatile float Ts)
 {
-    float err;
-
-    err = in - out;
-    if (err > rampDelta)
-        return (out + rampDelta);
-    else if (err < -rampDelta)
-        return (out - rampDelta);
-    else
-        return (in);
+    float delta = Ts * rampRate;
+    if (*out < (*in - delta)) // add some hysteresys
+    {
+        *out += delta;
+    }
+    if (*out > (*in + delta))
+    {
+        *out -= delta;
+    }
 }
 /*********************************************************************
  * Struct with pointers for "calc" functions
@@ -711,60 +738,60 @@ typedef volatile enum paramIdState_e paramIdState_t;
  ****************************************************************** */
 struct data_s
 {
-    float udRef, uqRef;                           // Input: reference D/Q-axis voltages (V)
-    float idRef, iqRef, iqRmp;                    // Input: reference D/Q-axis currents, id ramp rate (A/s)
-    float speedRef, thetaRef, spdRmp, speedRpm;   // Input: reference speed, angle, speed ramp, measured speed in RPM
-    float iPhaseA, iPhaseB, iPhaseC;              // Input: ABC currents (A)
-    float iAvg, iAvgFiltered, iStrtp;             // Input: Total current (A)
-    float isa, isb, isd, isq;                     // Variable: D/Q-axis currents (A)
-    float udDec, uqDec;                           // Variable: D/Q-axis voltages decoupling components
-    float Te, Pe;                                 // Variable: Electrical torque (N.M) and Power (W)
-    float isb_tmp;                                // Variable: Tmp Phase B current
-    float sinTheta, cosTheta;                     // Variable: angle components - sin/cos
-    float id_Rs, id_Ls, id_Ld, id_Lq;             // Variable: observed motor parameters
-    float id_Zs, id_Xs;                           // Variable: observed motor parameters
-    float id_Ud, id_Uq;                           // Variable: observed motor parameters
-    float id_UdAmpl, id_UqAmpl;                   // Variable: observed motor parameters
-    float id_IdAmpl, id_IqAmpl, id_IdPr, id_IqPr; // Variable: observed motor parameters
-    float id_LsBank, id_RsBank;                   // Variable: observed motor parameters
-    float id_UdErr;                               // Variable: observed motor parameters
-    uint32_t isrCntr0, isrCntr1, isrCntr2;        // Variable: ISR counter
-    uint8_t spdLoopCntr;                          // Variable: counting ISR calls for speed loop prescaller
-    uint8_t invEnable, flashUpdateFlag;           // Variable: Inverter enable
-    float offsetCurrA, offsetCurrB, offsetCurrC;  // Variable: offset value for phase current sensing
-    float freq, freqStep, angle;                  // Variable: angle generator parameters
-    float halfPwmPeriod;                          // Variable: half of PWM period in timer tics
+    float udRef, uqRef;                            // Input: reference D/Q-axis voltages (V)
+    float idRef, iqRef, iqRmp;                     // Input: reference D/Q-axis currents, id ramp rate (A/s)
+    float speedRef, thetaRef, spdRmp, speedRpm;    // Input: reference speed, angle, speed ramp, measured speed in RPM
+    float iPhaseA, iPhaseB, iPhaseC;               // Input: ABC currents (A)
+    float iAvg, iAvgFiltered, iStrtp;              // Input: Total current (A)
+    float isa, isb, isd, isq;                      // Variable: D/Q-axis currents (A)
+    float udDec, uqDec;                            // Variable: D/Q-axis voltages decoupling components
+    float Te, Pe;                                  // Variable: Electrical torque (N.M) and Power (W)
+    float isb_tmp;                                 // Variable: Tmp Phase B current
+    float sinTheta, cosTheta;                      // Variable: angle components - sin/cos
+    float id_Rs, id_Ls, id_Ld, id_Lq;              // Variable: observed motor parameters
+    float id_Zs, id_Xs;                            // Variable: observed motor parameters
+    float id_Ud, id_Uq;                            // Variable: observed motor parameters
+    float id_UdAmpl, id_UqAmpl;                    // Variable: observed motor parameters
+    float id_IdAmpl, id_IqAmpl, id_IdPr, id_IqPr;  // Variable: observed motor parameters
+    float id_LsBank, id_RsBank;                    // Variable: observed motor parameters
+    float id_UdErr;                                // Variable: observed motor parameters
+    uint32_t isrCntr0, isrCntr1, isrCntr2;         // Variable: ISR counter
+    uint8_t spdLoopCntr;                           // Variable: counting ISR calls for speed loop prescaller
+    uint8_t invEnable, flashUpdateFlag;            // Variable: Inverter enable
+    float offsetCurrA, offsetCurrB, offsetCurrC;   // Variable: offset value for phase current sensing
+    float freq, freqRef, freqRmp, freqStep, angle; // Variable: angle generator parameters
+    float halfPwmPeriod;                           // Variable: half of PWM period in timer tics
     float bldc_commCntr, bldc_commCntrRef;
     float bldc_duty, bldc_dutyRef, bldc_dutyStart;
 };
 typedef volatile struct data_s data_t;
-#define DATA_DEFAULTS   \
-    {                   \
-        0, 0,           \
-            0, 0, 0,    \
-            0, 0, 0, 0, \
-            0, 0, 0,    \
-            0, 0, 0,    \
-            0, 0, 0, 0, \
-            0, 0,       \
-            0, 0,       \
-            0,          \
-            0, 0,       \
-            0, 0, 0, 0, \
-            0, 0,       \
-            0, 0,       \
-            0, 0,       \
-            0, 0, 0, 0, \
-            0, 0,       \
-            0,          \
-            0, 0, 0,    \
-            0,          \
-            0, 0,       \
-            0, 0, 0,    \
-            0, 0, 0,    \
-            0,          \
-            0, 0,       \
-            0, 0, 0,    \
+#define DATA_DEFAULTS      \
+    {                      \
+        0, 0,              \
+            0, 0, 0,       \
+            0, 0, 0, 0,    \
+            0, 0, 0,       \
+            0, 0, 0,       \
+            0, 0, 0, 0,    \
+            0, 0,          \
+            0, 0,          \
+            0,             \
+            0, 0,          \
+            0, 0, 0, 0,    \
+            0, 0,          \
+            0, 0,          \
+            0, 0,          \
+            0, 0, 0, 0,    \
+            0, 0,          \
+            0,             \
+            0, 0, 0,       \
+            0,             \
+            0, 0,          \
+            0, 0, 0,       \
+            0, 0, 0, 0, 0, \
+            0,             \
+            0, 0,          \
+            0, 0, 0,       \
     }
 
 /*********************************************************************
@@ -791,11 +818,20 @@ enum focMode_e
     FOC,  // Field-oriented control
 };
 typedef volatile enum focMode_e focMode_t;
+
+enum sensorType_e
+{
+    SENSORLESS, // 6-step trapezoidal commutation
+    HALL,       // Field-oriented control
+};
+typedef volatile enum sensorType_e sensorType_t;
+
 struct config_s
 {
     focMode_t mode;                 // Control real motor or simulate it
+    sensorType_t sensorType;        // Type of rotor position sensor
     uint8_t sim;                    // 0 - control real motor, 1 - control motor model
-    uint8_t axisDecEn;              // enable feedForward compensation (axis decoupling)
+    decMode_t decMode;              // Axis decoupling mode
     float baseCurrent, baseVoltage; // Base values in most cases = nominal values. Amps, Volts  !NOT USED
     float baseFreq;                 // Base electrical frequency. Hz
     float pwmFreq, tS;              // Inverter PWM frequency. In most cases samplingFreq = pwmFreq, tS - inv value (1/sampFreq)
@@ -803,11 +839,12 @@ struct config_s
     float adcFullScaleVoltage;      // Vadc * K_VOLT_DIV
     float deadTime, Rds_on;         // deadtime and Mosfet Rds(on). nS, Ohm
     float Rs, Ld, Lq, Kv, pp;       // Motor phase resistance(Ohm), inductance(H) and pole pairs.
+    uint32_t adcPostScaler;         // Determines how many PWM periods used for 1 ADC conversion. It configured in Foc_Init()
 };
 typedef volatile struct config_s config_t;
 #define CONFIG_DEFAULTS    \
     {                      \
-        0,                 \
+        0, 0,              \
             0, 0,          \
             0, 0,          \
             0,             \
@@ -816,6 +853,7 @@ typedef volatile struct config_s config_t;
             0,             \
             0, 0,          \
             0, 0, 0, 0, 0, \
+            0,             \
     }
 /*********************************************************************
  * General control struct (must be last struct)
@@ -839,11 +877,13 @@ struct foc_s
     cmtn_t cmtn;                     // 6-step trapezoidal control using BEMF integration
     pll_t pll;                       // PLL angle and speed estimation
     filterData_t lpf_Iavg;           // Low-pass filter for total current calc
-    filterData_t lpf_id;             // Low-pass filter for total current calc
-    filterData_t lpf_iq;             // Low-pass filter for total current calc
-    filterData_t lpf_vdc;            // Low-pass filter for total current calc
-    filterData_t lpf_Pe;             // Low-pass filter for total current calc
-    filterData_t lpf_NTC;            // Low-pass filter for total current calc
+    filterData_t lpf_id;             // Low-pass filter for id current
+    filterData_t lpf_iq;             // Low-pass filter for iq current
+    filterData_t lpf_vdc;            // Low-pass filter for DC-bus voltage
+    filterData_t lpf_Pe;             // Low-pass filter for motor power
+    filterData_t lpf_NTC;            // Low-pass filter for board temperature
+    filterData_t lpf_offsetIa;       // Low-pass filter for phase A current offset
+    filterData_t lpf_offsetIb;       // Low-pass filter for phase B current offset
     calc_t calc;                     // Struct with methods of FOC class (calc functions)
 };
 typedef volatile struct foc_s foc_t;
@@ -871,14 +911,25 @@ typedef volatile struct foc_s foc_t;
             FILTER_DEFAULTS,     \
             FILTER_DEFAULTS,     \
             FILTER_DEFAULTS,     \
+            FILTER_DEFAULTS,     \
+            FILTER_DEFAULTS,     \
             CALC_DEFAULTS,       \
     }
 static inline void Foc_Init(foc_t *p)
 {
-    p->config.tS = (1.f / p->config.pwmFreq) * 2.f; // multiply by 2 cuz has 2 PWM cycles for 1 ADC ISR
+    /** Init timeBase values
+     *  20000 Hz is maximal FOC execution rate for any PWM freq
+     *  Example: ADC postScaler = 1, means we calc FOC loop 1 times for 2 PWM cycles
+     */
+    p->config.adcPostScaler = (uint32_t)(p->config.pwmFreq / 20000.1f);
+    p->config.tS = (1.f / p->config.pwmFreq) * (float)(p->config.adcPostScaler + 1);
     p->data.freqStep = M_2PI * p->config.tS;
     /* Max duty cycle*/
-    p->volt.dutyMax = 0.975f;
+    p->volt.dutyMax = 0.95f;
+    /* Init ramps */
+    p->data.freqRmp = 20.f;  // Hz/s
+    p->data.iqRmp = 10.f;    // A/s
+    p->data.spdRmp = 3000.f; // (rad/s)/s
     /* Init D-axis current PI controller */
     p->pi_id.Kp = 0.125f;
     p->pi_id.Ki = 0.025f;
@@ -891,20 +942,21 @@ static inline void Foc_Init(foc_t *p)
     p->pi_iq.Kc = 0.5f;
     p->pi_iq.OutMin = (p->config.mode == FOC) ? -p->config.adcFullScaleVoltage : 0; // -1.f
     p->pi_iq.OutMax = (p->config.mode == FOC) ? p->config.adcFullScaleVoltage : 1.f;
-    /* Automatic calc PI gains depends on motor RL parameters */
-    float wcc = (0.05f * p->config.pwmFreq) * M_2PI; // if current sampling 1 times for 1 PWM period use wcc 5%
-    p->pi_id.Kp = p->pi_iq.Kp = (p->config.Ld * wcc) * 0.5f;
-    p->pi_id.Ki = p->pi_iq.Ki = p->config.Rs * wcc * p->config.tS * 0.5f; // Rs * bw, bw = 1.0 / tc, Ki = 𝜔𝑐𝑅 × 𝑇𝑆
+    /** Automatic calc PI gains depends on motor RL parameters
+     *  wcc is cutoff frequency of controller
+     *  if current sampling 1 times for 1 PWM period use wcc 5%. In any cases try from 0.025 to 0.1
+     */
+    float wcc = (0.065f * (1.f / p->config.tS)) * M_2PI;
+    p->pi_id.Kp = p->pi_iq.Kp = (p->config.Ld * wcc);
+    p->pi_id.Ki = p->pi_iq.Ki = p->config.Rs * wcc * p->config.tS; // Rs * bw, bw = 1.0 / tc, Ki = 𝜔𝑐𝑅 × 𝑇𝑆
     p->pi_id.Kc = 1.f / p->pi_id.Kp;
     p->pi_iq.Kc = 1.f / p->pi_iq.Kp;
-    p->data.iqRmp = 10.f;
     /* Init speed PI controller */
-    p->pi_spd.Kp = (p->config.mode == FOC) ? 0.05f : 0.01f;
-    p->pi_spd.Ki = (p->config.mode == FOC) ? 0.005f : 0.0005f;
+    p->pi_spd.Kp = (p->config.mode == FOC) ? 0.025f : 0.01f;
+    p->pi_spd.Ki = (p->config.mode == FOC) ? 0.001f : 0.0005f;
     p->pi_spd.Kc = 1.f / p->pi_spd.Kp;
-    p->pi_spd.OutMin = (p->config.mode == FOC) ? -p->config.adcFullScaleCurrent : 0.f;
-    p->pi_spd.OutMax = (p->config.mode == FOC) ? p->config.adcFullScaleCurrent : 0.99f;
-    p->data.spdRmp = 2000.f; // (rad/s)/s
+    p->pi_spd.OutMin = (p->config.mode == FOC) ? (-p->prot.ocpThld * 0.9f) : 0.f;
+    p->pi_spd.OutMax = (p->config.mode == FOC) ? (p->prot.ocpThld * 0.9f) : 0.99f;
     /* Init SMOPOS constants */
     p->smo.Fsmopos = exp((-p->config.Rs / p->config.Ld) * p->config.tS);
     p->smo.Gsmopos = (1 / p->config.Rs) * (1 - p->smo.Fsmopos);
@@ -914,7 +966,7 @@ static inline void Foc_Init(foc_t *p)
     p->flux.L = p->config.Ld * 1.5f;
     p->flux.fluxLeakage = 60.0f / (SQRT3 * M_2PI * p->config.Kv * p->config.pp);
     p->flux.dt = p->config.tS;
-    p->flux.gamma = 10.f;
+    p->flux.gamma = (1000.f / (p->flux.fluxLeakage * p->flux.fluxLeakage)) * 0.5f; //300000.f;
     /* Init PLL */
     p->pll.dt = p->config.tS;
     p->pll.Kp = 2000.f;
@@ -933,13 +985,15 @@ static inline void Foc_Init(foc_t *p)
     p->data.bldc_commCntrRef = 350.f;
     p->data.bldc_dutyStart = 0.1f; // 10% of max value
     // Filters data init which execute in main ADC-ISR
-    p->lpf_id.T = p->config.tS / (0.001f + p->config.tS); // time constant in descrete time dominian for D-axis current LPF
-    p->lpf_iq.T = p->config.tS / (0.001f + p->config.tS); // time constant in descrete time dominian for Q-axis current LPF
-    p->lpf_vdc.T = p->config.tS / (0.2f + p->config.tS); // time constant in descrete time dominian for DC-Bus voltage LPF
+    p->lpf_id.T = p->config.tS / (0.005f + p->config.tS);     // time constant in descrete time dominian for D-axis current LPF
+    p->lpf_iq.T = p->config.tS / (0.005f + p->config.tS);     // time constant in descrete time dominian for Q-axis current LPF
+    p->lpf_vdc.T = p->config.tS / (0.1f + p->config.tS);      // time constant in descrete time dominian for DC-Bus voltage LPF
+    p->lpf_offsetIa.T = p->config.tS / (0.2f + p->config.tS); // time constant in descrete time dominian for D-axis current LPF
+    p->lpf_offsetIb.T = p->config.tS / (0.2f + p->config.tS); // time constant in descrete time dominian for Q-axis current LPF
     // Filters data init which execute in 1ms SYSTICK-Callback
-    p->lpf_Iavg.T = 0.001f / (0.1f + 0.001f); // time constant in descrete time dominian for total current LPF
-    p->lpf_Pe.T = 0.001f / (0.1f + 0.001f);   // time constant in descrete time dominian for total current LPF
-    p->lpf_NTC.T = 0.001f / (0.1f + 0.001f);  // time constant in descrete time dominian for total current LPF
+    p->lpf_Iavg.T = 0.001f / (0.02f + 0.001f); // time constant in descrete time dominian for total current LPF
+    p->lpf_Pe.T = 0.001f / (0.02f + 0.001f);   // time constant in descrete time dominian for total current LPF
+    p->lpf_NTC.T = 0.001f / (0.002f + 0.001f); // time constant in descrete time dominian for total current LPF
 }
 
 #endif
