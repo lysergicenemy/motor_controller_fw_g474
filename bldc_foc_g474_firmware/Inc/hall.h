@@ -64,85 +64,6 @@ static inline void Hall_update(hall_t *p)
     /* Increment ISR counter */
     p->isrCntr++;
     p->time += p->ts;
-    /* Calc sensor state and check validity */
-    // if (p->A == 0 && p->B == 1 && p->C == 0)
-    // {
-    //     if (p->statePr == 5)
-    //     {
-    //         p->state = 0;
-    //         p->dir = 0;
-    //     }
-    //     if (p->statePr == 1)
-    //     {
-    //         p->state = 0;
-    //         p->dir = 1;
-    //     }
-    // }
-    // else if (p->A == 0 && p->B == 1 && p->C == 1)
-    // {
-    //     if (p->statePr == 0)
-    //     {
-    //         p->state = 1;
-    //         p->dir = 0;
-    //     }
-    //     if (p->statePr == 2)
-    //     {
-    //         p->state = 1;
-    //         p->dir = 1;
-    //     }
-    // }
-    // else if (p->A == 0 && p->B == 0 && p->C == 1)
-    // {
-    //     if (p->statePr == 1)
-    //     {
-    //         p->state = 2;
-    //         p->dir = 0;
-    //     }
-    //     if (p->statePr == 3)
-    //     {
-    //         p->state = 2;
-    //         p->dir = 1;
-    //     }
-    // }
-    // else if (p->A == 1 && p->B == 0 && p->C == 1)
-    // {
-    //     if (p->statePr == 2)
-    //     {
-    //         p->state = 3;
-    //         p->dir = 0;
-    //     }
-    //     if (p->statePr == 4)
-    //     {
-    //         p->state = 3;
-    //         p->dir = 1;
-    //     }
-    // }
-    // else if (p->A == 1 && p->B == 0 && p->C == 0)
-    // {
-    //     if (p->statePr == 3)
-    //     {
-    //         p->state = 4;
-    //         p->dir = 0;
-    //     }
-    //     if (p->statePr == 5)
-    //     {
-    //         p->state = 4;
-    //         p->dir = 1;
-    //     }
-    // }
-    // else if (p->A == 1 && p->B == 1 && p->C == 0)
-    // {
-    //     if (p->statePr == 4)
-    //     {
-    //         p->state = 5;
-    //         p->dir = 0;
-    //     }
-    //     if (p->statePr == 0)
-    //     {
-    //         p->state = 5;
-    //         p->dir = 1;
-    //     }
-    // }
     /* Calc sensor state */
     if (p->A == 0 && p->B == 1 && p->C == 0)
         p->state = 0;
@@ -162,15 +83,9 @@ static inline void Hall_update(hall_t *p)
     if (p->state != p->statePr)
     {
         /* Calc time between  states and angle increment value */
-        //p->time = (float)p->isrCntr * p->ts;
-        //p->time = (float)(TIM6->CNT) / 2982456.f;//* 0.00000033529f;
-        //TIM6->CNT = 0;
         p->diff = fabsf(utils_angle_difference_rad(p->offsetAvg[p->statePr], p->offsetAvg[p->state]));
         p->speedSector = p->diff / p->time;
         UTILS_LP_FAST(p->speedE_filtered, p->speedSector, 0.01f);
-        //p->time = (float)p->isrCntr;
-        //p->angle = p->angleRaw;
-        //p->angle = p->angleRaw + (utils_angle_difference_rad(p->offsetAvg[p->state], p->offsetAvg[p->statePr]) * 0.5f);
         p->isrCntr = 0;
         p->delta = 0;
         p->time = 0;
@@ -191,9 +106,7 @@ static inline void Hall_update(hall_t *p)
     p->diffNext = fabsf(utils_angle_difference_rad(p->offsetAvg[p->state], p->offsetAvg[p->stateNext]));
     p->delta = fabsf(p->speedE_filtered * ((float)p->isrCntr * p->ts));
     UTILS_NAN_ZERO(p->delta);
-    //float phaseCorrect = p->diff * 0.5f;
     p->delta = SAT(p->delta, p->diffNext, 0);
-    //p->angle = (p->dir == 0) ? p->angleRaw + p->delta : p->angleRaw - p->delta;
     p->angle = (p->dir == 0) ? p->angleRaw + p->delta : p->angleRaw - p->delta;
 
     p->statePr = p->state;

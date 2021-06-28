@@ -42,6 +42,12 @@ extern "C"
     LL_HRTIM_EnableOutput(HRTIM1, LL_HRTIM_OUTPUT_TA1 | LL_HRTIM_OUTPUT_TA2 | LL_HRTIM_OUTPUT_TC1 |
                                       LL_HRTIM_OUTPUT_TC2 | LL_HRTIM_OUTPUT_TD1 | LL_HRTIM_OUTPUT_TD2);
   }
+  static inline void pwm_update(float ta, float tb, float tc, float halfPwmPeriod)
+  {
+    LL_HRTIM_TIM_SetCompare1(HRTIM1, LL_HRTIM_TIMER_A, (uint32_t)(ta * halfPwmPeriod + halfPwmPeriod));
+    LL_HRTIM_TIM_SetCompare1(HRTIM1, LL_HRTIM_TIMER_C, (uint32_t)(tb * halfPwmPeriod + halfPwmPeriod));
+    LL_HRTIM_TIM_SetCompare1(HRTIM1, LL_HRTIM_TIMER_D, (uint32_t)(tc * halfPwmPeriod + halfPwmPeriod));
+  }
   /* USER CODE END Private defines */
 
   void MX_HRTIM1_Init(void);

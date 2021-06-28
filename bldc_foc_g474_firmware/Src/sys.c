@@ -93,6 +93,7 @@ void FLASH_Program_DoubleWord(uint32_t Address, uint64_t Data)
   /* Clear PG bit */
   CLEAR_BIT(FLASH->CR, FLASH_CR_PG);
 }
+
 void FLASH_UpdateConfig(foc_t *p, hall_t *hp)
 {
   if (p->driveState == STOP)

@@ -30,7 +30,10 @@ extern "C"
 
   void Cordic_Init(void);
 
-  // Calc sinCos using hardware CORDIC
+  /** Calc sinCos using hardware CORDIC
+   *  Input: angle (must be scaled to -1 : 1 range)
+   *  Average execution time: ~98 CPU cycles
+   **/
   static inline void cordic_sincos_calc(volatile float angle, volatile float *s, volatile float *c)
   {
     if (LL_CORDIC_GetFunction(CORDIC) != LL_CORDIC_FUNCTION_SINE)
@@ -44,7 +47,7 @@ extern "C"
                        LL_CORDIC_OUTSIZE_32BITS);       /* q1.31 format for output data */
     }
 
-    LL_CORDIC_WriteData(CORDIC, _IQ31(angle * ONE_BY_PI));
+    LL_CORDIC_WriteData(CORDIC, _IQ31(angle * ONE_BY_PI)); // cordic input data format q31, angle range (1 : -1)
     *s = _IQ31toF((int32_t)LL_CORDIC_ReadData(CORDIC));
     *c = _IQ31toF((int32_t)LL_CORDIC_ReadData(CORDIC));
   }

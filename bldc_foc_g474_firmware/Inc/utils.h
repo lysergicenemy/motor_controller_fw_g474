@@ -87,9 +87,12 @@ uint16_t utils_median_filter_uint16_run(uint16_t *buffer,
  * Filter constant. Range 0.0 to 1.0, where 1.0 gives the unfiltered value.
  */
 #define UTILS_LP_FAST(value, sample, filter_constant) (value -= (filter_constant) * ((value) - (sample)))
+/* Saturation */
+#define SAT(A, Pos, Neg) (((A) > (Pos)) ? (Pos) : (((A) < (Neg)) ? (Neg) : (A)))
 
 // Constants
 #define ONE_BY_SQRT3 (0.57735026919f)
+#define ONE_BY_SQRT2 (0.707106781186f)
 #define TWO_BY_SQRT3 (2.0f * 0.57735026919f)
 #define SQRT3_BY_2 (0.86602540378f)
 #define SQRT2 (1.414213562f)

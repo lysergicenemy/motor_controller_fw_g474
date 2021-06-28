@@ -1,4 +1,4 @@
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
   28:Src/gpio.c    **** uint8_t sensorType = HALL;
   29:Src/gpio.c    **** 
   30:Src/gpio.c    **** /* USER CODE END 0 */
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 2
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 2
 
 
   31:Src/gpio.c    **** 
@@ -118,7 +118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
   58              		.file 2 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h"
    1:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
    2:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   ******************************************************************************
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 3
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 3
 
 
    3:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @file    stm32g4xx_ll_bus.h
@@ -178,7 +178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
   57:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
   58:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /* Private types -------------------------------------------------------------*/
   59:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /* Private variables ---------------------------------------------------------*/
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 4
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 4
 
 
   60:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
@@ -238,7 +238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
  114:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #endif /* AES */
  115:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_RNG            RCC_AHB2ENR_RNGEN
  116:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 5
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 5
 
 
  117:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @}
@@ -298,7 +298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
  171:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
  172:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
  173:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /** @defgroup BUS_LL_EC_APB1_GRP2_PERIPH  APB1 GRP2 PERIPH
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 6
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 6
 
 
  174:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @{
@@ -358,7 +358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
  228:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @rmtoll AHB1ENR      DMA1EN        LL_AHB1_GRP1_EnableClock\n
  229:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1ENR      DMA2EN        LL_AHB1_GRP1_EnableClock\n
  230:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1ENR      DMAMMUXEN     LL_AHB1_GRP1_EnableClock\n
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 7
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 7
 
 
  231:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1ENR      CORDICEN      LL_AHB1_GRP1_EnableClock\n
@@ -418,7 +418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
  285:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1ENR      FLASHEN       LL_AHB1_GRP1_DisableClock\n
  286:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1ENR      CRCEN         LL_AHB1_GRP1_DisableClock
  287:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 8
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 8
 
 
  288:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA1
@@ -478,7 +478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
  342:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_FMAC
  343:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_FLASH
  344:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CRC
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 9
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 9
 
 
  345:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval None
@@ -538,7 +538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
  399:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_SRAM1
  400:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CRC
  401:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval None
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 10
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 10
 
 
  402:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
@@ -598,7 +598,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
  454:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** {
  455:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   __IO uint32_t tmpreg;
   61              		.loc 2 455 3 view .LVU5
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 11
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 11
 
 
  456:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   SET_BIT(RCC->AHB2ENR, Periphs);
@@ -658,7 +658,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
  453:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** {
  104              		.loc 2 453 22 view .LVU22
  105              	.LBB19:
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 12
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 12
 
 
  455:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   SET_BIT(RCC->AHB2ENR, Periphs);
@@ -718,7 +718,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
  145              		.loc 1 61 3 is_stmt 1 view .LVU39
  146              	.LBB22:
  147              	.LBI22:
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 13
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 13
 
 
  148              		.file 3 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h"
@@ -778,7 +778,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
   54:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** /** @defgroup GPIO_LL_Private_Macros GPIO Private Macros
   55:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @{
   56:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 14
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 14
 
 
   57:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** 
@@ -838,7 +838,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
  111:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   */
  112:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** 
  113:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** /** @defgroup GPIO_LL_EC_PIN PIN
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 15
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 15
 
 
  114:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @{
@@ -898,7 +898,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
  168:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** #define LL_GPIO_SPEED_FREQ_VERY_HIGH       GPIO_OSPEEDR_OSPEED0   /*!< Select I/O high output speed
  169:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** /**
  170:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @}
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 16
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 16
 
 
  171:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   */
@@ -958,7 +958,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
  225:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @param  __INSTANCE__ GPIO Instance
  226:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @param  __REG__ Register to be written
  227:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @param  __VALUE__ Value to be written in the register
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 17
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 17
 
 
  228:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @retval None
@@ -1018,7 +1018,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
  282:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_MODE_ALTERNATE
  283:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_MODE_ANALOG
  284:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @retval None
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 18
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 18
 
 
  285:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   */
@@ -1078,7 +1078,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
  339:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_6
  340:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_7
  341:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_8
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 19
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 19
 
 
  342:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_9
@@ -1138,7 +1138,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
  396:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @note   I/O speed can be Low, Medium, Fast or High speed.
  397:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @note   Warning: only one pin can be passed as parameter.
  398:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @note   Refer to datasheet for frequency specifications and the power
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 20
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 20
 
 
  399:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         supply and load conditions for each speed.
@@ -1198,7 +1198,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
  453:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_12
  454:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_13
  455:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_14
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 21
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 21
 
 
  456:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_15
@@ -1258,7 +1258,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
  510:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_2
  511:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_3
  512:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_4
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 22
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 22
 
 
  513:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_5
@@ -1318,7 +1318,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
  567:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @retval None
  568:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   */
  569:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** __STATIC_INLINE void LL_GPIO_SetAFPin_0_7(GPIO_TypeDef *GPIOx, uint32_t Pin, uint32_t Alternate)
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 23
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 23
 
 
  570:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** {
@@ -1378,7 +1378,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
  624:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_13
  625:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_14
  626:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_15
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 24
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 24
 
 
  627:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @param  Alternate This parameter can be one of the following values:
@@ -1438,7 +1438,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
  681:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_AF_14
  682:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_AF_15
  683:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 25
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 25
 
 
  684:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** __STATIC_INLINE uint32_t LL_GPIO_GetAFPin_8_15(GPIO_TypeDef *GPIOx, uint32_t Pin)
@@ -1498,7 +1498,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
  738:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_2
  739:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_3
  740:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_4
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 26
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 26
 
 
  741:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_5
@@ -1558,7 +1558,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
  795:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_0
  796:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_1
  797:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_2
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 27
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 27
 
 
  798:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_3
@@ -1618,7 +1618,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
  852:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_5
  853:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_6
  854:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_7
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 28
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 28
 
 
  855:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_8
@@ -1678,7 +1678,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
  909:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_4
  910:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_5
  911:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_6
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 29
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 29
 
 
  912:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_7
@@ -1738,7 +1738,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
  179 0076 0896     		str	r6, [sp, #32]
   70:Src/gpio.c    ****   LL_GPIO_Init(ENABLE_GPIO_Port, &GPIO_InitStruct);
  180              		.loc 1 70 3 is_stmt 1 view .LVU52
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 30
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 30
 
 
  181 0078 04A9     		add	r1, sp, #16
@@ -1798,7 +1798,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
  220              		.loc 1 85 30 is_stmt 0 view .LVU73
  221 00a4 0794     		str	r4, [sp, #28]
   86:Src/gpio.c    ****   GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 31
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 31
 
 
  222              		.loc 1 86 3 is_stmt 1 view .LVU74
@@ -1858,7 +1858,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
  261              		.loc 1 101 30 is_stmt 0 view .LVU95
  262 00cc 0794     		str	r4, [sp, #28]
  102:Src/gpio.c    ****   GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 32
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 32
 
 
  263              		.loc 1 102 3 is_stmt 1 view .LVU96
@@ -1918,7 +1918,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
  304              	.LVL13:
  116:Src/gpio.c    **** 
  117:Src/gpio.c    ****   // HALL
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 33
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 33
 
 
  118:Src/gpio.c    ****   GPIO_InitStruct.Pin = HALL_PHASE_A_Pin;
@@ -1978,7 +1978,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
  345              		.loc 1 131 3 is_stmt 1 view .LVU135
  346              		.loc 1 131 24 is_stmt 0 view .LVU136
  347 012a 0594     		str	r4, [sp, #20]
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 34
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 34
 
 
  132:Src/gpio.c    ****   GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_HIGH;
@@ -2038,7 +2038,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
  160:Src/gpio.c    ****   // EXTI_InitStruct.LineCommand = ENABLE;
  161:Src/gpio.c    ****   // EXTI_InitStruct.Mode = LL_EXTI_MODE_IT;
  162:Src/gpio.c    ****   // EXTI_InitStruct.Trigger = LL_EXTI_TRIGGER_RISING_FALLING;
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 35
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 35
 
 
  163:Src/gpio.c    ****   // LL_EXTI_Init(&EXTI_InitStruct);
@@ -2079,16 +2079,16 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 1
  407              		.file 15 "d:\\apps\\embedded_gcc\\arm_gcc\\lib\\gcc\\arm-none-eabi\\8.2.1\\include\\stddef.h"
  408              		.file 16 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\reent.h"
  409              		.file 17 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\math.h"
-ARM GAS  D:\apps\VSCode\data\tmp\ccQU0GOF.s 			page 36
+ARM GAS  D:\apps\VSCode\data\tmp\cc5MauiW.s 			page 36
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gpio.c
-D:\apps\VSCode\data\tmp\ccQU0GOF.s:18     .text.MX_GPIO_Init:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccQU0GOF.s:26     .text.MX_GPIO_Init:0000000000000000 MX_GPIO_Init
-D:\apps\VSCode\data\tmp\ccQU0GOF.s:383    .text.MX_GPIO_Init:0000000000000154 $d
-D:\apps\VSCode\data\tmp\ccQU0GOF.s:392    .bss.sensorType:0000000000000000 sensorType
-D:\apps\VSCode\data\tmp\ccQU0GOF.s:393    .bss.sensorType:0000000000000000 $d
+D:\apps\VSCode\data\tmp\cc5MauiW.s:18     .text.MX_GPIO_Init:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cc5MauiW.s:26     .text.MX_GPIO_Init:0000000000000000 MX_GPIO_Init
+D:\apps\VSCode\data\tmp\cc5MauiW.s:383    .text.MX_GPIO_Init:0000000000000154 $d
+D:\apps\VSCode\data\tmp\cc5MauiW.s:392    .bss.sensorType:0000000000000000 sensorType
+D:\apps\VSCode\data\tmp\cc5MauiW.s:393    .bss.sensorType:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 LL_GPIO_Init
