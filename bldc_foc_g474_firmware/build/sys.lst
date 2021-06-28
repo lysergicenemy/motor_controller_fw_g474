@@ -1,4 +1,4 @@
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
   28:Src/sys.c     **** void MX_SYS_Init(void)
   29:Src/sys.c     **** {
   29              		.loc 1 29 1 view -0
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 2
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 2
 
 
   30              		.cfi_startproc
@@ -118,7 +118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
   40:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
   41:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #ifdef __cplusplus
   42:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** extern "C" {
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 3
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 3
 
 
   43:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #endif
@@ -178,7 +178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
   97:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_GPIOG          RCC_AHB2ENR_GPIOGEN
   98:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_CCM            RCC_AHB2SMENR_CCMSMEN
   99:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_SRAM2          RCC_AHB2SMENR_SRAM2SMEN
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 4
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 4
 
 
  100:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_ADC12          RCC_AHB2ENR_ADC12EN
@@ -238,7 +238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  154:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_UART4          RCC_APB1ENR1_UART4EN
  155:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #endif /* UART4 */
  156:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #if defined(UART5)
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 5
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 5
 
 
  157:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_UART5          RCC_APB1ENR1_UART5EN
@@ -298,7 +298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  211:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
  212:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
  213:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @}
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 6
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 6
 
 
  214:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
@@ -358,7 +358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  268:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_FMAC
  269:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_FLASH
  270:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CRC
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 7
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 7
 
 
  271:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval State of Periphs (1 or 0).
@@ -418,7 +418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  325:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
  326:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
  327:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 8
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 8
 
 
  328:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @brief  Release AHB1 peripherals reset.
@@ -478,7 +478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  382:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
  383:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @brief  Disable AHB1 peripheral clocks in Sleep and Stop modes
  384:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @rmtoll AHB1SMENR    DMA1SMEN      LL_AHB1_GRP1_DisableClockStopSleep\n
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 9
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 9
 
 
  385:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1SMENR    DMA2SMEN      LL_AHB1_GRP1_DisableClockStopSleep\n
@@ -538,7 +538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  439:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOF
  440:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOG
  441:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_ADC12
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 10
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 10
 
 
  442:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_ADC345 (*)
@@ -598,7 +598,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  496:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         (*) value not defined in all devices.
  497:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval State of Periphs (1 or 0).
  498:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 11
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 11
 
 
  499:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** __STATIC_INLINE uint32_t LL_AHB2_GRP1_IsEnabledClock(uint32_t Periphs)
@@ -658,7 +658,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  553:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2RSTR      GPIOFRST       LL_AHB2_GRP1_ForceReset\n
  554:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2RSTR      GPIOGRST       LL_AHB2_GRP1_ForceReset\n
  555:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2RSTR      ADC12RST       LL_AHB2_GRP1_ForceReset\n
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 12
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 12
 
 
  556:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2RSTR      ADC345RST      LL_AHB2_GRP1_ForceReset\n
@@ -718,7 +718,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  610:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOE
  611:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOF
  612:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOG
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 13
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 13
 
 
  613:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_ADC12
@@ -778,7 +778,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  667:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *
  668:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         (*) value not defined in all devices.
  669:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval None
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 14
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 14
 
 
  670:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
@@ -838,7 +838,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  724:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
  725:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
  726:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 15
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 15
 
 
  727:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @}
@@ -898,7 +898,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  781:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** __STATIC_INLINE void LL_AHB3_GRP1_DisableClock(uint32_t Periphs)
  782:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** {
  783:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   CLEAR_BIT(RCC->AHB3ENR, Periphs);
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 16
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 16
 
 
  784:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
@@ -958,7 +958,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  838:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
  839:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
  840:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 17
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 17
 
 
  841:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @brief  Disable AHB3 peripheral clocks in Sleep and Stop modes
@@ -1018,7 +1018,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  895:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_CRS
  896:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_RTCAPB
  897:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_WWDG
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 18
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 18
 
 
  898:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_SPI2
@@ -1078,7 +1078,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  952:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     TIM6EN        LL_APB1_GRP1_IsEnabledClock\n
  953:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     TIM7EN        LL_APB1_GRP1_IsEnabledClock\n
  954:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     CRSEN         LL_APB1_GRP1_IsEnabledClock\n
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 19
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 19
 
 
  955:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     RTCAPBEN      LL_APB1_GRP1_IsEnabledClock\n
@@ -1138,7 +1138,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
 1009:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP2_PERIPH_I2C4 (*)
 1010:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP2_PERIPH_UCPD1
 1011:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 20
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 20
 
 
 1012:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         (*) value not defined in all devices.
@@ -1198,7 +1198,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
 1066:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_LPTIM1
 1067:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *
 1068:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         (*) value not defined in all devices.
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 21
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 21
 
 
 1069:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval None
@@ -1258,7 +1258,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
 1123:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_CRS
 1124:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_SPI2
 1125:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_SPI3
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 22
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 22
 
 
 1126:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USART2
@@ -1318,7 +1318,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
 1180:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1RSTR1     I2C2RST        LL_APB1_GRP1_ReleaseReset\n
 1181:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1RSTR1     USBRST         LL_APB1_GRP1_ReleaseReset\n
 1182:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1RSTR1     FDCANRST       LL_APB1_GRP1_ReleaseReset\n
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 23
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 23
 
 
 1183:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1RSTR1     PWRRST         LL_APB1_GRP1_ReleaseReset\n
@@ -1378,7 +1378,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
 1237:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1SMENR1     TIM3SMEN        LL_APB1_GRP1_EnableClockStopSleep\n
 1238:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1SMENR1     TIM4SMEN        LL_APB1_GRP1_EnableClockStopSleep\n
 1239:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1SMENR1     TIM5SMEN        LL_APB1_GRP1_EnableClockStopSleep\n
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 24
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 24
 
 
 1240:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1SMENR1     TIM6SMEN        LL_APB1_GRP1_EnableClockStopSleep\n
@@ -1438,7 +1438,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
 1294:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
 1295:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @brief  Enable APB1 peripheral clocks in Sleep and Stop modes
 1296:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @rmtoll APB1SMENR2     LPUART1SMEN     LL_APB1_GRP2_EnableClockStopSleep\n
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 25
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 25
 
 
 1297:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1SMENR2     I2C4SMEN        LL_APB1_GRP2_EnableClockStopSleep\n
@@ -1498,7 +1498,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
 1351:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_SPI3
 1352:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USART2
 1353:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USART3
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 26
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 26
 
 
 1354:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_UART4 (*)
@@ -1558,7 +1558,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
 1408:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB2ENR      TIM17EN       LL_APB2_GRP1_EnableClock\n
 1409:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB2ENR      TIM20EN       LL_APB2_GRP1_EnableClock\n
 1410:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB2ENR      SAI1EN        LL_APB2_GRP1_EnableClock\n
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 27
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 27
 
 
 1411:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB2ENR      HRTIM1EN      LL_APB2_GRP1_EnableClock
@@ -1618,7 +1618,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  918:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   /* Delay after an RCC peripheral clock enabling */
   68              		.loc 2 918 3 view .LVU13
   69 0016 9A6D     		ldr	r2, [r3, #88]
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 28
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 28
 
 
   70 0018 42F08052 		orr	r2, r2, #268435456
@@ -1678,7 +1678,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
   28:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /* Includes ------------------------------------------------------------------*/
   29:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #include "stm32g4xx.h"
   30:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 29
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 29
 
 
   31:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /** @addtogroup STM32G4xx_LL_Driver
@@ -1738,7 +1738,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
   85:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #endif /* PWR_SR2_PVMO3 */
   86:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #if defined(PWR_SR2_PVMO2)
   87:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_SR2_PVMO2                   PWR_SR2_PVMO2
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 30
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 30
 
 
   88:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #endif /* PWR_SR2_PVMO2 */
@@ -1798,7 +1798,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  142:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_PVDLEVEL_0                  (PWR_CR2_PLS_LEV0)  /* VPVD0 around 2.0 V */
  143:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_PVDLEVEL_1                  (PWR_CR2_PLS_LEV1)  /* VPVD1 around 2.2 V */
  144:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_PVDLEVEL_2                  (PWR_CR2_PLS_LEV2)  /* VPVD2 around 2.4 V */
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 31
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 31
 
 
  145:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_PVDLEVEL_3                  (PWR_CR2_PLS_LEV3)  /* VPVD3 around 2.5 V */
@@ -1858,7 +1858,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  199:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_GPIO_BIT_7                  ((uint32_t)0x00000080)
  200:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_GPIO_BIT_8                  ((uint32_t)0x00000100)
  201:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_GPIO_BIT_9                  ((uint32_t)0x00000200)
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 32
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 32
 
 
  202:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_GPIO_BIT_10                 ((uint32_t)0x00000400)
@@ -1918,7 +1918,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  256:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
  257:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
  258:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Switch the regulator from main mode to low-power mode
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 33
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 33
 
 
  259:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR1          LPR           LL_PWR_EnableLowPowerRunMode
@@ -1978,7 +1978,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  313:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR1          VOS           LL_PWR_SetRegulVoltageScaling
  314:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @param  VoltageScaling This parameter can be one of the following values:
  315:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_REGU_VOLTAGE_SCALE1
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 34
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 34
 
 
  316:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_REGU_VOLTAGE_SCALE2
@@ -2038,7 +2038,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  370:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
  371:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
  372:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Enable access to the backup domain
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 35
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 35
 
 
  373:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR1          DBP           LL_PWR_EnableBkUpAccess
@@ -2098,7 +2098,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  427:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_MODE_SHUTDOWN
  428:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
  429:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE uint32_t LL_PWR_GetPowerMode(void)
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 36
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 36
 
 
  430:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
@@ -2158,7 +2158,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  484:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   CLEAR_BIT(PWR->CR3, PWR_CR3_UCPD_DBDIS);
  485:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
  486:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 37
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 37
 
 
  487:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
@@ -2218,7 +2218,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  541:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
  542:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Check if VDDUSB supply is enabled
  543:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR2          USV           LL_PWR_IsEnabledVddUSB
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 38
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 38
 
 
  544:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval State of bit (1 or 0).
@@ -2278,7 +2278,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  598:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @param  PeriphVoltage This parameter can be one of the following values:
  599:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVM_VDDA_COMP     (*)
  600:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVM_VDDA_FASTDAC  (*)
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 39
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 39
 
 
  601:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVM_VDDA_ADC      
@@ -2338,7 +2338,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  655:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
  656:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
  657:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Configure the voltage threshold detected by the Power Voltage Detector
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 40
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 40
 
 
  658:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR2          PLS           LL_PWR_SetPVDLevel
@@ -2398,7 +2398,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  712:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
  713:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
  714:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Check if Power Voltage Detector is enabled
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 41
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 41
 
 
  715:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR2          PVDE          LL_PWR_IsEnabledPVD
@@ -2458,7 +2458,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  769:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR3          UCPD_DBDIS          LL_PWR_DisableDeadBatteryPD
  770:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval None
  771:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 42
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 42
 
 
  772:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE void LL_PWR_DisableDeadBatteryPD(void)
@@ -2518,7 +2518,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  134 000a 9A60     		str	r2, [r3, #8]
   45:Src/sys.c     **** }
  135              		.loc 1 45 1 view .LVU28
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 43
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 43
 
 
  136 000c 7047     		bx	lr
@@ -2578,7 +2578,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  186              		.loc 1 53 1 is_stmt 1 view -0
  187              		.cfi_startproc
  188              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 44
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 44
 
 
  189              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -2638,7 +2638,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  233              		.loc 1 63 3 view .LVU43
  234 001c 1A69     		ldr	r2, [r3, #16]
  235 001e 42F08002 		orr	r2, r2, #128
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 45
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 45
 
 
  236 0022 1A61     		str	r2, [r3, #16]
@@ -2698,7 +2698,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
   75:Src/sys.c     **** }
  277              		.loc 1 75 1 is_stmt 0 view .LVU55
  278 006c 7047     		bx	lr
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 46
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 46
 
 
  279              	.L16:
@@ -2758,7 +2758,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
   86:Src/sys.c     ****     (independently of compiler optimization behavior) */
   87:Src/sys.c     ****   __ISB();
  323              		.loc 1 87 3 is_stmt 1 view .LVU64
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 47
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 47
 
 
  324              	.LBB21:
@@ -2818,7 +2818,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
   52:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __NO_RETURN
   53:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __NO_RETURN                            __attribute__((__noreturn__))
   54:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 48
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 48
 
 
   55:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __USED
@@ -2878,7 +2878,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  109:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  110:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __ALIGNED
  111:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __ALIGNED(x)                           __attribute__((aligned(x)))
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 49
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 49
 
 
  112:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -2938,7 +2938,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  166:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_CONTROL_NS(void)
  167:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  168:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 50
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 50
 
 
  169:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -2998,7 +2998,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  223:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, apsr" : "=r" (result) );
  224:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
  225:Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 51
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 51
 
 
  226:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -3058,7 +3058,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  280:Drivers/CMSIS/Include/cmsis_gcc.h **** }
  281:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  282:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 52
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 52
 
 
  283:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
@@ -3118,7 +3118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  337:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
  338:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  339:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Main Stack Pointer (non-secure)
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 53
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 53
 
 
  340:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the non-secure Main Stack Pointer (MSP) when in secure state.
@@ -3178,7 +3178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  394:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current state of the non-secure priority mask bit from the Priority Mask Reg
  395:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Priority Mask value
  396:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 54
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 54
 
 
  397:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_PRIMASK_NS(void)
@@ -3238,7 +3238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  451:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  452:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsid f" : : : "memory");
  453:Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 55
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 55
 
 
  454:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -3298,7 +3298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  508:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  509:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  510:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 56
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 56
 
 
  511:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Base Priority with condition
@@ -3358,7 +3358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  565:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Fault Mask (non-secure)
  566:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the non-secure Fault Mask register when in secure state.
  567:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    faultMask  Fault Mask value to set
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 57
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 57
 
 
  568:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
@@ -3418,7 +3418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  622:Drivers/CMSIS/Include/cmsis_gcc.h ****   return result;
  623:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  624:Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 58
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 58
 
 
  625:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -3478,7 +3478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  679:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_MSPLIM(void)
  680:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  681:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (!(defined (__ARM_ARCH_8M_MAIN__ ) && (__ARM_ARCH_8M_MAIN__ == 1)) && \
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 59
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 59
 
 
  682:Drivers/CMSIS/Include/cmsis_gcc.h ****     (!defined (__ARM_FEATURE_CMSE) || (__ARM_FEATURE_CMSE < 3)))
@@ -3538,7 +3538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  736:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  737:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE  ) && (__ARM_FEATURE_CMSE   == 3))
  738:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 60
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 60
 
 
  739:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Main Stack Pointer Limit (non-secure)
@@ -3598,7 +3598,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  793:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  794:Drivers/CMSIS/Include/cmsis_gcc.h **** #if ((defined (__FPU_PRESENT) && (__FPU_PRESENT == 1U)) && \
  795:Drivers/CMSIS/Include/cmsis_gcc.h ****      (defined (__FPU_USED   ) && (__FPU_USED    == 1U))     )
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 61
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 61
 
 
  796:Drivers/CMSIS/Include/cmsis_gcc.h **** #if __has_builtin(__builtin_arm_set_fpscr)
@@ -3658,7 +3658,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  850:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __WFE()                             __ASM volatile ("wfe")
  851:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  852:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 62
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 62
 
 
  853:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
@@ -3718,7 +3718,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  356 0030 5361     		str	r3, [r2, #20]
   95:Src/sys.c     **** }
  357              		.loc 1 95 1 view .LVU75
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 63
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 63
 
 
  358 0032 5DF8044B 		ldr	r4, [sp], #4
@@ -3778,7 +3778,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  406              		.loc 4 140 27 view .LVU82
  407              	.LBB25:
  142:Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 64
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 64
 
 
  408              		.loc 4 142 3 view .LVU83
@@ -3838,7 +3838,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  451 004a 2B46     		mov	r3, r5
  452 004c 1A48     		ldr	r0, .L30+16
  453 004e FFF7FEFF 		bl	FLASH_Program_DoubleWord
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 65
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 65
 
 
  454              	.LVL15:
@@ -3898,7 +3898,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  498              		.loc 1 122 21 is_stmt 0 view .LVU102
  499 009a 7573     		strb	r5, [r6, #13]
  123:Src/sys.c     ****     p->driveState = STOP;
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 66
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 66
 
 
  500              		.loc 1 123 5 is_stmt 1 view .LVU103
@@ -3958,7 +3958,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  549              		.fpu fpv4-sp-d16
  551              	FLASH_LoadConfig:
  552              	.LVL24:
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 67
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 67
 
 
  553              	.LFB2026:
@@ -4018,7 +4018,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  595 001c FFF7FEFF 		bl	flashReadData
  596              	.LVL31:
  140:Src/sys.c     ****   p->config.Lq = *(float *)&u;
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 68
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 68
 
 
  597              		.loc 1 140 3 is_stmt 1 view .LVU128
@@ -4078,7 +4078,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  639 0042 C4F88000 		str	r0, [r4, #128]	@ float
  153:Src/sys.c     **** 
  154:Src/sys.c     ****   u = flashReadData(Address + 8 * 7);
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 69
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 69
 
 
  640              		.loc 1 154 3 is_stmt 1 view .LVU150
@@ -4138,7 +4138,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  686 0084 40F00708 		.word	134737984
  687 0088 48F00708 		.word	134737992
  688              		.cfi_endproc
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 70
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 70
 
 
  689              	.LFE2026:
@@ -4161,33 +4161,33 @@ ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 1
  707              		.file 19 "Inc/digitalFilters.h"
  708              		.file 20 "Inc/foc.h"
  709              		.file 21 "Inc/hall.h"
-ARM GAS  D:\apps\VSCode\data\tmp\cctJb43T.s 			page 71
+ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 71
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 sys.c
-D:\apps\VSCode\data\tmp\cctJb43T.s:18     .text.MX_SYS_Init:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cctJb43T.s:26     .text.MX_SYS_Init:0000000000000000 MX_SYS_Init
-D:\apps\VSCode\data\tmp\cctJb43T.s:106    .text.MX_SYS_Init:0000000000000038 $d
-D:\apps\VSCode\data\tmp\cctJb43T.s:112    .text.flashUnlock:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cctJb43T.s:119    .text.flashUnlock:0000000000000000 flashUnlock
-D:\apps\VSCode\data\tmp\cctJb43T.s:140    .text.flashUnlock:0000000000000010 $d
-D:\apps\VSCode\data\tmp\cctJb43T.s:146    .text.flashLock:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cctJb43T.s:153    .text.flashLock:0000000000000000 flashLock
-D:\apps\VSCode\data\tmp\cctJb43T.s:171    .text.flashLock:000000000000000c $d
-D:\apps\VSCode\data\tmp\cctJb43T.s:176    .text.flashReadData:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cctJb43T.s:183    .text.flashReadData:0000000000000000 flashReadData
-D:\apps\VSCode\data\tmp\cctJb43T.s:201    .text.FLASH_PageErase:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cctJb43T.s:208    .text.FLASH_PageErase:0000000000000000 FLASH_PageErase
-D:\apps\VSCode\data\tmp\cctJb43T.s:282    .text.FLASH_PageErase:0000000000000070 $d
-D:\apps\VSCode\data\tmp\cctJb43T.s:287    .text.FLASH_Program_DoubleWord:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cctJb43T.s:294    .text.FLASH_Program_DoubleWord:0000000000000000 FLASH_Program_DoubleWord
-D:\apps\VSCode\data\tmp\cctJb43T.s:366    .text.FLASH_Program_DoubleWord:0000000000000038 $d
-D:\apps\VSCode\data\tmp\cctJb43T.s:371    .text.FLASH_UpdateConfig:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cctJb43T.s:378    .text.FLASH_UpdateConfig:0000000000000000 FLASH_UpdateConfig
-D:\apps\VSCode\data\tmp\cctJb43T.s:529    .text.FLASH_UpdateConfig:00000000000000a8 $d
-D:\apps\VSCode\data\tmp\cctJb43T.s:544    .text.FLASH_LoadConfig:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cctJb43T.s:551    .text.FLASH_LoadConfig:0000000000000000 FLASH_LoadConfig
-D:\apps\VSCode\data\tmp\cctJb43T.s:678    .text.FLASH_LoadConfig:0000000000000064 $d
+D:\apps\VSCode\data\tmp\cc0KTqo4.s:18     .text.MX_SYS_Init:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cc0KTqo4.s:26     .text.MX_SYS_Init:0000000000000000 MX_SYS_Init
+D:\apps\VSCode\data\tmp\cc0KTqo4.s:106    .text.MX_SYS_Init:0000000000000038 $d
+D:\apps\VSCode\data\tmp\cc0KTqo4.s:112    .text.flashUnlock:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cc0KTqo4.s:119    .text.flashUnlock:0000000000000000 flashUnlock
+D:\apps\VSCode\data\tmp\cc0KTqo4.s:140    .text.flashUnlock:0000000000000010 $d
+D:\apps\VSCode\data\tmp\cc0KTqo4.s:146    .text.flashLock:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cc0KTqo4.s:153    .text.flashLock:0000000000000000 flashLock
+D:\apps\VSCode\data\tmp\cc0KTqo4.s:171    .text.flashLock:000000000000000c $d
+D:\apps\VSCode\data\tmp\cc0KTqo4.s:176    .text.flashReadData:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cc0KTqo4.s:183    .text.flashReadData:0000000000000000 flashReadData
+D:\apps\VSCode\data\tmp\cc0KTqo4.s:201    .text.FLASH_PageErase:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cc0KTqo4.s:208    .text.FLASH_PageErase:0000000000000000 FLASH_PageErase
+D:\apps\VSCode\data\tmp\cc0KTqo4.s:282    .text.FLASH_PageErase:0000000000000070 $d
+D:\apps\VSCode\data\tmp\cc0KTqo4.s:287    .text.FLASH_Program_DoubleWord:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cc0KTqo4.s:294    .text.FLASH_Program_DoubleWord:0000000000000000 FLASH_Program_DoubleWord
+D:\apps\VSCode\data\tmp\cc0KTqo4.s:366    .text.FLASH_Program_DoubleWord:0000000000000038 $d
+D:\apps\VSCode\data\tmp\cc0KTqo4.s:371    .text.FLASH_UpdateConfig:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cc0KTqo4.s:378    .text.FLASH_UpdateConfig:0000000000000000 FLASH_UpdateConfig
+D:\apps\VSCode\data\tmp\cc0KTqo4.s:529    .text.FLASH_UpdateConfig:00000000000000a8 $d
+D:\apps\VSCode\data\tmp\cc0KTqo4.s:544    .text.FLASH_LoadConfig:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cc0KTqo4.s:551    .text.FLASH_LoadConfig:0000000000000000 FLASH_LoadConfig
+D:\apps\VSCode\data\tmp\cc0KTqo4.s:678    .text.FLASH_LoadConfig:0000000000000064 $d
 
 NO UNDEFINED SYMBOLS

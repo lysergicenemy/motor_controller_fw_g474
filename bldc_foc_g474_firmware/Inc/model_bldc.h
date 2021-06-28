@@ -97,7 +97,7 @@ static inline void ModelBLDC_Calc(modelBLDC_t *p)
 
 	//напряжения в осях альфа,бета
 	p->usa = p->ua;
-	p->usb = 0.577350269f * p->ua + 1.154700538f * p->ub;
+	p->usb = _1DIV_SQRT3 * p->ua + _2DIV_SQRT3 * p->ub;
 
 	// Расчет синуса и косинуса угла ротора
 	p->cosTetaR = _IQtoF(utCosAbs(_IQ(p->tetaR))); //синус и косинус считаются с фиксированной точкой, т.к. флоатовские занимают тысячи тактов (видимо, какая-то медленная реализация, не использующая аппаратную поддержку).
@@ -144,13 +144,13 @@ static inline void ModelBLDC_Calc(modelBLDC_t *p)
 
 	d_omega = p->t / p->j * (p->torque - p->loadTmp); //приращение скорости
 
-	if ((fabs(d_omega) > fabs(p->omega)) && (fabs(p->torque) < p->load))
+	if ((fabsf(d_omega) > fabsf(p->omega)) && (fabsf(p->torque) < p->load))
 	{
 		p->omega = 0.0f;
 		d_omega = 0.0f;
 	}
 	p->omega = p->omega + d_omega;		 //скорость
-	p->omega_rpm = p->omega * 9.5492965; // coef: (1/(2*pi)) * 60
+	p->omega_rpm = p->omega * 9.5492965f; // coef: (1/(2*pi)) * 60
 
 	p->power = p->omega * p->torque;
 

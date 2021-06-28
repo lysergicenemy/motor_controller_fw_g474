@@ -671,14 +671,14 @@ static inline void CMTN_run(volatile cmtn_t *obj)
 /*********************************************************************
  * Ramp func
  ****************************************************************** */
-static inline void ramp_calc(volatile float *in, volatile float *out, volatile float rampRate, volatile float Ts)
+static inline void ramp_calc(volatile float *out, float in, float rampRate, float Ts)
 {
     float delta = Ts * rampRate;
-    if (*out < (*in - delta)) // add some hysteresys
+    if (*out < (in - delta)) // add some hysteresys
     {
         *out += delta;
     }
-    if (*out > (*in + delta))
+    if (*out > (in + delta))
     {
         *out -= delta;
     }
@@ -961,9 +961,10 @@ static inline void Foc_Init(foc_t *p)
      *  wcc is cutoff frequency of controller
      *  RULE: if current sampling 1 times for 1 PWM period use wcc 5%. Also try from 0.025 to 0.1
      */
-    float wcc = (0.065f * (1.f / p->config.tS)) * M_2PI;
+    float wcc = (0.055f * (1.f / p->config.tS)) * M_2PI;
     p->pi_id.Kp = p->pi_iq.Kp = (p->config.Ld * wcc);
     p->pi_id.Ki = p->pi_iq.Ki = p->config.Rs * wcc * p->config.tS;
+    //p->pi_id.Ki = p->pi_iq.Ki = (p->config.Rs * p->config.tS * p->pi_id.Kp) / p->config.Ld;
     p->pi_id.Kc = 1.f / p->pi_id.Kp;
     p->pi_iq.Kc = 1.f / p->pi_iq.Kp;
     /* Init speed PI controller */

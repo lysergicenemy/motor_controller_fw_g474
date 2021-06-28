@@ -91,11 +91,11 @@ uint16_t utils_median_filter_uint16_run(uint16_t *buffer,
 #define SAT(A, Pos, Neg) (((A) > (Pos)) ? (Pos) : (((A) < (Neg)) ? (Neg) : (A)))
 
 // Constants
-#define ONE_BY_SQRT3 (0.57735026919f)
-#define ONE_BY_SQRT2 (0.707106781186f)
-#define TWO_BY_SQRT3 (2.0f * 0.57735026919f)
-#define SQRT3_BY_2 (0.86602540378f)
-#define SQRT2 (1.414213562f)
+#define ONE_BY_SQRT3 (0.57735026919f)			 // 1 / sqrt(3)
+#define ONE_BY_SQRT2 (0.707106781186f)			 // 1 / sqrt(2)
+#define TWO_BY_SQRT3 (2.0f * 0.57735026919f)	 // (1 / sqrt(3)) * 2
+#define SQRT3_BY_2 (0.86602540378f)				 // sqrt(3) / 2
+#define SQRT2 (1.414213562f)					 // sqrt(2)
 #define COS_30_DEG (0.86602540378f)
 #define SIN_30_DEG (0.5f)
 #define COS_MINUS_30_DEG (0.86602540378f)
