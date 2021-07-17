@@ -116,8 +116,8 @@ static inline void datalogCalcUART(dataLogVars_t *p)
     p->channel3 = p->buffChannel3[p->frameCntr];
     p->channel4 = p->buffChannel4[p->frameCntr];
     /* Packing data for transmit */
-    p->txData[0] = 0x45; // 'E' 0100 0101
-    p->txData[1] = 0x5A; // 'Z'
+    p->txData[0] = 0x45; // frame start byte 1
+    p->txData[1] = 0x5A; // frame start byte 2
     p->txData[2] = *((uint8_t *)&p->channel1);
     p->txData[3] = *((uint8_t *)&p->channel1 + 1);
     p->txData[4] = *((uint8_t *)&p->channel1 + 2);

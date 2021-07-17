@@ -75,19 +75,18 @@ void adc_start_bldc(void)
 
 void adc_start(void)
 {
-  /* Disable ADC deep power down (enabled by default after reset state) */
-  LL_ADC_DisableDeepPowerDown(ADC1);
-  /* Enable ADC internal voltage regulator */
-  LL_ADC_EnableInternalRegulator(ADC1);
-  LL_mDelay(1);
-  /* Run ADC self calibration */
   LL_ADC_StartCalibration(ADC1, LL_ADC_SINGLE_ENDED);
   /* Poll for ADC effectively calibrated */
   while (LL_ADC_IsCalibrationOnGoing(ADC1) != 0)
   {
   }
   /* Delay between ADC end of calibration and ADC enable.                   */
-  LL_mDelay(1);
+  uint32_t wait_loop_index;
+  wait_loop_index = (LL_ADC_DELAY_CALIB_ENABLE_ADC_CYCLES * 2);
+  while(wait_loop_index != 0)
+  {
+    wait_loop_index--;
+  }
   /* Enable ADC */
   LL_ADC_Enable(ADC1);
   /* Poll for ADC ready to convert */
@@ -97,13 +96,7 @@ void adc_start(void)
   LL_ADC_ClearFlag_ADRDY(ADC1);
   /* Enable end of sequence convertion ISR */
   LL_ADC_EnableIT_JEOS(ADC1);
-  LL_ADC_INJ_StartConversion(ADC1);
 
-  /* Disable ADC deep power down (enabled by default after reset state) */
-  LL_ADC_DisableDeepPowerDown(ADC2);
-  /* Enable ADC internal voltage regulator */
-  LL_ADC_EnableInternalRegulator(ADC2);
-  LL_mDelay(1);
   /* Run ADC self calibration */
   LL_ADC_StartCalibration(ADC2, LL_ADC_SINGLE_ENDED);
   /* Poll for ADC effectively calibrated */
@@ -111,7 +104,11 @@ void adc_start(void)
   {
   }
   /* Delay between ADC end of calibration and ADC enable.                   */
-  LL_mDelay(1);
+  wait_loop_index = (LL_ADC_DELAY_CALIB_ENABLE_ADC_CYCLES * 2);
+  while(wait_loop_index != 0)
+  {
+    wait_loop_index--;
+  }
   /* Enable ADC */
   LL_ADC_Enable(ADC2);
   /* Poll for ADC ready to convert */
@@ -122,7 +119,8 @@ void adc_start(void)
   /* Enable end of convertion ISR */
   //LL_ADC_EnableIT_JEOC(ADC2);
   /* auto-inject mode convertions will start after ADSTART->CR (not JADSTART) */
-  LL_ADC_INJ_StartConversion(ADC2);//LL_ADC_REG_StartConversion(ADC2);
+  LL_ADC_INJ_StartConversion(ADC1);
+  LL_ADC_INJ_StartConversion(ADC2);
 }
 /* USER CODE END 0 */
 
@@ -142,9 +140,9 @@ void MX_ADC1_Init(void)
   LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_GPIOA);
   LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_GPIOB);
   /**ADC1 GPIO Configuration  
-  PA0   ------> ADC1_IN1 - Ia
-  PA1   ------> ADC1_IN2 - Ib
-  PA2   ------> ADC1_IN3 - Ic
+  PA0   ------> ADC1_IN1 - Ib
+  PA1   ------> ADC1_IN2 - Ic
+  PA2   ------> ADC1_IN3 - Ia
   PA3   ------> ADC1_IN4 - Vdc
   */
   GPIO_InitStruct.Pin = I_PHASE_A_Pin;
@@ -189,36 +187,43 @@ void MX_ADC1_Init(void)
   LL_ADC_DisableIT_EOS(ADC1);
   LL_ADC_DisableDeepPowerDown(ADC1);
   LL_ADC_EnableInternalRegulator(ADC1);
+  uint32_t wait_loop_index;
+  wait_loop_index = ((LL_ADC_DELAY_INTERNAL_REGUL_STAB_US * (SystemCoreClock / (100000 * 2))) / 10);
+  while(wait_loop_index != 0)
+  {
+    wait_loop_index--;
+  }
   ADC_CommonInitStruct.CommonClock = LL_ADC_CLOCK_ASYNC_DIV2;
   ADC_CommonInitStruct.Multimode = LL_ADC_MULTI_INDEPENDENT;
   LL_ADC_CommonInit(__LL_ADC_COMMON_INSTANCE(ADC1), &ADC_CommonInitStruct);
   ADC_INJ_InitStruct.TriggerSource = LL_ADC_INJ_TRIG_EXT_HRTIM_TRG2;
-  ADC_INJ_InitStruct.SequencerLength = LL_ADC_INJ_SEQ_SCAN_ENABLE_3RANKS; //LL_ADC_INJ_SEQ_SCAN_ENABLE_4RANKS;
+  ADC_INJ_InitStruct.SequencerLength = LL_ADC_INJ_SEQ_SCAN_ENABLE_4RANKS; //LL_ADC_INJ_SEQ_SCAN_ENABLE_4RANKS;
   ADC_INJ_InitStruct.SequencerDiscont = LL_ADC_INJ_SEQ_DISCONT_DISABLE;//LL_ADC_INJ_SEQ_DISCONT_1RANK;
   ADC_INJ_InitStruct.TrigAuto = LL_ADC_INJ_TRIG_INDEPENDENT;
   LL_ADC_INJ_Init(ADC1, &ADC_INJ_InitStruct);
   LL_ADC_INJ_SetQueueMode(ADC1, LL_ADC_INJ_QUEUE_DISABLE);
   LL_ADC_SetOverSamplingScope(ADC1, LL_ADC_OVS_DISABLE);
   LL_ADC_INJ_SetTriggerEdge(ADC1, LL_ADC_INJ_TRIG_EXT_RISING);
-  /** Configure Injected Channel 
+  /** Configure Injected Channel: I_B
   */
   LL_ADC_SetChannelSamplingTime(ADC1, LL_ADC_CHANNEL_1, LL_ADC_SAMPLINGTIME_2CYCLES_5);
   LL_ADC_SetChannelSingleDiff(ADC1, LL_ADC_CHANNEL_1, LL_ADC_SINGLE_ENDED);
   LL_ADC_INJ_SetSequencerRanks(ADC1, LL_ADC_INJ_RANK_1, LL_ADC_CHANNEL_1);
-  /** Configure Injected Channel 
+  /** Configure Injected Channel: I_C
   */
-  // LL_ADC_SetChannelSamplingTime(ADC1, LL_ADC_CHANNEL_2, LL_ADC_SAMPLINGTIME_2CYCLES_5);
-  // LL_ADC_SetChannelSingleDiff(ADC1, LL_ADC_CHANNEL_2, LL_ADC_SINGLE_ENDED);
-  // LL_ADC_INJ_SetSequencerRanks(ADC1, LL_ADC_INJ_RANK_2, LL_ADC_CHANNEL_2);
-
+  LL_ADC_SetChannelSamplingTime(ADC1, LL_ADC_CHANNEL_2, LL_ADC_SAMPLINGTIME_2CYCLES_5);
+  LL_ADC_SetChannelSingleDiff(ADC1, LL_ADC_CHANNEL_2, LL_ADC_SINGLE_ENDED);
+  LL_ADC_INJ_SetSequencerRanks(ADC1, LL_ADC_INJ_RANK_2, LL_ADC_CHANNEL_2);
+  /** Configure Injected Channel: I_A
+  */
   LL_ADC_SetChannelSamplingTime(ADC1, LL_ADC_CHANNEL_3, LL_ADC_SAMPLINGTIME_2CYCLES_5);
   LL_ADC_SetChannelSingleDiff(ADC1, LL_ADC_CHANNEL_3, LL_ADC_SINGLE_ENDED);
-  LL_ADC_INJ_SetSequencerRanks(ADC1, LL_ADC_INJ_RANK_2, LL_ADC_CHANNEL_3);
-  /** Configure Injected Channel 
+  LL_ADC_INJ_SetSequencerRanks(ADC1, LL_ADC_INJ_RANK_3, LL_ADC_CHANNEL_3);
+  /** Configure Injected Channel: V_DC
   */
   LL_ADC_SetChannelSamplingTime(ADC1, LL_ADC_CHANNEL_4, LL_ADC_SAMPLINGTIME_2CYCLES_5);
   LL_ADC_SetChannelSingleDiff(ADC1, LL_ADC_CHANNEL_4, LL_ADC_SINGLE_ENDED);
-  LL_ADC_INJ_SetSequencerRanks(ADC1, LL_ADC_INJ_RANK_3, LL_ADC_CHANNEL_4);
+  LL_ADC_INJ_SetSequencerRanks(ADC1, LL_ADC_INJ_RANK_4, LL_ADC_CHANNEL_4);
 }
 /* ADC2 init function */
 void MX_ADC2_Init(void)
@@ -282,8 +287,14 @@ void MX_ADC2_Init(void)
   LL_ADC_DisableIT_EOS(ADC2);
   LL_ADC_DisableDeepPowerDown(ADC2);
   LL_ADC_EnableInternalRegulator(ADC2);
-  ADC_INJ_InitStruct.TriggerSource = LL_ADC_INJ_TRIG_SOFTWARE;
-  ADC_INJ_InitStruct.SequencerLength = LL_ADC_INJ_SEQ_SCAN_DISABLE;
+  uint32_t wait_loop_index;
+  wait_loop_index = ((LL_ADC_DELAY_INTERNAL_REGUL_STAB_US * (SystemCoreClock / (100000 * 2))) / 10);
+  while(wait_loop_index != 0)
+  {
+    wait_loop_index--;
+  }
+  ADC_INJ_InitStruct.TriggerSource = LL_ADC_INJ_TRIG_EXT_HRTIM_TRG2;
+  ADC_INJ_InitStruct.SequencerLength = LL_ADC_INJ_SEQ_SCAN_ENABLE_4RANKS;
   ADC_INJ_InitStruct.SequencerDiscont = LL_ADC_INJ_SEQ_DISCONT_DISABLE;
   ADC_INJ_InitStruct.TrigAuto = LL_ADC_INJ_TRIG_FROM_GRP_REGULAR;
   LL_ADC_INJ_Init(ADC2, &ADC_INJ_InitStruct);
@@ -292,68 +303,26 @@ void MX_ADC2_Init(void)
   LL_ADC_ConfigOverSamplingRatioShift(ADC2, LL_ADC_OVS_RATIO_4, LL_ADC_OVS_SHIFT_RIGHT_2);
   LL_ADC_DisableIT_JEOC(ADC2);
   LL_ADC_DisableIT_JEOS(ADC2);
-  /** Configure Injected Channel 
+  /** Configure Injected Channel: V_A
+  */
+  LL_ADC_SetChannelSamplingTime(ADC2, LL_ADC_CHANNEL_5, LL_ADC_SAMPLINGTIME_2CYCLES_5);
+  LL_ADC_SetChannelSingleDiff(ADC2, LL_ADC_CHANNEL_5, LL_ADC_SINGLE_ENDED);
+  LL_ADC_INJ_SetSequencerRanks(ADC2, LL_ADC_INJ_RANK_1, LL_ADC_CHANNEL_5);
+  /** Configure Injected Channel: V_B
+  */
+  LL_ADC_SetChannelSamplingTime(ADC2, LL_ADC_CHANNEL_4, LL_ADC_SAMPLINGTIME_2CYCLES_5);
+  LL_ADC_SetChannelSingleDiff(ADC2, LL_ADC_CHANNEL_4, LL_ADC_SINGLE_ENDED);
+  LL_ADC_INJ_SetSequencerRanks(ADC2, LL_ADC_INJ_RANK_2, LL_ADC_CHANNEL_4);
+  /** Configure Injected Channel: V_C
+  */
+  LL_ADC_SetChannelSamplingTime(ADC2, LL_ADC_CHANNEL_3, LL_ADC_SAMPLINGTIME_2CYCLES_5);
+  LL_ADC_SetChannelSingleDiff(ADC2, LL_ADC_CHANNEL_3, LL_ADC_SINGLE_ENDED);
+  LL_ADC_INJ_SetSequencerRanks(ADC2, LL_ADC_INJ_RANK_3, LL_ADC_CHANNEL_3);
+  /** Configure Injected Channel: TEMP_PCB
   */
   LL_ADC_SetChannelSamplingTime(ADC2, LL_ADC_CHANNEL_13, LL_ADC_SAMPLINGTIME_2CYCLES_5);
   LL_ADC_SetChannelSingleDiff(ADC2, LL_ADC_CHANNEL_13, LL_ADC_SINGLE_ENDED);
-  LL_ADC_INJ_SetSequencerRanks(ADC2, LL_ADC_INJ_RANK_1, LL_ADC_CHANNEL_13);
-
-}
-/* ADC3 init function */
-void MX_ADC3_Init(void)
-{
-  LL_ADC_InitTypeDef ADC_InitStruct = {0};
-  LL_ADC_REG_InitTypeDef ADC_REG_InitStruct = {0};
-  LL_ADC_CommonInitTypeDef ADC_CommonInitStruct = {0};
-  LL_ADC_INJ_InitTypeDef ADC_INJ_InitStruct = {0};
-
-  LL_GPIO_InitTypeDef GPIO_InitStruct = {0};
-
-  /* Peripheral clock enable */
-  LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_ADC345);
-  
-  LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_GPIOB);
-  /**ADC3 GPIO Configuration  
-  PB1   ------> ADC3_IN1 
-  */
-  GPIO_InitStruct.Pin = TEMP_SENSOR_Pin;
-  GPIO_InitStruct.Mode = LL_GPIO_MODE_ANALOG;
-  GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
-  LL_GPIO_Init(TEMP_SENSOR_GPIO_Port, &GPIO_InitStruct);
-
-  /** Common config 
-  */
-  ADC_InitStruct.Resolution = LL_ADC_RESOLUTION_12B;
-  ADC_InitStruct.DataAlignment = LL_ADC_DATA_ALIGN_RIGHT;
-  ADC_InitStruct.LowPowerMode = LL_ADC_LP_MODE_NONE;
-  LL_ADC_Init(ADC3, &ADC_InitStruct);
-  ADC_REG_InitStruct.TriggerSource = LL_ADC_REG_TRIG_SOFTWARE;
-  ADC_REG_InitStruct.SequencerLength = LL_ADC_REG_SEQ_SCAN_DISABLE;
-  ADC_REG_InitStruct.SequencerDiscont = LL_ADC_REG_SEQ_DISCONT_DISABLE;
-  ADC_REG_InitStruct.ContinuousMode = LL_ADC_REG_CONV_SINGLE;
-  ADC_REG_InitStruct.DMATransfer = LL_ADC_REG_DMA_TRANSFER_NONE;
-  ADC_REG_InitStruct.Overrun = LL_ADC_REG_OVR_DATA_PRESERVED;
-  LL_ADC_REG_Init(ADC3, &ADC_REG_InitStruct);
-  LL_ADC_SetGainCompensation(ADC3, 0);
-  LL_ADC_SetOverSamplingScope(ADC3, LL_ADC_OVS_DISABLE);
-  LL_ADC_DisableIT_EOC(ADC3);
-  LL_ADC_DisableIT_EOS(ADC3);
-  LL_ADC_DisableDeepPowerDown(ADC3);
-  LL_ADC_EnableInternalRegulator(ADC3);
-  ADC_CommonInitStruct.CommonClock = LL_ADC_CLOCK_ASYNC_DIV2;
-  ADC_CommonInitStruct.Multimode = LL_ADC_MULTI_INDEPENDENT;
-  LL_ADC_CommonInit(__LL_ADC_COMMON_INSTANCE(ADC3), &ADC_CommonInitStruct);
-  ADC_INJ_InitStruct.SequencerDiscont = LL_ADC_INJ_SEQ_DISCONT_DISABLE;
-  ADC_INJ_InitStruct.TrigAuto = LL_ADC_INJ_TRIG_INDEPENDENT;
-  LL_ADC_INJ_Init(ADC3, &ADC_INJ_InitStruct);
-  LL_ADC_SetOverSamplingScope(ADC3, LL_ADC_OVS_DISABLE);
-  LL_ADC_DisableIT_JEOC(ADC3);
-  LL_ADC_DisableIT_JEOS(ADC3);
-  /** Configure Regular Channel 
-  */
-  LL_ADC_REG_SetSequencerRanks(ADC3, LL_ADC_REG_RANK_1, LL_ADC_CHANNEL_1);
-  LL_ADC_SetChannelSamplingTime(ADC3, LL_ADC_CHANNEL_1, LL_ADC_SAMPLINGTIME_2CYCLES_5);
-  LL_ADC_SetChannelSingleDiff(ADC3, LL_ADC_CHANNEL_1, LL_ADC_SINGLE_ENDED);
+  LL_ADC_INJ_SetSequencerRanks(ADC2, LL_ADC_INJ_RANK_4, LL_ADC_CHANNEL_13);
 
 }
 

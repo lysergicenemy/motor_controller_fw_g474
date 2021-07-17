@@ -45,6 +45,8 @@ extern "C" {
 #include "stm32g4xx.h"
 #include "stm32g4xx_ll_gpio.h"
 #include "stm32g4xx_ll_cordic.h"
+#include "stm32g4xx_ll_dac.h"
+#include "stm32g4xx_ll_comp.h"
 
 #if defined(USE_FULL_ASSERT)
 #include "stm32_assert.h"
@@ -62,6 +64,7 @@ extern "C" {
 #include "stm32g4xx_it.h"
 #include "ntc.h"              // Include header for NTC object
 #include "hall.h"
+#include "test.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -109,8 +112,6 @@ void Error_Handler(void);
 #define I_INPUT_GPIO_Port GPIOB
 #define TEMP_SENSOR_Pin LL_GPIO_PIN_5
 #define TEMP_SENSOR_GPIO_Port GPIOA
-#define OCP_Pin LL_GPIO_PIN_11
-#define OCP_GPIO_Port GPIOB
 #define PWM_BH_Pin LL_GPIO_PIN_12
 #define PWM_BH_GPIO_Port GPIOB
 #define PWM_BL_Pin LL_GPIO_PIN_13
@@ -141,6 +142,12 @@ void Error_Handler(void);
 #define SPEED_PWM_GPIO_Port GPIOB
 #define DIR_Pin LL_GPIO_PIN_4
 #define DIR_GPIO_Port GPIOA
+#define CMPR_IA_Pin LL_GPIO_PIN_0
+#define CMPR_IA_GPIO_Port GPIOB
+#define CMPR_IB_Pin LL_GPIO_PIN_1
+#define CMPR_IB_GPIO_Port GPIOB
+#define CMPR_IC_Pin LL_GPIO_PIN_11
+#define CMPR_IC_GPIO_Port GPIOB
 
 #ifndef NVIC_PRIORITYGROUP_0
 #define NVIC_PRIORITYGROUP_0         ((uint32_t)0x00000007) /*!< 0 bit  for pre-emption priority,

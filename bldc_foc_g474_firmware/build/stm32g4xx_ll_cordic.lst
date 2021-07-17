@@ -1,4 +1,4 @@
-ARM GAS  D:\apps\VSCode\data\tmp\cc1kkstb.s 			page 1
+ARM GAS  D:\apps\VSCode\data\tmp\cc5SFtYW.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc1kkstb.s 			page 1
   27:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c **** #define assert_param(expr) ((void)0U)
   28:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c **** #endif /* USE_FULL_ASSERT */
   29:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c **** 
-ARM GAS  D:\apps\VSCode\data\tmp\cc1kkstb.s 			page 2
+ARM GAS  D:\apps\VSCode\data\tmp\cc5SFtYW.s 			page 2
 
 
   30:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c **** /** @addtogroup STM32G4xx_LL_Driver
@@ -118,7 +118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc1kkstb.s 			page 1
   72:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c ****     LL_AHB1_GRP1_ForceReset(LL_AHB1_GRP1_PERIPH_CORDIC);
   73:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c **** 
   74:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c ****     /* Release CORDIC reset */
-ARM GAS  D:\apps\VSCode\data\tmp\cc1kkstb.s 			page 3
+ARM GAS  D:\apps\VSCode\data\tmp\cc5SFtYW.s 			page 3
 
 
   75:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c ****     LL_AHB1_GRP1_ReleaseReset(LL_AHB1_GRP1_PERIPH_CORDIC);
@@ -178,7 +178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc1kkstb.s 			page 1
   33:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *
   34:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   ******************************************************************************
   35:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\cc1kkstb.s 			page 4
+ARM GAS  D:\apps\VSCode\data\tmp\cc5SFtYW.s 			page 4
 
 
   36:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
@@ -238,7 +238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc1kkstb.s 			page 1
   90:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_ALL            0xFFFFFFFFU
   91:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_GPIOA          RCC_AHB2ENR_GPIOAEN
   92:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_GPIOB          RCC_AHB2ENR_GPIOBEN
-ARM GAS  D:\apps\VSCode\data\tmp\cc1kkstb.s 			page 5
+ARM GAS  D:\apps\VSCode\data\tmp\cc5SFtYW.s 			page 5
 
 
   93:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_GPIOC          RCC_AHB2ENR_GPIOCEN
@@ -298,7 +298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc1kkstb.s 			page 1
  147:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_RTCAPB         RCC_APB1ENR1_RTCAPBEN
  148:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_WWDG           RCC_APB1ENR1_WWDGEN
  149:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_SPI2           RCC_APB1ENR1_SPI2EN
-ARM GAS  D:\apps\VSCode\data\tmp\cc1kkstb.s 			page 6
+ARM GAS  D:\apps\VSCode\data\tmp\cc5SFtYW.s 			page 6
 
 
  150:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_SPI3           RCC_APB1ENR1_SPI3EN
@@ -358,7 +358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc1kkstb.s 			page 1
  204:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB2_GRP1_PERIPH_SAI1           RCC_APB2ENR_SAI1EN
  205:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #if defined(HRTIM1)
  206:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB2_GRP1_PERIPH_HRTIM1         RCC_APB2ENR_HRTIM1EN
-ARM GAS  D:\apps\VSCode\data\tmp\cc1kkstb.s 			page 7
+ARM GAS  D:\apps\VSCode\data\tmp\cc5SFtYW.s 			page 7
 
 
  207:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #endif /* HRTIM1 */
@@ -418,7 +418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc1kkstb.s 			page 1
  261:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1ENR      FLASHEN       LL_AHB1_GRP1_IsEnabledClock\n
  262:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1ENR      CRCEN         LL_AHB1_GRP1_IsEnabledClock
  263:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
-ARM GAS  D:\apps\VSCode\data\tmp\cc1kkstb.s 			page 8
+ARM GAS  D:\apps\VSCode\data\tmp\cc5SFtYW.s 			page 8
 
 
  264:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA1
@@ -478,7 +478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc1kkstb.s 			page 1
  318:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_FLASH
  319:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CRC
  320:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval None
-ARM GAS  D:\apps\VSCode\data\tmp\cc1kkstb.s 			page 9
+ARM GAS  D:\apps\VSCode\data\tmp\cc5SFtYW.s 			page 9
 
 
  321:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
@@ -538,7 +538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc1kkstb.s 			page 1
   77 001e 0020     		movs	r0, #0
   78              	.LVL4:
   64:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c **** 
-ARM GAS  D:\apps\VSCode\data\tmp\cc1kkstb.s 			page 10
+ARM GAS  D:\apps\VSCode\data\tmp\cc5SFtYW.s 			page 10
 
 
   79              		.loc 1 64 15 view .LVU16
@@ -557,13 +557,13 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc1kkstb.s 			page 1
   93              		.file 6 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h"
   94              		.file 7 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h"
   95              		.file 8 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h"
-ARM GAS  D:\apps\VSCode\data\tmp\cc1kkstb.s 			page 11
+ARM GAS  D:\apps\VSCode\data\tmp\cc5SFtYW.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32g4xx_ll_cordic.c
-D:\apps\VSCode\data\tmp\cc1kkstb.s:18     .text.LL_CORDIC_DeInit:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cc1kkstb.s:26     .text.LL_CORDIC_DeInit:0000000000000000 LL_CORDIC_DeInit
-D:\apps\VSCode\data\tmp\cc1kkstb.s:84     .text.LL_CORDIC_DeInit:0000000000000024 $d
+D:\apps\VSCode\data\tmp\cc5SFtYW.s:18     .text.LL_CORDIC_DeInit:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cc5SFtYW.s:26     .text.LL_CORDIC_DeInit:0000000000000000 LL_CORDIC_DeInit
+D:\apps\VSCode\data\tmp\cc5SFtYW.s:84     .text.LL_CORDIC_DeInit:0000000000000024 $d
 
 NO UNDEFINED SYMBOLS

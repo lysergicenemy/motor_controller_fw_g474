@@ -1,4 +1,4 @@
-ARM GAS  D:\apps\VSCode\data\tmp\cczGFvA7.s 			page 1
+ARM GAS  D:\apps\VSCode\data\tmp\ccx3d3ee.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cczGFvA7.s 			page 1
   28:Src/system_stm32g4xx.c ****   *        System Clock source                    | HSI
   29:Src/system_stm32g4xx.c ****   *-----------------------------------------------------------------------------
   30:Src/system_stm32g4xx.c ****   *        SYSCLK(Hz)                             | 16000000
-ARM GAS  D:\apps\VSCode\data\tmp\cczGFvA7.s 			page 2
+ARM GAS  D:\apps\VSCode\data\tmp\ccx3d3ee.s 			page 2
 
 
   31:Src/system_stm32g4xx.c ****   *-----------------------------------------------------------------------------
@@ -118,7 +118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cczGFvA7.s 			page 1
   85:Src/system_stm32g4xx.c **** #if !defined  (HSI_VALUE)
   86:Src/system_stm32g4xx.c ****   #define HSI_VALUE    16000000U /*!< Value of the Internal oscillator in Hz*/
   87:Src/system_stm32g4xx.c **** #endif /* HSI_VALUE */
-ARM GAS  D:\apps\VSCode\data\tmp\cczGFvA7.s 			page 3
+ARM GAS  D:\apps\VSCode\data\tmp\ccx3d3ee.s 			page 3
 
 
   88:Src/system_stm32g4xx.c **** /**
@@ -178,7 +178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cczGFvA7.s 			page 1
  142:Src/system_stm32g4xx.c **** 
  143:Src/system_stm32g4xx.c **** /** @addtogroup STM32G4xx_System_Private_FunctionPrototypes
  144:Src/system_stm32g4xx.c ****   * @{
-ARM GAS  D:\apps\VSCode\data\tmp\cczGFvA7.s 			page 4
+ARM GAS  D:\apps\VSCode\data\tmp\ccx3d3ee.s 			page 4
 
 
  145:Src/system_stm32g4xx.c ****   */
@@ -238,7 +238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cczGFvA7.s 			page 1
   54              		.align	1
   55              		.global	SystemCoreClockUpdate
   56              		.syntax unified
-ARM GAS  D:\apps\VSCode\data\tmp\cczGFvA7.s 			page 5
+ARM GAS  D:\apps\VSCode\data\tmp\ccx3d3ee.s 			page 5
 
 
   57              		.thumb
@@ -298,7 +298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cczGFvA7.s 			page 1
   69              		.loc 1 217 3 view .LVU8
   70              		.loc 1 217 14 is_stmt 0 view .LVU9
   71 0000 1E4B     		ldr	r3, .L12
-ARM GAS  D:\apps\VSCode\data\tmp\cczGFvA7.s 			page 6
+ARM GAS  D:\apps\VSCode\data\tmp\ccx3d3ee.s 			page 6
 
 
   72 0002 9B68     		ldr	r3, [r3, #8]
@@ -358,7 +358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cczGFvA7.s 			page 1
   92              	.LVL0:
  252:Src/system_stm32g4xx.c ****   /* HCLK clock frequency */
  253:Src/system_stm32g4xx.c ****   SystemCoreClock >>= tmp;
-ARM GAS  D:\apps\VSCode\data\tmp\cczGFvA7.s 			page 7
+ARM GAS  D:\apps\VSCode\data\tmp\ccx3d3ee.s 			page 7
 
 
   93              		.loc 1 253 3 is_stmt 1 view .LVU16
@@ -418,7 +418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cczGFvA7.s 			page 1
  133              	.LVL3:
  233:Src/system_stm32g4xx.c ****       {
  134              		.loc 1 233 7 is_stmt 1 view .LVU32
-ARM GAS  D:\apps\VSCode\data\tmp\cczGFvA7.s 			page 8
+ARM GAS  D:\apps\VSCode\data\tmp\ccx3d3ee.s 			page 8
 
 
  233:Src/system_stm32g4xx.c ****       {
@@ -478,7 +478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cczGFvA7.s 			page 1
  172              		.loc 1 243 23 view .LVU49
  173 0070 1360     		str	r3, [r2]
  244:Src/system_stm32g4xx.c **** 
-ARM GAS  D:\apps\VSCode\data\tmp\cczGFvA7.s 			page 9
+ARM GAS  D:\apps\VSCode\data\tmp\ccx3d3ee.s 			page 9
 
 
  174              		.loc 1 244 7 is_stmt 1 view .LVU50
@@ -538,7 +538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cczGFvA7.s 			page 1
  229 000f 09       		.byte	9
  230              		.section	.rodata.APBPrescTable,"a"
  231              		.align	2
-ARM GAS  D:\apps\VSCode\data\tmp\cczGFvA7.s 			page 10
+ARM GAS  D:\apps\VSCode\data\tmp\ccx3d3ee.s 			page 10
 
 
  234              	APBPrescTable:
@@ -557,22 +557,22 @@ ARM GAS  D:\apps\VSCode\data\tmp\cczGFvA7.s 			page 1
  247              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
  248              		.file 5 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h"
  249              		.file 6 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h"
-ARM GAS  D:\apps\VSCode\data\tmp\cczGFvA7.s 			page 11
+ARM GAS  D:\apps\VSCode\data\tmp\ccx3d3ee.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 system_stm32g4xx.c
-D:\apps\VSCode\data\tmp\cczGFvA7.s:18     .text.SystemInit:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cczGFvA7.s:26     .text.SystemInit:0000000000000000 SystemInit
-D:\apps\VSCode\data\tmp\cczGFvA7.s:49     .text.SystemInit:0000000000000018 $d
-D:\apps\VSCode\data\tmp\cczGFvA7.s:54     .text.SystemCoreClockUpdate:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cczGFvA7.s:61     .text.SystemCoreClockUpdate:0000000000000000 SystemCoreClockUpdate
-D:\apps\VSCode\data\tmp\cczGFvA7.s:190    .text.SystemCoreClockUpdate:000000000000007c $d
-D:\apps\VSCode\data\tmp\cczGFvA7.s:234    .rodata.APBPrescTable:0000000000000000 APBPrescTable
-D:\apps\VSCode\data\tmp\cczGFvA7.s:213    .rodata.AHBPrescTable:0000000000000000 AHBPrescTable
-D:\apps\VSCode\data\tmp\cczGFvA7.s:206    .data.SystemCoreClock:0000000000000000 SystemCoreClock
-D:\apps\VSCode\data\tmp\cczGFvA7.s:202    .data.SystemCoreClock:0000000000000000 $d
-D:\apps\VSCode\data\tmp\cczGFvA7.s:209    .rodata.AHBPrescTable:0000000000000000 $d
-D:\apps\VSCode\data\tmp\cczGFvA7.s:231    .rodata.APBPrescTable:0000000000000000 $d
+D:\apps\VSCode\data\tmp\ccx3d3ee.s:18     .text.SystemInit:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccx3d3ee.s:26     .text.SystemInit:0000000000000000 SystemInit
+D:\apps\VSCode\data\tmp\ccx3d3ee.s:49     .text.SystemInit:0000000000000018 $d
+D:\apps\VSCode\data\tmp\ccx3d3ee.s:54     .text.SystemCoreClockUpdate:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccx3d3ee.s:61     .text.SystemCoreClockUpdate:0000000000000000 SystemCoreClockUpdate
+D:\apps\VSCode\data\tmp\ccx3d3ee.s:190    .text.SystemCoreClockUpdate:000000000000007c $d
+D:\apps\VSCode\data\tmp\ccx3d3ee.s:234    .rodata.APBPrescTable:0000000000000000 APBPrescTable
+D:\apps\VSCode\data\tmp\ccx3d3ee.s:213    .rodata.AHBPrescTable:0000000000000000 AHBPrescTable
+D:\apps\VSCode\data\tmp\ccx3d3ee.s:206    .data.SystemCoreClock:0000000000000000 SystemCoreClock
+D:\apps\VSCode\data\tmp\ccx3d3ee.s:202    .data.SystemCoreClock:0000000000000000 $d
+D:\apps\VSCode\data\tmp\ccx3d3ee.s:209    .rodata.AHBPrescTable:0000000000000000 $d
+D:\apps\VSCode\data\tmp\ccx3d3ee.s:231    .rodata.APBPrescTable:0000000000000000 $d
 
 NO UNDEFINED SYMBOLS

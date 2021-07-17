@@ -57,7 +57,7 @@ static inline void Hall_read(hall_t *p, int samples)
     p->B = (h2 > tres);
     p->C = (h3 > tres);
 }
-/** Update angle position using Hall sensors table and interpolation
+/** Update angle position using Hall sensors tables and interpolation
  * beetwen midle of points **/
 static inline void Hall_update(hall_t *p)
 {

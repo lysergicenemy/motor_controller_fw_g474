@@ -118,7 +118,8 @@ void FLASH_UpdateConfig(foc_t *p, hall_t *hp)
     FLASH_Program_DoubleWord(Address + 8 * 9, *(uint32_t *)&hp->offset);
     // End
     flashLock();
-    p->paramIdState = Enter;
+    p->paramIdState = ID_ENTER;
+    p->paramIdRunState = ID_RUN_HALL_FWD;
     hp->offsetState = 0;
     p->driveState = STOP;
     p->data.flashUpdateFlag = 1;

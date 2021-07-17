@@ -1,0 +1,1369 @@
+ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"stm32g4xx_ll_comp.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.LL_COMP_DeInit,"ax",%progbits
+  18              		.align	1
+  19              		.global	LL_COMP_DeInit
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv4-sp-d16
+  26              	LL_COMP_DeInit:
+  27              	.LVL0:
+  28              	.LFB147:
+  29              		.file 1 "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c"
+   1:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** /**
+   2:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   ******************************************************************************
+   3:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   * @file    stm32g4xx_ll_comp.c
+   4:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   * @author  MCD Application Team
+   5:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   * @brief   COMP LL module driver
+   6:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   ******************************************************************************
+   7:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   * @attention
+   8:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   *
+   9:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   * <h2><center>&copy; Copyright (c) 2019 STMicroelectronics.
+  10:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   * All rights reserved.</center></h2>
+  11:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   *
+  12:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   * This software component is licensed by ST under BSD 3-Clause license,
+  13:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   * the "License"; You may not use this file except in compliance with the
+  14:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   * License. You may obtain a copy of the License at:
+  15:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   *                        opensource.org/licenses/BSD-3-Clause
+  16:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   *
+  17:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   ******************************************************************************
+  18:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   */
+  19:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** #if defined(USE_FULL_LL_DRIVER)
+  20:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
+  21:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** /* Includes ------------------------------------------------------------------*/
+  22:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** #include "stm32g4xx_ll_comp.h"
+  23:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
+  24:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** #ifdef  USE_FULL_ASSERT
+  25:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** #include "stm32_assert.h"
+  26:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** #else
+  27:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** #define assert_param(expr) ((void)0U)
+  28:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** #endif
+  29:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
+ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 2
+
+
+  30:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** /** @addtogroup STM32G4xx_LL_Driver
+  31:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   * @{
+  32:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   */
+  33:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
+  34:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
+  35:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
+  36:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** /** @addtogroup COMP_LL COMP
+  37:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   * @{
+  38:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   */
+  39:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
+  40:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** /* Private types -------------------------------------------------------------*/
+  41:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** /* Private variables ---------------------------------------------------------*/
+  42:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** /* Private constants ---------------------------------------------------------*/
+  43:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** /* Private macros ------------------------------------------------------------*/
+  44:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
+  45:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** /** @addtogroup COMP_LL_Private_Macros
+  46:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   * @{
+  47:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   */
+  48:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
+  49:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** /* Check of parameters for configuration of COMP hierarchical scope:          */
+  50:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** /* COMP instance.                                                             */
+  51:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
+  52:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** /* Note: On this STM32 series, comparator input plus parameters are           */
+  53:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** /*       the same on all COMP instances.                                      */
+  54:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** /*       However, comparator instance kept as macro parameter for             */
+  55:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** /*       compatibility with other STM32 families.                             */
+  56:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** #define IS_LL_COMP_INPUT_PLUS(__COMP_INSTANCE__, __INPUT_PLUS__)               \
+  57:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   (   ((__INPUT_PLUS__) == LL_COMP_INPUT_PLUS_IO1)                             \
+  58:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****    || ((__INPUT_PLUS__) == LL_COMP_INPUT_PLUS_IO2)                             \
+  59:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   )
+  60:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** #if defined(STM32G474xx) || defined(STM32G484xx) || defined(STM32G473xx) || defined(STM32G483xx)
+  61:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** #define IS_LL_COMP_INPUT_MINUS(__COMP_INSTANCE__, __INPUT_MINUS__)           \
+  62:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                   (((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_1_4VREFINT)  || \
+  63:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_1_2VREFINT)  || \
+  64:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_3_4VREFINT)  || \
+  65:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_VREFINT)     || \
+  66:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_IO1)         || \
+  67:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_IO2)         || \
+  68:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    (((__COMP_INSTANCE__) == COMP1)                        && \
+  69:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                     (((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_DAC1_CH1)  || \
+  70:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                     ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_DAC3_CH1))     \
+  71:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    )                                                      || \
+  72:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    (((__COMP_INSTANCE__) == COMP2)                        && \
+  73:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                     (((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_DAC1_CH2)  || \
+  74:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                     ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_DAC3_CH2))     \
+  75:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    )                                                      || \
+  76:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    (((__COMP_INSTANCE__) == COMP3)                        && \
+  77:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                     (((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_DAC1_CH1)  || \
+  78:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                     ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_DAC3_CH1))     \
+  79:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    )                                                      || \
+  80:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    (((__COMP_INSTANCE__) == COMP4)                        && \
+  81:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                     (((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_DAC1_CH1)  || \
+  82:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                     ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_DAC3_CH2))     \
+  83:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    )                                                      || \
+  84:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    (((__COMP_INSTANCE__) == COMP5)                        && \
+  85:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                     (((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_DAC1_CH2)  || \
+  86:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                     ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_DAC4_CH1))     \
+ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 3
+
+
+  87:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    )                                                      || \
+  88:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    (((__COMP_INSTANCE__) == COMP6)                        && \
+  89:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                     (((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_DAC2_CH1)  || \
+  90:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                     ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_DAC4_CH2))     \
+  91:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    )                                                      || \
+  92:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    (((__COMP_INSTANCE__) == COMP7)                        && \
+  93:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                     (((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_DAC2_CH1)  || \
+  94:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                     ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_DAC4_CH1))     \
+  95:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    ))
+  96:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** #elif defined(STM32GBK1CB) || defined(STM32G431xx) || defined(STM32G441xx) || defined(STM32G471xx) 
+  97:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** #define IS_LL_COMP_INPUT_MINUS(__COMP_INSTANCE__, __INPUT_MINUS__)           \
+  98:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                   (((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_1_4VREFINT)  || \
+  99:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_1_2VREFINT)  || \
+ 100:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_3_4VREFINT)  || \
+ 101:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_VREFINT)     || \
+ 102:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_IO1)         || \
+ 103:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_IO2)         || \
+ 104:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    (((__COMP_INSTANCE__) == COMP1)                        && \
+ 105:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                     (((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_DAC1_CH1)  || \
+ 106:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                     ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_DAC3_CH1))     \
+ 107:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    )                                                      || \
+ 108:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    (((__COMP_INSTANCE__) == COMP2)                        && \
+ 109:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                     (((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_DAC1_CH2)  || \
+ 110:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                     ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_DAC3_CH2))     \
+ 111:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    )                                                      || \
+ 112:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    (((__COMP_INSTANCE__) == COMP3)                        && \
+ 113:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                     (((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_DAC1_CH1)  || \
+ 114:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                     ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_DAC3_CH1))     \
+ 115:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    )                                                      || \
+ 116:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    (((__COMP_INSTANCE__) == COMP4)                        && \
+ 117:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                     (((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_DAC1_CH1)  || \
+ 118:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                     ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_DAC3_CH2))     \
+ 119:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    ))
+ 120:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** #endif
+ 121:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
+ 122:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** #define IS_LL_COMP_INPUT_HYSTERESIS(__INPUT_HYSTERESIS__)                      \
+ 123:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   (   ((__INPUT_HYSTERESIS__) == LL_COMP_HYSTERESIS_NONE)                      \
+ 124:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****    || ((__INPUT_HYSTERESIS__) == LL_COMP_HYSTERESIS_10MV)                      \
+ 125:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****    || ((__INPUT_HYSTERESIS__) == LL_COMP_HYSTERESIS_20MV)                      \
+ 126:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****    || ((__INPUT_HYSTERESIS__) == LL_COMP_HYSTERESIS_30MV)                      \
+ 127:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****    || ((__INPUT_HYSTERESIS__) == LL_COMP_HYSTERESIS_40MV)                      \
+ 128:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****    || ((__INPUT_HYSTERESIS__) == LL_COMP_HYSTERESIS_50MV)                      \
+ 129:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****    || ((__INPUT_HYSTERESIS__) == LL_COMP_HYSTERESIS_60MV)                      \
+ 130:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****    || ((__INPUT_HYSTERESIS__) == LL_COMP_HYSTERESIS_70MV)                      \
+ 131:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   )
+ 132:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
+ 133:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** #define IS_LL_COMP_OUTPUT_POLARITY(__POLARITY__)                               \
+ 134:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   (   ((__POLARITY__) == LL_COMP_OUTPUTPOL_NONINVERTED)                        \
+ 135:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****    || ((__POLARITY__) == LL_COMP_OUTPUTPOL_INVERTED)                           \
+ 136:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   )
+ 137:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
+ 138:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** #if defined(STM32G474xx) || defined(STM32G484xx) || defined(STM32G473xx) || defined(STM32G483xx)
+ 139:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** #define IS_LL_COMP_OUTPUT_BLANKING_SOURCE(__INSTANCE__, __OUTPUT_BLANKING_SOURCE__)  \
+ 140:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****      ((((__INSTANCE__) == COMP1) &&                                                  \
+ 141:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       (((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_NONE)            ||      \
+ 142:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM1_OC5_COMP1)  ||      \
+ 143:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM2_OC3_COMP1)  ||      \
+ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 4
+
+
+ 144:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM3_OC3_COMP1)  ||      \
+ 145:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM8_OC5_COMP1)))        \
+ 146:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       ||                                                                             \
+ 147:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       (((__INSTANCE__) == COMP2) &&                                                  \
+ 148:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       (((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_NONE)            ||      \
+ 149:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM1_OC5_COMP2)  ||      \
+ 150:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM2_OC3_COMP2)  ||      \
+ 151:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM3_OC3_COMP2)  ||      \
+ 152:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM8_OC5_COMP2)))        \
+ 153:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       ||                                                                             \
+ 154:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       (((__INSTANCE__) == COMP3) &&                                                  \
+ 155:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       (((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_NONE)            ||      \
+ 156:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM1_OC5_COMP3)  ||      \
+ 157:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM2_OC4_COMP3)  ||      \
+ 158:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM3_OC3_COMP3)  ||      \
+ 159:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM8_OC5_COMP3)))        \
+ 160:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       ||                                                                             \
+ 161:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       (((__INSTANCE__) == COMP4) &&                                                  \
+ 162:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       (((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_NONE)            ||      \
+ 163:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM1_OC5_COMP4)  ||      \
+ 164:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM3_OC4_COMP4)  ||      \
+ 165:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM8_OC5_COMP4)  ||      \
+ 166:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM15_OC1_COMP4)))       \
+ 167:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       ||                                                                             \
+ 168:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       (((__INSTANCE__) == COMP5) &&                                                  \
+ 169:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       (((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_NONE)            ||      \
+ 170:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM1_OC5_COMP5)  ||      \
+ 171:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM2_OC3_COMP5)  ||      \
+ 172:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM3_OC3_COMP5)  ||      \
+ 173:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM8_OC5_COMP5)))        \
+ 174:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       ||                                                                             \
+ 175:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       (((__INSTANCE__) == COMP6) &&                                                  \
+ 176:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       (((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_NONE)            ||      \
+ 177:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM1_OC5_COMP6)  ||      \
+ 178:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM2_OC4_COMP6)  ||      \
+ 179:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM8_OC5_COMP6)  ||      \
+ 180:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM15_OC2_COMP6)))       \
+ 181:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       ||                                                                             \
+ 182:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       (((__INSTANCE__) == COMP7) &&                                                  \
+ 183:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       (((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_NONE)            ||      \
+ 184:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM1_OC5_COMP7)  ||      \
+ 185:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM3_OC3_COMP7)  ||      \
+ 186:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM8_OC5_COMP7)  ||      \
+ 187:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM15_OC2_COMP7)))       \
+ 188:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       || ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM20_OC5)             \
+ 189:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       || ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM15_OC1)             \
+ 190:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       || ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM4_OC3)              \
+ 191:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       )
+ 192:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** #elif defined(STM32GBK1CB) || defined(STM32G431xx) || defined(STM32G441xx) || defined(STM32G471xx)
+ 193:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** #define IS_LL_COMP_OUTPUT_BLANKING_SOURCE(__INSTANCE__, __OUTPUT_BLANKING_SOURCE__)  \
+ 194:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****      ((((__INSTANCE__) == COMP1) &&                                                  \
+ 195:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       (((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_NONE)            ||      \
+ 196:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM1_OC5_COMP1)  ||      \
+ 197:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM2_OC3_COMP1)  ||      \
+ 198:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM3_OC3_COMP1)  ||      \
+ 199:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM8_OC5_COMP1)))        \
+ 200:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       ||                                                                             \
+ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 5
+
+
+ 201:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       (((__INSTANCE__) == COMP2) &&                                                  \
+ 202:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       (((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_NONE)            ||      \
+ 203:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM1_OC5_COMP2)  ||      \
+ 204:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM2_OC3_COMP2)  ||      \
+ 205:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM3_OC3_COMP2)  ||      \
+ 206:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM8_OC5_COMP2)))        \
+ 207:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       ||                                                                             \
+ 208:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       (((__INSTANCE__) == COMP3) &&                                                  \
+ 209:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       (((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_NONE)            ||      \
+ 210:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM1_OC5_COMP3)  ||      \
+ 211:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM2_OC4_COMP3)  ||      \
+ 212:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM3_OC3_COMP3)  ||      \
+ 213:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM8_OC5_COMP3)))        \
+ 214:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       ||                                                                             \
+ 215:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       (((__INSTANCE__) == COMP4) &&                                                  \
+ 216:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       (((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_NONE)            ||      \
+ 217:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM1_OC5_COMP4)  ||      \
+ 218:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM3_OC4_COMP4)  ||      \
+ 219:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM8_OC5_COMP4)  ||      \
+ 220:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM15_OC1_COMP4)))       \
+ 221:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       || ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM15_OC1)             \
+ 222:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       || ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM4_OC3)              \
+ 223:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       )
+ 224:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** #elif defined(STM32G491xx) || defined(STM32G4A1xx)
+ 225:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** #define IS_LL_COMP_OUTPUT_BLANKING_SOURCE(__INSTANCE__, __OUTPUT_BLANKING_SOURCE__)  \
+ 226:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****      ((((__INSTANCE__) == COMP1) &&                                                  \
+ 227:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       (((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_NONE)            ||      \
+ 228:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM1_OC5_COMP1)  ||      \
+ 229:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM2_OC3_COMP1)  ||      \
+ 230:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM3_OC3_COMP1)  ||      \
+ 231:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM8_OC5_COMP1)))        \
+ 232:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       ||                                                                             \
+ 233:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       (((__INSTANCE__) == COMP2) &&                                                  \
+ 234:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       (((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_NONE)            ||      \
+ 235:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM1_OC5_COMP2)  ||      \
+ 236:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM2_OC3_COMP2)  ||      \
+ 237:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM3_OC3_COMP2)  ||      \
+ 238:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM8_OC5_COMP2)))        \
+ 239:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       ||                                                                             \
+ 240:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       (((__INSTANCE__) == COMP3) &&                                                  \
+ 241:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       (((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_NONE)            ||      \
+ 242:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM1_OC5_COMP3)  ||      \
+ 243:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM2_OC4_COMP3)  ||      \
+ 244:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM3_OC3_COMP3)  ||      \
+ 245:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM8_OC5_COMP3)))        \
+ 246:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       ||                                                                             \
+ 247:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       (((__INSTANCE__) == COMP4) &&                                                  \
+ 248:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       (((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_NONE)            ||      \
+ 249:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM1_OC5_COMP4)  ||      \
+ 250:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM3_OC4_COMP4)  ||      \
+ 251:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM8_OC5_COMP4)  ||      \
+ 252:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM15_OC1_COMP4)))       \
+ 253:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       || ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM20_OC5)             \
+ 254:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       || ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM15_OC1)             \
+ 255:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       || ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM4_OC3)              \
+ 256:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       )
+ 257:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** #endif
+ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 6
+
+
+ 258:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** /**
+ 259:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   * @}
+ 260:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   */
+ 261:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
+ 262:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
+ 263:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** /* Private function prototypes -----------------------------------------------*/
+ 264:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
+ 265:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** /* Exported functions --------------------------------------------------------*/
+ 266:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** /** @addtogroup COMP_LL_Exported_Functions
+ 267:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   * @{
+ 268:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   */
+ 269:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
+ 270:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** /** @addtogroup COMP_LL_EF_Init
+ 271:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   * @{
+ 272:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   */
+ 273:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
+ 274:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** /**
+ 275:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   * @brief  De-initialize registers of the selected COMP instance
+ 276:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   *         to their default reset values.
+ 277:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   * @note   If comparator is locked, de-initialization by software is
+ 278:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   *         not possible.
+ 279:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   *         The only way to unlock the comparator is a device hardware reset.
+ 280:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   * @param  COMPx COMP instance
+ 281:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   * @retval An ErrorStatus enumeration value:
+ 282:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   *          - SUCCESS: COMP registers are de-initialized
+ 283:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   *          - ERROR: COMP registers are not de-initialized
+ 284:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   */
+ 285:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** ErrorStatus LL_COMP_DeInit(COMP_TypeDef *COMPx)
+ 286:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** {
+  30              		.loc 1 286 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+ 287:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   ErrorStatus status = SUCCESS;
+  35              		.loc 1 287 3 view .LVU1
+ 288:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
+ 289:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   /* Check the parameters */
+ 290:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   assert_param(IS_COMP_ALL_INSTANCE(COMPx));
+  36              		.loc 1 290 3 view .LVU2
+ 291:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
+ 292:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   /* Note: Hardware constraint (refer to description of this function):       */
+ 293:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   /*       COMP instance must not be locked.                                  */
+ 294:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   if (LL_COMP_IsLocked(COMPx) == 0UL)
+  37              		.loc 1 294 3 view .LVU3
+  38              	.LBB6:
+  39              	.LBI6:
+  40              		.file 2 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h"
+   1:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+   2:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   ******************************************************************************
+   3:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @file    stm32g4xx_ll_comp.h
+   4:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @author  MCD Application Team
+   5:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @brief   Header file of COMP LL module.
+   6:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   ******************************************************************************
+   7:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @attention
+   8:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *
+   9:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * <h2><center>&copy; Copyright (c) 2019 STMicroelectronics.
+ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 7
+
+
+  10:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * All rights reserved.</center></h2>
+  11:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *
+  12:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * This software component is licensed by ST under BSD 3-Clause license,
+  13:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * the "License"; You may not use this file except in compliance with the
+  14:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * License. You may obtain a copy of the License at:
+  15:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *                        opensource.org/licenses/BSD-3-Clause
+  16:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *
+  17:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   ******************************************************************************
+  18:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+  19:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+  20:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /* Define to prevent recursive inclusion -------------------------------------*/
+  21:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #ifndef STM32G4xx_LL_COMP_H
+  22:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define STM32G4xx_LL_COMP_H
+  23:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+  24:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #ifdef __cplusplus
+  25:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** extern "C" {
+  26:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #endif
+  27:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+  28:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /* Includes ------------------------------------------------------------------*/
+  29:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #include "stm32g4xx.h"
+  30:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+  31:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /** @addtogroup STM32G4xx_LL_Driver
+  32:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @{
+  33:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+  34:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+  35:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+  36:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+  37:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /** @defgroup COMP_LL COMP
+  38:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @{
+  39:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+  40:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+  41:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /* Private types -------------------------------------------------------------*/
+  42:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /* Private variables ---------------------------------------------------------*/
+  43:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /* Private constants ---------------------------------------------------------*/
+  44:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+  45:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /* Private macros ------------------------------------------------------------*/
+  46:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /** @defgroup COMP_LL_Private_Macros COMP Private Macros
+  47:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @{
+  48:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+  49:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+  50:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+  51:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @}
+  52:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+  53:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+  54:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /* Exported types ------------------------------------------------------------*/
+  55:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #if defined(USE_FULL_LL_DRIVER)
+  56:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /** @defgroup COMP_LL_ES_INIT COMP Exported Init structure
+  57:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @{
+  58:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+  59:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+  60:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+  61:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @brief  Structure definition of some features of COMP instance.
+  62:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+  63:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** typedef struct
+  64:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** {
+  65:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   uint32_t InputPlus;                   /*!< Set comparator input plus (non-inverting input).
+  66:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****                                              This parameter can be a value of @ref COMP_LL_EC_INPUT
+ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 8
+
+
+  67:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+  68:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****                                              This feature can be modified afterwards using unitary 
+  69:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+  70:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   uint32_t InputMinus;                  /*!< Set comparator input minus (inverting input).
+  71:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****                                              This parameter can be a value of @ref COMP_LL_EC_INPUT
+  72:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+  73:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****                                              This feature can be modified afterwards using unitary 
+  74:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+  75:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   uint32_t InputHysteresis;             /*!< Set comparator hysteresis mode of the input minus.
+  76:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****                                              This parameter can be a value of @ref COMP_LL_EC_INPUT
+  77:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+  78:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****                                              This feature can be modified afterwards using unitary 
+  79:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+  80:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   uint32_t OutputPolarity;              /*!< Set comparator output polarity.
+  81:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****                                              This parameter can be a value of @ref COMP_LL_EC_OUTPU
+  82:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+  83:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****                                              This feature can be modified afterwards using unitary 
+  84:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+  85:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   uint32_t OutputBlankingSource;        /*!< Set comparator blanking source.
+  86:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****                                              This parameter can be a value of @ref COMP_LL_EC_OUTPU
+  87:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+  88:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****                                              This feature can be modified afterwards using unitary 
+  89:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+  90:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** } LL_COMP_InitTypeDef;
+  91:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+  92:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+  93:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @}
+  94:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+  95:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #endif /* USE_FULL_LL_DRIVER */
+  96:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+  97:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /* Exported constants --------------------------------------------------------*/
+  98:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /** @defgroup COMP_LL_Exported_Constants COMP Exported Constants
+  99:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @{
+ 100:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 101:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 102:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /** @defgroup COMP_LL_EC_INPUT_PLUS Comparator inputs - Input plus (input non-inverting) selection
+ 103:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @{
+ 104:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 105:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_INPUT_PLUS_IO1          (0x00000000UL)                          /*!< Comparator inp
+ 106:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_INPUT_PLUS_IO2          (COMP_CSR_INPSEL)                       /*!< Comparator inp
+ 107:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+ 108:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @}
+ 109:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 110:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 111:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /** @defgroup COMP_LL_EC_INPUT_MINUS Comparator inputs - Input minus (input inverting) selection
+ 112:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @{
+ 113:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 114:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_INPUT_MINUS_1_4VREFINT  (                                                          
+ 115:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_INPUT_MINUS_1_2VREFINT  (                                        COMP_CSR_INMSEL_0 
+ 116:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_INPUT_MINUS_3_4VREFINT  (                    COMP_CSR_INMSEL_1                     
+ 117:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_INPUT_MINUS_VREFINT     (                    COMP_CSR_INMSEL_1 | COMP_CSR_INMSEL_0 
+ 118:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_INPUT_MINUS_DAC1_CH1    (COMP_CSR_INMSEL_2                     | COMP_CSR_INMSEL_0)
+ 119:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_INPUT_MINUS_DAC1_CH2    (COMP_CSR_INMSEL_2                     | COMP_CSR_INMSEL_0)
+ 120:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_INPUT_MINUS_DAC2_CH1    (COMP_CSR_INMSEL_2                     | COMP_CSR_INMSEL_0)
+ 121:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_INPUT_MINUS_DAC3_CH1    (COMP_CSR_INMSEL_2                                        )
+ 122:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_INPUT_MINUS_DAC3_CH2    (COMP_CSR_INMSEL_2                                        )
+ 123:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_INPUT_MINUS_DAC4_CH1    (COMP_CSR_INMSEL_2                                        )
+ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 9
+
+
+ 124:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_INPUT_MINUS_DAC4_CH2    (COMP_CSR_INMSEL_2                                        )
+ 125:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_INPUT_MINUS_IO1         (COMP_CSR_INMSEL_2 | COMP_CSR_INMSEL_1                    )
+ 126:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_INPUT_MINUS_IO2         (COMP_CSR_INMSEL_2 | COMP_CSR_INMSEL_1 | COMP_CSR_INMSEL_0)
+ 127:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 128:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+ 129:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @}
+ 130:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 131:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 132:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /** @defgroup COMP_LL_EC_INPUT_HYSTERESIS Comparator input - Hysteresis
+ 133:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @{
+ 134:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 135:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_HYSTERESIS_NONE         (0x00000000UL)                                       /*!< N
+ 136:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_HYSTERESIS_10MV         (                                    COMP_CSR_HYST_0) /*!< 
+ 137:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_HYSTERESIS_20MV         (                  COMP_CSR_HYST_1                  ) /*!< 
+ 138:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_HYSTERESIS_30MV         (                  COMP_CSR_HYST_1 | COMP_CSR_HYST_0) /*!< 
+ 139:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_HYSTERESIS_40MV         (COMP_CSR_HYST_2                                    ) /*!< 
+ 140:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_HYSTERESIS_50MV         (COMP_CSR_HYST_2                   | COMP_CSR_HYST_0) /*!< 
+ 141:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_HYSTERESIS_60MV         (COMP_CSR_HYST_2 | COMP_CSR_HYST_1                  ) /*!< 
+ 142:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_HYSTERESIS_70MV         (COMP_CSR_HYST_2 | COMP_CSR_HYST_1 | COMP_CSR_HYST_0) /*!< 
+ 143:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_HYSTERESIS_LOW          LL_COMP_HYSTERESIS_10MV /*!< Hysteresis level low */
+ 144:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_HYSTERESIS_MEDIUM       LL_COMP_HYSTERESIS_40MV /*!< Hysteresis level medium */
+ 145:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_HYSTERESIS_HIGH         LL_COMP_HYSTERESIS_70MV /*!< Hysteresis level high */
+ 146:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+ 147:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @}
+ 148:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 149:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 150:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /** @defgroup COMP_LL_EC_OUTPUT_POLARITY Comparator output - Output polarity
+ 151:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @{
+ 152:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 153:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_OUTPUTPOL_NONINVERTED   (0x00000000UL)          /*!< COMP output polarity is not in
+ 154:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_OUTPUTPOL_INVERTED      (COMP_CSR_POLARITY)     /*!< COMP output polarity is invert
+ 155:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+ 156:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @}
+ 157:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 158:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 159:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /** @defgroup COMP_LL_EC_OUTPUT_BLANKING_SOURCE Comparator output - Blanking source
+ 160:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @{
+ 161:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 162:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_NONE            (0x00000000UL)          /*!<Comparator output without b
+ 163:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM1_OC5_COMP1  (                                            COMP_CSR_B
+ 164:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM1_OC5_COMP2  (                                            COMP_CSR_B
+ 165:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM1_OC5_COMP3  (                                            COMP_CSR_B
+ 166:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM1_OC5_COMP4  (COMP_CSR_BLANKING_2                                   
+ 167:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM1_OC5_COMP5  (COMP_CSR_BLANKING_2                                   
+ 168:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM1_OC5_COMP6  (COMP_CSR_BLANKING_2                                   
+ 169:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM1_OC5_COMP7  (                                            COMP_CSR_B
+ 170:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM2_OC3_COMP1  (                      COMP_CSR_BLANKING_1             
+ 171:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM2_OC3_COMP2  (                      COMP_CSR_BLANKING_1             
+ 172:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM2_OC3_COMP5  (                                            COMP_CSR_B
+ 173:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM2_OC4_COMP3  (                      COMP_CSR_BLANKING_1 | COMP_CSR_B
+ 174:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM2_OC4_COMP6  (                      COMP_CSR_BLANKING_1             
+ 175:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM3_OC3_COMP1  (                      COMP_CSR_BLANKING_1 | COMP_CSR_B
+ 176:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM3_OC3_COMP2  (                      COMP_CSR_BLANKING_1 | COMP_CSR_B
+ 177:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM3_OC3_COMP3  (                      COMP_CSR_BLANKING_1             
+ 178:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM3_OC3_COMP5  (                      COMP_CSR_BLANKING_1 | COMP_CSR_B
+ 179:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM3_OC3_COMP7  (                      COMP_CSR_BLANKING_1 | COMP_CSR_B
+ 180:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM3_OC4_COMP4  (                                            COMP_CSR_B
+ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 10
+
+
+ 181:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM8_OC5_COMP1  (COMP_CSR_BLANKING_2                                   
+ 182:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM8_OC5_COMP2  (COMP_CSR_BLANKING_2                                   
+ 183:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM8_OC5_COMP3  (COMP_CSR_BLANKING_2                                   
+ 184:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM8_OC5_COMP4  (                      COMP_CSR_BLANKING_1             
+ 185:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM8_OC5_COMP5  (                      COMP_CSR_BLANKING_1             
+ 186:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM8_OC5_COMP6  (                                            COMP_CSR_B
+ 187:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM8_OC5_COMP7  (                      COMP_CSR_BLANKING_1             
+ 188:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM15_OC1_COMP4 (                      COMP_CSR_BLANKING_1 | COMP_CSR_B
+ 189:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM15_OC2_COMP6 (                      COMP_CSR_BLANKING_1 | COMP_CSR_B
+ 190:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM15_OC2_COMP7 (COMP_CSR_BLANKING_2                                   
+ 191:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM20_OC5       (COMP_CSR_BLANKING_2 |                       COMP_CSR_B
+ 192:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM15_OC1       (COMP_CSR_BLANKING_2 | COMP_CSR_BLANKING_1             
+ 193:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM4_OC3        (COMP_CSR_BLANKING_2 | COMP_CSR_BLANKING_1 | COMP_CSR_B
+ 194:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 195:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+ 196:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @}
+ 197:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 198:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 199:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /** @defgroup COMP_LL_EC_OUTPUT_LEVEL Comparator output - Output level
+ 200:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @{
+ 201:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 202:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_OUTPUT_LEVEL_LOW        (0x00000000UL)          /*!< Comparator output level low (i
+ 203:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_OUTPUT_LEVEL_HIGH       (0x00000001UL)          /*!< Comparator output level high (
+ 204:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+ 205:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @}
+ 206:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 207:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 208:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /** @defgroup COMP_LL_EC_HW_DELAYS  Definitions of COMP hardware constraints delays
+ 209:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @note   Only COMP peripheral HW delays are defined in COMP LL driver driver,
+ 210:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         not timeout values.
+ 211:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         For details on delays values, refer to descriptions in source code
+ 212:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         above each literal definition.
+ 213:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @{
+ 214:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 215:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 216:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /* Delay for comparator startup time.                                         */
+ 217:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /* Note: Delay required to reach propagation delay specification.             */
+ 218:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /* Literal set to maximum value (refer to device datasheet,                   */
+ 219:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /* parameter "tSTART").                                                       */
+ 220:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /* Unit: us                                                                   */
+ 221:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_DELAY_STARTUP_US          (  5UL) /*!< Delay for COMP startup time */
+ 222:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 223:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /* Delay for comparator voltage scaler stabilization time.                    */
+ 224:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /* Note: Voltage scaler is used when selecting comparator input               */
+ 225:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /*       based on VrefInt: VrefInt or subdivision of VrefInt.                 */
+ 226:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /* Literal set to maximum value (refer to device datasheet,                   */
+ 227:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /* parameter "tSTART_SCALER").                                                */
+ 228:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /* Unit: us                                                                   */
+ 229:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_DELAY_VOLTAGE_SCALER_STAB_US ( 200UL) /*!< Delay for COMP voltage scaler stabilizat
+ 230:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 231:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+ 232:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @}
+ 233:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 234:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 235:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+ 236:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @}
+ 237:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 11
+
+
+ 238:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 239:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /* Exported macro ------------------------------------------------------------*/
+ 240:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /** @defgroup COMP_LL_Exported_Macros COMP Exported Macros
+ 241:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @{
+ 242:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 243:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /** @defgroup COMP_LL_EM_WRITE_READ Common write and read registers macro
+ 244:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @{
+ 245:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 246:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 247:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+ 248:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @brief  Write a value in COMP register
+ 249:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @param  __INSTANCE__ comparator instance
+ 250:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @param  __REG__ Register to be written
+ 251:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @param  __VALUE__ Value to be written in the register
+ 252:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @retval None
+ 253:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 254:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_WriteReg(__INSTANCE__, __REG__, __VALUE__) WRITE_REG((__INSTANCE__)->__REG__, (__VA
+ 255:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 256:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+ 257:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @brief  Read a value in COMP register
+ 258:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @param  __INSTANCE__ comparator instance
+ 259:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @param  __REG__ Register to be read
+ 260:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @retval Register value
+ 261:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 262:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_ReadReg(__INSTANCE__, __REG__) READ_REG((__INSTANCE__)->__REG__)
+ 263:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+ 264:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @}
+ 265:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 266:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 267:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /** @defgroup COMP_LL_EM_HELPER_MACRO COMP helper macro
+ 268:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @{
+ 269:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 270:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 271:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+ 272:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @}
+ 273:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 274:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 275:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+ 276:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @}
+ 277:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 278:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 279:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /* Exported functions --------------------------------------------------------*/
+ 280:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /** @defgroup COMP_LL_Exported_Functions COMP Exported Functions
+ 281:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @{
+ 282:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 283:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 284:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /** @defgroup COMP_LL_EF_Configuration_comparator_inputs Configuration of comparator inputs
+ 285:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @{
+ 286:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 287:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 288:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+ 289:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @brief  Set comparator inputs minus (inverting) and plus (non-inverting).
+ 290:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @note   In case of comparator input selected to be connected to IO:
+ 291:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         GPIO pins are specific to each comparator instance.
+ 292:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         Refer to description of parameters or to reference manual.
+ 293:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @note   On this STM32 series, scaler bridge is configurable:
+ 294:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         to optimize power consumption, this function enables the
+ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 12
+
+
+ 295:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         voltage scaler bridge only when required
+ 296:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         (when selecting comparator input based on VrefInt: VrefInt or
+ 297:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         subdivision of VrefInt).
+ 298:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         - For scaler bridge power consumption values,
+ 299:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *           refer to device datasheet, parameter "IDDA(SCALER)".
+ 300:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         - Voltage scaler requires a delay for voltage stabilization.
+ 301:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *           Refer to device datasheet, parameter "tSTART_SCALER".
+ 302:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         - Scaler bridge is common for all comparator instances,
+ 303:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *           therefore if at least one of the comparator instance
+ 304:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *           is requiring the scaler bridge, it remains enabled.
+ 305:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @rmtoll CSR      INMSEL         LL_COMP_ConfigInputs\n
+ 306:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         CSR      INPSEL         LL_COMP_ConfigInputs\n
+ 307:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         CSR      BRGEN          LL_COMP_ConfigInputs\n
+ 308:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         CSR      SCALEN         LL_COMP_ConfigInputs
+ 309:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @param  COMPx Comparator instance
+ 310:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @param  InputMinus This parameter can be one of the following values:
+ 311:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_1_4VREFINT
+ 312:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_1_2VREFINT
+ 313:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_3_4VREFINT
+ 314:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_VREFINT
+ 315:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_DAC1_CH1   (1,3,4)
+ 316:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_DAC1_CH2   (2,5)
+ 317:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_DAC2_CH1   (6,7)
+ 318:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_DAC3_CH1   (1,3)
+ 319:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_DAC3_CH2   (2,4)
+ 320:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_DAC4_CH1   (5,7)
+ 321:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_DAC4_CH2   (6)
+ 322:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         (a,b...) Only available for COMPa, COMPb...
+ 323:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *                  For COMPx & DACx instances availability, please refer to datasheet
+ 324:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_IO1
+ 325:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_IO2
+ 326:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @param  InputPlus This parameter can be one of the following values:
+ 327:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_PLUS_IO1
+ 328:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_PLUS_IO2
+ 329:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @retval None
+ 330:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 331:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** __STATIC_INLINE void LL_COMP_ConfigInputs(COMP_TypeDef *COMPx, uint32_t InputMinus, uint32_t InputP
+ 332:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** {
+ 333:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   MODIFY_REG(COMPx->CSR,
+ 334:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****              COMP_CSR_INMSEL | COMP_CSR_INPSEL | COMP_CSR_SCALEN | COMP_CSR_BRGEN,
+ 335:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****              InputMinus | InputPlus);
+ 336:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** }
+ 337:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 338:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+ 339:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @brief  Set comparator input plus (non-inverting).
+ 340:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @note   In case of comparator input selected to be connected to IO:
+ 341:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         GPIO pins are specific to each comparator instance.
+ 342:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         Refer to description of parameters or to reference manual.
+ 343:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @rmtoll CSR      INPSEL         LL_COMP_SetInputPlus
+ 344:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @param  COMPx Comparator instance
+ 345:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @param  InputPlus This parameter can be one of the following values:
+ 346:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_PLUS_IO1
+ 347:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_PLUS_IO2
+ 348:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @retval None
+ 349:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 350:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** __STATIC_INLINE void LL_COMP_SetInputPlus(COMP_TypeDef *COMPx, uint32_t InputPlus)
+ 351:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** {
+ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 13
+
+
+ 352:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   MODIFY_REG(COMPx->CSR, COMP_CSR_INPSEL, InputPlus);
+ 353:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** }
+ 354:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 355:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+ 356:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @brief  Get comparator input plus (non-inverting).
+ 357:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @note   In case of comparator input selected to be connected to IO:
+ 358:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         GPIO pins are specific to each comparator instance.
+ 359:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         Refer to description of parameters or to reference manual.
+ 360:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @rmtoll CSR      INPSEL         LL_COMP_GetInputPlus
+ 361:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @param  COMPx Comparator instance
+ 362:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @retval Returned value can be one of the following values:
+ 363:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_PLUS_IO1
+ 364:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_PLUS_IO2
+ 365:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 366:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** __STATIC_INLINE uint32_t LL_COMP_GetInputPlus(COMP_TypeDef *COMPx)
+ 367:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** {
+ 368:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   return (uint32_t)(READ_BIT(COMPx->CSR, COMP_CSR_INPSEL));
+ 369:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** }
+ 370:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 371:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+ 372:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @brief  Set comparator input minus (inverting).
+ 373:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @note   In case of comparator input selected to be connected to IO:
+ 374:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         GPIO pins are specific to each comparator instance.
+ 375:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         Refer to description of parameters or to reference manual.
+ 376:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @note   On this STM32 series, scaler bridge is configurable:
+ 377:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         to optimize power consumption, this function enables the
+ 378:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         voltage scaler bridge only when required
+ 379:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         (when selecting comparator input based on VrefInt: VrefInt or
+ 380:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         subdivision of VrefInt).
+ 381:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         - For scaler bridge power consumption values,
+ 382:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *           refer to device datasheet, parameter "IDDA(SCALER)".
+ 383:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         - Voltage scaler requires a delay for voltage stabilization.
+ 384:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *           Refer to device datasheet, parameter "tSTART_SCALER".
+ 385:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         - Scaler bridge is common for all comparator instances,
+ 386:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *           therefore if at least one of the comparator instance
+ 387:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *           is requiring the scaler bridge, it remains enabled.
+ 388:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @rmtoll CSR      INMSEL         LL_COMP_SetInputMinus\n
+ 389:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         CSR      BRGEN          LL_COMP_SetInputMinus\n
+ 390:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         CSR      SCALEN         LL_COMP_SetInputMinus
+ 391:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @param  COMPx Comparator instance
+ 392:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @param  InputMinus This parameter can be one of the following values:
+ 393:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_1_4VREFINT
+ 394:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_1_2VREFINT
+ 395:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_3_4VREFINT
+ 396:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_VREFINT
+ 397:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_DAC1_CH1   (1,3,4)
+ 398:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_DAC1_CH2   (2,5)
+ 399:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_DAC2_CH1   (6,7)
+ 400:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_DAC3_CH1   (1,3)
+ 401:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_DAC3_CH2   (2,4)
+ 402:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_DAC4_CH1   (5,7)
+ 403:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_DAC4_CH2   (6)
+ 404:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         (a,b...) Only available for COMPa, COMPb...
+ 405:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *                  For COMPx & DACx instances availability, please refer to datasheet
+ 406:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_IO1
+ 407:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_IO2
+ 408:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @retval None
+ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 14
+
+
+ 409:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 410:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** __STATIC_INLINE void LL_COMP_SetInputMinus(COMP_TypeDef *COMPx, uint32_t InputMinus)
+ 411:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** {
+ 412:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   MODIFY_REG(COMPx->CSR, COMP_CSR_INMSEL | COMP_CSR_SCALEN | COMP_CSR_BRGEN, InputMinus);
+ 413:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** }
+ 414:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 415:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+ 416:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @brief  Get comparator input minus (inverting).
+ 417:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @note   In case of comparator input selected to be connected to IO:
+ 418:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         GPIO pins are specific to each comparator instance.
+ 419:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         Refer to description of parameters or to reference manual.
+ 420:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @rmtoll CSR      INMSEL         LL_COMP_GetInputMinus\n
+ 421:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         CSR      BRGEN          LL_COMP_GetInputMinus\n
+ 422:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         CSR      SCALEN         LL_COMP_GetInputMinus
+ 423:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @param  COMPx Comparator instance
+ 424:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @retval Returned value can be one of the following values:
+ 425:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_1_4VREFINT
+ 426:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_1_2VREFINT
+ 427:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_3_4VREFINT
+ 428:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_VREFINT
+ 429:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_DAC1_CH1   (1,3,4)
+ 430:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_DAC1_CH2   (2,5)
+ 431:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_DAC2_CH1   (6,7)
+ 432:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_DAC3_CH1   (1,3)
+ 433:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_DAC3_CH2   (2,4)
+ 434:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_DAC4_CH1   (5,7)
+ 435:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_DAC4_CH2   (6)
+ 436:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         (a,b...) Only available for COMPa, COMPb...
+ 437:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *                  For COMPx & DACx instances availability, please refer to datasheet
+ 438:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_IO1
+ 439:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_IO2
+ 440:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 441:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** __STATIC_INLINE uint32_t LL_COMP_GetInputMinus(COMP_TypeDef *COMPx)
+ 442:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** {
+ 443:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   return (uint32_t)(READ_BIT(COMPx->CSR, COMP_CSR_INMSEL | COMP_CSR_SCALEN | COMP_CSR_BRGEN));
+ 444:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** }
+ 445:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 446:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+ 447:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @brief  Set comparator instance hysteresis mode of the input minus (inverting input).
+ 448:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @rmtoll CSR      HYST           LL_COMP_SetInputHysteresis
+ 449:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @param  COMPx Comparator instance
+ 450:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @param  InputHysteresis This parameter can be one of the following values:
+ 451:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_HYSTERESIS_NONE
+ 452:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_HYSTERESIS_10MV
+ 453:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_HYSTERESIS_20MV
+ 454:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_HYSTERESIS_30MV
+ 455:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_HYSTERESIS_40MV
+ 456:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_HYSTERESIS_50MV
+ 457:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_HYSTERESIS_60MV
+ 458:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_HYSTERESIS_70MV
+ 459:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_HYSTERESIS_LOW
+ 460:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_HYSTERESIS_MEDIUM
+ 461:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_HYSTERESIS_HIGH
+ 462:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @retval None
+ 463:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 464:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** __STATIC_INLINE void LL_COMP_SetInputHysteresis(COMP_TypeDef *COMPx, uint32_t InputHysteresis)
+ 465:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** {
+ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 15
+
+
+ 466:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   MODIFY_REG(COMPx->CSR, COMP_CSR_HYST, InputHysteresis);
+ 467:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** }
+ 468:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 469:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+ 470:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @brief  Get comparator instance hysteresis mode of the minus (inverting) input.
+ 471:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @rmtoll CSR      HYST           LL_COMP_GetInputHysteresis
+ 472:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @param  COMPx Comparator instance
+ 473:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @retval Returned value can be one of the following values:
+ 474:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_HYSTERESIS_NONE
+ 475:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_HYSTERESIS_10MV
+ 476:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_HYSTERESIS_20MV
+ 477:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_HYSTERESIS_30MV
+ 478:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_HYSTERESIS_40MV
+ 479:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_HYSTERESIS_50MV
+ 480:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_HYSTERESIS_60MV
+ 481:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_HYSTERESIS_70MV
+ 482:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 483:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** __STATIC_INLINE uint32_t LL_COMP_GetInputHysteresis(COMP_TypeDef *COMPx)
+ 484:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** {
+ 485:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   return (uint32_t)(READ_BIT(COMPx->CSR, COMP_CSR_HYST));
+ 486:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** }
+ 487:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 488:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+ 489:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @}
+ 490:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 491:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 492:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /** @defgroup COMP_LL_EF_Configuration_comparator_output Configuration of comparator output
+ 493:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @{
+ 494:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 495:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 496:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+ 497:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @brief  Set comparator instance output polarity.
+ 498:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @rmtoll CSR      POLARITY       LL_COMP_SetOutputPolarity
+ 499:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @param  COMPx Comparator instance
+ 500:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @param  OutputPolarity This parameter can be one of the following values:
+ 501:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_OUTPUTPOL_NONINVERTED
+ 502:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_OUTPUTPOL_INVERTED
+ 503:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @retval None
+ 504:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 505:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** __STATIC_INLINE void LL_COMP_SetOutputPolarity(COMP_TypeDef *COMPx, uint32_t OutputPolarity)
+ 506:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** {
+ 507:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   MODIFY_REG(COMPx->CSR, COMP_CSR_POLARITY, OutputPolarity);
+ 508:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** }
+ 509:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 510:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+ 511:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @brief  Get comparator instance output polarity.
+ 512:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @rmtoll CSR      POLARITY       LL_COMP_GetOutputPolarity
+ 513:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @param  COMPx Comparator instance
+ 514:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @retval Returned value can be one of the following values:
+ 515:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_OUTPUTPOL_NONINVERTED
+ 516:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_OUTPUTPOL_INVERTED
+ 517:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 518:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** __STATIC_INLINE uint32_t LL_COMP_GetOutputPolarity(COMP_TypeDef *COMPx)
+ 519:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** {
+ 520:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   return (uint32_t)(READ_BIT(COMPx->CSR, COMP_CSR_POLARITY));
+ 521:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** }
+ 522:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 16
+
+
+ 523:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+ 524:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @brief  Set comparator instance blanking source.
+ 525:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @note   Blanking source may be specific to each comparator instance.
+ 526:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         Refer to description of parameters or to reference manual.
+ 527:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @note   Availability of parameters of blanking source from timer
+ 528:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         depends on timers availability on the selected device.
+ 529:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @rmtoll CSR      BLANKING       LL_COMP_SetOutputBlankingSource
+ 530:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @param  COMPx Comparator instance
+ 531:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @param  BlankingSource This parameter can be one of the following values:
+ 532:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_NONE
+ 533:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM1_OC5_COMP1
+ 534:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM1_OC5_COMP2
+ 535:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM1_OC5_COMP3
+ 536:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM1_OC5_COMP4
+ 537:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM1_OC5_COMP5
+ 538:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM1_OC5_COMP6
+ 539:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM1_OC5_COMP7
+ 540:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM2_OC3_COMP1
+ 541:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM2_OC3_COMP2
+ 542:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM2_OC3_COMP5
+ 543:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM2_OC4_COMP3
+ 544:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM2_OC4_COMP6
+ 545:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM3_OC3_COMP1
+ 546:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM3_OC3_COMP2
+ 547:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM3_OC3_COMP3
+ 548:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM3_OC3_COMP5
+ 549:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM3_OC3_COMP7
+ 550:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM3_OC4_COMP4
+ 551:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM8_OC5_COMP1
+ 552:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM8_OC5_COMP2
+ 553:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM8_OC5_COMP3
+ 554:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM8_OC5_COMP4
+ 555:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM8_OC5_COMP5
+ 556:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM8_OC5_COMP6
+ 557:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM8_OC5_COMP7
+ 558:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM15_OC1_COMP4
+ 559:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM15_OC2_COMP6
+ 560:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM15_OC2_COMP7
+ 561:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM20_OC5
+ 562:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM15_OC1
+ 563:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM4_OC3
+ 564:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *
+ 565:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         On STM32G4 series, blanking sources are linked to COMP instance (except
+ 566:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         those without COMPx suffix that are common to all instances)
+ 567:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         Note: For COMPx & TIMx instances availability, please refer to datasheet
+ 568:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @retval None
+ 569:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 570:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** __STATIC_INLINE void LL_COMP_SetOutputBlankingSource(COMP_TypeDef *COMPx, uint32_t BlankingSource)
+ 571:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** {
+ 572:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   MODIFY_REG(COMPx->CSR, COMP_CSR_BLANKING, BlankingSource);
+ 573:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** }
+ 574:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 575:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+ 576:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @brief  Get comparator instance blanking source.
+ 577:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @note   Availability of parameters of blanking source from timer
+ 578:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         depends on timers availability on the selected device.
+ 579:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @note   Blanking source may be specific to each comparator instance.
+ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 17
+
+
+ 580:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         Refer to description of parameters or to reference manual.
+ 581:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @rmtoll CSR      BLANKING       LL_COMP_GetOutputBlankingSource
+ 582:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @param  COMPx Comparator instance
+ 583:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @retval Returned value can be one of the following values:
+ 584:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_NONE
+ 585:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM1_OC5_COMP1
+ 586:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM1_OC5_COMP2
+ 587:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM1_OC5_COMP3
+ 588:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM1_OC5_COMP4
+ 589:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM1_OC5_COMP5
+ 590:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM1_OC5_COMP6
+ 591:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM1_OC5_COMP7
+ 592:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM2_OC3_COMP1
+ 593:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM2_OC3_COMP2
+ 594:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM2_OC3_COMP5
+ 595:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM2_OC4_COMP3
+ 596:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM2_OC4_COMP6
+ 597:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM3_OC3_COMP1
+ 598:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM3_OC3_COMP2
+ 599:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM3_OC3_COMP3
+ 600:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM3_OC3_COMP5
+ 601:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM3_OC3_COMP7
+ 602:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM3_OC4_COMP4
+ 603:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM8_OC5_COMP1
+ 604:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM8_OC5_COMP2
+ 605:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM8_OC5_COMP3
+ 606:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM8_OC5_COMP4
+ 607:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM8_OC5_COMP5
+ 608:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM8_OC5_COMP6
+ 609:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM8_OC5_COMP7
+ 610:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM15_OC1_COMP4
+ 611:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM15_OC2_COMP6
+ 612:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM15_OC2_COMP7
+ 613:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM20_OC5
+ 614:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM15_OC1
+ 615:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM4_OC3
+ 616:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *
+ 617:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         On STM32G4 series, blanking sources are linked to COMP instance (except
+ 618:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         those without COMPx suffix that are common to all instances)
+ 619:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         Note: For COMPx & TIMx instances availability, please refer to datasheet
+ 620:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 621:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** __STATIC_INLINE uint32_t LL_COMP_GetOutputBlankingSource(COMP_TypeDef *COMPx)
+ 622:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** {
+ 623:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   return (uint32_t)(READ_BIT(COMPx->CSR, COMP_CSR_BLANKING));
+ 624:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** }
+ 625:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 626:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+ 627:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @}
+ 628:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 629:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 630:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /** @defgroup COMP_LL_EF_Operation Operation on comparator instance
+ 631:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @{
+ 632:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 633:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 634:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+ 635:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @brief  Enable comparator instance.
+ 636:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @note   After enable from off state, comparator requires a delay
+ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 18
+
+
+ 637:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         to reach reach propagation delay specification.
+ 638:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         Refer to device datasheet, parameter "tSTART".
+ 639:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @rmtoll CSR      EN             LL_COMP_Enable
+ 640:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @param  COMPx Comparator instance
+ 641:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @retval None
+ 642:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 643:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** __STATIC_INLINE void LL_COMP_Enable(COMP_TypeDef *COMPx)
+ 644:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** {
+ 645:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   SET_BIT(COMPx->CSR, COMP_CSR_EN);
+ 646:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** }
+ 647:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 648:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+ 649:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @brief  Disable comparator instance.
+ 650:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @rmtoll CSR      EN             LL_COMP_Disable
+ 651:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @param  COMPx Comparator instance
+ 652:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @retval None
+ 653:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 654:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** __STATIC_INLINE void LL_COMP_Disable(COMP_TypeDef *COMPx)
+ 655:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** {
+ 656:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   CLEAR_BIT(COMPx->CSR, COMP_CSR_EN);
+ 657:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** }
+ 658:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 659:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+ 660:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @brief  Get comparator enable state
+ 661:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         (0: COMP is disabled, 1: COMP is enabled)
+ 662:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @rmtoll CSR      EN             LL_COMP_IsEnabled
+ 663:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @param  COMPx Comparator instance
+ 664:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @retval State of bit (1 or 0).
+ 665:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 666:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** __STATIC_INLINE uint32_t LL_COMP_IsEnabled(COMP_TypeDef *COMPx)
+ 667:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** {
+ 668:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   return ((READ_BIT(COMPx->CSR, COMP_CSR_EN) == (COMP_CSR_EN)) ? 1UL : 0UL);
+ 669:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** }
+ 670:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 671:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+ 672:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @brief  Lock comparator instance.
+ 673:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @note   Once locked, comparator configuration can be accessed in read-only.
+ 674:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @note   The only way to unlock the comparator is a device hardware reset.
+ 675:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @rmtoll CSR      LOCK           LL_COMP_Lock
+ 676:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @param  COMPx Comparator instance
+ 677:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @retval None
+ 678:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 679:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** __STATIC_INLINE void LL_COMP_Lock(COMP_TypeDef *COMPx)
+ 680:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** {
+ 681:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   SET_BIT(COMPx->CSR, COMP_CSR_LOCK);
+ 682:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** }
+ 683:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
+ 684:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
+ 685:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @brief  Get comparator lock state
+ 686:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         (0: COMP is unlocked, 1: COMP is locked).
+ 687:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @note   Once locked, comparator configuration can be accessed in read-only.
+ 688:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @note   The only way to unlock the comparator is a device hardware reset.
+ 689:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @rmtoll CSR      LOCK           LL_COMP_IsLocked
+ 690:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @param  COMPx Comparator instance
+ 691:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @retval State of bit (1 or 0).
+ 692:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
+ 693:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** __STATIC_INLINE uint32_t LL_COMP_IsLocked(COMP_TypeDef *COMPx)
+ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 19
+
+
+  41              		.loc 2 693 26 view .LVU4
+  42              	.LBB7:
+ 694:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** {
+ 695:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   return ((READ_BIT(COMPx->CSR, COMP_CSR_LOCK) == (COMP_CSR_LOCK)) ? 1UL : 0UL);
+  43              		.loc 2 695 3 view .LVU5
+  44              		.loc 2 695 12 is_stmt 0 view .LVU6
+  45 0000 0368     		ldr	r3, [r0]
+  46              		.loc 2 695 74 view .LVU7
+  47 0002 002B     		cmp	r3, #0
+  48 0004 03DB     		blt	.L3
+  49              	.LVL1:
+  50              		.loc 2 695 74 view .LVU8
+  51              	.LBE7:
+  52              	.LBE6:
+ 295:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   {
+ 296:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****     LL_COMP_WriteReg(COMPx, CSR, 0x00000000UL);
+  53              		.loc 1 296 5 is_stmt 1 view .LVU9
+  54 0006 0023     		movs	r3, #0
+  55 0008 0360     		str	r3, [r0]
+ 287:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
+  56              		.loc 1 287 15 is_stmt 0 view .LVU10
+  57 000a 1846     		mov	r0, r3
+  58              	.LVL2:
+ 287:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
+  59              		.loc 1 287 15 view .LVU11
+  60 000c 7047     		bx	lr
+  61              	.LVL3:
+  62              	.L3:
+ 297:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
+ 298:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   }
+ 299:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   else
+ 300:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   {
+ 301:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****     /* Comparator instance is locked: de-initialization by software is         */
+ 302:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****     /* not possible.                                                           */
+ 303:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****     /* The only way to unlock the comparator is a device hardware reset.       */
+ 304:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****     status = ERROR;
+  63              		.loc 1 304 12 view .LVU12
+  64 000e 0120     		movs	r0, #1
+  65              	.LVL4:
+ 305:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   }
+ 306:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
+ 307:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   return status;
+  66              		.loc 1 307 3 is_stmt 1 view .LVU13
+ 308:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** }
+  67              		.loc 1 308 1 is_stmt 0 view .LVU14
+  68 0010 7047     		bx	lr
+  69              		.cfi_endproc
+  70              	.LFE147:
+  72              		.section	.text.LL_COMP_Init,"ax",%progbits
+  73              		.align	1
+  74              		.global	LL_COMP_Init
+  75              		.syntax unified
+  76              		.thumb
+  77              		.thumb_func
+  78              		.fpu fpv4-sp-d16
+  80              	LL_COMP_Init:
+  81              	.LVL5:
+ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 20
+
+
+  82              	.LFB148:
+ 309:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
+ 310:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** /**
+ 311:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   * @brief  Initialize some features of COMP instance.
+ 312:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   * @note   This function configures features of the selected COMP instance.
+ 313:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   *         Some features are also available at scope COMP common instance
+ 314:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   *         (common to several COMP instances).
+ 315:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   *         Refer to functions having argument "COMPxy_COMMON" as parameter.
+ 316:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   * @param  COMPx COMP instance
+ 317:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   * @param  COMP_InitStruct Pointer to a @ref LL_COMP_InitTypeDef structure
+ 318:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   * @retval An ErrorStatus enumeration value:
+ 319:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   *          - SUCCESS: COMP registers are initialized
+ 320:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   *          - ERROR: COMP registers are not initialized
+ 321:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   */
+ 322:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** ErrorStatus LL_COMP_Init(COMP_TypeDef *COMPx, LL_COMP_InitTypeDef *COMP_InitStruct)
+ 323:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** {
+  83              		.loc 1 323 1 is_stmt 1 view -0
+  84              		.cfi_startproc
+  85              		@ args = 0, pretend = 0, frame = 0
+  86              		@ frame_needed = 0, uses_anonymous_args = 0
+  87              		@ link register save eliminated.
+ 324:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   ErrorStatus status = SUCCESS;
+  88              		.loc 1 324 3 view .LVU16
+ 325:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
+ 326:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   /* Check the parameters */
+ 327:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   assert_param(IS_COMP_ALL_INSTANCE(COMPx));
+  89              		.loc 1 327 3 view .LVU17
+ 328:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   assert_param(IS_LL_COMP_INPUT_PLUS(COMPx, COMP_InitStruct->InputPlus));
+  90              		.loc 1 328 3 view .LVU18
+ 329:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   assert_param(IS_LL_COMP_INPUT_MINUS(COMPx, COMP_InitStruct->InputMinus));
+  91              		.loc 1 329 3 view .LVU19
+ 330:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   assert_param(IS_LL_COMP_INPUT_HYSTERESIS(COMP_InitStruct->InputHysteresis));
+  92              		.loc 1 330 3 view .LVU20
+ 331:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   assert_param(IS_LL_COMP_OUTPUT_POLARITY(COMP_InitStruct->OutputPolarity));
+  93              		.loc 1 331 3 view .LVU21
+ 332:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   assert_param(IS_LL_COMP_OUTPUT_BLANKING_SOURCE(COMPx, COMP_InitStruct->OutputBlankingSource));
+  94              		.loc 1 332 3 view .LVU22
+ 333:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
+ 334:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   /* Note: Hardware constraint (refer to description of this function)        */
+ 335:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   /*       COMP instance must not be locked.                                  */
+ 336:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   if (LL_COMP_IsLocked(COMPx) == 0UL)
+  95              		.loc 1 336 3 view .LVU23
+  96              	.LBB8:
+  97              	.LBI8:
+ 693:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** {
+  98              		.loc 2 693 26 view .LVU24
+  99              	.LBB9:
+ 100              		.loc 2 695 3 view .LVU25
+ 101              		.loc 2 695 12 is_stmt 0 view .LVU26
+ 102 0000 0368     		ldr	r3, [r0]
+ 103              		.loc 2 695 74 view .LVU27
+ 104 0002 002B     		cmp	r3, #0
+ 105 0004 12DB     		blt	.L6
+ 106              	.LBE9:
+ 107              	.LBE8:
+ 323:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   ErrorStatus status = SUCCESS;
+ 108              		.loc 1 323 1 view .LVU28
+ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 21
+
+
+ 109 0006 10B4     		push	{r4}
+ 110              	.LCFI0:
+ 111              		.cfi_def_cfa_offset 4
+ 112              		.cfi_offset 4, -4
+ 113              	.LVL6:
+ 337:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   {
+ 338:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****     /* Configuration of comparator instance :                                 */
+ 339:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****     /*  - InputPlus                                                           */
+ 340:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****     /*  - InputMinus                                                          */
+ 341:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****     /*  - InputHysteresis                                                     */
+ 342:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****     /*  - OutputPolarity                                                      */
+ 343:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****     /*  - OutputBlankingSource                                                */
+ 344:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****     MODIFY_REG(COMPx->CSR,
+ 114              		.loc 1 344 5 is_stmt 1 view .LVU29
+ 115 0008 0368     		ldr	r3, [r0]
+ 116 000a 094A     		ldr	r2, .L11
+ 117 000c 1A40     		ands	r2, r2, r3
+ 118 000e 0B68     		ldr	r3, [r1]
+ 119 0010 4C68     		ldr	r4, [r1, #4]
+ 120 0012 2343     		orrs	r3, r3, r4
+ 121 0014 8C68     		ldr	r4, [r1, #8]
+ 122 0016 2343     		orrs	r3, r3, r4
+ 123 0018 CC68     		ldr	r4, [r1, #12]
+ 124 001a 2343     		orrs	r3, r3, r4
+ 125 001c 0969     		ldr	r1, [r1, #16]
+ 126              	.LVL7:
+ 127              		.loc 1 344 5 is_stmt 0 view .LVU30
+ 128 001e 0B43     		orrs	r3, r3, r1
+ 129 0020 1343     		orrs	r3, r3, r2
+ 130 0022 0360     		str	r3, [r0]
+ 324:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
+ 131              		.loc 1 324 15 view .LVU31
+ 132 0024 0020     		movs	r0, #0
+ 133              	.LVL8:
+ 345:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                COMP_CSR_INPSEL
+ 346:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                | COMP_CSR_SCALEN
+ 347:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                | COMP_CSR_BRGEN
+ 348:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                | COMP_CSR_INMSEL
+ 349:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                | COMP_CSR_HYST
+ 350:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                | COMP_CSR_POLARITY
+ 351:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                | COMP_CSR_BLANKING
+ 352:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                ,
+ 353:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                COMP_InitStruct->InputPlus
+ 354:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                | COMP_InitStruct->InputMinus
+ 355:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                | COMP_InitStruct->InputHysteresis
+ 356:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                | COMP_InitStruct->OutputPolarity
+ 357:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                | COMP_InitStruct->OutputBlankingSource
+ 358:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****               );
+ 359:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
+ 360:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   }
+ 361:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   else
+ 362:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   {
+ 363:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****     /* Initialization error: COMP instance is locked.                         */
+ 364:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****     status = ERROR;
+ 365:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   }
+ 366:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
+ 367:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   return status;
+ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 22
+
+
+ 134              		.loc 1 367 3 is_stmt 1 view .LVU32
+ 368:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** }
+ 135              		.loc 1 368 1 is_stmt 0 view .LVU33
+ 136 0026 5DF8044B 		ldr	r4, [sp], #4
+ 137              	.LCFI1:
+ 138              		.cfi_restore 4
+ 139              		.cfi_def_cfa_offset 0
+ 140 002a 7047     		bx	lr
+ 141              	.LVL9:
+ 142              	.L6:
+ 364:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   }
+ 143              		.loc 1 364 12 view .LVU34
+ 144 002c 0120     		movs	r0, #1
+ 145              	.LVL10:
+ 367:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** }
+ 146              		.loc 1 367 3 is_stmt 1 view .LVU35
+ 147              		.loc 1 368 1 is_stmt 0 view .LVU36
+ 148 002e 7047     		bx	lr
+ 149              	.L12:
+ 150              		.align	2
+ 151              	.L11:
+ 152 0030 0F7E00FF 		.word	-16744945
+ 153              		.cfi_endproc
+ 154              	.LFE148:
+ 156              		.section	.text.LL_COMP_StructInit,"ax",%progbits
+ 157              		.align	1
+ 158              		.global	LL_COMP_StructInit
+ 159              		.syntax unified
+ 160              		.thumb
+ 161              		.thumb_func
+ 162              		.fpu fpv4-sp-d16
+ 164              	LL_COMP_StructInit:
+ 165              	.LVL11:
+ 166              	.LFB149:
+ 369:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
+ 370:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** /**
+ 371:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   * @brief Set each @ref LL_COMP_InitTypeDef field to default value.
+ 372:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   * @param COMP_InitStruct Pointer to a @ref LL_COMP_InitTypeDef structure
+ 373:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   *                        whose fields will be set to default values.
+ 374:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   * @retval None
+ 375:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   */
+ 376:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** void LL_COMP_StructInit(LL_COMP_InitTypeDef *COMP_InitStruct)
+ 377:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** {
+ 167              		.loc 1 377 1 is_stmt 1 view -0
+ 168              		.cfi_startproc
+ 169              		@ args = 0, pretend = 0, frame = 0
+ 170              		@ frame_needed = 0, uses_anonymous_args = 0
+ 171              		@ link register save eliminated.
+ 378:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   /* Set COMP_InitStruct fields to default values */
+ 379:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   COMP_InitStruct->InputPlus            = LL_COMP_INPUT_PLUS_IO1;
+ 172              		.loc 1 379 3 view .LVU38
+ 173              		.loc 1 379 41 is_stmt 0 view .LVU39
+ 174 0000 0023     		movs	r3, #0
+ 175 0002 0360     		str	r3, [r0]
+ 380:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   COMP_InitStruct->InputMinus           = LL_COMP_INPUT_MINUS_VREFINT;
+ 176              		.loc 1 380 3 is_stmt 1 view .LVU40
+ 177              		.loc 1 380 41 is_stmt 0 view .LVU41
+ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 23
+
+
+ 178 0004 024A     		ldr	r2, .L14
+ 179 0006 4260     		str	r2, [r0, #4]
+ 381:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   COMP_InitStruct->InputHysteresis      = LL_COMP_HYSTERESIS_NONE;
+ 180              		.loc 1 381 3 is_stmt 1 view .LVU42
+ 181              		.loc 1 381 41 is_stmt 0 view .LVU43
+ 182 0008 8360     		str	r3, [r0, #8]
+ 382:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   COMP_InitStruct->OutputPolarity       = LL_COMP_OUTPUTPOL_NONINVERTED;
+ 183              		.loc 1 382 3 is_stmt 1 view .LVU44
+ 184              		.loc 1 382 41 is_stmt 0 view .LVU45
+ 185 000a C360     		str	r3, [r0, #12]
+ 383:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   COMP_InitStruct->OutputBlankingSource = LL_COMP_BLANKINGSRC_NONE;
+ 186              		.loc 1 383 3 is_stmt 1 view .LVU46
+ 187              		.loc 1 383 41 is_stmt 0 view .LVU47
+ 188 000c 0361     		str	r3, [r0, #16]
+ 384:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** }
+ 189              		.loc 1 384 1 view .LVU48
+ 190 000e 7047     		bx	lr
+ 191              	.L15:
+ 192              		.align	2
+ 193              	.L14:
+ 194 0010 30008000 		.word	8388656
+ 195              		.cfi_endproc
+ 196              	.LFE149:
+ 198              		.text
+ 199              	.Letext0:
+ 200              		.file 3 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 201              		.file 4 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 202              		.file 5 "Drivers/CMSIS/Include/core_cm4.h"
+ 203              		.file 6 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h"
+ 204              		.file 7 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h"
+ 205              		.file 8 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h"
+ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 24
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 stm32g4xx_ll_comp.c
+D:\apps\VSCode\data\tmp\cclFwPf3.s:18     .text.LL_COMP_DeInit:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cclFwPf3.s:26     .text.LL_COMP_DeInit:0000000000000000 LL_COMP_DeInit
+D:\apps\VSCode\data\tmp\cclFwPf3.s:73     .text.LL_COMP_Init:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cclFwPf3.s:80     .text.LL_COMP_Init:0000000000000000 LL_COMP_Init
+D:\apps\VSCode\data\tmp\cclFwPf3.s:152    .text.LL_COMP_Init:0000000000000030 $d
+D:\apps\VSCode\data\tmp\cclFwPf3.s:157    .text.LL_COMP_StructInit:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cclFwPf3.s:164    .text.LL_COMP_StructInit:0000000000000000 LL_COMP_StructInit
+D:\apps\VSCode\data\tmp\cclFwPf3.s:194    .text.LL_COMP_StructInit:0000000000000010 $d
+
+NO UNDEFINED SYMBOLS

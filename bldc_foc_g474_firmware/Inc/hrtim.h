@@ -32,16 +32,33 @@ extern "C"
   /* USER CODE END Includes */
 
   /* USER CODE BEGIN Private defines */
+
+  /**
+ * @brief Disable PWM signals
+ * 
+ */
   static inline void pwm_disable(void)
   {
     LL_HRTIM_DisableOutput(HRTIM1, LL_HRTIM_OUTPUT_TA1 | LL_HRTIM_OUTPUT_TA2 | LL_HRTIM_OUTPUT_TC1 |
                                        LL_HRTIM_OUTPUT_TC2 | LL_HRTIM_OUTPUT_TD1 | LL_HRTIM_OUTPUT_TD2);
   }
+
+/**
+ * @brief Enable PWM signals
+ * 
+ */
   static inline void pwm_enable(void)
   {
     LL_HRTIM_EnableOutput(HRTIM1, LL_HRTIM_OUTPUT_TA1 | LL_HRTIM_OUTPUT_TA2 | LL_HRTIM_OUTPUT_TC1 |
                                       LL_HRTIM_OUTPUT_TC2 | LL_HRTIM_OUTPUT_TD1 | LL_HRTIM_OUTPUT_TD2);
   }
+
+  /**
+ * @brief Update PWM signals
+ * Input:
+ * ta, tb, tc - referance duty cycles, range(-1.0f : 1.0f)
+ * halfPwmPeriod - half of counter update value
+ */
   static inline void pwm_update(float ta, float tb, float tc, float halfPwmPeriod)
   {
     LL_HRTIM_TIM_SetCompare1(HRTIM1, LL_HRTIM_TIMER_A, (uint32_t)(ta * halfPwmPeriod + halfPwmPeriod));

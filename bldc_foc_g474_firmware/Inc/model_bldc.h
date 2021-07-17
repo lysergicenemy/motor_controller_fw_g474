@@ -12,12 +12,12 @@
  * ****************************************************************/
 #define T_SAMPLING 1.0f / 20000.0f // F_PWM = F_MAIN_LOOP = 20kHz
 
-#define BLDC_PARAM_RS 1.46f	   // Ohm, stator resistance
-#define BLDC_PARAM_LSD 0.0051f//0.021033f  // H, stator inductance
-#define BLDC_PARAM_LSQ 0.0059f//0.021033f  // H, stator inductance
-#define BLDC_PARAM_PP 1.0f		   // rotor pole pairs
-#define BLDC_PARAM_J 0.000003f	   // kg*m^2, rotor inertia 83.67kv
-#define BLDC_PARAM_FLUX 0.08435f //0.0843521f // Wb. lambda = 60 / (sqrt(3) * pi * kv * poles), m->E = 60. / 2. / M_PI / sqrt(3.) / (Kv * m->Zp);
+#define BLDC_PARAM_RS 0.075f	 // Ohm, stator resistance
+#define BLDC_PARAM_LSD 0.000047f //0.021033f  // H, stator inductance
+#define BLDC_PARAM_LSQ 0.000052f //0.021033f  // H, stator inductance
+#define BLDC_PARAM_PP 4.0f		 // rotor pole pairs
+#define BLDC_PARAM_J 0.000003f	 // kg*m^2, rotor inertia 83.67kv - large value if need fixed rotor
+#define BLDC_PARAM_FLUX 0.0051f //0.0843521f // Wb. lambda = 60 / (sqrt(3) * pi * kv * poles), m->E = 60. / 2. / M_PI / sqrt(3.) / (Kv * m->Zp);
 
 #define BLDC_PARAM_VDC 24.0f
 /******************************************************************/
@@ -62,8 +62,8 @@ static inline void ModelBLDC_Init(modelBLDC_t *p)
 
 	// Инициализация параметров двигателей
 	p->rs = BLDC_PARAM_RS;				//сопротивление статора, Ом
-	p->lsd = BLDC_PARAM_LSD;				//индуктивность статора, Гн
-	p->lsq = BLDC_PARAM_LSQ;				//индуктивность статора, Гн
+	p->lsd = BLDC_PARAM_LSD;			//индуктивность статора, Гн
+	p->lsq = BLDC_PARAM_LSQ;			//индуктивность статора, Гн
 	p->pp = BLDC_PARAM_PP;				//число пар полюсов
 	p->j = BLDC_PARAM_J;				//момент инерции кг*м^2
 	p->m = BLDC_PARAM_FLUX;				//потокосцепление ротора равно потоку постоянных магнитов
@@ -91,7 +91,7 @@ static inline void ModelBLDC_Calc(modelBLDC_t *p)
 	p->fib = p->udc * p->cmpr1;
 	p->fic = p->udc * p->cmpr2;
 	p->fiav = (p->fia + p->fib + p->fic) * 0.3333333f; //потенциал средней точки
-	p->ua = p->fia - p->fiav;								  
+	p->ua = p->fia - p->fiav;
 	p->ub = p->fib - p->fiav;
 	p->uc = p->fic - p->fiav;
 
@@ -149,7 +149,7 @@ static inline void ModelBLDC_Calc(modelBLDC_t *p)
 		p->omega = 0.0f;
 		d_omega = 0.0f;
 	}
-	p->omega = p->omega + d_omega;		 //скорость
+	p->omega = p->omega + d_omega;		  //скорость
 	p->omega_rpm = p->omega * 9.5492965f; // coef: (1/(2*pi)) * 60
 
 	p->power = p->omega * p->torque;
@@ -171,15 +171,15 @@ static inline void ModelBLDC_Calc(modelBLDC_t *p)
 	// 	p->tetaR -= 2.0f * MOTOR_MODEL_PI;
 	// if (p->tetaR < 0.0f)
 	// 	p->tetaR += 2.0f * MOTOR_MODEL_PI;
-		
-		p->tetaRM = p->tetaRM + p->t * p->omega; //механическое положение ротора
-	if (p->tetaRM > MOTOR_MODEL_PI)	 //ограничиваем 0..2Пи
+
+	p->tetaRM = p->tetaRM + p->t * p->omega; //механическое положение ротора
+	if (p->tetaRM > MOTOR_MODEL_PI)			 //ограничиваем 0..2Пи
 		p->tetaRM = -2.0f * MOTOR_MODEL_PI - p->tetaRM;
 	if (p->tetaRM < -MOTOR_MODEL_PI)
 		p->tetaRM = 2.0f * MOTOR_MODEL_PI + p->tetaRM;
 
 	p->tetaR = p->tetaRM * p->pp;
-	if (p->tetaR > MOTOR_MODEL_PI)	 //ограничиваем 0..2Пи
+	if (p->tetaR > MOTOR_MODEL_PI) //ограничиваем 0..2Пи
 		p->tetaR = -2.0f * MOTOR_MODEL_PI - p->tetaR;
 	if (p->tetaR < -MOTOR_MODEL_PI)
 		p->tetaR = 2.0f * MOTOR_MODEL_PI + p->tetaR;

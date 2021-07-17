@@ -1,4 +1,4 @@
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -26,7 +26,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
   23              		.thumb_func
   24              		.fpu fpv4-sp-d16
   26              	MX_SYS_Init:
-  27              	.LFB2019:
+  27              	.LFB2119:
   28              		.file 1 "Src/sys.c"
    1:Src/sys.c     **** /**
    2:Src/sys.c     ****   ******************************************************************************
@@ -58,7 +58,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
   28:Src/sys.c     **** void MX_SYS_Init(void)
   29:Src/sys.c     **** {
   29              		.loc 1 29 1 view -0
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 2
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 2
 
 
   30              		.cfi_startproc
@@ -118,7 +118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
   40:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
   41:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #ifdef __cplusplus
   42:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** extern "C" {
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 3
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 3
 
 
   43:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #endif
@@ -178,7 +178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
   97:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_GPIOG          RCC_AHB2ENR_GPIOGEN
   98:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_CCM            RCC_AHB2SMENR_CCMSMEN
   99:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_SRAM2          RCC_AHB2SMENR_SRAM2SMEN
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 4
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 4
 
 
  100:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_ADC12          RCC_AHB2ENR_ADC12EN
@@ -238,7 +238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  154:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_UART4          RCC_APB1ENR1_UART4EN
  155:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #endif /* UART4 */
  156:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #if defined(UART5)
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 5
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 5
 
 
  157:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_UART5          RCC_APB1ENR1_UART5EN
@@ -298,7 +298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  211:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
  212:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
  213:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @}
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 6
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 6
 
 
  214:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
@@ -358,7 +358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  268:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_FMAC
  269:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_FLASH
  270:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CRC
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 7
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 7
 
 
  271:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval State of Periphs (1 or 0).
@@ -418,7 +418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  325:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
  326:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
  327:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 8
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 8
 
 
  328:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @brief  Release AHB1 peripherals reset.
@@ -478,7 +478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  382:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
  383:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @brief  Disable AHB1 peripheral clocks in Sleep and Stop modes
  384:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @rmtoll AHB1SMENR    DMA1SMEN      LL_AHB1_GRP1_DisableClockStopSleep\n
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 9
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 9
 
 
  385:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1SMENR    DMA2SMEN      LL_AHB1_GRP1_DisableClockStopSleep\n
@@ -538,7 +538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  439:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOF
  440:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOG
  441:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_ADC12
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 10
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 10
 
 
  442:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_ADC345 (*)
@@ -598,7 +598,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  496:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         (*) value not defined in all devices.
  497:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval State of Periphs (1 or 0).
  498:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 11
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 11
 
 
  499:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** __STATIC_INLINE uint32_t LL_AHB2_GRP1_IsEnabledClock(uint32_t Periphs)
@@ -658,7 +658,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  553:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2RSTR      GPIOFRST       LL_AHB2_GRP1_ForceReset\n
  554:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2RSTR      GPIOGRST       LL_AHB2_GRP1_ForceReset\n
  555:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2RSTR      ADC12RST       LL_AHB2_GRP1_ForceReset\n
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 12
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 12
 
 
  556:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2RSTR      ADC345RST      LL_AHB2_GRP1_ForceReset\n
@@ -718,7 +718,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  610:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOE
  611:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOF
  612:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOG
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 13
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 13
 
 
  613:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_ADC12
@@ -778,7 +778,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  667:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *
  668:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         (*) value not defined in all devices.
  669:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval None
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 14
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 14
 
 
  670:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
@@ -838,7 +838,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  724:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
  725:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
  726:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 15
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 15
 
 
  727:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @}
@@ -898,7 +898,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  781:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** __STATIC_INLINE void LL_AHB3_GRP1_DisableClock(uint32_t Periphs)
  782:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** {
  783:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   CLEAR_BIT(RCC->AHB3ENR, Periphs);
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 16
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 16
 
 
  784:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
@@ -958,7 +958,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  838:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
  839:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
  840:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 17
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 17
 
 
  841:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @brief  Disable AHB3 peripheral clocks in Sleep and Stop modes
@@ -1018,7 +1018,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  895:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_CRS
  896:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_RTCAPB
  897:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_WWDG
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 18
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 18
 
 
  898:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_SPI2
@@ -1078,7 +1078,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  952:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     TIM6EN        LL_APB1_GRP1_IsEnabledClock\n
  953:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     TIM7EN        LL_APB1_GRP1_IsEnabledClock\n
  954:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     CRSEN         LL_APB1_GRP1_IsEnabledClock\n
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 19
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 19
 
 
  955:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     RTCAPBEN      LL_APB1_GRP1_IsEnabledClock\n
@@ -1138,7 +1138,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
 1009:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP2_PERIPH_I2C4 (*)
 1010:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP2_PERIPH_UCPD1
 1011:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 20
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 20
 
 
 1012:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         (*) value not defined in all devices.
@@ -1198,7 +1198,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
 1066:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_LPTIM1
 1067:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *
 1068:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         (*) value not defined in all devices.
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 21
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 21
 
 
 1069:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval None
@@ -1258,7 +1258,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
 1123:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_CRS
 1124:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_SPI2
 1125:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_SPI3
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 22
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 22
 
 
 1126:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USART2
@@ -1318,7 +1318,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
 1180:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1RSTR1     I2C2RST        LL_APB1_GRP1_ReleaseReset\n
 1181:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1RSTR1     USBRST         LL_APB1_GRP1_ReleaseReset\n
 1182:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1RSTR1     FDCANRST       LL_APB1_GRP1_ReleaseReset\n
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 23
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 23
 
 
 1183:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1RSTR1     PWRRST         LL_APB1_GRP1_ReleaseReset\n
@@ -1378,7 +1378,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
 1237:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1SMENR1     TIM3SMEN        LL_APB1_GRP1_EnableClockStopSleep\n
 1238:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1SMENR1     TIM4SMEN        LL_APB1_GRP1_EnableClockStopSleep\n
 1239:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1SMENR1     TIM5SMEN        LL_APB1_GRP1_EnableClockStopSleep\n
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 24
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 24
 
 
 1240:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1SMENR1     TIM6SMEN        LL_APB1_GRP1_EnableClockStopSleep\n
@@ -1438,7 +1438,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
 1294:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
 1295:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @brief  Enable APB1 peripheral clocks in Sleep and Stop modes
 1296:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @rmtoll APB1SMENR2     LPUART1SMEN     LL_APB1_GRP2_EnableClockStopSleep\n
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 25
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 25
 
 
 1297:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1SMENR2     I2C4SMEN        LL_APB1_GRP2_EnableClockStopSleep\n
@@ -1498,7 +1498,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
 1351:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_SPI3
 1352:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USART2
 1353:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USART3
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 26
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 26
 
 
 1354:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_UART4 (*)
@@ -1558,7 +1558,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
 1408:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB2ENR      TIM17EN       LL_APB2_GRP1_EnableClock\n
 1409:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB2ENR      TIM20EN       LL_APB2_GRP1_EnableClock\n
 1410:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB2ENR      SAI1EN        LL_APB2_GRP1_EnableClock\n
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 27
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 27
 
 
 1411:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB2ENR      HRTIM1EN      LL_APB2_GRP1_EnableClock
@@ -1618,7 +1618,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  918:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   /* Delay after an RCC peripheral clock enabling */
   68              		.loc 2 918 3 view .LVU13
   69 0016 9A6D     		ldr	r2, [r3, #88]
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 28
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 28
 
 
   70 0018 42F08052 		orr	r2, r2, #268435456
@@ -1678,7 +1678,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
   28:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /* Includes ------------------------------------------------------------------*/
   29:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #include "stm32g4xx.h"
   30:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 29
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 29
 
 
   31:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /** @addtogroup STM32G4xx_LL_Driver
@@ -1738,7 +1738,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
   85:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #endif /* PWR_SR2_PVMO3 */
   86:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #if defined(PWR_SR2_PVMO2)
   87:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_SR2_PVMO2                   PWR_SR2_PVMO2
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 30
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 30
 
 
   88:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #endif /* PWR_SR2_PVMO2 */
@@ -1798,7 +1798,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  142:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_PVDLEVEL_0                  (PWR_CR2_PLS_LEV0)  /* VPVD0 around 2.0 V */
  143:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_PVDLEVEL_1                  (PWR_CR2_PLS_LEV1)  /* VPVD1 around 2.2 V */
  144:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_PVDLEVEL_2                  (PWR_CR2_PLS_LEV2)  /* VPVD2 around 2.4 V */
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 31
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 31
 
 
  145:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_PVDLEVEL_3                  (PWR_CR2_PLS_LEV3)  /* VPVD3 around 2.5 V */
@@ -1858,7 +1858,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  199:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_GPIO_BIT_7                  ((uint32_t)0x00000080)
  200:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_GPIO_BIT_8                  ((uint32_t)0x00000100)
  201:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_GPIO_BIT_9                  ((uint32_t)0x00000200)
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 32
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 32
 
 
  202:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** #define LL_PWR_GPIO_BIT_10                 ((uint32_t)0x00000400)
@@ -1918,7 +1918,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  256:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
  257:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
  258:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Switch the regulator from main mode to low-power mode
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 33
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 33
 
 
  259:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR1          LPR           LL_PWR_EnableLowPowerRunMode
@@ -1978,7 +1978,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  313:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR1          VOS           LL_PWR_SetRegulVoltageScaling
  314:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @param  VoltageScaling This parameter can be one of the following values:
  315:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_REGU_VOLTAGE_SCALE1
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 34
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 34
 
 
  316:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_REGU_VOLTAGE_SCALE2
@@ -2038,7 +2038,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  370:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
  371:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
  372:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Enable access to the backup domain
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 35
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 35
 
 
  373:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR1          DBP           LL_PWR_EnableBkUpAccess
@@ -2098,7 +2098,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  427:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_MODE_SHUTDOWN
  428:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
  429:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE uint32_t LL_PWR_GetPowerMode(void)
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 36
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 36
 
 
  430:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** {
@@ -2158,7 +2158,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  484:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   CLEAR_BIT(PWR->CR3, PWR_CR3_UCPD_DBDIS);
  485:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** }
  486:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 37
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 37
 
 
  487:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
@@ -2218,7 +2218,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  541:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
  542:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Check if VDDUSB supply is enabled
  543:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR2          USV           LL_PWR_IsEnabledVddUSB
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 38
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 38
 
 
  544:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval State of bit (1 or 0).
@@ -2278,7 +2278,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  598:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @param  PeriphVoltage This parameter can be one of the following values:
  599:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVM_VDDA_COMP     (*)
  600:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVM_VDDA_FASTDAC  (*)
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 39
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 39
 
 
  601:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   *         @arg @ref LL_PWR_PVM_VDDA_ADC      
@@ -2338,7 +2338,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  655:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
  656:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
  657:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Configure the voltage threshold detected by the Power Voltage Detector
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 40
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 40
 
 
  658:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR2          PLS           LL_PWR_SetPVDLevel
@@ -2398,7 +2398,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  712:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** 
  713:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** /**
  714:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @brief  Check if Power Voltage Detector is enabled
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 41
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 41
 
 
  715:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR2          PVDE          LL_PWR_IsEnabledPVD
@@ -2458,7 +2458,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  769:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @rmtoll CR3          UCPD_DBDIS          LL_PWR_DisableDeadBatteryPD
  770:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   * @retval None
  771:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 42
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 42
 
 
  772:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h **** __STATIC_INLINE void LL_PWR_DisableDeadBatteryPD(void)
@@ -2486,7 +2486,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  106 0038 00100240 		.word	1073876992
  107 003c 00700040 		.word	1073770496
  108              		.cfi_endproc
- 109              	.LFE2019:
+ 109              	.LFE2119:
  111              		.section	.text.flashUnlock,"ax",%progbits
  112              		.align	1
  113              		.global	flashUnlock
@@ -2495,7 +2495,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  116              		.thumb_func
  117              		.fpu fpv4-sp-d16
  119              	flashUnlock:
- 120              	.LFB2020:
+ 120              	.LFB2120:
   39:Src/sys.c     **** 
   40:Src/sys.c     **** /* USER CODE BEGIN 1 */
   41:Src/sys.c     **** void flashUnlock(void)
@@ -2518,7 +2518,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  134 000a 9A60     		str	r2, [r3, #8]
   45:Src/sys.c     **** }
  135              		.loc 1 45 1 view .LVU28
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 43
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 43
 
 
  136 000c 7047     		bx	lr
@@ -2528,7 +2528,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  140 0010 00200240 		.word	1073881088
  141 0014 23016745 		.word	1164378403
  142              		.cfi_endproc
- 143              	.LFE2020:
+ 143              	.LFE2120:
  145              		.section	.text.flashLock,"ax",%progbits
  146              		.align	1
  147              		.global	flashLock
@@ -2537,7 +2537,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  150              		.thumb_func
  151              		.fpu fpv4-sp-d16
  153              	flashLock:
- 154              	.LFB2021:
+ 154              	.LFB2121:
   46:Src/sys.c     **** 
   47:Src/sys.c     **** void flashLock(void)
   48:Src/sys.c     **** {
@@ -2561,7 +2561,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  170              	.L9:
  171 000c 00200240 		.word	1073881088
  172              		.cfi_endproc
- 173              	.LFE2021:
+ 173              	.LFE2121:
  175              		.section	.text.flashReadData,"ax",%progbits
  176              		.align	1
  177              		.global	flashReadData
@@ -2571,14 +2571,14 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  181              		.fpu fpv4-sp-d16
  183              	flashReadData:
  184              	.LVL3:
- 185              	.LFB2022:
+ 185              	.LFB2122:
   51:Src/sys.c     **** 
   52:Src/sys.c     **** uint32_t flashReadData(uint32_t address)
   53:Src/sys.c     **** {
  186              		.loc 1 53 1 is_stmt 1 view -0
  187              		.cfi_startproc
  188              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 44
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 44
 
 
  189              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -2592,7 +2592,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  195              		.loc 1 55 1 view .LVU36
  196 0002 7047     		bx	lr
  197              		.cfi_endproc
- 198              	.LFE2022:
+ 198              	.LFE2122:
  200              		.section	.text.FLASH_PageErase,"ax",%progbits
  201              		.align	1
  202              		.global	FLASH_PageErase
@@ -2601,7 +2601,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  205              		.thumb_func
  206              		.fpu fpv4-sp-d16
  208              	FLASH_PageErase:
- 209              	.LFB2023:
+ 209              	.LFB2123:
   56:Src/sys.c     **** 
   57:Src/sys.c     **** void FLASH_PageErase(uint32_t Page)
   58:Src/sys.c     **** {
@@ -2638,7 +2638,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  233              		.loc 1 63 3 view .LVU43
  234 001c 1A69     		ldr	r2, [r3, #16]
  235 001e 42F08002 		orr	r2, r2, #128
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 45
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 45
 
 
  236 0022 1A61     		str	r2, [r3, #16]
@@ -2698,7 +2698,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
   75:Src/sys.c     **** }
  277              		.loc 1 75 1 is_stmt 0 view .LVU55
  278 006c 7047     		bx	lr
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 46
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 46
 
 
  279              	.L16:
@@ -2706,7 +2706,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  281              	.L15:
  282 0070 00200240 		.word	1073881088
  283              		.cfi_endproc
- 284              	.LFE2023:
+ 284              	.LFE2123:
  286              		.section	.text.FLASH_Program_DoubleWord,"ax",%progbits
  287              		.align	1
  288              		.global	FLASH_Program_DoubleWord
@@ -2715,7 +2715,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  291              		.thumb_func
  292              		.fpu fpv4-sp-d16
  294              	FLASH_Program_DoubleWord:
- 295              	.LFB2024:
+ 295              	.LFB2124:
   76:Src/sys.c     **** 
   77:Src/sys.c     **** void FLASH_Program_DoubleWord(uint32_t Address, uint64_t Data)
   78:Src/sys.c     **** {
@@ -2758,7 +2758,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
   86:Src/sys.c     ****     (independently of compiler optimization behavior) */
   87:Src/sys.c     ****   __ISB();
  323              		.loc 1 87 3 is_stmt 1 view .LVU64
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 47
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 47
 
 
  324              	.LBB21:
@@ -2818,7 +2818,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
   52:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __NO_RETURN
   53:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __NO_RETURN                            __attribute__((__noreturn__))
   54:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 48
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 48
 
 
   55:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __USED
@@ -2878,7 +2878,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  109:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  110:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __ALIGNED
  111:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __ALIGNED(x)                           __attribute__((aligned(x)))
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 49
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 49
 
 
  112:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -2938,7 +2938,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  166:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_CONTROL_NS(void)
  167:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  168:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 50
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 50
 
 
  169:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -2998,7 +2998,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  223:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, apsr" : "=r" (result) );
  224:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
  225:Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 51
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 51
 
 
  226:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -3058,7 +3058,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  280:Drivers/CMSIS/Include/cmsis_gcc.h **** }
  281:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  282:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 52
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 52
 
 
  283:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
@@ -3118,7 +3118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  337:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
  338:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  339:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Main Stack Pointer (non-secure)
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 53
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 53
 
 
  340:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the non-secure Main Stack Pointer (MSP) when in secure state.
@@ -3178,7 +3178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  394:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current state of the non-secure priority mask bit from the Priority Mask Reg
  395:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Priority Mask value
  396:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 54
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 54
 
 
  397:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_PRIMASK_NS(void)
@@ -3238,7 +3238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  451:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  452:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsid f" : : : "memory");
  453:Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 55
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 55
 
 
  454:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -3298,7 +3298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  508:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  509:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  510:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 56
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 56
 
 
  511:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Base Priority with condition
@@ -3358,7 +3358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  565:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Fault Mask (non-secure)
  566:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the non-secure Fault Mask register when in secure state.
  567:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    faultMask  Fault Mask value to set
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 57
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 57
 
 
  568:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
@@ -3418,7 +3418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  622:Drivers/CMSIS/Include/cmsis_gcc.h ****   return result;
  623:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  624:Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 58
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 58
 
 
  625:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -3478,7 +3478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  679:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_MSPLIM(void)
  680:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  681:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (!(defined (__ARM_ARCH_8M_MAIN__ ) && (__ARM_ARCH_8M_MAIN__ == 1)) && \
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 59
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 59
 
 
  682:Drivers/CMSIS/Include/cmsis_gcc.h ****     (!defined (__ARM_FEATURE_CMSE) || (__ARM_FEATURE_CMSE < 3)))
@@ -3538,7 +3538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  736:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  737:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE  ) && (__ARM_FEATURE_CMSE   == 3))
  738:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 60
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 60
 
 
  739:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Main Stack Pointer Limit (non-secure)
@@ -3598,7 +3598,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  793:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  794:Drivers/CMSIS/Include/cmsis_gcc.h **** #if ((defined (__FPU_PRESENT) && (__FPU_PRESENT == 1U)) && \
  795:Drivers/CMSIS/Include/cmsis_gcc.h ****      (defined (__FPU_USED   ) && (__FPU_USED    == 1U))     )
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 61
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 61
 
 
  796:Drivers/CMSIS/Include/cmsis_gcc.h **** #if __has_builtin(__builtin_arm_set_fpscr)
@@ -3658,7 +3658,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  850:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __WFE()                             __ASM volatile ("wfe")
  851:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  852:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 62
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 62
 
 
  853:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
@@ -3718,7 +3718,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  356 0030 5361     		str	r3, [r2, #20]
   95:Src/sys.c     **** }
  357              		.loc 1 95 1 view .LVU75
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 63
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 63
 
 
  358 0032 5DF8044B 		ldr	r4, [sp], #4
@@ -3731,7 +3731,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  365              	.L21:
  366 0038 00200240 		.word	1073881088
  367              		.cfi_endproc
- 368              	.LFE2024:
+ 368              	.LFE2124:
  370              		.section	.text.FLASH_UpdateConfig,"ax",%progbits
  371              		.align	1
  372              		.global	FLASH_UpdateConfig
@@ -3741,7 +3741,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  376              		.fpu fpv4-sp-d16
  378              	FLASH_UpdateConfig:
  379              	.LVL9:
- 380              	.LFB2025:
+ 380              	.LFB2125:
   96:Src/sys.c     **** 
   97:Src/sys.c     **** void FLASH_UpdateConfig(foc_t *p, hall_t *hp)
   98:Src/sys.c     **** {
@@ -3778,7 +3778,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  406              		.loc 4 140 27 view .LVU82
  407              	.LBB25:
  142:Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 64
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 64
 
 
  408              		.loc 4 142 3 view .LVU83
@@ -3793,7 +3793,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  102:Src/sys.c     ****     /* Clear OPTVERR bit set on virgin samples */
  103:Src/sys.c     ****     SET_BIT(FLASH->SR, FLASH_SR_OPTVERR);
  417              		.loc 1 103 5 view .LVU84
- 418 000e 264A     		ldr	r2, .L30
+ 418 000e 274A     		ldr	r2, .L30
  419 0010 1369     		ldr	r3, [r2, #16]
  420 0012 43F40043 		orr	r3, r3, #32768
  421 0016 1361     		str	r3, [r2, #16]
@@ -3812,23 +3812,23 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  108:Src/sys.c     ****     FLASH_Program_DoubleWord(Address, *(uint32_t *)&p->config.Rs);
  430              		.loc 1 108 5 view .LVU88
  431 0022 0025     		movs	r5, #0
- 432 0024 D4F83823 		ldr	r2, [r4, #824]
+ 432 0024 D4F87C23 		ldr	r2, [r4, #892]
  433 0028 2B46     		mov	r3, r5
- 434 002a 2048     		ldr	r0, .L30+4
+ 434 002a 2148     		ldr	r0, .L30+4
  435 002c FFF7FEFF 		bl	FLASH_Program_DoubleWord
  436              	.LVL12:
  109:Src/sys.c     ****     FLASH_Program_DoubleWord(Address + 8, *(uint32_t *)&p->config.Ld);
  437              		.loc 1 109 5 view .LVU89
- 438 0030 D4F83C23 		ldr	r2, [r4, #828]
+ 438 0030 D4F88023 		ldr	r2, [r4, #896]
  439 0034 2B46     		mov	r3, r5
- 440 0036 1E48     		ldr	r0, .L30+8
+ 440 0036 1F48     		ldr	r0, .L30+8
  441 0038 FFF7FEFF 		bl	FLASH_Program_DoubleWord
  442              	.LVL13:
  110:Src/sys.c     ****     FLASH_Program_DoubleWord(Address + 8 * 2, *(uint32_t *)&p->config.Lq);
  443              		.loc 1 110 5 view .LVU90
- 444 003c D4F84023 		ldr	r2, [r4, #832]
+ 444 003c D4F88423 		ldr	r2, [r4, #900]
  445 0040 2B46     		mov	r3, r5
- 446 0042 1C48     		ldr	r0, .L30+12
+ 446 0042 1D48     		ldr	r0, .L30+12
  447 0044 FFF7FEFF 		bl	FLASH_Program_DoubleWord
  448              	.LVL14:
  111:Src/sys.c     ****     // Hall table offset angles
@@ -3836,9 +3836,9 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  449              		.loc 1 112 5 view .LVU91
  450 0048 726F     		ldr	r2, [r6, #116]
  451 004a 2B46     		mov	r3, r5
- 452 004c 1A48     		ldr	r0, .L30+16
+ 452 004c 1B48     		ldr	r0, .L30+16
  453 004e FFF7FEFF 		bl	FLASH_Program_DoubleWord
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 65
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 65
 
 
  454              	.LVL15:
@@ -3846,42 +3846,42 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  455              		.loc 1 113 5 view .LVU92
  456 0052 B26F     		ldr	r2, [r6, #120]
  457 0054 2B46     		mov	r3, r5
- 458 0056 1948     		ldr	r0, .L30+20
+ 458 0056 1A48     		ldr	r0, .L30+20
  459 0058 FFF7FEFF 		bl	FLASH_Program_DoubleWord
  460              	.LVL16:
  114:Src/sys.c     ****     FLASH_Program_DoubleWord(Address + 8 * 5, *(uint32_t *)&hp->offsetAvg[2]);
  461              		.loc 1 114 5 view .LVU93
  462 005c F26F     		ldr	r2, [r6, #124]
  463 005e 2B46     		mov	r3, r5
- 464 0060 1748     		ldr	r0, .L30+24
+ 464 0060 1848     		ldr	r0, .L30+24
  465 0062 FFF7FEFF 		bl	FLASH_Program_DoubleWord
  466              	.LVL17:
  115:Src/sys.c     ****     FLASH_Program_DoubleWord(Address + 8 * 6, *(uint32_t *)&hp->offsetAvg[3]);
  467              		.loc 1 115 5 view .LVU94
  468 0066 D6F88020 		ldr	r2, [r6, #128]
  469 006a 2B46     		mov	r3, r5
- 470 006c 1548     		ldr	r0, .L30+28
+ 470 006c 1648     		ldr	r0, .L30+28
  471 006e FFF7FEFF 		bl	FLASH_Program_DoubleWord
  472              	.LVL18:
  116:Src/sys.c     ****     FLASH_Program_DoubleWord(Address + 8 * 7, *(uint32_t *)&hp->offsetAvg[4]);
  473              		.loc 1 116 5 view .LVU95
  474 0072 D6F88420 		ldr	r2, [r6, #132]
  475 0076 2B46     		mov	r3, r5
- 476 0078 1348     		ldr	r0, .L30+32
+ 476 0078 1448     		ldr	r0, .L30+32
  477 007a FFF7FEFF 		bl	FLASH_Program_DoubleWord
  478              	.LVL19:
  117:Src/sys.c     ****     FLASH_Program_DoubleWord(Address + 8 * 8, *(uint32_t *)&hp->offsetAvg[5]);
  479              		.loc 1 117 5 view .LVU96
  480 007e D6F88820 		ldr	r2, [r6, #136]
  481 0082 2B46     		mov	r3, r5
- 482 0084 1148     		ldr	r0, .L30+36
+ 482 0084 1248     		ldr	r0, .L30+36
  483 0086 FFF7FEFF 		bl	FLASH_Program_DoubleWord
  484              	.LVL20:
  118:Src/sys.c     ****     FLASH_Program_DoubleWord(Address + 8 * 9, *(uint32_t *)&hp->offset);
  485              		.loc 1 118 5 view .LVU97
  486 008a 3269     		ldr	r2, [r6, #16]
  487 008c 2B46     		mov	r3, r5
- 488 008e 1048     		ldr	r0, .L30+40
+ 488 008e 1148     		ldr	r0, .L30+40
  489 0090 FFF7FEFF 		bl	FLASH_Program_DoubleWord
  490              	.LVL21:
  119:Src/sys.c     ****     // End
@@ -3889,305 +3889,309 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 1
  491              		.loc 1 120 5 view .LVU98
  492 0094 FFF7FEFF 		bl	flashLock
  493              	.LVL22:
- 121:Src/sys.c     ****     p->paramIdState = Enter;
+ 121:Src/sys.c     ****     p->paramIdState = ID_ENTER;
  494              		.loc 1 121 5 view .LVU99
  495              		.loc 1 121 21 is_stmt 0 view .LVU100
  496 0098 A570     		strb	r5, [r4, #2]
- 122:Src/sys.c     ****     hp->offsetState = 0;
+ 122:Src/sys.c     ****     p->paramIdRunState = ID_RUN_HALL_FWD;
  497              		.loc 1 122 5 is_stmt 1 view .LVU101
- 498              		.loc 1 122 21 is_stmt 0 view .LVU102
- 499 009a 7573     		strb	r5, [r6, #13]
- 123:Src/sys.c     ****     p->driveState = STOP;
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 66
+ 498              		.loc 1 122 24 is_stmt 0 view .LVU102
+ 499 009a 0123     		movs	r3, #1
+ 500 009c E370     		strb	r3, [r4, #3]
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 66
 
 
- 500              		.loc 1 123 5 is_stmt 1 view .LVU103
- 501              		.loc 1 123 19 is_stmt 0 view .LVU104
- 502 009c 2570     		strb	r5, [r4]
- 124:Src/sys.c     ****     p->data.flashUpdateFlag = 1;
- 503              		.loc 1 124 5 is_stmt 1 view .LVU105
- 504              		.loc 1 124 29 is_stmt 0 view .LVU106
- 505 009e 0123     		movs	r3, #1
- 506 00a0 84F8CA30 		strb	r3, [r4, #202]
- 125:Src/sys.c     ****     __enable_irq();
+ 123:Src/sys.c     ****     hp->offsetState = 0;
+ 501              		.loc 1 123 5 is_stmt 1 view .LVU103
+ 502              		.loc 1 123 21 is_stmt 0 view .LVU104
+ 503 009e 7573     		strb	r5, [r6, #13]
+ 124:Src/sys.c     ****     p->driveState = STOP;
+ 504              		.loc 1 124 5 is_stmt 1 view .LVU105
+ 505              		.loc 1 124 19 is_stmt 0 view .LVU106
+ 506 00a0 2570     		strb	r5, [r4]
+ 125:Src/sys.c     ****     p->data.flashUpdateFlag = 1;
  507              		.loc 1 125 5 is_stmt 1 view .LVU107
- 508              	.LBB26:
- 509              	.LBI26:
+ 508              		.loc 1 125 29 is_stmt 0 view .LVU108
+ 509 00a2 84F8F230 		strb	r3, [r4, #242]
+ 126:Src/sys.c     ****     __enable_irq();
+ 510              		.loc 1 126 5 is_stmt 1 view .LVU109
+ 511              	.LBB26:
+ 512              	.LBI26:
  129:Drivers/CMSIS/Include/cmsis_gcc.h **** {
- 510              		.loc 4 129 27 view .LVU108
- 511              	.LBB27:
+ 513              		.loc 4 129 27 view .LVU110
+ 514              	.LBB27:
  131:Drivers/CMSIS/Include/cmsis_gcc.h **** }
- 512              		.loc 4 131 3 view .LVU109
- 513              		.syntax unified
- 514              	@ 131 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
- 515 00a4 62B6     		cpsie i
- 516              	@ 0 "" 2
- 517              		.thumb
- 518              		.syntax unified
- 519              	.LBE27:
- 520              	.LBE26:
- 521              	.LBE23:
- 126:Src/sys.c     ****   }
- 127:Src/sys.c     **** }
- 522              		.loc 1 127 1 is_stmt 0 view .LVU110
- 523 00a6 70BD     		pop	{r4, r5, r6, pc}
- 524              	.LVL23:
- 525              	.L31:
- 526              		.loc 1 127 1 view .LVU111
- 527              		.align	2
- 528              	.L30:
- 529 00a8 00200240 		.word	1073881088
- 530 00ac 00F00708 		.word	134737920
- 531 00b0 08F00708 		.word	134737928
- 532 00b4 10F00708 		.word	134737936
- 533 00b8 18F00708 		.word	134737944
- 534 00bc 20F00708 		.word	134737952
- 535 00c0 28F00708 		.word	134737960
- 536 00c4 30F00708 		.word	134737968
- 537 00c8 38F00708 		.word	134737976
- 538 00cc 40F00708 		.word	134737984
- 539 00d0 48F00708 		.word	134737992
- 540              		.cfi_endproc
- 541              	.LFE2025:
- 543              		.section	.text.FLASH_LoadConfig,"ax",%progbits
- 544              		.align	1
- 545              		.global	FLASH_LoadConfig
- 546              		.syntax unified
- 547              		.thumb
- 548              		.thumb_func
- 549              		.fpu fpv4-sp-d16
- 551              	FLASH_LoadConfig:
- 552              	.LVL24:
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 67
+ 515              		.loc 4 131 3 view .LVU111
+ 516              		.syntax unified
+ 517              	@ 131 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 518 00a6 62B6     		cpsie i
+ 519              	@ 0 "" 2
+ 520              		.thumb
+ 521              		.syntax unified
+ 522              	.LBE27:
+ 523              	.LBE26:
+ 524              	.LBE23:
+ 127:Src/sys.c     ****   }
+ 128:Src/sys.c     **** }
+ 525              		.loc 1 128 1 is_stmt 0 view .LVU112
+ 526 00a8 70BD     		pop	{r4, r5, r6, pc}
+ 527              	.LVL23:
+ 528              	.L31:
+ 529              		.loc 1 128 1 view .LVU113
+ 530 00aa 00BF     		.align	2
+ 531              	.L30:
+ 532 00ac 00200240 		.word	1073881088
+ 533 00b0 00F00708 		.word	134737920
+ 534 00b4 08F00708 		.word	134737928
+ 535 00b8 10F00708 		.word	134737936
+ 536 00bc 18F00708 		.word	134737944
+ 537 00c0 20F00708 		.word	134737952
+ 538 00c4 28F00708 		.word	134737960
+ 539 00c8 30F00708 		.word	134737968
+ 540 00cc 38F00708 		.word	134737976
+ 541 00d0 40F00708 		.word	134737984
+ 542 00d4 48F00708 		.word	134737992
+ 543              		.cfi_endproc
+ 544              	.LFE2125:
+ 546              		.section	.text.FLASH_LoadConfig,"ax",%progbits
+ 547              		.align	1
+ 548              		.global	FLASH_LoadConfig
+ 549              		.syntax unified
+ 550              		.thumb
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 67
 
 
- 553              	.LFB2026:
- 128:Src/sys.c     **** 
- 129:Src/sys.c     **** void FLASH_LoadConfig(foc_t *p, hall_t *hp)
- 130:Src/sys.c     **** {
- 554              		.loc 1 130 1 is_stmt 1 view -0
- 555              		.cfi_startproc
- 556              		@ args = 0, pretend = 0, frame = 0
- 557              		@ frame_needed = 0, uses_anonymous_args = 0
- 558              		.loc 1 130 1 is_stmt 0 view .LVU113
- 559 0000 38B5     		push	{r3, r4, r5, lr}
- 560              	.LCFI5:
- 561              		.cfi_def_cfa_offset 16
- 562              		.cfi_offset 3, -16
- 563              		.cfi_offset 4, -12
- 564              		.cfi_offset 5, -8
- 565              		.cfi_offset 14, -4
- 566 0002 0546     		mov	r5, r0
- 567 0004 0C46     		mov	r4, r1
- 131:Src/sys.c     ****   uint32_t Address = FLASH_CONFIG_ADR_START;
- 568              		.loc 1 131 3 is_stmt 1 view .LVU114
- 569              	.LVL25:
- 132:Src/sys.c     **** 
- 133:Src/sys.c     ****   uint32_t u = flashReadData(Address);
- 570              		.loc 1 133 3 view .LVU115
- 571              		.loc 1 133 16 is_stmt 0 view .LVU116
- 572 0006 1748     		ldr	r0, .L34
- 573              	.LVL26:
- 574              		.loc 1 133 16 view .LVU117
- 575 0008 FFF7FEFF 		bl	flashReadData
- 576              	.LVL27:
- 134:Src/sys.c     ****   p->config.Rs = *(float *)&u;
- 577              		.loc 1 134 3 is_stmt 1 view .LVU118
- 578              		.loc 1 134 16 is_stmt 0 view .LVU119
- 579 000c C5F83803 		str	r0, [r5, #824]	@ float
- 135:Src/sys.c     **** 
- 136:Src/sys.c     ****   u = flashReadData(Address + 8);
- 580              		.loc 1 136 3 is_stmt 1 view .LVU120
- 581              		.loc 1 136 7 is_stmt 0 view .LVU121
- 582 0010 1548     		ldr	r0, .L34+4
- 583              	.LVL28:
- 584              		.loc 1 136 7 view .LVU122
- 585 0012 FFF7FEFF 		bl	flashReadData
- 586              	.LVL29:
- 137:Src/sys.c     ****   p->config.Ld = *(float *)&u;
- 587              		.loc 1 137 3 is_stmt 1 view .LVU123
- 588              		.loc 1 137 16 is_stmt 0 view .LVU124
- 589 0016 C5F83C03 		str	r0, [r5, #828]	@ float
- 138:Src/sys.c     **** 
- 139:Src/sys.c     ****   u = flashReadData(Address + 8 * 2);
- 590              		.loc 1 139 3 is_stmt 1 view .LVU125
- 591              		.loc 1 139 7 is_stmt 0 view .LVU126
- 592 001a 1448     		ldr	r0, .L34+8
- 593              	.LVL30:
- 594              		.loc 1 139 7 view .LVU127
- 595 001c FFF7FEFF 		bl	flashReadData
- 596              	.LVL31:
- 140:Src/sys.c     ****   p->config.Lq = *(float *)&u;
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 68
+ 551              		.thumb_func
+ 552              		.fpu fpv4-sp-d16
+ 554              	FLASH_LoadConfig:
+ 555              	.LVL24:
+ 556              	.LFB2126:
+ 129:Src/sys.c     **** 
+ 130:Src/sys.c     **** void FLASH_LoadConfig(foc_t *p, hall_t *hp)
+ 131:Src/sys.c     **** {
+ 557              		.loc 1 131 1 is_stmt 1 view -0
+ 558              		.cfi_startproc
+ 559              		@ args = 0, pretend = 0, frame = 0
+ 560              		@ frame_needed = 0, uses_anonymous_args = 0
+ 561              		.loc 1 131 1 is_stmt 0 view .LVU115
+ 562 0000 38B5     		push	{r3, r4, r5, lr}
+ 563              	.LCFI5:
+ 564              		.cfi_def_cfa_offset 16
+ 565              		.cfi_offset 3, -16
+ 566              		.cfi_offset 4, -12
+ 567              		.cfi_offset 5, -8
+ 568              		.cfi_offset 14, -4
+ 569 0002 0546     		mov	r5, r0
+ 570 0004 0C46     		mov	r4, r1
+ 132:Src/sys.c     ****   uint32_t Address = FLASH_CONFIG_ADR_START;
+ 571              		.loc 1 132 3 is_stmt 1 view .LVU116
+ 572              	.LVL25:
+ 133:Src/sys.c     **** 
+ 134:Src/sys.c     ****   uint32_t u = flashReadData(Address);
+ 573              		.loc 1 134 3 view .LVU117
+ 574              		.loc 1 134 16 is_stmt 0 view .LVU118
+ 575 0006 1748     		ldr	r0, .L34
+ 576              	.LVL26:
+ 577              		.loc 1 134 16 view .LVU119
+ 578 0008 FFF7FEFF 		bl	flashReadData
+ 579              	.LVL27:
+ 135:Src/sys.c     ****   p->config.Rs = *(float *)&u;
+ 580              		.loc 1 135 3 is_stmt 1 view .LVU120
+ 581              		.loc 1 135 16 is_stmt 0 view .LVU121
+ 582 000c C5F87C03 		str	r0, [r5, #892]	@ float
+ 136:Src/sys.c     **** 
+ 137:Src/sys.c     ****   u = flashReadData(Address + 8);
+ 583              		.loc 1 137 3 is_stmt 1 view .LVU122
+ 584              		.loc 1 137 7 is_stmt 0 view .LVU123
+ 585 0010 1548     		ldr	r0, .L34+4
+ 586              	.LVL28:
+ 587              		.loc 1 137 7 view .LVU124
+ 588 0012 FFF7FEFF 		bl	flashReadData
+ 589              	.LVL29:
+ 138:Src/sys.c     ****   p->config.Ld = *(float *)&u;
+ 590              		.loc 1 138 3 is_stmt 1 view .LVU125
+ 591              		.loc 1 138 16 is_stmt 0 view .LVU126
+ 592 0016 C5F88003 		str	r0, [r5, #896]	@ float
+ 139:Src/sys.c     **** 
+ 140:Src/sys.c     ****   u = flashReadData(Address + 8 * 2);
+ 593              		.loc 1 140 3 is_stmt 1 view .LVU127
+ 594              		.loc 1 140 7 is_stmt 0 view .LVU128
+ 595 001a 1448     		ldr	r0, .L34+8
+ 596              	.LVL30:
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 68
 
 
- 597              		.loc 1 140 3 is_stmt 1 view .LVU128
- 598              		.loc 1 140 16 is_stmt 0 view .LVU129
- 599 0020 C5F84003 		str	r0, [r5, #832]	@ float
- 141:Src/sys.c     **** 
- 142:Src/sys.c     ****   u = flashReadData(Address + 8 * 3);
- 600              		.loc 1 142 3 is_stmt 1 view .LVU130
- 601              		.loc 1 142 7 is_stmt 0 view .LVU131
- 602 0024 1248     		ldr	r0, .L34+12
- 603              	.LVL32:
- 604              		.loc 1 142 7 view .LVU132
- 605 0026 FFF7FEFF 		bl	flashReadData
- 606              	.LVL33:
- 143:Src/sys.c     ****   hp->offsetAvg[0] = *(float *)&u;
- 607              		.loc 1 143 3 is_stmt 1 view .LVU133
- 608              		.loc 1 143 20 is_stmt 0 view .LVU134
- 609 002a 6067     		str	r0, [r4, #116]	@ float
- 144:Src/sys.c     **** 
- 145:Src/sys.c     ****   u = flashReadData(Address + 8 * 4);
- 610              		.loc 1 145 3 is_stmt 1 view .LVU135
- 611              		.loc 1 145 7 is_stmt 0 view .LVU136
- 612 002c 1148     		ldr	r0, .L34+16
- 613              	.LVL34:
- 614              		.loc 1 145 7 view .LVU137
- 615 002e FFF7FEFF 		bl	flashReadData
- 616              	.LVL35:
- 146:Src/sys.c     ****   hp->offsetAvg[1] = *(float *)&u;
- 617              		.loc 1 146 3 is_stmt 1 view .LVU138
- 618              		.loc 1 146 20 is_stmt 0 view .LVU139
- 619 0032 A067     		str	r0, [r4, #120]	@ float
- 147:Src/sys.c     **** 
- 148:Src/sys.c     ****   u = flashReadData(Address + 8 * 5);
- 620              		.loc 1 148 3 is_stmt 1 view .LVU140
- 621              		.loc 1 148 7 is_stmt 0 view .LVU141
- 622 0034 1048     		ldr	r0, .L34+20
- 623              	.LVL36:
- 624              		.loc 1 148 7 view .LVU142
- 625 0036 FFF7FEFF 		bl	flashReadData
- 626              	.LVL37:
- 149:Src/sys.c     ****   hp->offsetAvg[2] = *(float *)&u;
- 627              		.loc 1 149 3 is_stmt 1 view .LVU143
- 628              		.loc 1 149 20 is_stmt 0 view .LVU144
- 629 003a E067     		str	r0, [r4, #124]	@ float
- 150:Src/sys.c     **** 
- 151:Src/sys.c     ****   u = flashReadData(Address + 8 * 6);
- 630              		.loc 1 151 3 is_stmt 1 view .LVU145
- 631              		.loc 1 151 7 is_stmt 0 view .LVU146
- 632 003c 0F48     		ldr	r0, .L34+24
- 633              	.LVL38:
- 634              		.loc 1 151 7 view .LVU147
- 635 003e FFF7FEFF 		bl	flashReadData
- 636              	.LVL39:
- 152:Src/sys.c     ****   hp->offsetAvg[3] = *(float *)&u;
- 637              		.loc 1 152 3 is_stmt 1 view .LVU148
- 638              		.loc 1 152 20 is_stmt 0 view .LVU149
- 639 0042 C4F88000 		str	r0, [r4, #128]	@ float
- 153:Src/sys.c     **** 
- 154:Src/sys.c     ****   u = flashReadData(Address + 8 * 7);
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 69
+ 597              		.loc 1 140 7 view .LVU129
+ 598 001c FFF7FEFF 		bl	flashReadData
+ 599              	.LVL31:
+ 141:Src/sys.c     ****   p->config.Lq = *(float *)&u;
+ 600              		.loc 1 141 3 is_stmt 1 view .LVU130
+ 601              		.loc 1 141 16 is_stmt 0 view .LVU131
+ 602 0020 C5F88403 		str	r0, [r5, #900]	@ float
+ 142:Src/sys.c     **** 
+ 143:Src/sys.c     ****   u = flashReadData(Address + 8 * 3);
+ 603              		.loc 1 143 3 is_stmt 1 view .LVU132
+ 604              		.loc 1 143 7 is_stmt 0 view .LVU133
+ 605 0024 1248     		ldr	r0, .L34+12
+ 606              	.LVL32:
+ 607              		.loc 1 143 7 view .LVU134
+ 608 0026 FFF7FEFF 		bl	flashReadData
+ 609              	.LVL33:
+ 144:Src/sys.c     ****   hp->offsetAvg[0] = *(float *)&u;
+ 610              		.loc 1 144 3 is_stmt 1 view .LVU135
+ 611              		.loc 1 144 20 is_stmt 0 view .LVU136
+ 612 002a 6067     		str	r0, [r4, #116]	@ float
+ 145:Src/sys.c     **** 
+ 146:Src/sys.c     ****   u = flashReadData(Address + 8 * 4);
+ 613              		.loc 1 146 3 is_stmt 1 view .LVU137
+ 614              		.loc 1 146 7 is_stmt 0 view .LVU138
+ 615 002c 1148     		ldr	r0, .L34+16
+ 616              	.LVL34:
+ 617              		.loc 1 146 7 view .LVU139
+ 618 002e FFF7FEFF 		bl	flashReadData
+ 619              	.LVL35:
+ 147:Src/sys.c     ****   hp->offsetAvg[1] = *(float *)&u;
+ 620              		.loc 1 147 3 is_stmt 1 view .LVU140
+ 621              		.loc 1 147 20 is_stmt 0 view .LVU141
+ 622 0032 A067     		str	r0, [r4, #120]	@ float
+ 148:Src/sys.c     **** 
+ 149:Src/sys.c     ****   u = flashReadData(Address + 8 * 5);
+ 623              		.loc 1 149 3 is_stmt 1 view .LVU142
+ 624              		.loc 1 149 7 is_stmt 0 view .LVU143
+ 625 0034 1048     		ldr	r0, .L34+20
+ 626              	.LVL36:
+ 627              		.loc 1 149 7 view .LVU144
+ 628 0036 FFF7FEFF 		bl	flashReadData
+ 629              	.LVL37:
+ 150:Src/sys.c     ****   hp->offsetAvg[2] = *(float *)&u;
+ 630              		.loc 1 150 3 is_stmt 1 view .LVU145
+ 631              		.loc 1 150 20 is_stmt 0 view .LVU146
+ 632 003a E067     		str	r0, [r4, #124]	@ float
+ 151:Src/sys.c     **** 
+ 152:Src/sys.c     ****   u = flashReadData(Address + 8 * 6);
+ 633              		.loc 1 152 3 is_stmt 1 view .LVU147
+ 634              		.loc 1 152 7 is_stmt 0 view .LVU148
+ 635 003c 0F48     		ldr	r0, .L34+24
+ 636              	.LVL38:
+ 637              		.loc 1 152 7 view .LVU149
+ 638 003e FFF7FEFF 		bl	flashReadData
+ 639              	.LVL39:
+ 153:Src/sys.c     ****   hp->offsetAvg[3] = *(float *)&u;
+ 640              		.loc 1 153 3 is_stmt 1 view .LVU150
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 69
 
 
- 640              		.loc 1 154 3 is_stmt 1 view .LVU150
- 641              		.loc 1 154 7 is_stmt 0 view .LVU151
- 642 0046 0E48     		ldr	r0, .L34+28
- 643              	.LVL40:
- 644              		.loc 1 154 7 view .LVU152
- 645 0048 FFF7FEFF 		bl	flashReadData
- 646              	.LVL41:
- 155:Src/sys.c     ****   hp->offsetAvg[4] = *(float *)&u;
- 647              		.loc 1 155 3 is_stmt 1 view .LVU153
- 648              		.loc 1 155 20 is_stmt 0 view .LVU154
- 649 004c C4F88400 		str	r0, [r4, #132]	@ float
- 156:Src/sys.c     **** 
- 157:Src/sys.c     ****   u = flashReadData(Address + 8 * 8);
- 650              		.loc 1 157 3 is_stmt 1 view .LVU155
- 651              		.loc 1 157 7 is_stmt 0 view .LVU156
- 652 0050 0C48     		ldr	r0, .L34+32
- 653              	.LVL42:
- 654              		.loc 1 157 7 view .LVU157
- 655 0052 FFF7FEFF 		bl	flashReadData
- 656              	.LVL43:
- 158:Src/sys.c     ****   hp->offsetAvg[5] = *(float *)&u;
- 657              		.loc 1 158 3 is_stmt 1 view .LVU158
- 658              		.loc 1 158 20 is_stmt 0 view .LVU159
- 659 0056 C4F88800 		str	r0, [r4, #136]	@ float
- 159:Src/sys.c     **** 
- 160:Src/sys.c     ****   u = flashReadData(Address + 8 * 9);
- 660              		.loc 1 160 3 is_stmt 1 view .LVU160
- 661              		.loc 1 160 7 is_stmt 0 view .LVU161
- 662 005a 0B48     		ldr	r0, .L34+36
- 663              	.LVL44:
- 664              		.loc 1 160 7 view .LVU162
- 665 005c FFF7FEFF 		bl	flashReadData
- 666              	.LVL45:
- 161:Src/sys.c     ****   hp->offset = *(float *)&u;
- 667              		.loc 1 161 3 is_stmt 1 view .LVU163
- 668              		.loc 1 161 14 is_stmt 0 view .LVU164
- 669 0060 2061     		str	r0, [r4, #16]	@ float
- 670              	.LVL46:
- 162:Src/sys.c     **** }
- 671              		.loc 1 162 1 view .LVU165
- 672 0062 38BD     		pop	{r3, r4, r5, pc}
- 673              	.LVL47:
- 674              	.L35:
- 675              		.loc 1 162 1 view .LVU166
- 676              		.align	2
- 677              	.L34:
- 678 0064 00F00708 		.word	134737920
- 679 0068 08F00708 		.word	134737928
- 680 006c 10F00708 		.word	134737936
- 681 0070 18F00708 		.word	134737944
- 682 0074 20F00708 		.word	134737952
- 683 0078 28F00708 		.word	134737960
- 684 007c 30F00708 		.word	134737968
- 685 0080 38F00708 		.word	134737976
- 686 0084 40F00708 		.word	134737984
- 687 0088 48F00708 		.word	134737992
- 688              		.cfi_endproc
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 70
+ 641              		.loc 1 153 20 is_stmt 0 view .LVU151
+ 642 0042 C4F88000 		str	r0, [r4, #128]	@ float
+ 154:Src/sys.c     **** 
+ 155:Src/sys.c     ****   u = flashReadData(Address + 8 * 7);
+ 643              		.loc 1 155 3 is_stmt 1 view .LVU152
+ 644              		.loc 1 155 7 is_stmt 0 view .LVU153
+ 645 0046 0E48     		ldr	r0, .L34+28
+ 646              	.LVL40:
+ 647              		.loc 1 155 7 view .LVU154
+ 648 0048 FFF7FEFF 		bl	flashReadData
+ 649              	.LVL41:
+ 156:Src/sys.c     ****   hp->offsetAvg[4] = *(float *)&u;
+ 650              		.loc 1 156 3 is_stmt 1 view .LVU155
+ 651              		.loc 1 156 20 is_stmt 0 view .LVU156
+ 652 004c C4F88400 		str	r0, [r4, #132]	@ float
+ 157:Src/sys.c     **** 
+ 158:Src/sys.c     ****   u = flashReadData(Address + 8 * 8);
+ 653              		.loc 1 158 3 is_stmt 1 view .LVU157
+ 654              		.loc 1 158 7 is_stmt 0 view .LVU158
+ 655 0050 0C48     		ldr	r0, .L34+32
+ 656              	.LVL42:
+ 657              		.loc 1 158 7 view .LVU159
+ 658 0052 FFF7FEFF 		bl	flashReadData
+ 659              	.LVL43:
+ 159:Src/sys.c     ****   hp->offsetAvg[5] = *(float *)&u;
+ 660              		.loc 1 159 3 is_stmt 1 view .LVU160
+ 661              		.loc 1 159 20 is_stmt 0 view .LVU161
+ 662 0056 C4F88800 		str	r0, [r4, #136]	@ float
+ 160:Src/sys.c     **** 
+ 161:Src/sys.c     ****   u = flashReadData(Address + 8 * 9);
+ 663              		.loc 1 161 3 is_stmt 1 view .LVU162
+ 664              		.loc 1 161 7 is_stmt 0 view .LVU163
+ 665 005a 0B48     		ldr	r0, .L34+36
+ 666              	.LVL44:
+ 667              		.loc 1 161 7 view .LVU164
+ 668 005c FFF7FEFF 		bl	flashReadData
+ 669              	.LVL45:
+ 162:Src/sys.c     ****   hp->offset = *(float *)&u;
+ 670              		.loc 1 162 3 is_stmt 1 view .LVU165
+ 671              		.loc 1 162 14 is_stmt 0 view .LVU166
+ 672 0060 2061     		str	r0, [r4, #16]	@ float
+ 673              	.LVL46:
+ 163:Src/sys.c     **** }
+ 674              		.loc 1 163 1 view .LVU167
+ 675 0062 38BD     		pop	{r3, r4, r5, pc}
+ 676              	.LVL47:
+ 677              	.L35:
+ 678              		.loc 1 163 1 view .LVU168
+ 679              		.align	2
+ 680              	.L34:
+ 681 0064 00F00708 		.word	134737920
+ 682 0068 08F00708 		.word	134737928
+ 683 006c 10F00708 		.word	134737936
+ 684 0070 18F00708 		.word	134737944
+ 685 0074 20F00708 		.word	134737952
+ 686 0078 28F00708 		.word	134737960
+ 687 007c 30F00708 		.word	134737968
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 70
 
 
- 689              	.LFE2026:
- 691              		.text
- 692              	.Letext0:
- 693              		.file 5 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\machine\\_default_types.h"
- 694              		.file 6 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\_stdint.h"
- 695              		.file 7 "Drivers/CMSIS/Include/core_cm4.h"
- 696              		.file 8 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h"
- 697              		.file 9 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h"
- 698              		.file 10 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_hrtim.h"
- 699              		.file 11 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dma.h"
- 700              		.file 12 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h"
- 701              		.file 13 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h"
- 702              		.file 14 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\lock.h"
- 703              		.file 15 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\_types.h"
- 704              		.file 16 "d:\\apps\\embedded_gcc\\arm_gcc\\lib\\gcc\\arm-none-eabi\\8.2.1\\include\\stddef.h"
- 705              		.file 17 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\reent.h"
- 706              		.file 18 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\math.h"
- 707              		.file 19 "Inc/digitalFilters.h"
- 708              		.file 20 "Inc/foc.h"
- 709              		.file 21 "Inc/hall.h"
-ARM GAS  D:\apps\VSCode\data\tmp\cc0KTqo4.s 			page 71
+ 688 0080 38F00708 		.word	134737976
+ 689 0084 40F00708 		.word	134737984
+ 690 0088 48F00708 		.word	134737992
+ 691              		.cfi_endproc
+ 692              	.LFE2126:
+ 694              		.text
+ 695              	.Letext0:
+ 696              		.file 5 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 697              		.file 6 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 698              		.file 7 "Drivers/CMSIS/Include/core_cm4.h"
+ 699              		.file 8 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h"
+ 700              		.file 9 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h"
+ 701              		.file 10 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_hrtim.h"
+ 702              		.file 11 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dma.h"
+ 703              		.file 12 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h"
+ 704              		.file 13 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h"
+ 705              		.file 14 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\lock.h"
+ 706              		.file 15 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\_types.h"
+ 707              		.file 16 "d:\\apps\\embedded_gcc\\arm_gcc\\lib\\gcc\\arm-none-eabi\\8.2.1\\include\\stddef.h"
+ 708              		.file 17 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\reent.h"
+ 709              		.file 18 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\math.h"
+ 710              		.file 19 "Inc/digitalFilters.h"
+ 711              		.file 20 "Inc/foc.h"
+ 712              		.file 21 "Inc/hall.h"
+ARM GAS  D:\apps\VSCode\data\tmp\ccflhMF4.s 			page 71
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 sys.c
-D:\apps\VSCode\data\tmp\cc0KTqo4.s:18     .text.MX_SYS_Init:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cc0KTqo4.s:26     .text.MX_SYS_Init:0000000000000000 MX_SYS_Init
-D:\apps\VSCode\data\tmp\cc0KTqo4.s:106    .text.MX_SYS_Init:0000000000000038 $d
-D:\apps\VSCode\data\tmp\cc0KTqo4.s:112    .text.flashUnlock:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cc0KTqo4.s:119    .text.flashUnlock:0000000000000000 flashUnlock
-D:\apps\VSCode\data\tmp\cc0KTqo4.s:140    .text.flashUnlock:0000000000000010 $d
-D:\apps\VSCode\data\tmp\cc0KTqo4.s:146    .text.flashLock:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cc0KTqo4.s:153    .text.flashLock:0000000000000000 flashLock
-D:\apps\VSCode\data\tmp\cc0KTqo4.s:171    .text.flashLock:000000000000000c $d
-D:\apps\VSCode\data\tmp\cc0KTqo4.s:176    .text.flashReadData:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cc0KTqo4.s:183    .text.flashReadData:0000000000000000 flashReadData
-D:\apps\VSCode\data\tmp\cc0KTqo4.s:201    .text.FLASH_PageErase:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cc0KTqo4.s:208    .text.FLASH_PageErase:0000000000000000 FLASH_PageErase
-D:\apps\VSCode\data\tmp\cc0KTqo4.s:282    .text.FLASH_PageErase:0000000000000070 $d
-D:\apps\VSCode\data\tmp\cc0KTqo4.s:287    .text.FLASH_Program_DoubleWord:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cc0KTqo4.s:294    .text.FLASH_Program_DoubleWord:0000000000000000 FLASH_Program_DoubleWord
-D:\apps\VSCode\data\tmp\cc0KTqo4.s:366    .text.FLASH_Program_DoubleWord:0000000000000038 $d
-D:\apps\VSCode\data\tmp\cc0KTqo4.s:371    .text.FLASH_UpdateConfig:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cc0KTqo4.s:378    .text.FLASH_UpdateConfig:0000000000000000 FLASH_UpdateConfig
-D:\apps\VSCode\data\tmp\cc0KTqo4.s:529    .text.FLASH_UpdateConfig:00000000000000a8 $d
-D:\apps\VSCode\data\tmp\cc0KTqo4.s:544    .text.FLASH_LoadConfig:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cc0KTqo4.s:551    .text.FLASH_LoadConfig:0000000000000000 FLASH_LoadConfig
-D:\apps\VSCode\data\tmp\cc0KTqo4.s:678    .text.FLASH_LoadConfig:0000000000000064 $d
+D:\apps\VSCode\data\tmp\ccflhMF4.s:18     .text.MX_SYS_Init:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccflhMF4.s:26     .text.MX_SYS_Init:0000000000000000 MX_SYS_Init
+D:\apps\VSCode\data\tmp\ccflhMF4.s:106    .text.MX_SYS_Init:0000000000000038 $d
+D:\apps\VSCode\data\tmp\ccflhMF4.s:112    .text.flashUnlock:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccflhMF4.s:119    .text.flashUnlock:0000000000000000 flashUnlock
+D:\apps\VSCode\data\tmp\ccflhMF4.s:140    .text.flashUnlock:0000000000000010 $d
+D:\apps\VSCode\data\tmp\ccflhMF4.s:146    .text.flashLock:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccflhMF4.s:153    .text.flashLock:0000000000000000 flashLock
+D:\apps\VSCode\data\tmp\ccflhMF4.s:171    .text.flashLock:000000000000000c $d
+D:\apps\VSCode\data\tmp\ccflhMF4.s:176    .text.flashReadData:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccflhMF4.s:183    .text.flashReadData:0000000000000000 flashReadData
+D:\apps\VSCode\data\tmp\ccflhMF4.s:201    .text.FLASH_PageErase:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccflhMF4.s:208    .text.FLASH_PageErase:0000000000000000 FLASH_PageErase
+D:\apps\VSCode\data\tmp\ccflhMF4.s:282    .text.FLASH_PageErase:0000000000000070 $d
+D:\apps\VSCode\data\tmp\ccflhMF4.s:287    .text.FLASH_Program_DoubleWord:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccflhMF4.s:294    .text.FLASH_Program_DoubleWord:0000000000000000 FLASH_Program_DoubleWord
+D:\apps\VSCode\data\tmp\ccflhMF4.s:366    .text.FLASH_Program_DoubleWord:0000000000000038 $d
+D:\apps\VSCode\data\tmp\ccflhMF4.s:371    .text.FLASH_UpdateConfig:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccflhMF4.s:378    .text.FLASH_UpdateConfig:0000000000000000 FLASH_UpdateConfig
+D:\apps\VSCode\data\tmp\ccflhMF4.s:532    .text.FLASH_UpdateConfig:00000000000000ac $d
+D:\apps\VSCode\data\tmp\ccflhMF4.s:547    .text.FLASH_LoadConfig:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccflhMF4.s:554    .text.FLASH_LoadConfig:0000000000000000 FLASH_LoadConfig
+D:\apps\VSCode\data\tmp\ccflhMF4.s:681    .text.FLASH_LoadConfig:0000000000000064 $d
 
 NO UNDEFINED SYMBOLS
