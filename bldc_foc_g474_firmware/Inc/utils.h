@@ -68,6 +68,7 @@ uint16_t utils_median_filter_uint16_run(uint16_t *buffer,
 
 // Squared
 #define SQ(x) ((x) * (x))
+#define MAGF(x,y) ( sqrtf(SQ(x) + SQ(y)) )
 
 // nan and infinity check for floats
 #define UTILS_IS_INF(x) ((x) == (1.0f / 0.0f) || (x) == (-1.0f / 0.0f))

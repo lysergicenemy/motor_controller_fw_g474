@@ -17,10 +17,11 @@
 #define BLDC_PARAM_LSQ 0.000052f //0.021033f  // H, stator inductance
 #define BLDC_PARAM_PP 4.0f		 // rotor pole pairs
 #define BLDC_PARAM_J 0.000003f	 // kg*m^2, rotor inertia 83.67kv - large value if need fixed rotor
-#define BLDC_PARAM_FLUX 0.0051f //0.0843521f // Wb. lambda = 60 / (sqrt(3) * pi * kv * poles), m->E = 60. / 2. / M_PI / sqrt(3.) / (Kv * m->Zp);
+#define BLDC_PARAM_FLUX 0.0051f	 //0.0843521f // Wb. lambda = 60 / (sqrt(3) * pi * kv * poles), m->E = 60. / 2. / M_PI / sqrt(3.) / (Kv * m->Zp);
 
 #define BLDC_PARAM_VDC 24.0f
 /******************************************************************/
+
 struct modelBLDC_s
 {
 	float ua, ub, uc;					//!< фазные напряжения
@@ -68,6 +69,28 @@ static inline void ModelBLDC_Init(modelBLDC_t *p)
 	p->j = BLDC_PARAM_J;				//момент инерции кг*м^2
 	p->m = BLDC_PARAM_FLUX;				//потокосцепление ротора равно потоку постоянных магнитов
 	p->MechLoss = BLDC_PARAM_J * 10.0f; //механические потери
+	// Инициализация коэффициентов и расчетных величин, завязанных на параметры двигателя
+
+	p->_1_lsd = 1.0f / (p->lsd); //обратная величина
+	p->_1_lsq = 1.0f / (p->lsq); //обратная величина
+
+	p->psd = p->m; //потокосцепления статора в осях d,q
+	p->psq = 0.0f;
+
+	// Обнуление переменных состояния
+	p->tetaR = 0.0f;  //угол положения ротора электрический
+	p->tetaRM = 0.0f; //угол положения ротора механический
+	p->omega = 0.0f;  //скорость, рад/с
+	p->isa = 0.0f;	  //токи статора в осях альфа,бета
+	p->isb = 0.0f;
+}
+
+static inline void ModelBLDC_InitFast(modelBLDC_t *p)
+{
+	p->t2 = p->t / 2.0f; //половина шага дискретизации
+
+	p->j = 0.005f;		   //момент инерции кг*м^2
+	p->MechLoss = 0.0001f; //механические потери
 	// Инициализация коэффициентов и расчетных величин, завязанных на параметры двигателя
 
 	p->_1_lsd = 1.0f / (p->lsd); //обратная величина
@@ -183,6 +206,45 @@ static inline void ModelBLDC_Calc(modelBLDC_t *p)
 		p->tetaR = -2.0f * MOTOR_MODEL_PI - p->tetaR;
 	if (p->tetaR < -MOTOR_MODEL_PI)
 		p->tetaR = 2.0f * MOTOR_MODEL_PI + p->tetaR;
+}
+
+static inline void ModelBLDC_Current_Calc(modelBLDC_t *p)
+{
+	// Поворот напряжений из осей альфа.бета в оси d,q
+	p->usd = p->usa * p->cosTetaR + p->usb * p->sinTetaR;
+	p->usq = -p->usa * p->sinTetaR + p->usb * p->cosTetaR;
+
+	// Расчет изменений потокосцеплений (предикторы)
+	p->dpsd = (p->usd - p->isd * p->rs + p->psq * p->omega);
+	p->dpsq = (p->usq - p->isq * p->rs - p->psd * p->omega);
+
+	// Расчет предикторов потокосцеплений
+	p->ppsd = p->psd + p->dpsd * p->t;
+	p->ppsq = p->psq + p->dpsq * p->t;
+
+	// Расчет токов для предикторного уравнения
+	p->isd = (p->ppsd - p->m) * p->_1_lsd;
+	p->isq = p->ppsq * p->_1_lsq;
+
+	// Расчет изменений потокосцеплений по Рунге-Кутта второго порядка
+	p->psd = p->psd + p->t2 * (p->dpsd + (p->usd - p->isd * p->rs + p->psq * p->omega));
+	p->psq = p->psq + p->t2 * (p->dpsq + (p->usq - p->isq * p->rs - p->psd * p->omega));
+
+	// Расчет токов после уточнения изменения потокосцеплений
+	p->isd = (p->psd - p->m) * p->_1_lsd;
+	p->isq = p->psq * p->_1_lsq;
+
+	//поворот токов в оси альфа,бета (для вывода на АЦП)
+	p->isa = p->isd * p->cosTetaR - p->isq * p->sinTetaR;
+	p->isb = +p->isd * p->sinTetaR + p->isq * p->cosTetaR;
+
+	// Расчет момента
+	p->torque = 1.5f * p->pp * (p->psd * p->isq - p->psq * p->isd);
+
+	//токи из двухфазной системы в трехфазную
+	p->isPhaseA = p->isa;
+	p->isPhaseB = -0.5f * p->isa + SQRT3_DIV2 * p->isb;
+	p->isPhaseC = -0.5f * p->isa - SQRT3_DIV2 * p->isb;
 }
 
 #endif

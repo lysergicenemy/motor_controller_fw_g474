@@ -1,4 +1,4 @@
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -26,7 +26,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
   23              		.thumb_func
   24              		.fpu fpv4-sp-d16
   26              	cmpr_start:
-  27              	.LFB2119:
+  27              	.LFB2124:
   28              		.file 1 "Src/comp.c"
    1:Src/comp.c    **** /**
    2:Src/comp.c    ****   ******************************************************************************
@@ -58,7 +58,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
   31              		@ args = 0, pretend = 0, frame = 8
   32              		@ frame_needed = 0, uses_anonymous_args = 0
   33              		@ link register save eliminated.
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 2
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 2
 
 
   34 0000 82B0     		sub	sp, sp, #8
@@ -118,7 +118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
   39:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
   40:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
   41:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /* Private types -------------------------------------------------------------*/
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 3
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 3
 
 
   42:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /* Private variables ---------------------------------------------------------*/
@@ -178,7 +178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
   96:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
   97:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /* Exported constants --------------------------------------------------------*/
   98:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /** @defgroup COMP_LL_Exported_Constants COMP Exported Constants
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 4
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 4
 
 
   99:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @{
@@ -238,7 +238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  153:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_OUTPUTPOL_NONINVERTED   (0x00000000UL)          /*!< COMP output polarity is not in
  154:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_OUTPUTPOL_INVERTED      (COMP_CSR_POLARITY)     /*!< COMP output polarity is invert
  155:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 5
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 5
 
 
  156:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @}
@@ -298,7 +298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  210:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         not timeout values.
  211:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         For details on delays values, refer to descriptions in source code
  212:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         above each literal definition.
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 6
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 6
 
 
  213:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @{
@@ -358,7 +358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  267:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /** @defgroup COMP_LL_EM_HELPER_MACRO COMP helper macro
  268:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @{
  269:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 7
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 7
 
 
  270:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
@@ -418,7 +418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  324:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_IO1
  325:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_IO2
  326:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @param  InputPlus This parameter can be one of the following values:
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 8
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 8
 
 
  327:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_PLUS_IO1
@@ -478,7 +478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  381:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         - For scaler bridge power consumption values,
  382:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *           refer to device datasheet, parameter "IDDA(SCALER)".
  383:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         - Voltage scaler requires a delay for voltage stabilization.
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 9
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 9
 
 
  384:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *           Refer to device datasheet, parameter "tSTART_SCALER".
@@ -538,7 +538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  438:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_IO1
  439:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_IO2
  440:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 10
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 10
 
 
  441:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** __STATIC_INLINE uint32_t LL_COMP_GetInputMinus(COMP_TypeDef *COMPx)
@@ -598,7 +598,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  495:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
  496:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
  497:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @brief  Set comparator instance output polarity.
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 11
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 11
 
 
  498:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @rmtoll CSR      POLARITY       LL_COMP_SetOutputPolarity
@@ -658,7 +658,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  552:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM8_OC5_COMP2
  553:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM8_OC5_COMP3
  554:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM8_OC5_COMP4
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 12
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 12
 
 
  555:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM8_OC5_COMP5
@@ -718,7 +718,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  609:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM8_OC5_COMP7
  610:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM15_OC1_COMP4
  611:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM15_OC2_COMP6
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 13
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 13
 
 
  612:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_BLANKINGSRC_TIM15_OC2_COMP7
@@ -778,7 +778,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
   64 0012 1368     		ldr	r3, [r2]
   65 0014 43F00103 		orr	r3, r3, #1
   66 0018 1360     		str	r3, [r2]
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 14
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 14
 
 
   67              	.LVL2:
@@ -838,7 +838,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  108              		.loc 1 42 20 is_stmt 0 view .LVU24
  109 0044 019B     		ldr	r3, [sp, #4]
  110 0046 013B     		subs	r3, r3, #1
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 15
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 15
 
 
  111 0048 0193     		str	r3, [sp, #4]
@@ -861,7 +861,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  125 0058 632D3E05 		.word	87960931
  126 005c CDCCCCCC 		.word	-858993459
  127              		.cfi_endproc
- 128              	.LFE2119:
+ 128              	.LFE2124:
  130              		.section	.text.MX_COMP1_Init,"ax",%progbits
  131              		.align	1
  132              		.global	MX_COMP1_Init
@@ -870,7 +870,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  135              		.thumb_func
  136              		.fpu fpv4-sp-d16
  138              	MX_COMP1_Init:
- 139              	.LFB2120:
+ 139              	.LFB2125:
   46:Src/comp.c    **** /* USER CODE END 0 */
   47:Src/comp.c    **** 
   48:Src/comp.c    **** /* COMP1 init function */
@@ -898,7 +898,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  153              		.loc 1 56 23 is_stmt 0 view .LVU28
  154 0004 0024     		movs	r4, #0
  155 0006 0994     		str	r4, [sp, #36]
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 16
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 16
 
 
  156 0008 0A94     		str	r4, [sp, #40]
@@ -958,7 +958,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
   36:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
   37:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /* Define to prevent recursive inclusion -------------------------------------*/
   38:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #ifndef STM32G4xx_LL_BUS_H
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 17
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 17
 
 
   39:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define STM32G4xx_LL_BUS_H
@@ -1018,7 +1018,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
   93:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_GPIOC          RCC_AHB2ENR_GPIOCEN
   94:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_GPIOD          RCC_AHB2ENR_GPIODEN
   95:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_GPIOE          RCC_AHB2ENR_GPIOEEN
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 18
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 18
 
 
   96:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_GPIOF          RCC_AHB2ENR_GPIOFEN
@@ -1078,7 +1078,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  150:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_SPI3           RCC_APB1ENR1_SPI3EN
  151:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_USART2         RCC_APB1ENR1_USART2EN
  152:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_USART3         RCC_APB1ENR1_USART3EN
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 19
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 19
 
 
  153:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #if defined(UART4)
@@ -1138,7 +1138,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  207:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #endif /* HRTIM1 */
  208:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
  209:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @}
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 20
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 20
 
 
  210:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
@@ -1198,7 +1198,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  264:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA1
  265:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA2
  266:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMAMUX1
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 21
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 21
 
 
  267:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CORDIC
@@ -1258,7 +1258,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  321:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
  322:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** __STATIC_INLINE void LL_AHB1_GRP1_ForceReset(uint32_t Periphs)
  323:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** {
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 22
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 22
 
 
  324:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   SET_BIT(RCC->AHB1RSTR, Periphs);
@@ -1318,7 +1318,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  378:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   tmpreg = READ_BIT(RCC->AHB1SMENR, Periphs);
  379:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   (void)tmpreg;
  380:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 23
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 23
 
 
  381:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
@@ -1378,7 +1378,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  435:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOB
  436:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOC
  437:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOD
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 24
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 24
 
 
  438:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOE
@@ -1438,7 +1438,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  198 0032 0493     		str	r3, [sp, #16]
   66:Src/comp.c    ****   GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
  199              		.loc 1 66 3 is_stmt 1 view .LVU44
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 25
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 25
 
 
   67:Src/comp.c    ****   LL_GPIO_Init(CMPR_IB_GPIO_Port, &GPIO_InitStruct);
@@ -1498,7 +1498,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  238 0062 C822     		movs	r2, #200
  239 0064 02FB03F3 		mul	r3, r2, r3
  240              		.loc 1 82 19 view .LVU62
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 26
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 26
 
 
  241 0068 0293     		str	r3, [sp, #8]
@@ -1558,7 +1558,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
   31:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h **** /** @addtogroup STM32G4xx_LL_Driver
   32:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   * @{
   33:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 27
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 27
 
 
   34:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h **** 
@@ -1618,7 +1618,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
   88:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   * @{
   89:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   */
   90:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h **** #define LL_EXTI_LINE_0                 EXTI_IMR1_IM0           /*!< Extended line 0 */
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 28
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 28
 
 
   91:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h **** #define LL_EXTI_LINE_1                 EXTI_IMR1_IM1           /*!< Extended line 1 */
@@ -1678,7 +1678,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  145:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h **** #if defined(EXTI_IMR1_IM31)
  146:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h **** #define LL_EXTI_LINE_31                EXTI_IMR1_IM31          /*!< Extended line 31 */
  147:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h **** #endif /* EXTI_IMR1_IM31 */
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 29
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 29
 
 
  148:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h **** #define LL_EXTI_LINE_ALL_0_31          EXTI_IMR1_IM            /*!< All Extended line not reserved*
@@ -1738,7 +1738,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  202:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h **** #define LL_EXTI_MODE_IT_EVENT           ((uint8_t)0x02U) /*!< Interrupt & Event Mode */
  203:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h **** /**
  204:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   * @}
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 30
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 30
 
 
  205:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   */
@@ -1798,7 +1798,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  259:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h **** 
  260:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h **** 
  261:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h **** /* Exported functions --------------------------------------------------------*/
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 31
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 31
 
 
  262:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h **** /** @defgroup EXTI_LL_Exported_Functions EXTI Exported Functions
@@ -1858,7 +1858,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  316:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h **** }
  317:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h **** /**
  318:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   * @brief  Enable ExtiLine Interrupt request for Lines in range 32 to 63
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 32
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 32
 
 
  319:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   * @note The reset value for the direct lines (lines from 32 to 34, line
@@ -1918,7 +1918,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  373:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_22
  374:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_23
  375:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_24
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 33
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 33
 
 
  376:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_25
@@ -1978,7 +1978,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  430:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_3
  431:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_4
  432:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_5
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 34
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 34
 
 
  433:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_6
@@ -2038,7 +2038,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  487:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_ALL_32_63
  488:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   * @note   (*): Available in some devices
  489:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   * @retval State of bit (1 or 0).
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 35
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 35
 
 
  490:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   */
@@ -2098,7 +2098,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  544:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   */
  545:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h **** __STATIC_INLINE void LL_EXTI_EnableEvent_0_31(uint32_t ExtiLine)
  546:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h **** {
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 36
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 36
 
 
  547:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   SET_BIT(EXTI->EMR1, ExtiLine);
@@ -2158,7 +2158,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  601:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_22
  602:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_23
  603:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_24
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 37
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 37
 
 
  604:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_25
@@ -2218,7 +2218,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  658:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_9
  659:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_10
  660:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_11
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 38
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 38
 
 
  661:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_12
@@ -2278,7 +2278,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  715:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h **** 
  716:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h **** /**
  717:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   * @}
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 39
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 39
 
 
  718:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   */
@@ -2338,7 +2338,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  265 007e 9A68     		ldr	r2, [r3, #8]
  266 0080 42F40012 		orr	r2, r2, #2097152
  267 0084 9A60     		str	r2, [r3, #8]
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 40
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 40
 
 
  268              	.LVL9:
@@ -2398,7 +2398,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  813:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_8
  814:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_9
  815:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_10
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 41
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 41
 
 
  816:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_11
@@ -2458,7 +2458,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  870:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_1
  871:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_2
  872:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_3
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 42
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 42
 
 
  873:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_4
@@ -2518,7 +2518,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  927:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   */
  928:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h **** 
  929:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 43
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 43
 
 
  930:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   * @brief  Enable ExtiLine Falling Edge Trigger for Lines in range 0 to 31
@@ -2578,7 +2578,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  984:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   * @param  ExtiLine This parameter can be a combination of the following values:
  985:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_32 (*)
  986:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_33 (*)
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 44
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 44
 
 
  987:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_38
@@ -2638,7 +2638,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
 1039:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h **** {
 1040:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   CLEAR_BIT(EXTI->FTSR1, ExtiLine);
  277              		.loc 4 1040 3 view .LVU74
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 45
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 45
 
 
  278 0086 DA68     		ldr	r2, [r3, #12]
@@ -2698,7 +2698,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
 1084:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_13
 1085:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_14
 1086:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_15
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 46
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 46
 
 
 1087:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_16
@@ -2758,7 +2758,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
 1141:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_1
 1142:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_2
 1143:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_3
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 47
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 47
 
 
 1144:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_4
@@ -2818,7 +2818,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
 1198:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   * @}
 1199:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   */
 1200:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 48
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 48
 
 
 1201:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h **** /** @defgroup EXTI_LL_EF_Flag_Management Flag_Management
@@ -2878,7 +2878,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
 1255:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_40
 1256:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_41
 1257:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   * @note   (*): Available in some devices
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 49
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 49
 
 
 1258:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   * @retval State of bit (1 or 0).
@@ -2938,7 +2938,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
 1312:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_33 (*)
 1313:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_38
 1314:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_39
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 50
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 50
 
 
 1315:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h ****   *         @arg @ref LL_EXTI_LINE_40
@@ -2998,7 +2998,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  294              		.loc 4 1362 3 is_stmt 0 view .LVU79
  295              	.LBE45:
  296              	.LBE44:
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 51
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 51
 
 
   90:Src/comp.c    ****   LL_EXTI_EnableEvent_0_31(LL_EXTI_LINE_21);
@@ -3055,10 +3055,10 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  335 00b4 00000000 		.word	SystemCoreClock
  336 00b8 83DE1B43 		.word	1125899907
  337              		.cfi_endproc
- 338              	.LFE2120:
+ 338              	.LFE2125:
  340              		.section	.text.MX_COMP4_Init,"ax",%progbits
  341              		.align	1
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 52
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 52
 
 
  342              		.global	MX_COMP4_Init
@@ -3067,7 +3067,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  345              		.thumb_func
  346              		.fpu fpv4-sp-d16
  348              	MX_COMP4_Init:
- 349              	.LFB2121:
+ 349              	.LFB2126:
   97:Src/comp.c    **** /* COMP4 init function */
   98:Src/comp.c    **** void MX_COMP4_Init(void)
   99:Src/comp.c    **** {
@@ -3118,7 +3118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  382              		.loc 3 455 3 view .LVU96
  456:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   /* Delay after an RCC peripheral clock enabling */
  383              		.loc 3 456 3 view .LVU97
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 53
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 53
 
 
  384 0018 1D4B     		ldr	r3, .L20
@@ -3178,7 +3178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  421              		.loc 1 123 3 is_stmt 1 view .LVU113
  422              		.loc 1 123 35 is_stmt 0 view .LVU114
  423 0042 0B94     		str	r4, [sp, #44]
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 54
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 54
 
 
  124:Src/comp.c    ****   COMP_InitStruct.OutputPolarity = LL_COMP_OUTPUTPOL_NONINVERTED;
@@ -3238,7 +3238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  465              	.LBB52:
  466              	.LBI52:
  616:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h **** {
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 55
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 55
 
 
  467              		.loc 4 616 22 view .LVU132
@@ -3292,19 +3292,19 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  504 009c 00000000 		.word	SystemCoreClock
  505 00a0 83DE1B43 		.word	1125899907
  506              		.cfi_endproc
- 507              	.LFE2121:
+ 507              	.LFE2126:
  509              		.section	.text.MX_COMP6_Init,"ax",%progbits
  510              		.align	1
  511              		.global	MX_COMP6_Init
  512              		.syntax unified
  513              		.thumb
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 56
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 56
 
 
  514              		.thumb_func
  515              		.fpu fpv4-sp-d16
  517              	MX_COMP6_Init:
- 518              	.LFB2122:
+ 518              	.LFB2127:
  143:Src/comp.c    **** /* COMP6 init function */
  144:Src/comp.c    **** void MX_COMP6_Init(void)
  145:Src/comp.c    **** {
@@ -3358,7 +3358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  553 0018 1D4B     		ldr	r3, .L27
  554 001a DA6C     		ldr	r2, [r3, #76]
  555 001c 42F00202 		orr	r2, r2, #2
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 57
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 57
 
 
  556 0020 DA64     		str	r2, [r3, #76]
@@ -3418,7 +3418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  170:Src/comp.c    ****   COMP_InitStruct.OutputPolarity = LL_COMP_OUTPUTPOL_NONINVERTED;
  593              		.loc 1 170 3 is_stmt 1 view .LVU166
  594              		.loc 1 170 34 is_stmt 0 view .LVU167
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 58
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 58
 
 
  595 0046 0C94     		str	r4, [sp, #48]
@@ -3478,7 +3478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  636              		.loc 4 640 22 view .LVU183
  637              	.LBB59:
  642:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 59
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 59
 
 
  638              		.loc 4 642 3 view .LVU184
@@ -3529,7 +3529,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  673 009c 00000000 		.word	SystemCoreClock
  674 00a0 83DE1B43 		.word	1125899907
  675              		.cfi_endproc
- 676              	.LFE2122:
+ 676              	.LFE2127:
  678              		.text
  679              	.Letext0:
  680              		.file 5 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\machine\\_default_types.h"
@@ -3538,7 +3538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  683              		.file 8 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h"
  684              		.file 9 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h"
  685              		.file 10 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_hrtim.h"
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 60
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 60
 
 
  686              		.file 11 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dma.h"
@@ -3550,23 +3550,23 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 1
  692              		.file 17 "d:\\apps\\embedded_gcc\\arm_gcc\\lib\\gcc\\arm-none-eabi\\8.2.1\\include\\stddef.h"
  693              		.file 18 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\reent.h"
  694              		.file 19 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\math.h"
-ARM GAS  D:\apps\VSCode\data\tmp\ccPxcMF4.s 			page 61
+ARM GAS  D:\apps\VSCode\data\tmp\cckgstAS.s 			page 61
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 comp.c
-D:\apps\VSCode\data\tmp\ccPxcMF4.s:18     .text.cmpr_start:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccPxcMF4.s:26     .text.cmpr_start:0000000000000000 cmpr_start
-D:\apps\VSCode\data\tmp\ccPxcMF4.s:123    .text.cmpr_start:0000000000000050 $d
-D:\apps\VSCode\data\tmp\ccPxcMF4.s:131    .text.MX_COMP1_Init:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccPxcMF4.s:138    .text.MX_COMP1_Init:0000000000000000 MX_COMP1_Init
-D:\apps\VSCode\data\tmp\ccPxcMF4.s:332    .text.MX_COMP1_Init:00000000000000a8 $d
-D:\apps\VSCode\data\tmp\ccPxcMF4.s:341    .text.MX_COMP4_Init:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccPxcMF4.s:348    .text.MX_COMP4_Init:0000000000000000 MX_COMP4_Init
-D:\apps\VSCode\data\tmp\ccPxcMF4.s:501    .text.MX_COMP4_Init:0000000000000090 $d
-D:\apps\VSCode\data\tmp\ccPxcMF4.s:510    .text.MX_COMP6_Init:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccPxcMF4.s:517    .text.MX_COMP6_Init:0000000000000000 MX_COMP6_Init
-D:\apps\VSCode\data\tmp\ccPxcMF4.s:670    .text.MX_COMP6_Init:0000000000000090 $d
+D:\apps\VSCode\data\tmp\cckgstAS.s:18     .text.cmpr_start:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cckgstAS.s:26     .text.cmpr_start:0000000000000000 cmpr_start
+D:\apps\VSCode\data\tmp\cckgstAS.s:123    .text.cmpr_start:0000000000000050 $d
+D:\apps\VSCode\data\tmp\cckgstAS.s:131    .text.MX_COMP1_Init:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cckgstAS.s:138    .text.MX_COMP1_Init:0000000000000000 MX_COMP1_Init
+D:\apps\VSCode\data\tmp\cckgstAS.s:332    .text.MX_COMP1_Init:00000000000000a8 $d
+D:\apps\VSCode\data\tmp\cckgstAS.s:341    .text.MX_COMP4_Init:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cckgstAS.s:348    .text.MX_COMP4_Init:0000000000000000 MX_COMP4_Init
+D:\apps\VSCode\data\tmp\cckgstAS.s:501    .text.MX_COMP4_Init:0000000000000090 $d
+D:\apps\VSCode\data\tmp\cckgstAS.s:510    .text.MX_COMP6_Init:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cckgstAS.s:517    .text.MX_COMP6_Init:0000000000000000 MX_COMP6_Init
+D:\apps\VSCode\data\tmp\cckgstAS.s:670    .text.MX_COMP6_Init:0000000000000090 $d
 
 UNDEFINED SYMBOLS
 SystemCoreClock

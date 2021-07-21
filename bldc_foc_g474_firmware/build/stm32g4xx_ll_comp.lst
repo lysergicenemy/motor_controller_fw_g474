@@ -1,4 +1,4 @@
-ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 1
+ARM GAS  D:\apps\VSCode\data\tmp\cc0tSTvX.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 1
   27:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** #define assert_param(expr) ((void)0U)
   28:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** #endif
   29:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
-ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 2
+ARM GAS  D:\apps\VSCode\data\tmp\cc0tSTvX.s 			page 2
 
 
   30:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** /** @addtogroup STM32G4xx_LL_Driver
@@ -118,7 +118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 1
   84:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    (((__COMP_INSTANCE__) == COMP5)                        && \
   85:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                     (((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_DAC1_CH2)  || \
   86:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                     ((__INPUT_MINUS__) == LL_COMP_INPUT_MINUS_DAC4_CH1))     \
-ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 3
+ARM GAS  D:\apps\VSCode\data\tmp\cc0tSTvX.s 			page 3
 
 
   87:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****                    )                                                      || \
@@ -178,7 +178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 1
  141:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       (((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_NONE)            ||      \
  142:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM1_OC5_COMP1)  ||      \
  143:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM2_OC3_COMP1)  ||      \
-ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 4
+ARM GAS  D:\apps\VSCode\data\tmp\cc0tSTvX.s 			page 4
 
 
  144:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM3_OC3_COMP1)  ||      \
@@ -238,7 +238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 1
  198:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM3_OC3_COMP1)  ||      \
  199:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****        ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM8_OC5_COMP1)))        \
  200:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       ||                                                                             \
-ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 5
+ARM GAS  D:\apps\VSCode\data\tmp\cc0tSTvX.s 			page 5
 
 
  201:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       (((__INSTANCE__) == COMP2) &&                                                  \
@@ -298,7 +298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 1
  255:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       || ((__OUTPUT_BLANKING_SOURCE__) == LL_COMP_BLANKINGSRC_TIM4_OC3)              \
  256:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****       )
  257:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** #endif
-ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 6
+ARM GAS  D:\apps\VSCode\data\tmp\cc0tSTvX.s 			page 6
 
 
  258:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** /**
@@ -358,7 +358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 1
    7:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @attention
    8:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *
    9:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * <h2><center>&copy; Copyright (c) 2019 STMicroelectronics.
-ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 7
+ARM GAS  D:\apps\VSCode\data\tmp\cc0tSTvX.s 			page 7
 
 
   10:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * All rights reserved.</center></h2>
@@ -418,7 +418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 1
   64:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** {
   65:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   uint32_t InputPlus;                   /*!< Set comparator input plus (non-inverting input).
   66:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****                                              This parameter can be a value of @ref COMP_LL_EC_INPUT
-ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 8
+ARM GAS  D:\apps\VSCode\data\tmp\cc0tSTvX.s 			page 8
 
 
   67:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
@@ -478,7 +478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 1
  121:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_INPUT_MINUS_DAC3_CH1    (COMP_CSR_INMSEL_2                                        )
  122:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_INPUT_MINUS_DAC3_CH2    (COMP_CSR_INMSEL_2                                        )
  123:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_INPUT_MINUS_DAC4_CH1    (COMP_CSR_INMSEL_2                                        )
-ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 9
+ARM GAS  D:\apps\VSCode\data\tmp\cc0tSTvX.s 			page 9
 
 
  124:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_INPUT_MINUS_DAC4_CH2    (COMP_CSR_INMSEL_2                                        )
@@ -538,7 +538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 1
  178:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM3_OC3_COMP5  (                      COMP_CSR_BLANKING_1 | COMP_CSR_B
  179:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM3_OC3_COMP7  (                      COMP_CSR_BLANKING_1 | COMP_CSR_B
  180:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM3_OC4_COMP4  (                                            COMP_CSR_B
-ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 10
+ARM GAS  D:\apps\VSCode\data\tmp\cc0tSTvX.s 			page 10
 
 
  181:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** #define LL_COMP_BLANKINGSRC_TIM8_OC5_COMP1  (COMP_CSR_BLANKING_2                                   
@@ -598,7 +598,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 1
  235:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
  236:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @}
  237:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 11
+ARM GAS  D:\apps\VSCode\data\tmp\cc0tSTvX.s 			page 11
 
 
  238:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
@@ -658,7 +658,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 1
  292:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         Refer to description of parameters or to reference manual.
  293:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @note   On this STM32 series, scaler bridge is configurable:
  294:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         to optimize power consumption, this function enables the
-ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 12
+ARM GAS  D:\apps\VSCode\data\tmp\cc0tSTvX.s 			page 12
 
 
  295:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         voltage scaler bridge only when required
@@ -718,7 +718,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 1
  349:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
  350:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** __STATIC_INLINE void LL_COMP_SetInputPlus(COMP_TypeDef *COMPx, uint32_t InputPlus)
  351:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** {
-ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 13
+ARM GAS  D:\apps\VSCode\data\tmp\cc0tSTvX.s 			page 13
 
 
  352:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   MODIFY_REG(COMPx->CSR, COMP_CSR_INPSEL, InputPlus);
@@ -778,7 +778,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 1
  406:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_IO1
  407:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         @arg @ref LL_COMP_INPUT_MINUS_IO2
  408:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @retval None
-ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 14
+ARM GAS  D:\apps\VSCode\data\tmp\cc0tSTvX.s 			page 14
 
 
  409:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
@@ -838,7 +838,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 1
  463:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
  464:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** __STATIC_INLINE void LL_COMP_SetInputHysteresis(COMP_TypeDef *COMPx, uint32_t InputHysteresis)
  465:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** {
-ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 15
+ARM GAS  D:\apps\VSCode\data\tmp\cc0tSTvX.s 			page 15
 
 
  466:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   MODIFY_REG(COMPx->CSR, COMP_CSR_HYST, InputHysteresis);
@@ -898,7 +898,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 1
  520:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   return (uint32_t)(READ_BIT(COMPx->CSR, COMP_CSR_POLARITY));
  521:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** }
  522:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 16
+ARM GAS  D:\apps\VSCode\data\tmp\cc0tSTvX.s 			page 16
 
 
  523:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
@@ -958,7 +958,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 1
  577:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @note   Availability of parameters of blanking source from timer
  578:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         depends on timers availability on the selected device.
  579:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @note   Blanking source may be specific to each comparator instance.
-ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 17
+ARM GAS  D:\apps\VSCode\data\tmp\cc0tSTvX.s 			page 17
 
 
  580:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         Refer to description of parameters or to reference manual.
@@ -1018,7 +1018,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 1
  634:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** /**
  635:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @brief  Enable comparator instance.
  636:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @note   After enable from off state, comparator requires a delay
-ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 18
+ARM GAS  D:\apps\VSCode\data\tmp\cc0tSTvX.s 			page 18
 
 
  637:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   *         to reach reach propagation delay specification.
@@ -1078,7 +1078,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 1
  691:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   * @retval State of bit (1 or 0).
  692:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h ****   */
  693:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h **** __STATIC_INLINE uint32_t LL_COMP_IsLocked(COMP_TypeDef *COMPx)
-ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 19
+ARM GAS  D:\apps\VSCode\data\tmp\cc0tSTvX.s 			page 19
 
 
   41              		.loc 2 693 26 view .LVU4
@@ -1138,7 +1138,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 1
   78              		.fpu fpv4-sp-d16
   80              	LL_COMP_Init:
   81              	.LVL5:
-ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 20
+ARM GAS  D:\apps\VSCode\data\tmp\cc0tSTvX.s 			page 20
 
 
   82              	.LFB148:
@@ -1198,7 +1198,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 1
  107              	.LBE8:
  323:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   ErrorStatus status = SUCCESS;
  108              		.loc 1 323 1 view .LVU28
-ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 21
+ARM GAS  D:\apps\VSCode\data\tmp\cc0tSTvX.s 			page 21
 
 
  109 0006 10B4     		push	{r4}
@@ -1258,7 +1258,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 1
  365:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   }
  366:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c **** 
  367:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   return status;
-ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 22
+ARM GAS  D:\apps\VSCode\data\tmp\cc0tSTvX.s 			page 22
 
 
  134              		.loc 1 367 3 is_stmt 1 view .LVU32
@@ -1318,7 +1318,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 1
  380:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c ****   COMP_InitStruct->InputMinus           = LL_COMP_INPUT_MINUS_VREFINT;
  176              		.loc 1 380 3 is_stmt 1 view .LVU40
  177              		.loc 1 380 41 is_stmt 0 view .LVU41
-ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 23
+ARM GAS  D:\apps\VSCode\data\tmp\cc0tSTvX.s 			page 23
 
 
  178 0004 024A     		ldr	r2, .L14
@@ -1352,18 +1352,18 @@ ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 1
  203              		.file 6 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h"
  204              		.file 7 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h"
  205              		.file 8 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h"
-ARM GAS  D:\apps\VSCode\data\tmp\cclFwPf3.s 			page 24
+ARM GAS  D:\apps\VSCode\data\tmp\cc0tSTvX.s 			page 24
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32g4xx_ll_comp.c
-D:\apps\VSCode\data\tmp\cclFwPf3.s:18     .text.LL_COMP_DeInit:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cclFwPf3.s:26     .text.LL_COMP_DeInit:0000000000000000 LL_COMP_DeInit
-D:\apps\VSCode\data\tmp\cclFwPf3.s:73     .text.LL_COMP_Init:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cclFwPf3.s:80     .text.LL_COMP_Init:0000000000000000 LL_COMP_Init
-D:\apps\VSCode\data\tmp\cclFwPf3.s:152    .text.LL_COMP_Init:0000000000000030 $d
-D:\apps\VSCode\data\tmp\cclFwPf3.s:157    .text.LL_COMP_StructInit:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cclFwPf3.s:164    .text.LL_COMP_StructInit:0000000000000000 LL_COMP_StructInit
-D:\apps\VSCode\data\tmp\cclFwPf3.s:194    .text.LL_COMP_StructInit:0000000000000010 $d
+D:\apps\VSCode\data\tmp\cc0tSTvX.s:18     .text.LL_COMP_DeInit:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cc0tSTvX.s:26     .text.LL_COMP_DeInit:0000000000000000 LL_COMP_DeInit
+D:\apps\VSCode\data\tmp\cc0tSTvX.s:73     .text.LL_COMP_Init:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cc0tSTvX.s:80     .text.LL_COMP_Init:0000000000000000 LL_COMP_Init
+D:\apps\VSCode\data\tmp\cc0tSTvX.s:152    .text.LL_COMP_Init:0000000000000030 $d
+D:\apps\VSCode\data\tmp\cc0tSTvX.s:157    .text.LL_COMP_StructInit:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cc0tSTvX.s:164    .text.LL_COMP_StructInit:0000000000000000 LL_COMP_StructInit
+D:\apps\VSCode\data\tmp\cc0tSTvX.s:194    .text.LL_COMP_StructInit:0000000000000010 $d
 
 NO UNDEFINED SYMBOLS

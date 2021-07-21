@@ -65,11 +65,9 @@ volatile uint32_t pwmInputValue;    /* Duty of PWM-input signal */
 volatile uint32_t pwmInputFlag = 0; /* 1 - PWM input uses for current/speed control */
 // Auxiliary globals
 volatile uint32_t dac_value;
-const float one_by_halfADC = 0.00048828125f; // (1 / 2048)
-const float one_by_maxADC = 0.000244140625f; // (1 / 4096)
-volatile uint8_t hybryd_state = 0;
-volatile float speedAbs;
-static uint32_t angleIncDelay = 0;
+volatile uint32_t angleIncDelay = 0;
+//volatile float freqRefPr;
+//volatile float diff;
 
 int main(void)
 {
@@ -115,7 +113,7 @@ int main(void)
     if (systemReset != 0)
       NVIC_SystemReset();
     /* Check motor parameters identification complete */
-    if (foc1.paramIdState == ID_CMPLT && foc1.paramIdRunState == ID_RUN_COG_CMPLT)
+    if (foc1.paramIdState == ID_CMPLT && foc1.paramIdRunState == ID_RUN_CMPLT)
     {
       /* Save parameters into flash after identification */
       FLASH_UpdateConfig(&foc1, &hall);
@@ -622,7 +620,7 @@ void ADC1_2_IRQHandler(void)
       // foc1.data.angle += foc1.data.freqStep * foc1.data.freq;
       // foc1.data.angle = (foc1.data.angle > MF_PI) ? -MF_PI : foc1.data.angle;
       // calc current sensors offset
-      foc1.lpf_vdc.in = (float)adcData.v_dc * one_by_maxADC * foc1.config.adcFullScaleVoltage;
+      foc1.lpf_vdc.in = (float)adcData.v_dc * (1.f / 4096.f) * foc1.config.adcFullScaleVoltage;
       foc1.lpf_offsetIa.in = (float)adcData.ph_u;
       foc1.lpf_offsetIb.in = (float)adcData.ph_v;
       foc1.lpf_offsetIc.in = (float)adcData.ph_w;
@@ -698,38 +696,8 @@ void ADC1_2_IRQHandler(void)
         foc1.data.angle = foc1.data.angle - M_2PI;
       // calc sin/cos
       cordic_sincos_calc(foc1.data.angle, &foc1.data.sinTheta, &foc1.data.cosTheta);
-      // clarke transform for phase currents
-      if (foc1.config.sim == 1)
-      {
-        foc1.data.isa = bldc1.isPhaseA;
-        foc1.data.isb = _1DIV_SQRT3 * bldc1.isPhaseA + _2DIV_SQRT3 * bldc1.isPhaseB;
-        foc1.volt.DcBusVolt = bldc1.udc;
-      }
-      else if (foc1.config.sim == 0)
-      {
-        // scaling ADC data and clarke transform for phase currents and voltages
-        foc1.data.iPhaseA = ((float)adcData.ph_u - foc1.data.offsetCurrA) * (one_by_halfADC * foc1.config.adcFullScaleCurrent);
-        foc1.data.iPhaseB = ((float)adcData.ph_v - foc1.data.offsetCurrB) * (one_by_halfADC * foc1.config.adcFullScaleCurrent);
-        foc1.data.iPhaseC = ((float)adcData.ph_w - foc1.data.offsetCurrC) * (one_by_halfADC * foc1.config.adcFullScaleCurrent);
-        foc1.volt.DcBusVolt = (float)adcData.v_dc * one_by_maxADC * foc1.config.adcFullScaleVoltage;
-        foc1.data.vPhaseA = ((float)adcData.v_u) * (one_by_maxADC * foc1.config.adcFullScaleVoltage);
-        foc1.data.vPhaseB = ((float)adcData.v_v) * (one_by_maxADC * foc1.config.adcFullScaleVoltage);
-        foc1.data.vPhaseC = ((float)adcData.v_w) * (one_by_maxADC * foc1.config.adcFullScaleVoltage);
-
-        foc1.cmtn.lpf_bemfA.in = foc1.data.vPhaseA;
-        foc1.cmtn.lpf_bemfB.in = foc1.data.vPhaseB;
-        foc1.cmtn.lpf_bemfC.in = foc1.data.vPhaseC;
-
-        LPF_calc(&foc1.cmtn.lpf_bemfA);
-        LPF_calc(&foc1.cmtn.lpf_bemfB);
-        LPF_calc(&foc1.cmtn.lpf_bemfC);
-
-        foc1.data.isa = foc1.data.iPhaseA;
-        foc1.data.isb = _1DIV_SQRT3 * foc1.data.iPhaseA + _2DIV_SQRT3 * foc1.data.iPhaseB;
-
-        foc1.data.vAlpha = (2.f / 3.f) * foc1.cmtn.lpf_bemfA.out - (1.f / 3.f) * (foc1.cmtn.lpf_bemfB.out - foc1.cmtn.lpf_bemfC.out);
-        foc1.data.vBeta = ONE_BY_SQRT3 * (foc1.cmtn.lpf_bemfB.out - foc1.cmtn.lpf_bemfC.out);
-      }
+      // get input data from ADC
+      adc_get_inputs_SI(&adcData, &foc1, &bldc1);
       // PARK transform for phase currents
       foc1.data.isd = foc1.data.isa * foc1.data.cosTheta + foc1.data.isb * foc1.data.sinTheta;
       foc1.data.isq = foc1.data.isb * foc1.data.cosTheta - foc1.data.isa * foc1.data.sinTheta;
@@ -757,9 +725,10 @@ void ADC1_2_IRQHandler(void)
       foc1.data.bldc_duty = sqrtf(SQ(foc1.volt.dutyD) + SQ(foc1.volt.dutyQ));
       // calc speed
       foc1.data.speedRpm = (foc1.data.freq * 60.f) / foc1.config.pp;
-      // calc space-vector generator
+      // calc space-vector generator and update PWM
       foc1.svgen.udc = foc1.volt.DcBusVolt;
       foc1.calc.svgen(&foc1.svgen);
+      pwm_update(foc1.svgen.Ta, foc1.svgen.Tb, foc1.svgen.Tc, foc1.data.halfPwmPeriod);
       // Check protection
       foc1.prot.currPhU = foc1.data.isa;
       foc1.prot.currPhV = foc1.data.isb;
@@ -767,11 +736,10 @@ void ADC1_2_IRQHandler(void)
       foc1.prot.tempPcb = ntcPcb.temp;
       foc1.calc.prot(&foc1.prot);
       foc1.driveState = (foc1.prot.protFlag != 0) ? FAULT : foc1.driveState;
-      // apply voltage to motor and pwm driver
+      // apply voltage to virtual motor
       bldc1.cmpr0 = foc1.svgen.Ta;
       bldc1.cmpr1 = foc1.svgen.Tb;
       bldc1.cmpr2 = foc1.svgen.Tc;
-      pwm_update(foc1.svgen.Ta, foc1.svgen.Tb, foc1.svgen.Tc, foc1.data.halfPwmPeriod);
       // calc BLDC motor model
       ModelBLDC_Calc(&bldc1);
       // call datalogger
@@ -797,10 +765,12 @@ void ADC1_2_IRQHandler(void)
         angleIncDelay++;
         foc1.paramIdRunState = (angleIncDelay >= (uint32_t)(2.f * foc1.config.smpFreq)) ? ID_RUN_HALL_FWD : foc1.paramIdRunState;
       }
-      //ramp_calc(&foc1.data.freqRef, &foc1.data.freq, foc1.data.freqRmp, foc1.config.tS);
       // Angle generator
-      if (foc1.paramIdRunState == ID_RUN_HALL_FWD || foc1.paramIdRunState == ID_RUN_HALL_RVS)
+      if (foc1.paramIdRunState == ID_RUN_HALL_FWD || foc1.paramIdRunState == ID_RUN_HALL_RVS || foc1.paramIdRunState == ID_RUN_FLUX_OL)
       {
+        if (foc1.paramIdRunState == ID_RUN_FLUX_OL)
+          ramp_calc(&foc1.data.freq, foc1.data.freqRef, foc1.data.freqRmp, foc1.config.tS);
+
         foc1.data.angle += foc1.data.freqStep * foc1.data.freq;
         if (foc1.data.angle < -MF_PI)
           foc1.data.angle = foc1.data.angle + M_2PI;
@@ -840,37 +810,7 @@ void ADC1_2_IRQHandler(void)
       // calc sin/cos
       cordic_sincos_calc(foc1.data.angle, &foc1.data.sinTheta, &foc1.data.cosTheta);
       // clarke transform for phase currents
-      if (foc1.config.sim == 1)
-      {
-        foc1.data.isa = bldc1.isPhaseA;
-        foc1.data.isb = _1DIV_SQRT3 * bldc1.isPhaseA + _2DIV_SQRT3 * bldc1.isPhaseB;
-        foc1.volt.DcBusVolt = bldc1.udc;
-      }
-      else if (foc1.config.sim == 0)
-      {
-        // scaling ADC data and clarke transform for phase currents and voltages
-        foc1.data.iPhaseA = ((float)adcData.ph_u - foc1.data.offsetCurrA) * (one_by_halfADC * foc1.config.adcFullScaleCurrent);
-        foc1.data.iPhaseB = ((float)adcData.ph_v - foc1.data.offsetCurrB) * (one_by_halfADC * foc1.config.adcFullScaleCurrent);
-        foc1.data.iPhaseC = ((float)adcData.ph_w - foc1.data.offsetCurrC) * (one_by_halfADC * foc1.config.adcFullScaleCurrent);
-        foc1.volt.DcBusVolt = (float)adcData.v_dc * one_by_maxADC * foc1.config.adcFullScaleVoltage;
-        foc1.data.vPhaseA = ((float)adcData.v_u - foc1.data.offsetVoltA) * (one_by_maxADC * foc1.config.adcFullScaleVoltage);
-        foc1.data.vPhaseB = ((float)adcData.v_v - foc1.data.offsetVoltB) * (one_by_maxADC * foc1.config.adcFullScaleVoltage);
-        foc1.data.vPhaseC = ((float)adcData.v_w - foc1.data.offsetVoltC) * (one_by_maxADC * foc1.config.adcFullScaleVoltage);
-
-        foc1.cmtn.lpf_bemfA.in = foc1.data.vPhaseA;
-        foc1.cmtn.lpf_bemfB.in = foc1.data.vPhaseB;
-        foc1.cmtn.lpf_bemfC.in = foc1.data.vPhaseC;
-
-        LPF_calc(&foc1.cmtn.lpf_bemfA);
-        LPF_calc(&foc1.cmtn.lpf_bemfB);
-        LPF_calc(&foc1.cmtn.lpf_bemfC);
-
-        foc1.data.isa = foc1.data.iPhaseA;
-        foc1.data.isb = _1DIV_SQRT3 * foc1.data.iPhaseA + _2DIV_SQRT3 * foc1.data.iPhaseB;
-
-        foc1.data.vAlpha = (2.f / 3.f) * foc1.cmtn.lpf_bemfA.out - (1.f / 3.f) * foc1.cmtn.lpf_bemfB.out - (1.f / 3.f) * foc1.cmtn.lpf_bemfC.out;
-        foc1.data.vBeta = ONE_BY_SQRT3 * (foc1.cmtn.lpf_bemfB.out - foc1.cmtn.lpf_bemfC.out);
-      }
+      adc_get_inputs_SI(&adcData, &foc1, &bldc1);
       // Filtered data
       foc1.lpf_id.in = foc1.data.isd;
       foc1.lpf_iq.in = foc1.data.isq;
@@ -890,8 +830,7 @@ void ADC1_2_IRQHandler(void)
       foc1.pi_iq.Fdb = foc1.data.isq;
       foc1.calc.pi_reg(&foc1.pi_id);
       foc1.calc.pi_reg(&foc1.pi_iq);
-      // feed-forward axis decoupling
-      /* TODO */
+
       foc1.volt.usd = foc1.pi_id.Out;
       foc1.volt.usq = foc1.pi_iq.Out;
       UTILS_LP_FAST(foc1.cgtc.udFltrd, foc1.volt.usd, 0.001f);
@@ -975,8 +914,63 @@ void ADC1_2_IRQHandler(void)
         foc1.cgtc.coggingMap[foc1.cgtc.tabNmbr] = -((foc1.cgtc.udFltrd - foc1.cgtc.udZero) / foc1.data.idRef);
         if (foc1.cgtc.tabNmbr >= (100 - 1))
         {
-          foc1.paramIdRunState = ID_RUN_COG_CMPLT;
-          foc1.driveState = STOP;
+          foc1.pi_id.Ref = 0.f;
+          foc1.data.freq = 0.f;
+          foc1.data.idRef = 10.f;
+          foc1.data.iqRmp = 10.f;
+          foc1.data.freqRef = 40.f;
+          foc1.data.freqRmp = 10.f;
+          angleIncDelay = 0;
+          foc1.paramIdRunState = ID_RUN_FLUX_OL;
+          //foc1.driveState = STOP;
+        }
+      }
+      if (foc1.paramIdRunState == ID_RUN_FLUX_OL)
+      {
+        static uint8_t fluxDetectFlag;
+        /* Calc duty */
+        foc1.volt.dutyD = (foc1.volt.usd - (foc1.lpf_id.out * foc1.config.Rs)) / (foc1.volt.DcBusVolt * TWO_BY_SQRT3);
+        foc1.volt.dutyQ = (foc1.volt.usq - (foc1.lpf_iq.out * foc1.config.Rs)) / (foc1.volt.DcBusVolt * TWO_BY_SQRT3);
+        foc1.data.bldc_duty = sqrtf(SQ(foc1.volt.dutyD) + SQ(foc1.volt.dutyQ));
+        foc1.pll.SpeedPll = foc1.data.freq * M_2PI;
+        foc1.data.speedRpm = (foc1.pll.SpeedPll * RADS2RPM) / foc1.config.pp;
+        if (foc1.data.freq > (foc1.data.freqRef * 0.99f))
+        {
+          angleIncDelay++;
+          /* Calc Kv. Note: return value has to be divided by half the number of motor poles */
+          if (fluxDetectFlag == 0)
+          {
+            float kv_raw = (foc1.data.speedRpm / (foc1.data.bldc_duty * foc1.volt.DcBusVolt)) / (foc1.config.pp / 2.f);
+            UTILS_LP_FAST(foc1.config.Kv, kv_raw, 0.00025f);
+            UTILS_NAN_ZERO(foc1.config.Kv);
+          }
+          if (angleIncDelay >= (uint32_t)(2.0f * foc1.config.smpFreq) && fluxDetectFlag == 0)
+          {
+            foc1.flux.fluxLeakage = 60.f / (SQRT3 * M_2PI * foc1.config.Kv * foc1.config.pp);
+            foc1.data.freqRmp = foc1.data.freqRef / 2.f;
+            foc1.data.freqRef = 0.f;
+            fluxDetectFlag = 1;
+          }
+          if (angleIncDelay >= (uint32_t)(5.0f * foc1.config.smpFreq))
+          {
+            angleIncDelay = 0;
+            foc1.data.freq = 0.f;
+            foc1.data.idRef = 0.f;
+            foc1.data.freqRef = 0.f;
+            foc1.data.freqRmp = 10.f;
+            // foc1.data.speedRef = 75.f * M_2PI;
+            // foc1.data.spdRmp = 100.f;
+            // foc1.data.angle = 0.f;
+            // foc1.config.decMode = DEC_BEMF;
+            // foc1.paramIdRunState = ID_RUN_FLUX_CL;
+            // foc1.driveState = RUN_CLOSEDLOOP_SPD;
+            foc1.paramIdRunState = ID_RUN_CMPLT;
+            foc1.driveState = STOP;
+          }
+        }
+        else
+        {
+          fluxDetectFlag = 0;
         }
       }
       // calc speed PLL
@@ -1006,7 +1000,8 @@ void ADC1_2_IRQHandler(void)
       datalogCalcUART(&dataLog);
       break;
     case RUN_OPENLOOP_IHZ:
-      ramp_calc(&foc1.data.freq, foc1.data.freqRef, foc1.data.freqRmp, foc1.config.tS);
+      //  ramp_calc(&foc1.data.freq, foc1.data.freqRef, foc1.data.freqRmp, foc1.config.tS);
+      ramp_s_calc(&foc1.data.freq, foc1.data.freqRef, foc1.data.freqRmp, foc1.config.tS);
       // Angle generator
       foc1.data.angle += foc1.data.freqStep * foc1.data.freq;
       if (foc1.data.angle < -MF_PI)
@@ -1014,102 +1009,22 @@ void ADC1_2_IRQHandler(void)
       else if (foc1.data.angle > MF_PI)
         foc1.data.angle = foc1.data.angle - M_2PI;
       // calc sin/cos
-      /* Use CORDIC for find sin/cos. ~98 CPU cycles */
       cordic_sincos_calc(foc1.data.angle, &foc1.data.sinTheta, &foc1.data.cosTheta);
-      // clarke transform for phase currents
-      if (foc1.config.sim == 1)
-      {
-        foc1.data.isa = bldc1.isPhaseA;
-        foc1.data.isb = _1DIV_SQRT3 * bldc1.isPhaseA + _2DIV_SQRT3 * bldc1.isPhaseB;
-        foc1.volt.DcBusVolt = bldc1.udc;
-      }
-      else if (foc1.config.sim == 0)
-      {
-        // scaling ADC data and clarke transform for phase currents and voltages
-        foc1.data.iPhaseA = ((float)adcData.ph_u - foc1.data.offsetCurrA) * (one_by_halfADC * foc1.config.adcFullScaleCurrent);
-        foc1.data.iPhaseB = ((float)adcData.ph_v - foc1.data.offsetCurrB) * (one_by_halfADC * foc1.config.adcFullScaleCurrent);
-        foc1.data.iPhaseC = ((float)adcData.ph_w - foc1.data.offsetCurrC) * (one_by_halfADC * foc1.config.adcFullScaleCurrent);
-        foc1.volt.DcBusVolt = (float)adcData.v_dc * one_by_maxADC * foc1.config.adcFullScaleVoltage;
-        foc1.data.vPhaseA = ((float)adcData.v_u - foc1.data.offsetVoltA) * (one_by_maxADC * foc1.config.adcFullScaleVoltage);
-        foc1.data.vPhaseB = ((float)adcData.v_v - foc1.data.offsetVoltB) * (one_by_maxADC * foc1.config.adcFullScaleVoltage);
-        foc1.data.vPhaseC = ((float)adcData.v_w - foc1.data.offsetVoltC) * (one_by_maxADC * foc1.config.adcFullScaleVoltage);
-
-        foc1.cmtn.lpf_bemfA.in = foc1.data.vPhaseA;
-        foc1.cmtn.lpf_bemfB.in = foc1.data.vPhaseB;
-        foc1.cmtn.lpf_bemfC.in = foc1.data.vPhaseC;
-
-        LPF_calc(&foc1.cmtn.lpf_bemfA);
-        LPF_calc(&foc1.cmtn.lpf_bemfB);
-        LPF_calc(&foc1.cmtn.lpf_bemfC);
-
-        foc1.data.isa = foc1.data.iPhaseA;
-        foc1.data.isb = _1DIV_SQRT3 * foc1.data.iPhaseA + _2DIV_SQRT3 * foc1.data.iPhaseB;
-
-        foc1.data.vAlpha = (2.f / 3.f) * foc1.cmtn.lpf_bemfA.out - (1.f / 3.f) * foc1.cmtn.lpf_bemfB.out - (1.f / 3.f) * foc1.cmtn.lpf_bemfC.out;
-        foc1.data.vBeta = ONE_BY_SQRT3 * (foc1.cmtn.lpf_bemfB.out - foc1.cmtn.lpf_bemfC.out);
-      }
-      // Filtered data
-      foc1.lpf_id.in = foc1.data.isd;
-      foc1.lpf_iq.in = foc1.data.isq;
-      foc1.lpf_vdc.in = foc1.volt.DcBusVolt;
-      LPF_calc(&foc1.lpf_id);
-      LPF_calc(&foc1.lpf_iq);
-      LPF_calc(&foc1.lpf_vdc);
-      foc1.volt.DcBusVolt = foc1.lpf_vdc.out;
-      // PARK transform for phase currents
-      foc1.data.isd = foc1.data.isa * foc1.data.cosTheta + foc1.data.isb * foc1.data.sinTheta;
-      foc1.data.isq = foc1.data.isb * foc1.data.cosTheta - foc1.data.isa * foc1.data.sinTheta;
-      // anticogging
-      foc1.cgtc.angle = foc1.data.angle;
-      foc1.cgtc.uRef = foc1.pi_id.Out;
-      foc1.calc.cgtc(&foc1.cgtc);
-      // calc PI current controllers for D/Q axis
-      foc1.pi_id.Ref = foc1.data.idRef + foc1.cgtc.uCogg;
+      // get inpu data from ADC
+      adc_get_inputs_SI(&adcData, &foc1, &bldc1);
+      // calc current controller
+      ramp_calc(&foc1.pi_id.Ref, foc1.data.idRef, foc1.data.iqRmp, foc1.config.tS);
       foc1.pi_iq.Ref = foc1.data.iqRef;
-      foc1.pi_id.Fdb = foc1.data.isd;
-      foc1.pi_iq.Fdb = foc1.data.isq;
-      foc1.calc.pi_reg(&foc1.pi_id);
-      foc1.calc.pi_reg(&foc1.pi_iq);
-      // feed-forward axis decoupling
-      switch (foc1.config.decMode)
-      {
-      case DEC_DISABLE:
-        foc1.data.udDec = 0.f;
-        foc1.data.uqDec = 0.f;
-        break;
-      case DEC_CROSS:
-        foc1.data.udDec = foc1.data.isq * foc1.pll.SpeedPll * foc1.config.Lq;
-        foc1.data.uqDec = foc1.data.isd * foc1.pll.SpeedPll * foc1.config.Ld;
-        break;
-      case DEC_BEMF:
-        foc1.data.udDec = 0.f;
-        foc1.data.uqDec = foc1.pll.SpeedPll * foc1.flux.fluxLeakage;
-        break;
-      case DEC_CROSS_BEMF:
-        foc1.data.udDec = foc1.data.isq * foc1.pll.SpeedPll * foc1.config.Lq;
-        foc1.data.uqDec = foc1.pll.SpeedPll * (foc1.data.isd * foc1.config.Ld + foc1.flux.fluxLeakage);
-        break;
-      default:
-        break;
-      }
-      foc1.volt.usd = foc1.pi_id.Out - foc1.data.udDec;//(foc1.pi_id.Out + foc1.cgtc.uCogg) - foc1.data.udDec;
-      foc1.volt.usq = foc1.pi_iq.Out + foc1.data.uqDec;
-      // Saturation
-      foc1.volt.magMaxD = foc1.volt.dutyMax * SQRT3_BY_2 * foc1.volt.DcBusVolt;
-      foc1.volt.magMaxQ = sqrtf(SQ(foc1.volt.magMaxD) - SQ(foc1.volt.usd));
-      // Saturation
-      utils_saturate_vector_2d((float *)&foc1.volt.usd, (float *)&foc1.volt.usq, foc1.volt.magMaxD);
+      Foc_update_cc(&foc1);
       // calc phase voltages
       foc1.volt.MfuncV1 = foc1.svgen.Ta;
       foc1.volt.MfuncV2 = foc1.svgen.Tb;
       foc1.volt.MfuncV3 = foc1.svgen.Tc;
       foc1.calc.volt(&foc1.volt);
-      //calc IPARK transform (IPARK output -> SVGEN input)
-      foc1.svgen.usa = foc1.volt.usd * foc1.data.cosTheta - foc1.volt.usq * foc1.data.sinTheta;
-      foc1.svgen.usb = foc1.volt.usq * foc1.data.cosTheta + foc1.volt.usd * foc1.data.sinTheta;
-      // calc space-vector generator
+      // calc space-vector generator and update PWM
       foc1.svgen.udc = foc1.volt.DcBusVolt;
       foc1.calc.svgen(&foc1.svgen);
+      pwm_update(foc1.svgen.Ta, foc1.svgen.Tb, foc1.svgen.Tc, foc1.data.halfPwmPeriod);
       // estimete Hall sensor position
       Hall_read(&hall, 4);
       hall.speedE = foc1.pll.SpeedPll;
@@ -1134,7 +1049,6 @@ void ADC1_2_IRQHandler(void)
       bldc1.cmpr0 = foc1.svgen.Ta;
       bldc1.cmpr1 = foc1.svgen.Tb;
       bldc1.cmpr2 = foc1.svgen.Tc;
-      pwm_update(foc1.svgen.Ta, foc1.svgen.Tb, foc1.svgen.Tc, foc1.data.halfPwmPeriod);
       // calc BLDC motor model
       //ModelBLDC_Calc(&bldc1);
       // call datalogger
@@ -1148,96 +1062,14 @@ void ADC1_2_IRQHandler(void)
       datalogCalcUART(&dataLog);
       break;
     case RUN_CLOSEDLOOP_DQ:
+      // calc sin/cos
+      cordic_sincos_calc(foc1.data.angle, &foc1.data.sinTheta, &foc1.data.cosTheta);
       // take ADC data and calc sin/cos
-      if (foc1.config.sim == 1)
-      {
-        foc1.data.angle = bldc1.tetaR;
-        cordic_sincos_calc(foc1.data.angle, &foc1.data.sinTheta, &foc1.data.cosTheta);
-        // clarke transform for phase currents
-        foc1.data.isa = bldc1.isPhaseA;
-        foc1.data.isb = _1DIV_SQRT3 * bldc1.isPhaseA + _2DIV_SQRT3 * bldc1.isPhaseB;
-        foc1.volt.DcBusVolt = bldc1.udc;
-      }
-      else if (foc1.config.sim == 0)
-      {
-        // calc sinCos
-        cordic_sincos_calc(foc1.data.angle, &foc1.data.sinTheta, &foc1.data.cosTheta);
-        // scaling ADC data
-        foc1.data.iPhaseA = ((float)adcData.ph_u - foc1.data.offsetCurrA) * (one_by_halfADC * foc1.config.adcFullScaleCurrent);
-        foc1.data.iPhaseB = ((float)adcData.ph_v - foc1.data.offsetCurrB) * (one_by_halfADC * foc1.config.adcFullScaleCurrent);
-        foc1.data.iPhaseC = ((float)adcData.ph_w - foc1.data.offsetCurrC) * (one_by_halfADC * foc1.config.adcFullScaleCurrent);
-        foc1.volt.DcBusVolt = (float)adcData.v_dc * one_by_maxADC * foc1.config.adcFullScaleVoltage;
-        foc1.data.vPhaseA = ((float)adcData.v_u - foc1.data.offsetVoltA) * (one_by_maxADC * foc1.config.adcFullScaleVoltage);
-        foc1.data.vPhaseB = ((float)adcData.v_v - foc1.data.offsetVoltB) * (one_by_maxADC * foc1.config.adcFullScaleVoltage);
-        foc1.data.vPhaseC = ((float)adcData.v_w - foc1.data.offsetVoltC) * (one_by_maxADC * foc1.config.adcFullScaleVoltage);
-        // Clarke transform for phase currents and voltages
-        foc1.data.isa = foc1.data.iPhaseA;
-        foc1.data.isb = _1DIV_SQRT3 * foc1.data.iPhaseA + _2DIV_SQRT3 * foc1.data.iPhaseB;
-        foc1.data.vAlpha = (2.f / 3.f) * foc1.cmtn.lpf_bemfA.out - (1.f / 3.f) * (foc1.cmtn.lpf_bemfB.out - foc1.cmtn.lpf_bemfC.out);
-        foc1.data.vBeta = ONE_BY_SQRT3 * (foc1.cmtn.lpf_bemfB.out - foc1.cmtn.lpf_bemfC.out);
-      }
-      // PARK transform for phase currents
-      foc1.data.isd = foc1.data.isa * foc1.data.cosTheta + foc1.data.isb * foc1.data.sinTheta;
-      foc1.data.isq = -foc1.data.isa * foc1.data.sinTheta + foc1.data.isb * foc1.data.cosTheta;
-      // Filtered data
-      foc1.lpf_id.in = foc1.data.isd;
-      foc1.lpf_iq.in = foc1.data.isq;
-      foc1.lpf_vdc.in = foc1.volt.DcBusVolt;
-      LPF_calc(&foc1.lpf_id);
-      LPF_calc(&foc1.lpf_iq);
-      LPF_calc(&foc1.lpf_vdc);
-      foc1.volt.DcBusVolt = foc1.lpf_vdc.out;
-      // calc PI current controllers for D/Q axis
-      /* ramp Iq current for smoothly transitions */
+      adc_get_inputs_SI(&adcData, &foc1, &bldc1);
+      // calc current controller
+      foc1.pi_id.Ref = foc1.data.idRef;
       ramp_calc(&foc1.pi_iq.Ref, foc1.data.iqRef, foc1.data.iqRmp, foc1.config.tS);
-      // calc MTPA
-      //foc1.mtpa.iqRef = foc1.pi_iq.Ref;
-      //foc1.calc.mtpa(&foc1.mtpa);
-      foc1.cgtc.angle = foc1.data.angle;
-      foc1.cgtc.uRef = foc1.pi_iq.Out;
-      foc1.calc.cgtc(&foc1.cgtc);
-      // calc decoupling
-      switch (foc1.config.decMode)
-      {
-      case DEC_DISABLE:
-        foc1.data.udDec = 0.f;
-        foc1.data.uqDec = 0.f;
-        break;
-      case DEC_CROSS:
-        foc1.data.udDec = foc1.data.isq * foc1.pll.SpeedPll * foc1.config.Lq;
-        foc1.data.uqDec = foc1.data.isd * foc1.pll.SpeedPll * foc1.config.Ld;
-        break;
-      case DEC_BEMF:
-        foc1.data.udDec = 0.f;
-        foc1.data.uqDec = foc1.pll.SpeedPll * foc1.flux.fluxLeakage;
-        break;
-      case DEC_CROSS_BEMF:
-        foc1.data.udDec = foc1.data.isq * foc1.pll.SpeedPll * foc1.config.Lq;
-        foc1.data.uqDec = foc1.pll.SpeedPll * (foc1.data.isd * foc1.config.Ld + foc1.flux.fluxLeakage);
-        break;
-      default:
-        break;
-      }
-      // calc PI
-      foc1.pi_iq.Ref = (foc1.mtpa.en != 0) ? foc1.mtpa.iq_MTPA : foc1.pi_iq.Ref;
-      foc1.pi_id.Ref = (foc1.mtpa.en != 0) ? foc1.mtpa.id_MTPA : foc1.data.idRef;
-      foc1.pi_id.Fdb = foc1.data.isd;
-      foc1.pi_iq.Fdb = foc1.data.isq;
-      foc1.pi_id.Fdfwd = -foc1.data.udDec;
-      foc1.pi_iq.Fdfwd = foc1.data.uqDec + foc1.cgtc.uCogg;
-      foc1.pi_id.OutMax = foc1.volt.magMaxD;
-      foc1.pi_id.OutMin = -foc1.pi_id.OutMax;
-      foc1.pi_iq.OutMax = foc1.volt.magMaxQ;
-      foc1.pi_iq.OutMin = -foc1.pi_iq.OutMax;
-      foc1.calc.pi_reg(&foc1.pi_id);
-      foc1.calc.pi_reg(&foc1.pi_iq);
-
-      foc1.volt.usd = foc1.pi_id.Out;
-      foc1.volt.usq = foc1.pi_iq.Out;
-      foc1.volt.magMaxD = foc1.volt.dutyMax * ONE_BY_SQRT3 * foc1.volt.DcBusVolt;
-      foc1.volt.magMaxQ = sqrtf(SQ(foc1.volt.magMaxD) - SQ(foc1.volt.usd));
-      // Saturation
-      utils_saturate_vector_2d((float *)&foc1.volt.usd, (float *)&foc1.volt.usq, foc1.volt.magMaxD);
+      Foc_update_cc(&foc1);
       // calc phase voltages
       foc1.volt.MfuncV1 = foc1.svgen.Ta;
       foc1.volt.MfuncV2 = foc1.svgen.Tb;
@@ -1247,9 +1079,6 @@ void ADC1_2_IRQHandler(void)
       foc1.volt.dutyD = foc1.volt.usd / (foc1.volt.DcBusVolt * TWO_BY_SQRT3);
       foc1.volt.dutyQ = foc1.volt.usq / (foc1.volt.DcBusVolt * TWO_BY_SQRT3);
       foc1.data.bldc_duty = sqrtf(SQ(foc1.volt.dutyD) + SQ(foc1.volt.dutyQ));
-      // calc IPARK transform (IPARK output -> SVGEN input)
-      foc1.svgen.usa = foc1.volt.usd * foc1.data.cosTheta - foc1.volt.usq * foc1.data.sinTheta;
-      foc1.svgen.usb = foc1.volt.usq * foc1.data.cosTheta + foc1.volt.usd * foc1.data.sinTheta;
       // calc space-vector generator and update PWM
       foc1.svgen.udc = foc1.volt.DcBusVolt;
       foc1.calc.svgen(&foc1.svgen);
@@ -1259,47 +1088,8 @@ void ADC1_2_IRQHandler(void)
       hall.speedE = foc1.pll.SpeedPll;
       Hall_update(&hall);
       // calc flux observer
-      foc1.flux.i_alpha = foc1.data.isa;
-      foc1.flux.i_beta = foc1.data.isb;
-      foc1.flux.v_alpha = foc1.volt.usa;
-      foc1.flux.v_beta = foc1.volt.usb;
-      foc1.calc.flux(&foc1.flux);
-      // calc speed PLL
-      if (foc1.config.sensorType == HALL)
-      {
-        foc1.pll.AngleRaw = hall.angleRaw;
-        foc1.calc.pll(&foc1.pll);
-        foc1.data.angle = (fabsf(foc1.pll.SpeedPll) > 50.f) ? foc1.pll.AnglePll : hall.angleRaw;
-      }
-      else if (foc1.config.sensorType == SENSORLESS)
-      {
-        foc1.pll.AngleRaw = foc1.flux.phase;
-        foc1.data.angle = foc1.flux.phase;
-        foc1.calc.pll(&foc1.pll);
-      }
-      else if (foc1.config.sensorType == HYBRYD)
-      {
-        //volatile static uint8_t hybryd_state;
-        //volatile float speedAbs = fabsf(foc1.pll.SpeedPll);
-        speedAbs = fabsf(foc1.pll.SpeedPll);
-        hybryd_state = (speedAbs > 310.f) ? 1 : hybryd_state;
-        hybryd_state = (speedAbs < 290.f) ? 0 : hybryd_state;
-        if (hybryd_state == 0)
-        {
-          foc1.pll.AngleRaw = hall.angleRaw;
-          foc1.calc.pll(&foc1.pll);
-          foc1.data.angle = (speedAbs > 50.f) ? foc1.pll.AnglePll : hall.angleRaw;
-          LL_GPIO_SetOutputPin(LED_FAULT_GPIO_Port, LED_FAULT_Pin);
-        }
-        else
-        {
-          foc1.pll.AngleRaw = foc1.flux.phase;
-          foc1.data.angle = foc1.flux.phase;
-          foc1.calc.pll(&foc1.pll);
-          LL_GPIO_ResetOutputPin(LED_FAULT_GPIO_Port, LED_FAULT_Pin);
-        }
-      }
-      foc1.data.speedRpm = (foc1.pll.SpeedPll * RADS2RPM) / foc1.config.pp;
+      foc1.data.hallAngle = hall.angleRaw;
+      Foc_update_angle_speed(&foc1);
       // Check protection
       foc1.prot.currPhU = foc1.data.isa;
       foc1.prot.currPhV = foc1.data.isb;
@@ -1307,11 +1097,10 @@ void ADC1_2_IRQHandler(void)
       foc1.prot.tempPcb = ntcPcb.temp;
       foc1.calc.prot(&foc1.prot);
       foc1.driveState = (foc1.prot.protFlag != 0) ? FAULT : foc1.driveState;
-      // apply voltage to motor model and pwm driver
+      // apply voltage to virteal motor model
       bldc1.cmpr0 = foc1.svgen.Ta;
       bldc1.cmpr1 = foc1.svgen.Tb;
       bldc1.cmpr2 = foc1.svgen.Tc;
-
       // calc BLDC motor model
       //ModelBLDC_Calc(&bldc1);
       // call datalogger
@@ -1326,61 +1115,12 @@ void ADC1_2_IRQHandler(void)
       break;
     case RUN_CLOSEDLOOP_SPD:
       // calc sin/cos
-      if (foc1.config.sim == 1)
-      {
-        foc1.data.angle = bldc1.tetaR;
-        cordic_sincos_calc(foc1.data.angle, &foc1.data.sinTheta, &foc1.data.cosTheta);
-        // clarke transform for phase currents
-        foc1.data.isa = bldc1.isPhaseA;
-        foc1.data.isb = _1DIV_SQRT3 * bldc1.isPhaseA + _2DIV_SQRT3 * bldc1.isPhaseB;
-        foc1.volt.DcBusVolt = bldc1.udc;
-      }
-      else if (foc1.config.sim == 0)
-      {
-        // calc sinCos
-        cordic_sincos_calc(foc1.data.angle, &foc1.data.sinTheta, &foc1.data.cosTheta);
-        // scaling ADC data and clarke transform for phase currents and voltages
-        foc1.data.iPhaseA = ((float)adcData.ph_u - foc1.data.offsetCurrA) * (one_by_halfADC * foc1.config.adcFullScaleCurrent);
-        foc1.data.iPhaseB = ((float)adcData.ph_v - foc1.data.offsetCurrB) * (one_by_halfADC * foc1.config.adcFullScaleCurrent);
-        foc1.data.iPhaseC = ((float)adcData.ph_w - foc1.data.offsetCurrC) * (one_by_halfADC * foc1.config.adcFullScaleCurrent);
-        foc1.volt.DcBusVolt = (float)adcData.v_dc * one_by_maxADC * foc1.config.adcFullScaleVoltage;
-        foc1.data.vPhaseA = ((float)adcData.v_u - foc1.data.offsetVoltA) * (one_by_maxADC * foc1.config.adcFullScaleVoltage);
-        foc1.data.vPhaseB = ((float)adcData.v_v - foc1.data.offsetVoltB) * (one_by_maxADC * foc1.config.adcFullScaleVoltage);
-        foc1.data.vPhaseC = ((float)adcData.v_w - foc1.data.offsetVoltC) * (one_by_maxADC * foc1.config.adcFullScaleVoltage);
-
-        foc1.cmtn.lpf_bemfA.in = foc1.data.vPhaseA;
-        foc1.cmtn.lpf_bemfB.in = foc1.data.vPhaseB;
-        foc1.cmtn.lpf_bemfC.in = foc1.data.vPhaseC;
-
-        LPF_calc(&foc1.cmtn.lpf_bemfA);
-        LPF_calc(&foc1.cmtn.lpf_bemfB);
-        LPF_calc(&foc1.cmtn.lpf_bemfC);
-
-        foc1.data.isa = foc1.data.iPhaseA;
-        foc1.data.isb = _1DIV_SQRT3 * foc1.data.iPhaseA + _2DIV_SQRT3 * foc1.data.iPhaseB;
-
-        foc1.data.vAlpha = (2.f / 3.f) * foc1.cmtn.lpf_bemfA.out - (1.f / 3.f) * foc1.cmtn.lpf_bemfB.out - (1.f / 3.f) * foc1.cmtn.lpf_bemfC.out;
-        foc1.data.vBeta = ONE_BY_SQRT3 * (foc1.cmtn.lpf_bemfB.out - foc1.cmtn.lpf_bemfC.out);
-      }
-      // PARK transform for phase currents
-      foc1.data.isd = foc1.data.isa * foc1.data.cosTheta + foc1.data.isb * foc1.data.sinTheta;
-      foc1.data.isq = -foc1.data.isa * foc1.data.sinTheta + foc1.data.isb * foc1.data.cosTheta;
-      // Filtered data
-      foc1.lpf_id.in = foc1.data.isd;
-      foc1.lpf_iq.in = foc1.data.isq;
-      foc1.lpf_vdc.in = foc1.volt.DcBusVolt;
-      LPF_calc(&foc1.lpf_id);
-      LPF_calc(&foc1.lpf_iq);
-      LPF_calc(&foc1.lpf_vdc);
-      foc1.volt.DcBusVolt = foc1.lpf_vdc.out;
-
-      // calc PI speed controller
-      // ramp speed reference
-      // foc1.data.speedRef = (pwmInputValue > 100) ? (float)pwmInputValue * 0.24414f : 0.f;
-      // foc1.driveState = (pwmInputValue > 100) ? foc1.driveState : STOP;
-      // foc1.data.speedRef = (LL_GPIO_IsInputPinSet(DIR_GPIO_Port, DIR_Pin) == 1) ? -foc1.data.speedRef : foc1.data.speedRef;
-
-      ramp_calc(&foc1.pi_spd.Ref, foc1.data.speedRef, foc1.data.spdRmp, foc1.config.tS);
+      cordic_sincos_calc(foc1.data.angle, &foc1.data.sinTheta, &foc1.data.cosTheta);
+      // take ADC data and calc sin/cos
+      adc_get_inputs_SI(&adcData, &foc1, &bldc1);
+      // calc speed controller
+      ramp_s_calc(&foc1.pi_spd.Ref, foc1.data.speedRef, foc1.data.spdRmp, foc1.config.tS); // S-curve profile ramp
+      //ramp_calc(&foc1.pi_spd.Ref, foc1.data.speedRef, foc1.data.spdRmp, foc1.config.tS); // trapezoidal profile ramp
       foc1.data.spdLoopCntr++;
       if (foc1.data.spdLoopCntr >= 10)
       {
@@ -1388,49 +1128,10 @@ void ADC1_2_IRQHandler(void)
         foc1.pi_spd.Fdb = (foc1.config.sim == 1) ? bldc1.omega_rpm : foc1.pll.SpeedPll;
         foc1.calc.pi_reg(&foc1.pi_spd);
       }
-      // calc decoupling
-      switch (foc1.config.decMode)
-      {
-      case DEC_DISABLE:
-        foc1.data.udDec = 0.f;
-        foc1.data.uqDec = 0.f;
-        break;
-      case DEC_CROSS:
-        foc1.data.udDec = foc1.data.isq * foc1.pll.SpeedPll * foc1.config.Lq;
-        foc1.data.uqDec = foc1.data.isd * foc1.pll.SpeedPll * foc1.config.Ld;
-        break;
-      case DEC_BEMF:
-        foc1.data.udDec = 0.f;
-        foc1.data.uqDec = foc1.pll.SpeedPll * foc1.flux.fluxLeakage;
-        break;
-      case DEC_CROSS_BEMF:
-        foc1.data.udDec = foc1.data.isq * foc1.pll.SpeedPll * foc1.config.Lq;
-        foc1.data.uqDec = foc1.pll.SpeedPll * (foc1.data.isd * foc1.config.Ld + foc1.flux.fluxLeakage);
-        break;
-      default:
-        break;
-      }
-      //UTILS_LP_FAST(foc1.pi_iq.Ref, foc1.pi_spd.Out, 0.01f);
-      // calc PI
-      foc1.pi_iq.Ref = (foc1.mtpa.en != 0) ? foc1.mtpa.iq_MTPA : foc1.pi_spd.Out;
-      foc1.pi_id.Ref = (foc1.mtpa.en != 0) ? foc1.mtpa.id_MTPA : foc1.data.idRef;
-      foc1.pi_id.Fdb = foc1.data.isd;
-      foc1.pi_iq.Fdb = foc1.data.isq;
-      foc1.pi_id.Fdfwd = -foc1.data.udDec;
-      foc1.pi_iq.Fdfwd = foc1.data.uqDec;
-      foc1.pi_id.OutMax = foc1.volt.magMaxD;
-      foc1.pi_id.OutMin = -foc1.pi_id.OutMax;
-      foc1.pi_iq.OutMax = foc1.volt.magMaxQ; // - foc1.data.uqDec;
-      foc1.pi_iq.OutMin = -foc1.pi_iq.OutMax;
-      foc1.calc.pi_reg(&foc1.pi_id);
-      foc1.calc.pi_reg(&foc1.pi_iq);
-
-      foc1.volt.usd = foc1.pi_id.Out;
-      foc1.volt.usq = foc1.pi_iq.Out;
-      foc1.volt.magMaxD = foc1.volt.dutyMax * ONE_BY_SQRT3 * foc1.volt.DcBusVolt;
-      foc1.volt.magMaxQ = sqrtf(SQ(foc1.volt.magMaxD) - SQ(foc1.volt.usd));
-      // Saturation
-      utils_saturate_vector_2d((float *)&foc1.volt.usd, (float *)&foc1.volt.usq, foc1.volt.magMaxD);
+      // calc current controller
+      foc1.pi_id.Ref = foc1.data.idRef;
+      foc1.pi_iq.Ref = foc1.pi_spd.Out;
+      Foc_update_cc(&foc1);
       // calc phase voltages
       foc1.volt.MfuncV1 = foc1.svgen.Ta;
       foc1.volt.MfuncV2 = foc1.svgen.Tb;
@@ -1440,58 +1141,17 @@ void ADC1_2_IRQHandler(void)
       foc1.volt.dutyD = foc1.volt.usd / (foc1.volt.DcBusVolt * TWO_BY_SQRT3);
       foc1.volt.dutyQ = foc1.volt.usq / (foc1.volt.DcBusVolt * TWO_BY_SQRT3);
       foc1.data.bldc_duty = sqrtf(SQ(foc1.volt.dutyD) + SQ(foc1.volt.dutyQ));
-      // calc IPARK transform (IPARK output -> SVGEN input)
-      foc1.svgen.usa = foc1.volt.usd * foc1.data.cosTheta - foc1.volt.usq * foc1.data.sinTheta;
-      foc1.svgen.usb = foc1.volt.usq * foc1.data.cosTheta + foc1.volt.usd * foc1.data.sinTheta;
-      // calc space-vector generator
+      // calc space-vector generator and update PWM
       foc1.svgen.udc = foc1.volt.DcBusVolt;
       foc1.calc.svgen(&foc1.svgen);
+      pwm_update(foc1.svgen.Ta, foc1.svgen.Tb, foc1.svgen.Tc, foc1.data.halfPwmPeriod);
       // estimete Hall sensor position
       Hall_read(&hall, 4);
       hall.speedE = foc1.pll.SpeedPll;
       Hall_update(&hall);
-      // calc bemf observer
-      // if (foc1.config.sim == 1)
-      //   foc1.smo.freq = (bldc1.omega * bldc1.pp) + 1e-20f; // BLDC motor electrical angular frequency, 1e-20 for avoid QNAN
-      // else if (foc1.config.sim == 0)
-      // {
-      //   foc1.smo.freq = fabsf(foc1.pll.SpeedPll) + 1e-20f;
-      // }
-      // ABS(foc1.smo.freq);
-      // foc1.smo.Ialpha = foc1.data.isa;
-      // foc1.smo.Ibeta = foc1.data.isb;
-      // foc1.smo.Valpha = foc1.volt.usa;
-      // foc1.smo.Vbeta = foc1.volt.usb;
-      // foc1.calc.smo(&foc1.smo);
-
-      // calc flux observer
-      foc1.flux.i_alpha = foc1.data.isa;
-      foc1.flux.i_beta = foc1.data.isb;
-      foc1.flux.v_alpha = foc1.volt.usa;
-      foc1.flux.v_beta = foc1.volt.usb;
-      foc1.calc.flux(&foc1.flux);
-      // calc speed PLL
-      if (foc1.config.sensorType == HALL)
-      {
-        foc1.pll.AngleRaw = hall.angleRaw;
-        foc1.calc.pll(&foc1.pll);
-        foc1.data.angle = (fabsf(foc1.pll.SpeedPll) > 50.f) ? foc1.pll.AnglePll : hall.angleRaw;
-      }
-      else if (foc1.config.sensorType == SENSORLESS)
-      {
-        foc1.pll.AngleRaw = foc1.flux.phase;
-        foc1.data.angle = foc1.flux.phase;
-        foc1.calc.pll(&foc1.pll);
-      }
-      else if (foc1.config.sensorType == HYBRYD)
-      {
-        float speedAbs = fabsf(foc1.pll.SpeedPll);
-        foc1.pll.AngleRaw = (speedAbs > 300.f) ? foc1.flux.phase : hall.angleRaw;
-        foc1.calc.pll(&foc1.pll);
-        float angleLowSpeed = (speedAbs > 50.f) ? foc1.pll.AnglePll : hall.angleRaw;
-        foc1.data.angle = (speedAbs > 300.f) ? foc1.flux.phase : angleLowSpeed;
-      }
-      foc1.data.speedRpm = (foc1.pll.SpeedPll * RADS2RPM) / foc1.config.pp;
+      // calc angle and speed
+      foc1.data.hallAngle = hall.angleRaw;
+      Foc_update_angle_speed(&foc1);
       // Check protection
       foc1.prot.currPhU = foc1.data.isa;
       foc1.prot.currPhV = foc1.data.isb;
@@ -1499,11 +1159,10 @@ void ADC1_2_IRQHandler(void)
       foc1.prot.tempPcb = ntcPcb.temp;
       foc1.calc.prot(&foc1.prot);
       foc1.driveState = (foc1.prot.protFlag != 0) ? FAULT : foc1.driveState;
-      // apply voltage to motor and pwm driver
+      // apply voltage to virtual motor
       bldc1.cmpr0 = foc1.svgen.Ta;
       bldc1.cmpr1 = foc1.svgen.Tb;
       bldc1.cmpr2 = foc1.svgen.Tc;
-      pwm_update(foc1.svgen.Ta, foc1.svgen.Tb, foc1.svgen.Tc, foc1.data.halfPwmPeriod);
       // calc BLDC motor model
       //ModelBLDC_Calc(&bldc1);
       // call datalogger
@@ -1520,38 +1179,8 @@ void ADC1_2_IRQHandler(void)
       // Angle generator
       foc1.data.angle += foc1.data.freqStep * foc1.data.freq;
       foc1.data.angle = (foc1.data.angle > MF_PI) ? -MF_PI : foc1.data.angle;
-      // clarke transform for phase currents
-      if (foc1.config.sim == 1)
-      {
-        foc1.data.isa = bldc1.isPhaseA;
-        foc1.data.isb = _1DIV_SQRT3 * bldc1.isPhaseA + _2DIV_SQRT3 * bldc1.isPhaseB;
-        foc1.volt.DcBusVolt = bldc1.udc;
-      }
-      else if (foc1.config.sim == 0)
-      {
-        // scaling ADC data and clarke transform for phase currents and voltages
-        foc1.data.iPhaseA = ((float)adcData.ph_u - foc1.data.offsetCurrA) * (one_by_halfADC * foc1.config.adcFullScaleCurrent);
-        foc1.data.iPhaseB = ((float)adcData.ph_v - foc1.data.offsetCurrB) * (one_by_halfADC * foc1.config.adcFullScaleCurrent);
-        foc1.data.iPhaseC = ((float)adcData.ph_w - foc1.data.offsetCurrC) * (one_by_halfADC * foc1.config.adcFullScaleCurrent);
-        foc1.volt.DcBusVolt = (float)adcData.v_dc * one_by_maxADC * foc1.config.adcFullScaleVoltage;
-        foc1.data.vPhaseA = ((float)adcData.v_u - foc1.data.offsetVoltA) * (one_by_maxADC * foc1.config.adcFullScaleVoltage);
-        foc1.data.vPhaseB = ((float)adcData.v_v - foc1.data.offsetVoltB) * (one_by_maxADC * foc1.config.adcFullScaleVoltage);
-        foc1.data.vPhaseC = ((float)adcData.v_w - foc1.data.offsetVoltC) * (one_by_maxADC * foc1.config.adcFullScaleVoltage);
-
-        foc1.cmtn.lpf_bemfA.in = foc1.data.vPhaseA;
-        foc1.cmtn.lpf_bemfB.in = foc1.data.vPhaseB;
-        foc1.cmtn.lpf_bemfC.in = foc1.data.vPhaseC;
-
-        LPF_calc(&foc1.cmtn.lpf_bemfA);
-        LPF_calc(&foc1.cmtn.lpf_bemfB);
-        LPF_calc(&foc1.cmtn.lpf_bemfC);
-
-        foc1.data.isa = foc1.data.iPhaseA;
-        foc1.data.isb = _1DIV_SQRT3 * foc1.data.iPhaseA + _2DIV_SQRT3 * foc1.data.iPhaseB;
-
-        foc1.data.vAlpha = (2.f / 3.f) * foc1.cmtn.lpf_bemfA.out - (1.f / 3.f) * foc1.cmtn.lpf_bemfB.out - (1.f / 3.f) * foc1.cmtn.lpf_bemfC.out;
-        foc1.data.vBeta = ONE_BY_SQRT3 * (foc1.cmtn.lpf_bemfB.out - foc1.cmtn.lpf_bemfC.out);
-      }
+      // get input data from ADC
+      adc_get_inputs_SI(&adcData, &foc1, &bldc1);
       // Filtered data
       foc1.lpf_id.in = foc1.data.isd;
       foc1.lpf_iq.in = foc1.data.isq;
@@ -1601,12 +1230,6 @@ void ADC1_2_IRQHandler(void)
         foc1.volt.magMaxD = foc1.volt.dutyMax * foc1.volt.DcBusVolt;
         // Saturation
         utils_saturate_vector_2d((float *)&foc1.volt.usd, (float *)&foc1.volt.usq, foc1.volt.magMaxD);
-        // foc1.volt.dutyD = foc1.volt.usd / (foc1.volt.DcBusVolt * _2DIV_SQRT3);
-        // foc1.volt.dutyQ = foc1.volt.usq / (foc1.volt.DcBusVolt * _2DIV_SQRT3);
-        // Calc duty
-        // foc1.data.bldc_duty = sqrtf(SQ(foc1.volt.dutyD) + SQ(foc1.volt.dutyQ));
-        // foc1.volt.usd = foc1.volt.usd / (0.666666f * foc1.volt.DcBusVolt);
-        // foc1.volt.usq = foc1.volt.usq / (0.666666f * foc1.volt.DcBusVolt);
         // calc phase voltages
         foc1.volt.MfuncV1 = foc1.svgen.Ta;
         foc1.volt.MfuncV2 = foc1.svgen.Tb;
@@ -1615,8 +1238,6 @@ void ADC1_2_IRQHandler(void)
         //calc IPARK transform (IPARK output -> SVGEN input)
         foc1.svgen.usa = foc1.volt.usd * foc1.data.cosTheta - foc1.volt.usq * foc1.data.sinTheta;
         foc1.svgen.usb = foc1.volt.usq * foc1.data.cosTheta + foc1.volt.usd * foc1.data.sinTheta;
-        // foc1.svgen.usa = foc1.volt.dutyD * foc1.data.cosTheta - foc1.volt.dutyQ * foc1.data.sinTheta;
-        // foc1.svgen.usb = foc1.volt.dutyQ * foc1.data.cosTheta + foc1.volt.dutyD * foc1.data.sinTheta;
         // calc space-vector generator
         foc1.svgen.udc = foc1.volt.DcBusVolt;
         foc1.calc.svgen(&foc1.svgen);
@@ -1624,7 +1245,8 @@ void ADC1_2_IRQHandler(void)
         if (foc1.data.isrCntr2 >= (uint32_t)(0.5f * foc1.config.pwmFreq * foc1.config.adcPostScaler)) // wait 250 ms, until current is stable
         {
           // mosfetRds * Idc + deadtime * udc - produce additional voltage drop
-          foc1.data.id_UdErr = foc1.config.Rds_on * fabsf(foc1.lpf_id.out) + ((foc1.config.deadTime * 1e-9f) * foc1.volt.DcBusVolt);
+          float Vdt = (foc1.config.deadTime * 1e-9f) * foc1.config.pwmFreq * foc1.volt.DcBusVolt;
+          foc1.data.id_UdErr = foc1.config.Rds_on * fabsf(foc1.lpf_id.out) + Vdt;
           foc1.data.id_UdErr = (foc1.config.sim == 0) ? foc1.data.id_UdErr : 0.f;
           foc1.data.id_RsBank = (foc1.volt.usd - foc1.data.id_UdErr) / foc1.lpf_id.out;
           UTILS_LP_FAST(foc1.data.id_Rs, foc1.data.id_RsBank, 0.001);
@@ -1652,8 +1274,6 @@ void ADC1_2_IRQHandler(void)
         foc1.volt.magMaxD = foc1.volt.dutyMax * SQRT3_BY_2 * foc1.volt.DcBusVolt;
         // Saturation
         utils_saturate_vector_2d((float *)&foc1.volt.usd, (float *)&foc1.volt.usq, foc1.volt.magMaxD);
-        // foc1.volt.usd = foc1.volt.usd / (foc1.volt.DcBusVolt * _2DIV_SQRT3);
-        // foc1.volt.usq = foc1.volt.usq / (foc1.volt.DcBusVolt * _2DIV_SQRT3);
         /* Check errors */
         if (foc1.data.udRef > foc1.volt.magMaxD)
         {
@@ -1716,8 +1336,6 @@ void ADC1_2_IRQHandler(void)
         foc1.volt.magMaxD = foc1.volt.dutyMax * SQRT3_BY_2 * foc1.volt.DcBusVolt;
         // Saturation
         utils_saturate_vector_2d((float *)&foc1.volt.usd, (float *)&foc1.volt.usq, foc1.volt.magMaxD);
-        // foc1.volt.usd = foc1.volt.usd / (foc1.volt.DcBusVolt * _2DIV_SQRT3);
-        // foc1.volt.usq = foc1.volt.usq / (foc1.volt.DcBusVolt * _2DIV_SQRT3);
         /* Check errors */
         if (foc1.data.udRef > foc1.volt.magMaxD)
         {
@@ -1769,19 +1387,11 @@ void ADC1_2_IRQHandler(void)
         foc1.data.freqRmp = 0.0f;
         foc1.data.udRef = 0.f;
         // calc D-Q axis current PI controllers gains
-        // float tc = 0.001f; // sec
-        // foc1.pi_id.Kp = foc1.pi_iq.Kp = foc1.data.id_Ls * (1.f / tc); // Ls * bw
-        // foc1.pi_id.Ki = foc1.pi_iq.Ki = foc1.data.id_Rs * (1.f / tc) * foc1.config.tS; // Rs * bw, bw = 1.0 / tc, Ki = 𝜔𝑐𝑅 × 𝑇𝑆
         float wcc = (0.05f * (1.f / foc1.config.tS)) * M_2PI;
-        foc1.pi_id.Kp = foc1.pi_iq.Kp = (foc1.data.id_Ld * wcc) * 0.5f;
-        foc1.pi_id.Ki = foc1.pi_iq.Ki = foc1.data.id_Rs * wcc * foc1.config.tS * 0.5f; // Rs * bw, bw = 1.0 / tc, Ki = 𝜔𝑐𝑅 × 𝑇𝑆
+        foc1.pi_id.Kp = foc1.pi_iq.Kp = (foc1.data.id_Ld * wcc);
+        foc1.pi_id.Ki = foc1.pi_iq.Ki = foc1.data.id_Rs * wcc * foc1.config.tS;
         foc1.pi_id.Kc = 1.f / foc1.pi_id.Kp;
         foc1.pi_iq.Kc = 1.f / foc1.pi_iq.Kp;
-        /* z = 0.707, bw=500 rad/s, Kp = (2*z*bw*Ld-Rs), taui = Kp/(Ld*bw*bw), Ki = Kp/taui  */
-        // float zeta = 0.707f; // -3db
-        // float bw = 500.f;    // rad/s
-        // foc1.pi_id.Kp = foc1.pi_iq.Kp = 2.f * zeta * bw * foc1.data.id_Ld - foc1.data.id_Rs;
-        // foc1.pi_id.Ki = foc1.pi_iq.Ki = foc1.pi_id.Kp / (foc1.pi_id.Kp * foc1.config.tS / (foc1.data.id_Ld * bw * bw));
         // observer gains calc
         foc1.smo.Fsmopos = expf((-foc1.data.id_Rs / foc1.data.id_Ld) * foc1.config.tS);
         foc1.smo.Gsmopos = (1.0f / foc1.data.id_Rs) * (1.0f - foc1.smo.Fsmopos);
@@ -1898,9 +1508,9 @@ void slowCalc(void)
   UTILS_LP_FAST(foc1.data.efficiency, eff_raw, 0.01f);
   UTILS_NAN_ZERO(foc1.data.efficiency);
   /* Calc Kv. Note: return value has to be divided by half the number of motor poles */
-  float kv_raw = (foc1.data.speedRpm / (foc1.data.bldc_duty * foc1.volt.DcBusVolt)) / (foc1.config.pp / 2.f);
-  UTILS_LP_FAST(foc1.config.Kv, kv_raw, 0.01f);
-  UTILS_NAN_ZERO(foc1.config.Kv);
+  // float kv_raw = (foc1.data.speedRpm / (foc1.data.bldc_duty * foc1.volt.DcBusVolt)) / (foc1.config.pp / 2.f);
+  // UTILS_LP_FAST(foc1.config.Kv, kv_raw, 0.01f);
+  // UTILS_NAN_ZERO(foc1.config.Kv);
   //foc1.config.Kv = (foc1.data.speedRpm / (foc1.data.bldc_duty * foc1.volt.DcBusVolt)) / (foc1.config.pp / 2.f);
   /* board temperature calc */
   ntcPcb.u = ((float)adcData.pcb_temp * 0.0002442f); // 1/4095

@@ -531,9 +531,9 @@ typedef volatile struct antiCogg_s antiCogg_t;
 /*-----------------------------------------------------------------------------
 Default initalizer for the MTPA object.
 -----------------------------------------------------------------------------*/
-#define ANTICOGG_DEFAULTS         \
-    {                             \
-        {0}, 0, 0, 0, 0, 0,       \
+#define ANTICOGG_DEFAULTS           \
+    {                               \
+        {0}, 0, 0, 0, 0, 0,         \
             0, 0, 1.f, 15.9154943f, \
     }
 
@@ -751,21 +751,88 @@ static inline void CMTN_run(volatile cmtn_t *obj)
         }
     }
 }
-/*********************************************************************
- * Ramp func
- ****************************************************************** */
+
+/** Ramp function (trapezoidal profile)
+ * Input: in - referance value (rad/s, hz, rpm)
+ * Output: out - pointer for actual value (rad/s, hz, rpm)
+ * Param: rampRate - maximal acceleration (rad/s^2, hz^2, rpm^2)
+ *        Ts - sample time
+ */
 static inline void ramp_calc(volatile float *out, float in, float rampRate, float Ts)
 {
     float delta = Ts * rampRate;
-    if (*out < (in - delta)) // add some hysteresys for avoid continous ripple
+    if (*out < in)
     {
         *out += delta;
     }
-    if (*out > (in + delta))
+    if (*out > in)
     {
         *out -= delta;
     }
 }
+/** Ramp function (s-curve profile)
+ * Input: in - referance value (rad/s, hz, rpm)
+ * Output: out - pointer for actual value (rad/s, hz, rpm)
+ * Param: rampRate - maximal acceleration in linear region (rad/s^2, hz^2, rpm^2)
+ *        Ts - sample time
+ */
+static inline void ramp_s_calc(volatile float *out, float in, float rampRate, float Ts)
+{
+    // if acceleration/decceleration phases is 25% actual rampRate mast be multiplyed by 1.5
+    rampRate *= 1.5f;
+    static float acc, inPr, diff;
+
+    if (in != inPr)
+    {
+        diff = fabsf(in - inPr);
+        acc = 0.f;
+    }
+    float time = (diff * 0.25f) / rampRate;
+    float jerk = (rampRate / time) * 0.5f;
+    float freqDiff = fabsf(*out - in);
+
+    // ramp-up
+    if (*out < in)
+    {
+        // phase 1: increase acceleration
+        if (freqDiff > (diff * 0.75f))
+        {
+            ramp_calc(&acc, rampRate, jerk, Ts);
+        }
+        // phase 3: decrease acceleration
+        else if (freqDiff < (diff * 0.25f))
+        {
+            ramp_calc(&acc, 0.f, jerk, Ts);
+        }
+        // phase 2: constant acceleration
+        else
+        {
+            acc = rampRate;
+        }
+    }
+    // ramp-down
+    else if (*out > in)
+    {
+        // phase 1: increase acceleration
+        if (freqDiff > (diff * 0.75f))
+        {
+            ramp_calc(&acc, rampRate, jerk, Ts);
+        }
+        // phase 3: decrease acceleration
+        else if (freqDiff < (diff * 0.25f))
+        {
+            ramp_calc(&acc, 0.f, jerk, Ts);
+        }
+        // phase 2: constant acceleration
+        else
+        {
+            acc = rampRate;
+        }
+    }
+    ramp_calc(&*out, in, fabsf(acc), Ts);
+    inPr = in;
+}
+
 /*********************************************************************
  * Struct with pointers for "calc" functions
  ****************************************************************** */
@@ -842,7 +909,9 @@ enum paramIdRunState_e
     ID_RUN_HALL_CMPLT, // Hall table calc - completed
     ID_RUN_COG_FORCE,  // Cogging torque map - force angle
     ID_RUN_COG_CALC,   // Cogging torque map - calc
-    ID_RUN_COG_CMPLT,  // Cogging torque map - completed
+    ID_RUN_FLUX_OL,    // Cogging torque map - completed
+    ID_RUN_FLUX_CL,    // Cogging torque map - completed
+    ID_RUN_CMPLT,      // Cogging torque map - completed
 };
 typedef volatile enum paramIdRunState_e paramIdRunState_t;
 /*********************************************************************
@@ -869,7 +938,7 @@ struct data_s
     float id_UdAmpl, id_UqAmpl;                    // Variable: observed motor parameters
     float id_IdAmpl, id_IqAmpl, id_uMag, id_iMag;  // Variable: observed motor parameters
     float id_LsBank, id_RsBank;                    // Variable: observed motor parameters
-    float id_UdErr;                                // Variable: observed motor parameters
+    float id_UdErr, hallAngle;                     // Variable: observed motor parameters
     uint32_t isrCntr0, isrCntr1, isrCntr2;         // Variable: ISR counter
     uint8_t spdLoopCntr;                           // Variable: counting ISR calls for speed loop prescaller
     uint8_t invEnable, flashUpdateFlag;            // Variable: Inverter enable
@@ -902,7 +971,7 @@ typedef volatile struct data_s data_t;
             0, 0,          \
             0, 0, 0, 0,    \
             0, 0,          \
-            0,             \
+            0, 0,          \
             0, 0, 0,       \
             0,             \
             0, 0,          \
@@ -1049,6 +1118,148 @@ typedef volatile struct foc_s foc_t;
             FILTER_DEFAULTS,     \
             CALC_DEFAULTS,       \
     }
+
+/** Run D/Q currents controller
+ * PARK -> DECOUPLING -> PI -> DQ_Limiter -> IPARK
+ * Input(must be updated before call):
+ * idRef, iqRef, isa, isb, sinTheta, cosTheta
+ * Output:
+ * usa, usb - referance alpha/beta components of phase voltage
+ */
+static inline void Foc_update_cc(foc_t *p)
+{
+    // PARK transform for phase currents
+    p->data.isd = p->data.isa * p->data.cosTheta + p->data.isb * p->data.sinTheta;
+    p->data.isq = -p->data.isa * p->data.sinTheta + p->data.isb * p->data.cosTheta;
+    // Filtered data
+    p->lpf_id.in = p->data.isd;
+    p->lpf_iq.in = p->data.isq;
+    p->lpf_vdc.in = p->volt.DcBusVolt;
+    LPF_calc(&p->lpf_id);
+    LPF_calc(&p->lpf_iq);
+    LPF_calc(&p->lpf_vdc);
+    p->volt.DcBusVolt = p->lpf_vdc.out;
+    // calc PI current controllers for D/Q axis
+    // calc MTPA
+    if (p->mtpa.en == 1)
+    {
+        p->mtpa.iqRef = p->pi_iq.Ref;
+        p->calc.mtpa(&p->mtpa);
+    }
+
+    // calc Cogging torque compensation
+    if (p->cgtc.en == 1)
+    {
+        p->cgtc.angle = p->data.angle;
+        p->cgtc.uRef = p->pi_iq.Out;
+        p->calc.cgtc(&p->cgtc);
+    }
+    // calc decoupling
+    switch (p->config.decMode)
+    {
+    case DEC_DISABLE:
+        p->data.udDec = 0.f;
+        p->data.uqDec = 0.f;
+        break;
+    case DEC_CROSS:
+        p->data.udDec = p->data.isq * p->pll.SpeedPll * p->config.Lq;
+        p->data.uqDec = p->data.isd * p->pll.SpeedPll * p->config.Ld;
+        break;
+    case DEC_BEMF:
+        p->data.udDec = 0.f;
+        p->data.uqDec = p->pll.SpeedPll * p->flux.fluxLeakage;
+        break;
+    case DEC_CROSS_BEMF:
+        p->data.udDec = p->data.isq * p->pll.SpeedPll * p->config.Lq;
+        p->data.uqDec = p->pll.SpeedPll * (p->data.isd * p->config.Ld + p->flux.fluxLeakage);
+        break;
+    default:
+        break;
+    }
+    // calc PI
+    p->pi_iq.Ref = (p->mtpa.en != 0) ? p->mtpa.iq_MTPA : p->pi_iq.Ref;
+    p->pi_id.Ref = (p->mtpa.en != 0) ? p->mtpa.id_MTPA : p->pi_id.Ref;
+    p->pi_id.Fdb = p->data.isd;
+    p->pi_iq.Fdb = p->data.isq;
+    p->pi_id.Fdfwd = -p->data.udDec;
+    p->pi_iq.Fdfwd = p->data.uqDec + p->cgtc.uCogg;
+    p->pi_id.OutMax = p->volt.magMaxD;
+    p->pi_id.OutMin = -p->pi_id.OutMax;
+    p->pi_iq.OutMax = p->volt.magMaxQ;
+    p->pi_iq.OutMin = -p->pi_iq.OutMax;
+    p->calc.pi_reg(&p->pi_id);
+    p->calc.pi_reg(&p->pi_iq);
+
+    p->volt.usd = p->pi_id.Out;
+    p->volt.usq = p->pi_iq.Out;
+    p->volt.magMaxD = p->volt.dutyMax * ONE_BY_SQRT3 * p->volt.DcBusVolt;
+    p->volt.magMaxQ = sqrtf(SQ(p->volt.magMaxD) - SQ(p->volt.usd));
+    // Saturation
+    utils_saturate_vector_2d((float *)&p->volt.usd, (float *)&p->volt.usq, p->volt.magMaxD);
+    // calc IPARK transform (IPARK output -> SVGEN input)
+    p->svgen.usa = p->volt.usd * p->data.cosTheta - p->volt.usq * p->data.sinTheta;
+    p->svgen.usb = p->volt.usq * p->data.cosTheta + p->volt.usd * p->data.sinTheta;
+}
+
+/** Run angle and speed estimation/calculation
+ * Hall, flux observer, pll
+ * Input(must be updated before call):
+ * usa, usb, isa, isb
+ * Output:
+ * angle - angle of rotor flux
+ * SpeedPll, speedRpm - electrical(rad/s) and mechanical(rpm) rotor speed
+ */
+static inline void Foc_update_angle_speed(foc_t *p)
+{
+    if (p->config.sensorType == HALL)
+    {
+        // calc speed PLL
+        p->pll.AngleRaw = p->data.hallAngle;
+        p->calc.pll(&p->pll);
+        p->data.angle = (fabsf(p->pll.SpeedPll) > 50.f) ? p->pll.AnglePll : p->data.hallAngle;
+    }
+    else if (p->config.sensorType == SENSORLESS)
+    {
+        // calc flux observer
+        p->flux.i_alpha = p->data.isa;
+        p->flux.i_beta = p->data.isb;
+        p->flux.v_alpha = p->volt.usa;
+        p->flux.v_beta = p->volt.usb;
+        p->calc.flux(&p->flux);
+        // calc speed PLL
+        p->pll.AngleRaw = p->flux.phase;
+        p->data.angle = p->flux.phase;
+        p->calc.pll(&p->pll);
+    }
+    else if (p->config.sensorType == HYBRYD)
+    {
+        // calc flux observer
+        p->flux.i_alpha = p->data.isa;
+        p->flux.i_beta = p->data.isb;
+        p->flux.v_alpha = p->volt.usa;
+        p->flux.v_beta = p->volt.usb;
+        p->calc.flux(&p->flux);
+        // calc speed PLL
+        volatile static uint8_t hybryd_state;
+        volatile float speedAbs = fabsf(p->pll.SpeedPll);
+        hybryd_state = (speedAbs > 310.f) ? 1 : hybryd_state;
+        hybryd_state = (speedAbs < 290.f) ? 0 : hybryd_state;
+        if (hybryd_state == 0)
+        {
+            p->pll.AngleRaw = p->data.hallAngle;
+            p->calc.pll(&p->pll);
+            p->data.angle = (speedAbs > 50.f) ? p->pll.AnglePll : p->data.hallAngle;
+        }
+        else
+        {
+            p->pll.AngleRaw = p->flux.phase;
+            p->data.angle = p->flux.phase;
+            p->calc.pll(&p->pll);
+        }
+    }
+    p->data.speedRpm = (p->pll.SpeedPll * RADS2RPM) / p->config.pp;
+}
+
 static inline void Foc_Init(foc_t *p)
 {
     /** Init timeBase values
@@ -1083,7 +1294,7 @@ static inline void Foc_Init(foc_t *p)
      *  wcc is cutoff frequency of controller
      *  RULE: if current sampling 1 times for 1 PWM period use wcc 5%. Also try from 0.025 to 0.1
      */
-    float wcc = (0.055f * (1.f / p->config.tS)) * M_2PI;
+    float wcc = (0.05f * (1.f / p->config.tS)) * M_2PI;
     p->pi_id.Kp = p->pi_iq.Kp = (p->config.Ld * wcc);
     p->pi_id.Ki = p->pi_iq.Ki = p->config.Rs * wcc * p->config.tS;
     //p->pi_id.Ki = p->pi_iq.Ki = (p->config.Rs * p->config.tS * p->pi_id.Kp) / p->config.Ld;

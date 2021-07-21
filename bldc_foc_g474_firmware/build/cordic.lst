@@ -1,4 +1,4 @@
-ARM GAS  D:\apps\VSCode\data\tmp\ccJ4Sf8Q.s 			page 1
+ARM GAS  D:\apps\VSCode\data\tmp\ccgAuaQW.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -26,7 +26,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccJ4Sf8Q.s 			page 1
   23              		.thumb_func
   24              		.fpu fpv4-sp-d16
   26              	Cordic_Init:
-  27              	.LFB2121:
+  27              	.LFB2126:
   28              		.file 1 "Src/cordic.c"
    1:Src/cordic.c  **** /**
    2:Src/cordic.c  ****   ******************************************************************************
@@ -58,7 +58,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccJ4Sf8Q.s 			page 1
   32              		@ frame_needed = 0, uses_anonymous_args = 0
   33              		@ link register save eliminated.
   34 0000 82B0     		sub	sp, sp, #8
-ARM GAS  D:\apps\VSCode\data\tmp\ccJ4Sf8Q.s 			page 2
+ARM GAS  D:\apps\VSCode\data\tmp\ccgAuaQW.s 			page 2
 
 
   35              	.LCFI0:
@@ -118,7 +118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccJ4Sf8Q.s 			page 1
   47:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
   48:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /** @addtogroup STM32G4xx_LL_Driver
   49:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @{
-ARM GAS  D:\apps\VSCode\data\tmp\ccJ4Sf8Q.s 			page 3
+ARM GAS  D:\apps\VSCode\data\tmp\ccgAuaQW.s 			page 3
 
 
   50:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
@@ -178,7 +178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccJ4Sf8Q.s 			page 1
  104:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_DAC1           RCC_AHB2ENR_DAC1EN
  105:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #if defined(DAC2)
  106:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_DAC2           RCC_AHB2ENR_DAC2EN
-ARM GAS  D:\apps\VSCode\data\tmp\ccJ4Sf8Q.s 			page 4
+ARM GAS  D:\apps\VSCode\data\tmp\ccgAuaQW.s 			page 4
 
 
  107:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #endif /* DAC2 */
@@ -238,7 +238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccJ4Sf8Q.s 			page 1
  161:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_USB            RCC_APB1ENR1_USBEN
  162:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #if defined(FDCAN1)
  163:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_FDCAN          RCC_APB1ENR1_FDCANEN
-ARM GAS  D:\apps\VSCode\data\tmp\ccJ4Sf8Q.s 			page 5
+ARM GAS  D:\apps\VSCode\data\tmp\ccgAuaQW.s 			page 5
 
 
  164:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #endif /* FDCAN1 */
@@ -298,7 +298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccJ4Sf8Q.s 			page 1
  218:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /** @defgroup BUS_LL_Exported_Functions BUS Exported Functions
  219:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @{
  220:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\ccJ4Sf8Q.s 			page 6
+ARM GAS  D:\apps\VSCode\data\tmp\ccgAuaQW.s 			page 6
 
 
  221:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
@@ -358,7 +358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccJ4Sf8Q.s 			page 1
   63              	.LBB8:
   64              	.LBI8:
   65              		.file 3 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h"
-ARM GAS  D:\apps\VSCode\data\tmp\ccJ4Sf8Q.s 			page 7
+ARM GAS  D:\apps\VSCode\data\tmp\ccgAuaQW.s 			page 7
 
 
    1:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h **** /**
@@ -418,7 +418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccJ4Sf8Q.s 			page 1
   55:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h ****   * @brief    Flags defines which can be used with LL_CORDIC_ReadReg function.
   56:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h ****   * @{
   57:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\ccJ4Sf8Q.s 			page 8
+ARM GAS  D:\apps\VSCode\data\tmp\ccgAuaQW.s 			page 8
 
 
   58:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h **** #define LL_CORDIC_FLAG_RRDY                CORDIC_CSR_RRDY
@@ -478,7 +478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccJ4Sf8Q.s 			page 1
  112:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h ****                                                        | CORDIC_CSR_PRECISION_0))
  113:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h **** /**
  114:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h ****   * @}
-ARM GAS  D:\apps\VSCode\data\tmp\ccJ4Sf8Q.s 			page 9
+ARM GAS  D:\apps\VSCode\data\tmp\ccgAuaQW.s 			page 9
 
 
  115:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h ****   */
@@ -538,7 +538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccJ4Sf8Q.s 			page 1
  169:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h ****   */
  170:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h **** #define LL_CORDIC_OUTSIZE_32BITS           (0x00000000U)             /*!< 32 bits output data size 
  171:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h **** #define LL_CORDIC_OUTSIZE_16BITS           CORDIC_CSR_RESSIZE        /*!< 16 bits output data size 
-ARM GAS  D:\apps\VSCode\data\tmp\ccJ4Sf8Q.s 			page 10
+ARM GAS  D:\apps\VSCode\data\tmp\ccgAuaQW.s 			page 10
 
 
  172:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h **** /**
@@ -598,7 +598,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccJ4Sf8Q.s 			page 1
  226:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h ****   * @{
  227:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h ****   */
  228:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccJ4Sf8Q.s 			page 11
+ARM GAS  D:\apps\VSCode\data\tmp\ccgAuaQW.s 			page 11
 
 
  229:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h **** /** @defgroup CORDIC_LL_EF_Configuration CORDIC Configuration functions
@@ -658,7 +658,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccJ4Sf8Q.s 			page 1
  283:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h ****   *         @arg @ref LL_CORDIC_SCALE_2
  284:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h ****   *         @arg @ref LL_CORDIC_SCALE_3
  285:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h ****   *         @arg @ref LL_CORDIC_SCALE_4
-ARM GAS  D:\apps\VSCode\data\tmp\ccJ4Sf8Q.s 			page 12
+ARM GAS  D:\apps\VSCode\data\tmp\ccgAuaQW.s 			page 12
 
 
  286:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h ****   *         @arg @ref LL_CORDIC_SCALE_5
@@ -716,9 +716,9 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccJ4Sf8Q.s 			page 1
   90 0030 000C0240 		.word	1073875968
   91 0034 00F887FF 		.word	-7866368
   92              		.cfi_endproc
-  93              	.LFE2121:
+  93              	.LFE2126:
   95              		.text
-ARM GAS  D:\apps\VSCode\data\tmp\ccJ4Sf8Q.s 			page 13
+ARM GAS  D:\apps\VSCode\data\tmp\ccgAuaQW.s 			page 13
 
 
   96              	.Letext0:
@@ -736,13 +736,13 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccJ4Sf8Q.s 			page 1
  108              		.file 15 "d:\\apps\\embedded_gcc\\arm_gcc\\lib\\gcc\\arm-none-eabi\\8.2.1\\include\\stddef.h"
  109              		.file 16 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\reent.h"
  110              		.file 17 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\math.h"
-ARM GAS  D:\apps\VSCode\data\tmp\ccJ4Sf8Q.s 			page 14
+ARM GAS  D:\apps\VSCode\data\tmp\ccgAuaQW.s 			page 14
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 cordic.c
-D:\apps\VSCode\data\tmp\ccJ4Sf8Q.s:18     .text.Cordic_Init:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccJ4Sf8Q.s:26     .text.Cordic_Init:0000000000000000 Cordic_Init
-D:\apps\VSCode\data\tmp\ccJ4Sf8Q.s:89     .text.Cordic_Init:000000000000002c $d
+D:\apps\VSCode\data\tmp\ccgAuaQW.s:18     .text.Cordic_Init:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccgAuaQW.s:26     .text.Cordic_Init:0000000000000000 Cordic_Init
+D:\apps\VSCode\data\tmp\ccgAuaQW.s:89     .text.Cordic_Init:000000000000002c $d
 
 NO UNDEFINED SYMBOLS
