@@ -85,7 +85,7 @@ static inline void datalogCalc(dataLogVars_t *p)
 }
 
 /** DataLog transmit fnc using UART
- *  Hardware dependent elements:
+ *  Hardware config:
  *  1. Fnc which transmit packet using UART
  *  2. transmited packet flag - tcFlag, must be set in TC ISR
  *  Packet discription:

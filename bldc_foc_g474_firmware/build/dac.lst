@@ -1,4 +1,4 @@
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -10,7 +10,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
    7              		.eabi_attribute 24, 1
    8              		.eabi_attribute 25, 1
    9              		.eabi_attribute 26, 1
-  10              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 30, 2
   11              		.eabi_attribute 34, 1
   12              		.eabi_attribute 18, 4
   13              		.file	"dac.c"
@@ -19,15 +19,16 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
   16              		.cfi_sections	.debug_frame
   17              		.section	.text.dac_start,"ax",%progbits
   18              		.align	1
-  19              		.global	dac_start
-  20              		.arch armv7e-m
-  21              		.syntax unified
-  22              		.thumb
-  23              		.thumb_func
-  24              		.fpu fpv4-sp-d16
-  26              	dac_start:
-  27              	.LFB2125:
-  28              		.file 1 "Src/dac.c"
+  19              		.p2align 2,,3
+  20              		.global	dac_start
+  21              		.arch armv7e-m
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  25              		.fpu fpv4-sp-d16
+  27              	dac_start:
+  28              	.LFB2127:
+  29              		.file 1 "Src/dac.c"
    1:Src/dac.c     **** /**
    2:Src/dac.c     ****   ******************************************************************************
    3:Src/dac.c     ****   * @file    dac.c
@@ -53,34 +54,31 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
   23:Src/dac.c     **** /* USER CODE BEGIN 0 */
   24:Src/dac.c     **** void dac_start(void)
   25:Src/dac.c     **** {
-  29              		.loc 1 25 1 view -0
-  30              		.cfi_startproc
-  31              		@ args = 0, pretend = 0, frame = 8
-  32              		@ frame_needed = 0, uses_anonymous_args = 0
-  33              		@ link register save eliminated.
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 2
+  30              		.loc 1 25 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 8
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 2
 
 
-  34 0000 30B4     		push	{r4, r5}
-  35              	.LCFI0:
-  36              		.cfi_def_cfa_offset 8
-  37              		.cfi_offset 4, -8
-  38              		.cfi_offset 5, -4
-  39 0002 82B0     		sub	sp, sp, #8
-  40              	.LCFI1:
-  41              		.cfi_def_cfa_offset 16
+  34              		@ link register save eliminated.
   26:Src/dac.c     ****   __IO uint32_t wait_loop_index = 0;
-  42              		.loc 1 26 3 view .LVU1
-  43              		.loc 1 26 17 is_stmt 0 view .LVU2
-  44 0004 0023     		movs	r3, #0
-  45 0006 0193     		str	r3, [sp, #4]
-  27:Src/dac.c     **** 
-  28:Src/dac.c     ****   /* Enable DAC channel */
-  29:Src/dac.c     ****   LL_DAC_Enable(DAC2, LL_DAC_CHANNEL_1);
-  46              		.loc 1 29 3 is_stmt 1 view .LVU3
-  47              	.LVL0:
+  35              		.loc 1 26 3 view .LVU1
+  25:Src/dac.c     ****   __IO uint32_t wait_loop_index = 0;
+  36              		.loc 1 25 1 is_stmt 0 view .LVU2
+  37 0000 70B4     		push	{r4, r5, r6}
+  38              	.LCFI0:
+  39              		.cfi_def_cfa_offset 12
+  40              		.cfi_offset 4, -12
+  41              		.cfi_offset 5, -8
+  42              		.cfi_offset 6, -4
+  43 0002 83B0     		sub	sp, sp, #12
+  44              	.LCFI1:
+  45              		.cfi_def_cfa_offset 24
+  46              		.loc 1 26 17 view .LVU3
+  47 0004 0023     		movs	r3, #0
   48              	.LBB60:
-  49              	.LBI60:
+  49              	.LBB61:
   50              		.file 2 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h"
    1:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** /**
    2:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   ******************************************************************************
@@ -118,11 +116,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
   34:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** 
   35:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** #if defined(DAC1) || defined(DAC2) || defined(DAC3) ||defined (DAC4)
   36:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 3
-
-
   37:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** /** @defgroup DAC_LL DAC
   38:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @{
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 3
+
+
   39:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   */
   40:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** 
   41:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** /* Private types -------------------------------------------------------------*/
@@ -178,11 +176,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
   91:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** #define DAC_REG_DOR1_REGOFFSET         0x00000000UL            /* Register DORx channel 1 taken as 
   92:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** 
   93:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** #define DAC_REG_DOR2_REGOFFSET         0x00000020UL            /* Register offset of DORx channel 1
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 4
-
-
   94:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****                                                                   DORx channel 2 (shifted left of 5
   95:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** #define DAC_REG_DORX_REGOFFSET_MASK    (DAC_REG_DOR1_REGOFFSET | DAC_REG_DOR2_REGOFFSET)
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 4
+
+
   96:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** 
   97:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** #define DAC_REG_SHSR1_REGOFFSET        0x00000000UL            /* Register SHSRx channel 1 taken as
   98:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** #define DAC_REG_SHSR2_REGOFFSET        0x00000040UL            /* Register offset of SHSRx channel 
@@ -238,11 +236,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  148:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** 
  149:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** 
  150:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** /* Private macros ------------------------------------------------------------*/
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 5
-
-
  151:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** /** @defgroup DAC_LL_Private_Macros DAC Private Macros
  152:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @{
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 5
+
+
  153:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   */
  154:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** 
  155:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** /**
@@ -298,11 +296,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  205:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****                                              This feature can be modified afterwards using unitary
  206:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****                                              function @ref LL_DAC_SetWaveAutoGeneration(). */
  207:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 6
-
-
  208:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   uint32_t WaveAutoGenerationConfig;    /*!< Set the waveform automatic generation mode for the sel
  209:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****                                              If waveform automatic generation mode is set to noise,
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 6
+
+
  210:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****                                              can be a value of @ref DAC_LL_EC_WAVE_NOISE_LFSR_UNMAS
  211:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****                                              If waveform automatic generation mode is set to triang
  212:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****                                              this parameter can be a value of @ref DAC_LL_EC_WAVE_T
@@ -358,11 +356,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  262:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** #define LL_DAC_FLAG_CAL1                   (DAC_SR_CAL_FLAG1) /*!< DAC channel 1 flag offset calibr
  263:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** #define LL_DAC_FLAG_BWST1                  (DAC_SR_BWST1)     /*!< DAC channel 1 flag busy writing 
  264:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** #define LL_DAC_FLAG_DAC1RDY                (DAC_SR_DAC1RDY)   /*!< DAC channel 1 flag ready */
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 7
-
-
  265:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** #define LL_DAC_FLAG_DORSTAT1               (DAC_SR_DORSTAT1)  /*!< DAC channel 1 flag output regist
  266:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** 
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 7
+
+
  267:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** /* DAC channel 2 flags */
  268:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** #define LL_DAC_FLAG_DMAUDR2                (DAC_SR_DMAUDR2)   /*!< DAC channel 2 flag DMA underrun 
  269:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** #define LL_DAC_FLAG_CAL2                   (DAC_SR_CAL_FLAG2) /*!< DAC channel 2 flag offset calibr
@@ -418,11 +416,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  319:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** 
  320:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** /** @defgroup DAC_LL_EC_TRIGGER_SOURCE DAC trigger source
  321:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @{
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 8
-
-
  322:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   */
  323:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** #define LL_DAC_TRIG_SOFTWARE                  0x00000000UL                                         
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 8
+
+
  324:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** #define LL_DAC_TRIG_EXT_TIM1_TRGO             (                                                   D
  325:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** #define LL_DAC_TRIG_EXT_TIM8_TRGO             (                                                   D
  326:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** #define LL_DAC_TRIG_EXT_TIM7_TRGO             (                                  DAC_CR_TSEL1_1    
@@ -478,11 +476,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  376:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** #define LL_DAC_NOISE_LFSR_UNMASK_BITS9_0   (DAC_CR_MAMP1_3                                   | DAC_
  377:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** #define LL_DAC_NOISE_LFSR_UNMASK_BITS10_0  (DAC_CR_MAMP1_3                  | DAC_CR_MAMP1_1       
  378:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** #define LL_DAC_NOISE_LFSR_UNMASK_BITS11_0  (DAC_CR_MAMP1_3                  | DAC_CR_MAMP1_1 | DAC_
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 9
-
-
  379:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** /**
  380:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @}
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 9
+
+
  381:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   */
  382:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** 
  383:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** /** @defgroup DAC_LL_EC_WAVE_TRIANGLE_AMPLITUDE DAC wave generation - Triangle amplitude
@@ -538,11 +536,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  433:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** #define LL_DAC_OUTPUT_CONNECT_INTERNAL     (DAC_MCR_MODE1_0)       /*!< The selected DAC channel ou
  434:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** /**
  435:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @}
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 10
-
-
  436:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   */
  437:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** 
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 10
+
+
  438:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** /** @defgroup DAC_LL_EC_SIGNED_FORMAT DAC channel signed format
  439:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @{
  440:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   */
@@ -598,11 +596,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  490:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** 
  491:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** /* Delay for DAC channel voltage settling time.                               */
  492:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** /* Note: DAC channel startup time depends on board application environment:   */
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 11
-
-
  493:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** /*       impedance connected to DAC channel output.                           */
  494:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** /*       The delay below is specified under conditions:                       */
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 11
+
+
  495:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** /*        - voltage maximum transition (lowest to highest value)              */
  496:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** /*        - until voltage reaches final value +-1LSB                          */
  497:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** /*        - DAC channel output buffer enabled                                 */
@@ -658,11 +656,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  547:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @brief  Helper macro to get DAC channel number in decimal format
  548:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         from literals LL_DAC_CHANNEL_x.
  549:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         Example:
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 12
-
-
  550:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *            __LL_DAC_CHANNEL_TO_DECIMAL_NB(LL_DAC_CHANNEL_1)
  551:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *            will return decimal number "1".
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 12
+
+
  552:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @note   The input can be a value from functions where a channel
  553:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         number is returned.
  554:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @param  __CHANNEL__ This parameter can be one of the following values:
@@ -718,11 +716,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  604:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @ref LL_DAC_ConvertData12RightAligned().
  605:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @note   Analog reference voltage (Vref+) must be either known from
  606:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         user board environment or can be calculated using ADC measurement
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 13
-
-
  607:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         and ADC helper macro __LL_ADC_CALC_VREFANALOG_VOLTAGE().
  608:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @param  __VREFANALOG_VOLTAGE__ Analog reference voltage (unit: mV)
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 13
+
+
  609:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @param  __DAC_VOLTAGE__ Voltage to be generated by DAC channel
  610:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *                         (unit: mVolt).
  611:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @param  __DAC_RESOLUTION__ This parameter can be one of the following values:
@@ -778,11 +776,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  661:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_HIGH_FREQ_MODE_DISABLE
  662:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_HIGH_FREQ_MODE_ABOVE_80MHZ
  663:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_HIGH_FREQ_MODE_ABOVE_160MHZ
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 14
-
-
  664:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @retval None
  665:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   */
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 14
+
+
  666:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** __STATIC_INLINE void LL_DAC_SetHighFrequencyMode(DAC_TypeDef *DACx, uint32_t HighFreqMode)
  667:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
  668:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   MODIFY_REG(DACx->MCR, DAC_MCR_HFSEL, HighFreqMode);
@@ -838,11 +836,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  718:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         calibration or normal operating mode.
  719:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @rmtoll CR       CEN1           LL_DAC_GetMode\n
  720:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         CR       CEN2           LL_DAC_GetMode
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 15
-
-
  721:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @param  DACx DAC instance
  722:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @param  DAC_Channel This parameter can be one of the following values:
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 15
+
+
  723:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_CHANNEL_1
  724:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_CHANNEL_2 (1)
  725:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *
@@ -898,11 +896,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  775:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @retval TrimmingValue Value between Min_Data=0x00 and Max_Data=0x1F
  776:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   */
  777:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** __STATIC_INLINE uint32_t LL_DAC_GetTrimmingValue(DAC_TypeDef *DACx, uint32_t DAC_Channel)
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 16
-
-
  778:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
  779:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   return (uint32_t)(READ_BIT(DACx->CCR, DAC_CCR_OTRIM1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK)
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 16
+
+
  780:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****                     >> (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK)
  781:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****                    );
  782:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** }
@@ -958,11 +956,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  832:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
  833:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   MODIFY_REG(DACx->CR,
  834:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****              DAC_CR_TSEL1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK),
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 17
-
-
  835:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****              TriggerSource << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK));
  836:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** }
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 17
+
+
  837:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** 
  838:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** /**
  839:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @brief  Get the conversion trigger source for the selected DAC channel.
@@ -1018,11 +1016,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  889:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** /**
  890:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @brief  Set the waveform automatic generation mode
  891:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         for the selected DAC channel.
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 18
-
-
  892:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @rmtoll CR       WAVE1          LL_DAC_SetWaveAutoGeneration\n
  893:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         CR       WAVE2          LL_DAC_SetWaveAutoGeneration
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 18
+
+
  894:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @param  DACx DAC instance
  895:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @param  DAC_Channel This parameter can be one of the following values:
  896:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_CHANNEL_1
@@ -1078,11 +1076,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  946:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @note   This setting can be set when the selected DAC channel is disabled
  947:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         (otherwise, the setting operation is ignored).
  948:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @rmtoll CR       MAMP1          LL_DAC_SetWaveNoiseLFSR\n
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 19
-
-
  949:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         CR       MAMP2          LL_DAC_SetWaveNoiseLFSR
  950:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @param  DACx DAC instance
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 19
+
+
  951:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @param  DAC_Channel This parameter can be one of the following values:
  952:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_CHANNEL_1
  953:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_CHANNEL_2 (1)
@@ -1138,11 +1136,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1003:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_NOISE_LFSR_UNMASK_BITS11_0
 1004:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   */
 1005:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** __STATIC_INLINE uint32_t LL_DAC_GetWaveNoiseLFSR(DAC_TypeDef *DACx, uint32_t DAC_Channel)
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 20
-
-
 1006:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
 1007:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   return (uint32_t)(READ_BIT(DACx->CR, DAC_CR_MAMP1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK))
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 20
+
+
 1008:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****                     >> (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK)
 1009:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****                    );
 1010:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** }
@@ -1198,11 +1196,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1060:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_CHANNEL_2 (1)
 1061:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *
 1062:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         (1) On this STM32 series, parameter not available on all instances.
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 21
-
-
 1063:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *             Refer to device datasheet for channels availability.
 1064:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @retval Returned value can be one of the following values:
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 21
+
+
 1065:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_TRIANGLE_AMPLITUDE_1
 1066:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_TRIANGLE_AMPLITUDE_3
 1067:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_TRIANGLE_AMPLITUDE_7
@@ -1258,11 +1256,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1117:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @rmtoll STR1     STDIR1         LL_DAC_GetWaveSawtoothPolarity\n
 1118:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         STR2     STDIR2         LL_DAC_GetWaveSawtoothPolarity
 1119:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @param  DACx DAC instance
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 22
-
-
 1120:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @param  DAC_Channel This parameter can be one of the following values:
 1121:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_CHANNEL_1
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 22
+
+
 1122:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_CHANNEL_2 (1)
 1123:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *
 1124:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         (1) On this STM32 series, parameter not available on all instances.
@@ -1318,11 +1316,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1174:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *
 1175:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         (1) On this STM32 series, parameter not available on all instances.
 1176:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *             Refer to device datasheet for channels availability.
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 23
-
-
 1177:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @retval Returned value is the sawtooth reset value.
 1178:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         Range is from 0 to DAC full range 4095 (0xFFF)
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 23
+
+
 1179:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   */
 1180:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** __STATIC_INLINE uint32_t LL_DAC_GetWaveSawtoothResetData(DAC_TypeDef *DACx, uint32_t DAC_Channel)
 1181:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
@@ -1378,11 +1376,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1231:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         Step value step is 1/16 = 0.0625
 1232:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         Step value range is 0.0000 to 4095.9375 (0xFFF.F)
 1233:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 24
-
-
 1234:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** __STATIC_INLINE uint32_t LL_DAC_GetWaveSawtoothStepData(DAC_TypeDef *DACx, uint32_t DAC_Channel)
 1235:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 24
+
+
 1236:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   __IO uint32_t const *preg = __DAC_PTR_REG_OFFSET(DACx->STR1, (DAC_Channel >> DAC_REG_STRX_REGOFFS
 1237:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** 
 1238:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   return (uint32_t)(READ_BIT(*preg, DAC_STR1_STINCDATA1) >> DAC_STR1_STINCDATA1_Pos);
@@ -1438,11 +1436,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1288:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****                                                               uint32_t TriggerSource)
 1289:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
 1290:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   MODIFY_REG(DACx->STMODR,
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 25
-
-
 1291:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****              DAC_STMODR_STRSTTRIGSEL1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK),
 1292:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****              ((TriggerSource >> DAC_CR_TSEL1_Pos) << DAC_STMODR_STRSTTRIGSEL1_Pos) << (DAC_Channel 
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 25
+
+
 1293:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** }
 1294:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** 
 1295:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** /**
@@ -1498,11 +1496,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1345:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @brief  Set the swatooth waveform generation step trigger source.
 1346:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @note   For wave generation to be effective, DAC channel
 1347:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         wave generation mode must be enabled using
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 26
-
-
 1348:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         function @ref LL_DAC_SetWaveAutoGeneration().
 1349:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @note   This setting can be set when the selected DAC channel is disabled
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 26
+
+
 1350:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         (otherwise, the setting operation is ignored).
 1351:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @rmtoll STMODR   STINCTRIGSEL1  LL_DAC_SetWaveSawtoothStepTriggerSource\n
 1352:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         STMODR   STINCTRIGSEL2  LL_DAC_SetWaveSawtoothStepTriggerSource
@@ -1558,11 +1556,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1402:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         (1) On this STM32 series, parameter not available on all instances.
 1403:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *             Refer to device datasheet for channels availability.
 1404:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @retval Returned value can be one of the following values:
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 27
-
-
 1405:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_TRIG_SOFTWARE
 1406:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_TRIG_EXT_TIM1_TRGO            (1)
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 27
+
+
 1407:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_TRIG_EXT_TIM8_TRGO            (2)
 1408:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_TRIG_EXT_TIM7_TRGO
 1409:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_TRIG_EXT_TIM15_TRGO
@@ -1618,11 +1616,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1459:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         to be connected between DAC channel output and ground.
 1460:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         Capacitor value depends on load on DAC channel output and
 1461:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         sample-and-hold timings configured.
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 28
-
-
 1462:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         As indication, capacitor typical value is 100nF
 1463:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         (refer to device datasheet, parameter "CSH").
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 28
+
+
 1464:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @rmtoll CR       MODE1          LL_DAC_ConfigOutput\n
 1465:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         CR       MODE2          LL_DAC_ConfigOutput
 1466:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @param  DACx DAC instance
@@ -1678,11 +1676,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1516:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
 1517:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   MODIFY_REG(DACx->MCR,
 1518:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****              (uint32_t)DAC_MCR_MODE1_2 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK),
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 29
-
-
 1519:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****              OutputMode << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK));
 1520:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** }
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 29
+
+
 1521:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** 
 1522:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** /**
 1523:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @brief  Get the output mode normal or sample-and-hold for the selected DAC channel.
@@ -1738,11 +1736,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1573:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @rmtoll CR       MODE1          LL_DAC_GetOutputBuffer\n
 1574:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         CR       MODE2          LL_DAC_GetOutputBuffer
 1575:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @param  DACx DAC instance
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 30
-
-
 1576:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @param  DAC_Channel This parameter can be one of the following values:
 1577:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_CHANNEL_1
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 30
+
+
 1578:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_CHANNEL_2 (1)
 1579:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *
 1580:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         (1) On this STM32 series, parameter not available on all instances.
@@ -1798,11 +1796,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1630:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         - if output connection is set to internal path and output buffer
 1631:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *           is enabled (whatever output mode):
 1632:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *           output connection is also connected to GPIO pin
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 31
-
-
 1633:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *           (both connections to GPIO pin and internal path).
 1634:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         - if output connection is set to GPIO pin, output buffer
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 31
+
+
 1635:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *           is disabled, output mode set to sample and hold:
 1636:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *           output connection is also connected to internal path
 1637:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *           (both connections to GPIO pin and internal path).
@@ -1858,11 +1856,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1687:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         sample time
 1688:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @rmtoll SHSR1    TSAMPLE1       LL_DAC_GetSampleAndHoldSampleTime\n
 1689:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         SHSR2    TSAMPLE2       LL_DAC_GetSampleAndHoldSampleTime
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 32
-
-
 1690:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @param  DACx DAC instance
 1691:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @param  DAC_Channel This parameter can be one of the following values:
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 32
+
+
 1692:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_CHANNEL_1
 1693:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_CHANNEL_2 (1)
 1694:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *
@@ -1918,11 +1916,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1744:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
 1745:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   return (uint32_t)(READ_BIT(DACx->SHHR, DAC_SHHR_THOLD1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MAS
 1746:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****                     >> (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK)
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 33
-
-
 1747:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****                    );
 1748:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** }
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 33
+
+
 1749:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** 
 1750:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** /**
 1751:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @brief  Set the sample-and-hold timing for the selected DAC channel:
@@ -1978,11 +1976,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1801:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *             0x7FF will output full-scale level
 1802:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @rmtoll MCR      SINFORMAT1     LL_DAC_SetSignedFormat\n
 1803:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         MCR      SINFORMAT2     LL_DAC_SetSignedFormat
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 34
-
-
 1804:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @param  DACx DAC instance
 1805:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @param  DAC_Channel This parameter can be one of the following values:
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 34
+
+
 1806:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_CHANNEL_1
 1807:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_CHANNEL_2 (1)
 1808:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *
@@ -2038,11 +2036,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1858:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         CR       DMAEN2         LL_DAC_EnableDMAReq
 1859:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @param  DACx DAC instance
 1860:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @param  DAC_Channel This parameter can be one of the following values:
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 35
-
-
 1861:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_CHANNEL_1
 1862:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_CHANNEL_2 (1)
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 35
+
+
 1863:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *
 1864:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         (1) On this STM32 series, parameter not available on all instances.
 1865:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *             Refer to device datasheet for channels availability.
@@ -2098,11 +2096,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1915:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** 
 1916:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** /**
 1917:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @brief  Enable DAC DMA Double data mode of the selected channel.
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 36
-
-
 1918:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @rmtoll MCR      DMADOUBLE1     LL_DAC_EnableDMADoubleDataMode\n
 1919:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         MCR      DMADOUBLE2     LL_DAC_EnableDMADoubleDataMode
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 36
+
+
 1920:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @param  DACx DAC instance
 1921:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @param  DAC_Channel This parameter can be one of the following values:
 1922:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_CHANNEL_1
@@ -2158,11 +2156,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1972:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****            == (DAC_MCR_DMADOUBLE1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK))) ? 1UL : 0UL);
 1973:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** }
 1974:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 37
-
-
 1975:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** /**
 1976:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @brief  Function to help to configure DMA transfer to DAC: retrieve the
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 37
+
+
 1977:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         DAC register address from DAC instance and a list of DAC registers
 1978:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         intended to be used (most commonly) with DMA transfer.
 1979:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @note   These DAC registers are data holding registers:
@@ -2218,11 +2216,11 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 2029:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @note   After enable from off state, DAC channel requires a delay
 2030:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         for output voltage to reach accuracy +/- 1 LSB.
 2031:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         Refer to device datasheet, parameter "tWAKEUP".
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 38
-
-
 2032:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @param  DACx DAC instance
 2033:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @param  DAC_Channel This parameter can be one of the following values:
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 38
+
+
 2034:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_CHANNEL_1
 2035:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_CHANNEL_2 (1)
 2036:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *
@@ -2231,93 +2229,128 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 2039:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @retval None
 2040:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   */
 2041:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** __STATIC_INLINE void LL_DAC_Enable(DAC_TypeDef *DACx, uint32_t DAC_Channel)
-  51              		.loc 2 2041 22 view .LVU4
-  52              	.LBB61:
 2042:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
 2043:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   SET_BIT(DACx->CR,
-  53              		.loc 2 2043 3 view .LVU5
-  54 0008 2A4A     		ldr	r2, .L6
-  55 000a 1368     		ldr	r3, [r2]
-  56 000c 43F00103 		orr	r3, r3, #1
-  57 0010 1360     		str	r3, [r2]
-  58              	.LVL1:
-  59              		.loc 2 2043 3 is_stmt 0 view .LVU6
-  60              	.LBE61:
-  61              	.LBE60:
+  51              		.loc 2 2043 3 view .LVU4
+  52 0006 2848     		ldr	r0, .L10
+  53              	.LBE61:
+  54              	.LBE60:
+  55              		.loc 1 26 17 view .LVU5
+  56 0008 0193     		str	r3, [sp, #4]
+  27:Src/dac.c     **** 
+  28:Src/dac.c     ****   /* Enable DAC channel */
+  29:Src/dac.c     ****   LL_DAC_Enable(DAC2, LL_DAC_CHANNEL_1);
+  57              		.loc 1 29 3 is_stmt 1 view .LVU6
+  58              	.LVL0:
+  59              	.LBB64:
+  60              	.LBI60:
+2041:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
+  61              		.loc 2 2041 22 view .LVU7
+  62              	.LBB62:
+  63              		.loc 2 2043 3 view .LVU8
+  64 000a 0168     		ldr	r1, [r0]
+  65              	.LBE62:
+  66              	.LBE64:
+  67              	.LBB65:
+  68              	.LBB66:
+  69 000c 274A     		ldr	r2, .L10+4
+  70              	.LBE66:
+  71              	.LBE65:
   30:Src/dac.c     ****   LL_DAC_Enable(DAC3, LL_DAC_CHANNEL_1);
-  62              		.loc 1 30 3 is_stmt 1 view .LVU7
-  63              	.LBB62:
-  64              	.LBI62:
-2041:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
-  65              		.loc 2 2041 22 view .LVU8
-  66              	.LBB63:
-  67              		.loc 2 2043 3 view .LVU9
-  68 0012 294B     		ldr	r3, .L6+4
-  69 0014 1A68     		ldr	r2, [r3]
-  70 0016 42F00102 		orr	r2, r2, #1
-  71 001a 1A60     		str	r2, [r3]
-  72              	.LVL2:
-  73              		.loc 2 2043 3 is_stmt 0 view .LVU10
-  74              	.LBE63:
-  75              	.LBE62:
   31:Src/dac.c     ****   LL_DAC_Enable(DAC3, LL_DAC_CHANNEL_2);
-  76              		.loc 1 31 3 is_stmt 1 view .LVU11
-  77              	.LBB64:
-  78              	.LBI64:
-2041:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
-  79              		.loc 2 2041 22 view .LVU12
-  80              	.LBB65:
-  81              		.loc 2 2043 3 view .LVU13
-  82 001c 1A68     		ldr	r2, [r3]
-  83 001e 42F48032 		orr	r2, r2, #65536
-  84 0022 1A60     		str	r2, [r3]
-  85              	.LVL3:
-  86              		.loc 2 2043 3 is_stmt 0 view .LVU14
-  87              	.LBE65:
-  88              	.LBE64:
   32:Src/dac.c     **** 
   33:Src/dac.c     ****   /* Delay for DAC channel voltage settling time from DAC channel startup.    */
   34:Src/dac.c     ****   /* Compute number of CPU cycles to wait for, from delay in us.              */
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 39
-
-
   35:Src/dac.c     ****   /* Note: Variable divided by 2 to compensate partially                      */
   36:Src/dac.c     ****   /*       CPU processing cycles (depends on compilation optimization).       */
   37:Src/dac.c     ****   /* Note: If system core clock frequency is below 200kHz, wait time          */
   38:Src/dac.c     ****   /*       is only a few CPU processing cycles.                               */
   39:Src/dac.c     ****   wait_loop_index = ((LL_DAC_DELAY_STARTUP_VOLTAGE_SETTLING_US * (SystemCoreClock / (100000 * 2))) 
-  89              		.loc 1 39 3 is_stmt 1 view .LVU15
-  90              		.loc 1 39 83 is_stmt 0 view .LVU16
-  91 0024 254B     		ldr	r3, .L6+8
-  92 0026 1B68     		ldr	r3, [r3]
-  93 0028 9B09     		lsrs	r3, r3, #6
-  94 002a 254A     		ldr	r2, .L6+12
-  95 002c A2FB0323 		umull	r2, r3, r2, r3
-  96 0030 9B09     		lsrs	r3, r3, #6
-  97              		.loc 1 39 64 view .LVU17
-  98 0032 DB00     		lsls	r3, r3, #3
-  99              		.loc 1 39 100 view .LVU18
- 100 0034 234A     		ldr	r2, .L6+16
- 101 0036 A2FB0323 		umull	r2, r3, r2, r3
- 102 003a DB08     		lsrs	r3, r3, #3
- 103              		.loc 1 39 19 view .LVU19
- 104 003c 0193     		str	r3, [sp, #4]
+  72              		.loc 1 39 83 is_stmt 0 view .LVU9
+  73 000e 284B     		ldr	r3, .L10+8
+  74 0010 284D     		ldr	r5, .L10+12
+  75              		.loc 1 39 100 view .LVU10
+  76 0012 294C     		ldr	r4, .L10+16
+  77              	.LBB68:
+  78              	.LBB63:
+  79              		.loc 2 2043 3 view .LVU11
+  80 0014 41F00101 		orr	r1, r1, #1
+  81 0018 0160     		str	r1, [r0]
+  82              	.LVL1:
+  83              		.loc 2 2043 3 view .LVU12
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 39
+
+
+  84              	.LBE63:
+  85              	.LBE68:
+  30:Src/dac.c     ****   LL_DAC_Enable(DAC3, LL_DAC_CHANNEL_1);
+  86              		.loc 1 30 3 is_stmt 1 view .LVU13
+  87              	.LBB69:
+  88              	.LBI65:
+2041:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
+  89              		.loc 2 2041 22 view .LVU14
+  90              	.LBB67:
+  91              		.loc 2 2043 3 view .LVU15
+  92 001a 1168     		ldr	r1, [r2]
+  93 001c 41F00101 		orr	r1, r1, #1
+  94 0020 1160     		str	r1, [r2]
+  95              	.LVL2:
+  96              		.loc 2 2043 3 is_stmt 0 view .LVU16
+  97              	.LBE67:
+  98              	.LBE69:
+  31:Src/dac.c     **** 
+  99              		.loc 1 31 3 is_stmt 1 view .LVU17
+ 100              	.LBB70:
+ 101              	.LBI70:
+2041:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
+ 102              		.loc 2 2041 22 view .LVU18
+ 103              	.LBB71:
+ 104              		.loc 2 2043 3 view .LVU19
+ 105 0022 1168     		ldr	r1, [r2]
+ 106 0024 41F48031 		orr	r1, r1, #65536
+ 107 0028 1160     		str	r1, [r2]
+ 108              	.LVL3:
+ 109              		.loc 2 2043 3 is_stmt 0 view .LVU20
+ 110              	.LBE71:
+ 111              	.LBE70:
+ 112              		.loc 1 39 3 is_stmt 1 view .LVU21
+ 113              		.loc 1 39 83 is_stmt 0 view .LVU22
+ 114 002a 1B68     		ldr	r3, [r3]
+ 115 002c 9B09     		lsrs	r3, r3, #6
+ 116 002e A5FB0323 		umull	r2, r3, r5, r3
+ 117 0032 9B09     		lsrs	r3, r3, #6
+ 118              		.loc 1 39 64 view .LVU23
+ 119 0034 DB00     		lsls	r3, r3, #3
+ 120              		.loc 1 39 100 view .LVU24
+ 121 0036 A4FB0323 		umull	r2, r3, r4, r3
+ 122 003a DB08     		lsrs	r3, r3, #3
+ 123              		.loc 1 39 19 view .LVU25
+ 124 003c 0193     		str	r3, [sp, #4]
   40:Src/dac.c     ****   while (wait_loop_index != 0)
- 105              		.loc 1 40 3 is_stmt 1 view .LVU20
- 106              	.L2:
- 107              		.loc 1 40 26 is_stmt 0 view .LVU21
- 108 003e 019B     		ldr	r3, [sp, #4]
- 109              		.loc 1 40 9 view .LVU22
- 110 0040 1BB1     		cbz	r3, .L5
+ 125              		.loc 1 40 3 is_stmt 1 view .LVU26
+ 126              		.loc 1 40 26 is_stmt 0 view .LVU27
+ 127 003e 019B     		ldr	r3, [sp, #4]
+ 128              		.loc 1 40 9 view .LVU28
+ 129 0040 2BB1     		cbz	r3, .L2
+ 130              	.L3:
   41:Src/dac.c     ****   {
   42:Src/dac.c     ****     wait_loop_index--;
- 111              		.loc 1 42 5 is_stmt 1 view .LVU23
- 112              		.loc 1 42 20 is_stmt 0 view .LVU24
- 113 0042 019B     		ldr	r3, [sp, #4]
- 114 0044 013B     		subs	r3, r3, #1
- 115 0046 0193     		str	r3, [sp, #4]
- 116 0048 F9E7     		b	.L2
- 117              	.L5:
+ 131              		.loc 1 42 5 is_stmt 1 view .LVU29
+ 132              		.loc 1 42 20 is_stmt 0 view .LVU30
+ 133 0042 019B     		ldr	r3, [sp, #4]
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 40
+
+
+ 134 0044 013B     		subs	r3, r3, #1
+ 135 0046 0193     		str	r3, [sp, #4]
+  40:Src/dac.c     ****   while (wait_loop_index != 0)
+ 136              		.loc 1 40 26 view .LVU31
+ 137 0048 019B     		ldr	r3, [sp, #4]
+  40:Src/dac.c     ****   while (wait_loop_index != 0)
+ 138              		.loc 1 40 9 view .LVU32
+ 139 004a 002B     		cmp	r3, #0
+ 140 004c F9D1     		bne	.L3
+ 141              	.L2:
   43:Src/dac.c     ****   }
   44:Src/dac.c     **** 
   45:Src/dac.c     ****   /* Enable DAC channel trigger */
@@ -2330,17 +2363,14 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
   52:Src/dac.c     ****   /*         DAC channel conversion can start immediately                     */
   53:Src/dac.c     ****   /*         (after next trig order from external trigger)                    */
   54:Src/dac.c     ****   LL_DAC_EnableTrigger(DAC2, LL_DAC_CHANNEL_1);
- 118              		.loc 1 54 3 is_stmt 1 view .LVU25
- 119              	.LVL4:
- 120              	.LBB66:
- 121              	.LBI66:
+ 142              		.loc 1 54 3 is_stmt 1 view .LVU33
+ 143              	.LVL4:
+ 144              	.LBB72:
+ 145              	.LBI72:
 2044:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****           DAC_CR_EN1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK));
 2045:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** }
 2046:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** 
 2047:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 40
-
-
 2048:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @brief  Disable DAC selected channel.
 2049:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @rmtoll CR       EN1            LL_DAC_Disable\n
 2050:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         CR       EN2            LL_DAC_Disable
@@ -2368,6 +2398,9 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 2072:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @param  DAC_Channel This parameter can be one of the following values:
 2073:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_CHANNEL_1
 2074:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_CHANNEL_2 (1)
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 41
+
+
 2075:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *
 2076:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         (1) On this STM32 series, parameter not available on all instances.
 2077:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *             Refer to device datasheet for channels availability.
@@ -2398,9 +2431,6 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 2102:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
 2103:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   return ((READ_BIT(DACx->SR,
 2104:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****                     DAC_SR_DAC1RDY << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK))
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 41
-
-
 2105:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****            == (DAC_SR_DAC1RDY << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK))) ? 1UL : 0UL);
 2106:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** }
 2107:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** 
@@ -2426,59 +2456,29 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 2127:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @retval None
 2128:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   */
 2129:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** __STATIC_INLINE void LL_DAC_EnableTrigger(DAC_TypeDef *DACx, uint32_t DAC_Channel)
- 122              		.loc 2 2129 22 view .LVU26
- 123              	.LBB67:
+ 146              		.loc 2 2129 22 view .LVU34
+ 147              	.LBB73:
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 42
+
+
 2130:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
 2131:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   SET_BIT(DACx->CR,
- 124              		.loc 2 2131 3 view .LVU27
- 125 004a 1A48     		ldr	r0, .L6
- 126 004c 0368     		ldr	r3, [r0]
- 127 004e 43F00203 		orr	r3, r3, #2
- 128 0052 0360     		str	r3, [r0]
- 129              	.LVL5:
- 130              		.loc 2 2131 3 is_stmt 0 view .LVU28
- 131              	.LBE67:
- 132              	.LBE66:
-  55:Src/dac.c     ****   LL_DAC_EnableTrigger(DAC3, LL_DAC_CHANNEL_1);
- 133              		.loc 1 55 3 is_stmt 1 view .LVU29
- 134              	.LBB68:
- 135              	.LBI68:
-2129:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
- 136              		.loc 2 2129 22 view .LVU30
- 137              	.LBB69:
- 138              		.loc 2 2131 3 view .LVU31
- 139 0054 184B     		ldr	r3, .L6+4
- 140 0056 1A68     		ldr	r2, [r3]
- 141 0058 42F00202 		orr	r2, r2, #2
- 142 005c 1A60     		str	r2, [r3]
- 143              	.LVL6:
- 144              		.loc 2 2131 3 is_stmt 0 view .LVU32
- 145              	.LBE69:
- 146              	.LBE68:
-  56:Src/dac.c     ****   LL_DAC_EnableTrigger(DAC3, LL_DAC_CHANNEL_2);
- 147              		.loc 1 56 3 is_stmt 1 view .LVU33
- 148              	.LBB70:
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 42
-
-
- 149              	.LBI70:
-2129:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
- 150              		.loc 2 2129 22 view .LVU34
- 151              	.LBB71:
- 152              		.loc 2 2131 3 view .LVU35
- 153 005e 1A68     		ldr	r2, [r3]
- 154 0060 42F40032 		orr	r2, r2, #131072
- 155 0064 1A60     		str	r2, [r3]
- 156              	.LVL7:
- 157              		.loc 2 2131 3 is_stmt 0 view .LVU36
- 158              	.LBE71:
- 159              	.LBE70:
-  57:Src/dac.c     **** 
-  58:Src/dac.c     ****   /* Set the data to be loaded in the data holding register */
-  59:Src/dac.c     ****   LL_DAC_ConvertData12RightAligned(DAC2, LL_DAC_CHANNEL_1, 4095);
- 160              		.loc 1 59 3 is_stmt 1 view .LVU37
- 161              	.LBB72:
- 162              	.LBI72:
+ 148              		.loc 2 2131 3 view .LVU35
+ 149 004e 164A     		ldr	r2, .L10
+ 150              	.LBE73:
+ 151              	.LBE72:
+ 152              	.LBB76:
+ 153              	.LBB77:
+ 154 0050 164B     		ldr	r3, .L10+4
+ 155              	.LBE77:
+ 156              	.LBE76:
+ 157              	.LBB79:
+ 158              	.LBB74:
+ 159 0052 1168     		ldr	r1, [r2]
+ 160              	.LBE74:
+ 161              	.LBE79:
+ 162              	.LBB80:
+ 163              	.LBB81:
 2132:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****           DAC_CR_TEN1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK));
 2133:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** }
 2134:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** 
@@ -2518,7 +2518,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 2168:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** __STATIC_INLINE uint32_t LL_DAC_IsTriggerEnabled(DAC_TypeDef *DACx, uint32_t DAC_Channel)
 2169:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
 2170:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   return ((READ_BIT(DACx->CR,
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 43
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 43
 
 
 2171:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****                     DAC_CR_TEN1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK))
@@ -2578,7 +2578,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 2225:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @param  DACx DAC instance
 2226:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @param  DAC_Channel  This parameter can a combination of the following values:
 2227:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_CHANNEL_1
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 44
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 44
 
 
 2228:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   *         @arg @ref LL_DAC_CHANNEL_2 (1)
@@ -2610,202 +2610,262 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 2254:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   * @retval None
 2255:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   */
 2256:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** __STATIC_INLINE void LL_DAC_ConvertData12RightAligned(DAC_TypeDef *DACx, uint32_t DAC_Channel, uint
- 163              		.loc 2 2256 22 view .LVU38
- 164              	.LBB73:
 2257:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
 2258:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   __IO uint32_t *preg = __DAC_PTR_REG_OFFSET(DACx->DHR12R1, (DAC_Channel >> DAC_REG_DHR12RX_REGOFFS
- 165              		.loc 2 2258 3 view .LVU39
 2259:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****                                              & DAC_REG_DHR_REGOFFSET_MASK_POSBIT0);
 2260:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** 
 2261:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****   MODIFY_REG(*preg, DAC_DHR12R1_DACC1DHR, Data);
- 166              		.loc 2 2261 3 view .LVU40
- 167 0066 8168     		ldr	r1, [r0, #8]
- 168 0068 21F47F61 		bic	r1, r1, #4080
- 169 006c 21F00F01 		bic	r1, r1, #15
- 170 0070 40F6FF74 		movw	r4, #4095
- 171 0074 2143     		orrs	r1, r1, r4
- 172 0076 8160     		str	r1, [r0, #8]
- 173              	.LVL8:
- 174              		.loc 2 2261 3 is_stmt 0 view .LVU41
- 175              	.LBE73:
- 176              	.LBE72:
+ 164              		.loc 2 2261 3 is_stmt 0 view .LVU36
+ 165 0054 194D     		ldr	r5, .L10+20
+ 166              	.LBE81:
+ 167              	.LBE80:
+ 168              	.LBB83:
+ 169              	.LBB84:
+2258:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****                                              & DAC_REG_DHR_REGOFFSET_MASK_POSBIT0);
+ 170              		.loc 2 2258 25 view .LVU37
+ 171 0056 1A4E     		ldr	r6, .L10+24
+ 172              	.LBE84:
+ 173              	.LBE83:
+ 174              	.LBB86:
+ 175              	.LBB75:
+2131:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****           DAC_CR_TEN1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK));
+ 176              		.loc 2 2131 3 view .LVU38
+ 177 0058 41F00201 		orr	r1, r1, #2
+ 178 005c 1160     		str	r1, [r2]
+ 179              	.LVL5:
+2131:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****           DAC_CR_TEN1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK));
+ 180              		.loc 2 2131 3 view .LVU39
+ 181              	.LBE75:
+ 182              	.LBE86:
+  55:Src/dac.c     ****   LL_DAC_EnableTrigger(DAC3, LL_DAC_CHANNEL_1);
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 45
+
+
+ 183              		.loc 1 55 3 is_stmt 1 view .LVU40
+ 184              	.LBB87:
+ 185              	.LBI76:
+2129:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
+ 186              		.loc 2 2129 22 view .LVU41
+ 187              	.LBB78:
+2131:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****           DAC_CR_TEN1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK));
+ 188              		.loc 2 2131 3 view .LVU42
+ 189 005e 1968     		ldr	r1, [r3]
+ 190 0060 41F00201 		orr	r1, r1, #2
+ 191 0064 1960     		str	r1, [r3]
+ 192              	.LVL6:
+2131:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****           DAC_CR_TEN1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK));
+ 193              		.loc 2 2131 3 is_stmt 0 view .LVU43
+ 194              	.LBE78:
+ 195              	.LBE87:
+  56:Src/dac.c     ****   LL_DAC_EnableTrigger(DAC3, LL_DAC_CHANNEL_2);
+ 196              		.loc 1 56 3 is_stmt 1 view .LVU44
+ 197              	.LBB88:
+ 198              	.LBI88:
+2129:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
+ 199              		.loc 2 2129 22 view .LVU45
+ 200              	.LBB89:
+2131:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****           DAC_CR_TEN1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK));
+ 201              		.loc 2 2131 3 view .LVU46
+ 202 0066 1968     		ldr	r1, [r3]
+ 203 0068 41F40031 		orr	r1, r1, #131072
+ 204 006c 1960     		str	r1, [r3]
+ 205              	.LVL7:
+2131:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****           DAC_CR_TEN1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK));
+ 206              		.loc 2 2131 3 is_stmt 0 view .LVU47
+ 207              	.LBE89:
+ 208              	.LBE88:
+  57:Src/dac.c     **** 
+  58:Src/dac.c     ****   /* Set the data to be loaded in the data holding register */
+  59:Src/dac.c     ****   LL_DAC_ConvertData12RightAligned(DAC2, LL_DAC_CHANNEL_1, 4095);
+ 209              		.loc 1 59 3 is_stmt 1 view .LVU48
+ 210              	.LBB90:
+ 211              	.LBI80:
+2256:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
+ 212              		.loc 2 2256 22 view .LVU49
+ 213              	.LBB82:
+2258:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****                                              & DAC_REG_DHR_REGOFFSET_MASK_POSBIT0);
+ 214              		.loc 2 2258 3 view .LVU50
+ 215              		.loc 2 2261 3 view .LVU51
+ 216 006e 9068     		ldr	r0, [r2, #8]
+ 217 0070 40F6FF74 		movw	r4, #4095
+ 218 0074 2840     		ands	r0, r0, r5
+ 219 0076 2043     		orrs	r0, r0, r4
+ 220 0078 9060     		str	r0, [r2, #8]
+ 221              	.LVL8:
+ 222              		.loc 2 2261 3 is_stmt 0 view .LVU52
+ 223              	.LBE82:
+ 224              	.LBE90:
   60:Src/dac.c     ****   LL_DAC_ConvertData12RightAligned(DAC3, LL_DAC_CHANNEL_1, 4095);
- 177              		.loc 1 60 3 is_stmt 1 view .LVU42
- 178              	.LBB74:
- 179              	.LBI74:
+ 225              		.loc 1 60 3 is_stmt 1 view .LVU53
+ 226              	.LBB91:
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 46
+
+
+ 227              	.LBI91:
 2256:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
- 180              		.loc 2 2256 22 view .LVU43
- 181              	.LBB75:
+ 228              		.loc 2 2256 22 view .LVU54
+ 229              	.LBB92:
 2258:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****                                              & DAC_REG_DHR_REGOFFSET_MASK_POSBIT0);
- 182              		.loc 2 2258 3 view .LVU44
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 45
-
-
-2258:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****                                              & DAC_REG_DHR_REGOFFSET_MASK_POSBIT0);
- 183              		.loc 2 2258 25 is_stmt 0 view .LVU45
- 184 0078 134D     		ldr	r5, .L6+20
- 185              	.LVL9:
- 186              		.loc 2 2261 3 is_stmt 1 view .LVU46
- 187 007a 9968     		ldr	r1, [r3, #8]
- 188 007c 21F47F61 		bic	r1, r1, #4080
- 189 0080 21F00F01 		bic	r1, r1, #15
- 190 0084 2143     		orrs	r1, r1, r4
- 191 0086 9960     		str	r1, [r3, #8]
- 192              	.LVL10:
- 193              		.loc 2 2261 3 is_stmt 0 view .LVU47
- 194              	.LBE75:
- 195              	.LBE74:
+ 230              		.loc 2 2258 3 view .LVU55
+ 231              		.loc 2 2261 3 view .LVU56
+ 232 007a 9868     		ldr	r0, [r3, #8]
+ 233 007c 2840     		ands	r0, r0, r5
+ 234 007e 2043     		orrs	r0, r0, r4
+ 235 0080 9860     		str	r0, [r3, #8]
+ 236              	.LVL9:
+ 237              		.loc 2 2261 3 is_stmt 0 view .LVU57
+ 238              	.LBE92:
+ 239              	.LBE91:
   61:Src/dac.c     ****   LL_DAC_ConvertData12RightAligned(DAC3, LL_DAC_CHANNEL_2, 4095);
- 196              		.loc 1 61 3 is_stmt 1 view .LVU48
- 197              	.LBB76:
- 198              	.LBI76:
+ 240              		.loc 1 61 3 is_stmt 1 view .LVU58
+ 241              	.LBB93:
+ 242              	.LBI83:
 2256:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
- 199              		.loc 2 2256 22 view .LVU49
- 200              	.LBB77:
+ 243              		.loc 2 2256 22 view .LVU59
+ 244              	.LBB85:
 2258:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****                                              & DAC_REG_DHR_REGOFFSET_MASK_POSBIT0);
- 201              		.loc 2 2258 3 view .LVU50
- 202              		.loc 2 2261 3 view .LVU51
- 203 0088 EA68     		ldr	r2, [r5, #12]
- 204 008a 22F47F62 		bic	r2, r2, #4080
- 205 008e 22F00F02 		bic	r2, r2, #15
- 206 0092 2243     		orrs	r2, r2, r4
- 207 0094 EA60     		str	r2, [r5, #12]
- 208              	.LVL11:
- 209              		.loc 2 2261 3 is_stmt 0 view .LVU52
- 210              	.LBE77:
- 211              	.LBE76:
+ 245              		.loc 2 2258 3 view .LVU60
+ 246              		.loc 2 2261 3 view .LVU61
+ 247 0082 F168     		ldr	r1, [r6, #12]
+ 248 0084 2940     		ands	r1, r1, r5
+ 249 0086 2143     		orrs	r1, r1, r4
+ 250 0088 F160     		str	r1, [r6, #12]
+ 251              	.LVL10:
+ 252              		.loc 2 2261 3 is_stmt 0 view .LVU62
+ 253              	.LBE85:
+ 254              	.LBE93:
   62:Src/dac.c     **** 
   63:Src/dac.c     ****   /* Trig DAC conversion by software */
   64:Src/dac.c     ****   LL_DAC_TrigSWConversion(DAC2, LL_DAC_CHANNEL_1);
- 212              		.loc 1 64 3 is_stmt 1 view .LVU53
- 213              	.LBB78:
- 214              	.LBI78:
+ 255              		.loc 1 64 3 is_stmt 1 view .LVU63
+ 256              	.LBB94:
+ 257              	.LBI94:
 2202:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
- 215              		.loc 2 2202 22 view .LVU54
- 216              	.LBB79:
+ 258              		.loc 2 2202 22 view .LVU64
+ 259              	.LBB95:
 2204:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****           (DAC_Channel & DAC_SWTR_CHX_MASK));
- 217              		.loc 2 2204 3 view .LVU55
- 218 0096 4268     		ldr	r2, [r0, #4]
- 219 0098 42F00102 		orr	r2, r2, #1
- 220 009c 4260     		str	r2, [r0, #4]
- 221              	.LVL12:
+ 260              		.loc 2 2204 3 view .LVU65
+ 261 008a 5168     		ldr	r1, [r2, #4]
+ 262 008c 41F00101 		orr	r1, r1, #1
+ 263 0090 5160     		str	r1, [r2, #4]
+ 264              	.LVL11:
 2204:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****           (DAC_Channel & DAC_SWTR_CHX_MASK));
- 222              		.loc 2 2204 3 is_stmt 0 view .LVU56
- 223              	.LBE79:
- 224              	.LBE78:
+ 265              		.loc 2 2204 3 is_stmt 0 view .LVU66
+ 266              	.LBE95:
+ 267              	.LBE94:
   65:Src/dac.c     ****   LL_DAC_TrigSWConversion(DAC3, LL_DAC_CHANNEL_1);
- 225              		.loc 1 65 3 is_stmt 1 view .LVU57
- 226              	.LBB80:
- 227              	.LBI80:
+ 268              		.loc 1 65 3 is_stmt 1 view .LVU67
+ 269              	.LBB96:
+ 270              	.LBI96:
 2202:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 46
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 47
 
 
- 228              		.loc 2 2202 22 view .LVU58
- 229              	.LBB81:
+ 271              		.loc 2 2202 22 view .LVU68
+ 272              	.LBB97:
 2204:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****           (DAC_Channel & DAC_SWTR_CHX_MASK));
- 230              		.loc 2 2204 3 view .LVU59
- 231 009e 5A68     		ldr	r2, [r3, #4]
- 232 00a0 42F00102 		orr	r2, r2, #1
- 233 00a4 5A60     		str	r2, [r3, #4]
- 234              	.LVL13:
+ 273              		.loc 2 2204 3 view .LVU69
+ 274 0092 5A68     		ldr	r2, [r3, #4]
+ 275 0094 42F00102 		orr	r2, r2, #1
+ 276 0098 5A60     		str	r2, [r3, #4]
+ 277              	.LVL12:
 2204:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****           (DAC_Channel & DAC_SWTR_CHX_MASK));
- 235              		.loc 2 2204 3 is_stmt 0 view .LVU60
- 236              	.LBE81:
- 237              	.LBE80:
+ 278              		.loc 2 2204 3 is_stmt 0 view .LVU70
+ 279              	.LBE97:
+ 280              	.LBE96:
   66:Src/dac.c     ****   LL_DAC_TrigSWConversion(DAC3, LL_DAC_CHANNEL_2);
- 238              		.loc 1 66 3 is_stmt 1 view .LVU61
- 239              	.LBB82:
- 240              	.LBI82:
+ 281              		.loc 1 66 3 is_stmt 1 view .LVU71
+ 282              	.LBB98:
+ 283              	.LBI98:
 2202:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
- 241              		.loc 2 2202 22 view .LVU62
- 242              	.LBB83:
+ 284              		.loc 2 2202 22 view .LVU72
+ 285              	.LBB99:
 2204:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****           (DAC_Channel & DAC_SWTR_CHX_MASK));
- 243              		.loc 2 2204 3 view .LVU63
- 244 00a6 5A68     		ldr	r2, [r3, #4]
- 245 00a8 42F00202 		orr	r2, r2, #2
- 246 00ac 5A60     		str	r2, [r3, #4]
- 247              	.LVL14:
+ 286              		.loc 2 2204 3 view .LVU73
+ 287 009a 5A68     		ldr	r2, [r3, #4]
+ 288 009c 42F00202 		orr	r2, r2, #2
+ 289 00a0 5A60     		str	r2, [r3, #4]
+ 290              	.LVL13:
 2204:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****           (DAC_Channel & DAC_SWTR_CHX_MASK));
- 248              		.loc 2 2204 3 is_stmt 0 view .LVU64
- 249              	.LBE83:
- 250              	.LBE82:
+ 291              		.loc 2 2204 3 is_stmt 0 view .LVU74
+ 292              	.LBE99:
+ 293              	.LBE98:
   67:Src/dac.c     **** }
- 251              		.loc 1 67 1 view .LVU65
- 252 00ae 02B0     		add	sp, sp, #8
- 253              	.LCFI2:
- 254              		.cfi_def_cfa_offset 8
- 255              		@ sp needed
- 256 00b0 30BC     		pop	{r4, r5}
- 257              	.LCFI3:
- 258              		.cfi_restore 5
- 259              		.cfi_restore 4
- 260              		.cfi_def_cfa_offset 0
- 261 00b2 7047     		bx	lr
- 262              	.L7:
- 263              		.align	2
- 264              	.L6:
- 265 00b4 000C0050 		.word	1342180352
- 266 00b8 00100050 		.word	1342181376
- 267 00bc 00000000 		.word	SystemCoreClock
- 268 00c0 632D3E05 		.word	87960931
- 269 00c4 CDCCCCCC 		.word	-858993459
- 270 00c8 08100050 		.word	1342181384
- 271              		.cfi_endproc
- 272              	.LFE2125:
- 274              		.section	.text.MX_DAC2_Init,"ax",%progbits
- 275              		.align	1
- 276              		.global	MX_DAC2_Init
- 277              		.syntax unified
- 278              		.thumb
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 47
+ 294              		.loc 1 67 1 view .LVU75
+ 295 00a2 03B0     		add	sp, sp, #12
+ 296              	.LCFI2:
+ 297              		.cfi_def_cfa_offset 12
+ 298              		@ sp needed
+ 299 00a4 70BC     		pop	{r4, r5, r6}
+ 300              	.LCFI3:
+ 301              		.cfi_restore 6
+ 302              		.cfi_restore 5
+ 303              		.cfi_restore 4
+ 304              		.cfi_def_cfa_offset 0
+ 305 00a6 7047     		bx	lr
+ 306              	.L11:
+ 307              		.align	2
+ 308              	.L10:
+ 309 00a8 000C0050 		.word	1342180352
+ 310 00ac 00100050 		.word	1342181376
+ 311 00b0 00000000 		.word	SystemCoreClock
+ 312 00b4 632D3E05 		.word	87960931
+ 313 00b8 CDCCCCCC 		.word	-858993459
+ 314 00bc 00F0FFFF 		.word	-4096
+ 315 00c0 08100050 		.word	1342181384
+ 316              		.cfi_endproc
+ 317              	.LFE2127:
+ 319              		.section	.text.MX_DAC2_Init,"ax",%progbits
+ 320              		.align	1
+ 321              		.p2align 2,,3
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 48
 
 
- 279              		.thumb_func
- 280              		.fpu fpv4-sp-d16
- 282              	MX_DAC2_Init:
- 283              	.LFB2126:
+ 322              		.global	MX_DAC2_Init
+ 323              		.syntax unified
+ 324              		.thumb
+ 325              		.thumb_func
+ 326              		.fpu fpv4-sp-d16
+ 328              	MX_DAC2_Init:
+ 329              	.LFB2128:
   68:Src/dac.c     **** /* USER CODE END 0 */
   69:Src/dac.c     **** 
   70:Src/dac.c     **** /* DAC2 init function */
   71:Src/dac.c     **** void MX_DAC2_Init(void)
   72:Src/dac.c     **** {
- 284              		.loc 1 72 1 is_stmt 1 view -0
- 285              		.cfi_startproc
- 286              		@ args = 0, pretend = 0, frame = 32
- 287              		@ frame_needed = 0, uses_anonymous_args = 0
- 288 0000 10B5     		push	{r4, lr}
- 289              	.LCFI4:
- 290              		.cfi_def_cfa_offset 8
- 291              		.cfi_offset 4, -8
- 292              		.cfi_offset 14, -4
- 293 0002 88B0     		sub	sp, sp, #32
- 294              	.LCFI5:
- 295              		.cfi_def_cfa_offset 40
+ 330              		.loc 1 72 1 is_stmt 1 view -0
+ 331              		.cfi_startproc
+ 332              		@ args = 0, pretend = 0, frame = 32
+ 333              		@ frame_needed = 0, uses_anonymous_args = 0
   73:Src/dac.c     **** 
   74:Src/dac.c     ****   /* USER CODE BEGIN DAC2_Init 0 */
   75:Src/dac.c     **** 
   76:Src/dac.c     ****   /* USER CODE END DAC2_Init 0 */
   77:Src/dac.c     **** 
   78:Src/dac.c     ****   LL_DAC_InitTypeDef DAC_InitStruct = {0};
- 296              		.loc 1 78 3 view .LVU67
- 297              		.loc 1 78 22 is_stmt 0 view .LVU68
- 298 0004 0023     		movs	r3, #0
- 299 0006 0193     		str	r3, [sp, #4]
- 300 0008 0293     		str	r3, [sp, #8]
- 301 000a 0393     		str	r3, [sp, #12]
- 302 000c 0493     		str	r3, [sp, #16]
- 303 000e 0593     		str	r3, [sp, #20]
- 304 0010 0693     		str	r3, [sp, #24]
- 305 0012 0793     		str	r3, [sp, #28]
-  79:Src/dac.c     **** 
-  80:Src/dac.c     ****   /* Peripheral clock enable */
-  81:Src/dac.c     ****   LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_DAC2);
- 306              		.loc 1 81 3 is_stmt 1 view .LVU69
- 307              	.LVL15:
- 308              	.LBB84:
- 309              	.LBI84:
- 310              		.file 3 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h"
+ 334              		.loc 1 78 3 view .LVU77
+  72:Src/dac.c     **** 
+ 335              		.loc 1 72 1 is_stmt 0 view .LVU78
+ 336 0000 30B5     		push	{r4, r5, lr}
+ 337              	.LCFI4:
+ 338              		.cfi_def_cfa_offset 12
+ 339              		.cfi_offset 4, -12
+ 340              		.cfi_offset 5, -8
+ 341              		.cfi_offset 14, -4
+ 342              		.loc 1 78 22 view .LVU79
+ 343 0002 0023     		movs	r3, #0
+  72:Src/dac.c     **** 
+ 344              		.loc 1 72 1 view .LVU80
+ 345 0004 89B0     		sub	sp, sp, #36
+ 346              	.LCFI5:
+ 347              		.cfi_def_cfa_offset 48
+ 348              		.loc 1 78 22 view .LVU81
+ 349 0006 CDE90133 		strd	r3, r3, [sp, #4]
+ 350 000a CDE90333 		strd	r3, r3, [sp, #12]
+ 351 000e CDE90533 		strd	r3, r3, [sp, #20]
+ 352              	.LBB100:
+ 353              	.LBB101:
+ 354              		.file 3 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h"
    1:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
    2:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   ******************************************************************************
    3:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @file    stm32g4xx_ll_bus.h
@@ -2818,7 +2878,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
   10:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****     [..]
   11:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****       A delay between an RCC peripheral clock enable and the effective peripheral
   12:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****       enabling should be taken into account in order to manage the peripheral read/write
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 48
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 49
 
 
   13:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****       from/to registers.
@@ -2878,7 +2938,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
   67:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /** @defgroup BUS_LL_Exported_Constants BUS Exported Constants
   68:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @{
   69:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 49
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 50
 
 
   70:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
@@ -2938,7 +2998,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  124:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #if defined(FMC_Bank1_R)
  125:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB3_GRP1_PERIPH_FMC            RCC_AHB3ENR_FMCEN
  126:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #endif /* FMC_Bank1_R */
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 50
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 51
 
 
  127:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #if defined(QUADSPI)
@@ -2998,7 +3058,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  181:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB1_GRP2_PERIPH_UCPD1         RCC_APB1ENR2_UCPD1EN
  182:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
  183:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @}
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 51
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 52
 
 
  184:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
@@ -3058,7 +3118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  238:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMAMUX1
  239:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CORDIC
  240:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_FMAC
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 52
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 53
 
 
  241:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_FLASH
@@ -3118,7 +3178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  295:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval None
  296:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
  297:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** __STATIC_INLINE void LL_AHB1_GRP1_DisableClock(uint32_t Periphs)
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 53
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 54
 
 
  298:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** {
@@ -3178,7 +3238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  352:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
  353:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @brief  Enable AHB1 peripheral clocks in Sleep and Stop modes
  354:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @rmtoll AHB1SMENR    DMA1SMEN      LL_AHB1_GRP1_EnableClockStopSleep\n
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 54
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 55
 
 
  355:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1SMENR    DMA2SMEN      LL_AHB1_GRP1_EnableClockStopSleep\n
@@ -3238,7 +3298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  409:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @}
  410:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
  411:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 55
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 56
 
 
  412:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /** @defgroup BUS_LL_EF_AHB2 AHB2
@@ -3283,42 +3343,37 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  451:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval None
  452:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
  453:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** __STATIC_INLINE void LL_AHB2_GRP1_EnableClock(uint32_t Periphs)
- 311              		.loc 3 453 22 view .LVU70
- 312              	.LBB85:
  454:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** {
  455:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   __IO uint32_t tmpreg;
- 313              		.loc 3 455 3 view .LVU71
  456:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   SET_BIT(RCC->AHB2ENR, Periphs);
- 314              		.loc 3 456 3 view .LVU72
- 315 0014 194A     		ldr	r2, .L10
- 316 0016 D16C     		ldr	r1, [r2, #76]
- 317 0018 41F40031 		orr	r1, r1, #131072
- 318 001c D164     		str	r1, [r2, #76]
- 457:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   /* Delay after an RCC peripheral clock enabling */
- 458:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   tmpreg = READ_BIT(RCC->AHB2ENR, Periphs);
- 319              		.loc 3 458 3 view .LVU73
- 320              		.loc 3 458 12 is_stmt 0 view .LVU74
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 56
+ 355              		.loc 3 456 3 view .LVU82
+ 356 0012 1A4A     		ldr	r2, .L14
+ 357              	.LBE101:
+ 358              	.LBE100:
+ 359              		.loc 1 78 22 view .LVU83
+ 360 0014 0793     		str	r3, [sp, #28]
+  79:Src/dac.c     **** 
+  80:Src/dac.c     ****   /* Peripheral clock enable */
+  81:Src/dac.c     ****   LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_DAC2);
+ 361              		.loc 1 81 3 is_stmt 1 view .LVU84
+ 362              	.LVL14:
+ 363              	.LBB105:
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 57
 
 
- 321 001e D26C     		ldr	r2, [r2, #76]
- 322 0020 02F40032 		and	r2, r2, #131072
- 323              		.loc 3 458 10 view .LVU75
- 324 0024 0092     		str	r2, [sp]
- 459:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   (void)tmpreg;
- 325              		.loc 3 459 3 is_stmt 1 view .LVU76
- 326 0026 009A     		ldr	r2, [sp]
- 327              	.LVL16:
- 328              		.loc 3 459 3 is_stmt 0 view .LVU77
- 329              	.LBE85:
- 330              	.LBE84:
-  82:Src/dac.c     **** 
-  83:Src/dac.c     ****   /* DAC2 interrupt Init */
-  84:Src/dac.c     ****   NVIC_SetPriority(TIM7_DAC_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(), 0, 0));
- 331              		.loc 1 84 3 is_stmt 1 view .LVU78
- 332              	.LBB86:
- 333              	.LBI86:
- 334              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
+ 364              	.LBI100:
+ 453:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** {
+ 365              		.loc 3 453 22 view .LVU85
+ 366              	.LBB102:
+ 455:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   SET_BIT(RCC->AHB2ENR, Periphs);
+ 367              		.loc 3 455 3 view .LVU86
+ 368              		.loc 3 456 3 view .LVU87
+ 369 0016 D16C     		ldr	r1, [r2, #76]
+ 370              	.LBE102:
+ 371              	.LBE105:
+ 372              	.LBB106:
+ 373              	.LBB107:
+ 374              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
    1:Drivers/CMSIS/Include/core_cm4.h **** /**************************************************************************//**
    2:Drivers/CMSIS/Include/core_cm4.h ****  * @file     core_cm4.h
    3:Drivers/CMSIS/Include/core_cm4.h ****  * @brief    CMSIS Cortex-M4 Core Peripheral Access Layer Header File
@@ -3358,14 +3413,14 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
   37:Drivers/CMSIS/Include/core_cm4.h ****  extern "C" {
   38:Drivers/CMSIS/Include/core_cm4.h **** #endif
   39:Drivers/CMSIS/Include/core_cm4.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 57
-
-
   40:Drivers/CMSIS/Include/core_cm4.h **** /**
   41:Drivers/CMSIS/Include/core_cm4.h ****   \page CMSIS_MISRA_Exceptions  MISRA-C:2004 Compliance Exceptions
   42:Drivers/CMSIS/Include/core_cm4.h ****   CMSIS violates the following MISRA-C:2004 rules:
   43:Drivers/CMSIS/Include/core_cm4.h **** 
   44:Drivers/CMSIS/Include/core_cm4.h ****    \li Required Rule 8.5, object/function definition in header file.<br>
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 58
+
+
   45:Drivers/CMSIS/Include/core_cm4.h ****      Function definitions in header files are used to allow 'inlining'.
   46:Drivers/CMSIS/Include/core_cm4.h **** 
   47:Drivers/CMSIS/Include/core_cm4.h ****    \li Required Rule 18.4, declaration of union type or object of union type: '{...}'.<br>
@@ -3418,14 +3473,14 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
   94:Drivers/CMSIS/Include/core_cm4.h ****       #define __FPU_USED       0U
   95:Drivers/CMSIS/Include/core_cm4.h ****     #endif
   96:Drivers/CMSIS/Include/core_cm4.h ****   #else
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 58
-
-
   97:Drivers/CMSIS/Include/core_cm4.h ****     #define __FPU_USED         0U
   98:Drivers/CMSIS/Include/core_cm4.h ****   #endif
   99:Drivers/CMSIS/Include/core_cm4.h **** 
  100:Drivers/CMSIS/Include/core_cm4.h **** #elif defined ( __GNUC__ )
  101:Drivers/CMSIS/Include/core_cm4.h ****   #if defined (__VFP_FP__) && !defined(__SOFTFP__)
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 59
+
+
  102:Drivers/CMSIS/Include/core_cm4.h ****     #if defined (__FPU_PRESENT) && (__FPU_PRESENT == 1U)
  103:Drivers/CMSIS/Include/core_cm4.h ****       #define __FPU_USED       1U
  104:Drivers/CMSIS/Include/core_cm4.h ****     #else
@@ -3478,14 +3533,14 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  151:Drivers/CMSIS/Include/core_cm4.h ****       #define __FPU_USED       1U
  152:Drivers/CMSIS/Include/core_cm4.h ****     #else
  153:Drivers/CMSIS/Include/core_cm4.h ****       #error "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 59
-
-
  154:Drivers/CMSIS/Include/core_cm4.h ****       #define __FPU_USED       0U
  155:Drivers/CMSIS/Include/core_cm4.h ****     #endif
  156:Drivers/CMSIS/Include/core_cm4.h ****   #else
  157:Drivers/CMSIS/Include/core_cm4.h ****     #define __FPU_USED         0U
  158:Drivers/CMSIS/Include/core_cm4.h ****   #endif
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 60
+
+
  159:Drivers/CMSIS/Include/core_cm4.h **** 
  160:Drivers/CMSIS/Include/core_cm4.h **** #endif
  161:Drivers/CMSIS/Include/core_cm4.h **** 
@@ -3538,14 +3593,14 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  208:Drivers/CMSIS/Include/core_cm4.h **** /* IO definitions (access restrictions to peripheral registers) */
  209:Drivers/CMSIS/Include/core_cm4.h **** /**
  210:Drivers/CMSIS/Include/core_cm4.h ****     \defgroup CMSIS_glob_defs CMSIS Global Defines
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 60
-
-
  211:Drivers/CMSIS/Include/core_cm4.h **** 
  212:Drivers/CMSIS/Include/core_cm4.h ****     <strong>IO Type Qualifiers</strong> are used
  213:Drivers/CMSIS/Include/core_cm4.h ****     \li to specify the access to peripheral variables.
  214:Drivers/CMSIS/Include/core_cm4.h ****     \li for automatic generation of peripheral register debug information.
  215:Drivers/CMSIS/Include/core_cm4.h **** */
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 61
+
+
  216:Drivers/CMSIS/Include/core_cm4.h **** #ifdef __cplusplus
  217:Drivers/CMSIS/Include/core_cm4.h ****   #define   __I     volatile             /*!< Defines 'read only' permissions */
  218:Drivers/CMSIS/Include/core_cm4.h **** #else
@@ -3598,14 +3653,14 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  265:Drivers/CMSIS/Include/core_cm4.h ****     uint32_t _reserved1:7;               /*!< bit: 20..26  Reserved */
  266:Drivers/CMSIS/Include/core_cm4.h ****     uint32_t Q:1;                        /*!< bit:     27  Saturation condition flag */
  267:Drivers/CMSIS/Include/core_cm4.h ****     uint32_t V:1;                        /*!< bit:     28  Overflow condition code flag */
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 61
-
-
  268:Drivers/CMSIS/Include/core_cm4.h ****     uint32_t C:1;                        /*!< bit:     29  Carry condition code flag */
  269:Drivers/CMSIS/Include/core_cm4.h ****     uint32_t Z:1;                        /*!< bit:     30  Zero condition code flag */
  270:Drivers/CMSIS/Include/core_cm4.h ****     uint32_t N:1;                        /*!< bit:     31  Negative condition code flag */
  271:Drivers/CMSIS/Include/core_cm4.h ****   } b;                                   /*!< Structure used for bit  access */
  272:Drivers/CMSIS/Include/core_cm4.h ****   uint32_t w;                            /*!< Type      used for word access */
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 62
+
+
  273:Drivers/CMSIS/Include/core_cm4.h **** } APSR_Type;
  274:Drivers/CMSIS/Include/core_cm4.h **** 
  275:Drivers/CMSIS/Include/core_cm4.h **** /* APSR Register Definitions */
@@ -3658,14 +3713,14 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  322:Drivers/CMSIS/Include/core_cm4.h ****     uint32_t ICI_IT_1:6;                 /*!< bit: 10..15  ICI/IT part 1 */
  323:Drivers/CMSIS/Include/core_cm4.h ****     uint32_t GE:4;                       /*!< bit: 16..19  Greater than or Equal flags */
  324:Drivers/CMSIS/Include/core_cm4.h ****     uint32_t _reserved1:4;               /*!< bit: 20..23  Reserved */
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 62
-
-
  325:Drivers/CMSIS/Include/core_cm4.h ****     uint32_t T:1;                        /*!< bit:     24  Thumb bit */
  326:Drivers/CMSIS/Include/core_cm4.h ****     uint32_t ICI_IT_2:2;                 /*!< bit: 25..26  ICI/IT part 2 */
  327:Drivers/CMSIS/Include/core_cm4.h ****     uint32_t Q:1;                        /*!< bit:     27  Saturation condition flag */
  328:Drivers/CMSIS/Include/core_cm4.h ****     uint32_t V:1;                        /*!< bit:     28  Overflow condition code flag */
  329:Drivers/CMSIS/Include/core_cm4.h ****     uint32_t C:1;                        /*!< bit:     29  Carry condition code flag */
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 63
+
+
  330:Drivers/CMSIS/Include/core_cm4.h ****     uint32_t Z:1;                        /*!< bit:     30  Zero condition code flag */
  331:Drivers/CMSIS/Include/core_cm4.h ****     uint32_t N:1;                        /*!< bit:     31  Negative condition code flag */
  332:Drivers/CMSIS/Include/core_cm4.h ****   } b;                                   /*!< Structure used for bit  access */
@@ -3718,14 +3773,14 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  379:Drivers/CMSIS/Include/core_cm4.h ****   } b;                                   /*!< Structure used for bit  access */
  380:Drivers/CMSIS/Include/core_cm4.h ****   uint32_t w;                            /*!< Type      used for word access */
  381:Drivers/CMSIS/Include/core_cm4.h **** } CONTROL_Type;
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 63
-
-
  382:Drivers/CMSIS/Include/core_cm4.h **** 
  383:Drivers/CMSIS/Include/core_cm4.h **** /* CONTROL Register Definitions */
  384:Drivers/CMSIS/Include/core_cm4.h **** #define CONTROL_FPCA_Pos                    2U                                            /*!< CONT
  385:Drivers/CMSIS/Include/core_cm4.h **** #define CONTROL_FPCA_Msk                   (1UL << CONTROL_FPCA_Pos)                      /*!< CONT
  386:Drivers/CMSIS/Include/core_cm4.h **** 
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 64
+
+
  387:Drivers/CMSIS/Include/core_cm4.h **** #define CONTROL_SPSEL_Pos                   1U                                            /*!< CONT
  388:Drivers/CMSIS/Include/core_cm4.h **** #define CONTROL_SPSEL_Msk                  (1UL << CONTROL_SPSEL_Pos)                     /*!< CONT
  389:Drivers/CMSIS/Include/core_cm4.h **** 
@@ -3778,14 +3833,14 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  436:Drivers/CMSIS/Include/core_cm4.h **** 
  437:Drivers/CMSIS/Include/core_cm4.h **** /**
  438:Drivers/CMSIS/Include/core_cm4.h ****   \brief  Structure type to access the System Control Block (SCB).
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 64
-
-
  439:Drivers/CMSIS/Include/core_cm4.h ****  */
  440:Drivers/CMSIS/Include/core_cm4.h **** typedef struct
  441:Drivers/CMSIS/Include/core_cm4.h **** {
  442:Drivers/CMSIS/Include/core_cm4.h ****   __IM  uint32_t CPUID;                  /*!< Offset: 0x000 (R/ )  CPUID Base Register */
  443:Drivers/CMSIS/Include/core_cm4.h ****   __IOM uint32_t ICSR;                   /*!< Offset: 0x004 (R/W)  Interrupt Control and State Regi
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 65
+
+
  444:Drivers/CMSIS/Include/core_cm4.h ****   __IOM uint32_t VTOR;                   /*!< Offset: 0x008 (R/W)  Vector Table Offset Register */
  445:Drivers/CMSIS/Include/core_cm4.h ****   __IOM uint32_t AIRCR;                  /*!< Offset: 0x00C (R/W)  Application Interrupt and Reset 
  446:Drivers/CMSIS/Include/core_cm4.h ****   __IOM uint32_t SCR;                    /*!< Offset: 0x010 (R/W)  System Control Register */
@@ -3838,14 +3893,14 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  493:Drivers/CMSIS/Include/core_cm4.h **** 
  494:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_ICSR_PENDSTCLR_Pos             25U                                            /*!< SCB 
  495:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_ICSR_PENDSTCLR_Msk             (1UL << SCB_ICSR_PENDSTCLR_Pos)                /*!< SCB 
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 65
-
-
  496:Drivers/CMSIS/Include/core_cm4.h **** 
  497:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_ICSR_ISRPREEMPT_Pos            23U                                            /*!< SCB 
  498:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_ICSR_ISRPREEMPT_Msk            (1UL << SCB_ICSR_ISRPREEMPT_Pos)               /*!< SCB 
  499:Drivers/CMSIS/Include/core_cm4.h **** 
  500:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_ICSR_ISRPENDING_Pos            22U                                            /*!< SCB 
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 66
+
+
  501:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_ICSR_ISRPENDING_Msk            (1UL << SCB_ICSR_ISRPENDING_Pos)               /*!< SCB 
  502:Drivers/CMSIS/Include/core_cm4.h **** 
  503:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_ICSR_VECTPENDING_Pos           12U                                            /*!< SCB 
@@ -3898,14 +3953,14 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  550:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CCR_STKALIGN_Msk               (1UL << SCB_CCR_STKALIGN_Pos)                  /*!< SCB 
  551:Drivers/CMSIS/Include/core_cm4.h **** 
  552:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CCR_BFHFNMIGN_Pos               8U                                            /*!< SCB 
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 66
-
-
  553:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CCR_BFHFNMIGN_Msk              (1UL << SCB_CCR_BFHFNMIGN_Pos)                 /*!< SCB 
  554:Drivers/CMSIS/Include/core_cm4.h **** 
  555:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CCR_DIV_0_TRP_Pos               4U                                            /*!< SCB 
  556:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CCR_DIV_0_TRP_Msk              (1UL << SCB_CCR_DIV_0_TRP_Pos)                 /*!< SCB 
  557:Drivers/CMSIS/Include/core_cm4.h **** 
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 67
+
+
  558:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CCR_UNALIGN_TRP_Pos             3U                                            /*!< SCB 
  559:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CCR_UNALIGN_TRP_Msk            (1UL << SCB_CCR_UNALIGN_TRP_Pos)               /*!< SCB 
  560:Drivers/CMSIS/Include/core_cm4.h **** 
@@ -3958,14 +4013,14 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  607:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_SHCSR_MEMFAULTACT_Pos           0U                                            /*!< SCB 
  608:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_SHCSR_MEMFAULTACT_Msk          (1UL /*<< SCB_SHCSR_MEMFAULTACT_Pos*/)         /*!< SCB 
  609:Drivers/CMSIS/Include/core_cm4.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 67
-
-
  610:Drivers/CMSIS/Include/core_cm4.h **** /* SCB Configurable Fault Status Register Definitions */
  611:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CFSR_USGFAULTSR_Pos            16U                                            /*!< SCB 
  612:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CFSR_USGFAULTSR_Msk            (0xFFFFUL << SCB_CFSR_USGFAULTSR_Pos)          /*!< SCB 
  613:Drivers/CMSIS/Include/core_cm4.h **** 
  614:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CFSR_BUSFAULTSR_Pos             8U                                            /*!< SCB 
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 68
+
+
  615:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CFSR_BUSFAULTSR_Msk            (0xFFUL << SCB_CFSR_BUSFAULTSR_Pos)            /*!< SCB 
  616:Drivers/CMSIS/Include/core_cm4.h **** 
  617:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CFSR_MEMFAULTSR_Pos             0U                                            /*!< SCB 
@@ -4018,14 +4073,14 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  664:Drivers/CMSIS/Include/core_cm4.h **** 
  665:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CFSR_UNALIGNED_Pos            (SCB_CFSR_USGFAULTSR_Pos + 8U)                  /*!< SCB 
  666:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CFSR_UNALIGNED_Msk            (1UL << SCB_CFSR_UNALIGNED_Pos)                 /*!< SCB 
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 68
-
-
  667:Drivers/CMSIS/Include/core_cm4.h **** 
  668:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CFSR_NOCP_Pos                 (SCB_CFSR_USGFAULTSR_Pos + 3U)                  /*!< SCB 
  669:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CFSR_NOCP_Msk                 (1UL << SCB_CFSR_NOCP_Pos)                      /*!< SCB 
  670:Drivers/CMSIS/Include/core_cm4.h **** 
  671:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CFSR_INVPC_Pos                (SCB_CFSR_USGFAULTSR_Pos + 2U)                  /*!< SCB 
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 69
+
+
  672:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CFSR_INVPC_Msk                (1UL << SCB_CFSR_INVPC_Pos)                     /*!< SCB 
  673:Drivers/CMSIS/Include/core_cm4.h **** 
  674:Drivers/CMSIS/Include/core_cm4.h **** #define SCB_CFSR_INVSTATE_Pos             (SCB_CFSR_USGFAULTSR_Pos + 1U)                  /*!< SCB 
@@ -4078,14 +4133,14 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  721:Drivers/CMSIS/Include/core_cm4.h ****         uint32_t RESERVED0[1U];
  722:Drivers/CMSIS/Include/core_cm4.h ****   __IM  uint32_t ICTR;                   /*!< Offset: 0x004 (R/ )  Interrupt Controller Type Regist
  723:Drivers/CMSIS/Include/core_cm4.h ****   __IOM uint32_t ACTLR;                  /*!< Offset: 0x008 (R/W)  Auxiliary Control Register */
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 69
-
-
  724:Drivers/CMSIS/Include/core_cm4.h **** } SCnSCB_Type;
  725:Drivers/CMSIS/Include/core_cm4.h **** 
  726:Drivers/CMSIS/Include/core_cm4.h **** /* Interrupt Controller Type Register Definitions */
  727:Drivers/CMSIS/Include/core_cm4.h **** #define SCnSCB_ICTR_INTLINESNUM_Pos         0U                                         /*!< ICTR: I
  728:Drivers/CMSIS/Include/core_cm4.h **** #define SCnSCB_ICTR_INTLINESNUM_Msk        (0xFUL /*<< SCnSCB_ICTR_INTLINESNUM_Pos*/)  /*!< ICTR: I
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 70
+
+
  729:Drivers/CMSIS/Include/core_cm4.h **** 
  730:Drivers/CMSIS/Include/core_cm4.h **** /* Auxiliary Control Register Definitions */
  731:Drivers/CMSIS/Include/core_cm4.h **** #define SCnSCB_ACTLR_DISOOFP_Pos            9U                                         /*!< ACTLR: 
@@ -4138,14 +4193,14 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  778:Drivers/CMSIS/Include/core_cm4.h **** #define SysTick_CTRL_ENABLE_Msk            (1UL /*<< SysTick_CTRL_ENABLE_Pos*/)           /*!< SysT
  779:Drivers/CMSIS/Include/core_cm4.h **** 
  780:Drivers/CMSIS/Include/core_cm4.h **** /* SysTick Reload Register Definitions */
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 70
-
-
  781:Drivers/CMSIS/Include/core_cm4.h **** #define SysTick_LOAD_RELOAD_Pos             0U                                            /*!< SysT
  782:Drivers/CMSIS/Include/core_cm4.h **** #define SysTick_LOAD_RELOAD_Msk            (0xFFFFFFUL /*<< SysTick_LOAD_RELOAD_Pos*/)    /*!< SysT
  783:Drivers/CMSIS/Include/core_cm4.h **** 
  784:Drivers/CMSIS/Include/core_cm4.h **** /* SysTick Current Register Definitions */
  785:Drivers/CMSIS/Include/core_cm4.h **** #define SysTick_VAL_CURRENT_Pos             0U                                            /*!< SysT
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 71
+
+
  786:Drivers/CMSIS/Include/core_cm4.h **** #define SysTick_VAL_CURRENT_Msk            (0xFFFFFFUL /*<< SysTick_VAL_CURRENT_Pos*/)    /*!< SysT
  787:Drivers/CMSIS/Include/core_cm4.h **** 
  788:Drivers/CMSIS/Include/core_cm4.h **** /* SysTick Calibration Register Definitions */
@@ -4198,14 +4253,14 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  835:Drivers/CMSIS/Include/core_cm4.h ****   __IM  uint32_t PID6;                   /*!< Offset: 0xFD8 (R/ )  ITM Peripheral Identification Re
  836:Drivers/CMSIS/Include/core_cm4.h ****   __IM  uint32_t PID7;                   /*!< Offset: 0xFDC (R/ )  ITM Peripheral Identification Re
  837:Drivers/CMSIS/Include/core_cm4.h ****   __IM  uint32_t PID0;                   /*!< Offset: 0xFE0 (R/ )  ITM Peripheral Identification Re
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 71
-
-
  838:Drivers/CMSIS/Include/core_cm4.h ****   __IM  uint32_t PID1;                   /*!< Offset: 0xFE4 (R/ )  ITM Peripheral Identification Re
  839:Drivers/CMSIS/Include/core_cm4.h ****   __IM  uint32_t PID2;                   /*!< Offset: 0xFE8 (R/ )  ITM Peripheral Identification Re
  840:Drivers/CMSIS/Include/core_cm4.h ****   __IM  uint32_t PID3;                   /*!< Offset: 0xFEC (R/ )  ITM Peripheral Identification Re
  841:Drivers/CMSIS/Include/core_cm4.h ****   __IM  uint32_t CID0;                   /*!< Offset: 0xFF0 (R/ )  ITM Component  Identification Re
  842:Drivers/CMSIS/Include/core_cm4.h ****   __IM  uint32_t CID1;                   /*!< Offset: 0xFF4 (R/ )  ITM Component  Identification Re
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 72
+
+
  843:Drivers/CMSIS/Include/core_cm4.h ****   __IM  uint32_t CID2;                   /*!< Offset: 0xFF8 (R/ )  ITM Component  Identification Re
  844:Drivers/CMSIS/Include/core_cm4.h ****   __IM  uint32_t CID3;                   /*!< Offset: 0xFFC (R/ )  ITM Component  Identification Re
  845:Drivers/CMSIS/Include/core_cm4.h **** } ITM_Type;
@@ -4258,14 +4313,14 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  892:Drivers/CMSIS/Include/core_cm4.h **** #define ITM_LSR_ByteAcc_Pos                 2U                                            /*!< ITM 
  893:Drivers/CMSIS/Include/core_cm4.h **** #define ITM_LSR_ByteAcc_Msk                (1UL << ITM_LSR_ByteAcc_Pos)                   /*!< ITM 
  894:Drivers/CMSIS/Include/core_cm4.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 72
-
-
  895:Drivers/CMSIS/Include/core_cm4.h **** #define ITM_LSR_Access_Pos                  1U                                            /*!< ITM 
  896:Drivers/CMSIS/Include/core_cm4.h **** #define ITM_LSR_Access_Msk                 (1UL << ITM_LSR_Access_Pos)                    /*!< ITM 
  897:Drivers/CMSIS/Include/core_cm4.h **** 
  898:Drivers/CMSIS/Include/core_cm4.h **** #define ITM_LSR_Present_Pos                 0U                                            /*!< ITM 
  899:Drivers/CMSIS/Include/core_cm4.h **** #define ITM_LSR_Present_Msk                (1UL /*<< ITM_LSR_Present_Pos*/)               /*!< ITM 
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 73
+
+
  900:Drivers/CMSIS/Include/core_cm4.h **** 
  901:Drivers/CMSIS/Include/core_cm4.h **** /*@}*/ /* end of group CMSIS_ITM */
  902:Drivers/CMSIS/Include/core_cm4.h **** 
@@ -4318,14 +4373,14 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  949:Drivers/CMSIS/Include/core_cm4.h **** #define DWT_CTRL_NOEXTTRIG_Msk             (0x1UL << DWT_CTRL_NOEXTTRIG_Pos)           /*!< DWT CTR
  950:Drivers/CMSIS/Include/core_cm4.h **** 
  951:Drivers/CMSIS/Include/core_cm4.h **** #define DWT_CTRL_NOCYCCNT_Pos              25U                                         /*!< DWT CTR
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 73
-
-
  952:Drivers/CMSIS/Include/core_cm4.h **** #define DWT_CTRL_NOCYCCNT_Msk              (0x1UL << DWT_CTRL_NOCYCCNT_Pos)            /*!< DWT CTR
  953:Drivers/CMSIS/Include/core_cm4.h **** 
  954:Drivers/CMSIS/Include/core_cm4.h **** #define DWT_CTRL_NOPRFCNT_Pos              24U                                         /*!< DWT CTR
  955:Drivers/CMSIS/Include/core_cm4.h **** #define DWT_CTRL_NOPRFCNT_Msk              (0x1UL << DWT_CTRL_NOPRFCNT_Pos)            /*!< DWT CTR
  956:Drivers/CMSIS/Include/core_cm4.h **** 
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 74
+
+
  957:Drivers/CMSIS/Include/core_cm4.h **** #define DWT_CTRL_CYCEVTENA_Pos             22U                                         /*!< DWT CTR
  958:Drivers/CMSIS/Include/core_cm4.h **** #define DWT_CTRL_CYCEVTENA_Msk             (0x1UL << DWT_CTRL_CYCEVTENA_Pos)           /*!< DWT CTR
  959:Drivers/CMSIS/Include/core_cm4.h **** 
@@ -4378,14 +4433,14 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1006:Drivers/CMSIS/Include/core_cm4.h **** #define DWT_SLEEPCNT_SLEEPCNT_Msk          (0xFFUL /*<< DWT_SLEEPCNT_SLEEPCNT_Pos*/)   /*!< DWT SLE
 1007:Drivers/CMSIS/Include/core_cm4.h **** 
 1008:Drivers/CMSIS/Include/core_cm4.h **** /* DWT LSU Count Register Definitions */
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 74
-
-
 1009:Drivers/CMSIS/Include/core_cm4.h **** #define DWT_LSUCNT_LSUCNT_Pos               0U                                         /*!< DWT LSU
 1010:Drivers/CMSIS/Include/core_cm4.h **** #define DWT_LSUCNT_LSUCNT_Msk              (0xFFUL /*<< DWT_LSUCNT_LSUCNT_Pos*/)       /*!< DWT LSU
 1011:Drivers/CMSIS/Include/core_cm4.h **** 
 1012:Drivers/CMSIS/Include/core_cm4.h **** /* DWT Folded-instruction Count Register Definitions */
 1013:Drivers/CMSIS/Include/core_cm4.h **** #define DWT_FOLDCNT_FOLDCNT_Pos             0U                                         /*!< DWT FOL
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 75
+
+
 1014:Drivers/CMSIS/Include/core_cm4.h **** #define DWT_FOLDCNT_FOLDCNT_Msk            (0xFFUL /*<< DWT_FOLDCNT_FOLDCNT_Pos*/)     /*!< DWT FOL
 1015:Drivers/CMSIS/Include/core_cm4.h **** 
 1016:Drivers/CMSIS/Include/core_cm4.h **** /* DWT Comparator Mask Register Definitions */
@@ -4438,14 +4493,14 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1063:Drivers/CMSIS/Include/core_cm4.h ****   __IM  uint32_t SSPSR;                  /*!< Offset: 0x000 (R/ )  Supported Parallel Port Size Reg
 1064:Drivers/CMSIS/Include/core_cm4.h ****   __IOM uint32_t CSPSR;                  /*!< Offset: 0x004 (R/W)  Current Parallel Port Size Regis
 1065:Drivers/CMSIS/Include/core_cm4.h ****         uint32_t RESERVED0[2U];
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 75
-
-
 1066:Drivers/CMSIS/Include/core_cm4.h ****   __IOM uint32_t ACPR;                   /*!< Offset: 0x010 (R/W)  Asynchronous Clock Prescaler Reg
 1067:Drivers/CMSIS/Include/core_cm4.h ****         uint32_t RESERVED1[55U];
 1068:Drivers/CMSIS/Include/core_cm4.h ****   __IOM uint32_t SPPR;                   /*!< Offset: 0x0F0 (R/W)  Selected Pin Protocol Register *
 1069:Drivers/CMSIS/Include/core_cm4.h ****         uint32_t RESERVED2[131U];
 1070:Drivers/CMSIS/Include/core_cm4.h ****   __IM  uint32_t FFSR;                   /*!< Offset: 0x300 (R/ )  Formatter and Flush Status Regis
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 76
+
+
 1071:Drivers/CMSIS/Include/core_cm4.h ****   __IOM uint32_t FFCR;                   /*!< Offset: 0x304 (R/W)  Formatter and Flush Control Regi
 1072:Drivers/CMSIS/Include/core_cm4.h ****   __IM  uint32_t FSCR;                   /*!< Offset: 0x308 (R/ )  Formatter Synchronization Counte
 1073:Drivers/CMSIS/Include/core_cm4.h ****         uint32_t RESERVED3[759U];
@@ -4498,14 +4553,14 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1120:Drivers/CMSIS/Include/core_cm4.h **** 
 1121:Drivers/CMSIS/Include/core_cm4.h **** /* TPI Integration ETM Data Register Definitions (FIFO0) */
 1122:Drivers/CMSIS/Include/core_cm4.h **** #define TPI_FIFO0_ITM_ATVALID_Pos          29U                                         /*!< TPI FIF
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 76
-
-
 1123:Drivers/CMSIS/Include/core_cm4.h **** #define TPI_FIFO0_ITM_ATVALID_Msk          (0x3UL << TPI_FIFO0_ITM_ATVALID_Pos)        /*!< TPI FIF
 1124:Drivers/CMSIS/Include/core_cm4.h **** 
 1125:Drivers/CMSIS/Include/core_cm4.h **** #define TPI_FIFO0_ITM_bytecount_Pos        27U                                         /*!< TPI FIF
 1126:Drivers/CMSIS/Include/core_cm4.h **** #define TPI_FIFO0_ITM_bytecount_Msk        (0x3UL << TPI_FIFO0_ITM_bytecount_Pos)      /*!< TPI FIF
 1127:Drivers/CMSIS/Include/core_cm4.h **** 
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 77
+
+
 1128:Drivers/CMSIS/Include/core_cm4.h **** #define TPI_FIFO0_ETM_ATVALID_Pos          26U                                         /*!< TPI FIF
 1129:Drivers/CMSIS/Include/core_cm4.h **** #define TPI_FIFO0_ETM_ATVALID_Msk          (0x3UL << TPI_FIFO0_ETM_ATVALID_Pos)        /*!< TPI FIF
 1130:Drivers/CMSIS/Include/core_cm4.h **** 
@@ -4558,14 +4613,14 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1177:Drivers/CMSIS/Include/core_cm4.h **** #define TPI_ITATBCTR0_ATREADY1_Msk         (0x1UL /*<< TPI_ITATBCTR0_ATREADY1_Pos*/)   /*!< TPI ITA
 1178:Drivers/CMSIS/Include/core_cm4.h **** 
 1179:Drivers/CMSIS/Include/core_cm4.h **** /* TPI Integration Mode Control Register Definitions */
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 77
-
-
 1180:Drivers/CMSIS/Include/core_cm4.h **** #define TPI_ITCTRL_Mode_Pos                 0U                                         /*!< TPI ITC
 1181:Drivers/CMSIS/Include/core_cm4.h **** #define TPI_ITCTRL_Mode_Msk                (0x3UL /*<< TPI_ITCTRL_Mode_Pos*/)          /*!< TPI ITC
 1182:Drivers/CMSIS/Include/core_cm4.h **** 
 1183:Drivers/CMSIS/Include/core_cm4.h **** /* TPI DEVID Register Definitions */
 1184:Drivers/CMSIS/Include/core_cm4.h **** #define TPI_DEVID_NRZVALID_Pos             11U                                         /*!< TPI DEV
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 78
+
+
 1185:Drivers/CMSIS/Include/core_cm4.h **** #define TPI_DEVID_NRZVALID_Msk             (0x1UL << TPI_DEVID_NRZVALID_Pos)           /*!< TPI DEV
 1186:Drivers/CMSIS/Include/core_cm4.h **** 
 1187:Drivers/CMSIS/Include/core_cm4.h **** #define TPI_DEVID_MANCVALID_Pos            10U                                         /*!< TPI DEV
@@ -4618,14 +4673,14 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1234:Drivers/CMSIS/Include/core_cm4.h ****   __IOM uint32_t RBAR_A3;                /*!< Offset: 0x024 (R/W)  MPU Alias 3 Region Base Address 
 1235:Drivers/CMSIS/Include/core_cm4.h ****   __IOM uint32_t RASR_A3;                /*!< Offset: 0x028 (R/W)  MPU Alias 3 Region Attribute and
 1236:Drivers/CMSIS/Include/core_cm4.h **** } MPU_Type;
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 78
-
-
 1237:Drivers/CMSIS/Include/core_cm4.h **** 
 1238:Drivers/CMSIS/Include/core_cm4.h **** #define MPU_TYPE_RALIASES                  4U
 1239:Drivers/CMSIS/Include/core_cm4.h **** 
 1240:Drivers/CMSIS/Include/core_cm4.h **** /* MPU Type Register Definitions */
 1241:Drivers/CMSIS/Include/core_cm4.h **** #define MPU_TYPE_IREGION_Pos               16U                                            /*!< MPU 
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 79
+
+
 1242:Drivers/CMSIS/Include/core_cm4.h **** #define MPU_TYPE_IREGION_Msk               (0xFFUL << MPU_TYPE_IREGION_Pos)               /*!< MPU 
 1243:Drivers/CMSIS/Include/core_cm4.h **** 
 1244:Drivers/CMSIS/Include/core_cm4.h **** #define MPU_TYPE_DREGION_Pos                8U                                            /*!< MPU 
@@ -4678,14 +4733,14 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1291:Drivers/CMSIS/Include/core_cm4.h **** #define MPU_RASR_C_Msk                     (1UL << MPU_RASR_C_Pos)                        /*!< MPU 
 1292:Drivers/CMSIS/Include/core_cm4.h **** 
 1293:Drivers/CMSIS/Include/core_cm4.h **** #define MPU_RASR_B_Pos                     16U                                            /*!< MPU 
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 79
-
-
 1294:Drivers/CMSIS/Include/core_cm4.h **** #define MPU_RASR_B_Msk                     (1UL << MPU_RASR_B_Pos)                        /*!< MPU 
 1295:Drivers/CMSIS/Include/core_cm4.h **** 
 1296:Drivers/CMSIS/Include/core_cm4.h **** #define MPU_RASR_SRD_Pos                    8U                                            /*!< MPU 
 1297:Drivers/CMSIS/Include/core_cm4.h **** #define MPU_RASR_SRD_Msk                   (0xFFUL << MPU_RASR_SRD_Pos)                   /*!< MPU 
 1298:Drivers/CMSIS/Include/core_cm4.h **** 
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 80
+
+
 1299:Drivers/CMSIS/Include/core_cm4.h **** #define MPU_RASR_SIZE_Pos                   1U                                            /*!< MPU 
 1300:Drivers/CMSIS/Include/core_cm4.h **** #define MPU_RASR_SIZE_Msk                  (0x1FUL << MPU_RASR_SIZE_Pos)                  /*!< MPU 
 1301:Drivers/CMSIS/Include/core_cm4.h **** 
@@ -4738,14 +4793,14 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1348:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_FPCCR_THREAD_Pos                3U                                            /*!< FPCC
 1349:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_FPCCR_THREAD_Msk               (1UL << FPU_FPCCR_THREAD_Pos)                  /*!< FPCC
 1350:Drivers/CMSIS/Include/core_cm4.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 80
-
-
 1351:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_FPCCR_USER_Pos                  1U                                            /*!< FPCC
 1352:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_FPCCR_USER_Msk                 (1UL << FPU_FPCCR_USER_Pos)                    /*!< FPCC
 1353:Drivers/CMSIS/Include/core_cm4.h **** 
 1354:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_FPCCR_LSPACT_Pos                0U                                            /*!< FPCC
 1355:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_FPCCR_LSPACT_Msk               (1UL /*<< FPU_FPCCR_LSPACT_Pos*/)              /*!< FPCC
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 81
+
+
 1356:Drivers/CMSIS/Include/core_cm4.h **** 
 1357:Drivers/CMSIS/Include/core_cm4.h **** /* Floating-Point Context Address Register Definitions */
 1358:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_FPCAR_ADDRESS_Pos               3U                                            /*!< FPCA
@@ -4798,14 +4853,14 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1405:Drivers/CMSIS/Include/core_cm4.h **** 
 1406:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_MVFR1_D_NaN_mode_Pos            4U                                            /*!< MVFR
 1407:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_MVFR1_D_NaN_mode_Msk           (0xFUL << FPU_MVFR1_D_NaN_mode_Pos)            /*!< MVFR
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 81
-
-
 1408:Drivers/CMSIS/Include/core_cm4.h **** 
 1409:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_MVFR1_FtZ_mode_Pos              0U                                            /*!< MVFR
 1410:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_MVFR1_FtZ_mode_Msk             (0xFUL /*<< FPU_MVFR1_FtZ_mode_Pos*/)          /*!< MVFR
 1411:Drivers/CMSIS/Include/core_cm4.h **** 
 1412:Drivers/CMSIS/Include/core_cm4.h **** /*@} end of group CMSIS_FPU */
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 82
+
+
 1413:Drivers/CMSIS/Include/core_cm4.h **** 
 1414:Drivers/CMSIS/Include/core_cm4.h **** 
 1415:Drivers/CMSIS/Include/core_cm4.h **** /**
@@ -4858,14 +4913,14 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1462:Drivers/CMSIS/Include/core_cm4.h **** #define CoreDebug_DHCSR_C_STEP_Msk         (1UL << CoreDebug_DHCSR_C_STEP_Pos)            /*!< Core
 1463:Drivers/CMSIS/Include/core_cm4.h **** 
 1464:Drivers/CMSIS/Include/core_cm4.h **** #define CoreDebug_DHCSR_C_HALT_Pos          1U                                            /*!< Core
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 82
-
-
 1465:Drivers/CMSIS/Include/core_cm4.h **** #define CoreDebug_DHCSR_C_HALT_Msk         (1UL << CoreDebug_DHCSR_C_HALT_Pos)            /*!< Core
 1466:Drivers/CMSIS/Include/core_cm4.h **** 
 1467:Drivers/CMSIS/Include/core_cm4.h **** #define CoreDebug_DHCSR_C_DEBUGEN_Pos       0U                                            /*!< Core
 1468:Drivers/CMSIS/Include/core_cm4.h **** #define CoreDebug_DHCSR_C_DEBUGEN_Msk      (1UL /*<< CoreDebug_DHCSR_C_DEBUGEN_Pos*/)     /*!< Core
 1469:Drivers/CMSIS/Include/core_cm4.h **** 
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 83
+
+
 1470:Drivers/CMSIS/Include/core_cm4.h **** /* Debug Core Register Selector Register Definitions */
 1471:Drivers/CMSIS/Include/core_cm4.h **** #define CoreDebug_DCRSR_REGWnR_Pos         16U                                            /*!< Core
 1472:Drivers/CMSIS/Include/core_cm4.h **** #define CoreDebug_DCRSR_REGWnR_Msk         (1UL << CoreDebug_DCRSR_REGWnR_Pos)            /*!< Core
@@ -4918,14 +4973,14 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1519:Drivers/CMSIS/Include/core_cm4.h **** 
 1520:Drivers/CMSIS/Include/core_cm4.h **** /**
 1521:Drivers/CMSIS/Include/core_cm4.h ****   \ingroup    CMSIS_core_register
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 83
-
-
 1522:Drivers/CMSIS/Include/core_cm4.h ****   \defgroup   CMSIS_core_bitfield     Core register bit field macros
 1523:Drivers/CMSIS/Include/core_cm4.h ****   \brief      Macros for use with bit field definitions (xxx_Pos, xxx_Msk).
 1524:Drivers/CMSIS/Include/core_cm4.h ****   @{
 1525:Drivers/CMSIS/Include/core_cm4.h ****  */
 1526:Drivers/CMSIS/Include/core_cm4.h **** 
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 84
+
+
 1527:Drivers/CMSIS/Include/core_cm4.h **** /**
 1528:Drivers/CMSIS/Include/core_cm4.h ****   \brief   Mask and shift a bit field value for use in a register bit range.
 1529:Drivers/CMSIS/Include/core_cm4.h ****   \param[in] field  Name of the register bit field.
@@ -4978,14 +5033,14 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1576:Drivers/CMSIS/Include/core_cm4.h **** 
 1577:Drivers/CMSIS/Include/core_cm4.h **** #define FPU_BASE            (SCS_BASE +  0x0F30UL)                    /*!< Floating Point Unit */
 1578:Drivers/CMSIS/Include/core_cm4.h **** #define FPU                 ((FPU_Type       *)     FPU_BASE      )   /*!< Floating Point Unit */
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 84
-
-
 1579:Drivers/CMSIS/Include/core_cm4.h **** 
 1580:Drivers/CMSIS/Include/core_cm4.h **** /*@} */
 1581:Drivers/CMSIS/Include/core_cm4.h **** 
 1582:Drivers/CMSIS/Include/core_cm4.h **** 
 1583:Drivers/CMSIS/Include/core_cm4.h **** 
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 85
+
+
 1584:Drivers/CMSIS/Include/core_cm4.h **** /*******************************************************************************
 1585:Drivers/CMSIS/Include/core_cm4.h ****  *                Hardware Abstraction Layer
 1586:Drivers/CMSIS/Include/core_cm4.h ****   Core Function Interface contains:
@@ -5038,14 +5093,14 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1633:Drivers/CMSIS/Include/core_cm4.h ****   #define NVIC_GetVector              __NVIC_GetVector
 1634:Drivers/CMSIS/Include/core_cm4.h **** #endif  /* (CMSIS_VECTAB_VIRTUAL) */
 1635:Drivers/CMSIS/Include/core_cm4.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 85
-
-
 1636:Drivers/CMSIS/Include/core_cm4.h **** #define NVIC_USER_IRQ_OFFSET          16
 1637:Drivers/CMSIS/Include/core_cm4.h **** 
 1638:Drivers/CMSIS/Include/core_cm4.h **** 
 1639:Drivers/CMSIS/Include/core_cm4.h **** /* The following EXC_RETURN values are saved the LR on exception entry */
 1640:Drivers/CMSIS/Include/core_cm4.h **** #define EXC_RETURN_HANDLER         (0xFFFFFFF1UL)     /* return to Handler mode, uses MSP after ret
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 86
+
+
 1641:Drivers/CMSIS/Include/core_cm4.h **** #define EXC_RETURN_THREAD_MSP      (0xFFFFFFF9UL)     /* return to Thread mode, uses MSP after retu
 1642:Drivers/CMSIS/Include/core_cm4.h **** #define EXC_RETURN_THREAD_PSP      (0xFFFFFFFDUL)     /* return to Thread mode, uses PSP after retu
 1643:Drivers/CMSIS/Include/core_cm4.h **** #define EXC_RETURN_HANDLER_FPU     (0xFFFFFFE1UL)     /* return to Handler mode, uses MSP after ret
@@ -5082,25 +5137,12 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1674:Drivers/CMSIS/Include/core_cm4.h ****   \return                Priority grouping field (SCB->AIRCR [10:8] PRIGROUP field).
 1675:Drivers/CMSIS/Include/core_cm4.h ****  */
 1676:Drivers/CMSIS/Include/core_cm4.h **** __STATIC_INLINE uint32_t __NVIC_GetPriorityGrouping(void)
- 335              		.loc 4 1676 26 view .LVU79
- 336              	.LBB87:
 1677:Drivers/CMSIS/Include/core_cm4.h **** {
 1678:Drivers/CMSIS/Include/core_cm4.h ****   return ((uint32_t)((SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) >> SCB_AIRCR_PRIGROUP_Pos));
- 337              		.loc 4 1678 3 view .LVU80
- 338              		.loc 4 1678 26 is_stmt 0 view .LVU81
- 339 0028 154A     		ldr	r2, .L10+4
- 340 002a D268     		ldr	r2, [r2, #12]
- 341              	.LVL17:
- 342              		.loc 4 1678 26 view .LVU82
- 343              	.LBE87:
- 344              	.LBE86:
 1679:Drivers/CMSIS/Include/core_cm4.h **** }
 1680:Drivers/CMSIS/Include/core_cm4.h **** 
 1681:Drivers/CMSIS/Include/core_cm4.h **** 
 1682:Drivers/CMSIS/Include/core_cm4.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 86
-
-
 1683:Drivers/CMSIS/Include/core_cm4.h ****   \brief   Enable Interrupt
 1684:Drivers/CMSIS/Include/core_cm4.h ****   \details Enables a device specific interrupt in the NVIC interrupt controller.
 1685:Drivers/CMSIS/Include/core_cm4.h ****   \param [in]      IRQn  Device specific interrupt number.
@@ -5116,6 +5158,9 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1695:Drivers/CMSIS/Include/core_cm4.h **** 
 1696:Drivers/CMSIS/Include/core_cm4.h **** 
 1697:Drivers/CMSIS/Include/core_cm4.h **** /**
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 87
+
+
 1698:Drivers/CMSIS/Include/core_cm4.h ****   \brief   Get Interrupt Enable status
 1699:Drivers/CMSIS/Include/core_cm4.h ****   \details Returns a device specific interrupt enable status from the NVIC interrupt controller.
 1700:Drivers/CMSIS/Include/core_cm4.h ****   \param [in]      IRQn  Device specific interrupt number.
@@ -5158,9 +5203,6 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1737:Drivers/CMSIS/Include/core_cm4.h ****   \details Reads the NVIC pending register and returns the pending bit for the specified device spe
 1738:Drivers/CMSIS/Include/core_cm4.h ****   \param [in]      IRQn  Device specific interrupt number.
 1739:Drivers/CMSIS/Include/core_cm4.h ****   \return             0  Interrupt status is not pending.
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 87
-
-
 1740:Drivers/CMSIS/Include/core_cm4.h ****   \return             1  Interrupt status is pending.
 1741:Drivers/CMSIS/Include/core_cm4.h ****   \note    IRQn must not be negative.
 1742:Drivers/CMSIS/Include/core_cm4.h ****  */
@@ -5176,6 +5218,9 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1752:Drivers/CMSIS/Include/core_cm4.h ****   }
 1753:Drivers/CMSIS/Include/core_cm4.h **** }
 1754:Drivers/CMSIS/Include/core_cm4.h **** 
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 88
+
+
 1755:Drivers/CMSIS/Include/core_cm4.h **** 
 1756:Drivers/CMSIS/Include/core_cm4.h **** /**
 1757:Drivers/CMSIS/Include/core_cm4.h ****   \brief   Set Pending Interrupt
@@ -5218,9 +5263,6 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1794:Drivers/CMSIS/Include/core_cm4.h **** __STATIC_INLINE uint32_t __NVIC_GetActive(IRQn_Type IRQn)
 1795:Drivers/CMSIS/Include/core_cm4.h **** {
 1796:Drivers/CMSIS/Include/core_cm4.h ****   if ((int32_t)(IRQn) >= 0)
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 88
-
-
 1797:Drivers/CMSIS/Include/core_cm4.h ****   {
 1798:Drivers/CMSIS/Include/core_cm4.h ****     return((uint32_t)(((NVIC->IABR[(((uint32_t)IRQn) >> 5UL)] & (1UL << (((uint32_t)IRQn) & 0x1FUL)
 1799:Drivers/CMSIS/Include/core_cm4.h ****   }
@@ -5236,6 +5278,9 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1809:Drivers/CMSIS/Include/core_cm4.h ****   \details Sets the priority of a device specific interrupt or a processor exception.
 1810:Drivers/CMSIS/Include/core_cm4.h ****            The interrupt number can be positive to specify a device specific interrupt,
 1811:Drivers/CMSIS/Include/core_cm4.h ****            or negative to specify a processor exception.
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 89
+
+
 1812:Drivers/CMSIS/Include/core_cm4.h ****   \param [in]      IRQn  Interrupt number.
 1813:Drivers/CMSIS/Include/core_cm4.h ****   \param [in]  priority  Priority to set.
 1814:Drivers/CMSIS/Include/core_cm4.h ****   \note    The priority cannot be set for every processor exception.
@@ -5245,6 +5290,78 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1818:Drivers/CMSIS/Include/core_cm4.h ****   if ((int32_t)(IRQn) >= 0)
 1819:Drivers/CMSIS/Include/core_cm4.h ****   {
 1820:Drivers/CMSIS/Include/core_cm4.h ****     NVIC->IP[((uint32_t)IRQn)]               = (uint8_t)((priority << (8U - __NVIC_PRIO_BITS)) & (u
+ 375              		.loc 4 1820 46 is_stmt 0 view .LVU88
+ 376 0018 1948     		ldr	r0, .L14+4
+ 377              	.LBE107:
+ 378              	.LBE106:
+ 379              	.LBB109:
+ 380              	.LBB110:
+1678:Drivers/CMSIS/Include/core_cm4.h **** }
+ 381              		.loc 4 1678 26 view .LVU89
+ 382 001a 1A4D     		ldr	r5, .L14+8
+ 383              	.LBE110:
+ 384              	.LBE109:
+ 385              	.LBB112:
+ 386              	.LBB113:
+ 668:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** }
+ 387              		.loc 2 668 3 view .LVU90
+ 388 001c 1A4C     		ldr	r4, .L14+12
+ 389              	.LBE113:
+ 390              	.LBE112:
+ 391              	.LBB116:
+ 392              	.LBB103:
+ 393              		.loc 3 456 3 view .LVU91
+ 394 001e 41F40031 		orr	r1, r1, #131072
+ 395 0022 D164     		str	r1, [r2, #76]
+ 457:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   /* Delay after an RCC peripheral clock enabling */
+ 458:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   tmpreg = READ_BIT(RCC->AHB2ENR, Periphs);
+ 396              		.loc 3 458 3 is_stmt 1 view .LVU92
+ 397              		.loc 3 458 12 is_stmt 0 view .LVU93
+ 398 0024 D26C     		ldr	r2, [r2, #76]
+ 399 0026 02F40032 		and	r2, r2, #131072
+ 400              		.loc 3 458 10 view .LVU94
+ 401 002a 0092     		str	r2, [sp]
+ 459:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   (void)tmpreg;
+ 402              		.loc 3 459 3 is_stmt 1 view .LVU95
+ 403              	.LBE103:
+ 404              	.LBE116:
+ 405              	.LBB117:
+ 406              	.LBB118:
+1692:Drivers/CMSIS/Include/core_cm4.h ****   }
+ 407              		.loc 4 1692 43 is_stmt 0 view .LVU96
+ 408 002c 4FF40002 		mov	r2, #8388608
+ 409              	.LBE118:
+ 410              	.LBE117:
+ 411              	.LBB120:
+ 412              	.LBB104:
+ 413              		.loc 3 459 3 view .LVU97
+ 414 0030 0099     		ldr	r1, [sp]
+ 415              	.LVL15:
+ 416              		.loc 3 459 3 view .LVU98
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 90
+
+
+ 417              	.LBE104:
+ 418              	.LBE120:
+  82:Src/dac.c     **** 
+  83:Src/dac.c     ****   /* DAC2 interrupt Init */
+  84:Src/dac.c     ****   NVIC_SetPriority(TIM7_DAC_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(), 0, 0));
+ 419              		.loc 1 84 3 is_stmt 1 view .LVU99
+ 420              	.LBB121:
+ 421              	.LBI109:
+1676:Drivers/CMSIS/Include/core_cm4.h **** {
+ 422              		.loc 4 1676 26 view .LVU100
+ 423              	.LBB111:
+1678:Drivers/CMSIS/Include/core_cm4.h **** }
+ 424              		.loc 4 1678 3 view .LVU101
+1678:Drivers/CMSIS/Include/core_cm4.h **** }
+ 425              		.loc 4 1678 26 is_stmt 0 view .LVU102
+ 426 0032 E968     		ldr	r1, [r5, #12]
+ 427              	.LVL16:
+1678:Drivers/CMSIS/Include/core_cm4.h **** }
+ 428              		.loc 4 1678 26 view .LVU103
+ 429              	.LBE111:
+ 430              	.LBE121:
 1821:Drivers/CMSIS/Include/core_cm4.h ****   }
 1822:Drivers/CMSIS/Include/core_cm4.h ****   else
 1823:Drivers/CMSIS/Include/core_cm4.h ****   {
@@ -5278,12 +5395,12 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1851:Drivers/CMSIS/Include/core_cm4.h **** 
 1852:Drivers/CMSIS/Include/core_cm4.h **** /**
 1853:Drivers/CMSIS/Include/core_cm4.h ****   \brief   Encode Priority
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 89
-
-
 1854:Drivers/CMSIS/Include/core_cm4.h ****   \details Encodes the priority for an interrupt with the given priority group,
 1855:Drivers/CMSIS/Include/core_cm4.h ****            preemptive priority value, and subpriority value.
 1856:Drivers/CMSIS/Include/core_cm4.h ****            In case of a conflict between priority grouping and available
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 91
+
+
 1857:Drivers/CMSIS/Include/core_cm4.h ****            priority bits (__NVIC_PRIO_BITS), the smallest possible priority group is set.
 1858:Drivers/CMSIS/Include/core_cm4.h ****   \param [in]     PriorityGroup  Used priority group.
 1859:Drivers/CMSIS/Include/core_cm4.h ****   \param [in]   PreemptPriority  Preemptive priority value (starting from 0).
@@ -5293,60 +5410,58 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
 1863:Drivers/CMSIS/Include/core_cm4.h **** __STATIC_INLINE uint32_t NVIC_EncodePriority (uint32_t PriorityGroup, uint32_t PreemptPriority, uin
 1864:Drivers/CMSIS/Include/core_cm4.h **** {
 1865:Drivers/CMSIS/Include/core_cm4.h ****   uint32_t PriorityGroupTmp = (PriorityGroup & (uint32_t)0x07UL);   /* only values 0..7 are used   
- 345              		.loc 4 1865 3 is_stmt 1 view .LVU83
+ 431              		.loc 4 1865 3 is_stmt 1 view .LVU104
 1866:Drivers/CMSIS/Include/core_cm4.h ****   uint32_t PreemptPriorityBits;
- 346              		.loc 4 1866 3 view .LVU84
+ 432              		.loc 4 1866 3 view .LVU105
 1867:Drivers/CMSIS/Include/core_cm4.h ****   uint32_t SubPriorityBits;
- 347              		.loc 4 1867 3 view .LVU85
+ 433              		.loc 4 1867 3 view .LVU106
 1868:Drivers/CMSIS/Include/core_cm4.h **** 
 1869:Drivers/CMSIS/Include/core_cm4.h ****   PreemptPriorityBits = ((7UL - PriorityGroupTmp) > (uint32_t)(__NVIC_PRIO_BITS)) ? (uint32_t)(__NV
- 348              		.loc 4 1869 3 view .LVU86
+ 434              		.loc 4 1869 3 view .LVU107
 1870:Drivers/CMSIS/Include/core_cm4.h ****   SubPriorityBits     = ((PriorityGroupTmp + (uint32_t)(__NVIC_PRIO_BITS)) < (uint32_t)7UL) ? (uint
- 349              		.loc 4 1870 3 view .LVU87
+ 435              		.loc 4 1870 3 view .LVU108
 1871:Drivers/CMSIS/Include/core_cm4.h **** 
 1872:Drivers/CMSIS/Include/core_cm4.h ****   return (
- 350              		.loc 4 1872 3 view .LVU88
- 351              	.LBB88:
- 352              	.LBI88:
+ 436              		.loc 4 1872 3 view .LVU109
+ 437              	.LBB122:
+ 438              	.LBI106:
 1816:Drivers/CMSIS/Include/core_cm4.h **** {
- 353              		.loc 4 1816 22 view .LVU89
- 354              	.LBB89:
+ 439              		.loc 4 1816 22 view .LVU110
+ 440              	.LBB108:
 1818:Drivers/CMSIS/Include/core_cm4.h ****   {
- 355              		.loc 4 1818 3 view .LVU90
+ 441              		.loc 4 1818 3 view .LVU111
 1820:Drivers/CMSIS/Include/core_cm4.h ****   }
- 356              		.loc 4 1820 5 view .LVU91
+ 442              		.loc 4 1820 5 view .LVU112
 1820:Drivers/CMSIS/Include/core_cm4.h ****   }
- 357              		.loc 4 1820 46 is_stmt 0 view .LVU92
- 358 002c 154A     		ldr	r2, .L10+8
- 359 002e 82F83733 		strb	r3, [r2, #823]
- 360              	.LVL18:
+ 443              		.loc 4 1820 46 is_stmt 0 view .LVU113
+ 444 0034 80F83733 		strb	r3, [r0, #823]
+ 445              	.LVL17:
 1820:Drivers/CMSIS/Include/core_cm4.h ****   }
- 361              		.loc 4 1820 46 view .LVU93
- 362              	.LBE89:
- 363              	.LBE88:
+ 446              		.loc 4 1820 46 view .LVU114
+ 447              	.LBE108:
+ 448              	.LBE122:
   85:Src/dac.c     ****   NVIC_EnableIRQ(TIM7_DAC_IRQn);
- 364              		.loc 1 85 3 is_stmt 1 view .LVU94
- 365              	.LBB90:
- 366              	.LBI90:
+ 449              		.loc 1 85 3 is_stmt 1 view .LVU115
+ 450              	.LBB123:
+ 451              	.LBI117:
 1688:Drivers/CMSIS/Include/core_cm4.h **** {
- 367              		.loc 4 1688 22 view .LVU95
- 368              	.LBB91:
+ 452              		.loc 4 1688 22 view .LVU116
+ 453              	.LBB119:
 1690:Drivers/CMSIS/Include/core_cm4.h ****   {
- 369              		.loc 4 1690 3 view .LVU96
+ 454              		.loc 4 1690 3 view .LVU117
 1692:Drivers/CMSIS/Include/core_cm4.h ****   }
- 370              		.loc 4 1692 5 view .LVU97
+ 455              		.loc 4 1692 5 view .LVU118
 1692:Drivers/CMSIS/Include/core_cm4.h ****   }
- 371              		.loc 4 1692 43 is_stmt 0 view .LVU98
- 372 0032 4FF40001 		mov	r1, #8388608
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 90
+ 456              		.loc 4 1692 43 is_stmt 0 view .LVU119
+ 457 0038 4260     		str	r2, [r0, #4]
+ 458              	.LVL18:
+1692:Drivers/CMSIS/Include/core_cm4.h ****   }
+ 459              		.loc 4 1692 43 view .LVU120
+ 460              	.LBE119:
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 92
 
 
- 373 0036 5160     		str	r1, [r2, #4]
- 374              	.LVL19:
-1692:Drivers/CMSIS/Include/core_cm4.h ****   }
- 375              		.loc 4 1692 43 view .LVU99
- 376              	.LBE91:
- 377              	.LBE90:
+ 461              	.LBE123:
   86:Src/dac.c     **** 
   87:Src/dac.c     ****   /* USER CODE BEGIN DAC2_Init 1 */
   88:Src/dac.c     **** 
@@ -5354,208 +5469,223 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
   90:Src/dac.c     ****   /** DAC channel OUT1 config
   91:Src/dac.c     ****   */
   92:Src/dac.c     ****   LL_DAC_SetHighFrequencyMode(DAC2, LL_DAC_HIGH_FREQ_MODE_ABOVE_160MHZ);
- 378              		.loc 1 92 3 is_stmt 1 view .LVU100
- 379              	.LBB92:
- 380              	.LBI92:
+ 462              		.loc 1 92 3 is_stmt 1 view .LVU121
+ 463              	.LBB124:
+ 464              	.LBI112:
  666:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
- 381              		.loc 2 666 22 view .LVU101
- 382              	.LBB93:
+ 465              		.loc 2 666 22 view .LVU122
+ 466              	.LBB114:
  668:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** }
- 383              		.loc 2 668 3 view .LVU102
- 384 0038 134C     		ldr	r4, .L10+12
- 385 003a E26B     		ldr	r2, [r4, #60]
- 386 003c 22F44042 		bic	r2, r2, #49152
- 387 0040 42F40042 		orr	r2, r2, #32768
- 388 0044 E263     		str	r2, [r4, #60]
- 389              	.LVL20:
- 668:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** }
- 390              		.loc 2 668 3 is_stmt 0 view .LVU103
- 391              	.LBE93:
- 392              	.LBE92:
+ 467              		.loc 2 668 3 view .LVU123
+ 468 003a E26B     		ldr	r2, [r4, #60]
+ 469              	.LBE114:
+ 470              	.LBE124:
   93:Src/dac.c     ****   LL_DAC_SetSignedFormat(DAC2, LL_DAC_CHANNEL_1, LL_DAC_SIGNED_FORMAT_DISABLE);
- 393              		.loc 1 93 3 is_stmt 1 view .LVU104
- 394              	.LBB94:
- 395              	.LBI94:
-1816:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
- 396              		.loc 2 1816 22 view .LVU105
- 397              	.LBB95:
-1818:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****              DAC_MCR_SINFORMAT1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK),
- 398              		.loc 2 1818 3 view .LVU106
- 399 0046 E26B     		ldr	r2, [r4, #60]
- 400 0048 22F40072 		bic	r2, r2, #512
- 401 004c E263     		str	r2, [r4, #60]
- 402              	.LVL21:
-1818:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****              DAC_MCR_SINFORMAT1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK),
- 403              		.loc 2 1818 3 is_stmt 0 view .LVU107
- 404              	.LBE95:
- 405              	.LBE94:
   94:Src/dac.c     ****   DAC_InitStruct.TriggerSource = LL_DAC_TRIG_SOFTWARE;
- 406              		.loc 1 94 3 is_stmt 1 view .LVU108
   95:Src/dac.c     ****   DAC_InitStruct.TriggerSource2 = LL_DAC_TRIG_SOFTWARE;
- 407              		.loc 1 95 3 view .LVU109
- 408              		.loc 1 95 33 is_stmt 0 view .LVU110
- 409 004e 0293     		str	r3, [sp, #8]
   96:Src/dac.c     ****   DAC_InitStruct.WaveAutoGeneration = LL_DAC_WAVE_AUTO_GENERATION_NONE;
- 410              		.loc 1 96 3 is_stmt 1 view .LVU111
- 411              		.loc 1 96 37 is_stmt 0 view .LVU112
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 91
-
-
- 412 0050 0393     		str	r3, [sp, #12]
   97:Src/dac.c     ****   DAC_InitStruct.OutputBuffer = LL_DAC_OUTPUT_BUFFER_DISABLE;
- 413              		.loc 1 97 3 is_stmt 1 view .LVU113
- 414              		.loc 1 97 31 is_stmt 0 view .LVU114
- 415 0052 0222     		movs	r2, #2
- 416 0054 0592     		str	r2, [sp, #20]
   98:Src/dac.c     ****   DAC_InitStruct.OutputConnection = LL_DAC_OUTPUT_CONNECT_INTERNAL;
- 417              		.loc 1 98 3 is_stmt 1 view .LVU115
- 418              		.loc 1 98 35 is_stmt 0 view .LVU116
- 419 0056 0122     		movs	r2, #1
- 420 0058 0692     		str	r2, [sp, #24]
   99:Src/dac.c     ****   DAC_InitStruct.OutputMode = LL_DAC_OUTPUT_MODE_NORMAL;
- 421              		.loc 1 99 3 is_stmt 1 view .LVU117
- 422              		.loc 1 99 29 is_stmt 0 view .LVU118
- 423 005a 0793     		str	r3, [sp, #28]
  100:Src/dac.c     ****   LL_DAC_Init(DAC2, LL_DAC_CHANNEL_1, &DAC_InitStruct);
- 424              		.loc 1 100 3 is_stmt 1 view .LVU119
- 425 005c 01AA     		add	r2, sp, #4
- 426 005e 0B49     		ldr	r1, .L10+16
- 427 0060 2046     		mov	r0, r4
- 428 0062 FFF7FEFF 		bl	LL_DAC_Init
- 429              	.LVL22:
+ 471              		.loc 1 100 3 is_stmt 0 view .LVU124
+ 472 003c 1349     		ldr	r1, .L14+16
+ 473              	.LBB125:
+ 474              	.LBB115:
+ 668:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** }
+ 475              		.loc 2 668 3 view .LVU125
+ 476 003e 22F44042 		bic	r2, r2, #49152
+ 477 0042 42F40042 		orr	r2, r2, #32768
+ 478 0046 E263     		str	r2, [r4, #60]
+ 479              	.LVL19:
+ 668:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** }
+ 480              		.loc 2 668 3 view .LVU126
+ 481              	.LBE115:
+ 482              	.LBE125:
+  93:Src/dac.c     ****   LL_DAC_SetSignedFormat(DAC2, LL_DAC_CHANNEL_1, LL_DAC_SIGNED_FORMAT_DISABLE);
+ 483              		.loc 1 93 3 is_stmt 1 view .LVU127
+ 484              	.LBB126:
+ 485              	.LBI126:
+1816:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
+ 486              		.loc 2 1816 22 view .LVU128
+ 487              	.LBB127:
+1818:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****              DAC_MCR_SINFORMAT1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK),
+ 488              		.loc 2 1818 3 view .LVU129
+ 489 0048 E06B     		ldr	r0, [r4, #60]
+ 490 004a 20F40070 		bic	r0, r0, #512
+ 491 004e E063     		str	r0, [r4, #60]
+ 492              	.LVL20:
+1818:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****              DAC_MCR_SINFORMAT1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK),
+ 493              		.loc 2 1818 3 is_stmt 0 view .LVU130
+ 494              	.LBE127:
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 93
+
+
+ 495              	.LBE126:
+  94:Src/dac.c     ****   DAC_InitStruct.TriggerSource2 = LL_DAC_TRIG_SOFTWARE;
+ 496              		.loc 1 94 3 is_stmt 1 view .LVU131
+  95:Src/dac.c     ****   DAC_InitStruct.WaveAutoGeneration = LL_DAC_WAVE_AUTO_GENERATION_NONE;
+ 497              		.loc 1 95 3 view .LVU132
+ 498              		.loc 1 100 3 is_stmt 0 view .LVU133
+ 499 0050 01AA     		add	r2, sp, #4
+  96:Src/dac.c     ****   DAC_InitStruct.OutputBuffer = LL_DAC_OUTPUT_BUFFER_DISABLE;
+ 500              		.loc 1 96 37 view .LVU134
+ 501 0052 CDE90233 		strd	r3, r3, [sp, #8]
+  97:Src/dac.c     ****   DAC_InitStruct.OutputConnection = LL_DAC_OUTPUT_CONNECT_INTERNAL;
+ 502              		.loc 1 97 3 is_stmt 1 view .LVU135
+  99:Src/dac.c     ****   LL_DAC_Init(DAC2, LL_DAC_CHANNEL_1, &DAC_InitStruct);
+ 503              		.loc 1 99 29 is_stmt 0 view .LVU136
+ 504 0056 0793     		str	r3, [sp, #28]
+ 505              		.loc 1 100 3 view .LVU137
+ 506 0058 2046     		mov	r0, r4
+  98:Src/dac.c     ****   DAC_InitStruct.OutputMode = LL_DAC_OUTPUT_MODE_NORMAL;
+ 507              		.loc 1 98 35 view .LVU138
+ 508 005a 0123     		movs	r3, #1
+  97:Src/dac.c     ****   DAC_InitStruct.OutputConnection = LL_DAC_OUTPUT_CONNECT_INTERNAL;
+ 509              		.loc 1 97 31 view .LVU139
+ 510 005c 0225     		movs	r5, #2
+  98:Src/dac.c     ****   DAC_InitStruct.OutputMode = LL_DAC_OUTPUT_MODE_NORMAL;
+ 511              		.loc 1 98 35 view .LVU140
+ 512 005e CDE90553 		strd	r5, r3, [sp, #20]
+  99:Src/dac.c     ****   LL_DAC_Init(DAC2, LL_DAC_CHANNEL_1, &DAC_InitStruct);
+ 513              		.loc 1 99 3 is_stmt 1 view .LVU141
+ 514              		.loc 1 100 3 view .LVU142
+ 515 0062 FFF7FEFF 		bl	LL_DAC_Init
+ 516              	.LVL21:
  101:Src/dac.c     ****   LL_DAC_DisableTrigger(DAC2, LL_DAC_CHANNEL_1);
- 430              		.loc 1 101 3 view .LVU120
- 431              	.LBB96:
- 432              	.LBI96:
+ 517              		.loc 1 101 3 view .LVU143
+ 518              	.LBB128:
+ 519              	.LBI128:
 2148:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
- 433              		.loc 2 2148 22 view .LVU121
- 434              	.LBB97:
+ 520              		.loc 2 2148 22 view .LVU144
+ 521              	.LBB129:
 2150:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****             DAC_CR_TEN1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK));
- 435              		.loc 2 2150 3 view .LVU122
- 436 0066 2368     		ldr	r3, [r4]
- 437 0068 23F00203 		bic	r3, r3, #2
- 438 006c 2360     		str	r3, [r4]
- 439              	.LVL23:
+ 522              		.loc 2 2150 3 view .LVU145
+ 523 0066 2368     		ldr	r3, [r4]
+ 524 0068 23F00203 		bic	r3, r3, #2
+ 525 006c 2360     		str	r3, [r4]
+ 526              	.LVL22:
 2150:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****             DAC_CR_TEN1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK));
- 440              		.loc 2 2150 3 is_stmt 0 view .LVU123
- 441              	.LBE97:
- 442              	.LBE96:
+ 527              		.loc 2 2150 3 is_stmt 0 view .LVU146
+ 528              	.LBE129:
+ 529              	.LBE128:
  102:Src/dac.c     ****   LL_DAC_DisableDMADoubleDataMode(DAC2, LL_DAC_CHANNEL_1);
- 443              		.loc 1 102 3 is_stmt 1 view .LVU124
- 444              	.LBB98:
- 445              	.LBI98:
+ 530              		.loc 1 102 3 is_stmt 1 view .LVU147
+ 531              	.LBB130:
+ 532              	.LBI130:
 1948:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
- 446              		.loc 2 1948 22 view .LVU125
- 447              	.LBB99:
+ 533              		.loc 2 1948 22 view .LVU148
+ 534              	.LBB131:
 1950:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****             DAC_MCR_DMADOUBLE1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK));
- 448              		.loc 2 1950 3 view .LVU126
- 449 006e E36B     		ldr	r3, [r4, #60]
- 450 0070 23F48073 		bic	r3, r3, #256
- 451 0074 E363     		str	r3, [r4, #60]
- 452              	.LVL24:
+ 535              		.loc 2 1950 3 view .LVU149
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 94
+
+
+ 536 006e E36B     		ldr	r3, [r4, #60]
+ 537 0070 23F48073 		bic	r3, r3, #256
+ 538 0074 E363     		str	r3, [r4, #60]
+ 539              	.LVL23:
 1950:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****             DAC_MCR_DMADOUBLE1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK));
- 453              		.loc 2 1950 3 is_stmt 0 view .LVU127
- 454              	.LBE99:
- 455              	.LBE98:
+ 540              		.loc 2 1950 3 is_stmt 0 view .LVU150
+ 541              	.LBE131:
+ 542              	.LBE130:
  103:Src/dac.c     ****   /* USER CODE BEGIN DAC2_Init 2 */
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 92
-
-
  104:Src/dac.c     ****   /* USER CODE END DAC2_Init 2 */
  105:Src/dac.c     **** }
- 456              		.loc 1 105 1 view .LVU128
- 457 0076 08B0     		add	sp, sp, #32
- 458              	.LCFI6:
- 459              		.cfi_def_cfa_offset 8
- 460              		@ sp needed
- 461 0078 10BD     		pop	{r4, pc}
- 462              	.L11:
- 463 007a 00BF     		.align	2
- 464              	.L10:
- 465 007c 00100240 		.word	1073876992
- 466 0080 00ED00E0 		.word	-536810240
- 467 0084 00E100E0 		.word	-536813312
- 468 0088 000C0050 		.word	1342180352
- 469 008c 01001102 		.word	34668545
- 470              		.cfi_endproc
- 471              	.LFE2126:
- 473              		.section	.text.MX_DAC3_Init,"ax",%progbits
- 474              		.align	1
- 475              		.global	MX_DAC3_Init
- 476              		.syntax unified
- 477              		.thumb
- 478              		.thumb_func
- 479              		.fpu fpv4-sp-d16
- 481              	MX_DAC3_Init:
- 482              	.LFB2127:
+ 543              		.loc 1 105 1 view .LVU151
+ 544 0076 09B0     		add	sp, sp, #36
+ 545              	.LCFI6:
+ 546              		.cfi_def_cfa_offset 12
+ 547              		@ sp needed
+ 548 0078 30BD     		pop	{r4, r5, pc}
+ 549              	.L15:
+ 550 007a 00BF     		.align	2
+ 551              	.L14:
+ 552 007c 00100240 		.word	1073876992
+ 553 0080 00E100E0 		.word	-536813312
+ 554 0084 00ED00E0 		.word	-536810240
+ 555 0088 000C0050 		.word	1342180352
+ 556 008c 01001102 		.word	34668545
+ 557              		.cfi_endproc
+ 558              	.LFE2128:
+ 560              		.section	.text.MX_DAC3_Init,"ax",%progbits
+ 561              		.align	1
+ 562              		.p2align 2,,3
+ 563              		.global	MX_DAC3_Init
+ 564              		.syntax unified
+ 565              		.thumb
+ 566              		.thumb_func
+ 567              		.fpu fpv4-sp-d16
+ 569              	MX_DAC3_Init:
+ 570              	.LFB2129:
  106:Src/dac.c     **** /* DAC3 init function */
  107:Src/dac.c     **** void MX_DAC3_Init(void)
  108:Src/dac.c     **** {
- 483              		.loc 1 108 1 is_stmt 1 view -0
- 484              		.cfi_startproc
- 485              		@ args = 0, pretend = 0, frame = 32
- 486              		@ frame_needed = 0, uses_anonymous_args = 0
- 487 0000 10B5     		push	{r4, lr}
- 488              	.LCFI7:
- 489              		.cfi_def_cfa_offset 8
- 490              		.cfi_offset 4, -8
- 491              		.cfi_offset 14, -4
- 492 0002 88B0     		sub	sp, sp, #32
- 493              	.LCFI8:
- 494              		.cfi_def_cfa_offset 40
+ 571              		.loc 1 108 1 is_stmt 1 view -0
+ 572              		.cfi_startproc
+ 573              		@ args = 0, pretend = 0, frame = 32
+ 574              		@ frame_needed = 0, uses_anonymous_args = 0
  109:Src/dac.c     **** 
  110:Src/dac.c     ****   /* USER CODE BEGIN DAC3_Init 0 */
  111:Src/dac.c     **** 
  112:Src/dac.c     ****   /* USER CODE END DAC3_Init 0 */
  113:Src/dac.c     **** 
  114:Src/dac.c     ****   LL_DAC_InitTypeDef DAC_InitStruct = {0};
- 495              		.loc 1 114 3 view .LVU130
- 496              		.loc 1 114 22 is_stmt 0 view .LVU131
- 497 0004 0023     		movs	r3, #0
- 498 0006 0193     		str	r3, [sp, #4]
- 499 0008 0293     		str	r3, [sp, #8]
- 500 000a 0393     		str	r3, [sp, #12]
- 501 000c 0493     		str	r3, [sp, #16]
- 502 000e 0593     		str	r3, [sp, #20]
- 503 0010 0693     		str	r3, [sp, #24]
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 93
+ 575              		.loc 1 114 3 view .LVU153
+ 108:Src/dac.c     **** 
+ 576              		.loc 1 108 1 is_stmt 0 view .LVU154
+ 577 0000 10B5     		push	{r4, lr}
+ 578              	.LCFI7:
+ 579              		.cfi_def_cfa_offset 8
+ 580              		.cfi_offset 4, -8
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 95
 
 
- 504 0012 0793     		str	r3, [sp, #28]
+ 581              		.cfi_offset 14, -4
+ 582              		.loc 1 114 22 view .LVU155
+ 583 0002 0023     		movs	r3, #0
+ 108:Src/dac.c     **** 
+ 584              		.loc 1 108 1 view .LVU156
+ 585 0004 88B0     		sub	sp, sp, #32
+ 586              	.LCFI8:
+ 587              		.cfi_def_cfa_offset 40
+ 588              		.loc 1 114 22 view .LVU157
+ 589 0006 CDE90533 		strd	r3, r3, [sp, #20]
+ 590 000a CDE90133 		strd	r3, r3, [sp, #4]
+ 591 000e CDE90333 		strd	r3, r3, [sp, #12]
+ 592              	.LBB132:
+ 593              	.LBB133:
+ 456:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   /* Delay after an RCC peripheral clock enabling */
+ 594              		.loc 3 456 3 view .LVU158
+ 595 0012 1D4A     		ldr	r2, .L18
+ 596              	.LBE133:
+ 597              	.LBE132:
+ 598              		.loc 1 114 22 view .LVU159
+ 599 0014 0793     		str	r3, [sp, #28]
  115:Src/dac.c     **** 
  116:Src/dac.c     ****   /* Peripheral clock enable */
  117:Src/dac.c     ****   LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_DAC3);
- 505              		.loc 1 117 3 is_stmt 1 view .LVU132
- 506              	.LVL25:
- 507              	.LBB100:
- 508              	.LBI100:
+ 600              		.loc 1 117 3 is_stmt 1 view .LVU160
+ 601              	.LVL24:
+ 602              	.LBB136:
+ 603              	.LBI132:
  453:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** {
- 509              		.loc 3 453 22 view .LVU133
- 510              	.LBB101:
+ 604              		.loc 3 453 22 view .LVU161
+ 605              	.LBB134:
  455:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   SET_BIT(RCC->AHB2ENR, Periphs);
- 511              		.loc 3 455 3 view .LVU134
+ 606              		.loc 3 455 3 view .LVU162
  456:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   /* Delay after an RCC peripheral clock enabling */
- 512              		.loc 3 456 3 view .LVU135
- 513 0014 03F18043 		add	r3, r3, #1073741824
- 514 0018 03F50433 		add	r3, r3, #135168
- 515 001c DA6C     		ldr	r2, [r3, #76]
- 516 001e 42F48022 		orr	r2, r2, #262144
- 517 0022 DA64     		str	r2, [r3, #76]
- 458:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   (void)tmpreg;
- 518              		.loc 3 458 3 view .LVU136
- 458:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   (void)tmpreg;
- 519              		.loc 3 458 12 is_stmt 0 view .LVU137
- 520 0024 DB6C     		ldr	r3, [r3, #76]
- 521 0026 03F48023 		and	r3, r3, #262144
- 458:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   (void)tmpreg;
- 522              		.loc 3 458 10 view .LVU138
- 523 002a 0093     		str	r3, [sp]
- 524              		.loc 3 459 3 is_stmt 1 view .LVU139
- 525 002c 009B     		ldr	r3, [sp]
- 526              	.LVL26:
- 527              		.loc 3 459 3 is_stmt 0 view .LVU140
- 528              	.LBE101:
- 529              	.LBE100:
+ 607              		.loc 3 456 3 view .LVU163
+ 608 0016 D36C     		ldr	r3, [r2, #76]
+ 609              	.LBE134:
+ 610              	.LBE136:
+ 611              	.LBB137:
+ 612              	.LBB138:
+ 668:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** }
+ 613              		.loc 2 668 3 is_stmt 0 view .LVU164
+ 614 0018 1C4C     		ldr	r4, .L18+4
+ 615              	.LBE138:
+ 616              	.LBE137:
  118:Src/dac.c     **** 
  119:Src/dac.c     ****   /* USER CODE BEGIN DAC3_Init 1 */
  120:Src/dac.c     **** 
@@ -5563,219 +5693,261 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 1
  122:Src/dac.c     ****   /** DAC channel OUT1 config
  123:Src/dac.c     ****   */
  124:Src/dac.c     ****   LL_DAC_SetHighFrequencyMode(DAC3, LL_DAC_HIGH_FREQ_MODE_ABOVE_160MHZ);
- 530              		.loc 1 124 3 is_stmt 1 view .LVU141
- 531              	.LBB102:
- 532              	.LBI102:
- 666:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
- 533              		.loc 2 666 22 view .LVU142
- 534              	.LBB103:
- 668:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** }
- 535              		.loc 2 668 3 view .LVU143
- 536 002e 174C     		ldr	r4, .L14
- 537 0030 E36B     		ldr	r3, [r4, #60]
- 538 0032 23F44043 		bic	r3, r3, #49152
- 539 0036 43F40043 		orr	r3, r3, #32768
- 540 003a E363     		str	r3, [r4, #60]
- 541              	.LVL27:
- 668:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 94
-
-
- 542              		.loc 2 668 3 is_stmt 0 view .LVU144
- 543              	.LBE103:
- 544              	.LBE102:
  125:Src/dac.c     ****   LL_DAC_SetSignedFormat(DAC3, LL_DAC_CHANNEL_1, LL_DAC_SIGNED_FORMAT_DISABLE);
- 545              		.loc 1 125 3 is_stmt 1 view .LVU145
- 546              	.LBB104:
- 547              	.LBI104:
-1816:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
- 548              		.loc 2 1816 22 view .LVU146
- 549              	.LBB105:
-1818:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****              DAC_MCR_SINFORMAT1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK),
- 550              		.loc 2 1818 3 view .LVU147
- 551 003c E36B     		ldr	r3, [r4, #60]
- 552 003e 23F40073 		bic	r3, r3, #512
- 553 0042 E363     		str	r3, [r4, #60]
- 554              	.LVL28:
-1818:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****              DAC_MCR_SINFORMAT1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK),
- 555              		.loc 2 1818 3 is_stmt 0 view .LVU148
- 556              	.LBE105:
- 557              	.LBE104:
  126:Src/dac.c     ****   DAC_InitStruct.TriggerSource = LL_DAC_TRIG_SOFTWARE;
- 558              		.loc 1 126 3 is_stmt 1 view .LVU149
  127:Src/dac.c     ****   DAC_InitStruct.TriggerSource2 = LL_DAC_TRIG_SOFTWARE;
- 559              		.loc 1 127 3 view .LVU150
  128:Src/dac.c     ****   DAC_InitStruct.WaveAutoGeneration = LL_DAC_WAVE_AUTO_GENERATION_NONE;
- 560              		.loc 1 128 3 view .LVU151
  129:Src/dac.c     ****   DAC_InitStruct.OutputBuffer = LL_DAC_OUTPUT_BUFFER_DISABLE;
- 561              		.loc 1 129 3 view .LVU152
- 562              		.loc 1 129 31 is_stmt 0 view .LVU153
- 563 0044 0223     		movs	r3, #2
- 564 0046 0593     		str	r3, [sp, #20]
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 96
+
+
  130:Src/dac.c     ****   DAC_InitStruct.OutputConnection = LL_DAC_OUTPUT_CONNECT_INTERNAL;
- 565              		.loc 1 130 3 is_stmt 1 view .LVU154
- 566              		.loc 1 130 35 is_stmt 0 view .LVU155
- 567 0048 0123     		movs	r3, #1
- 568 004a 0693     		str	r3, [sp, #24]
  131:Src/dac.c     ****   DAC_InitStruct.OutputMode = LL_DAC_OUTPUT_MODE_NORMAL;
- 569              		.loc 1 131 3 is_stmt 1 view .LVU156
  132:Src/dac.c     ****   LL_DAC_Init(DAC3, LL_DAC_CHANNEL_1, &DAC_InitStruct);
- 570              		.loc 1 132 3 view .LVU157
- 571 004c 01AA     		add	r2, sp, #4
- 572 004e 1049     		ldr	r1, .L14+4
- 573 0050 2046     		mov	r0, r4
- 574 0052 FFF7FEFF 		bl	LL_DAC_Init
- 575              	.LVL29:
+ 617              		.loc 1 132 3 view .LVU165
+ 618 001a 1D49     		ldr	r1, .L18+8
+ 619              	.LBB140:
+ 620              	.LBB135:
+ 456:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   /* Delay after an RCC peripheral clock enabling */
+ 621              		.loc 3 456 3 view .LVU166
+ 622 001c 43F48023 		orr	r3, r3, #262144
+ 623 0020 D364     		str	r3, [r2, #76]
+ 458:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   (void)tmpreg;
+ 624              		.loc 3 458 3 is_stmt 1 view .LVU167
+ 458:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   (void)tmpreg;
+ 625              		.loc 3 458 12 is_stmt 0 view .LVU168
+ 626 0022 D36C     		ldr	r3, [r2, #76]
+ 627 0024 03F48023 		and	r3, r3, #262144
+ 458:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   (void)tmpreg;
+ 628              		.loc 3 458 10 view .LVU169
+ 629 0028 0093     		str	r3, [sp]
+ 630              		.loc 3 459 3 is_stmt 1 view .LVU170
+ 631 002a 009B     		ldr	r3, [sp]
+ 632              	.LVL25:
+ 633              		.loc 3 459 3 is_stmt 0 view .LVU171
+ 634              	.LBE135:
+ 635              	.LBE140:
+ 124:Src/dac.c     ****   LL_DAC_SetSignedFormat(DAC3, LL_DAC_CHANNEL_1, LL_DAC_SIGNED_FORMAT_DISABLE);
+ 636              		.loc 1 124 3 is_stmt 1 view .LVU172
+ 637              	.LBB141:
+ 638              	.LBI137:
+ 666:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
+ 639              		.loc 2 666 22 view .LVU173
+ 640              	.LBB139:
+ 668:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** }
+ 641              		.loc 2 668 3 view .LVU174
+ 642 002c E36B     		ldr	r3, [r4, #60]
+ 643 002e 23F44043 		bic	r3, r3, #49152
+ 644 0032 43F40043 		orr	r3, r3, #32768
+ 645 0036 E363     		str	r3, [r4, #60]
+ 646              	.LVL26:
+ 668:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** }
+ 647              		.loc 2 668 3 is_stmt 0 view .LVU175
+ 648              	.LBE139:
+ 649              	.LBE141:
+ 125:Src/dac.c     ****   DAC_InitStruct.TriggerSource = LL_DAC_TRIG_SOFTWARE;
+ 650              		.loc 1 125 3 is_stmt 1 view .LVU176
+ 651              	.LBB142:
+ 652              	.LBI142:
+1816:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
+ 653              		.loc 2 1816 22 view .LVU177
+ 654              	.LBB143:
+1818:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****              DAC_MCR_SINFORMAT1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK),
+ 655              		.loc 2 1818 3 view .LVU178
+ 656 0038 E36B     		ldr	r3, [r4, #60]
+ 657 003a 23F40073 		bic	r3, r3, #512
+ 658 003e E363     		str	r3, [r4, #60]
+ 659              	.LVL27:
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 97
+
+
+1818:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****              DAC_MCR_SINFORMAT1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK),
+ 660              		.loc 2 1818 3 is_stmt 0 view .LVU179
+ 661              	.LBE143:
+ 662              	.LBE142:
+ 126:Src/dac.c     ****   DAC_InitStruct.TriggerSource2 = LL_DAC_TRIG_SOFTWARE;
+ 663              		.loc 1 126 3 is_stmt 1 view .LVU180
+ 127:Src/dac.c     ****   DAC_InitStruct.WaveAutoGeneration = LL_DAC_WAVE_AUTO_GENERATION_NONE;
+ 664              		.loc 1 127 3 view .LVU181
+ 128:Src/dac.c     ****   DAC_InitStruct.OutputBuffer = LL_DAC_OUTPUT_BUFFER_DISABLE;
+ 665              		.loc 1 128 3 view .LVU182
+ 129:Src/dac.c     ****   DAC_InitStruct.OutputConnection = LL_DAC_OUTPUT_CONNECT_INTERNAL;
+ 666              		.loc 1 129 3 view .LVU183
+ 130:Src/dac.c     ****   DAC_InitStruct.OutputMode = LL_DAC_OUTPUT_MODE_NORMAL;
+ 667              		.loc 1 130 35 is_stmt 0 view .LVU184
+ 668 0040 4FF0020C 		mov	ip, #2
+ 669              		.loc 1 132 3 view .LVU185
+ 670 0044 01AA     		add	r2, sp, #4
+ 130:Src/dac.c     ****   DAC_InitStruct.OutputMode = LL_DAC_OUTPUT_MODE_NORMAL;
+ 671              		.loc 1 130 35 view .LVU186
+ 672 0046 0123     		movs	r3, #1
+ 673              		.loc 1 132 3 view .LVU187
+ 674 0048 2046     		mov	r0, r4
+ 130:Src/dac.c     ****   DAC_InitStruct.OutputMode = LL_DAC_OUTPUT_MODE_NORMAL;
+ 675              		.loc 1 130 35 view .LVU188
+ 676 004a CDE905C3 		strd	ip, r3, [sp, #20]
+ 131:Src/dac.c     ****   LL_DAC_Init(DAC3, LL_DAC_CHANNEL_1, &DAC_InitStruct);
+ 677              		.loc 1 131 3 is_stmt 1 view .LVU189
+ 678              		.loc 1 132 3 view .LVU190
+ 679 004e FFF7FEFF 		bl	LL_DAC_Init
+ 680              	.LVL28:
  133:Src/dac.c     ****   LL_DAC_DisableTrigger(DAC3, LL_DAC_CHANNEL_1);
- 576              		.loc 1 133 3 view .LVU158
- 577              	.LBB106:
- 578              	.LBI106:
+ 681              		.loc 1 133 3 view .LVU191
+ 682              	.LBB144:
+ 683              	.LBI144:
 2148:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
- 579              		.loc 2 2148 22 view .LVU159
- 580              	.LBB107:
+ 684              		.loc 2 2148 22 view .LVU192
+ 685              	.LBB145:
 2150:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****             DAC_CR_TEN1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK));
- 581              		.loc 2 2150 3 view .LVU160
- 582 0056 2368     		ldr	r3, [r4]
- 583 0058 23F00203 		bic	r3, r3, #2
- 584 005c 2360     		str	r3, [r4]
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 95
-
-
- 585              	.LVL30:
-2150:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****             DAC_CR_TEN1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK));
- 586              		.loc 2 2150 3 is_stmt 0 view .LVU161
- 587              	.LBE107:
- 588              	.LBE106:
+ 686              		.loc 2 2150 3 view .LVU193
+ 687 0052 2368     		ldr	r3, [r4]
+ 688              	.LBE145:
+ 689              	.LBE144:
  134:Src/dac.c     ****   LL_DAC_DisableDMADoubleDataMode(DAC3, LL_DAC_CHANNEL_1);
- 589              		.loc 1 134 3 is_stmt 1 view .LVU162
- 590              	.LBB108:
- 591              	.LBI108:
-1948:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
- 592              		.loc 2 1948 22 view .LVU163
- 593              	.LBB109:
-1950:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****             DAC_MCR_DMADOUBLE1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK));
- 594              		.loc 2 1950 3 view .LVU164
- 595 005e E36B     		ldr	r3, [r4, #60]
- 596 0060 23F48073 		bic	r3, r3, #256
- 597 0064 E363     		str	r3, [r4, #60]
- 598              	.LVL31:
-1950:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****             DAC_MCR_DMADOUBLE1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK));
- 599              		.loc 2 1950 3 is_stmt 0 view .LVU165
- 600              	.LBE109:
- 601              	.LBE108:
  135:Src/dac.c     ****   /** DAC channel OUT2 config
  136:Src/dac.c     ****   */
  137:Src/dac.c     ****   LL_DAC_SetSignedFormat(DAC3, LL_DAC_CHANNEL_2, LL_DAC_SIGNED_FORMAT_DISABLE);
- 602              		.loc 1 137 3 is_stmt 1 view .LVU166
- 603              	.LBB110:
- 604              	.LBI110:
-1816:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
- 605              		.loc 2 1816 22 view .LVU167
- 606              	.LBB111:
-1818:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****              DAC_MCR_SINFORMAT1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK),
- 607              		.loc 2 1818 3 view .LVU168
- 608 0066 E36B     		ldr	r3, [r4, #60]
- 609 0068 23F00073 		bic	r3, r3, #33554432
- 610 006c E363     		str	r3, [r4, #60]
- 611              	.LVL32:
-1818:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****              DAC_MCR_SINFORMAT1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK),
- 612              		.loc 2 1818 3 is_stmt 0 view .LVU169
- 613              	.LBE111:
- 614              	.LBE110:
  138:Src/dac.c     ****   LL_DAC_Init(DAC3, LL_DAC_CHANNEL_2, &DAC_InitStruct);
- 615              		.loc 1 138 3 is_stmt 1 view .LVU170
- 616 006e 01AA     		add	r2, sp, #4
- 617 0070 0849     		ldr	r1, .L14+8
- 618 0072 2046     		mov	r0, r4
- 619 0074 FFF7FEFF 		bl	LL_DAC_Init
- 620              	.LVL33:
- 139:Src/dac.c     ****   LL_DAC_DisableTrigger(DAC3, LL_DAC_CHANNEL_2);
- 621              		.loc 1 139 3 view .LVU171
- 622              	.LBB112:
- 623              	.LBI112:
-2148:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
- 624              		.loc 2 2148 22 view .LVU172
- 625              	.LBB113:
+ 690              		.loc 1 138 3 is_stmt 0 view .LVU194
+ 691 0054 0F49     		ldr	r1, .L18+12
+ 692              	.LBB147:
+ 693              	.LBB146:
 2150:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****             DAC_CR_TEN1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK));
- 626              		.loc 2 2150 3 view .LVU173
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 96
+ 694              		.loc 2 2150 3 view .LVU195
+ 695 0056 23F00203 		bic	r3, r3, #2
+ 696 005a 2360     		str	r3, [r4]
+ 697              	.LVL29:
+2150:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****             DAC_CR_TEN1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK));
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 98
 
 
- 627 0078 2368     		ldr	r3, [r4]
- 628 007a 23F40033 		bic	r3, r3, #131072
- 629 007e 2360     		str	r3, [r4]
- 630              	.LVL34:
-2150:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****             DAC_CR_TEN1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK));
- 631              		.loc 2 2150 3 is_stmt 0 view .LVU174
- 632              	.LBE113:
- 633              	.LBE112:
- 140:Src/dac.c     ****   LL_DAC_DisableDMADoubleDataMode(DAC3, LL_DAC_CHANNEL_2);
- 634              		.loc 1 140 3 is_stmt 1 view .LVU175
- 635              	.LBB114:
- 636              	.LBI114:
+ 698              		.loc 2 2150 3 view .LVU196
+ 699              	.LBE146:
+ 700              	.LBE147:
+ 134:Src/dac.c     ****   LL_DAC_DisableDMADoubleDataMode(DAC3, LL_DAC_CHANNEL_1);
+ 701              		.loc 1 134 3 is_stmt 1 view .LVU197
+ 702              	.LBB148:
+ 703              	.LBI148:
 1948:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
- 637              		.loc 2 1948 22 view .LVU176
- 638              	.LBB115:
+ 704              		.loc 2 1948 22 view .LVU198
+ 705              	.LBB149:
 1950:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****             DAC_MCR_DMADOUBLE1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK));
- 639              		.loc 2 1950 3 view .LVU177
- 640 0080 E36B     		ldr	r3, [r4, #60]
- 641 0082 23F08073 		bic	r3, r3, #16777216
- 642 0086 E363     		str	r3, [r4, #60]
- 643              	.LVL35:
+ 706              		.loc 2 1950 3 view .LVU199
+ 707 005c E36B     		ldr	r3, [r4, #60]
+ 708 005e 23F48073 		bic	r3, r3, #256
+ 709 0062 E363     		str	r3, [r4, #60]
+ 710              	.LVL30:
 1950:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****             DAC_MCR_DMADOUBLE1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK));
- 644              		.loc 2 1950 3 is_stmt 0 view .LVU178
- 645              	.LBE115:
- 646              	.LBE114:
+ 711              		.loc 2 1950 3 is_stmt 0 view .LVU200
+ 712              	.LBE149:
+ 713              	.LBE148:
+ 137:Src/dac.c     ****   LL_DAC_Init(DAC3, LL_DAC_CHANNEL_2, &DAC_InitStruct);
+ 714              		.loc 1 137 3 is_stmt 1 view .LVU201
+ 715              	.LBB150:
+ 716              	.LBI150:
+1816:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
+ 717              		.loc 2 1816 22 view .LVU202
+ 718              	.LBB151:
+1818:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****              DAC_MCR_SINFORMAT1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK),
+ 719              		.loc 2 1818 3 view .LVU203
+ 720 0064 E36B     		ldr	r3, [r4, #60]
+ 721 0066 23F00073 		bic	r3, r3, #33554432
+ 722 006a E363     		str	r3, [r4, #60]
+ 723              	.LVL31:
+1818:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****              DAC_MCR_SINFORMAT1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK),
+ 724              		.loc 2 1818 3 is_stmt 0 view .LVU204
+ 725              	.LBE151:
+ 726              	.LBE150:
+ 727              		.loc 1 138 3 is_stmt 1 view .LVU205
+ 728 006c 01AA     		add	r2, sp, #4
+ 729 006e 2046     		mov	r0, r4
+ 730 0070 FFF7FEFF 		bl	LL_DAC_Init
+ 731              	.LVL32:
+ 139:Src/dac.c     ****   LL_DAC_DisableTrigger(DAC3, LL_DAC_CHANNEL_2);
+ 732              		.loc 1 139 3 view .LVU206
+ 733              	.LBB152:
+ 734              	.LBI152:
+2148:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
+ 735              		.loc 2 2148 22 view .LVU207
+ 736              	.LBB153:
+2150:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****             DAC_CR_TEN1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK));
+ 737              		.loc 2 2150 3 view .LVU208
+ 738 0074 2368     		ldr	r3, [r4]
+ 739 0076 23F40033 		bic	r3, r3, #131072
+ 740 007a 2360     		str	r3, [r4]
+ 741              	.LVL33:
+2150:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****             DAC_CR_TEN1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK));
+ 742              		.loc 2 2150 3 is_stmt 0 view .LVU209
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 99
+
+
+ 743              	.LBE153:
+ 744              	.LBE152:
+ 140:Src/dac.c     ****   LL_DAC_DisableDMADoubleDataMode(DAC3, LL_DAC_CHANNEL_2);
+ 745              		.loc 1 140 3 is_stmt 1 view .LVU210
+ 746              	.LBB154:
+ 747              	.LBI154:
+1948:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h **** {
+ 748              		.loc 2 1948 22 view .LVU211
+ 749              	.LBB155:
+1950:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****             DAC_MCR_DMADOUBLE1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK));
+ 750              		.loc 2 1950 3 view .LVU212
+ 751 007c E36B     		ldr	r3, [r4, #60]
+ 752 007e 23F08073 		bic	r3, r3, #16777216
+ 753 0082 E363     		str	r3, [r4, #60]
+ 754              	.LVL34:
+1950:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h ****             DAC_MCR_DMADOUBLE1 << (DAC_Channel & DAC_CR_CHX_BITOFFSET_MASK));
+ 755              		.loc 2 1950 3 is_stmt 0 view .LVU213
+ 756              	.LBE155:
+ 757              	.LBE154:
  141:Src/dac.c     ****   /* USER CODE BEGIN DAC3_Init 2 */
  142:Src/dac.c     **** 
  143:Src/dac.c     ****   /* USER CODE END DAC3_Init 2 */
  144:Src/dac.c     **** }
- 647              		.loc 1 144 1 view .LVU179
- 648 0088 08B0     		add	sp, sp, #32
- 649              	.LCFI9:
- 650              		.cfi_def_cfa_offset 8
- 651              		@ sp needed
- 652 008a 10BD     		pop	{r4, pc}
- 653              	.L15:
- 654              		.align	2
- 655              	.L14:
- 656 008c 00100050 		.word	1342181376
- 657 0090 01001102 		.word	34668545
- 658 0094 F2004235 		.word	893518066
- 659              		.cfi_endproc
- 660              	.LFE2127:
- 662              		.text
- 663              	.Letext0:
- 664              		.file 5 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h"
- 665              		.file 6 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\machine\\_default_types.h"
- 666              		.file 7 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\_stdint.h"
- 667              		.file 8 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h"
- 668              		.file 9 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_hrtim.h"
- 669              		.file 10 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dma.h"
- 670              		.file 11 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h"
- 671              		.file 12 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h"
- 672              		.file 13 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\lock.h"
- 673              		.file 14 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\_types.h"
- 674              		.file 15 "d:\\apps\\embedded_gcc\\arm_gcc\\lib\\gcc\\arm-none-eabi\\8.2.1\\include\\stddef.h"
- 675              		.file 16 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\reent.h"
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 97
-
-
- 676              		.file 17 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\math.h"
-ARM GAS  D:\apps\VSCode\data\tmp\ccaXWv4Q.s 			page 98
+ 758              		.loc 1 144 1 view .LVU214
+ 759 0084 08B0     		add	sp, sp, #32
+ 760              	.LCFI9:
+ 761              		.cfi_def_cfa_offset 8
+ 762              		@ sp needed
+ 763 0086 10BD     		pop	{r4, pc}
+ 764              	.L19:
+ 765              		.align	2
+ 766              	.L18:
+ 767 0088 00100240 		.word	1073876992
+ 768 008c 00100050 		.word	1342181376
+ 769 0090 01001102 		.word	34668545
+ 770 0094 F2004235 		.word	893518066
+ 771              		.cfi_endproc
+ 772              	.LFE2129:
+ 774              		.text
+ 775              	.Letext0:
+ 776              		.file 5 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h"
+ 777              		.file 6 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 778              		.file 7 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 779              		.file 8 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h"
+ 780              		.file 9 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_hrtim.h"
+ 781              		.file 10 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dma.h"
+ 782              		.file 11 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h"
+ 783              		.file 12 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h"
+ 784              		.file 13 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\lock.h"
+ 785              		.file 14 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\_types.h"
+ 786              		.file 15 "d:\\apps\\embedded_gcc\\arm_gcc\\lib\\gcc\\arm-none-eabi\\8.2.1\\include\\stddef.h"
+ 787              		.file 16 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\reent.h"
+ 788              		.file 17 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\math.h"
+ARM GAS  D:\apps\VSCode\data\tmp\cctouuyd.s 			page 100
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 dac.c
-D:\apps\VSCode\data\tmp\ccaXWv4Q.s:18     .text.dac_start:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccaXWv4Q.s:26     .text.dac_start:0000000000000000 dac_start
-D:\apps\VSCode\data\tmp\ccaXWv4Q.s:265    .text.dac_start:00000000000000b4 $d
-D:\apps\VSCode\data\tmp\ccaXWv4Q.s:275    .text.MX_DAC2_Init:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccaXWv4Q.s:282    .text.MX_DAC2_Init:0000000000000000 MX_DAC2_Init
-D:\apps\VSCode\data\tmp\ccaXWv4Q.s:465    .text.MX_DAC2_Init:000000000000007c $d
-D:\apps\VSCode\data\tmp\ccaXWv4Q.s:474    .text.MX_DAC3_Init:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccaXWv4Q.s:481    .text.MX_DAC3_Init:0000000000000000 MX_DAC3_Init
-D:\apps\VSCode\data\tmp\ccaXWv4Q.s:656    .text.MX_DAC3_Init:000000000000008c $d
+D:\apps\VSCode\data\tmp\cctouuyd.s:18     .text.dac_start:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cctouuyd.s:27     .text.dac_start:0000000000000000 dac_start
+D:\apps\VSCode\data\tmp\cctouuyd.s:309    .text.dac_start:00000000000000a8 $d
+D:\apps\VSCode\data\tmp\cctouuyd.s:320    .text.MX_DAC2_Init:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cctouuyd.s:328    .text.MX_DAC2_Init:0000000000000000 MX_DAC2_Init
+D:\apps\VSCode\data\tmp\cctouuyd.s:552    .text.MX_DAC2_Init:000000000000007c $d
+D:\apps\VSCode\data\tmp\cctouuyd.s:561    .text.MX_DAC3_Init:0000000000000000 $t
+D:\apps\VSCode\data\tmp\cctouuyd.s:569    .text.MX_DAC3_Init:0000000000000000 MX_DAC3_Init
+D:\apps\VSCode\data\tmp\cctouuyd.s:767    .text.MX_DAC3_Init:0000000000000088 $d
 
 UNDEFINED SYMBOLS
 SystemCoreClock

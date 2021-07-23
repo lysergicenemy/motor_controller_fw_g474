@@ -22,7 +22,9 @@ TARGET = bldc_foc_g474_firmware
 # debug build?
 DEBUG = 1
 # optimization
-OPT = -Og
+OPT = -O2
+#OPT += -fomit-frame-pointer
+OPT += -fno-strict-aliasing -finline-functions -fsingle-precision-constant
 
 
 #######################################

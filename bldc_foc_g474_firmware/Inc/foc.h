@@ -875,7 +875,7 @@ enum driveState_e
     RUN_CLOSEDLOOP_DQ,  // Control D/Q-axis currents in closed loop mode(angle for rotating
                         // reference frame arrived from sensor/observer)
     RUN_CLOSEDLOOP_SPD, // Control rotor speed in closed loop mode
-    PARAM_ID,           // Identify motor parameters
+    PARAM_ID_RL,        // Identify motor parameters
     FAULT               // Fault case
 };
 typedef volatile enum driveState_e driveState_t;
@@ -989,12 +989,16 @@ struct flags_s
 {
     uint8_t driveStateSwitched;
     uint8_t bldcStartup;
+    uint8_t fluxDetectedOpenLoop;
+    uint8_t fluxDetectedClosedLoop;
+    uint8_t directionDetect;
+    uint8_t sensorlessStartup;
 };
 typedef volatile struct flags_s flags_t;
 
 #define FLAGS_DEFAULTS \
     {                  \
-        0, 0,          \
+        0, 0, 0, 0, 0, \
     }
 
 /*********************************************************************
@@ -1017,18 +1021,18 @@ typedef volatile enum sensorType_e sensorType_t;
 
 struct config_s
 {
-    focMode_t mode;                 // Control real motor or simulate it
-    sensorType_t sensorType;        // Type of rotor position sensor
-    uint8_t sim;                    // 0 - control real motor, 1 - control motor model
-    decMode_t decMode;              // Axis decoupling mode
-    float baseCurrent, baseVoltage; // Base values in most cases = nominal values. Amps, Volts  !NOT USED
-    float baseFreq;                 // Base electrical frequency. Hz
-    float pwmFreq, smpFreq, tS;     // Inverter PWM frequency. In most cases samplingFreq = pwmFreq, tS - inv value (1/sampFreq)
-    float adcFullScaleCurrent;      // (Vadc/2) / R_CurrSense / OP_AMP_GAIN
-    float adcFullScaleVoltage;      // Vadc * K_VOLT_DIV
-    float deadTime, Rds_on;         // deadtime and Mosfet Rds(on). nS, Ohm
-    float Rs, Ld, Lq, Kv, pp;       // Motor phase resistance(Ohm), inductance(H) and pole pairs.
-    uint32_t adcPostScaler;         // Determines how many PWM periods used for 1 ADC conversion. It configured in Foc_Init()
+    focMode_t mode;                     // Control real motor or simulate it
+    sensorType_t sensorType;            // Type of rotor position sensor
+    uint8_t sim;                        // 0 - control real motor, 1 - control motor model
+    decMode_t decMode;                  // Axis decoupling mode
+    float currentMaxPos, currentMaxNeg; // Current limits (POS: ESC -> MOTOR) (NEG: ESC -> SUPPLY)
+    float speedMax;                     // Motor maximal electrical speed rad/s
+    float pwmFreq, smpFreq, tS;         // Inverter PWM frequency. In most cases samplingFreq = pwmFreq, tS - inv value (1/sampFreq)
+    float adcFullScaleCurrent;          // (Vadc/2) / R_CurrSense / OP_AMP_GAIN
+    float adcFullScaleVoltage;          // Vadc * K_VOLT_DIV
+    float deadTime, Rds_on;             // deadtime and Mosfet Rds(on). nS, Ohm
+    float Rs, Ld, Lq, Kv, pp;           // Motor phase resistance(Ohm), inductance(H) and pole pairs.
+    uint32_t adcPostScaler;             // Determines how many PWM periods used for 1 ADC conversion. It configured in Foc_Init()
 };
 typedef volatile struct config_s config_t;
 #define CONFIG_DEFAULTS    \
@@ -1053,7 +1057,7 @@ struct foc_s
     driveStateBLDC_t driveStateBLDC;   // drive state enum for BLDC mode
     paramIdState_t paramIdState;       // parameters identification state
     paramIdRunState_t paramIdRunState; // parameters identification state
-    flags_t flag;                      // Flags
+    flags_t flags;                     // Flags
     data_t data;                       // Internal variables
     svgen_t svgen;                     // space-vector generator data
     pidReg_t pi_id;                    // D-axis current controller data
@@ -1118,6 +1122,71 @@ typedef volatile struct foc_s foc_t;
             FILTER_DEFAULTS,     \
             CALC_DEFAULTS,       \
     }
+
+/** Open loop startup in sensorless mode
+ * add timeout
+ */
+static inline void Foc_update_openLoopStart(foc_t *p)
+{
+    static volatile int32_t ol_timeout, ol_dir;
+    volatile float iqRefShdw;
+
+    // detect low speed
+    if (fabsf(p->pll.SpeedPll) < (p->config.speedMax * 0.05f))
+    {
+        // detect run comand
+        if (fabsf(p->data.speedRef) > 0.f || fabsf(p->data.iqRef) > 0.f)
+        {
+            p->flags.sensorlessStartup = 0;
+        }
+    }
+    // openLoop startUp
+    if (p->flags.sensorlessStartup == 0)
+    {
+        ol_dir = (p->driveState == RUN_CLOSEDLOOP_SPD) ? SIGN(p->data.speedRef) : ol_dir; // direction if speed control mode
+        ol_dir = (p->driveState == RUN_CLOSEDLOOP_DQ) ? SIGN(p->data.iqRef) : ol_dir;     // direction if current control mode
+        iqRefShdw = p->config.currentMaxPos * 0.5f * (float)ol_dir;                       // startUp current 50% of max
+        p->data.freqRef = (p->config.speedMax * 0.1f) * ONE_BY_2PI * (float)ol_dir;       // startUp speed 10% of max speed
+        p->data.freqRmp = fabsf(p->data.freqRef * 5.f);                                   // 0.2s startUp time
+        ol_timeout++;
+        // Align process
+        if (ol_timeout < (uint32_t)(1.f * p->config.smpFreq))
+        {
+            p->data.angle = 0.f;
+            ramp_calc(&p->pi_iq.Ref, iqRefShdw, fabsf(iqRefShdw), p->config.tS);
+        }
+        // Ramp up speed
+        else
+        {
+            ramp_calc(&p->data.freq, p->data.freqRef, p->data.freqRmp, p->config.tS);
+            // Angle generator
+            p->data.angle += p->data.freqStep * p->data.freq;
+            if (p->data.angle < -MF_PI)
+                p->data.angle = p->data.angle + M_2PI;
+            else if (p->data.angle > MF_PI)
+                p->data.angle = p->data.angle - M_2PI;
+        }
+        // detect succesfull startup
+        if (fabsf(p->pll.SpeedPll) > (fabsf(p->data.freqRef) * M_2PI * 0.9f))
+        {
+            //ramp_calc(&p->data.idRef, 0.f, 2.f, p->config.tS);
+            p->flags.sensorlessStartup = 1;
+            p->pi_iq.Ref = (p->driveState == RUN_CLOSEDLOOP_DQ) ? p->data.iqRef : 0.f;
+            p->pi_spd.Ui = (p->driveState == RUN_CLOSEDLOOP_SPD) ? iqRefShdw : 0.f;
+            p->data.freq = 0.f;
+            p->data.freqRef = 0.f;
+            ol_timeout = 0;
+        }
+        // detect no succesfull startup
+        if (ol_timeout > (uint32_t)(2.f * p->config.smpFreq) && fabsf(p->pll.SpeedPll) < (fabsf(p->data.freqRef) * M_2PI * 0.9f))
+        {
+            // restart process
+            p->data.freq = 0.f;
+            p->pi_iq.Ref = 0.f;
+            ol_timeout = 0;
+        }
+    }
+}
 
 /** Run D/Q currents controller
  * PARK -> DECOUPLING -> PI -> DQ_Limiter -> IPARK
@@ -1220,6 +1289,7 @@ static inline void Foc_update_angle_speed(foc_t *p)
     }
     else if (p->config.sensorType == SENSORLESS)
     {
+        Foc_update_openLoopStart(p);
         // calc flux observer
         p->flux.i_alpha = p->data.isa;
         p->flux.i_beta = p->data.isb;
@@ -1228,7 +1298,7 @@ static inline void Foc_update_angle_speed(foc_t *p)
         p->calc.flux(&p->flux);
         // calc speed PLL
         p->pll.AngleRaw = p->flux.phase;
-        p->data.angle = p->flux.phase;
+        p->data.angle = (p->flags.sensorlessStartup == 1) ? p->flux.phase : p->data.angle;
         p->calc.pll(&p->pll);
     }
     else if (p->config.sensorType == HYBRYD)
@@ -1263,15 +1333,18 @@ static inline void Foc_update_angle_speed(foc_t *p)
 static inline void Foc_Init(foc_t *p)
 {
     /** Init timeBase values
-     *  20000 Hz is maximal FOC execution rate for any PWM freq
+     *  20000 Hz is maximal FOC execution rate for any PWM freq (TESTED: 170Mhz CORTEX-M4F)
+     *  If FOC ISR placed on CCMRAM and optimization level >= O2 it can be increased up to 40000 Hz
      *  Example: ADC postScaler = 1, means we calc FOC loop 1 times for 2 PWM cycles
      */
-    p->config.adcPostScaler = (uint32_t)(p->config.pwmFreq / 20001.f);
+    p->config.adcPostScaler = (uint32_t)(p->config.pwmFreq / 40001.f);
     p->config.smpFreq = p->config.pwmFreq / (float)(p->config.adcPostScaler + 1);
     p->config.tS = 1.f / p->config.smpFreq;
     p->data.freqStep = M_2PI * p->config.tS;
     /* Max duty cycle*/
     p->volt.dutyMax = 0.975f;
+    /* Set flags */
+    p->flags.sensorlessStartup = 1;
     /* Init ramps */
     p->data.freqRmp = 20.f;  // Hz/s
     p->data.iqRmp = 50.f;    // A/s
@@ -1302,7 +1375,7 @@ static inline void Foc_Init(foc_t *p)
     p->pi_iq.Kc = 1.f / p->pi_iq.Kp;
     /* Init speed PI controller */
     p->pi_spd.Kp = 0.025f;
-    p->pi_spd.Ki = 0.00005f;
+    p->pi_spd.Ki = 1.f * p->config.tS;
     p->pi_spd.Kd = 0.5f;
     p->pi_spd.OutMin = (p->config.mode == FOC) ? (-p->prot.ocpThld * 0.9f) : 0.f;
     p->pi_spd.OutMax = (p->config.mode == FOC) ? (p->prot.ocpThld * 0.9f) : 0.99f;

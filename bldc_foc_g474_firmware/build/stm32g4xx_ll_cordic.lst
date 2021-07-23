@@ -1,4 +1,4 @@
-ARM GAS  D:\apps\VSCode\data\tmp\ccM01LOF.s 			page 1
+ARM GAS  D:\apps\VSCode\data\tmp\ccTyQi7w.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -10,7 +10,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccM01LOF.s 			page 1
    7              		.eabi_attribute 24, 1
    8              		.eabi_attribute 25, 1
    9              		.eabi_attribute 26, 1
-  10              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 30, 2
   11              		.eabi_attribute 34, 1
   12              		.eabi_attribute 18, 4
   13              		.file	"stm32g4xx_ll_cordic.c"
@@ -19,16 +19,17 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccM01LOF.s 			page 1
   16              		.cfi_sections	.debug_frame
   17              		.section	.text.LL_CORDIC_DeInit,"ax",%progbits
   18              		.align	1
-  19              		.global	LL_CORDIC_DeInit
-  20              		.arch armv7e-m
-  21              		.syntax unified
-  22              		.thumb
-  23              		.thumb_func
-  24              		.fpu fpv4-sp-d16
-  26              	LL_CORDIC_DeInit:
-  27              	.LVL0:
-  28              	.LFB200:
-  29              		.file 1 "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c"
+  19              		.p2align 2,,3
+  20              		.global	LL_CORDIC_DeInit
+  21              		.arch armv7e-m
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  25              		.fpu fpv4-sp-d16
+  27              	LL_CORDIC_DeInit:
+  28              	.LVL0:
+  29              	.LFB200:
+  30              		.file 1 "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c"
    1:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c **** /**
    2:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c ****   ******************************************************************************
    3:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c ****   * @file    stm32g4xx_ll_cordic.c
@@ -57,10 +58,10 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccM01LOF.s 			page 1
   26:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c **** #else
   27:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c **** #define assert_param(expr) ((void)0U)
   28:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c **** #endif /* USE_FULL_ASSERT */
+ARM GAS  D:\apps\VSCode\data\tmp\ccTyQi7w.s 			page 2
+
+
   29:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccM01LOF.s 			page 2
-
-
   30:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c **** /** @addtogroup STM32G4xx_LL_Driver
   31:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c ****   * @{
   32:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c ****   */
@@ -95,54 +96,54 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccM01LOF.s 			page 1
   61:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c ****   */
   62:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c **** ErrorStatus LL_CORDIC_DeInit(CORDIC_TypeDef *CORDICx)
   63:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c **** {
-  30              		.loc 1 63 1 view -0
-  31              		.cfi_startproc
-  32              		@ args = 0, pretend = 0, frame = 0
-  33              		@ frame_needed = 0, uses_anonymous_args = 0
-  34              		@ link register save eliminated.
+  31              		.loc 1 63 1 view -0
+  32              		.cfi_startproc
+  33              		@ args = 0, pretend = 0, frame = 0
+  34              		@ frame_needed = 0, uses_anonymous_args = 0
+  35              		@ link register save eliminated.
   64:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c ****   ErrorStatus status = SUCCESS;
-  35              		.loc 1 64 3 view .LVU1
+  36              		.loc 1 64 3 view .LVU1
   65:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c **** 
   66:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c ****   /* Check the parameters */
   67:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c ****   assert_param(IS_CORDIC_ALL_INSTANCE(CORDICx));
-  36              		.loc 1 67 3 view .LVU2
+  37              		.loc 1 67 3 view .LVU2
   68:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c **** 
   69:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c ****   if (CORDICx == CORDIC)
-  37              		.loc 1 69 3 view .LVU3
-  38              		.loc 1 69 6 is_stmt 0 view .LVU4
-  39 0000 084B     		ldr	r3, .L5
-  40 0002 9842     		cmp	r0, r3
-  41 0004 01D0     		beq	.L4
+  38              		.loc 1 69 3 view .LVU3
+  39              		.loc 1 69 6 is_stmt 0 view .LVU4
+  40 0000 094B     		ldr	r3, .L6
+  41 0002 9842     		cmp	r0, r3
+  42 0004 01D0     		beq	.L5
   70:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c ****   {
   71:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c ****     /* Force CORDIC reset */
   72:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c ****     LL_AHB1_GRP1_ForceReset(LL_AHB1_GRP1_PERIPH_CORDIC);
   73:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c **** 
+ARM GAS  D:\apps\VSCode\data\tmp\ccTyQi7w.s 			page 3
+
+
   74:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c ****     /* Release CORDIC reset */
-ARM GAS  D:\apps\VSCode\data\tmp\ccM01LOF.s 			page 3
-
-
   75:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c ****     LL_AHB1_GRP1_ReleaseReset(LL_AHB1_GRP1_PERIPH_CORDIC);
   76:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c ****   }
   77:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c ****   else
   78:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c ****   {
   79:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c ****     status = ERROR;
-  42              		.loc 1 79 12 view .LVU5
-  43 0006 0120     		movs	r0, #1
-  44              	.LVL1:
+  43              		.loc 1 79 12 view .LVU5
+  44 0006 0120     		movs	r0, #1
+  45              	.LVL1:
   80:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c ****   }
   81:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c **** 
   82:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c ****   return (status);
-  45              		.loc 1 82 3 is_stmt 1 view .LVU6
+  46              		.loc 1 82 3 is_stmt 1 view .LVU6
   83:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c **** }
-  46              		.loc 1 83 1 is_stmt 0 view .LVU7
-  47 0008 7047     		bx	lr
-  48              	.LVL2:
-  49              	.L4:
+  47              		.loc 1 83 1 is_stmt 0 view .LVU7
+  48 0008 7047     		bx	lr
+  49              	.LVL2:
+  50              	.L5:
   72:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c **** 
-  50              		.loc 1 72 5 is_stmt 1 view .LVU8
-  51              	.LBB6:
-  52              	.LBI6:
-  53              		.file 2 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h"
+  51              		.loc 1 72 5 is_stmt 1 view .LVU8
+  52              	.LBB6:
+  53              	.LBI6:
+  54              		.file 2 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h"
    1:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
    2:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   ******************************************************************************
    3:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @file    stm32g4xx_ll_bus.h
@@ -177,10 +178,10 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccM01LOF.s 			page 1
   32:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *                        opensource.org/licenses/BSD-3-Clause
   33:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *
   34:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   ******************************************************************************
+ARM GAS  D:\apps\VSCode\data\tmp\ccTyQi7w.s 			page 4
+
+
   35:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\ccM01LOF.s 			page 4
-
-
   36:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
   37:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /* Define to prevent recursive inclusion -------------------------------------*/
   38:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #ifndef STM32G4xx_LL_BUS_H
@@ -237,10 +238,10 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccM01LOF.s 			page 1
   89:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
   90:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_ALL            0xFFFFFFFFU
   91:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_GPIOA          RCC_AHB2ENR_GPIOAEN
+ARM GAS  D:\apps\VSCode\data\tmp\ccTyQi7w.s 			page 5
+
+
   92:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_GPIOB          RCC_AHB2ENR_GPIOBEN
-ARM GAS  D:\apps\VSCode\data\tmp\ccM01LOF.s 			page 5
-
-
   93:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_GPIOC          RCC_AHB2ENR_GPIOCEN
   94:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_GPIOD          RCC_AHB2ENR_GPIODEN
   95:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_GPIOE          RCC_AHB2ENR_GPIOEEN
@@ -297,10 +298,10 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccM01LOF.s 			page 1
  146:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_CRS            RCC_APB1ENR1_CRSEN
  147:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_RTCAPB         RCC_APB1ENR1_RTCAPBEN
  148:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_WWDG           RCC_APB1ENR1_WWDGEN
+ARM GAS  D:\apps\VSCode\data\tmp\ccTyQi7w.s 			page 6
+
+
  149:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_SPI2           RCC_APB1ENR1_SPI2EN
-ARM GAS  D:\apps\VSCode\data\tmp\ccM01LOF.s 			page 6
-
-
  150:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_SPI3           RCC_APB1ENR1_SPI3EN
  151:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_USART2         RCC_APB1ENR1_USART2EN
  152:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_USART3         RCC_APB1ENR1_USART3EN
@@ -357,10 +358,10 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccM01LOF.s 			page 1
  203:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #endif /* TIM20 */
  204:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB2_GRP1_PERIPH_SAI1           RCC_APB2ENR_SAI1EN
  205:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #if defined(HRTIM1)
+ARM GAS  D:\apps\VSCode\data\tmp\ccTyQi7w.s 			page 7
+
+
  206:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB2_GRP1_PERIPH_HRTIM1         RCC_APB2ENR_HRTIM1EN
-ARM GAS  D:\apps\VSCode\data\tmp\ccM01LOF.s 			page 7
-
-
  207:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #endif /* HRTIM1 */
  208:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
  209:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @}
@@ -417,10 +418,10 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccM01LOF.s 			page 1
  260:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1ENR      FMACEN        LL_AHB1_GRP1_IsEnabledClock\n
  261:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1ENR      FLASHEN       LL_AHB1_GRP1_IsEnabledClock\n
  262:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1ENR      CRCEN         LL_AHB1_GRP1_IsEnabledClock
+ARM GAS  D:\apps\VSCode\data\tmp\ccTyQi7w.s 			page 8
+
+
  263:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
-ARM GAS  D:\apps\VSCode\data\tmp\ccM01LOF.s 			page 8
-
-
  264:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA1
  265:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA2
  266:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMAMUX1
@@ -477,21 +478,20 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccM01LOF.s 			page 1
  317:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_FMAC
  318:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_FLASH
  319:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CRC
+ARM GAS  D:\apps\VSCode\data\tmp\ccTyQi7w.s 			page 9
+
+
  320:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval None
-ARM GAS  D:\apps\VSCode\data\tmp\ccM01LOF.s 			page 9
-
-
  321:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
  322:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** __STATIC_INLINE void LL_AHB1_GRP1_ForceReset(uint32_t Periphs)
-  54              		.loc 2 322 22 view .LVU9
-  55              	.LBB7:
+  55              		.loc 2 322 22 view .LVU9
+  56              	.LBB7:
  323:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** {
  324:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   SET_BIT(RCC->AHB1RSTR, Periphs);
-  56              		.loc 2 324 3 view .LVU10
-  57 000a 03F58063 		add	r3, r3, #1024
-  58 000e 9A6A     		ldr	r2, [r3, #40]
-  59 0010 42F00802 		orr	r2, r2, #8
-  60 0014 9A62     		str	r2, [r3, #40]
+  57              		.loc 2 324 3 view .LVU10
+  58 000a D3F82824 		ldr	r2, [r3, #1064]
+  59 000e 42F00802 		orr	r2, r2, #8
+  60 0012 C3F82824 		str	r2, [r3, #1064]
   61              	.LVL3:
   62              		.loc 2 324 3 is_stmt 0 view .LVU11
   63              	.LBE7:
@@ -528,25 +528,25 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccM01LOF.s 			page 1
  348:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** {
  349:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   CLEAR_BIT(RCC->AHB1RSTR, Periphs);
   70              		.loc 2 349 3 view .LVU14
-  71 0016 9A6A     		ldr	r2, [r3, #40]
-  72 0018 22F00802 		bic	r2, r2, #8
-  73 001c 9A62     		str	r2, [r3, #40]
+  71 0016 D3F82824 		ldr	r2, [r3, #1064]
+  72 001a 22F00802 		bic	r2, r2, #8
+  73 001e C3F82824 		str	r2, [r3, #1064]
   74              	.LBE9:
   75              	.LBE8:
   64:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c **** 
   76              		.loc 1 64 15 is_stmt 0 view .LVU15
-  77 001e 0020     		movs	r0, #0
+  77 0022 0020     		movs	r0, #0
   78              	.LVL4:
   64:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccM01LOF.s 			page 10
+ARM GAS  D:\apps\VSCode\data\tmp\ccTyQi7w.s 			page 10
 
 
   79              		.loc 1 64 15 view .LVU16
-  80 0020 7047     		bx	lr
-  81              	.L6:
-  82 0022 00BF     		.align	2
-  83              	.L5:
-  84 0024 000C0240 		.word	1073875968
+  80 0024 7047     		bx	lr
+  81              	.L7:
+  82 0026 00BF     		.align	2
+  83              	.L6:
+  84 0028 000C0240 		.word	1073875968
   85              		.cfi_endproc
   86              	.LFE200:
   88              		.text
@@ -557,13 +557,13 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccM01LOF.s 			page 1
   93              		.file 6 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h"
   94              		.file 7 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h"
   95              		.file 8 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h"
-ARM GAS  D:\apps\VSCode\data\tmp\ccM01LOF.s 			page 11
+ARM GAS  D:\apps\VSCode\data\tmp\ccTyQi7w.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32g4xx_ll_cordic.c
-D:\apps\VSCode\data\tmp\ccM01LOF.s:18     .text.LL_CORDIC_DeInit:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccM01LOF.s:26     .text.LL_CORDIC_DeInit:0000000000000000 LL_CORDIC_DeInit
-D:\apps\VSCode\data\tmp\ccM01LOF.s:84     .text.LL_CORDIC_DeInit:0000000000000024 $d
+D:\apps\VSCode\data\tmp\ccTyQi7w.s:18     .text.LL_CORDIC_DeInit:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccTyQi7w.s:27     .text.LL_CORDIC_DeInit:0000000000000000 LL_CORDIC_DeInit
+D:\apps\VSCode\data\tmp\ccTyQi7w.s:84     .text.LL_CORDIC_DeInit:0000000000000028 $d
 
 NO UNDEFINED SYMBOLS

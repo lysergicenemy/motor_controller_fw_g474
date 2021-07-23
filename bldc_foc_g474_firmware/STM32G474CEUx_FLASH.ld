@@ -64,6 +64,7 @@ MEMORY
 RAM (xrw)      : ORIGIN = 0x20000000, LENGTH = 128K
 /*FLASH (rx)      : ORIGIN = 0x20010000, LENGTH = 64K*/
 FLASH (rx)      : ORIGIN = 0x8000000, LENGTH = 512K
+CCMRAM (xrw)  : ORIGIN = 0x10000000, LENGTH = 32K
 }
 
 /* Define output sections */
@@ -77,6 +78,20 @@ SECTIONS
     . = ALIGN(4);
   } >FLASH
 
+ /*--- New CCMRAM linker section definition ---*/
+  _siccmram = LOADADDR(.ccmram);
+  /* CCMRAM section */
+  .ccmram :
+  {
+    . = ALIGN(4);
+    _sccmram = .;        /* define a global symbols at ccmram start */
+    *(.ccmram)     
+    *(.ccmram*)
+    . = ALIGN(4);
+    _eccmram = .;        /* define a global symbols at ccmram end */
+  } >CCMRAM AT> FLASH
+  /*--- End of CCMRAM linker section definition ---*/
+  
   /* The program code and other data goes into FLASH */
   .text :
   {

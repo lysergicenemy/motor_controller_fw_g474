@@ -62,6 +62,7 @@ uint16_t utils_median_filter_uint16_run(uint16_t *buffer,
 
 // Return the sign of the argument. -1 if negative, 1 if zero or positive.
 #define SIGN(x) ((x < 0) ? -1 : 1)
+#define SIGNF(x) ((x < 0.f) ? -1.f : 1.f)
 
 #define SAT(A, Pos, Neg) (((A) > (Pos)) ? (Pos) : (((A) < (Neg)) ? (Neg) : (A)))
 #define ABS(x) ((x < 0.0f) ? x = -x : x)
@@ -110,6 +111,7 @@ uint16_t utils_median_filter_uint16_run(uint16_t *buffer,
 #define M_PI4 (MF_PI * 0.25f)
 #define M_PI3 (MF_PI / 3.0f)
 #define ONE_BY_PI (0.318309886f)
+#define ONE_BY_2PI (0.15915494f)
 
 #define _IQ(A) (int32_t)((A)*16777216.0f)
 #define _IQ31(A) (int32_t)((A)*2147483648.f)

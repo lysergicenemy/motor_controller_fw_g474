@@ -74,16 +74,16 @@ void flashLock(void)
 
 uint32_t flashReadData(uint32_t address)
 {
-  return *(__IO uint32_t *)address;
+  return (*(__IO uint32_t *)address);
 }
 
 void FLASH_PageErase(uint32_t Page, uint32_t Bank)
 {
   while (FLASH->SR & FLASH_SR_BSY)
     ;
-   SET_BIT(FLASH->SR, FLASH_SR_PROGERR);
-   SET_BIT(FLASH->SR, FLASH_SR_PGAERR);
-   SET_BIT(FLASH->SR, FLASH_SR_PGSERR);
+  SET_BIT(FLASH->SR, FLASH_SR_PROGERR);
+  SET_BIT(FLASH->SR, FLASH_SR_PGAERR);
+  SET_BIT(FLASH->SR, FLASH_SR_PGSERR);
   // SET_BIT(FLASH->ECCR, (FLASH_SR_OPTVERR & (FLASH_ECCR_ECCC | FLASH_ECCR_ECCD)));
   //CLEAR_BIT(FLASH->CR, FLASH_CR_BKER);
 
@@ -224,6 +224,27 @@ void FLASH_UpdateConfig(foc_t *p, hall_t *hp)
     p->driveState = STOP;
     p->data.flashUpdateFlag = 1;
     __enable_irq();
+
+
+    
+    // __disable_irq();
+    // /* Clear OPTVERR bit set on virgin samples */
+    // SET_BIT(FLASH->SR, FLASH_SR_OPTVERR);
+    // uint32_t pageAdr = FLASH_CONFIG_ADR_START; // Адрес страницы памяти
+    // uint32_t *source_adr = (void *)&p->config;
+    // flashUnlock();
+    // FLASH_PageErase(FLASH_CONFIG_PG_NMB, GetBank(pageAdr));
+    // for (uint8_t i = 0; i < (sizeof(p->config) / sizeof(uint32_t)); ++i)
+    // {
+    //   FLASH_Program_DoubleWord((uint32_t)(pageAdr + i * 8), *(source_adr + i));
+    // }
+    // flashLock();
+    // p->paramIdState = ID_ENTER;
+    // p->paramIdRunState = ID_RUN_HALL_FWD;
+    // hp->offsetState = 0;
+    // p->driveState = STOP;
+    // p->data.flashUpdateFlag = 1;
+    // __enable_irq();
   }
 }
 
@@ -263,6 +284,16 @@ void FLASH_LoadConfig(foc_t *p, hall_t *hp)
 
   u = flashReadData(Address + 8 * 10);
   p->config.Kv = *(float *)&u;
+
+
+  // uint32_t *source_adr = (uint32_t *)(FLASH_CONFIG_ADR_START);   // Определяем адрес, откуда будем читать
+	// uint32_t *dest_adr = (void *)&p->config;                                           // Определяем адрес, куда будем писать
+
+	// for (uint16_t i=0; i < (sizeof(p->config) / sizeof(uint32_t)); ++i) {                                  // В цикле производим чтение
+	// 	*(dest_adr + i) = *(__IO uint32_t*)(source_adr + i * 2);                    // Само чтение
+  //   uint32_t u = flashReadData(source_adr + i * 8);
+  //   *(dest_adr + i) = *(float *)&u;
+	//}
 }
 /* USER CODE END 1 */
 
