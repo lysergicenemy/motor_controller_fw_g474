@@ -16,7 +16,7 @@
 #define BLDC_PARAM_LSD 0.000047f //0.021033f  // H, stator inductance
 #define BLDC_PARAM_LSQ 0.000052f //0.021033f  // H, stator inductance
 #define BLDC_PARAM_PP 4.0f		 // rotor pole pairs
-#define BLDC_PARAM_J 0.000003f	 // kg*m^2, rotor inertia 83.67kv - large value if need fixed rotor
+#define BLDC_PARAM_J 999.000003f	 // kg*m^2, rotor inertia 83.67kv - large value if need fixed rotor
 #define BLDC_PARAM_FLUX 0.0051f	 //0.0843521f // Wb. lambda = 60 / (sqrt(3) * pi * kv * poles), m->E = 60. / 2. / M_PI / sqrt(3.) / (Kv * m->Zp);
 
 #define BLDC_PARAM_VDC 24.0f

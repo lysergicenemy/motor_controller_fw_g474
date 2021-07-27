@@ -114,31 +114,44 @@ typedef volatile struct pidReg_s pidReg_t;
             0, 0, 0, 0, \
     }
 
+/* Digital PI controller. Parallel form. Antiwindup: dynamic integrator clamp */
 static inline void PI_calc(pidReg_t *p)
 {
-    p->Err = p->Ref - p->Fdb; /* Compute the error */
-    p->Up = p->Kp * p->Err;   /* Compute the proportional output */
-    UTILS_NAN_ZERO(p->Ui);
-    p->Ui += p->Ki * p->Err;                               /* Compute the integral output */
-    p->Ud = p->Kd * (p->Err - p->Up1);                     /* Derivative term */
-    p->SatErr = p->OutMax - (fabsf(p->Up) + fabsf(p->Ud)); /* Inegrator saturation value */
-    p->Ui = SAT(p->Ui, p->SatErr, -p->SatErr);             /* Saturate the integral output */
-    p->OutPreSat = p->Up + p->Ui + p->Ud + p->Fdfwd;       /* Compute the pre-saturated output */
-    p->Out = SAT(p->OutPreSat, p->OutMax, p->OutMin);      /* Saturate the output */
+    p->Err = p->Ref - p->Fdb;                         /* Compute the error */
+    p->Up = p->Kp * p->Err;                           /* Compute the proportional output */
+    p->Ui += p->Ki * p->Err;                          /* Compute the integral output */
+    p->Ud = p->Kd * (p->Err - p->Up1);                /* Derivative term */
+    p->SatErr = p->OutMax - fabsf(p->Up + p->Ud);     /* Inegrator saturation value */
+    p->Ui = SAT(p->Ui, p->SatErr, -p->SatErr);        /* Saturate the integral output */
+    p->OutPreSat = p->Up + p->Ui + p->Ud + p->Fdfwd;  /* Compute the pre-saturated output */
+    p->Out = SAT(p->OutPreSat, p->OutMax, p->OutMin); /* Saturate the output */
     p->Up1 = p->Err;
 
     // p->Err = p->Ref - p->Fdb; /* Compute the error */
     // p->Up = p->Kp * p->Err;   /* Compute the proportional output */
     // p->Ui += p->Ki * p->Up + p->Kc * p->SatErr; /* Compute the integral output */
-    // UTILS_NAN_ZERO(p->Ui);
     // p->OutPreSat = p->Up + p->Ui;                     /* Compute the pre-saturated output */
     // p->Out = SAT(p->OutPreSat, p->OutMax, p->OutMin); /* Saturate the output */
     // p->SatErr = p->Out - p->OutPreSat;                /* Compute the saturate difference */
 }
+
+/* Digital PI controller. Series form. Antiwindup: back-calculation */
+static inline void PI_antiwindup_calc(pidReg_t *p)
+{
+    p->Err = p->Ref - p->Fdb;                         /* Compute the error */
+    p->Up = p->Kp * p->Err;                           /* Compute the proportional output */
+    p->Ui += p->Ki * p->Up + p->Kc * p->SatErr;       /* Compute the integral output */
+    p->Ud = p->Kd * (p->Err - p->Up1);                /* Derivative term */
+    p->OutPreSat = p->Up + p->Ui + p->Ud + p->Fdfwd;  /* Compute the pre-saturated output */
+    p->Out = SAT(p->OutPreSat, p->OutMax, p->OutMin); /* Saturate the output */
+    p->SatErr = p->Out - p->OutPreSat;
+    p->Up1 = p->Err;
+}
+
 /*********************************************************************
- * Phase voltages calculation
- * Input: DcBusVolt, MfuncV1-3
- * Output: VphaseA-C
+ * @brief Phase voltages calculation
+ * @input: DcBusVolt, MfuncV1-3
+ * @output: VphaseA-C
  ****************************************************************** */
 struct voltCalc_s
 {
@@ -191,10 +204,10 @@ static inline void Volt_calc(voltCalc_t *p)
 }
 
 /*********************************************************************
- * Flux observer
- * Input: alfa-beta currents and voltages
- * Parameters: fluxLeakage, gamma
- * Output: phase
+ * @brief Flux observer
+ * @input: alfa-beta currents and voltages
+ * @parameters: fluxLeakage, gamma
+ * @output: phase
  ****************************************************************** */
 struct fluxObs_s
 {
@@ -218,6 +231,7 @@ typedef volatile struct fluxObs_s fluxObs_t;
         0, 0, 0, 0, 0, 0, 0,        \
             0, 0, 0, 0, 0, 0, 0, 0, \
     }
+
 // See http://cas.ensmp.fr/~praly/Telechargement/Journaux/2010-IEEE_TPEL-Lee-Hong-Nam-Ortega-Praly-Astolfi.pdf
 static inline void FluxObs_calc(fluxObs_t *p)
 {
@@ -244,16 +258,16 @@ static inline void FluxObs_calc(fluxObs_t *p)
     //p->x1_prev = p->x2;
 }
 /*********************************************************************
- * Sliding mode rotor position observer
+ * @brief Sliding mode rotor position observer
  * with zero phase delay filter for estimated BEMF signal:
  * Current Error -> SMC -> LPF(Tf) -> HPF(Tf)
  * Tf dynamically adjustment depends on field frequency for provide filter f_cut = f_signal
- * Input: Valpha, Vbeta, Ialpha, Ibeta - phase voltages and currents in A-B reference frame
- * Output: Theta - estimated angle
+ * @input: Valpha, Vbeta, Ialpha, Ibeta - phase voltages and currents in A-B reference frame
+ * @output: Theta - estimated angle
  ****************************************************************** */
 struct smopos_s
 {
-    float Valpha;           // Input: Stationary alfa-axis stator voltage
+    float Valpha;           // input: Stationary alfa-axis stator voltage
     float Ealpha;           // Variable: Stationary alfa-axis back EMF
     float Zalpha;           // Output: Stationary alfa-axis sliding control
     float Gsmopos;          // Parameter: Motor dependent control gain
@@ -870,12 +884,11 @@ enum driveState_e
 {
     STOP,               // Motor stoped
     RUN_OPENLOOP_VHZ,   // Control frequency and magnitude of rotating voltage vector
-    PARAM_ID_RUN,       // Motor stoped
+    PARAM_ID_RUN,       // Identify motor running dependet parameters (Hall table, magnets flux, inductance anysatropy map)
     RUN_OPENLOOP_IHZ,   // Control frequency and magnitude of rotating current vector
-    RUN_CLOSEDLOOP_DQ,  // Control D/Q-axis currents in closed loop mode(angle for rotating
-                        // reference frame arrived from sensor/observer)
-    RUN_CLOSEDLOOP_SPD, // Control rotor speed in closed loop mode
-    PARAM_ID_RL,        // Identify motor parameters
+    RUN_CLOSEDLOOP_DQ,  // Control D/Q-axis currents in closed loop mode
+    RUN_CLOSEDLOOP_SPD, // Control motor speed in closed loop mode
+    PARAM_ID_RL,        // Identify motor parameters (Rs, Ld, Lq)
     FAULT               // Fault case
 };
 typedef volatile enum driveState_e driveState_t;
@@ -923,8 +936,9 @@ struct data_s
     float idRef, iqRef, iqRmp;                     // Input: reference D/Q-axis currents, id ramp rate (A/s)
     float speedRef, thetaRef, spdRmp, speedRpm;    // Input: reference speed, angle, speed ramp, measured speed in RPM
     float iPhaseA, iPhaseB, iPhaseC;               // Input: ABC currents (A)
-    float vPhaseA, vPhaseB, vPhaseC;               // Input: ABC voltages (V)
-    float vAlpha, vBeta;                           // Input: ABC voltages (V)
+    float vPhaseA, vPhaseB, vPhaseC;               // Input: measured phase voltages (V)
+    float vAlpha, vBeta;                           // Input: measured alpha-beta components of phase voltages (V)
+    float vd, vq;                                  // Input: measured D/Q components of phase voltages (V)
     float iAvg, iAvgFiltered, iStrtp, hwCurrLim;   // Input: Total current (A)
     float isa, isb, isd, isq;                      // Variable: D/Q-axis currents (A)
     float udDec, uqDec;                            // Variable: D/Q-axis voltages decoupling components
@@ -957,6 +971,7 @@ typedef volatile struct data_s data_t;
             0, 0, 0, 0,    \
             0, 0, 0,       \
             0, 0, 0,       \
+            0, 0,          \
             0, 0,          \
             0, 0, 0, 0,    \
             0, 0, 0, 0,    \
@@ -993,12 +1008,14 @@ struct flags_s
     uint8_t fluxDetectedClosedLoop;
     uint8_t directionDetect;
     uint8_t sensorlessStartup;
+    uint8_t pwmInputEn;
+    uint8_t inductanceRatio;
 };
 typedef volatile struct flags_s flags_t;
 
-#define FLAGS_DEFAULTS \
-    {                  \
-        0, 0, 0, 0, 0, \
+#define FLAGS_DEFAULTS       \
+    {                        \
+        0, 0, 0, 0, 0, 0, 0, \
     }
 
 /*********************************************************************
@@ -1122,6 +1139,18 @@ typedef volatile struct foc_s foc_t;
             FILTER_DEFAULTS,     \
             CALC_DEFAULTS,       \
     }
+
+/** Angle generator
+ */
+static inline void angle_gen(volatile float *angle, float freq, float Ts)
+{
+    float delta = M_2PI * Ts;
+    *angle += delta * freq;
+    if (*angle < -MF_PI)
+        *angle = *angle + M_2PI;
+    else if (*angle > MF_PI)
+        *angle = *angle - M_2PI;
+}
 
 /** Open loop startup in sensorless mode
  * add timeout
@@ -1289,7 +1318,8 @@ static inline void Foc_update_angle_speed(foc_t *p)
     }
     else if (p->config.sensorType == SENSORLESS)
     {
-        Foc_update_openLoopStart(p);
+        //Foc_update_openLoopStart(p);
+        p->flags.sensorlessStartup = 1;
         // calc flux observer
         p->flux.i_alpha = p->data.isa;
         p->flux.i_beta = p->data.isb;
@@ -1334,8 +1364,9 @@ static inline void Foc_Init(foc_t *p)
 {
     /** Init timeBase values
      *  20000 Hz is maximal FOC execution rate for any PWM freq (TESTED: 170Mhz CORTEX-M4F)
-     *  If FOC ISR placed on CCMRAM and optimization level >= O2 it can be increased up to 40000 Hz
-     *  Example: ADC postScaler = 1, means we calc FOC loop 1 times for 2 PWM cycles
+     *  If FOC ISR placed on CCMRAM, disable virtual motor and optimization level >= O2 it can be increased up to 40000 Hz
+     *  Example: ADC postScaler = 0, means we calc FOC loop 1 times for 1 PWM cycles
+     *           ADC postScaler = 1, means we calc FOC loop 1 times for 2 PWM cycles
      */
     p->config.adcPostScaler = (uint32_t)(p->config.pwmFreq / 40001.f);
     p->config.smpFreq = p->config.pwmFreq / (float)(p->config.adcPostScaler + 1);
@@ -1349,42 +1380,31 @@ static inline void Foc_Init(foc_t *p)
     p->data.freqRmp = 20.f;  // Hz/s
     p->data.iqRmp = 50.f;    // A/s
     p->data.spdRmp = 5000.f; // (rad/s)/s
-    /* Init D-axis current PI controller */
-    p->pi_id.Kp = 0.125f;
-    p->pi_id.Ki = 0.025f;
-    p->pi_id.Kc = 0.5f;
-    p->pi_id.Kd = 0.f;
-    p->pi_id.OutMin = (p->config.mode == FOC) ? -p->config.adcFullScaleVoltage : 0; // -1.f
-    p->pi_id.OutMax = (p->config.mode == FOC) ? p->config.adcFullScaleVoltage : 1.f;
-    /* Init Q-axis current PI controller */
-    p->pi_iq.Kp = 0.125f;
-    p->pi_iq.Ki = 0.025f;
-    p->pi_iq.Kc = 0.5f;
-    p->pi_iq.Kd = 0.f;
-    p->pi_iq.OutMin = (p->config.mode == FOC) ? -p->config.adcFullScaleVoltage : 0; // -1.f
-    p->pi_iq.OutMax = (p->config.mode == FOC) ? p->config.adcFullScaleVoltage : 1.f;
     /** Automatic calc PI gains depends on motor RL parameters
      *  wcc is cutoff frequency of controller
-     *  RULE: if current sampling 1 times for 1 PWM period use wcc 5%. Also try from 0.025 to 0.1
+     *  RULE: if current sampling 1 times for 1 PWM period
+     *  use wcc 5% of sampling frequency. Also try from 0.025 to 0.1
      */
-    float wcc = (0.05f * (1.f / p->config.tS)) * M_2PI;
+    float wcc = (0.05f * p->config.smpFreq) * M_2PI;
     p->pi_id.Kp = p->pi_iq.Kp = (p->config.Ld * wcc);
     p->pi_id.Ki = p->pi_iq.Ki = p->config.Rs * wcc * p->config.tS;
-    //p->pi_id.Ki = p->pi_iq.Ki = (p->config.Rs * p->config.tS * p->pi_id.Kp) / p->config.Ld;
-    p->pi_id.Kc = 1.f / p->pi_id.Kp;
-    p->pi_iq.Kc = 1.f / p->pi_iq.Kp;
+    p->pi_id.Kc = p->pi_id.Ki / p->pi_id.Kp;
+    p->pi_iq.Kc = p->pi_iq.Ki / p->pi_iq.Kp;
+    p->pi_id.OutMin = p->pi_iq.OutMin = (p->config.mode == FOC) ? -p->config.adcFullScaleVoltage : 0;
+    p->pi_id.OutMax = p->pi_iq.OutMax = (p->config.mode == FOC) ? p->config.adcFullScaleVoltage : 1.f;
     /* Init speed PI controller */
     p->pi_spd.Kp = 0.025f;
     p->pi_spd.Ki = 1.f * p->config.tS;
     p->pi_spd.Kd = 0.5f;
-    p->pi_spd.OutMin = (p->config.mode == FOC) ? (-p->prot.ocpThld * 0.9f) : 0.f;
-    p->pi_spd.OutMax = (p->config.mode == FOC) ? (p->prot.ocpThld * 0.9f) : 0.99f;
+    p->config.currentMaxNeg = (p->config.currentMaxNeg > 0.f) ? -p->config.currentMaxNeg : p->config.currentMaxNeg;
+    p->pi_spd.OutMin = (p->config.mode == FOC) ? p->config.currentMaxNeg : 0.f;
+    p->pi_spd.OutMax = (p->config.mode == FOC) ? p->config.currentMaxPos : 0.99f;
     /* Init SMOPOS constants */
     p->smo.Fsmopos = expf((-p->config.Rs / p->config.Ld) * p->config.tS);
     p->smo.Gsmopos = (1.f / p->config.Rs) * (1.f - p->smo.Fsmopos);
     p->smo.Kslide = 0.53f;
     /* Init Flux observer constants */
-    p->flux.R = p->config.Rs * 1.5f;
+    p->flux.R = p->config.Rs * 1.5f; // div 2 untill fixed voltage measurment scale
     p->flux.L = p->config.Ld * 1.5f;
     p->flux.fluxLeakage = 60.f / (SQRT3 * M_2PI * p->config.Kv * p->config.pp);
     p->flux.dt = p->config.tS;
@@ -1411,13 +1431,13 @@ static inline void Foc_Init(foc_t *p)
      *   */
     if (p->config.mode == BLDC)
     {
-        p->cmtn.lpf_bemfA.T = p->config.tS / ((1.f / (100.f * M_2PI)) + p->config.tS);
+        p->cmtn.lpf_bemfA.T = p->config.tS / ((0.5f * p->config.speedMax) + p->config.tS);
         p->cmtn.lpf_bemfB.T = p->cmtn.lpf_bemfA.T;
         p->cmtn.lpf_bemfC.T = p->cmtn.lpf_bemfA.T;
     }
     if (p->config.mode == FOC)
     {
-        p->cmtn.lpf_bemfA.T = p->config.tS / ((1.f / (500.f * M_2PI)) + p->config.tS);
+        p->cmtn.lpf_bemfA.T = p->config.tS / ((1.f / (1.5f * p->config.speedMax)) + p->config.tS);
         p->cmtn.lpf_bemfB.T = p->cmtn.lpf_bemfA.T;
         p->cmtn.lpf_bemfC.T = p->cmtn.lpf_bemfA.T;
     }
@@ -1436,7 +1456,7 @@ static inline void Foc_Init(foc_t *p)
     p->lpf_offsetVb.T = p->config.tS / (0.2f + p->config.tS); // time constant in descrete time dominian for Q-axis current LPF
     p->lpf_offsetVc.T = p->config.tS / (0.2f + p->config.tS); // time constant in descrete time dominian for Q-axis current LPF
     // Filters data init which execute in 1ms ISR
-    float Ts_1ms = 0.001f;
+    float Ts_1ms = 1.f / 1000.f;
     p->lpf_Iavg.T = Ts_1ms / (0.02f + Ts_1ms); // time constant in descrete time dominian for total current LPF
     p->lpf_Pem.T = Ts_1ms / (0.02f + Ts_1ms);  // time constant in descrete time dominian for total current LPF
     p->lpf_NTC.T = Ts_1ms / (0.01f + Ts_1ms);  // time constant in descrete time dominian for total current LPF

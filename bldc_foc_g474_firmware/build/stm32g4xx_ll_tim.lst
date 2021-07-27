@@ -1,4 +1,4 @@
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
   26:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** #include "stm32_assert.h"
   27:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** #else
   28:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** #define assert_param(expr) ((void)0U)
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 2
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 2
 
 
   29:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** #endif /* USE_FULL_ASSERT */
@@ -118,7 +118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
   83:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
   84:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** #define IS_LL_TIM_ACTIVEINPUT(__VALUE__) (((__VALUE__) == LL_TIM_ACTIVEINPUT_DIRECTTI) \
   85:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****                                           || ((__VALUE__) == LL_TIM_ACTIVEINPUT_INDIRECTTI) \
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 3
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 3
 
 
   86:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****                                           || ((__VALUE__) == LL_TIM_ACTIVEINPUT_TRC))
@@ -178,7 +178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  140:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
  141:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** #define IS_LL_TIM_BREAK_POLARITY(__VALUE__) (((__VALUE__) == LL_TIM_BREAK_POLARITY_LOW) \
  142:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****                                              || ((__VALUE__) == LL_TIM_BREAK_POLARITY_HIGH))
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 4
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 4
 
 
  143:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
@@ -238,7 +238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  197:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** /* Private function prototypes -----------------------------------------------*/
  198:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** /** @defgroup TIM_LL_Private_Functions TIM Private Functions
  199:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   * @{
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 5
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 5
 
 
  200:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   */
@@ -298,7 +298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  242:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   }
  243:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   else if (TIMx == TIM2)
   43              		.loc 1 243 8 is_stmt 1 view .LVU5
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 6
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 6
 
 
   44              		.loc 1 243 11 is_stmt 0 view .LVU6
@@ -358,7 +358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
   71 0028 64D0     		beq	.L22
  271:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   {
  272:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****     LL_APB1_GRP1_ForceReset(LL_APB1_GRP1_PERIPH_TIM7);
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 7
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 7
 
 
  273:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****     LL_APB1_GRP1_ReleaseReset(LL_APB1_GRP1_PERIPH_TIM7);
@@ -418,7 +418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  302:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   else
  303:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   {
  304:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****     result = ERROR;
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 8
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 8
 
 
   97              		.loc 1 304 12 view .LVU27
@@ -478,7 +478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
   38:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #ifndef STM32G4xx_LL_BUS_H
   39:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define STM32G4xx_LL_BUS_H
   40:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 9
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 9
 
 
   41:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #ifdef __cplusplus
@@ -538,7 +538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
   95:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_GPIOE          RCC_AHB2ENR_GPIOEEN
   96:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_GPIOF          RCC_AHB2ENR_GPIOFEN
   97:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_GPIOG          RCC_AHB2ENR_GPIOGEN
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 10
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 10
 
 
   98:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_CCM            RCC_AHB2SMENR_CCMSMEN
@@ -598,7 +598,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  152:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_USART3         RCC_APB1ENR1_USART3EN
  153:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #if defined(UART4)
  154:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_UART4          RCC_APB1ENR1_UART4EN
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 11
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 11
 
 
  155:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #endif /* UART4 */
@@ -658,7 +658,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  209:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @}
  210:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
  211:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 12
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 12
 
 
  212:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
@@ -718,7 +718,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  266:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMAMUX1
  267:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CORDIC
  268:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_FMAC
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 13
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 13
 
 
  269:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_FLASH
@@ -778,7 +778,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  323:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** {
  324:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   SET_BIT(RCC->AHB1RSTR, Periphs);
  325:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 14
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 14
 
 
  326:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
@@ -838,7 +838,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  380:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
  381:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
  382:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 15
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 15
 
 
  383:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @brief  Disable AHB1 peripheral clocks in Sleep and Stop modes
@@ -898,7 +898,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  437:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOD
  438:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOE
  439:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOF
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 16
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 16
 
 
  440:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOG
@@ -958,7 +958,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  494:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_RNG
  495:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *
  496:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         (*) value not defined in all devices.
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 17
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 17
 
 
  497:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval State of Periphs (1 or 0).
@@ -1018,7 +1018,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  551:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2RSTR      GPIODRST       LL_AHB2_GRP1_ForceReset\n
  552:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2RSTR      GPIOERST       LL_AHB2_GRP1_ForceReset\n
  553:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2RSTR      GPIOFRST       LL_AHB2_GRP1_ForceReset\n
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 18
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 18
 
 
  554:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2RSTR      GPIOGRST       LL_AHB2_GRP1_ForceReset\n
@@ -1078,7 +1078,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  608:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOC
  609:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOD
  610:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOE
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 19
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 19
 
 
  611:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOF
@@ -1138,7 +1138,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  665:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_AES (*)
  666:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_RNG
  667:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 20
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 20
 
 
  668:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         (*) value not defined in all devices.
@@ -1198,7 +1198,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  722:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** {
  723:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   CLEAR_BIT(RCC->AHB2SMENR, Periphs);
  724:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 21
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 21
 
 
  725:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
@@ -1258,7 +1258,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  779:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval None
  780:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
  781:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** __STATIC_INLINE void LL_AHB3_GRP1_DisableClock(uint32_t Periphs)
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 22
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 22
 
 
  782:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** {
@@ -1318,7 +1318,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  836:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   tmpreg = READ_BIT(RCC->AHB3SMENR, Periphs);
  837:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   (void)tmpreg;
  838:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 23
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 23
 
 
  839:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
@@ -1378,7 +1378,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  893:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_TIM6
  894:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_TIM7
  895:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_CRS
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 24
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 24
 
 
  896:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_RTCAPB
@@ -1438,7 +1438,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  950:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     TIM4EN        LL_APB1_GRP1_IsEnabledClock\n
  951:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     TIM5EN        LL_APB1_GRP1_IsEnabledClock\n
  952:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     TIM6EN        LL_APB1_GRP1_IsEnabledClock\n
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 25
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 25
 
 
  953:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     TIM7EN        LL_APB1_GRP1_IsEnabledClock\n
@@ -1498,7 +1498,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1007:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
 1008:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP2_PERIPH_LPUART1
 1009:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP2_PERIPH_I2C4 (*)
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 26
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 26
 
 
 1010:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP2_PERIPH_UCPD1
@@ -1558,7 +1558,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1064:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_PWR
 1065:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_I2C3
 1066:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_LPTIM1
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 27
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 27
 
 
 1067:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *
@@ -1618,7 +1618,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1121:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_TIM6
 1122:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_TIM7
 1123:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_CRS
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 28
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 28
 
 
 1124:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_SPI2
@@ -1678,7 +1678,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1163:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
 1164:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
 1165:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @brief  Release APB1 peripherals reset.
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 29
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 29
 
 
 1166:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @rmtoll APB1RSTR1     TIM2RST        LL_APB1_GRP1_ReleaseReset\n
@@ -1738,7 +1738,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  129              	.LBE85:
  130              	.LBE84:
  233:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 30
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 30
 
 
  131              		.loc 1 233 15 is_stmt 0 view .LVU37
@@ -1798,7 +1798,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1256:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1SMENR1     I2C3SMEN        LL_APB1_GRP1_EnableClockStopSleep\n
 1257:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1SMENR1     LPTIM1SMEN      LL_APB1_GRP1_EnableClockStopSleep
 1258:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 31
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 31
 
 
 1259:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_TIM2
@@ -1858,7 +1858,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1313:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   (void)tmpreg;
 1314:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
 1315:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 32
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 32
 
 
 1316:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
@@ -1918,7 +1918,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1370:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
 1371:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
 1372:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 33
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 33
 
 
 1373:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @brief  Disable APB1 peripheral clocks in Sleep and Stop modes
@@ -1978,7 +1978,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1427:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval None
 1428:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
 1429:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** __STATIC_INLINE void LL_APB2_GRP1_EnableClock(uint32_t Periphs)
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 34
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 34
 
 
 1430:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** {
@@ -2038,7 +2038,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1484:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB2ENR      TIM17EN       LL_APB2_GRP1_DisableClock\n
 1485:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB2ENR      TIM20EN       LL_APB2_GRP1_DisableClock\n
 1486:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB2ENR      SAI1EN        LL_APB2_GRP1_DisableClock\n
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 35
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 35
 
 
 1487:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB2ENR      HRTIM1EN      LL_APB2_GRP1_DisableClock
@@ -2098,7 +2098,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1541:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** __STATIC_INLINE void LL_APB2_GRP1_ForceReset(uint32_t Periphs)
  141              		.loc 2 1541 22 view .LVU40
  142              	.LBB87:
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 36
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 36
 
 
 1542:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** {
@@ -2158,7 +2158,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1574:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         (*) value not defined in all devices.
 1575:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval None
 1576:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 37
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 37
 
 
 1577:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** __STATIC_INLINE void LL_APB2_GRP1_ReleaseReset(uint32_t Periphs)
@@ -2218,7 +2218,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  205 0090 9A63     		str	r2, [r3, #56]
  206 0092 7047     		bx	lr
  207              	.LVL11:
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 38
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 38
 
 
  208              	.L18:
@@ -2278,7 +2278,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  250              	.LBB104:
  251              	.LBI104:
 1141:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** {
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 39
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 39
 
 
  252              		.loc 2 1141 22 view .LVU70
@@ -2338,7 +2338,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  233:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
  295              		.loc 1 233 15 is_stmt 0 view .LVU82
  296 00c8 0020     		movs	r0, #0
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 40
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 40
 
 
  297              	.LVL18:
@@ -2398,7 +2398,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  340 00e8 1A64     		str	r2, [r3, #64]
  341              	.LVL22:
 1543:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 41
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 41
 
 
  342              		.loc 2 1543 3 view .LVU94
@@ -2458,7 +2458,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  386              	.LBB127:
 1213:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
  387              		.loc 2 1213 3 view .LVU107
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 42
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 42
 
 
  388 0102 9A6B     		ldr	r2, [r3, #56]
@@ -2518,7 +2518,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  433              	.LBE132:
  287:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****     LL_APB2_GRP1_ReleaseReset(LL_APB2_GRP1_PERIPH_TIM16);
  434              		.loc 1 287 5 is_stmt 1 view .LVU119
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 43
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 43
 
 
  435              	.LBB134:
@@ -2578,7 +2578,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  479              	.LBE140:
  233:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
  480              		.loc 1 233 15 is_stmt 0 view .LVU132
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 44
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 44
 
 
  481 0140 0020     		movs	r0, #0
@@ -2638,7 +2638,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  526              	.LVL37:
 1543:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
  527              		.loc 2 1543 3 view .LVU144
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 45
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 45
 
 
  528              	.LBE148:
@@ -2698,7 +2698,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  573              		.cfi_startproc
  574              		@ args = 0, pretend = 0, frame = 0
  575              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 46
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 46
 
 
  576              		@ link register save eliminated.
@@ -2758,7 +2758,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  335:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** {
  612              		.loc 1 335 1 is_stmt 1 view -0
  613              		.cfi_startproc
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 47
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 47
 
 
  614              		@ args = 0, pretend = 0, frame = 0
@@ -2818,7 +2818,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  656 0030 02F5E052 		add	r2, r2, #7168
  657 0034 9042     		cmp	r0, r2
  658 0036 35D0     		beq	.L38
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 48
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 48
 
 
  659              	.L47:
@@ -2878,7 +2878,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  697              		.loc 1 358 3 is_stmt 1 view .LVU188
  698 006a 0360     		str	r3, [r0]
  359:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 49
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 49
 
 
  360:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   /* Set the Autoreload value */
@@ -2938,7 +2938,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
   47:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** {
   48:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   0x00U,   /* 0: TIMx_CH1  */
   49:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   0x00U,   /* 1: TIMx_CH1N */
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 50
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 50
 
 
   50:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   0x00U,   /* 2: TIMx_CH2  */
@@ -2998,7 +2998,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  104:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** {
  105:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   0U,            /* 0: OIS1 */
  106:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   1U,            /* 1: OIS1N */
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 51
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 51
 
 
  107:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   2U,            /* 2: OIS2 */
@@ -3058,7 +3058,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  161:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #endif /* COMP6 */
  162:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #if defined(COMP7)
  163:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define TIMx_AF2_BK2COMP7E TIM1_AF2_BK2CMP7E    /*!< BRK2 COMP7 enable */
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 52
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 52
 
 
  164:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #endif /* COMP7 */
@@ -3118,7 +3118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  218:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****    ((__CHANNEL__) == LL_TIM_CHANNEL_CH2) ? 2U :\
  219:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****    ((__CHANNEL__) == LL_TIM_CHANNEL_CH2N) ? 3U :\
  220:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****    ((__CHANNEL__) == LL_TIM_CHANNEL_CH3) ? 4U :\
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 53
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 53
 
 
  221:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****    ((__CHANNEL__) == LL_TIM_CHANNEL_CH3N) ? 5U :\
@@ -3178,7 +3178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  275:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
  276:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   uint8_t RepetitionCounter;  /*!< Specifies the repetition counter value. Each time the RCR downco
  277:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****                                    reaches zero, an update event is generated and counting restarts
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 54
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 54
 
 
  278:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****                                    from the RCR value (N).
@@ -3238,7 +3238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  332:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** } LL_TIM_OC_InitTypeDef;
  333:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
  334:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 55
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 55
 
 
  335:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @brief  TIM Input Capture configuration structure definition.
@@ -3298,7 +3298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  389:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****                                  This parameter can be a value of @ref TIM_LL_EC_IC_FILTER.
  390:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
  391:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****                                  This feature can be modified afterwards using unitary function @re
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 56
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 56
 
 
  392:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
@@ -3358,7 +3358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  446:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
  447:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @brief  BDTR (Break and Dead Time) structure definition
  448:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 57
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 57
 
 
  449:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** typedef struct
@@ -3418,7 +3418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  503:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****                                       This feature can be modified afterwards using unitary functio
  504:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
  505:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****                                       @note Bidirectional break input is only supported by advanced
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 58
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 58
 
 
  506:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
@@ -3478,7 +3478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  560:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   */
  561:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_SR_UIF                          TIM_SR_UIF           /*!< Update interrupt flag */
  562:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_SR_CC1IF                        TIM_SR_CC1IF         /*!< Capture/compare 1 interrup
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 59
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 59
 
 
  563:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_SR_CC2IF                        TIM_SR_CC2IF         /*!< Capture/compare 2 interrup
@@ -3538,7 +3538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  617:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   */
  618:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_DIER_UIE                        TIM_DIER_UIE         /*!< Update interrupt enable */
  619:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_DIER_CC1IE                      TIM_DIER_CC1IE       /*!< Capture/compare 1 interrup
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 60
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 60
 
 
  620:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_DIER_CC2IE                      TIM_DIER_CC2IE       /*!< Capture/compare 2 interrup
@@ -3598,7 +3598,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  674:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /** @defgroup TIM_LL_EC_COUNTERDIRECTION Counter Direction
  675:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @{
  676:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 61
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 61
 
 
  677:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_COUNTERDIRECTION_UP             0x00000000U          /*!< Timer counter counts up */
@@ -3658,7 +3658,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  731:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @{
  732:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   */
  733:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_OCSTATE_DISABLE                 0x00000000U             /*!< OCx is not active */
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 62
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 62
 
 
  734:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_OCSTATE_ENABLE                  TIM_CCER_CC1E           /*!< OCx signal is output on
@@ -3718,7 +3718,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  788:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
  789:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @}
  790:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 63
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 63
 
 
  791:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
@@ -3778,7 +3778,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  845:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
  846:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /** @defgroup TIM_LL_EC_CLOCKSOURCE Clock Source
  847:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @{
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 64
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 64
 
 
  848:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   */
@@ -3838,7 +3838,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  902:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_TRGO2_OC6_RISINGFALLING         (TIM_CR2_MMS2_3 | TIM_CR2_MMS2_1 | TIM_CR2_MMS2_0)  
  903:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_TRGO2_OC4_RISING_OC6_RISING     (TIM_CR2_MMS2_3 | TIM_CR2_MMS2_2)                   
  904:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_TRGO2_OC4_RISING_OC6_FALLING    (TIM_CR2_MMS2_3 | TIM_CR2_MMS2_2 | TIM_CR2_MMS2_0)  
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 65
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 65
 
 
  905:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_TRGO2_OC5_RISING_OC6_RISING     (TIM_CR2_MMS2_3 | TIM_CR2_MMS2_2 |TIM_CR2_MMS2_1)   
@@ -3898,7 +3898,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  959:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   */
  960:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_ETR_POLARITY_NONINVERTED        0x00000000U             /*!< ETR is non-inverted, ac
  961:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_ETR_POLARITY_INVERTED           TIM_SMCR_ETP            /*!< ETR is inverted, active
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 66
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 66
 
 
  962:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
@@ -3958,7 +3958,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1016:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #endif /* COMP7 */
 1017:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_TIM1_ETRSOURCE_ADC1_AWD1   TIM1_AF1_ETRSEL_3                                        
 1018:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_TIM1_ETRSOURCE_ADC1_AWD2   (TIM1_AF1_ETRSEL_3 | TIM1_AF1_ETRSEL_0)                  
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 67
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 67
 
 
 1019:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_TIM1_ETRSOURCE_ADC1_AWD3   (TIM1_AF1_ETRSEL_3 | TIM1_AF1_ETRSEL_1)                  
@@ -4018,7 +4018,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1073:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_TIM3_ETRSOURCE_TIM2_ETR     TIM1_AF1_ETRSEL_3                                       
 1074:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_TIM3_ETRSOURCE_TIM4_ETR     (TIM1_AF1_ETRSEL_3 | TIM1_AF1_ETRSEL_0)                 
 1075:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_TIM3_ETRSOURCE_ADC2_AWD1    (TIM1_AF1_ETRSEL_3 | TIM1_AF1_ETRSEL_1 | TIM1_AF1_ETRSEL
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 68
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 68
 
 
 1076:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_TIM3_ETRSOURCE_ADC2_AWD2    (TIM1_AF1_ETRSEL_3 | TIM1_AF1_ETRSEL_2)                 
@@ -4078,7 +4078,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1130:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #endif /* TIM5 */
 1131:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
 1132:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /** @defgroup TIM_LL_EC_TIM8_ETRSOURCE External Trigger Source TIM8
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 69
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 69
 
 
 1133:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @{
@@ -4138,7 +4138,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1187:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_TIM20_ETRSOURCE_ADC5_AWD3  (TIM1_AF1_ETRSEL_3 | TIM1_AF1_ETRSEL_2 | TIM1_AF1_ETRSEL_
 1188:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #endif /* ADC5 */
 1189:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 70
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 70
 
 
 1190:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @}
@@ -4198,7 +4198,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1244:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_BREAK2_FILTER_FDIV4_N6          0x00600000U   /*!< fSAMPLING=fDTS/4, N=6 */
 1245:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_BREAK2_FILTER_FDIV4_N8          0x00700000U   /*!< fSAMPLING=fDTS/4, N=8 */
 1246:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_BREAK2_FILTER_FDIV8_N6          0x00800000U   /*!< fSAMPLING=fDTS/8, N=6 */
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 71
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 71
 
 
 1247:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_BREAK2_FILTER_FDIV8_N8          0x00900000U   /*!< fSAMPLING=fDTS/8, N=8 */
@@ -4258,7 +4258,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1301:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #endif /* COMP7 */
 1302:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
 1303:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @}
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 72
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 72
 
 
 1304:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   */
@@ -4318,7 +4318,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1358:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_DMABURST_BASEADDR_ECR           (TIM_DCR_DBA_4 | TIM_DCR_DBA_2 | TIM_DCR_DBA_1)     
 1359:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_DMABURST_BASEADDR_TISEL         (TIM_DCR_DBA_4 | TIM_DCR_DBA_2 | TIM_DCR_DBA_1 | TIM
 1360:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_DMABURST_BASEADDR_AF1           (TIM_DCR_DBA_4 | TIM_DCR_DBA_3)                     
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 73
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 73
 
 
 1361:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_DMABURST_BASEADDR_AF2           (TIM_DCR_DBA_4 | TIM_DCR_DBA_3 | TIM_DCR_DBA_0)     
@@ -4378,7 +4378,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1415:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_TIM2_TI1_RMP_GPIO   0x00000000U                                       /*!< TIM2 inpu
 1416:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_TIM2_TI1_RMP_COMP1  TIM_TISEL_TI1SEL_0                                /*!< TIM2 inpu
 1417:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_TIM2_TI1_RMP_COMP2  TIM_TISEL_TI1SEL_1                                /*!< TIM2 inpu
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 74
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 74
 
 
 1418:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_TIM2_TI1_RMP_COMP3  (TIM_TISEL_TI1SEL_1 | TIM_TISEL_TI1SEL_0)         /*!< TIM2 inpu
@@ -4438,7 +4438,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1472:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #if defined(COMP6)
 1473:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_TIM3_TI1_RMP_COMP6  (TIM_TISEL_TI1SEL_2 | TIM_TISEL_TI1SEL_1)         /*!< TIM3 inpu
 1474:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #endif /* COMP6 */
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 75
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 75
 
 
 1475:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #if defined(COMP7)
@@ -4498,7 +4498,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1529:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
 1530:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @}
 1531:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 76
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 76
 
 
 1532:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
@@ -4558,7 +4558,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1586:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_TIM5_TI1_RMP_COMP3  (TIM_TISEL_TI1SEL_2 | TIM_TISEL_TI1SEL_1)         /*!< TIM5 inpu
 1587:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_TIM5_TI1_RMP_COMP4  (TIM_TISEL_TI1SEL_2 | TIM_TISEL_TI1SEL_1 | TIM_TISEL_TI1SEL_0)  
 1588:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #if defined(COMP5)
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 77
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 77
 
 
 1589:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_TIM5_TI1_RMP_COMP5  TIM_TISEL_TI1SEL_3                                /*!< TIM5 inpu
@@ -4618,7 +4618,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1643:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_TIM15_TI1_RMP_COMP5 TIM_TISEL_TI1SEL_2                                /*!< TIM15 inp
 1644:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #endif /* COMP5 */
 1645:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #if defined(COMP7)
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 78
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 78
 
 
 1646:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_TIM15_TI1_RMP_COMP7 (TIM_TISEL_TI1SEL_2 | TIM_TISEL_TI1SEL_0)         /*!< TIM15 inp
@@ -4678,7 +4678,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1700:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #if defined(TIM20)
 1701:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /** @defgroup TIM_LL_EC_TIM20_TI1_RMP  TIM20 Timer Input Ch1 Remap
 1702:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @{
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 79
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 79
 
 
 1703:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   */
@@ -4738,7 +4738,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1757:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
 1758:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /** @defgroup TIM_LL_EC_FIRST_INDEX first index selection
 1759:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @{
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 80
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 80
 
 
 1760:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   */
@@ -4798,7 +4798,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1814:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @retval None
 1815:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   */
 1816:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** #define LL_TIM_WriteReg(__INSTANCE__, __REG__, __VALUE__) WRITE_REG((__INSTANCE__)->__REG__, (__VAL
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 81
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 81
 
 
 1817:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
@@ -4858,7 +4858,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1871:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
 1872:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
 1873:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @brief  HELPER macro calculating the auto-reload value to achieve the required output signal fr
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 82
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 82
 
 
 1874:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @note ex: @ref __LL_TIM_CALC_ARR (1000000, @ref LL_TIM_GetPrescaler (), 10000);
@@ -4918,7 +4918,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1928:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   ((uint32_t)(__LL_TIM_CALC_DELAY((__TIMCLK__), (__PSC__), (__PULSE__)) \
 1929:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****               + __LL_TIM_CALC_DELAY((__TIMCLK__), (__PSC__), (__DELAY__))))
 1930:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 83
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 83
 
 
 1931:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
@@ -4978,7 +4978,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1985:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
 1986:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
 1987:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @brief  Disable timer counter.
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 84
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 84
 
 
 1988:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @rmtoll CR1          CEN           LL_TIM_DisableCounter
@@ -5038,7 +5038,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 2042:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @brief  Set update event source
 2043:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @note Update event source set to LL_TIM_UPDATESOURCE_REGULAR: any of the following events
 2044:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *       generate an update interrupt or DMA request if enabled:
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 85
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 85
 
 
 2045:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *        - Counter overflow/underflow
@@ -5098,7 +5098,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 2099:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   return (uint32_t)(READ_BIT(TIMx->CR1, TIM_CR1_OPM));
 2100:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** }
 2101:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 86
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 86
 
 
 2102:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
@@ -5158,7 +5158,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 2156:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
 2157:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
 2158:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @brief  Disable auto-reload (ARR) preload.
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 87
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 87
 
 
 2159:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @rmtoll CR1          ARPE          LL_TIM_DisableARRPreload
@@ -5218,7 +5218,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 2213:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
 2214:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
 2215:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @brief  Set the counter value.
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 88
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 88
 
 
 2216:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @note Macro IS_TIM_32B_COUNTER_INSTANCE(TIMx) can be used to check
@@ -5278,7 +5278,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 2270:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** }
 2271:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
 2272:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 89
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 89
 
 
 2273:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @brief  Get the prescaler value.
@@ -5338,7 +5338,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  726              		.loc 1 366 3 is_stmt 1 view .LVU197
  727              	.L44:
  367:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   {
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 90
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 90
 
 
  368:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****     /* Set the Repetition Counter value */
@@ -5398,7 +5398,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 2342:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
 2343:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @brief  Force a continuous copy of the update interrupt flag (UIF) into the timer counter regis
 2344:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @note This allows both the counter value and a potential roll-over condition signalled by the U
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 91
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 91
 
 
 2345:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @rmtoll CR1          UIFREMAP      LL_TIM_EnableUIFRemap
@@ -5458,7 +5458,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 2399:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** __STATIC_INLINE uint32_t LL_TIM_IsEnabledDithering(TIM_TypeDef *TIMx)
 2400:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** {
 2401:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   return ((READ_BIT(TIMx->CR1, TIM_CR1_DITHEN) == (TIM_CR1_DITHEN)) ? 1UL : 0UL);
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 92
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 92
 
 
 2402:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** }
@@ -5518,7 +5518,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 2456:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
 2457:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @brief  Set the trigger of the capture/compare DMA request.
 2458:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @rmtoll CR2          CCDS          LL_TIM_CC_SetDMAReqTrigger
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 93
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 93
 
 
 2459:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @param  TIMx Timer instance
@@ -5578,7 +5578,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 2513:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         CCER         CC6E          LL_TIM_CC_EnableChannel
 2514:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @param  TIMx Timer instance
 2515:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @param  Channels This parameter can be a combination of the following values:
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 94
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 94
 
 
 2516:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_CHANNEL_CH1
@@ -5638,7 +5638,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 2570:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         CCER         CC3E          LL_TIM_CC_IsEnabledChannel\n
 2571:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         CCER         CC3NE         LL_TIM_CC_IsEnabledChannel\n
 2572:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         CCER         CC4E          LL_TIM_CC_IsEnabledChannel\n
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 95
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 95
 
 
 2573:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         CCER         CC4NE         LL_TIM_CC_IsEnabledChannel\n
@@ -5698,7 +5698,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 2627:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_CHANNEL_CH4
 2628:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_CHANNEL_CH5
 2629:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_CHANNEL_CH6
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 96
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 96
 
 
 2630:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @param  Configuration This parameter must be a combination of all the following values:
@@ -5758,7 +5758,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 2684:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   register uint8_t iChannel = TIM_GET_CHANNEL_INDEX(Channel);
 2685:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   register __IO uint32_t *pReg = (__IO uint32_t *)((uint32_t)((uint32_t)(&TIMx->CCMR1) + OFFSET_TAB
 2686:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   MODIFY_REG(*pReg, ((TIM_CCMR1_OC1M  | TIM_CCMR1_CC1S) << SHIFT_TAB_OCxx[iChannel]),  Mode << SHIF
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 97
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 97
 
 
 2687:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** }
@@ -5818,7 +5818,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 2741:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         CCER         CC6P          LL_TIM_OC_SetPolarity
 2742:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @param  TIMx Timer instance
 2743:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @param  Channel This parameter can be one of the following values:
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 98
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 98
 
 
 2744:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_CHANNEL_CH1
@@ -5878,7 +5878,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 2798:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
 2799:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
 2800:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @brief  Set the IDLE state of an output channel
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 99
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 99
 
 
 2801:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @note This function is significant only for the timer instances
@@ -5938,7 +5938,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 2855:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_CHANNEL_CH2N
 2856:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_CHANNEL_CH3
 2857:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_CHANNEL_CH3N
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 100
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 100
 
 
 2858:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_CHANNEL_CH4
@@ -5998,7 +5998,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 2912:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_CHANNEL_CH4
 2913:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_CHANNEL_CH5
 2914:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_CHANNEL_CH6
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 101
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 101
 
 
 2915:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @retval None
@@ -6058,7 +6058,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 2969:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** __STATIC_INLINE void LL_TIM_OC_EnablePreload(TIM_TypeDef *TIMx, uint32_t Channel)
 2970:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** {
 2971:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   register uint8_t iChannel = TIM_GET_CHANNEL_INDEX(Channel);
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 102
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 102
 
 
 2972:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   register __IO uint32_t *pReg = (__IO uint32_t *)((uint32_t)((uint32_t)(&TIMx->CCMR1) + OFFSET_TAB
@@ -6118,7 +6118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 3026:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
 3027:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
 3028:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @brief  Enable clearing the output channel on an external event.
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 103
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 103
 
 
 3029:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @note This function can only be used in Output compare and PWM modes. It does not work in Force
@@ -6178,7 +6178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 3083:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @brief  Indicates clearing the output channel on an external event is enabled for the output ch
 3084:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @note This function enables clearing the output channel on an external event.
 3085:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @note This function can only be used in Output compare and PWM modes. It does not work in Force
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 104
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 104
 
 
 3086:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @note Macro IS_TIM_OCXREF_CLEAR_INSTANCE(TIMx) can be used to check whether
@@ -6238,7 +6238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 3140:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** __STATIC_INLINE void LL_TIM_OC_SetCompareCH1(TIM_TypeDef *TIMx, uint32_t CompareValue)
 3141:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** {
 3142:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   WRITE_REG(TIMx->CCR1, CompareValue);
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 105
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 105
 
 
 3143:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** }
@@ -6298,7 +6298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 3197:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** }
 3198:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
 3199:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 106
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 106
 
 
 3200:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @brief  Set compare value for output channel 5 (TIMx_CCR5).
@@ -6358,7 +6358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 3254:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @rmtoll CCR2         CCR2          LL_TIM_OC_GetCompareCH2
 3255:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @param  TIMx Timer instance
 3256:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @retval CompareValue (between Min_Data=0 and Max_Data=65535)
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 107
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 107
 
 
 3257:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   */
@@ -6418,7 +6418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 3311:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
 3312:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @brief  Get compare value (TIMx_CCR6) set for  output channel 6.
 3313:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @note Macro IS_TIM_CC6_INSTANCE(TIMx) can be used to check whether or not
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 108
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 108
 
 
 3314:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *       output channel 6 is supported by a timer instance.
@@ -6478,7 +6478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 3368:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
 3369:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @brief  Get the pulse on compare pulse width prescaler.
 3370:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @note Macro IS_TIM_PULSEONCOMPARE_INSTANCE(TIMx) can be used to check
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 109
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 109
 
 
 3371:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *       whether or not the pulse on compare feature is supported by the timer
@@ -6538,7 +6538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 3425:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   */
 3426:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
 3427:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @brief  Configure input channel.
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 110
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 110
 
 
 3428:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @rmtoll CCMR1        CC1S          LL_TIM_IC_Config\n
@@ -6598,7 +6598,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 3482:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_CHANNEL_CH4
 3483:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @param  ICActiveInput This parameter can be one of the following values:
 3484:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_ACTIVEINPUT_DIRECTTI
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 111
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 111
 
 
 3485:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_ACTIVEINPUT_INDIRECTTI
@@ -6658,7 +6658,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 3539:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** __STATIC_INLINE void LL_TIM_IC_SetPrescaler(TIM_TypeDef *TIMx, uint32_t Channel, uint32_t ICPrescal
 3540:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** {
 3541:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   register uint8_t iChannel = TIM_GET_CHANNEL_INDEX(Channel);
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 112
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 112
 
 
 3542:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   register __IO uint32_t *pReg = (__IO uint32_t *)((uint32_t)((uint32_t)(&TIMx->CCMR1) + OFFSET_TAB
@@ -6718,7 +6718,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 3596:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_IC_FILTER_FDIV16_N8
 3597:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_IC_FILTER_FDIV32_N5
 3598:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_IC_FILTER_FDIV32_N6
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 113
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 113
 
 
 3599:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_IC_FILTER_FDIV32_N8
@@ -6778,7 +6778,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 3653:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         CCER         CC3NP         LL_TIM_IC_SetPolarity\n
 3654:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         CCER         CC4P          LL_TIM_IC_SetPolarity\n
 3655:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         CCER         CC4NP         LL_TIM_IC_SetPolarity
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 114
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 114
 
 
 3656:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @param  TIMx Timer instance
@@ -6838,7 +6838,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 3710:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   */
 3711:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** __STATIC_INLINE void LL_TIM_IC_EnableXORCombination(TIM_TypeDef *TIMx)
 3712:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** {
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 115
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 115
 
 
 3713:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   SET_BIT(TIMx->CR2, TIM_CR2_TI1S);
@@ -6898,7 +6898,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 3767:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @rmtoll CCR2         CCR2          LL_TIM_IC_GetCaptureCH2
 3768:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @param  TIMx Timer instance
 3769:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @retval CapturedValue (between Min_Data=0 and Max_Data=65535)
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 116
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 116
 
 
 3770:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   */
@@ -6958,7 +6958,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 3824:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @retval None
 3825:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   */
 3826:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** __STATIC_INLINE void LL_TIM_EnableExternalClock(TIM_TypeDef *TIMx)
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 117
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 117
 
 
 3827:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** {
@@ -7018,7 +7018,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 3881:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
 3882:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @brief  Set the encoder interface mode.
 3883:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @note Macro IS_TIM_ENCODER_INTERFACE_INSTANCE(TIMx) can be used to check
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 118
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 118
 
 
 3884:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *       whether or not a timer instance supports the encoder mode.
@@ -7078,7 +7078,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 3938:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @rmtoll CR2          MMS2          LL_TIM_SetTriggerOutput2
 3939:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @param  TIMx Timer Instance
 3940:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @param  ADCSynchronization This parameter can be one of the following values:
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 119
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 119
 
 
 3941:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_TRGO2_RESET
@@ -7138,7 +7138,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 3995:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_TS_TI1F_ED
 3996:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_TS_TI1FP1
 3997:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_TS_TI2FP2
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 120
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 120
 
 
 3998:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_TS_ETRF
@@ -7198,7 +7198,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 4052:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
 4053:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
 4054:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @brief  Configure the external trigger (ETR) input.
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 121
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 121
 
 
 4055:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @note Macro IS_TIM_ETR_INSTANCE(TIMx) can be used to check whether or not
@@ -7258,7 +7258,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 4109:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *            @arg @ref LL_TIM_TIM1_ETRSOURCE_COMP5       (*)
 4110:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *            @arg @ref LL_TIM_TIM1_ETRSOURCE_COMP6       (*)
 4111:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *            @arg @ref LL_TIM_TIM1_ETRSOURCE_COMP7       (*)
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 122
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 122
 
 
 4112:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *            @arg @ref LL_TIM_TIM1_ETRSOURCE_ADC1_AWD1
@@ -7318,7 +7318,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 4166:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *            @arg @ref LL_TIM_TIM5_ETRSOURCE_COMP1       (*)
 4167:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *            @arg @ref LL_TIM_TIM5_ETRSOURCE_COMP2       (*)
 4168:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *            @arg @ref LL_TIM_TIM5_ETRSOURCE_COMP3       (*)
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 123
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 123
 
 
 4169:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *            @arg @ref LL_TIM_TIM5_ETRSOURCE_COMP4       (*)
@@ -7378,7 +7378,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 4223:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @brief  Enable SMS preload.
 4224:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @note Macro IS_TIM_SMS_PRELOAD_INSTANCE(TIMx) can be used to check
 4225:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *       whether or not a timer instance supports the preload of SMS field in SMCR register.
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 124
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 124
 
 
 4226:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @rmtoll SMCR         SMSPE           LL_TIM_EnableSMSPreload
@@ -7438,7 +7438,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 4280:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *       whether or not a timer instance supports the preload of SMS field in SMCR register.
 4281:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @rmtoll SMCR         SMSPS        LL_TIM_GetSMSPreloadSource\n
 4282:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @param  TIMx Timer instance
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 125
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 125
 
 
 4283:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @retval Returned value can be one of the following values:
@@ -7498,7 +7498,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 4337:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *       LL_TIM_BREAK_AFMODE_INPUT.
 4338:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @rmtoll BDTR         BKP           LL_TIM_ConfigBRK\n
 4339:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         BDTR         BKF           LL_TIM_ConfigBRK\n
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 126
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 126
 
 
 4340:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         BDTR         BKBID         LL_TIM_ConfigBRK
@@ -7558,7 +7558,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 4394:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   */
 4395:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** __STATIC_INLINE void LL_TIM_ReArmBRK(TIM_TypeDef *TIMx)
 4396:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** {
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 127
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 127
 
 
 4397:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   CLEAR_BIT(TIMx->BDTR, TIM_BDTR_BKDSRM);
@@ -7618,7 +7618,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 4451:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_BREAK2_FILTER_FDIV2_N6
 4452:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_BREAK2_FILTER_FDIV2_N8
 4453:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_BREAK2_FILTER_FDIV4_N6
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 128
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 128
 
 
 4454:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_BREAK2_FILTER_FDIV4_N8
@@ -7678,7 +7678,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 4508:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @param  OffStateIdle This parameter can be one of the following values:
 4509:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_OSSI_DISABLE
 4510:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_OSSI_ENABLE
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 129
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 129
 
 
 4511:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @param  OffStateRun This parameter can be one of the following values:
@@ -7738,7 +7738,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 4565:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *       a timer instance provides a break input.
 4566:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @rmtoll BDTR         MOE           LL_TIM_EnableAllOutputs
 4567:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @param  TIMx Timer instance
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 130
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 130
 
 
 4568:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @retval None
@@ -7798,7 +7798,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 4622:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         AF2          BK2CMP7E      LL_TIM_EnableBreakInputSource
 4623:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @param  TIMx Timer instance
 4624:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @param  BreakInput This parameter can be one of the following values:
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 131
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 131
 
 
 4625:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_BREAK_INPUT_BKIN
@@ -7858,7 +7858,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 4679:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *
 4680:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         (*)  Value not defined in all devices.
 4681:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @retval None
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 132
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 132
 
 
 4682:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   */
@@ -7918,7 +7918,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 4736:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
 4737:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
 4738:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @brief  Disable asymmetrical dead-time.
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 133
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 133
 
 
 4739:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @note Macro @ref  IS_TIM_DEADTIME_ASYMMETRICAL_INSTANCE(TIMx) can be used to check whether or n
@@ -7978,7 +7978,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 4793:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** }
 4794:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
 4795:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 134
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 134
 
 
 4796:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @brief  Enable deadtime preload.
@@ -8038,7 +8038,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 4850:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_DMABURST_BASEADDR_CR2
 4851:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_DMABURST_BASEADDR_SMCR
 4852:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_DMABURST_BASEADDR_DIER
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 135
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 135
 
 
 4853:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_DMABURST_BASEADDR_SR
@@ -8098,7 +8098,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 4907:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   MODIFY_REG(TIMx->DCR, (TIM_DCR_DBL | TIM_DCR_DBA), (DMABurstBaseAddress | DMABurstLength));
 4908:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** }
 4909:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 136
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 136
 
 
 4910:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
@@ -8158,7 +8158,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 4964:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_INDEX_UP_DOWN
 4965:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_INDEX_UP
 4966:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_INDEX_DOWN
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 137
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 137
 
 
 4967:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @retval None
@@ -8218,7 +8218,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 5021:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @param  TIMx Timer instance
 5022:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @retval State of bit (1 or 0).
 5023:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 138
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 138
 
 
 5024:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** __STATIC_INLINE uint32_t LL_TIM_IsEnabledFirstIndex(TIM_TypeDef *TIMx)
@@ -8278,7 +8278,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 5078:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_INDEX_ALL or @ref LL_TIM_INDEX_FIRST_ONLY
 5079:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_INDEX_POSITION_DOWN_DOWN or ... or @ref LL_TIM_INDEX_POSITION_UP
 5080:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @retval None
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 139
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 139
 
 
 5081:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   */
@@ -8338,7 +8338,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 5135:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *            . . TI1_RMP can be one of the following values
 5136:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *            @arg @ref LL_TIM_TIM2_TI1_RMP_GPIO
 5137:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *            @arg @ref LL_TIM_TIM2_TI1_RMP_COMP1
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 140
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 140
 
 
 5138:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *            @arg @ref LL_TIM_TIM2_TI1_RMP_COMP2
@@ -8398,7 +8398,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 5192:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *            @arg @ref LL_TIM_TIM4_TI1_RMP_COMP3
 5193:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *            @arg @ref LL_TIM_TIM4_TI1_RMP_COMP4
 5194:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *            @arg @ref LL_TIM_TIM4_TI1_RMP_COMP5 (*)
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 141
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 141
 
 
 5195:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *            @arg @ref LL_TIM_TIM4_TI1_RMP_COMP6 (*)
@@ -8458,7 +8458,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 5249:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         TIM15: any combination of TI1_RMP and TI2_RMP where
 5250:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *
 5251:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *            . . TI1_RMP can be one of the following values
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 142
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 142
 
 
 5252:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *            @arg @ref LL_TIM_TIM15_TI1_RMP_GPIO
@@ -8518,7 +8518,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 5306:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @brief  Enable request for HSE/32 clock used for TISEL remap.
 5307:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @note Only TIM16 and TIM17 support HSE/32 remap
 5308:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @rmtoll OR         HSE32EN           LL_TIM_EnableHSE32
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 143
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 143
 
 
 5309:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @param  TIMx Timer instance
@@ -8578,7 +8578,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 5363:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_OCREF_CLR_INT_COMP2
 5364:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_OCREF_CLR_INT_COMP3
 5365:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_OCREF_CLR_INT_COMP4
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 144
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 144
 
 
 5366:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *         @arg @ref LL_TIM_OCREF_CLR_INT_COMP5 (*)
@@ -8638,7 +8638,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 5420:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @brief  Indicate whether Capture/Compare 1 interrupt flag (CC1F) is set (Capture/Compare 1 inte
 5421:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @rmtoll SR           CC1IF         LL_TIM_IsActiveFlag_CC1
 5422:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @param  TIMx Timer instance
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 145
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 145
 
 
 5423:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @retval State of bit (1 or 0).
@@ -8698,7 +8698,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 5477:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @param  TIMx Timer instance
 5478:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @retval None
 5479:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 146
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 146
 
 
 5480:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** __STATIC_INLINE void LL_TIM_ClearFlag_CC4(TIM_TypeDef *TIMx)
@@ -8758,7 +8758,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 5534:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   */
 5535:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** __STATIC_INLINE uint32_t LL_TIM_IsActiveFlag_CC6(TIM_TypeDef *TIMx)
 5536:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** {
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 147
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 147
 
 
 5537:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   return ((READ_BIT(TIMx->SR, TIM_SR_CC6IF) == (TIM_SR_CC6IF)) ? 1UL : 0UL);
@@ -8818,7 +8818,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 5591:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** {
 5592:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   WRITE_REG(TIMx->SR, ~(TIM_SR_BIF));
 5593:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 148
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 148
 
 
 5594:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
@@ -8878,7 +8878,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 5648:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** }
 5649:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
 5650:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 149
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 149
 
 
 5651:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @brief  Clear the Capture/Compare 2 over-capture interrupt flag (CC2OF).
@@ -8938,7 +8938,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 5705:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
 5706:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @brief  Indicate whether Capture/Compare 4 over-capture interrupt flag (CC4OF) is set (Capture/
 5707:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @rmtoll SR           CC4OF         LL_TIM_IsActiveFlag_CC4OVR
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 150
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 150
 
 
 5708:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @param  TIMx Timer instance
@@ -8998,7 +8998,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 5762:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** }
 5763:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
 5764:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 151
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 151
 
 
 5765:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @brief  Clear the index error interrupt flag (IERRF).
@@ -9058,7 +9058,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 5819:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *       a timer instance provides encoder interrupt management.
 5820:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @rmtoll SR           IDXF           LL_TIM_ClearFlag_IDX
 5821:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @param  TIMx Timer instance
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 152
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 152
 
 
 5822:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @retval None
@@ -9118,7 +9118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 5876:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** __STATIC_INLINE uint32_t LL_TIM_IsEnabledIT_UPDATE(TIM_TypeDef *TIMx)
 5877:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** {
 5878:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   return ((READ_BIT(TIMx->DIER, TIM_DIER_UIE) == (TIM_DIER_UIE)) ? 1UL : 0UL);
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 153
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 153
 
 
 5879:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** }
@@ -9178,7 +9178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 5933:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   CLEAR_BIT(TIMx->DIER, TIM_DIER_CC2IE);
 5934:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** }
 5935:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 154
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 154
 
 
 5936:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
@@ -9238,7 +9238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 5990:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
 5991:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
 5992:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @brief  Disable capture/compare 4  interrupt (CC4IE).
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 155
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 155
 
 
 5993:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @rmtoll DIER         CC4IE         LL_TIM_DisableIT_CC4
@@ -9298,7 +9298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 6047:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @brief  Enable trigger interrupt (TIE).
 6048:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @rmtoll DIER         TIE           LL_TIM_EnableIT_TRIG
 6049:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @param  TIMx Timer instance
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 156
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 156
 
 
 6050:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @retval None
@@ -9358,7 +9358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 6104:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @param  TIMx Timer instance
 6105:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @retval State of bit (1 or 0).
 6106:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 157
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 157
 
 
 6107:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** __STATIC_INLINE uint32_t LL_TIM_IsEnabledIT_BRK(TIM_TypeDef *TIMx)
@@ -9418,7 +9418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 6161:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   SET_BIT(TIMx->DIER, TIM_DIER_IERRIE);
 6162:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** }
 6163:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 158
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 158
 
 
 6164:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
@@ -9478,7 +9478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 6218:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @note Macro @ref  IS_TIM_FUNCTINONAL_ENCODER_INTERRUPT_INSTANCE(TIMx) can be used to check whet
 6219:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   *       a timer instance provides encoder interrupt management.
 6220:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @rmtoll DIER         DIRIE           LL_TIM_IsEnabledIT_DIR
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 159
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 159
 
 
 6221:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @param  TIMx Timer instance
@@ -9538,7 +9538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 6275:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
 6276:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @brief  Enable update DMA request (UDE).
 6277:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @rmtoll DIER         UDE           LL_TIM_EnableDMAReq_UPDATE
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 160
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 160
 
 
 6278:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @param  TIMx Timer instance
@@ -9598,7 +9598,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 6332:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @rmtoll DIER         CC1DE         LL_TIM_IsEnabledDMAReq_CC1
 6333:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @param  TIMx Timer instance
 6334:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @retval State of bit (1 or 0).
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 161
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 161
 
 
 6335:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   */
@@ -9658,7 +9658,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 6389:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   * @retval None
 6390:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   */
 6391:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** __STATIC_INLINE void LL_TIM_DisableDMAReq_CC3(TIM_TypeDef *TIMx)
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 162
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 162
 
 
 6392:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** {
@@ -9718,7 +9718,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 6446:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** __STATIC_INLINE void LL_TIM_EnableDMAReq_COM(TIM_TypeDef *TIMx)
 6447:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** {
 6448:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   SET_BIT(TIMx->DIER, TIM_DIER_COMDE);
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 163
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 163
 
 
 6449:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** }
@@ -9778,7 +9778,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 6503:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h ****   return ((READ_BIT(TIMx->DIER, TIM_DIER_TDE) == (TIM_DIER_TDE)) ? 1UL : 0UL);
 6504:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** }
 6505:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 164
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 164
 
 
 6506:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** /**
@@ -9838,7 +9838,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  351:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   {
  763              		.loc 1 351 3 is_stmt 1 view .LVU208
  354:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   }
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 165
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 165
 
 
  764              		.loc 1 354 5 view .LVU209
@@ -9898,7 +9898,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  804              	.LVL60:
  805              	.LBB162:
  806              	.LBI162:
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 166
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 166
 
 
 2324:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** {
@@ -9958,7 +9958,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  847              		.loc 1 386 1 is_stmt 1 view -0
  848              		.cfi_startproc
  849              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 167
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 167
 
 
  850              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -10018,7 +10018,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  410:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   *          - SUCCESS: TIMx output channel is initialized
  411:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   *          - ERROR: TIMx output channel is not initialized
  412:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 168
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 168
 
 
  413:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** ErrorStatus LL_TIM_OC_Init(TIM_TypeDef *TIMx, uint32_t Channel, LL_TIM_OC_InitTypeDef *TIM_OC_InitS
@@ -10078,7 +10078,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  433:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****       break;
  434:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****     case LL_TIM_CHANNEL_CH6:
  435:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****       result = OC6Config(TIMx, TIM_OC_InitStruct);
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 169
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 169
 
 
  436:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****       break;
@@ -10138,7 +10138,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  464:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   *         @arg @ref LL_TIM_CHANNEL_CH2
  465:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   *         @arg @ref LL_TIM_CHANNEL_CH3
  466:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   *         @arg @ref LL_TIM_CHANNEL_CH4
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 170
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 170
 
 
  467:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   * @param  TIM_IC_InitStruct pointer to a @ref LL_TIM_IC_InitTypeDef structure (TIMx input channel
@@ -10198,7 +10198,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  521:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   *          - SUCCESS: TIMx registers are de-initialized
  522:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   *          - ERROR: not applicable
  523:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 171
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 171
 
 
  524:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** ErrorStatus LL_TIM_ENCODER_Init(TIM_TypeDef *TIMx, LL_TIM_ENCODER_InitTypeDef *TIM_EncoderInitStruc
@@ -10258,7 +10258,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  578:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** }
  579:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
  580:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 172
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 172
 
 
  581:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   * @brief  Set the fields of the TIMx Hall sensor interface configuration data
@@ -10318,7 +10318,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  635:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   tmpccmr1 = LL_TIM_ReadReg(TIMx, CCMR1);
  636:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
  637:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   /* Get the TIMx CCER register value */
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 173
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 173
 
 
  638:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   tmpccer = LL_TIM_ReadReg(TIMx, CCER);
@@ -10378,7 +10378,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  692:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   */
  693:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** void LL_TIM_BDTR_StructInit(LL_TIM_BDTR_InitTypeDef *TIM_BDTRInitStruct)
  694:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** {
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 174
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 174
 
 
  695:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   /* Set the default configuration */
@@ -10438,7 +10438,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  749:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   MODIFY_REG(tmpbdtr, TIM_BDTR_BKP, TIM_BDTRInitStruct->BreakPolarity);
  750:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   MODIFY_REG(tmpbdtr, TIM_BDTR_AOE, TIM_BDTRInitStruct->AutomaticOutput);
  751:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   MODIFY_REG(tmpbdtr, TIM_BDTR_MOE, TIM_BDTRInitStruct->AutomaticOutput);
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 175
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 175
 
 
  752:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   if (IS_TIM_ADVANCED_INSTANCE(TIMx))
@@ -10498,7 +10498,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  806:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   assert_param(IS_TIM_CC1_INSTANCE(TIMx));
  807:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   assert_param(IS_LL_TIM_OCMODE(TIM_OCInitStruct->OCMode));
  808:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   assert_param(IS_LL_TIM_OCSTATE(TIM_OCInitStruct->OCState));
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 176
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 176
 
 
  809:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   assert_param(IS_LL_TIM_OCPOLARITY(TIM_OCInitStruct->OCPolarity));
@@ -10558,7 +10558,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  863:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
  864:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   /* Write to TIMx CCER */
  865:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   LL_TIM_WriteReg(TIMx, CCER, tmpccer);
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 177
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 177
 
 
  866:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
@@ -10618,7 +10618,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  906:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
  907:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   /* Select the Output Compare Mode */
  908:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   MODIFY_REG(tmpccmr1, TIM_CCMR1_OC2M, TIM_OCInitStruct->OCMode << 8U);
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 178
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 178
 
 
  909:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
@@ -10678,7 +10678,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  908:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
  984              		.loc 1 908 3 view .LVU279
  985 005a 20F4E640 		bic	r0, r0, #29440
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 179
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 179
 
 
  986              		.loc 1 916 6 view .LVU280
@@ -10738,7 +10738,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  925:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
  1023              		.loc 1 925 5 is_stmt 1 view .LVU293
  1024              		.loc 1 928 5 is_stmt 0 view .LVU294
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 180
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 180
 
 
  1025 009a 24F48064 		bic	r4, r4, #1024
@@ -10798,7 +10798,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 3160:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** }
  1060              		.loc 3 3160 3 view .LVU308
  1061 00c0 9A63     		str	r2, [r3, #56]
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 181
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 181
 
 
  1062              	.LVL83:
@@ -10858,7 +10858,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  1100              		.loc 1 806 3 view .LVU322
  807:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   assert_param(IS_LL_TIM_OCSTATE(TIM_OCInitStruct->OCState));
  1101              		.loc 1 807 3 view .LVU323
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 182
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 182
 
 
  808:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   assert_param(IS_LL_TIM_OCPOLARITY(TIM_OCInitStruct->OCPolarity));
@@ -10918,7 +10918,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  1137 00e6 20F48030 		bic	r0, r0, #65536
  1138              	.LVL92:
  835:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 183
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 183
 
 
  1139              		.loc 1 835 3 view .LVU343
@@ -10978,7 +10978,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  1179              	.LVL94:
  846:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
  1180              		.loc 1 846 5 is_stmt 1 view .LVU358
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 184
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 184
 
 
  849:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
@@ -11038,7 +11038,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 3142:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** }
  1220              		.loc 3 3142 3 is_stmt 0 view .LVU374
  1221              	.LBE195:
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 185
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 185
 
 
  1222              	.LBE194:
@@ -11098,7 +11098,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  960:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   uint32_t tmpccer;
  1255              		.loc 1 960 3 view .LVU385
  961:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   uint32_t tmpcr2;
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 186
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 186
 
 
  1256              		.loc 1 961 3 view .LVU386
@@ -11158,7 +11158,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  1273 0166 016A     		ldr	r1, [r0, #32]
  1274              	.LVL106:
  978:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 187
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 187
 
 
  1275              		.loc 1 978 3 is_stmt 1 view .LVU398
@@ -11218,7 +11218,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  1314 0196 AB42     		cmp	r3, r5
  1315 0198 0FD0     		beq	.L69
  1316 019a 05F54065 		add	r5, r5, #3072
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 188
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 188
 
 
  1317 019e AB42     		cmp	r3, r5
@@ -11278,7 +11278,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  1351 01d2 21F48061 		bic	r1, r1, #1024
  1352              	.LVL115:
  1353              		.loc 1 1010 5 view .LVU430
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 189
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 189
 
 
  1354 01d6 24F40054 		bic	r4, r4, #8192
@@ -11338,7 +11338,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  1387              		.loc 1 427 7 is_stmt 1 view .LVU443
  426:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****       break;
  1388              		.loc 1 426 16 is_stmt 0 view .LVU444
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 190
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 190
 
 
  1389 01ec 0020     		movs	r0, #0
@@ -11398,7 +11398,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1057:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   tmpcr2 =  LL_TIM_ReadReg(TIMx, CR2);
 1058:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
 1059:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   /* Get the TIMx CCMR2 register value */
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 191
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 191
 
 
 1060:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   tmpccmr2 = LL_TIM_ReadReg(TIMx, CCMR2);
@@ -11458,7 +11458,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1114:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   */
 1115:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** static ErrorStatus OC5Config(TIM_TypeDef *TIMx, LL_TIM_OC_InitTypeDef *TIM_OCInitStruct)
  1409              		.loc 1 1115 20 view .LVU448
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 192
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 192
 
 
  1410              	.LBB201:
@@ -11518,7 +11518,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  1430              	.LVL124:
 1135:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
  1431              		.loc 1 1135 3 is_stmt 1 view .LVU462
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 193
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 193
 
 
 1141:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
@@ -11578,7 +11578,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  1474 0240 A342     		cmp	r3, r4
  1475 0242 03D0     		beq	.L73
  1476 0244 04F50064 		add	r4, r4, #2048
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 194
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 194
 
 
  1477 0248 A342     		cmp	r3, r4
@@ -11638,7 +11638,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1165:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   return SUCCESS;
  1509              		.loc 1 1165 3 view .LVU489
  1510              	.LVL132:
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 195
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 195
 
 
  1511              		.loc 1 1165 3 is_stmt 0 view .LVU490
@@ -11698,7 +11698,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1184:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   assert_param(IS_LL_TIM_OCSTATE(TIM_OCInitStruct->OCState));
  1542              		.loc 1 1184 3 view .LVU501
 1185:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   assert_param(IS_LL_TIM_OCPOLARITY(TIM_OCInitStruct->OCPolarity));
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 196
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 196
 
 
  1543              		.loc 1 1185 3 view .LVU502
@@ -11758,7 +11758,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  1567              	.LVL138:
 1202:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
  1568              		.loc 1 1202 3 view .LVU515
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 197
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 197
 
 
  1569 027e 41EA0451 		orr	r1, r1, r4, lsl #20
@@ -11818,7 +11818,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  1610 02c4 5C68     		ldr	r4, [r3, #4]
  1611 02c6 9569     		ldr	r5, [r2, #24]
  1612 02c8 24F48024 		bic	r4, r4, #262144
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 198
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 198
 
 
  1613 02cc 44EA8524 		orr	r4, r4, r5, lsl #10
@@ -11878,7 +11878,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  1648              		.cfi_restore 6
  1649              		.cfi_restore 5
  1650              		.cfi_restore 4
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 199
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 199
 
 
  1651              		.cfi_def_cfa_offset 0
@@ -11938,7 +11938,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  1688              		.loc 1 1057 3 is_stmt 1 view .LVU558
 1069:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
  1689              		.loc 1 1069 3 is_stmt 0 view .LVU559
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 200
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 200
 
 
  1690 02f4 1669     		ldr	r6, [r2, #16]
@@ -11998,7 +11998,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  1726 031e 05F50065 		add	r5, r5, #2048
  1727 0322 AB42     		cmp	r3, r5
  1728 0324 0FD0     		beq	.L71
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 201
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 201
 
 
  1729 0326 05F54065 		add	r5, r5, #3072
@@ -12058,7 +12058,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  1769 0366 41EA8631 		orr	r1, r1, r6, lsl #14
  1770              	.LVL157:
 1086:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 202
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 202
 
 
  1771              		.loc 1 1086 5 is_stmt 1 view .LVU592
@@ -12118,7 +12118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  1811              		.cfi_restore 4
  1812              		.cfi_def_cfa_offset 0
  1813 037c 7047     		bx	lr
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 203
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 203
 
 
  1814              	.L83:
@@ -12178,7 +12178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  1864              		.loc 1 473 1 is_stmt 1 view -0
  1865              		.cfi_startproc
  1866              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 204
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 204
 
 
  1867              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -12238,7 +12238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1253:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   /* Select the Polarity and set the CC1E Bit */
 1254:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   MODIFY_REG(TIMx->CCER,
 1255:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****              (TIM_CCER_CC1P | TIM_CCER_CC1NP),
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 205
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 205
 
 
 1256:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****              (TIM_ICInitStruct->ICPolarity | TIM_CCER_CC1E));
@@ -12298,7 +12298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1310:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
 1311:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   /* Disable the Channel 3: Reset the CC3E Bit */
 1312:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   TIMx->CCER &= (uint32_t)~TIM_CCER_CC3E;
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 206
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 206
 
 
 1313:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
@@ -12358,7 +12358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  1907 0022 2943     		orrs	r1, r1, r5
  1908 0024 2143     		orrs	r1, r1, r4
  1909 0026 23F47F43 		bic	r3, r3, #65280
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 207
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 207
 
 
  1910 002a 43EA1123 		orr	r3, r3, r1, lsr #8
@@ -12418,7 +12418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  1949              	.LBB214:
  1950              	.LBI214:
 1236:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** {
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 208
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 208
 
 
  1951              		.loc 1 1236 20 view .LVU640
@@ -12478,7 +12478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  1990 0078 30BC     		pop	{r4, r5}
  1991              	.LCFI20:
  1992              		.cfi_remember_state
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 209
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 209
 
 
  1993              		.cfi_restore 5
@@ -12538,7 +12538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 1279:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
  2033              		.loc 1 1279 14 is_stmt 0 view .LVU670
  2034 0084 036A     		ldr	r3, [r0, #32]
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 210
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 210
 
 
  2035 0086 23F01003 		bic	r3, r3, #16
@@ -12598,7 +12598,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  2078              	.LCFI25:
  2079              		.cfi_restore_state
  485:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****       break;
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 211
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 211
 
 
  2080              		.loc 1 485 7 is_stmt 1 view .LVU682
@@ -12658,7 +12658,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  486:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****     case LL_TIM_CHANNEL_CH4:
  2120              		.loc 1 486 7 is_stmt 1 view .LVU697
  485:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****       break;
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 212
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 212
 
 
  2121              		.loc 1 485 16 is_stmt 0 view .LVU698
@@ -12718,7 +12718,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  2164              		.loc 1 508 3 is_stmt 1 view .LVU711
  509:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   TIM_EncoderInitStruct->IC2Polarity    = LL_TIM_IC_POLARITY_RISING;
  2165              		.loc 1 509 3 view .LVU712
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 213
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 213
 
 
  510:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   TIM_EncoderInitStruct->IC2ActiveInput = LL_TIM_ACTIVEINPUT_DIRECTTI;
@@ -12778,7 +12778,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  2204              		.loc 1 538 3 view .LVU730
  539:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
  2205              		.loc 1 539 3 view .LVU731
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 214
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 214
 
 
  542:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
@@ -12838,7 +12838,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  2245              		.loc 1 554 12 view .LVU746
  2246 001c 1843     		orrs	r0, r0, r3
  558:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   tmpccmr1 |= (uint32_t)(TIM_EncoderInitStruct->IC2Filter >> 8U);
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 215
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 215
 
 
  2247              		.loc 1 558 64 view .LVU747
@@ -12898,7 +12898,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  2285              		.loc 3 3901 3 view .LVU763
  2286 003e 27F48037 		bic	r7, r7, #65536
  2287              	.LBE223:
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 216
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 216
 
 
  2288              	.LBE228:
@@ -12958,7 +12958,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
 3901:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h **** }
  2326              		.loc 3 3901 3 view .LVU780
  2327 005a AF60     		str	r7, [r5, #8]
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 217
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 217
 
 
  2328              	.LVL200:
@@ -13018,7 +13018,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  591:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   TIM_HallSensorInitStruct->CommutationDelay  = 0U;
  2374              		.loc 1 591 3 is_stmt 1 view .LVU791
  592:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** }
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 218
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 218
 
 
  2375              		.loc 1 592 47 is_stmt 0 view .LVU792
@@ -13078,7 +13078,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  2418 0004 23F01103 		bic	r3, r3, #17
  2419 0008 0362     		str	r3, [r0, #32]
  632:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 219
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 219
 
 
  2420              		.loc 1 632 3 is_stmt 1 view .LVU806
@@ -13138,7 +13138,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  666:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   tmpccer |= (uint32_t)(TIM_CCER_CC1E | TIM_CCER_CC2E);
  2458              		.loc 1 666 11 view .LVU823
  2459 0030 2A43     		orrs	r2, r2, r5
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 220
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 220
 
 
  662:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
@@ -13198,7 +13198,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  679:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
  2493              		.loc 1 679 3 view .LVU845
  2494 0050 0262     		str	r2, [r0, #32]
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 221
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 221
 
 
  682:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c **** 
@@ -13258,7 +13258,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  2542              		@ link register save eliminated.
  696:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   TIM_BDTRInitStruct->OSSIState       = LL_TIM_OSSI_DISABLE;
  2543              		.loc 1 696 3 view .LVU855
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 222
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 222
 
 
  696:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   TIM_BDTRInitStruct->OSSIState       = LL_TIM_OSSI_DISABLE;
@@ -13318,7 +13318,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  2583              	LL_TIM_BDTR_Init:
  2584              	.LVL219:
  2585              	.LFB444:
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 223
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 223
 
 
  728:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   uint32_t tmpbdtr = 0;
@@ -13378,7 +13378,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  2620              		.loc 1 746 3 is_stmt 0 view .LVU892
  2621 0010 1A43     		orrs	r2, r2, r3
  2622              	.LVL221:
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 224
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 224
 
 
  747:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   MODIFY_REG(tmpbdtr, TIM_BDTR_BKE, TIM_BDTRInitStruct->BreakState);
@@ -13438,7 +13438,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  2660              		.loc 1 752 3 is_stmt 1 view .LVU909
  752:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****   {
  2661              		.loc 1 752 6 is_stmt 0 view .LVU910
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 225
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 225
 
 
  2662 0036 06D0     		beq	.L105
@@ -13498,7 +13498,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  2698 0058 D1E90754 		ldrd	r5, r4, [r1, #28]
  768:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c ****     MODIFY_REG(tmpbdtr, TIM_BDTR_BK2E, TIM_BDTRInitStruct->Break2State);
  2699              		.loc 1 768 5 view .LVU929
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 226
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 226
 
 
  2700 005c 22F47002 		bic	r2, r2, #15728640
@@ -13558,7 +13558,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  2741              	.L110:
  2742 0080 002C0140 		.word	1073818624
  2743 0084 00340140 		.word	1073820672
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 227
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 227
 
 
  2744              		.cfi_endproc
@@ -13571,42 +13571,42 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 1
  2752              		.file 7 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h"
  2753              		.file 8 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h"
  2754              		.file 9 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h"
-ARM GAS  D:\apps\VSCode\data\tmp\ccjmMlMJ.s 			page 228
+ARM GAS  D:\apps\VSCode\data\tmp\ccSXvv9x.s 			page 228
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32g4xx_ll_tim.c
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:18     .text.LL_TIM_DeInit:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:27     .text.LL_TIM_DeInit:0000000000000000 LL_TIM_DeInit
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:543    .text.LL_TIM_DeInit:000000000000016c $d
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:561    .text.LL_TIM_StructInit:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:569    .text.LL_TIM_StructInit:0000000000000000 LL_TIM_StructInit
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:601    .text.LL_TIM_Init:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:609    .text.LL_TIM_Init:0000000000000000 LL_TIM_Init
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:830    .text.LL_TIM_Init:00000000000000b0 $d
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:836    .text.LL_TIM_OC_StructInit:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:844    .text.LL_TIM_OC_StructInit:0000000000000000 LL_TIM_OC_StructInit
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:872    .text.LL_TIM_OC_Init:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:880    .text.LL_TIM_OC_Init:0000000000000000 LL_TIM_OC_Init
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:1656   .text.LL_TIM_OC_Init:00000000000002e0 $d
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:1677   .text.LL_TIM_OC_Init:00000000000002e8 $t
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:1817   .text.LL_TIM_OC_Init:0000000000000380 $d
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:1822   .text.LL_TIM_IC_StructInit:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:1830   .text.LL_TIM_IC_StructInit:0000000000000000 LL_TIM_IC_StructInit
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:1853   .text.LL_TIM_IC_Init:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:1861   .text.LL_TIM_IC_Init:0000000000000000 LL_TIM_IC_Init
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:2130   .text.LL_TIM_ENCODER_StructInit:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:2138   .text.LL_TIM_ENCODER_StructInit:0000000000000000 LL_TIM_ENCODER_StructInit
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:2178   .text.LL_TIM_ENCODER_Init:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:2186   .text.LL_TIM_ENCODER_Init:0000000000000000 LL_TIM_ENCODER_Init
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:2353   .text.LL_TIM_HALLSENSOR_StructInit:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:2361   .text.LL_TIM_HALLSENSOR_StructInit:0000000000000000 LL_TIM_HALLSENSOR_StructInit
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:2383   .text.LL_TIM_HALLSENSOR_Init:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:2391   .text.LL_TIM_HALLSENSOR_Init:0000000000000000 LL_TIM_HALLSENSOR_Init
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:2527   .text.LL_TIM_BDTR_StructInit:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:2535   .text.LL_TIM_BDTR_StructInit:0000000000000000 LL_TIM_BDTR_StructInit
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:2575   .text.LL_TIM_BDTR_Init:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:2583   .text.LL_TIM_BDTR_Init:0000000000000000 LL_TIM_BDTR_Init
-D:\apps\VSCode\data\tmp\ccjmMlMJ.s:2742   .text.LL_TIM_BDTR_Init:0000000000000080 $d
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:18     .text.LL_TIM_DeInit:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:27     .text.LL_TIM_DeInit:0000000000000000 LL_TIM_DeInit
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:543    .text.LL_TIM_DeInit:000000000000016c $d
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:561    .text.LL_TIM_StructInit:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:569    .text.LL_TIM_StructInit:0000000000000000 LL_TIM_StructInit
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:601    .text.LL_TIM_Init:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:609    .text.LL_TIM_Init:0000000000000000 LL_TIM_Init
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:830    .text.LL_TIM_Init:00000000000000b0 $d
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:836    .text.LL_TIM_OC_StructInit:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:844    .text.LL_TIM_OC_StructInit:0000000000000000 LL_TIM_OC_StructInit
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:872    .text.LL_TIM_OC_Init:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:880    .text.LL_TIM_OC_Init:0000000000000000 LL_TIM_OC_Init
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:1656   .text.LL_TIM_OC_Init:00000000000002e0 $d
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:1677   .text.LL_TIM_OC_Init:00000000000002e8 $t
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:1817   .text.LL_TIM_OC_Init:0000000000000380 $d
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:1822   .text.LL_TIM_IC_StructInit:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:1830   .text.LL_TIM_IC_StructInit:0000000000000000 LL_TIM_IC_StructInit
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:1853   .text.LL_TIM_IC_Init:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:1861   .text.LL_TIM_IC_Init:0000000000000000 LL_TIM_IC_Init
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:2130   .text.LL_TIM_ENCODER_StructInit:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:2138   .text.LL_TIM_ENCODER_StructInit:0000000000000000 LL_TIM_ENCODER_StructInit
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:2178   .text.LL_TIM_ENCODER_Init:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:2186   .text.LL_TIM_ENCODER_Init:0000000000000000 LL_TIM_ENCODER_Init
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:2353   .text.LL_TIM_HALLSENSOR_StructInit:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:2361   .text.LL_TIM_HALLSENSOR_StructInit:0000000000000000 LL_TIM_HALLSENSOR_StructInit
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:2383   .text.LL_TIM_HALLSENSOR_Init:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:2391   .text.LL_TIM_HALLSENSOR_Init:0000000000000000 LL_TIM_HALLSENSOR_Init
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:2527   .text.LL_TIM_BDTR_StructInit:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:2535   .text.LL_TIM_BDTR_StructInit:0000000000000000 LL_TIM_BDTR_StructInit
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:2575   .text.LL_TIM_BDTR_Init:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:2583   .text.LL_TIM_BDTR_Init:0000000000000000 LL_TIM_BDTR_Init
+D:\apps\VSCode\data\tmp\ccSXvv9x.s:2742   .text.LL_TIM_BDTR_Init:0000000000000080 $d
 
 NO UNDEFINED SYMBOLS

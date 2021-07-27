@@ -1,4 +1,4 @@
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -27,7 +27,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
   24              		.thumb_func
   25              		.fpu fpv4-sp-d16
   27              	MX_GPIO_Init:
-  28              	.LFB2126:
+  28              	.LFB2128:
   29              		.file 1 "Src/gpio.c"
    1:Src/gpio.c    **** /**
    2:Src/gpio.c    ****   ******************************************************************************
@@ -58,7 +58,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
   27:Src/gpio.c    **** 
   28:Src/gpio.c    **** uint8_t sensorType = HALL;
   29:Src/gpio.c    **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 2
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 2
 
 
   30:Src/gpio.c    **** /* USER CODE END 0 */
@@ -118,7 +118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
    1:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
    2:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   ******************************************************************************
    3:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @file    stm32g4xx_ll_bus.h
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 3
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 3
 
 
    4:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @author  MCD Application Team
@@ -178,7 +178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
   58:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /* Private types -------------------------------------------------------------*/
   59:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /* Private variables ---------------------------------------------------------*/
   60:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 4
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 4
 
 
   61:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /* Private constants ---------------------------------------------------------*/
@@ -238,7 +238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
  115:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_RNG            RCC_AHB2ENR_RNGEN
  116:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
  117:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @}
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 5
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 5
 
 
  118:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
@@ -298,7 +298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
  172:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
  173:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /** @defgroup BUS_LL_EC_APB1_GRP2_PERIPH  APB1 GRP2 PERIPH
  174:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @{
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 6
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 6
 
 
  175:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
@@ -358,7 +358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
  229:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1ENR      DMA2EN        LL_AHB1_GRP1_EnableClock\n
  230:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1ENR      DMAMMUXEN     LL_AHB1_GRP1_EnableClock\n
  231:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1ENR      CORDICEN      LL_AHB1_GRP1_EnableClock\n
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 7
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 7
 
 
  232:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1ENR      FMACEN        LL_AHB1_GRP1_EnableClock\n
@@ -418,7 +418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
  286:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1ENR      CRCEN         LL_AHB1_GRP1_DisableClock
  287:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
  288:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA1
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 8
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 8
 
 
  289:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA2
@@ -478,7 +478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
  343:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_FLASH
  344:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CRC
  345:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval None
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 9
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 9
 
 
  346:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
@@ -538,7 +538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
  400:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CRC
  401:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval None
  402:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 10
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 10
 
 
  403:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** __STATIC_INLINE void LL_AHB1_GRP1_DisableClockStopSleep(uint32_t Periphs)
@@ -598,7 +598,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
   59              		.loc 2 456 3 view .LVU6
   60 0010 4F4B     		ldr	r3, .L4
   61              	.LBE15:
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 11
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 11
 
 
   62              	.LBE14:
@@ -658,7 +658,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
   33:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   */
   34:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** 
   35:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** #if defined (GPIOA) || defined (GPIOB) || defined (GPIOC) || defined (GPIOD) || defined (GPIOE) || 
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 12
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 12
 
 
   36:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** 
@@ -718,7 +718,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
   90:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****                               GPIO HW configuration can be modified afterwards using unitary functi
   91:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** 
   92:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   uint32_t Pull;         /*!< Specifies the operating Pull-up/Pull down for the selected pins.
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 13
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 13
 
 
   93:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****                               This parameter can be a value of @ref GPIO_LL_EC_PULL.
@@ -778,7 +778,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
  147:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** #define LL_GPIO_MODE_ALTERNATE             GPIO_MODER_MODE0_1  /*!< Select alternate function mode 
  148:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** #define LL_GPIO_MODE_ANALOG                GPIO_MODER_MODE0    /*!< Select analog mode */
  149:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 14
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 14
 
 
  150:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @}
@@ -838,7 +838,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
  204:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** #define LL_GPIO_AF_14                      (0x000000EU) /*!< Select alternate function 14 */
  205:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** #define LL_GPIO_AF_15                      (0x000000FU) /*!< Select alternate function 15 */
  206:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 15
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 15
 
 
  207:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @}
@@ -898,7 +898,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
  261:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @param  GPIOx GPIO Port
  262:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @param  Pin This parameter can be one of the following values:
  263:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_0
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 16
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 16
 
 
  264:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_1
@@ -958,7 +958,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
  318:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_MODE_ANALOG
  319:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   */
  320:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** __STATIC_INLINE uint32_t LL_GPIO_GetPinMode(GPIO_TypeDef *GPIOx, uint32_t Pin)
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 17
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 17
 
 
  321:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** {
@@ -1018,7 +1018,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
  375:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_7
  376:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_8
  377:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_9
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 18
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 18
 
 
  378:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_10
@@ -1078,7 +1078,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
  432:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** /**
  433:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @brief  Return gpio speed for a dedicated pin on dedicated port.
  434:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @note   I/O speed can be Low, Medium, Fast or High speed.
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 19
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 19
 
 
  435:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @note   Warning: only one pin can be passed as parameter.
@@ -1138,7 +1138,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
  489:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_14
  490:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_15
  491:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @param  Pull This parameter can be one of the following values:
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 20
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 20
 
 
  492:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PULL_NO
@@ -1198,7 +1198,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
  546:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_4
  547:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_5
  548:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_6
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 21
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 21
 
 
  549:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_7
@@ -1258,7 +1258,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
  603:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_AF_14
  604:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_AF_15
  605:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 22
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 22
 
 
  606:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** __STATIC_INLINE uint32_t LL_GPIO_GetAFPin_0_7(GPIO_TypeDef *GPIOx, uint32_t Pin)
@@ -1318,7 +1318,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
  660:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_10
  661:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_11
  662:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_12
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 23
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 23
 
 
  663:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_13
@@ -1378,7 +1378,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
  717:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_ALL
  718:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @retval None
  719:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 24
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 24
 
 
  720:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** __STATIC_INLINE void LL_GPIO_LockPin(GPIO_TypeDef *GPIOx, uint32_t PinMask)
@@ -1438,7 +1438,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
  774:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** 
  775:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** /** @defgroup GPIO_LL_EF_Data_Access Data Access
  776:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @{
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 25
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 25
 
 
  777:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   */
@@ -1498,7 +1498,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
  831:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h **** /**
  832:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @brief  Return full output data register value for a dedicated port.
  833:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @rmtoll ODR          ODy           LL_GPIO_ReadOutputPort
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 26
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 26
 
 
  834:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   * @param  GPIOx GPIO Port
@@ -1558,7 +1558,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
  888:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_12
  889:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_13
  890:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_14
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 27
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 27
 
 
  891:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h ****   *         @arg @ref LL_GPIO_PIN_15
@@ -1618,7 +1618,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
   70:Src/gpio.c    ****   LL_GPIO_Init(ENABLE_GPIO_Port, &GPIO_InitStruct);
   71:Src/gpio.c    **** 
   72:Src/gpio.c    ****   /**/
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 28
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 28
 
 
   73:Src/gpio.c    ****   GPIO_InitStruct.Pin = BRAKE_PWM_Pin;
@@ -1678,7 +1678,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
   56:Src/gpio.c    ****   LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_GPIOA);
  102              		.loc 1 56 3 is_stmt 1 view .LVU20
  103              	.LBB24:
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 29
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 29
 
 
  104              	.LBI24:
@@ -1738,7 +1738,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
  145              	.LBE26:
   58:Src/gpio.c    **** 
  146              		.loc 1 58 3 is_stmt 1 view .LVU38
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 30
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 30
 
 
  147              	.LBB28:
@@ -1798,7 +1798,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
  192 006a C7F828A0 		str	r10, [r7, #40]
  193              	.LVL5:
  194              		.loc 3 926 3 is_stmt 0 view .LVU53
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 31
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 31
 
 
  195              	.LBE22:
@@ -1858,7 +1858,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
  234              		.loc 1 79 3 view .LVU71
  235 008a 04A9     		add	r1, sp, #16
  236 008c 4FF09040 		mov	r0, #1207959552
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 32
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 32
 
 
   73:Src/gpio.c    ****   GPIO_InitStruct.Mode = LL_GPIO_MODE_ALTERNATE;
@@ -1918,7 +1918,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
  271 00b6 3846     		mov	r0, r7
   91:Src/gpio.c    ****   GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
  272              		.loc 1 91 24 view .LVU92
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 33
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 33
 
 
  273 00b8 CDE90498 		strd	r9, r8, [sp, #16]
@@ -1978,7 +1978,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
  307              		.loc 1 107 3 view .LVU112
  108:Src/gpio.c    ****   GPIO_InitStruct.Mode = LL_GPIO_MODE_INPUT;
  109:Src/gpio.c    ****   GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 34
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 34
 
 
  110:Src/gpio.c    ****   LL_GPIO_Init(GPIOB, &GPIO_InitStruct);
@@ -2038,7 +2038,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
  340 00fc 04A9     		add	r1, sp, #16
  118:Src/gpio.c    ****   GPIO_InitStruct.Mode = LL_GPIO_MODE_INPUT;
  341              		.loc 1 118 23 view .LVU131
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 35
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 35
 
 
  342 00fe 8023     		movs	r3, #128
@@ -2098,7 +2098,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
  377              	.LVL15:
  129:Src/gpio.c    ****   /**/
  130:Src/gpio.c    ****   GPIO_InitStruct.Pin = HALL_PHASE_C_Pin;
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 36
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 36
 
 
  378              		.loc 1 130 3 is_stmt 1 view .LVU153
@@ -2158,7 +2158,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
  139:Src/gpio.c    ****   LL_GPIO_Init(DIR_GPIO_Port, &GPIO_InitStruct);
  411              		.loc 1 139 3 view .LVU172
  412              		.loc 1 140 3 view .LVU173
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 37
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 37
 
 
  413 0144 FFF7FEFF 		bl	LL_GPIO_Init
@@ -2203,7 +2203,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
  425 0154 00080048 		.word	1207961600
  426 0158 00040048 		.word	1207960576
  427              		.cfi_endproc
- 428              	.LFE2126:
+ 428              	.LFE2128:
  430              		.global	sensorType
  431              		.section	.bss.sensorType,"aw",%nobits
  434              	sensorType:
@@ -2218,7 +2218,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
  443              		.file 9 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_hrtim.h"
  444              		.file 10 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dma.h"
  445              		.file 11 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h"
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 38
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 38
 
 
  446              		.file 12 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h"
@@ -2227,16 +2227,16 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 1
  449              		.file 15 "d:\\apps\\embedded_gcc\\arm_gcc\\lib\\gcc\\arm-none-eabi\\8.2.1\\include\\stddef.h"
  450              		.file 16 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\reent.h"
  451              		.file 17 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\math.h"
-ARM GAS  D:\apps\VSCode\data\tmp\ccdYRava.s 			page 39
+ARM GAS  D:\apps\VSCode\data\tmp\ccODVpKA.s 			page 39
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gpio.c
-D:\apps\VSCode\data\tmp\ccdYRava.s:18     .text.MX_GPIO_Init:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccdYRava.s:27     .text.MX_GPIO_Init:0000000000000000 MX_GPIO_Init
-D:\apps\VSCode\data\tmp\ccdYRava.s:424    .text.MX_GPIO_Init:0000000000000150 $d
-D:\apps\VSCode\data\tmp\ccdYRava.s:434    .bss.sensorType:0000000000000000 sensorType
-D:\apps\VSCode\data\tmp\ccdYRava.s:435    .bss.sensorType:0000000000000000 $d
+D:\apps\VSCode\data\tmp\ccODVpKA.s:18     .text.MX_GPIO_Init:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccODVpKA.s:27     .text.MX_GPIO_Init:0000000000000000 MX_GPIO_Init
+D:\apps\VSCode\data\tmp\ccODVpKA.s:424    .text.MX_GPIO_Init:0000000000000150 $d
+D:\apps\VSCode\data\tmp\ccODVpKA.s:434    .bss.sensorType:0000000000000000 sensorType
+D:\apps\VSCode\data\tmp\ccODVpKA.s:435    .bss.sensorType:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 LL_GPIO_Init

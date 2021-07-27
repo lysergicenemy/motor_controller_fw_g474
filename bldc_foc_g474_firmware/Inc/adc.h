@@ -32,6 +32,8 @@ extern "C"
   /* USER CODE END Includes */
 
   /* USER CODE BEGIN Private defines */
+#define RC_HW_CUTOFF_HZ 1650.f
+
   struct adcData_s
   {
     int32_t ph_u;
@@ -60,27 +62,31 @@ extern "C"
     const float one_by_maxADC = 0.000244140625f; // (1 / 4096)
     if (p->config.sim == 1)
     {
-      p->data.angle = pbldc->tetaR;
       // clarke transform for phase currents
       p->data.isa = pbldc->isPhaseA;
       p->data.isb = _1DIV_SQRT3 * pbldc->isPhaseA + _2DIV_SQRT3 * pbldc->isPhaseB;
+      p->data.vAlpha = pbldc->usa;
+      p->data.vBeta = pbldc->usb;
       p->volt.DcBusVolt = pbldc->udc;
     }
     else if (p->config.sim == 0)
     {
-      // scaling ADC data
+      // scaling ADC data for phase currents
       p->data.iPhaseA = ((float)padc->ph_u - p->data.offsetCurrA) * (one_by_halfADC * p->config.adcFullScaleCurrent);
       p->data.iPhaseB = ((float)padc->ph_v - p->data.offsetCurrB) * (one_by_halfADC * p->config.adcFullScaleCurrent);
       p->data.iPhaseC = ((float)padc->ph_w - p->data.offsetCurrC) * (one_by_halfADC * p->config.adcFullScaleCurrent);
+      // scaling ADC data for DC-Link voltage
       p->volt.DcBusVolt = (float)padc->v_dc * one_by_maxADC * p->config.adcFullScaleVoltage;
-      p->data.vPhaseA = ((float)padc->v_u - p->data.offsetVoltA) * (one_by_maxADC * p->config.adcFullScaleVoltage);
-      p->data.vPhaseB = ((float)padc->v_v - p->data.offsetVoltB) * (one_by_maxADC * p->config.adcFullScaleVoltage);
-      p->data.vPhaseC = ((float)padc->v_w - p->data.offsetVoltC) * (one_by_maxADC * p->config.adcFullScaleVoltage);
-      // Clarke transform for phase currents and voltages
+      // scaling ADC data for phase voltages
+      p->data.vPhaseA = -(((float)padc->v_u * (one_by_maxADC * p->config.adcFullScaleVoltage)) - p->data.offsetVoltA * p->volt.DcBusVolt);
+      p->data.vPhaseB = -(((float)padc->v_v * (one_by_maxADC * p->config.adcFullScaleVoltage)) - p->data.offsetVoltB * p->volt.DcBusVolt);
+      p->data.vPhaseC = -(((float)padc->v_w * (one_by_maxADC * p->config.adcFullScaleVoltage)) - p->data.offsetVoltC * p->volt.DcBusVolt);
+      // Clarke transform for phase currents
       p->data.isa = p->data.iPhaseA;
       p->data.isb = _1DIV_SQRT3 * p->data.iPhaseA + _2DIV_SQRT3 * p->data.iPhaseB;
-      p->data.vAlpha = (2.f / 3.f) * p->cmtn.lpf_bemfA.out - (1.f / 3.f) * (p->cmtn.lpf_bemfB.out - p->cmtn.lpf_bemfC.out);
-      p->data.vBeta = ONE_BY_SQRT3 * (p->cmtn.lpf_bemfB.out - p->cmtn.lpf_bemfC.out);
+      // Clarke transform for phase voltages
+      p->data.vAlpha = ((p->data.vPhaseA * 2.f) - (p->data.vPhaseB + p->data.vPhaseC)) * (1.f / 3.f);
+      p->data.vBeta = ONE_BY_SQRT3 * (p->data.vPhaseB - p->data.vPhaseC);
     }
   }
   /* USER CODE END Private defines */
