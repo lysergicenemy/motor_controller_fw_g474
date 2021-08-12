@@ -1038,7 +1038,7 @@ typedef volatile enum sensorType_e sensorType_t;
 
 struct config_s
 {
-    focMode_t mode;                     // Control real motor or simulate it
+    focMode_t mode;                     // FOC or BLDC mode
     sensorType_t sensorType;            // Type of rotor position sensor
     uint8_t sim;                        // 0 - control real motor, 1 - control motor model
     decMode_t decMode;                  // Axis decoupling mode
@@ -1280,7 +1280,7 @@ static inline void Foc_update_cc(foc_t *p)
     p->pi_id.Fdb = p->data.isd;
     p->pi_iq.Fdb = p->data.isq;
     p->pi_id.Fdfwd = -p->data.udDec;
-    p->pi_iq.Fdfwd = p->data.uqDec + p->cgtc.uCogg;
+    p->pi_iq.Fdfwd = p->data.uqDec + (p->cgtc.uCogg * p->cgtc.uRef);
     p->pi_id.OutMax = p->volt.magMaxD;
     p->pi_id.OutMin = -p->pi_id.OutMax;
     p->pi_iq.OutMax = p->volt.magMaxQ;
