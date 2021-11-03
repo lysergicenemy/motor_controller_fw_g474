@@ -1,0 +1,193 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- load JSON-RPC and FreeMASTER wrapper object -->
+    <script type="text/javascript" src="./simple-jsonrpc-js.js"></script>
+    <script type="text/javascript" src="./freemaster-client.js"></script>
+
+    <script type="text/javascript">
+        var pcm;  // the main FreeMASTER communication object
+
+        function main() {
+            /* Desktop FreeMASTER listens on port 41000 by default, unless this is
+             * overridden on command line using /rpcs option. FreeMASTER Lite 
+             is configurable. */
+            pcm = new PCM("localhost:41000", on_connected, on_error, on_error);
+            pcm.OnServerError = on_error;
+            pcm.OnSocketError = on_error;
+
+            setInterval(timer, 200);
+        }
+
+        function timer() {
+
+            read_variable('execTime1', 'isrTime_read');
+            
+            read_variable('foc1.data.iAvg', 'currentAvg_shdw');
+            read_variable('execTime1', 'status_bar');
+            var progressVar = document.getElementById("status_bar");
+            progressVar.value = document.getElementById("currentAvg_shdw").innerText;
+            /* Change float representation */
+            read_variable('foc1.volt.DcBusVolt', 'dcBusVolt_shdw');
+            var dc_volt = document.getElementById("dcBusVolt_shdw");
+            var dc_volt1 = document.getElementById("dcBusVolt_read");
+            dc_volt1.innerHTML = dc_volt.innerText.substr(0, 5);
+            /* Change float representation */
+            read_variable('ntcPcb.temp', 'pcbTemp_shdw');
+            var pcbTmp = document.getElementById("pcbTemp_shdw");
+            var pcbTmpShort = document.getElementById("pcbTemp_read");
+            pcbTmpShort.innerHTML = pcbTmp.innerText.substr(0, 5);
+            /** Change text color depends on temprature
+             * 90 deg = 255 color value, scale = 255 / 90 = 2.83
+             */
+            var pcbTmpColor = parseFloat(pcbTmpShort.innerText) * 2.83;
+            pcbTmpShort.style.color = 'rgb(' + (pcbTmpColor) + ',' + (255 - pcbTmpColor) + ',' + 5 + ')';
+            /* Change float representation */
+            read_variable('foc1.driveState', 'driveState_shdw');
+            var driveStateVar = parseInt(document.getElementById("driveState_shdw").innerText, 10);
+            if (driveStateVar < 1) {
+                document.getElementById("driveState_read").innerHTML = 'STOPED';
+                document.getElementById("driveState_read").style.color = 'rgb(35, 64, 42)';
+                document.getElementById("driveState_read").style.animation = '0';
+            }
+            else {
+                document.getElementById("driveState_read").innerHTML = 'RUN';
+                document.getElementById("driveState_read").style.color = 'rgb(17, 34, 82)';
+                document.getElementById("driveState_read").style.animation = 'blink1 0.5s linear infinite';
+
+                //document.getElementById("driveState_read").style.visibility=(document.getElementById("driveState_read").style.visibility=='visible')?'hidden':'visible';
+            }
+
+
+        }
+        function setDuty() {
+            write_variable('foc1.driveState', 'driveStateDuty_val');
+            write_variable('foc1.data.dutyRef', 'duty_val');
+
+        }
+        function setCurrent() {
+            write_variable('foc1.driveState', 'driveStateCurrent_val');
+            write_variable('foc1.data.iqRef', 'current_val');
+
+        }
+        function setSpeed() {
+            write_variable('foc1.driveState', 'driveStateSpeed_val');
+            write_variable('foc1.data.speedRef', 'speed_val');
+
+        }
+
+        function on_connected() {
+            /* Typically, you want to enable extra features to make use of the full API 
+             * provided by desktop application. Leave this disabled and avoid any extra 
+             * features when creating pages compatible with FreeMASTER Lite. */
+            //pcm.EnableExtraFeatures(true);
+        }
+
+        function on_error(err) {
+            /* Erors are reported in the status field. */
+            document.getElementById("status").innerHTML = err;
+        }
+
+        function read_variable(name, span_id) {
+            /* ReadVariable uses FreeMASTER variable object from current project. Use 
+             * ReadUIntVariable to access the memory directly using a symbol name. */
+            return pcm.ReadVariable(name)
+                .then((value) => {
+                    document.getElementById(span_id).innerHTML = value.data;
+                })
+                .catch((err) => {
+                    on_error(err.msg);
+                });
+        }
+        function read_enum(name, span_id) {
+            return pcm.EnumVariables(name)
+                .then((value) => {
+                    document.getElementById(span_id).innerHTML = value.data;
+                })
+                .catch((err) => {
+                    on_error(err.msg);
+                });
+        }
+
+        function read_array(name, elemSize, length, span_id) {
+            /* Arrays are accessed in memory directly, using a symbol name and element size.  */
+            pcm.ReadUIntArray(name, length, elemSize)
+                .then((value) => {
+                    document.getElementById(span_id).innerHTML = "";
+                    for (i = 0; i < value.data.length; i++)
+                        document.getElementById(span_id).innerHTML += value.data[i] + ", ";
+                })
+                .catch((err) => {
+                    on_error(err.msg);
+                });
+        }
+
+        function write_variable(name, input_id) {
+            var val = document.getElementById(input_id).value;
+
+            /* WriteVariable uses FreeMASTER variable object from current project. Use 
+             * WriteUIntVariable to access the memory directly using a symbol name. */
+            pcm.WriteVariable(name, val)
+                .then(() => {
+                    document.getElementById("status").innerHTML = "Write " + val + " of the " + name + " succeeded.";
+                })
+                .catch((err) => {
+                    on_error(err.msg);
+                });
+        }
+
+    </script>
+</head>
+
+<body onload="main()">
+    <!-- User form -->
+    <input type="hidden" id="reset_val" value="1" />
+    <input type="hidden" id="driveStateStop_val" value="STOP" />
+    <input type="hidden" id="driveStateDuty_val" value="RUN_DUTY" />
+    <input type="hidden" id="driveStateCurrent_val" value="RUN_CURRENT" />
+    <input type="hidden" id="driveStateSpeed_val" value="RUN_SPD" />
+    <input type="hidden" id="driveStateIdRL_val" value="PARAM_ID_RL" />
+    <input type="hidden" id="driveStateIdRun_val" value="PARAM_ID_RUN" />
+    <input type="hidden" id="dcBusVolt_shdw" value="0" />
+    <input type="hidden" id="pcbTemp_shdw" value="0" />
+    <input type="hidden" id="driveState_shdw" value="0" />
+    <input type="hidden" id="currentAvg_shdw" value="0" />
+
+    <div class="box">
+        DC-Link voltage: <span id="dcBusVolt_read">N/A</span> V <br />
+        PCB temp: <span id="pcbTemp_read">N/A</span> °C <br />
+        ISR time: <span id="isrTime_read">N/A</span> <br />
+    </div>
+
+    <input type="button" value="⛔" title="STOP" onclick="write_variable('foc1.driveState', 'driveStateStop_val')" />
+    <input type="button" value="🔄" title="Reset" onclick="write_variable('systemReset', 'reset_val')" />
+    <input type="button" id="rlId_btn" value="RL" title="Motor R,L detection" onclick="write_variable('foc1.driveState', 'driveStateIdRL_val')" />
+    <input type="button" id="fluxId_btn" value="λ" title="Motor flux and sensors detection" onclick="write_variable('foc1.driveState', 'driveStateIdRun_val')" />
+    <span id="driveState_read">N/A</span><br />
+
+    <div class="box">
+        DUTY: <input type="text" id="duty_val" value="0" />
+        <input type="button" value="✅" onclick="setDuty()" /> <br />
+        CURRENT: <input type="text" id="current_val" value="0" />
+        <input type="button" value="✅" onclick="setCurrent()" /> <br />
+        SPEED: <input type="text" id="speed_val" value="0" />
+        <input type="button" value="✅" onclick="setSpeed()" /> <br />
+        <progress id="status_bar" value="20" max="25"></progress> <br />
+    </div>
+
+    <label for="sensorType_val">SENSOR TYPE:</label>
+    <select name="sensorType" id="sensorType_val">
+        <option value="MANUAL">MANUAL</option>
+        <option value="HALL">HALL</option>
+        <option value="SENSORLESS">SENSORLESS</option>
+        <option value="HYBRYD">HYBRYD</option>
+    </select>
+    <input type="button" value="✅" onclick="write_variable('foc1.config.sensorType', 'sensorType_val')" /> <br />
+
+    Status: <span id="status" style="font-size: 10pt">No errors.</span> <br />
+
+</body>
+
+</html>

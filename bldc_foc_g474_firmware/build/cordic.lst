@@ -1,4 +1,4 @@
-ARM GAS  D:\apps\VSCode\data\tmp\cczkoAsr.s 			page 1
+ARM GAS  D:\apps\VSCode\data\tmp\ccBa2TdY.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -27,7 +27,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cczkoAsr.s 			page 1
   24              		.thumb_func
   25              		.fpu fpv4-sp-d16
   27              	Cordic_Init:
-  28              	.LFB2130:
+  28              	.LFB2053:
   29              		.file 1 "Src/cordic.c"
    1:Src/cordic.c  **** /**
    2:Src/cordic.c  ****   ******************************************************************************
@@ -58,7 +58,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cczkoAsr.s 			page 1
   32              		@ args = 0, pretend = 0, frame = 8
   33              		@ frame_needed = 0, uses_anonymous_args = 0
   34              		@ link register save eliminated.
-ARM GAS  D:\apps\VSCode\data\tmp\cczkoAsr.s 			page 2
+ARM GAS  D:\apps\VSCode\data\tmp\ccBa2TdY.s 			page 2
 
 
   25:Src/cordic.c  ****   LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_CORDIC);
@@ -118,7 +118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cczkoAsr.s 			page 1
   49:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @{
   50:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
   51:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\cczkoAsr.s 			page 3
+ARM GAS  D:\apps\VSCode\data\tmp\ccBa2TdY.s 			page 3
 
 
   52:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #if defined(RCC)
@@ -178,7 +178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cczkoAsr.s 			page 1
  106:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_DAC2           RCC_AHB2ENR_DAC2EN
  107:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #endif /* DAC2 */
  108:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_DAC3           RCC_AHB2ENR_DAC3EN
-ARM GAS  D:\apps\VSCode\data\tmp\cczkoAsr.s 			page 4
+ARM GAS  D:\apps\VSCode\data\tmp\ccBa2TdY.s 			page 4
 
 
  109:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #if defined(DAC4)
@@ -238,7 +238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cczkoAsr.s 			page 1
  163:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_FDCAN          RCC_APB1ENR1_FDCANEN
  164:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #endif /* FDCAN1 */
  165:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_PWR            RCC_APB1ENR1_PWREN
-ARM GAS  D:\apps\VSCode\data\tmp\cczkoAsr.s 			page 5
+ARM GAS  D:\apps\VSCode\data\tmp\ccBa2TdY.s 			page 5
 
 
  166:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_I2C3           RCC_APB1ENR1_I2C3EN
@@ -298,7 +298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cczkoAsr.s 			page 1
  220:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
  221:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
  222:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /** @defgroup BUS_LL_EF_AHB1 AHB1
-ARM GAS  D:\apps\VSCode\data\tmp\cczkoAsr.s 			page 6
+ARM GAS  D:\apps\VSCode\data\tmp\ccBa2TdY.s 			page 6
 
 
  223:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @{
@@ -358,7 +358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cczkoAsr.s 			page 1
   19:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h **** 
   20:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h **** /* Define to prevent recursive inclusion -------------------------------------*/
   21:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h **** #ifndef STM32G4xx_LL_CORDIC_H
-ARM GAS  D:\apps\VSCode\data\tmp\cczkoAsr.s 			page 7
+ARM GAS  D:\apps\VSCode\data\tmp\ccBa2TdY.s 			page 7
 
 
   22:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h **** #define STM32G4xx_LL_CORDIC_H
@@ -418,7 +418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cczkoAsr.s 			page 1
   76:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h **** #define LL_CORDIC_FUNCTION_SINE            ((uint32_t)(CORDIC_CSR_FUNC_0))                         
   77:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h **** #define LL_CORDIC_FUNCTION_PHASE           ((uint32_t)(CORDIC_CSR_FUNC_1))                         
   78:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h **** #define LL_CORDIC_FUNCTION_MODULUS         ((uint32_t)(CORDIC_CSR_FUNC_1 | CORDIC_CSR_FUNC_0))     
-ARM GAS  D:\apps\VSCode\data\tmp\cczkoAsr.s 			page 8
+ARM GAS  D:\apps\VSCode\data\tmp\ccBa2TdY.s 			page 8
 
 
   79:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h **** #define LL_CORDIC_FUNCTION_ARCTANGENT      ((uint32_t)(CORDIC_CSR_FUNC_2))                         
@@ -478,7 +478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cczkoAsr.s 			page 1
  133:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h ****   * @{
  134:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h ****   */
  135:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h **** #define LL_CORDIC_NBWRITE_1                (0x00000000U)             /*!< One 32-bits write contain
-ARM GAS  D:\apps\VSCode\data\tmp\cczkoAsr.s 			page 9
+ARM GAS  D:\apps\VSCode\data\tmp\ccBa2TdY.s 			page 9
 
 
  136:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h ****                                                                           32-bit data input (Q1.31 
@@ -538,7 +538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cczkoAsr.s 			page 1
  190:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h **** /** @defgroup CORDIC_LL_Exported_Macros CORDIC Exported Macros
  191:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h ****   * @{
  192:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\cczkoAsr.s 			page 10
+ARM GAS  D:\apps\VSCode\data\tmp\ccBa2TdY.s 			page 10
 
 
  193:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h **** 
@@ -598,7 +598,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cczkoAsr.s 			page 1
  247:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h ****   *         CSR          SCALE         LL_CORDIC_Configure\n
  248:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h ****   *         CSR          NARGS         LL_CORDIC_Configure\n
  249:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h ****   *         CSR          NRES          LL_CORDIC_Configure\n
-ARM GAS  D:\apps\VSCode\data\tmp\cczkoAsr.s 			page 11
+ARM GAS  D:\apps\VSCode\data\tmp\ccBa2TdY.s 			page 11
 
 
  250:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h ****   *         CSR          ARGSIZE       LL_CORDIC_Configure\n
@@ -658,7 +658,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cczkoAsr.s 			page 1
  304:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h ****                                       uint32_t NbWrite, uint32_t NbRead, uint32_t InSize, uint32_t 
  305:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h **** {
  306:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h ****   MODIFY_REG(CORDICx->CSR,
-ARM GAS  D:\apps\VSCode\data\tmp\cczkoAsr.s 			page 12
+ARM GAS  D:\apps\VSCode\data\tmp\ccBa2TdY.s 			page 12
 
 
   50              		.loc 3 306 3 is_stmt 0 view .LVU5
@@ -718,7 +718,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cczkoAsr.s 			page 1
   97              		.loc 3 306 3 view .LVU18
   98 001a 0268     		ldr	r2, [r0]
   99 001c 1340     		ands	r3, r3, r2
-ARM GAS  D:\apps\VSCode\data\tmp\cczkoAsr.s 			page 13
+ARM GAS  D:\apps\VSCode\data\tmp\ccBa2TdY.s 			page 13
 
 
  100 001e 43F40023 		orr	r3, r3, #524288
@@ -748,30 +748,45 @@ ARM GAS  D:\apps\VSCode\data\tmp\cczkoAsr.s 			page 1
  117 0030 000C0240 		.word	1073875968
  118 0034 00F887FF 		.word	-7866368
  119              		.cfi_endproc
- 120              	.LFE2130:
- 122              		.text
- 123              	.Letext0:
- 124              		.file 4 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\machine\\_default_types.h"
- 125              		.file 5 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\_stdint.h"
- 126              		.file 6 "Drivers/CMSIS/Include/core_cm4.h"
- 127              		.file 7 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h"
- 128              		.file 8 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h"
- 129              		.file 9 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_hrtim.h"
- 130              		.file 10 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dma.h"
- 131              		.file 11 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h"
- 132              		.file 12 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h"
- 133              		.file 13 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\lock.h"
- 134              		.file 14 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\_types.h"
- 135              		.file 15 "d:\\apps\\embedded_gcc\\arm_gcc\\lib\\gcc\\arm-none-eabi\\8.2.1\\include\\stddef.h"
- 136              		.file 16 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\reent.h"
- 137              		.file 17 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\math.h"
-ARM GAS  D:\apps\VSCode\data\tmp\cczkoAsr.s 			page 14
+ 120              	.LFE2053:
+ 122              		.comm	foc_atan2,4,4
+ 123              		.comm	foc_sincos,4,4
+ 124              		.comm	foc_bldcpwm_update,4,4
+ 125              		.comm	foc_pwm_update,4,4
+ 126              		.comm	foc_pwm_on,4,4
+ 127              		.comm	foc_pwm_off,4,4
+ 128              		.comm	foc_pwm_init,4,4
+ 129              		.text
+ 130              	.Letext0:
+ 131              		.file 4 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 132              		.file 5 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 133              		.file 6 "Drivers/CMSIS/Include/core_cm4.h"
+ 134              		.file 7 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h"
+ 135              		.file 8 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h"
+ 136              		.file 9 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_hrtim.h"
+ 137              		.file 10 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dma.h"
+ 138              		.file 11 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h"
+ 139              		.file 12 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h"
+ 140              		.file 13 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\lock.h"
+ 141              		.file 14 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\_types.h"
+ 142              		.file 15 "d:\\apps\\embedded_gcc\\arm_gcc\\lib\\gcc\\arm-none-eabi\\8.2.1\\include\\stddef.h"
+ 143              		.file 16 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\reent.h"
+ 144              		.file 17 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\math.h"
+ 145              		.file 18 "Inc/foc.h"
+ARM GAS  D:\apps\VSCode\data\tmp\ccBa2TdY.s 			page 14
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 cordic.c
-D:\apps\VSCode\data\tmp\cczkoAsr.s:18     .text.Cordic_Init:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cczkoAsr.s:27     .text.Cordic_Init:0000000000000000 Cordic_Init
-D:\apps\VSCode\data\tmp\cczkoAsr.s:116    .text.Cordic_Init:000000000000002c $d
+D:\apps\VSCode\data\tmp\ccBa2TdY.s:18     .text.Cordic_Init:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBa2TdY.s:27     .text.Cordic_Init:0000000000000000 Cordic_Init
+D:\apps\VSCode\data\tmp\ccBa2TdY.s:116    .text.Cordic_Init:000000000000002c $d
+                            *COM*:0000000000000004 foc_atan2
+                            *COM*:0000000000000004 foc_sincos
+                            *COM*:0000000000000004 foc_bldcpwm_update
+                            *COM*:0000000000000004 foc_pwm_update
+                            *COM*:0000000000000004 foc_pwm_on
+                            *COM*:0000000000000004 foc_pwm_off
+                            *COM*:0000000000000004 foc_pwm_init
 
 NO UNDEFINED SYMBOLS

@@ -84,6 +84,29 @@ static inline void datalogCalc(dataLogVars_t *p)
   }
 }
 
+/**
+ * @brief Fast dataLog mode with external
+ *        cleaning record compete flag
+ */
+static inline void datalogCalcFast(dataLogVars_t *p)
+{
+  if (p->trigger >= 1)
+  {
+    p->buffChannel1[p->frameCntr] = p->in1; // var 1
+    p->buffChannel2[p->frameCntr] = p->in2; // var 2
+    p->buffChannel3[p->frameCntr] = p->in3; // var 3
+    p->buffChannel4[p->frameCntr] = p->in4; // var 4
+
+    p->frameCntr++;
+    if (p->frameCntr >= (DATALOG_STERAM_SIZE - 1))
+    {
+      p->recordCmplt = 1;
+      p->trigger = (p->autoTrigEn == 1) ? 1 : 0;
+      p->frameCntr = 0;
+    }
+  }
+}
+
 /** DataLog transmit fnc using UART
  *  Hardware config:
  *  1. Fnc which transmit packet using UART

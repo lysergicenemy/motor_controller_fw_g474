@@ -31,13 +31,19 @@ extern "C"
   void Cordic_Init(void);
 
   /** Calc sinCos using hardware CORDIC
-   *  Input: angle (must be scaled to -1 : 1 range)
+   *  Input: angle in radians (range -pi : pi)
+   *  Output: sin, cos (range -1 : 1)
    *  Average execution time: ~98 CPU cycles
    **/
   static inline void cordic_sincos_calc(volatile float angle, volatile float *s, volatile float *c)
   {
     if (LL_CORDIC_GetFunction(CORDIC) != LL_CORDIC_FUNCTION_SINE)
     {
+      /* Force CORDIC reset */
+      LL_AHB1_GRP1_ForceReset(LL_AHB1_GRP1_PERIPH_CORDIC);
+      /* Release CORDIC reset */
+      LL_AHB1_GRP1_ReleaseReset(LL_AHB1_GRP1_PERIPH_CORDIC);
+
       LL_CORDIC_Config(CORDIC, LL_CORDIC_FUNCTION_SINE, /* cosine function */
                        LL_CORDIC_PRECISION_6CYCLES,     /* max precision for q1.31 cosine */
                        LL_CORDIC_SCALE_0,               /* no scale */
@@ -52,23 +58,31 @@ extern "C"
     *c = _IQ31toF((int32_t)LL_CORDIC_ReadData(CORDIC));
   }
 
-  // Calc atan2 using hardware CORDIC
-  static inline void cordic_atan2_calc(volatile float s, volatile float c, volatile float *angle)
+  /** Calc atan2 using hardware CORDIC
+   * Input: x, y (range -1 : 1)
+   * Output: angle in radians (range -pi : pi)
+   **/
+  static inline void cordic_atan2_calc(volatile float x, volatile float y, volatile float *angle)
   {
     if (LL_CORDIC_GetFunction(CORDIC) != LL_CORDIC_FUNCTION_PHASE)
     {
+      /* Force CORDIC reset */
+      LL_AHB1_GRP1_ForceReset(LL_AHB1_GRP1_PERIPH_CORDIC);
+      /* Release CORDIC reset */
+      LL_AHB1_GRP1_ReleaseReset(LL_AHB1_GRP1_PERIPH_CORDIC);
+
       LL_CORDIC_Config(CORDIC, LL_CORDIC_FUNCTION_PHASE, /* phase/atan2 function */
-                       LL_CORDIC_PRECISION_6CYCLES,     /* max precision for q1.31 cosine */
-                       LL_CORDIC_SCALE_0,               /* no scale */
-                       LL_CORDIC_NBWRITE_2,             /* Two input data: sin, cos */
-                       LL_CORDIC_NBREAD_1,              /* One output data: phase */
-                       LL_CORDIC_INSIZE_32BITS,         /* q1.31 format for input data */
-                       LL_CORDIC_OUTSIZE_32BITS);       /* q1.31 format for output data */
+                       LL_CORDIC_PRECISION_6CYCLES,      /* max precision for q1.31 cosine */
+                       LL_CORDIC_SCALE_0,                /* no scale */
+                       LL_CORDIC_NBWRITE_2,              /* Two input data: sin, cos */
+                       LL_CORDIC_NBREAD_1,               /* One output data: phase */
+                       LL_CORDIC_INSIZE_32BITS,          /* q1.31 format for input data */
+                       LL_CORDIC_OUTSIZE_32BITS);        /* q1.31 format for output data */
     }
 
-    LL_CORDIC_WriteData(CORDIC, _IQ31(s * ONE_BY_PI));
-    LL_CORDIC_WriteData(CORDIC, _IQ31(c * ONE_BY_PI));
-    *angle = _IQ31toF((int32_t)LL_CORDIC_ReadData(CORDIC));
+    LL_CORDIC_WriteData(CORDIC, _IQ31(x));
+    LL_CORDIC_WriteData(CORDIC, _IQ31(y));
+    *angle = _IQ31toF((int32_t)LL_CORDIC_ReadData(CORDIC)) * MF_PI;
   }
 
 #ifdef __cplusplus

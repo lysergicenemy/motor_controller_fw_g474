@@ -30,7 +30,6 @@ extern "C" {
 /* Includes ------------------------------------------------------------------*/
 #include "stm32g4xx_ll_adc.h"
 #include "stm32g4xx_ll_hrtim.h"
-#include "stm32g4xx_ll_lptim.h"
 #include "stm32g4xx_ll_rcc.h"
 #include "stm32g4xx_ll_bus.h"
 #include "stm32g4xx_ll_crs.h"
@@ -58,13 +57,12 @@ extern "C" {
 #include "digitalFilters.h"
 #include "utils.h"
 #include "model_bldc.h"
-#include "bldcpwm.h"
+#include "hall.h"
 #include "foc.h"
+#include "foc_ctrl.h"
 #include "dataLog.h"
 #include "stm32g4xx_it.h"
 #include "ntc.h"              // Include header for NTC object
-#include "hall.h"
-#include "test.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

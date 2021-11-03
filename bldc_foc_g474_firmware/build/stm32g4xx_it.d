@@ -7,7 +7,6 @@ build/stm32g4xx_it.o: Src/stm32g4xx_it.c Inc/main.h \
  Drivers/CMSIS/Include/mpu_armv7.h \
  Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h \
  Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_hrtim.h \
- Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_lptim.h \
  Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h \
  Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h \
  Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_crs.h \
@@ -24,9 +23,9 @@ build/stm32g4xx_it.o: Src/stm32g4xx_it.c Inc/main.h \
  Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cordic.h \
  Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dac.h \
  Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_comp.h \
- Inc/digitalFilters.h Inc/utils.h Inc/model_bldc.h Inc/bldcpwm.h \
- Inc/foc.h Inc/dataLog.h Inc/stm32g4xx_it.h Inc/ntc.h Inc/hall.h \
- Inc/main.h Inc/test.h Inc/stm32g4xx_it.h
+ Inc/digitalFilters.h Inc/utils.h Inc/model_bldc.h Inc/hall.h Inc/main.h \
+ Inc/foc.h Inc/foc_ctrl.h Inc/dataLog.h Inc/stm32g4xx_it.h Inc/ntc.h \
+ Inc/stm32g4xx_it.h
 
 Inc/main.h:
 
@@ -49,8 +48,6 @@ Drivers/CMSIS/Include/mpu_armv7.h:
 Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h:
 
 Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_hrtim.h:
-
-Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_lptim.h:
 
 Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h:
 
@@ -90,20 +87,18 @@ Inc/utils.h:
 
 Inc/model_bldc.h:
 
-Inc/bldcpwm.h:
+Inc/hall.h:
+
+Inc/main.h:
 
 Inc/foc.h:
+
+Inc/foc_ctrl.h:
 
 Inc/dataLog.h:
 
 Inc/stm32g4xx_it.h:
 
 Inc/ntc.h:
-
-Inc/hall.h:
-
-Inc/main.h:
-
-Inc/test.h:
 
 Inc/stm32g4xx_it.h:

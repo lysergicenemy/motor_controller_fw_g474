@@ -56,7 +56,7 @@ extern "C"
  *  isa, isb - alpha/beta components of phase currents (A)
  *  vAlpha, vBeta - alpha/beta components of phase voltages (V)
  */
-  static inline void adc_get_inputs_SI(adcData_t *padc, foc_t *p, modelBLDC_t *pbldc)
+  static inline void adc_get_inputs(adcData_t *padc, foc_t *p, modelBLDC_t *pbldc)
   {
     const float one_by_halfADC = 0.00048828125f; // (1 / 2048)
     const float one_by_maxADC = 0.000244140625f; // (1 / 4096)
@@ -93,13 +93,9 @@ extern "C"
 
   void MX_ADC1_Init(void);
   void MX_ADC2_Init(void);
-  void MX_ADC3_Init(void);
 
   /* USER CODE BEGIN Prototypes */
   void adc_start(void);
-  void adc_start_bldc(void);
-  void ADC1_Init_BLDC(void);
-  void ADC2_Init_BLDC(void);
 
   /* USER CODE END Prototypes */
 

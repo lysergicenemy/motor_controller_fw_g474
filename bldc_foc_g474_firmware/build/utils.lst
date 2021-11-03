@@ -1,4 +1,4 @@
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
   27:Src/utils.c   **** 
   28:Src/utils.c   **** void utils_step_towards(float *value, float goal, float step)
   29:Src/utils.c   **** {
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 2
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 2
 
 
   30:Src/utils.c   **** 	if (*value < goal)
@@ -118,7 +118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
   84:Src/utils.c   **** void utils_norm_angle_rad(float *angle)
   85:Src/utils.c   **** {
   86:Src/utils.c   **** 	while (*angle < -MF_PI)
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 3
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 3
 
 
   87:Src/utils.c   **** 	{
@@ -178,7 +178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  141:Src/utils.c   **** 	}
  142:Src/utils.c   **** 	else if (*number < -max)
  143:Src/utils.c   **** 	{
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 4
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 4
 
 
  144:Src/utils.c   **** 		*number = -max;
@@ -238,7 +238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  198:Src/utils.c   **** 	while (difference < -180.0)
  199:Src/utils.c   **** 		difference += 2.0 * 180.0;
  200:Src/utils.c   **** 	while (difference > 180.0)
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 5
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 5
 
 
  201:Src/utils.c   **** 		difference -= 2.0 * 180.0;
@@ -298,7 +298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  255:Src/utils.c   **** 
  256:Src/utils.c   **** /* Returns average value of 2 angles */
  257:Src/utils.c   **** float utils_avg_angle_rad_fast(float angle1, float angle2)
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 6
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 6
 
 
  258:Src/utils.c   **** {
@@ -358,7 +358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  312:Src/utils.c   ****  * Third value
  313:Src/utils.c   ****  *
  314:Src/utils.c   ****  * @return
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 7
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 7
 
 
  315:Src/utils.c   ****  * The middle value
@@ -418,7 +418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  369:Src/utils.c   **** 	float angle;
  370:Src/utils.c   **** 
  371:Src/utils.c   **** 	if (x >= 0)
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 8
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 8
 
 
  372:Src/utils.c   **** 	{
@@ -478,7 +478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  426:Src/utils.c   **** 	}
  427:Src/utils.c   **** 
  428:Src/utils.c   **** 	return retval;
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 9
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 9
 
 
  429:Src/utils.c   **** }
@@ -538,7 +538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  483:Src/utils.c   **** 		*cos = 1.27323954f * angle - 0.405284735f * angle * angle;
  484:Src/utils.c   **** 	}
  485:Src/utils.c   **** }
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 10
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 10
 
 
  486:Src/utils.c   **** 
@@ -598,7 +598,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  540:Src/utils.c   **** /**
  541:Src/utils.c   ****  * Fast cos implementation. (~100 cycles)
  542:Src/utils.c   ****  *
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 11
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 11
 
 
  543:Src/utils.c   ****  * See http://lab.polygonal.de/?p=205
@@ -658,7 +658,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  597:Src/utils.c   **** 	return fsin;
  598:Src/utils.c   **** }
  599:Src/utils.c   **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 12
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 12
 
 
  600:Src/utils.c   **** /**
@@ -718,7 +718,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  654:Src/utils.c   **** /**
  655:Src/utils.c   ****  * Create string representation of the binary content of a byte
  656:Src/utils.c   ****  *
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 13
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 13
 
 
  657:Src/utils.c   ****  * @param x
@@ -778,7 +778,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  711:Src/utils.c   **** 		}
  712:Src/utils.c   **** 	}
  713:Src/utils.c   **** 	else if (mode == 1)
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 14
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 14
 
 
  714:Src/utils.c   **** 	{ // Natural
@@ -838,7 +838,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  768:Src/utils.c   **** 		}
  769:Src/utils.c   **** 	}
  770:Src/utils.c   **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 15
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 15
 
 
  771:Src/utils.c   **** 	return ~crc;
@@ -898,7 +898,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  825:Src/utils.c   **** 	{
  826:Src/utils.c   **** 		id_next = 0;
  827:Src/utils.c   **** 	}
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 16
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 16
 
 
  828:Src/utils.c   **** 	return id_next;
@@ -958,7 +958,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
   29:Src/utils.c   **** 	if (*value < goal)
   59              		.loc 1 29 1 is_stmt 1 view -0
   60              		.cfi_startproc
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 17
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 17
 
 
   61              		@ args = 0, pretend = 0, frame = 0
@@ -1018,7 +1018,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
   99 0032 80ED000A 		vstr.32	s0, [r0]
  100 0036 7047     		bx	lr
  101              		.cfi_endproc
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 18
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 18
 
 
  102              	.LFE5:
@@ -1078,7 +1078,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  152 0000 10B5     		push	{r4, lr}
  153              	.LCFI0:
  154              		.cfi_def_cfa_offset 8
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 19
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 19
 
 
  155              		.cfi_offset 4, -8
@@ -1138,7 +1138,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  201              		.thumb
  202              		.thumb_func
  203              		.fpu fpv4-sp-d16
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 20
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 20
 
 
  205              	utils_norm_angle_rad:
@@ -1198,7 +1198,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  246 0042 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
  247 0046 F8DC     		bgt	.L31
  248 0048 C0ED007A 		vstr.32	s15, [r0]
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 21
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 21
 
 
  249              	.L25:
@@ -1258,7 +1258,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  104:Src/utils.c   **** 	}
  295              		.loc 1 104 13 view .LVU62
  296 0014 7047     		bx	lr
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 22
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 22
 
 
  297              	.LVL13:
@@ -1318,7 +1318,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  340              		.loc 1 119 6 is_stmt 0 view .LVU75
  341 0000 0368     		ldr	r3, [r0]
  119:Src/utils.c   **** 	{
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 23
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 23
 
 
  342              		.loc 1 119 5 view .LVU76
@@ -1378,7 +1378,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  383              		.thumb
  384              		.thumb_func
  385              		.fpu fpv4-sp-d16
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 24
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 24
 
 
  387              	utils_truncate_number_abs:
@@ -1438,7 +1438,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  148:Src/utils.c   **** }
  427              		.loc 1 148 2 is_stmt 1 view .LVU105
  149:Src/utils.c   **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 25
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 25
 
 
  428              		.loc 1 149 1 is_stmt 0 view .LVU106
@@ -1498,7 +1498,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  477              		.fpu fpv4-sp-d16
  479              	utils_map_int:
  480              	.LVL34:
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 26
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 26
 
 
  481              	.LFB13:
@@ -1558,7 +1558,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  525              		.thumb_func
  526              		.fpu fpv4-sp-d16
  528              	utils_deadband:
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 27
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 27
 
 
  529              	.LVL38:
@@ -1618,7 +1618,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  568 0030 67EEA07A 		vmul.f32	s15, s15, s1
  180:Src/utils.c   **** 		}
  569              		.loc 1 180 27 is_stmt 0 view .LVU141
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 28
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 28
 
 
  570 0034 D6BF     		itet	le
@@ -1678,7 +1678,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  199:Src/utils.c   **** 	while (difference > 180.0)
  615              		.loc 1 199 14 is_stmt 0 view .LVU153
  616 0016 30EE070A 		vadd.f32	s0, s0, s14
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 29
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 29
 
 
  617              	.LVL43:
@@ -1738,7 +1738,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  665              		@ args = 0, pretend = 0, frame = 0
  666              		@ frame_needed = 0, uses_anonymous_args = 0
  667              		@ link register save eliminated.
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 30
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 30
 
 
  216:Src/utils.c   **** 	while (difference < -MF_PI)
@@ -1798,7 +1798,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  708 0044 7047     		bx	lr
  709              	.L95:
  710 0046 00BF     		.align	2
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 31
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 31
 
 
  711              	.L94:
@@ -1858,7 +1858,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  291:Src/utils.c   **** 	{
  758              		.loc 1 291 10 is_stmt 0 view .LVU185
  759 0028 B4EE600A 		vcmp.f32	s0, s1
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 32
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 32
 
 
  760 002c F1EE10FA 		vmrs	APSR_nzcv, FPSCR
@@ -1918,7 +1918,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  802              		.cfi_endproc
  803              	.LFE19:
  805              		.section	.text.utils_middle_of_3_int,"ax",%progbits
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 33
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 33
 
 
  806              		.align	1
@@ -1978,7 +1978,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  849              	.LVL60:
  850              	.L126:
  321:Src/utils.c   **** 	{
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 34
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 34
 
 
  851              		.loc 1 321 15 discriminator 1 view .LVU210
@@ -2038,7 +2038,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  894              		.loc 1 345 8 view .LVU223
  895 0006 B6EE007A 		vmov.f32	s14, #5.0e-1
  348:Src/utils.c   **** 	return un.as_float;
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 35
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 35
 
 
  896              		.loc 1 348 18 view .LVU224
@@ -2098,7 +2098,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  942 0000 9FED197A 		vldr.32	s14, .L140
  368:Src/utils.c   **** 	float angle;
  943              		.loc 1 368 16 view .LVU235
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 36
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 36
 
 
  944 0004 F0EEC07A 		vabs.f32	s15, s0
@@ -2158,7 +2158,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  981 0032 66EE067A 		vmul.f32	s15, s12, s12
  982              	.LVL73:
  380:Src/utils.c   **** 		angle = ((0.1963f * rsq) - 0.9817f) * r + (3.0f * MF_PI / 4.0f);
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 37
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 37
 
 
  983              		.loc 1 380 9 view .LVU253
@@ -2218,7 +2218,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  1023 0066 E4E7     		b	.L139
  1024              	.L141:
  1025              		.align	2
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 38
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 38
 
 
  1026              	.L140:
@@ -2278,7 +2278,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  1074              		.cfi_def_cfa_offset 24
  412:Src/utils.c   **** 	max = fabsf(max);
  1075              		.loc 1 412 14 view .LVU276
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 39
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 39
 
 
  1076 0014 E7EE077A 		vfma.f32	s15, s14, s14
@@ -2338,7 +2338,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  1116 005a 84ED007A 		vstr.32	s14, [r4]
  424:Src/utils.c   **** 		retval = true;
  1117              		.loc 1 424 3 is_stmt 1 view .LVU291
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 40
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 40
 
 
  424:Src/utils.c   **** 		retval = true;
@@ -2398,7 +2398,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  1162 007a 10BD     		pop	{r4, pc}
  1163              	.LVL89:
  1164              	.L153:
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 41
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 41
 
 
  1165              	.LCFI13:
@@ -2458,7 +2458,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  1212 0012 30EE070A 		vadd.f32	s0, s0, s14
  1213              	.LVL93:
  449:Src/utils.c   **** 	{
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 42
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 42
 
 
  1214              		.loc 1 449 8 view .LVU311
@@ -2518,7 +2518,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  1255 006a 30EE260A 		vadd.f32	s0, s0, s13
  1256              	.LVL95:
  472:Src/utils.c   **** 	{
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 43
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 43
 
 
  1257              		.loc 1 472 5 view .LVU325
@@ -2578,7 +2578,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  1299 00c8 83F9A23F 		.word	1067645315
  1300 00cc DB0FC93F 		.word	1070141403
  1301              		.cfi_endproc
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 44
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 44
 
 
  1302              	.LFE24:
@@ -2638,7 +2638,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  508:Src/utils.c   **** 	}
  1348              		.loc 1 508 3 is_stmt 1 view .LVU348
  508:Src/utils.c   **** 	}
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 45
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 45
 
 
  1349              		.loc 1 508 9 is_stmt 0 view .LVU349
@@ -2698,7 +2698,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  1389 007c 7047     		bx	lr
  1390              	.LVL103:
  1391              	.L203:
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 46
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 46
 
 
  513:Src/utils.c   **** 
@@ -2758,7 +2758,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  551:Src/utils.c   **** 	float fsin;
  1438              		.loc 1 551 1 is_stmt 1 view -0
  1439              		.cfi_startproc
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 47
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 47
 
 
  1440              		@ args = 0, pretend = 0, frame = 0
@@ -2818,7 +2818,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  1480              		.loc 1 565 8 is_stmt 0 view .LVU388
  1481 0040 9FED217A 		vldr.32	s14, .L233+12
  566:Src/utils.c   **** 	{
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 48
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 48
 
 
  1482              		.loc 1 566 5 view .LVU389
@@ -2878,7 +2878,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  1521              		.loc 1 594 33 is_stmt 0 view .LVU404
  1522 008e 90EE007A 		vfnms.f32	s14, s0, s0
  594:Src/utils.c   **** 		}
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 49
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 49
 
 
  1523              		.loc 1 594 9 view .LVU405
@@ -2938,7 +2938,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  1565              	.LFE26:
  1567              		.section	.text.utils_avg_angles_rad_fast,"ax",%progbits
  1568              		.align	1
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 50
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 50
 
 
  1569              		.p2align 2,,3
@@ -2998,7 +2998,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  1612 001c DFED4D3A 		vldr.32	s7, .L280+20
  534:Src/utils.c   **** 		}
  1613              		.loc 1 534 9 view .LVU430
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 51
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 51
 
 
  1614 0020 DFED4D2A 		vldr.32	s5, .L280+24
@@ -3058,7 +3058,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  1656              		.loc 1 508 9 is_stmt 0 view .LVU442
  1657 0056 77EEE57A 		vsub.f32	s15, s15, s11
  1658              	.LVL121:
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 52
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 52
 
 
  1659              	.L275:
@@ -3118,7 +3118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  537:Src/utils.c   **** }
  1699              		.loc 1 537 2 is_stmt 0 view .LVU457
  1700              	.LBE25:
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 53
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 53
 
 
  1701              	.LBE27:
@@ -3178,7 +3178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  1738 00b4 77EE877A 		vadd.f32	s15, s15, s14
  1739              	.LVL131:
  369:Src/utils.c   **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 54
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 54
 
 
  1740              		.loc 1 369 2 is_stmt 1 view .LVU475
@@ -3238,7 +3238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  1781              	.LBE40:
  254:Src/utils.c   **** 
  1782              		.loc 1 254 1 view .LVU489
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 55
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 55
 
 
  1783 00f0 08BD     		pop	{r3, pc}
@@ -3298,7 +3298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  386:Src/utils.c   **** 	}
  1825              		.loc 1 386 3 is_stmt 1 view .LVU502
  386:Src/utils.c   **** 	}
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 56
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 56
 
 
  1826              		.loc 1 386 11 is_stmt 0 view .LVU503
@@ -3358,7 +3358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  1867              	.LCFI15:
  1868              		.cfi_def_cfa_offset 0
  1869              		.cfi_restore 3
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 57
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 57
 
 
  1870              		.cfi_restore 14
@@ -3418,7 +3418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  1919 0000 08B5     		push	{r3, lr}
  1920              	.LCFI16:
  1921              		.cfi_def_cfa_offset 8
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 58
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 58
 
 
  1922              		.cfi_offset 3, -8
@@ -3478,7 +3478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  1961              		.loc 1 265 9 view .LVU538
  1962 0032 36EE257A 		vadd.f32	s14, s12, s11
  1963              	.LVL166:
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 59
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 59
 
 
  1964              	.LBB49:
@@ -3538,7 +3538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  2001              		.loc 1 375 9 view .LVU555
  2002              	.LBE51:
  2003              	.LBB52:
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 60
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 60
 
 
  379:Src/utils.c   **** 		float rsq = r * r;
@@ -3598,7 +3598,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  2043              	.LBB55:
  379:Src/utils.c   **** 		float rsq = r * r;
  2044              		.loc 1 379 3 is_stmt 1 view .LVU571
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 61
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 61
 
 
  379:Src/utils.c   **** 		float rsq = r * r;
@@ -3658,7 +3658,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  2092              		.loc 1 615 2 view .LVU580
  615:Src/utils.c   **** 	{
  2093              		.loc 1 615 6 is_stmt 0 view .LVU581
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 62
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 62
 
 
  2094 0000 B0EEC07A 		vabs.f32	s14, s0
@@ -3718,7 +3718,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  2138              		.loc 1 651 2 is_stmt 1 view .LVU593
  652:Src/utils.c   **** 
  2139              		.loc 1 652 1 is_stmt 0 view .LVU594
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 63
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 63
 
 
  2140 0010 D8BF     		it	le
@@ -3778,7 +3778,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  2186 000c 0825     		movs	r5, #8
  668:Src/utils.c   **** 	{
  2187              		.loc 1 668 9 view .LVU605
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 64
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 64
 
 
  2188 000e 8024     		movs	r4, #128
@@ -3838,7 +3838,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  2233 0000 00B5     		push	{lr}
  2234              	.LCFI18:
  2235              		.cfi_def_cfa_offset 4
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 65
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 65
 
 
  2236              		.cfi_offset 14, -4
@@ -3898,7 +3898,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  713:Src/utils.c   **** 	{ // Natural
  2277              		.loc 1 713 10 is_stmt 0 view .LVU630
  2278 0032 0128     		cmp	r0, #1
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 66
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 66
 
 
  2279 0034 2DD0     		beq	.L330
@@ -3958,7 +3958,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  2321 005c F7EE008A 		vmov.f32	s17, #1.0e+0
  2322 0060 70EEA80A 		vadd.f32	s1, s1, s17
  2323              	.LVL199:
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 67
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 67
 
 
  706:Src/utils.c   **** 		}
@@ -4018,7 +4018,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  2364              		.loc 1 715 3 is_stmt 1 view .LVU656
  715:Src/utils.c   **** 		{
  2365              		.loc 1 715 6 is_stmt 0 view .LVU657
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 68
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 68
 
 
  2366 0092 DFED317A 		vldr.32	s15, .L332
@@ -4078,7 +4078,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  2405 00e2 AAE7     		b	.L310
  2406              	.LVL213:
  2407              	.L331:
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 69
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 69
 
 
  733:Src/utils.c   **** 		{
@@ -4138,7 +4138,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  727:Src/utils.c   **** 			}
  2447              		.loc 1 727 43 view .LVU688
  2448 0122 B0EE680A 		vmov.f32	s0, s17
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 70
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 70
 
 
  2449 0126 FFF7FEFF 		bl	expf
@@ -4198,7 +4198,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  2492              		.syntax unified
  2493              		.thumb
  2494              		.thumb_func
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 71
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 71
 
 
  2495              		.fpu fpv4-sp-d16
@@ -4258,7 +4258,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  2540              		.loc 1 761 3 is_stmt 1 view .LVU710
  762:Src/utils.c   **** 
  2541              		.loc 1 762 3 view .LVU711
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 72
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 72
 
 
  761:Src/utils.c   **** 		crc = crc ^ byte;
@@ -4318,7 +4318,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  2581              		.loc 1 759 2 discriminator 2 view .LVU726
  2582              	.LBE67:
  772:Src/utils.c   **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 73
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 73
 
 
  2583              		.loc 1 772 1 view .LVU727
@@ -4378,7 +4378,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  2630              		.loc 1 778 8 is_stmt 0 view .LVU736
  2631 0004 1360     		str	r3, [r2]	@ float
  780:Src/utils.c   **** 	{
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 74
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 74
 
 
  2632              		.loc 1 780 2 is_stmt 1 view .LVU737
@@ -4438,7 +4438,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  2677              	.LVL239:
  2678              	.LFB33:
  789:Src/utils.c   **** 	*real = 0.0;
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 75
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 75
 
 
  2679              		.loc 1 789 1 is_stmt 1 view -0
@@ -4498,7 +4498,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  2717              		.loc 1 799 1 view .LVU765
  2718 002a 7047     		bx	lr
  2719              	.L356:
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 76
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 76
 
 
  2720              		.align	2
@@ -4558,7 +4558,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  2764              		.loc 1 806 2 discriminator 3 view .LVU777
  2765 0016 9842     		cmp	r0, r3
  808:Src/utils.c   **** 	}
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 77
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 77
 
 
  2766              		.loc 1 808 9 discriminator 3 view .LVU778
@@ -4618,7 +4618,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  2816              		.loc 1 837 1 is_stmt 1 view -0
  2817              		.cfi_startproc
  2818              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 78
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 78
 
 
  2819              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -4678,7 +4678,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  2856              	.LBB74:
  101:Src/utils.c   **** 	{
  2857              		.loc 1 101 5 view .LVU804
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 79
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 79
 
 
  2858 001e 9FED120A 		vldr.32	s0, .L366+4
@@ -4738,7 +4738,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  856:Src/utils.c   **** uint16_t utils_median_filter_uint16_run(uint16_t *buffer,
  857:Src/utils.c   **** 										unsigned int *buffer_index, unsigned int filter_len, uint16_t sample)
  858:Src/utils.c   **** {
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 80
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 80
 
 
  2910              		.loc 1 858 1 is_stmt 1 view -0
@@ -4798,7 +4798,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  2955              		.loc 1 860 16 view .LVU822
  2956 0022 04FB1303 		mls	r3, r4, r3, r0
  2957              		.loc 1 861 11 view .LVU823
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 81
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 81
 
 
  2958 0026 6D46     		mov	r5, sp
@@ -4858,7 +4858,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  3011 0004 BA147B3F 		.word	1065030842
  3012 0008 66836C3F 		.word	1064076134
  3013 000c 38DB543F 		.word	1062525752
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 82
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 82
 
 
  3014 0010 F704353F 		.word	1060439287
@@ -4918,7 +4918,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  3070 005c 66836CBF 		.word	-1083407514
  3071 0060 000080BF 		.word	-1082130432
  3072 0064 66836CBF 		.word	-1083407514
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 83
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 83
 
 
  3073 0068 F70435BF 		.word	-1087044361
@@ -4978,7 +4978,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  3131 0028 F70435BF 		.word	-1087044361
  3132 002c 66836CBF 		.word	-1083407514
  3133 0030 000080BF 		.word	-1082130432
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 84
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 84
 
 
  3134 0034 66836CBF 		.word	-1083407514
@@ -5011,110 +5011,110 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 1
  3161              		.file 8 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\math.h"
  3162              		.file 9 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\stdlib.h"
  3163              		.file 10 "<built-in>"
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 85
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 85
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 utils.c
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:18     .text.uint16_cmp_func:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:26     .text.uint16_cmp_func:0000000000000000 uint16_cmp_func
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:48     .text.utils_step_towards:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:56     .text.utils_step_towards:0000000000000000 utils_step_towards
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:105    .text.utils_calc_ratio:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:113    .text.utils_calc_ratio:0000000000000000 utils_calc_ratio
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:135    .text.utils_norm_angle:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:143    .text.utils_norm_angle:0000000000000000 utils_norm_angle
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:192    .text.utils_norm_angle:0000000000000030 $d
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:197    .text.utils_norm_angle_rad:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:205    .text.utils_norm_angle_rad:0000000000000000 utils_norm_angle_rad
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:255    .text.utils_norm_angle_rad:0000000000000050 $d
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:263    .text.utils_truncate_number:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:271    .text.utils_truncate_number:0000000000000000 utils_truncate_number
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:322    .text.utils_truncate_number_int:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:330    .text.utils_truncate_number_int:0000000000000000 utils_truncate_number_int
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:379    .text.utils_truncate_number_abs:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:387    .text.utils_truncate_number_abs:0000000000000000 utils_truncate_number_abs
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:434    .text.utils_map:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:442    .text.utils_map:0000000000000000 utils_map
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:471    .text.utils_map_int:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:479    .text.utils_map_int:0000000000000000 utils_map_int
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:520    .text.utils_deadband:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:528    .text.utils_deadband:0000000000000000 utils_deadband
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:585    .text.utils_angle_difference:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:593    .text.utils_angle_difference:0000000000000000 utils_angle_difference
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:645    .text.utils_angle_difference:0000000000000048 $d
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:652    .text.utils_angle_difference_rad:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:660    .text.utils_angle_difference_rad:0000000000000000 utils_angle_difference_rad
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:712    .text.utils_angle_difference_rad:0000000000000048 $d
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:719    .text.utils_middle_of_3:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:727    .text.utils_middle_of_3:0000000000000000 utils_middle_of_3
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:806    .text.utils_middle_of_3_int:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:814    .text.utils_middle_of_3_int:0000000000000000 utils_middle_of_3_int
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:869    .text.utils_fast_inv_sqrt:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:877    .text.utils_fast_inv_sqrt:0000000000000000 utils_fast_inv_sqrt
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:919    .text.utils_fast_inv_sqrt:0000000000000028 $d
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:924    .text.utils_fast_atan2:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:932    .text.utils_fast_atan2:0000000000000000 utils_fast_atan2
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:1027   .text.utils_fast_atan2:0000000000000068 $d
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:1037   .text.utils_saturate_vector_2d:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:1045   .text.utils_saturate_vector_2d:0000000000000000 utils_saturate_vector_2d
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:1180   .text.utils_saturate_vector_2d:000000000000008c $d
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:1185   .text.utils_fast_sincos:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:1193   .text.utils_fast_sincos:0000000000000000 utils_fast_sincos
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:1295   .text.utils_fast_sincos:00000000000000b8 $d
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:1305   .text.utSin:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:1313   .text.utSin:0000000000000000 utSin
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:1417   .text.utSin:00000000000000a0 $d
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:1427   .text.utCos:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:1435   .text.utCos:0000000000000000 utCos
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:1557   .text.utCos:00000000000000bc $d
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:1568   .text.utils_avg_angles_rad_fast:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:1576   .text.utils_avg_angles_rad_fast:0000000000000000 utils_avg_angles_rad_fast
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:1884   .text.utils_avg_angles_rad_fast:0000000000000140 $d
-ARM GAS  D:\apps\VSCode\data\tmp\ccmXB2RN.s 			page 86
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:18     .text.uint16_cmp_func:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:26     .text.uint16_cmp_func:0000000000000000 uint16_cmp_func
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:48     .text.utils_step_towards:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:56     .text.utils_step_towards:0000000000000000 utils_step_towards
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:105    .text.utils_calc_ratio:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:113    .text.utils_calc_ratio:0000000000000000 utils_calc_ratio
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:135    .text.utils_norm_angle:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:143    .text.utils_norm_angle:0000000000000000 utils_norm_angle
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:192    .text.utils_norm_angle:0000000000000030 $d
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:197    .text.utils_norm_angle_rad:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:205    .text.utils_norm_angle_rad:0000000000000000 utils_norm_angle_rad
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:255    .text.utils_norm_angle_rad:0000000000000050 $d
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:263    .text.utils_truncate_number:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:271    .text.utils_truncate_number:0000000000000000 utils_truncate_number
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:322    .text.utils_truncate_number_int:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:330    .text.utils_truncate_number_int:0000000000000000 utils_truncate_number_int
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:379    .text.utils_truncate_number_abs:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:387    .text.utils_truncate_number_abs:0000000000000000 utils_truncate_number_abs
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:434    .text.utils_map:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:442    .text.utils_map:0000000000000000 utils_map
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:471    .text.utils_map_int:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:479    .text.utils_map_int:0000000000000000 utils_map_int
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:520    .text.utils_deadband:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:528    .text.utils_deadband:0000000000000000 utils_deadband
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:585    .text.utils_angle_difference:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:593    .text.utils_angle_difference:0000000000000000 utils_angle_difference
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:645    .text.utils_angle_difference:0000000000000048 $d
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:652    .text.utils_angle_difference_rad:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:660    .text.utils_angle_difference_rad:0000000000000000 utils_angle_difference_rad
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:712    .text.utils_angle_difference_rad:0000000000000048 $d
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:719    .text.utils_middle_of_3:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:727    .text.utils_middle_of_3:0000000000000000 utils_middle_of_3
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:806    .text.utils_middle_of_3_int:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:814    .text.utils_middle_of_3_int:0000000000000000 utils_middle_of_3_int
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:869    .text.utils_fast_inv_sqrt:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:877    .text.utils_fast_inv_sqrt:0000000000000000 utils_fast_inv_sqrt
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:919    .text.utils_fast_inv_sqrt:0000000000000028 $d
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:924    .text.utils_fast_atan2:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:932    .text.utils_fast_atan2:0000000000000000 utils_fast_atan2
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:1027   .text.utils_fast_atan2:0000000000000068 $d
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:1037   .text.utils_saturate_vector_2d:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:1045   .text.utils_saturate_vector_2d:0000000000000000 utils_saturate_vector_2d
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:1180   .text.utils_saturate_vector_2d:000000000000008c $d
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:1185   .text.utils_fast_sincos:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:1193   .text.utils_fast_sincos:0000000000000000 utils_fast_sincos
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:1295   .text.utils_fast_sincos:00000000000000b8 $d
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:1305   .text.utSin:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:1313   .text.utSin:0000000000000000 utSin
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:1417   .text.utSin:00000000000000a0 $d
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:1427   .text.utCos:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:1435   .text.utCos:0000000000000000 utCos
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:1557   .text.utCos:00000000000000bc $d
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:1568   .text.utils_avg_angles_rad_fast:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:1576   .text.utils_avg_angles_rad_fast:0000000000000000 utils_avg_angles_rad_fast
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:1884   .text.utils_avg_angles_rad_fast:0000000000000140 $d
+ARM GAS  D:\apps\VSCode\data\tmp\ccBjvp5y.s 			page 86
 
 
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:1901   .text.utils_avg_angle_rad_fast:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:1909   .text.utils_avg_angle_rad_fast:0000000000000000 utils_avg_angle_rad_fast
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:2063   .text.utils_avg_angle_rad_fast:0000000000000098 $d
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:2075   .text.utils_min_abs:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:2083   .text.utils_min_abs:0000000000000000 utils_min_abs
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:2112   .text.utils_max_abs:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:2120   .text.utils_max_abs:0000000000000000 utils_max_abs
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:2149   .text.utils_byte_to_binary:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:2157   .text.utils_byte_to_binary:0000000000000000 utils_byte_to_binary
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:2215   .text.utils_throttle_curve:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:2223   .text.utils_throttle_curve:0000000000000000 utils_throttle_curve
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:2484   .text.utils_throttle_curve:0000000000000158 $d
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:2489   .text.utils_crc32c:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:2497   .text.utils_crc32c:0000000000000000 utils_crc32c
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:2604   .text.utils_crc32c:0000000000000034 $d
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:2609   .text.utils_fft32_bin0:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:2617   .text.utils_fft32_bin0:0000000000000000 utils_fft32_bin0
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:2663   .text.utils_fft32_bin0:000000000000002c $d
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:2668   .text.utils_fft16_bin0:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:2676   .text.utils_fft16_bin0:0000000000000000 utils_fft16_bin0
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:2722   .text.utils_fft16_bin0:000000000000002c $d
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:2727   .text.utils_fft8_bin0:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:2735   .text.utils_fft8_bin0:0000000000000000 utils_fft8_bin0
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:2782   .text.utils_second_motor_id:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:2790   .text.utils_second_motor_id:0000000000000000 utils_second_motor_id
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:2805   .text.utils_batt_liion_norm_v_to_capacity:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:2813   .text.utils_batt_liion_norm_v_to_capacity:0000000000000000 utils_batt_liion_norm_v_to_capacity
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:2886   .text.utils_batt_liion_norm_v_to_capacity:0000000000000064 $d
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:2899   .text.utils_median_filter_uint16_run:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:2907   .text.utils_median_filter_uint16_run:0000000000000000 utils_median_filter_uint16_run
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:2991   .text.utils_median_filter_uint16_run:0000000000000048 $d
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:3046   .rodata.utils_tab_cos_32_2:0000000000000000 utils_tab_cos_32_2
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:3009   .rodata.utils_tab_cos_32_1:0000000000000000 utils_tab_cos_32_1
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:3120   .rodata.utils_tab_sin_32_2:0000000000000000 utils_tab_sin_32_2
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:3083   .rodata.utils_tab_sin_32_1:0000000000000000 utils_tab_sin_32_1
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:3000   .bss.sys_lock_cnt:0000000000000000 $d
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:3003   .bss.sys_lock_cnt:0000000000000000 sys_lock_cnt
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:3006   .rodata.utils_tab_cos_32_1:0000000000000000 $d
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:3043   .rodata.utils_tab_cos_32_2:0000000000000000 $d
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:3080   .rodata.utils_tab_sin_32_1:0000000000000000 $d
-D:\apps\VSCode\data\tmp\ccmXB2RN.s:3117   .rodata.utils_tab_sin_32_2:0000000000000000 $d
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:1901   .text.utils_avg_angle_rad_fast:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:1909   .text.utils_avg_angle_rad_fast:0000000000000000 utils_avg_angle_rad_fast
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:2063   .text.utils_avg_angle_rad_fast:0000000000000098 $d
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:2075   .text.utils_min_abs:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:2083   .text.utils_min_abs:0000000000000000 utils_min_abs
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:2112   .text.utils_max_abs:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:2120   .text.utils_max_abs:0000000000000000 utils_max_abs
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:2149   .text.utils_byte_to_binary:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:2157   .text.utils_byte_to_binary:0000000000000000 utils_byte_to_binary
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:2215   .text.utils_throttle_curve:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:2223   .text.utils_throttle_curve:0000000000000000 utils_throttle_curve
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:2484   .text.utils_throttle_curve:0000000000000158 $d
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:2489   .text.utils_crc32c:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:2497   .text.utils_crc32c:0000000000000000 utils_crc32c
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:2604   .text.utils_crc32c:0000000000000034 $d
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:2609   .text.utils_fft32_bin0:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:2617   .text.utils_fft32_bin0:0000000000000000 utils_fft32_bin0
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:2663   .text.utils_fft32_bin0:000000000000002c $d
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:2668   .text.utils_fft16_bin0:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:2676   .text.utils_fft16_bin0:0000000000000000 utils_fft16_bin0
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:2722   .text.utils_fft16_bin0:000000000000002c $d
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:2727   .text.utils_fft8_bin0:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:2735   .text.utils_fft8_bin0:0000000000000000 utils_fft8_bin0
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:2782   .text.utils_second_motor_id:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:2790   .text.utils_second_motor_id:0000000000000000 utils_second_motor_id
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:2805   .text.utils_batt_liion_norm_v_to_capacity:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:2813   .text.utils_batt_liion_norm_v_to_capacity:0000000000000000 utils_batt_liion_norm_v_to_capacity
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:2886   .text.utils_batt_liion_norm_v_to_capacity:0000000000000064 $d
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:2899   .text.utils_median_filter_uint16_run:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:2907   .text.utils_median_filter_uint16_run:0000000000000000 utils_median_filter_uint16_run
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:2991   .text.utils_median_filter_uint16_run:0000000000000048 $d
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:3046   .rodata.utils_tab_cos_32_2:0000000000000000 utils_tab_cos_32_2
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:3009   .rodata.utils_tab_cos_32_1:0000000000000000 utils_tab_cos_32_1
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:3120   .rodata.utils_tab_sin_32_2:0000000000000000 utils_tab_sin_32_2
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:3083   .rodata.utils_tab_sin_32_1:0000000000000000 utils_tab_sin_32_1
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:3000   .bss.sys_lock_cnt:0000000000000000 $d
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:3003   .bss.sys_lock_cnt:0000000000000000 sys_lock_cnt
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:3006   .rodata.utils_tab_cos_32_1:0000000000000000 $d
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:3043   .rodata.utils_tab_cos_32_2:0000000000000000 $d
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:3080   .rodata.utils_tab_sin_32_1:0000000000000000 $d
+D:\apps\VSCode\data\tmp\ccBjvp5y.s:3117   .rodata.utils_tab_sin_32_2:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 fmodf

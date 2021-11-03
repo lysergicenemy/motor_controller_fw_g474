@@ -63,7 +63,6 @@ Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c \
 Src/system_stm32g4xx.c \
 Src/tim.c \
 Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c \
-Src/lptim.c \
 Src/utils.c \
 Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_lptim.c
 

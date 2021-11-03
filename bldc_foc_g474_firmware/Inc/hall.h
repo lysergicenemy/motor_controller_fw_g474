@@ -61,9 +61,6 @@ static inline void Hall_read(hall_t *p, int samples)
  * beetwen midle of points **/
 static inline void Hall_update(hall_t *p)
 {
-    /* Increment ISR counter */
-    p->isrCntr++;
-    p->time += p->ts;
     /* Calc sensor state */
     if (p->A == 0 && p->B == 1 && p->C == 0)
         p->state = 0;
@@ -79,17 +76,9 @@ static inline void Hall_update(hall_t *p)
         p->state = 5;
     /* Calc angle 60deg resolution */
     p->angleRaw = p->offsetAvg[p->state];
-    /* Check new state and reset counter */
+    /* Check new state and change dir */
     if (p->state != p->statePr)
     {
-        /* Calc time between  states and angle increment value */
-        p->diff = fabsf(utils_angle_difference_rad(p->offsetAvg[p->statePr], p->offsetAvg[p->state]));
-        p->speedSector = p->diff / p->time;
-        UTILS_LP_FAST(p->speedE_filtered, p->speedSector, 0.01f);
-        p->isrCntr = 0;
-        p->delta = 0;
-        p->time = 0;
-
         if (p->state > p->statePr)
         {
             p->dir = (p->state != 5) ? 0 : p->dir;
@@ -99,24 +88,7 @@ static inline void Hall_update(hall_t *p)
             p->dir = (p->state != 0) ? 1 : p->dir;
         }
     }
-    p->stateNext = (p->dir == 0) ? p->state + 1 : p->state - 1;
-    p->stateNext = (p->dir == 0 && p->state == 5) ? 0 : p->stateNext;
-    p->stateNext = (p->dir == 1 && p->state == 0) ? 5 : p->stateNext;
-    /* Calc angle interpolation */
-    p->diffNext = fabsf(utils_angle_difference_rad(p->offsetAvg[p->state], p->offsetAvg[p->stateNext]));
-    p->delta = fabsf(p->speedE_filtered * ((float)p->isrCntr * p->ts));
-    UTILS_NAN_ZERO(p->delta);
-    p->delta = SAT(p->delta, p->diffNext, 0);
-    p->angle = (p->dir == 0) ? p->angleRaw + p->delta : p->angleRaw - p->delta;
-
     p->statePr = p->state;
-    /* Normalize to range -PI to PI */
-    if (p->angle < -MF_PI)
-        p->angle = p->angle + M_2PI;
-    else if (p->angle > MF_PI)
-        p->angle = p->angle - M_2PI;
-    /* If speed < speedMin use raw angle(60 deg resolution) */
-    p->angle = (fabsf(p->speedE) <= 50.f) ? p->angleRaw : p->angle;
 }
 
 /** Update angle position using Hall sensors estimated offset 

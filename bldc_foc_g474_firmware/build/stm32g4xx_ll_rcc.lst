@@ -1,4 +1,4 @@
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
   27:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** #endif
   28:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** /** @addtogroup STM32G4xx_LL_Driver
   29:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   * @{
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 2
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 2
 
 
   30:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   */
@@ -118,7 +118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
   84:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** #define IS_LL_RCC_QUADSPI_CLKSOURCE(__VALUE__)  (((__VALUE__) == LL_RCC_QUADSPI_CLKSOURCE))
   85:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** #endif /* QUADSPI */
   86:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 3
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 3
 
 
   87:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** #if defined(FDCAN1)
@@ -178,7 +178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
   34              		@ link register save eliminated.
  137:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   uint32_t vl_mask;
   35              		.loc 1 137 3 view .LVU1
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 4
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 4
 
 
  138:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
@@ -238,7 +238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
   48:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** 
   49:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** /* Private constants ---------------------------------------------------------*/
   50:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** /** @defgroup RCC_LL_Private_Constants RCC Private Constants
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 5
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 5
 
 
   51:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @{
@@ -298,7 +298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  105:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
  106:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** 
  107:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** /** @defgroup RCC_LL_EC_OSC_VALUES Oscillator Values adaptation
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 6
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 6
 
 
  108:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @brief    Defines used to adapt values of different oscillators
@@ -358,7 +358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  162:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_CIFR_LSERDYF                RCC_CIFR_LSERDYF     /*!< LSE Ready Interrupt flag */
  163:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_CIFR_HSIRDYF                RCC_CIFR_HSIRDYF     /*!< HSI Ready Interrupt flag */
  164:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_CIFR_HSERDYF                RCC_CIFR_HSERDYF     /*!< HSE Ready Interrupt flag */
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 7
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 7
 
 
  165:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_CIFR_PLLRDYF                RCC_CIFR_PLLRDYF     /*!< PLL Ready Interrupt flag */
@@ -418,7 +418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  219:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_SYS_CLKSOURCE_HSE           RCC_CFGR_SW_HSE    /*!< HSE selection as system clock */
  220:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_SYS_CLKSOURCE_PLL           RCC_CFGR_SW_PLL    /*!< PLL selection as system clock */
  221:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 8
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 8
 
 
  222:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @}
@@ -478,7 +478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  276:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @{
  277:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
  278:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_MCO1SOURCE_NOCLOCK          0x00000000U                            /*!< MCO output d
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 9
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 9
 
 
  279:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_MCO1SOURCE_SYSCLK           RCC_CFGR_MCOSEL_0                      /*!< SYSCLK selec
@@ -538,7 +538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  333:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @{
  334:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
  335:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #if defined(RCC_CCIPR_UART4SEL)
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 10
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 10
 
 
  336:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_UART4_CLKSOURCE_PCLK1       (RCC_CCIPR_UART4SEL << 16U)                           /*
@@ -598,7 +598,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  390:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** /**
  391:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @}
  392:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 11
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 11
 
 
  393:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** 
@@ -658,7 +658,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  447:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @{
  448:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
  449:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_ADC12_CLKSOURCE_NONE        ((RCC_OFFSET_CCIPR << 24U) | (RCC_CCIPR_ADC12SEL_Pos << 
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 12
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 12
 
 
  450:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_ADC12_CLKSOURCE_PLL         ((RCC_OFFSET_CCIPR << 24U) | (RCC_CCIPR_ADC12SEL_Pos << 
@@ -718,7 +718,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  504:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @{
  505:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
  506:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_I2C1_CLKSOURCE              ((RCC_OFFSET_CCIPR << 24U) | (RCC_CCIPR_I2C1SEL_Pos << 1
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 13
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 13
 
 
  507:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_I2C2_CLKSOURCE              ((RCC_OFFSET_CCIPR << 24U) | (RCC_CCIPR_I2C2SEL_Pos << 1
@@ -778,7 +778,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  561:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
  562:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_USB_CLKSOURCE               RCC_CCIPR_CLK48SEL /*!< USB Clock source selection */
  563:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 14
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 14
 
 
  564:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @}
@@ -838,7 +838,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  618:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_PLLM_DIV_8                  (RCC_PLLCFGR_PLLM_2 | RCC_PLLCFGR_PLLM_1 | RCC_PLLCFGR_P
  619:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_PLLM_DIV_9                  RCC_PLLCFGR_PLLM_3                                      
  620:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_PLLM_DIV_10                 (RCC_PLLCFGR_PLLM_3 | RCC_PLLCFGR_PLLM_0)               
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 15
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 15
 
 
  621:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define LL_RCC_PLLM_DIV_11                 (RCC_PLLCFGR_PLLM_3 | RCC_PLLCFGR_PLLM_1)               
@@ -898,7 +898,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  675:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** /**
  676:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @}
  677:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 16
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 16
 
 
  678:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** 
@@ -958,7 +958,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  732:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLM_DIV_2
  733:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLM_DIV_3
  734:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLM_DIV_4
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 17
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 17
 
 
  735:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLM_DIV_5
@@ -1018,7 +1018,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  789:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLP_DIV_8
  790:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLP_DIV_9
  791:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLP_DIV_10
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 18
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 18
 
 
  792:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLP_DIV_11
@@ -1078,7 +1078,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  846:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @retval PLL clock frequency (in Hz)
  847:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
  848:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #define __LL_RCC_CALC_PLLCLK_48M_FREQ(__INPUTFREQ__, __PLLM__, __PLLN__, __PLLQ__) ((__INPUTFREQ__)
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 19
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 19
 
 
  849:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****                    ((((__PLLQ__) >> RCC_PLLCFGR_PLLQ_Pos) + 1U) << 1U))
@@ -1138,7 +1138,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  903:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** /** @defgroup RCC_LL_Exported_Functions RCC Exported Functions
  904:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @{
  905:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 20
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 20
 
 
  906:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** 
@@ -1198,7 +1198,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  960:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** 
  961:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** /**
  962:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @brief  Check if HSE oscillator Ready
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 21
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 21
 
 
  963:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @rmtoll CR           HSERDY        LL_RCC_HSE_IsReady
@@ -1258,7 +1258,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
   49              	.LBE258:
  141:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   while (LL_RCC_HSI_IsReady() == 0U)
  142:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   {}
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 22
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 22
 
 
   50              		.loc 1 142 4 discriminator 1 view .LVU5
@@ -1318,7 +1318,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 1042:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** /**
 1043:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @brief  Set HSI Calibration trimming
 1044:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @note user-programmable trimming value that is added to the HSICAL
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 23
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 23
 
 
 1045:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @note Default value is 16, which, when added to the HSICAL value,
@@ -1378,7 +1378,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 1091:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   CLEAR_BIT(RCC->CRRCR, RCC_CRRCR_HSI48ON);
 1092:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
 1093:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 24
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 24
 
 
 1094:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** /**
@@ -1438,7 +1438,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 1148:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** {
 1149:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   SET_BIT(RCC->BDCR, RCC_BDCR_LSEBYP);
 1150:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 25
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 25
 
 
 1151:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** 
@@ -1498,7 +1498,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 1205:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *       failure detection. In that case it MUST be disabled by software.
 1206:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @rmtoll BDCR         LSECSSON      LL_RCC_LSE_DisableCSS
 1207:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @retval None
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 26
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 26
 
 
 1208:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
@@ -1558,7 +1558,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 1262:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** /**
 1263:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @brief  Check if LSI is Ready
 1264:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @rmtoll CSR          LSIRDY        LL_RCC_LSI_IsReady
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 27
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 27
 
 
 1265:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @retval State of bit (1 or 0).
@@ -1618,7 +1618,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 1319:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
 1320:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** __STATIC_INLINE uint32_t LL_RCC_LSCO_GetSource(void)
 1321:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** {
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 28
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 28
 
 
 1322:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   return (uint32_t)(READ_BIT(RCC->BDCR, RCC_BDCR_LSCOSEL));
@@ -1678,7 +1678,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
   89              	.LBB265:
 1053:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
   90              		.loc 2 1053 3 view .LVU16
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 29
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 29
 
 
   91 001e 5960     		str	r1, [r3, #4]
@@ -1738,7 +1738,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 1377:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   MODIFY_REG(RCC->CFGR, RCC_CFGR_HPRE, Prescaler);
 1378:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
 1379:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 30
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 30
 
 
 1380:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** /**
@@ -1798,7 +1798,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 1434:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @retval Returned value can be one of the following values:
 1435:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_APB1_DIV_1
 1436:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_APB1_DIV_2
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 31
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 31
 
 
 1437:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_APB1_DIV_4
@@ -1858,7 +1858,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 1491:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
 1492:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** __STATIC_INLINE void LL_RCC_ConfigMCO(uint32_t MCOxSource, uint32_t MCOxPrescaler)
 1493:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** {
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 32
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 32
 
 
 1494:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   MODIFY_REG(RCC->CFGR, RCC_CFGR_MCOSEL | RCC_CFGR_MCOPRE, MCOxSource | MCOxPrescaler);
@@ -1918,7 +1918,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 1548:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
 1549:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #endif /* UART4 */
 1550:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 33
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 33
 
 
 1551:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** /**
@@ -1978,7 +1978,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 1605:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
 1606:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** 
 1607:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 34
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 34
 
 
 1608:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @brief  Configure SAIx clock source
@@ -2038,7 +2038,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 1662:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
 1663:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** __STATIC_INLINE void LL_RCC_SetRNGClockSource(uint32_t RNGxSource)
 1664:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** {
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 35
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 35
 
 
 1665:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   MODIFY_REG(RCC->CCIPR, RCC_CCIPR_CLK48SEL, RNGxSource);
@@ -2098,7 +2098,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 1719:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @rmtoll CCIPR        USARTxSEL     LL_RCC_GetUSARTClockSource
 1720:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @param  USARTx This parameter can be one of the following values:
 1721:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_USART1_CLKSOURCE
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 36
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 36
 
 
 1722:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_USART2_CLKSOURCE
@@ -2158,7 +2158,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 1776:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_LPUART1_CLKSOURCE_HSI
 1777:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_LPUART1_CLKSOURCE_LSE
 1778:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 37
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 37
 
 
 1779:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** __STATIC_INLINE uint32_t LL_RCC_GetLPUARTClockSource(uint32_t LPUARTx)
@@ -2218,7 +2218,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 1833:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @brief  Get SAIx clock source
 1834:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @rmtoll CCIPR        SAI1SEL       LL_RCC_GetSAIClockSource
 1835:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @param  SAIx This parameter can be one of the following values:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 38
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 38
 
 
 1836:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_SAI1_CLKSOURCE
@@ -2278,7 +2278,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 1890:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_RNG_CLKSOURCE
 1891:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @retval Returned value can be one of the following values:
 1892:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_RNG_CLKSOURCE_HSI48
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 39
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 39
 
 
 1893:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_RNG_CLKSOURCE_PLL
@@ -2338,7 +2338,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 1947:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** {
 1948:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   return (uint32_t)(READ_BIT(RCC->CCIPR2, QUADSPIx));
 1949:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 40
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 40
 
 
 1950:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** #endif /* QUADSPI */
@@ -2398,7 +2398,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 2004:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @retval None
 2005:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
 2006:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** __STATIC_INLINE void LL_RCC_DisableRTC(void)
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 41
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 41
 
 
 2007:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** {
@@ -2458,7 +2458,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 2061:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @brief  Disable PLL
 2062:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @note Cannot be disabled if the PLL clock is used as the system clock
 2063:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @rmtoll CR           PLLON         LL_RCC_PLL_Disable
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 42
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 42
 
 
 2064:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @retval None
@@ -2518,7 +2518,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  166:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   vl_mask = RCC_CICR_LSIRDYC | RCC_CICR_LSERDYC | RCC_CICR_HSIRDYC | RCC_CICR_HSERDYC | RCC_CICR_PL
  167:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****             RCC_CICR_HSI48RDYC | RCC_CICR_CSSC | RCC_CICR_LSECSSC;
  168:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 43
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 43
 
 
  169:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   LL_RCC_WriteReg(CICR, vl_mask);
@@ -2578,7 +2578,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 2113:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLR_DIV_2
 2114:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLR_DIV_4
 2115:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLR_DIV_6
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 44
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 44
 
 
 2116:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLR_DIV_8
@@ -2638,7 +2638,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 2170:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLP_DIV_15
 2171:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLP_DIV_16
 2172:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLP_DIV_17
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 45
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 45
 
 
 2173:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLP_DIV_18
@@ -2698,7 +2698,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 2227:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @param  PLLQ This parameter can be one of the following values:
 2228:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLQ_DIV_2
 2229:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLQ_DIV_4
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 46
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 46
 
 
 2230:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLQ_DIV_6
@@ -2758,7 +2758,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 2284:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLP_DIV_3
 2285:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLP_DIV_4
 2286:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLP_DIV_5
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 47
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 47
 
 
 2287:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLP_DIV_6
@@ -2818,7 +2818,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 2341:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLR_DIV_6
 2342:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLR_DIV_8
 2343:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 48
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 48
 
 
 2344:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** __STATIC_INLINE uint32_t LL_RCC_PLL_GetR(void)
@@ -2878,7 +2878,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 2398:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** 
 2399:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** /**
 2400:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @brief  Enable PLL output mapped on 48MHz domain clock
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 49
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 49
 
 
 2401:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @rmtoll PLLCFGR      PLLQEN        LL_RCC_PLL_EnableDomain_48M
@@ -2938,7 +2938,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 2455:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** /**
 2456:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @brief  Clear LSI ready interrupt flag
 2457:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @rmtoll CICR         LSIRDYC       LL_RCC_ClearFlag_LSIRDY
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 50
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 50
 
 
 2458:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @retval None
@@ -2998,7 +2998,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 2512:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   SET_BIT(RCC->CICR, RCC_CICR_HSI48RDYC);
 2513:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
 2514:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 51
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 51
 
 
 2515:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** /**
@@ -3058,7 +3058,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 2569:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
 2570:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** __STATIC_INLINE uint32_t LL_RCC_IsActiveFlag_HSERDY(void)
 2571:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** {
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 52
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 52
 
 
 2572:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   return ((READ_BIT(RCC->CIFR, RCC_CIFR_HSERDYF) == (RCC_CIFR_HSERDYF)) ? 1UL : 0UL);
@@ -3118,7 +3118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 2626:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @brief  Check if RCC flag Low Power reset is set or not.
 2627:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @rmtoll CSR          LPWRRSTF      LL_RCC_IsActiveFlag_LPWRRST
 2628:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @retval State of bit (1 or 0).
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 53
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 53
 
 
 2629:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   */
@@ -3178,7 +3178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 2683:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
 2684:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** 
 2685:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 54
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 54
 
 
 2686:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h ****   * @brief  Set RMVF bit to clear the reset flags.
@@ -3238,7 +3238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  192:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   *               8 MHz), user has to ensure that HSE_VALUE is same as the real
  193:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   *               frequency of the crystal used. Otherwise, this function may
  194:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   *               have wrong result.
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 55
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 55
 
 
  195:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   * @note   The result of this function could be incorrect when using fractional
@@ -3298,7 +3298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  241:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
  242:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   if (USARTxSource == LL_RCC_USART1_CLKSOURCE)
  243:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   {
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 56
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 56
 
 
  244:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****     /* USART1CLK clock frequency */
@@ -3358,7 +3358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  298:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****     }
  299:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   }
  300:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   else
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 57
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 57
 
 
  301:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   {
@@ -3418,7 +3418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  355:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****     /* UART4CLK clock frequency */
  356:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****     switch (LL_RCC_GetUARTClockSource(UARTxSource))
  357:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****     {
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 58
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 58
 
 
  358:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****       case LL_RCC_UART4_CLKSOURCE_SYSCLK: /* UART4 Clock is System Clock */
@@ -3478,7 +3478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  412:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   }
  413:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** #endif /* RCC_CCIPR_UART5SEL */
  414:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 59
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 59
 
 
  415:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   return uart_frequency;
@@ -3538,7 +3538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  469:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****       case LL_RCC_I2C2_CLKSOURCE_HSI:    /* I2C2 Clock is HSI Osc. */
  470:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****         if (LL_RCC_HSI_IsReady() != 0U)
  471:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****         {
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 60
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 60
 
 
  472:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****           i2c_frequency = HSI_VALUE;
@@ -3598,7 +3598,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  526:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****           default:
  527:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****             i2c_frequency = RCC_GetPCLK1ClockFreq(RCC_GetHCLKClockFreq(RCC_GetSystemClockFreq()));
  528:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****             break;
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 61
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 61
 
 
  529:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****         }
@@ -3658,7 +3658,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  583:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** /**
  584:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   * @brief  Return LPTIMx clock frequency
  585:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   * @param  LPTIMxSource This parameter can be one of the following values:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 62
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 62
 
 
  586:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   *         @arg @ref LL_RCC_LPTIM1_CLKSOURCE
@@ -3718,7 +3718,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  640:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   */
  641:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** uint32_t LL_RCC_GetSAIClockFreq(uint32_t SAIxSource)
  642:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** {
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 63
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 63
 
 
  643:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   uint32_t sai_frequency = LL_RCC_PERIPH_FREQUENCY_NO;
@@ -3778,7 +3778,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  697:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   {
  698:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****     /* I2S CLK clock frequency */
  699:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****     switch (LL_RCC_GetI2SClockSource(I2SxSource))
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 64
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 64
 
 
  700:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****     {
@@ -3838,7 +3838,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  754:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
  755:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****     case LL_RCC_FDCAN_CLKSOURCE_PLL:   /* PLL clock used as FDCAN kernel clock */
  756:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****       if (LL_RCC_PLL_IsReady() != 0U)
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 65
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 65
 
 
  757:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****       {
@@ -3898,7 +3898,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  811:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
  812:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   return rng_frequency;
  813:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** }
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 66
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 66
 
 
  814:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
@@ -3958,7 +3958,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  868:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   uint32_t adc_frequency = LL_RCC_PERIPH_FREQUENCY_NO;
  869:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
  870:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   /* Check parameter */
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 67
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 67
 
 
  871:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   assert_param(IS_LL_RCC_ADC_CLKSOURCE(ADCxSource));
@@ -4018,7 +4018,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  925:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   * @brief  Return QUADSPI clock frequency
  926:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   * @param  QUADSPIxSource This parameter can be one of the following values:
  927:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   *         @arg @ref LL_RCC_QUADSPI_CLKSOURCE
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 68
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 68
 
 
  928:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   * @retval QUADSPI clock frequency (in Hz)
@@ -4078,7 +4078,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  982:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   * @retval SYSTEM clock frequency (in Hz)
  983:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   */
  984:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** uint32_t RCC_GetSystemClockFreq(void)
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 69
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 69
 
 
  196              		.loc 1 984 10 view .LVU50
@@ -4138,7 +4138,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  998:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
  999:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****     case LL_RCC_SYS_CLKSOURCE_STATUS_PLL:  /* PLL used as system clock  source */
 1000:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****       frequency = RCC_PLL_GetFreqDomain_SYS();
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 70
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 70
 
 
  232              		.loc 1 1000 7 is_stmt 1 view .LVU59
@@ -4198,7 +4198,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 1050:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   uint32_t pllinputfreq, pllsource;
  237              		.loc 1 1050 3 view .LVU61
 1051:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 71
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 71
 
 
 1052:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   /* PLL_VCO = (HSE_VALUE or HSI_VALUE / PLLM) * PLLN
@@ -4258,7 +4258,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 1065:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****       break;
 1066:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
 1067:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****     default:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 72
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 72
 
 
 1068:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****       pllinputfreq = HSI_VALUE;
@@ -4318,7 +4318,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  312              		.loc 2 2274 10 is_stmt 0 view .LVU83
  313 002e C5F30625 		ubfx	r5, r5, #8, #7
  314              	.LBE318:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 73
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 73
 
 
  315              	.LBE329:
@@ -4378,7 +4378,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  359              		.loc 2 1428 3 view .LVU96
 1428:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
  360              		.loc 2 1428 21 is_stmt 0 view .LVU97
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 74
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 74
 
 
  361 004c 8A68     		ldr	r2, [r1, #8]
@@ -4438,7 +4438,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  403              	.LBE345:
  404              	.LBE344:
 1030:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** }
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 75
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 75
 
 
  405              		.loc 1 1030 10 view .LVU110
@@ -4498,7 +4498,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  448              		.cfi_def_cfa_offset 0
  449 0084 7047     		bx	lr
  450              	.L16:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 76
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 76
 
 
  451              	.LCFI2:
@@ -4558,7 +4558,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  499              	.LCFI3:
  500              		.cfi_def_cfa_offset 12
  501              		.cfi_offset 4, -12
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 77
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 77
 
 
  502              		.cfi_offset 5, -8
@@ -4618,7 +4618,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  544              	.LBB482:
 1740:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
  545              		.loc 2 1740 21 view .LVU142
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 78
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 78
 
 
  546 001a D2F88830 		ldr	r3, [r2, #136]
@@ -4678,7 +4678,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  588              	.LBE489:
  989:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   {
  589              		.loc 1 989 3 is_stmt 0 view .LVU155
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 79
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 79
 
 
  590 003c 082B     		cmp	r3, #8
@@ -4738,7 +4738,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  632              	.LBB523:
 1030:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** }
  633              		.loc 1 1030 3 view .LVU168
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 80
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 80
 
 
  634              	.LBB524:
@@ -4798,7 +4798,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  675              		.loc 1 245 5 view .LVU181
  676 0060 6B49     		ldr	r1, .L82+20
  677              	.LBB534:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 81
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 81
 
 
  678              	.LBB533:
@@ -4858,7 +4858,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 1357:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
  720              		.loc 2 1357 3 view .LVU194
  721              	.LBE539:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 82
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 82
 
 
  722              	.LBE540:
@@ -4918,7 +4918,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 1038:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** {
  764              		.loc 1 1038 10 is_stmt 1 view .LVU207
  765              	.LBB572:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 83
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 83
 
 
 1041:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** }
@@ -4978,7 +4978,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  809              	.LBB521:
 1019:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** }
  810              		.loc 1 1019 10 view .LVU219
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 84
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 84
 
 
  811 00a6 02F01F02 		and	r2, r2, #31
@@ -5038,7 +5038,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  854              		.loc 1 261 27 view .LVU230
  855 00c4 4FF40040 		movne	r0, #32768
  333:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 85
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 85
 
 
  856              		.loc 1 333 1 view .LVU231
@@ -5098,7 +5098,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  898              	.LBB591:
 2264:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
  899              		.loc 2 2264 3 view .LVU244
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 86
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 86
 
 
 2264:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
@@ -5158,7 +5158,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  943 00ec 3046     		moveq	r0, r6
  944              	.LVL34:
  945              		.loc 1 1071 3 is_stmt 1 view .LVU257
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 87
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 87
 
 
  946              	.LBB604:
@@ -5218,7 +5218,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  992              	.L37:
 1001:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
  993              		.loc 1 1001 7 is_stmt 0 view .LVU270
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 88
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 88
 
 
  994              	.LBE585:
@@ -5278,7 +5278,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 1740:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
  1037              		.loc 2 1740 21 is_stmt 0 view .LVU282
  1038 011a 384A     		ldr	r2, .L82
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 89
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 89
 
 
  1039              	.LBE613:
@@ -5338,7 +5338,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  1081              		.loc 1 989 3 view .LVU294
  1082              	.LBB621:
  1083              	.LBI618:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 90
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 90
 
 
 1355:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** {
@@ -5398,7 +5398,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  1123              		.loc 2 2372 21 view .LVU309
  1124 014e D168     		ldr	r1, [r2, #12]
  1125              	.LBE632:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 91
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 91
 
 
  1126              	.LBE631:
@@ -5458,7 +5458,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 2346:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
  1170              		.loc 2 2346 3 view .LVU322
  1171              	.LBE636:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 92
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 92
 
 
  1172              	.LBE640:
@@ -5518,7 +5518,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  1218              	.LBE645:
  1219              	.LBB647:
  1220              	.LBB562:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 93
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 93
 
 
 1000:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****       break;
@@ -5578,7 +5578,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  1261 0190 1C4B     		ldr	r3, .L82+8
  1262 0192 204E     		ldr	r6, .L82+24
  1263              	.LBB556:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 94
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 94
 
 
  1264              	.LBB545:
@@ -5638,7 +5638,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  1308              	.LVL57:
  1309              		.loc 1 1071 10 view .LVU361
  1310 01aa 0130     		adds	r0, r0, #1
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 95
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 95
 
 
  1311 01ac 03FB04F3 		mul	r3, r3, r4
@@ -5698,7 +5698,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  1354              	.LBB496:
 2274:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
  1355              		.loc 2 2274 21 is_stmt 0 view .LVU375
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 96
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 96
 
 
  1356 01c4 D468     		ldr	r4, [r2, #12]
@@ -5758,7 +5758,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 2370:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** {
  1401              		.loc 2 2370 26 view .LVU387
  1402              	.LBB501:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 97
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 97
 
 
 2372:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
@@ -5818,7 +5818,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  1450 01fc 00100240 		.word	1073876992
  1451 0200 08000C00 		.word	786440
  1452 0204 0024F400 		.word	16000000
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 98
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 98
 
 
  1453 0208 00000000 		.word	AHBPrescTable
@@ -5878,7 +5878,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  1499              		.loc 1 384 3 is_stmt 1 view .LVU408
  384:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   {
  1500              		.loc 1 384 6 is_stmt 0 view .LVU409
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 99
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 99
 
 
  1501 000e 02D0     		beq	.L119
@@ -5938,7 +5938,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  1545 002a B2F1032F 		cmp	r2, #50332416
  1546 002e 54D0     		beq	.L94
  1547 0030 6A4B     		ldr	r3, .L124+8
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 100
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 100
 
 
  1548              	.LVL75:
@@ -5998,7 +5998,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 1008:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** }
  1590              		.loc 1 1008 3 is_stmt 1 view .LVU432
 1008:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** }
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 101
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 101
 
 
  1591              		.loc 1 1008 3 is_stmt 0 view .LVU433
@@ -6058,7 +6058,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  1632              	.LBE780:
  1633              	.LBE779:
 1030:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** }
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 102
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 102
 
 
  1634              		.loc 1 1030 10 view .LVU447
@@ -6118,7 +6118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  1679              	.LBE783:
  1680              	.LBE789:
  410:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****     }
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 103
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 103
 
 
  1681              		.loc 1 410 9 is_stmt 1 view .LVU457
@@ -6178,7 +6178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  1725 008e 8B42     		cmp	r3, r1
  1726              	.LBB794:
  1727              	.LBB795:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 104
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 104
 
 
  1728              	.LBB796:
@@ -6238,7 +6238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 2262:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** {
  1768              		.loc 2 2262 26 view .LVU482
  1769              	.LBB803:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 105
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 105
 
 
 2264:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
@@ -6298,7 +6298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  1812 00b4 032A     		cmp	r2, #3
  1813 00b6 08BF     		it	eq
  1814 00b8 3046     		moveq	r0, r6
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 106
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 106
 
 
  1815              	.LVL86:
@@ -6358,7 +6358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  1861 00d4 B8E7     		b	.L97
  1862              	.LVL90:
  1863              	.L113:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 107
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 107
 
 
 1001:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
@@ -6418,7 +6418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  1904 00ea 0968     		ldr	r1, [r1]
  1905              	.LBE826:
  1906              	.LBE825:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 108
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 108
 
 
  396:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****         }
@@ -6478,7 +6478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  1948              		.loc 1 992 17 view .LVU535
  1949              	.LBE830:
  1950              	.LBE829:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 109
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 109
 
 
  363:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****         {
@@ -6538,7 +6538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  1991 0116 0C2B     		cmp	r3, #12
  1992 0118 F2D1     		bne	.L109
 1000:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****       break;
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 110
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 110
 
 
  1993              		.loc 1 1000 7 is_stmt 1 view .LVU550
@@ -6598,7 +6598,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  2034 0124 324E     		ldr	r6, .L124+28
  2035              	.LBB877:
  2036              	.LBB866:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 111
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 111
 
 
 2264:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
@@ -6658,7 +6658,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  2081              		.loc 1 1071 10 view .LVU577
  2082 013c 0130     		adds	r0, r0, #1
  2083 013e 03FB04F3 		mul	r3, r3, r4
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 112
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 112
 
 
  2084              	.LVL102:
@@ -6718,7 +6718,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  2128              	.LBB833:
  2129              	.LBI833:
 1048:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** {
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 113
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 113
 
 
  2130              		.loc 1 1048 10 view .LVU590
@@ -6778,7 +6778,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 2264:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
  2172              		.loc 2 2264 10 view .LVU603
  2173              	.LBE837:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 114
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 114
 
 
  2174              	.LBE848:
@@ -6838,7 +6838,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  2219 018e 0132     		adds	r2, r2, #1
  2220 0190 4000     		lsls	r0, r0, #1
  2221 0192 B3FBF2F3 		udiv	r3, r3, r2
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 115
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 115
 
 
  2222 0196 B3FBF0F3 		udiv	r3, r3, r0
@@ -6898,7 +6898,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  2263              		.loc 2 2372 21 view .LVU631
  2264 01a0 CA68     		ldr	r2, [r1, #12]
  2265              	.LBE754:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 116
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 116
 
 
  2266              	.LBE753:
@@ -6958,7 +6958,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 2346:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
  2310              		.loc 2 2346 3 view .LVU644
  2311              	.LBE758:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 117
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 117
 
 
  2312              	.LBE762:
@@ -7018,7 +7018,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  2365              	.LFB273:
  432:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   uint32_t i2c_frequency = LL_RCC_PERIPH_FREQUENCY_NO;
  2366              		.loc 1 432 1 view -0
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 118
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 118
 
 
  2367              		.cfi_startproc
@@ -7078,7 +7078,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  2407              		.cfi_remember_state
  2408              		.cfi_restore 6
  2409              		.cfi_restore 5
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 119
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 119
 
 
  2410              		.cfi_restore 4
@@ -7138,7 +7138,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  2451              		.loc 1 502 11 is_stmt 1 view .LVU679
  2452              	.LBB1050:
  2453              	.LBI1050:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 120
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 120
 
 
  984:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** {
@@ -7198,7 +7198,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 1426:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** {
  2495              		.loc 2 1426 26 view .LVU693
  2496              	.LBB1104:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 121
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 121
 
 
 1428:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
@@ -7258,7 +7258,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  2538              	.LBE1107:
  2539              	.LBE1117:
  2540              	.LBB1118:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 122
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 122
 
 
  2541              	.LBB1114:
@@ -7318,7 +7318,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  2586              	.L209:
  2587              	.LCFI21:
  2588              		.cfi_restore_state
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 123
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 123
 
 
  487:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****       {
@@ -7378,7 +7378,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  2627              		.loc 2 1355 26 view .LVU731
  2628              	.LBB1130:
 1357:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 124
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 124
 
 
  2629              		.loc 2 1357 3 view .LVU732
@@ -7438,7 +7438,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  2672              		.loc 2 1813 22 is_stmt 0 view .LVU743
  2673 009e 434B     		ldr	r3, .L214+16
  2674              	.LBE1156:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 125
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 125
 
 
  2675              	.LBE1155:
@@ -7498,7 +7498,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  2715              		.loc 2 1027 71 view .LVU757
  2716 00bc 13F4806F 		tst	r3, #1024
  2717              	.LBE1161:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 126
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 126
 
 
  2718              	.LBE1162:
@@ -7558,7 +7558,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  2760 00ca D468     		ldr	r4, [r2, #12]
  2761              	.LBE1137:
  2762              	.LBE1136:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 127
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 127
 
 
  2763              	.LBB1140:
@@ -7618,7 +7618,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 2372:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
  2807              		.loc 2 2372 3 view .LVU782
  2808              	.LBE1142:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 128
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 128
 
 
  2809              	.LBE1148:
@@ -7678,7 +7678,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  2854              		.loc 1 1055 3 view .LVU795
  2855              	.LBB1056:
  2856              	.LBI1056:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 129
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 129
 
 
 2262:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** {
@@ -7738,7 +7738,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  2899 010e C0F34160 		ubfx	r0, r0, #25, #2
 1064:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****       break;
  2900              		.loc 1 1064 20 view .LVU809
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 130
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 130
 
 
  2901 0112 032A     		cmp	r2, #3
@@ -7798,7 +7798,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  2948              	.LBE1054:
 1001:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
  2949              		.loc 1 1001 7 is_stmt 1 view .LVU822
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 131
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 131
 
 
  2950 0132 8CE7     		b	.L153
@@ -7858,7 +7858,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  986:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
  2991              		.loc 1 986 3 view .LVU836
  989:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   {
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 132
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 132
 
 
  2992              		.loc 1 989 3 view .LVU837
@@ -7918,7 +7918,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  3031              		.loc 2 2274 21 is_stmt 0 view .LVU852
  3032 0160 D068     		ldr	r0, [r2, #12]
  3033              	.LVL153:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 133
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 133
 
 
 2274:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
@@ -7978,7 +7978,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  3078              	.LBB1090:
 2372:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
  3079              		.loc 2 2372 3 view .LVU865
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 134
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 134
 
 
  3080              	.LBE1090:
@@ -8038,7 +8038,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  3126              	.LBE1154:
  3127              	.LBE1170:
  3128              	.LBB1171:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 135
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 135
 
 
  3129              	.LBB1100:
@@ -8098,7 +8098,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  3179              		.loc 2 1781 3 view .LVU882
 1781:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
  3180              		.loc 2 1781 21 is_stmt 0 view .LVU883
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 136
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 136
 
 
  3181 0000 3D4A     		ldr	r2, .L239
@@ -8158,7 +8158,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  3226              	.LBB1249:
  3227              	.LBI1216:
  984:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** {
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 137
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 137
 
 
  3228              		.loc 1 984 10 view .LVU893
@@ -8218,7 +8218,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  3268              	.LBB1255:
  3269              	.LBB1254:
 1428:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 138
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 138
 
 
  3270              		.loc 2 1428 21 view .LVU908
@@ -8278,7 +8278,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  3313 003e A25C     		ldrb	r2, [r4, r2]	@ zero_extendqisi2
  3314              	.LBE1257:
  3315              	.LBE1268:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 139
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 139
 
 
  3316              	.LBB1269:
@@ -8338,7 +8338,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  3359              	.LBE1272:
  563:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****       }
  3360              		.loc 1 563 26 view .LVU931
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 140
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 140
 
 
  3361 0056 2948     		ldr	r0, .L239+4
@@ -8398,7 +8398,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  3404              	.LCFI29:
  3405              		.cfi_restore 6
  3406              		.cfi_restore 5
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 141
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 141
 
 
  3407              		.cfi_restore 4
@@ -8458,7 +8458,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  3448              		.loc 2 2264 3 view .LVU955
 2264:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
  3449              		.loc 2 2264 21 is_stmt 0 view .LVU956
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 142
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 142
 
 
  3450 0082 D568     		ldr	r5, [r2, #12]
@@ -8518,7 +8518,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 2272:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** {
  3495              		.loc 2 2272 26 view .LVU968
  3496              	.LBB1287:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 143
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 143
 
 
 2274:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
@@ -8578,7 +8578,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  3543              	.LBB1305:
  3544              	.LBB1246:
 1000:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****       break;
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 144
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 144
 
 
  3545              		.loc 1 1000 7 is_stmt 1 view .LVU981
@@ -8638,7 +8638,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 2264:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
  3587              		.loc 2 2264 10 view .LVU994
  3588 00c4 05F00302 		and	r2, r5, #3
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 145
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 145
 
 
  3589              	.LVL176:
@@ -8698,7 +8698,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  3634              	.LVL179:
  3635              		.loc 1 1071 10 view .LVU1008
  3636 00e0 0132     		adds	r2, r2, #1
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 146
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 146
 
 
  3637 00e2 4000     		lsls	r0, r0, #1
@@ -8758,7 +8758,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  3689              		.cfi_startproc
  3690              		@ args = 0, pretend = 0, frame = 0
  3691              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 147
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 147
 
 
  3692              		@ link register save eliminated.
@@ -8818,7 +8818,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  3731              		.loc 1 984 10 view .LVU1028
  3732              	.LBB1341:
  986:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 148
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 148
 
 
  3733              		.loc 1 986 3 view .LVU1029
@@ -8878,7 +8878,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  3776              		.loc 1 1016 10 is_stmt 1 view .LVU1040
  3777              	.LBB1370:
 1019:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** }
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 149
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 149
 
 
  3778              		.loc 1 1019 3 view .LVU1041
@@ -8938,7 +8938,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 1019:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** }
  3820              		.loc 1 1019 10 view .LVU1054
  3821 0042 C2F30312 		ubfx	r2, r2, #4, #4
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 150
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 150
 
 
  3822              	.LVL188:
@@ -8998,7 +8998,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  3866              		.cfi_restore 5
  3867              		.cfi_restore 4
  3868              		.cfi_def_cfa_offset 0
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 151
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 151
 
 
  3869 005e 7047     		bx	lr
@@ -9058,7 +9058,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  3910 0076 0CBF     		ite	eq
  3911 0078 0020     		moveq	r0, #0
  3912              	.LVL193:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 152
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 152
 
 
  605:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****         }
@@ -9118,7 +9118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 2262:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** {
  3955              		.loc 2 2262 26 view .LVU1090
  3956              	.LBB1349:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 153
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 153
 
 
 2264:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
@@ -9178,7 +9178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  3999 00a6 032A     		cmp	r2, #3
  4000 00a8 08BF     		it	eq
  4001 00aa 3346     		moveq	r3, r6
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 154
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 154
 
 
  4002              	.LVL200:
@@ -9238,7 +9238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  4048 00c6 B7E7     		b	.L246
  4049              	.LVL204:
  4050              	.L252:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 155
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 155
 
 
  996:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****       break;
@@ -9298,7 +9298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  4098              	.LBB1430:
  4099              	.LBI1430:
 1847:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** {
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 156
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 156
 
 
  4100              		.loc 2 1847 26 view .LVU1126
@@ -9358,7 +9358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  4143              	.LBB1436:
 1027:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
  4144              		.loc 2 1027 71 view .LVU1138
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 157
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 157
 
 
  4145 0028 13F4806F 		tst	r3, #1024
@@ -9418,7 +9418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 2078:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
  4191              		.loc 2 2078 71 view .LVU1147
  4192 003c 10F00070 		ands	r0, r0, #33554432
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 158
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 158
 
 
  4193 0040 F6D0     		beq	.L263
@@ -9478,7 +9478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 1116:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   */
 1117:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   pllsource = LL_RCC_PLL_GetMainSource();
  4202              		.loc 1 1117 3 view .LVU1151
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 159
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 159
 
 
  4203              	.LBB1442:
@@ -9538,7 +9538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  4240              	.LVL216:
 2264:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
  4241              		.loc 2 2264 10 view .LVU1162
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 160
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 160
 
 
  4242              	.LBE1444:
@@ -9598,7 +9598,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  4281              		.loc 1 1133 10 view .LVU1173
  4282 0060 C1F30312 		ubfx	r2, r1, #4, #4
  4283 0064 0133     		adds	r3, r3, #1
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 161
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 161
 
 
  4284 0066 00FB04F0 		mul	r0, r0, r4
@@ -9658,7 +9658,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  4327              	.LVL223:
  4328              	.L284:
 1000:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****       break;
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 162
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 162
 
 
  4329              		.loc 1 1000 7 is_stmt 1 view .LVU1188
@@ -9718,7 +9718,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  4370 0094 064E     		ldr	r6, .L285+12
  4371              	.LBB1475:
  4372              	.LBB1468:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 163
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 163
 
 
 2264:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
@@ -9778,7 +9778,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  4421              		.loc 1 691 3 view .LVU1209
  694:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
  4422              		.loc 1 694 3 view .LVU1210
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 164
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 164
 
 
  696:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   {
@@ -9838,7 +9838,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  4465 0022 4BB3     		cbz	r3, .L307
  718:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****         {
  4466              		.loc 1 718 9 is_stmt 1 view .LVU1223
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 165
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 165
 
 
  4467              	.LBB1510:
@@ -9898,7 +9898,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  4512              		.cfi_restore 4
  4513              		.cfi_def_cfa_offset 0
  4514 0038 7047     		bx	lr
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 166
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 166
 
 
  4515              	.LVL237:
@@ -9958,7 +9958,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  4554              		.loc 2 2274 21 is_stmt 0 view .LVU1247
  4555 0044 D468     		ldr	r4, [r2, #12]
  4556              	.LBE1522:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 167
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 167
 
 
  4557              	.LBE1521:
@@ -10018,7 +10018,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 2372:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
  4602              		.loc 2 2372 3 view .LVU1259
  4603              	.LBE1527:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 168
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 168
 
 
  4604              	.LBE1533:
@@ -10078,7 +10078,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  4648              		.loc 2 1357 21 is_stmt 0 view .LVU1273
  4649 0078 9368     		ldr	r3, [r2, #8]
 1357:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 169
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 169
 
 
  4650              		.loc 2 1357 10 view .LVU1274
@@ -10138,7 +10138,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  4691              	.LBB1547:
  4692              	.LBB1548:
 2372:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 170
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 170
 
 
  4693              		.loc 2 2372 21 view .LVU1288
@@ -10198,7 +10198,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  4738              		.cfi_endproc
  4739              	.LFE277:
  4741              		.section	.text.LL_RCC_GetFDCANClockFreq,"ax",%progbits
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 171
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 171
 
 
  4742              		.align	1
@@ -10258,7 +10258,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  4786              		.loc 1 746 3 view .LVU1308
  4787 000a B0F1807F 		cmp	r0, #16777216
  4788 000e 07D0     		beq	.L312
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 172
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 172
 
 
  4789 0010 B0F1007F 		cmp	r0, #33554432
@@ -10318,7 +10318,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 2264:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
  4831              		.loc 2 2264 3 view .LVU1321
 2264:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 173
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 173
 
 
  4832              		.loc 2 2264 21 is_stmt 0 view .LVU1322
@@ -10378,7 +10378,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  4877              	.LBI1601:
 2272:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** {
  4878              		.loc 2 2272 26 view .LVU1334
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 174
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 174
 
 
  4879              	.LBB1603:
@@ -10438,7 +10438,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  4926              	.LBB1616:
  4927              		.loc 1 1133 10 view .LVU1345
  4928 005a B0FBF3F0 		udiv	r0, r0, r3
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 175
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 175
 
 
  4929              	.LVL261:
@@ -10498,7 +10498,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  4973              	.LBB1622:
  4974              	.LBI1622:
  984:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** {
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 176
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 176
 
 
  4975              		.loc 1 984 10 view .LVU1357
@@ -10558,7 +10558,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  5014 0080 1849     		ldr	r1, .L328
  5015              	.LBE1650:
  5016              	.LBE1649:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 177
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 177
 
 
 1019:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** }
@@ -10618,7 +10618,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  5059              	.LBE1660:
  5060              	.LBE1664:
  5061              	.LBB1665:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 178
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 178
 
 
  5062              	.LBB1654:
@@ -10678,7 +10678,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  5107              	.LBB1626:
  5108              	.LBI1626:
 1048:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** {
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 179
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 179
 
 
  5109              		.loc 1 1048 10 view .LVU1394
@@ -10738,7 +10738,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 2264:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
  5151              		.loc 2 2264 10 view .LVU1407
  5152              	.LBE1630:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 180
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 180
 
 
  5153              	.LBE1641:
@@ -10798,7 +10798,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  5195              	.LVL272:
 1071:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****                                    LL_RCC_PLL_GetN(), LL_RCC_PLL_GetR());
  5196              		.loc 1 1071 10 view .LVU1420
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 181
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 181
 
 
  5197 00d0 0132     		adds	r2, r2, #1
@@ -10858,7 +10858,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  5246              	.LBI1692:
 1895:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** {
  5247              		.loc 2 1895 26 view .LVU1428
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 182
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 182
 
 
  5248              	.LBB1693:
@@ -10918,7 +10918,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  5287              	.LBE1699:
  5288              	.LBE1698:
  5289              	.LBE1697:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 183
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 183
 
 
  5290              	.LBE1696:
@@ -10978,7 +10978,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 2264:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
  5335              		.loc 2 2264 10 view .LVU1453
  5336              	.LBE1701:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 184
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 184
 
 
  5337              	.LBE1713:
@@ -11038,7 +11038,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  5383 0046 B0FBF2F0 		udiv	r0, r0, r2
  5384              	.LBE1718:
  5385              	.LBE1720:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 185
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 185
 
 
  813:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
@@ -11098,7 +11098,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  5430              	.LBE1725:
  802:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****       }
  5431              		.loc 1 802 23 view .LVU1479
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 186
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 186
 
 
  5432 0064 08BF     		it	eq
@@ -11158,7 +11158,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  5488 003c 0133     		adds	r3, r3, #1
  5489 003e 00FB04F0 		mul	r0, r0, r4
  5490 0042 0132     		adds	r2, r2, #1
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 187
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 187
 
 
  5491 0044 5B00     		lsls	r3, r3, #1
@@ -11218,7 +11218,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  873:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   {
  5543              		.loc 1 873 6 is_stmt 0 view .LVU1484
  5544 0000 5A4B     		ldr	r3, .L391
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 188
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 188
 
 
  5545 0002 9842     		cmp	r0, r3
@@ -11278,7 +11278,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  5586              	.LVL288:
 1932:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
  5587              		.loc 2 1932 10 view .LVU1498
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 189
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 189
 
 
  5588              	.LBE1784:
@@ -11338,7 +11338,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  5630              		.loc 1 989 3 view .LVU1510
  5631 003c 082B     		cmp	r3, #8
  5632 003e 6ED0     		beq	.L382
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 190
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 190
 
 
  5633 0040 0C2B     		cmp	r3, #12
@@ -11398,7 +11398,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  5676              		.loc 1 1079 10 view .LVU1521
  5677              	.LBB1843:
 1081:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** 
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 191
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 191
 
 
  5678              		.loc 1 1081 3 view .LVU1522
@@ -11458,7 +11458,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  5719              		.loc 2 2264 10 view .LVU1535
  5720              	.LBE1846:
  5721              	.LBE1859:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 192
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 192
 
 
 1095:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****       break;
@@ -11518,7 +11518,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  5764              		.loc 2 2314 26 is_stmt 1 view .LVU1547
  5765              	.LBB1857:
 2316:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 193
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 193
 
 
  5766              		.loc 2 2316 3 view .LVU1548
@@ -11578,7 +11578,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 1932:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
  5811              		.loc 2 1932 3 view .LVU1558
 1932:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 194
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 194
 
 
  5812              		.loc 2 1932 22 is_stmt 0 view .LVU1559
@@ -11638,7 +11638,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  5852              	.LBE1835:
  5853              	.LBE1834:
  989:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   {
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 195
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 195
 
 
  5854              		.loc 1 989 3 view .LVU1574
@@ -11698,7 +11698,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 1064:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****       break;
  5896              		.loc 1 1064 20 view .LVU1587
  5897 00be 2F48     		ldr	r0, .L391+16
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 196
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 196
 
 
  5898              	.LVL300:
@@ -11758,7 +11758,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 2274:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
  5940              		.loc 2 2274 10 is_stmt 0 view .LVU1600
  5941 00d0 C4F30624 		ubfx	r4, r4, #8, #7
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 197
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 197
 
 
  5942              	.LBE1821:
@@ -11818,7 +11818,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  5983              		.loc 1 1057 3 is_stmt 1 view .LVU1613
  5984              	.LBB1795:
  5985              	.LBB1796:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 198
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 198
 
 
 2274:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
@@ -11878,7 +11878,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  6029              	.LBI1799:
 2370:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** {
  6030              		.loc 2 2370 26 view .LVU1625
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 199
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 199
 
 
  6031              	.LBB1801:
@@ -11938,7 +11938,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  996:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****       break;
  6074              		.loc 1 996 17 view .LVU1637
  6075 011e 1848     		ldr	r0, .L391+20
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 200
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 200
 
 
  6076              	.LBE1839:
@@ -11998,7 +11998,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  6117              		.loc 2 2264 21 is_stmt 0 view .LVU1650
  6118 012c D468     		ldr	r4, [r2, #12]
  6119              	.LVL315:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 201
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 201
 
 
 2264:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
@@ -12058,7 +12058,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  6162              		.loc 2 2272 26 view .LVU1662
  6163              	.LBB1884:
 2274:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 202
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 202
 
 
  6164              		.loc 2 2274 3 view .LVU1663
@@ -12118,7 +12118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  6206              	.LBE1892:
  6207              	.LBE1898:
  6208              	.LBE1878:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 203
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 203
 
 
  6209              	.LBE1877:
@@ -12178,7 +12178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 1948:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
  6260              		.loc 2 1948 3 view .LVU1681
 1948:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 204
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 204
 
 
  6261              		.loc 2 1948 21 is_stmt 0 view .LVU1682
@@ -12238,7 +12238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  6304              	.LBE1933:
  6305              	.LBE1932:
  948:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****       }
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 205
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 205
 
 
  6306              		.loc 1 948 27 view .LVU1694
@@ -12298,7 +12298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  992:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****       break;
  6348              		.loc 1 992 17 view .LVU1707
  6349 003a 1948     		ldr	r0, .L413+4
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 206
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 206
 
 
  6350              	.LBE1937:
@@ -12358,7 +12358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  6391              	.LVL322:
 2264:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
  6392              		.loc 2 2264 21 view .LVU1721
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 207
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 207
 
 
  6393              	.LBE1958:
@@ -12418,7 +12418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  6438              	.LBB1962:
 2274:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
  6439              		.loc 2 2274 3 view .LVU1733
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 208
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 208
 
 
  6440              	.LBE1962:
@@ -12478,7 +12478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  6488              	.LBE1976:
  965:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** #endif /* QUADSPI */
  6489              		.loc 1 965 1 view .LVU1744
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 209
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 209
 
 
  6490 007e 7047     		bx	lr
@@ -12538,7 +12538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  6532              	.LBE1950:
  6533              	.LBE1949:
 1064:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****       break;
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 210
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 210
 
 
  6534              		.loc 1 1064 20 view .LVU1757
@@ -12598,7 +12598,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  6583              		.loc 1 986 3 view .LVU1764
  989:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   {
  6584              		.loc 1 989 3 view .LVU1765
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 211
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 211
 
 
  6585              	.LBB1990:
@@ -12658,7 +12658,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  6627              	.LBB1998:
  6628              	.LBB1996:
 2264:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 212
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 212
 
 
  6629              		.loc 2 2264 21 view .LVU1778
@@ -12718,7 +12718,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  6672              		.loc 1 1071 3 is_stmt 1 view .LVU1789
  6673              	.LBB2010:
  6674              	.LBI1999:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 213
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 213
 
 
 2272:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** {
@@ -12778,7 +12778,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  6718              		.cfi_restore 4
  6719              		.cfi_def_cfa_offset 0
  6720              	.LVL337:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 214
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 214
 
 
  6721              	.LBB2017:
@@ -12838,7 +12838,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  6768              		@ args = 0, pretend = 0, frame = 0
  6769              		@ frame_needed = 0, uses_anonymous_args = 0
  6770              		@ link register save eliminated.
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 215
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 215
 
 
 1019:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c **** }
@@ -12898,7 +12898,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
 1028:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   /* PCLK1 clock frequency */
  6818              		.loc 1 1028 1 is_stmt 1 view -0
  6819              		.cfi_startproc
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 216
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 216
 
 
  6820              		@ args = 0, pretend = 0, frame = 0
@@ -12958,7 +12958,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  6867              	RCC_GetPCLK2ClockFreq:
  6868              	.LVL346:
  6869              	.LFB286:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 217
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 217
 
 
 1039:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   /* PCLK2 clock frequency */
@@ -13018,7 +13018,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  6915              		.thumb
  6916              		.thumb_func
  6917              		.fpu fpv4-sp-d16
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 218
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 218
 
 
  6919              	RCC_PLL_GetFreqDomain_SYS:
@@ -13078,7 +13078,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  6961 0008 D968     		ldr	r1, [r3, #12]
  6962              	.LBE2038:
  6963              	.LBE2037:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 219
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 219
 
 
  6964              	.LBB2041:
@@ -13138,7 +13138,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  7006              	.LBE2043:
  7007              	.LBE2049:
  7008              	.LBB2050:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 220
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 220
 
 
  7009              	.LBI2044:
@@ -13198,7 +13198,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  7058              	RCC_PLL_GetFreqDomain_ADC:
  7059              	.LFB288:
 1080:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c ****   uint32_t pllinputfreq, pllsource;
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 221
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 221
 
 
  7060              		.loc 1 1080 1 is_stmt 1 view -0
@@ -13258,7 +13258,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  7102              		.loc 2 2274 21 view .LVU1882
  7103 000a D168     		ldr	r1, [r2, #12]
  7104              	.LBE2060:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 222
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 222
 
 
  7105              	.LBE2059:
@@ -13318,7 +13318,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  7148              		.loc 2 2274 10 is_stmt 0 view .LVU1893
  7149 001a C1F30621 		ubfx	r1, r1, #8, #7
  7150              	.LBE2062:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 223
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 223
 
 
  7151              	.LBE2074:
@@ -13378,7 +13378,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  7195              	.LBB2070:
 2316:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
  7196              		.loc 2 2316 124 view .LVU1904
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 224
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 224
 
 
  7197 0040 D268     		ldr	r2, [r2, #12]
@@ -13438,7 +13438,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  7246              	.LBB2079:
 2264:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
  7247              		.loc 2 2264 3 view .LVU1912
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 225
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 225
 
 
  7248              	.LBE2079:
@@ -13498,7 +13498,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  7292 000e 0D48     		ldr	r0, .L455+8
  7293              	.LBB2095:
  7294              	.LBB2082:
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 226
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 226
 
 
 2264:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h **** }
@@ -13558,7 +13558,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  7339 0028 00FB01F0 		mul	r0, r0, r1
  7340              	.LVL363:
  7341              		.loc 1 1133 10 view .LVU1936
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 227
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 227
 
 
  7342 002c 0132     		adds	r2, r2, #1
@@ -13592,77 +13592,77 @@ ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 1
  7369              		.file 6 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h"
  7370              		.file 7 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h"
  7371              		.file 8 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h"
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 228
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 228
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32g4xx_ll_rcc.c
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:18     .text.LL_RCC_DeInit:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:27     .text.LL_RCC_DeInit:0000000000000000 LL_RCC_DeInit
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:172    .text.LL_RCC_DeInit:000000000000005c $d
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:177    .text.LL_RCC_GetSystemClocksFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:185    .text.LL_RCC_GetSystemClocksFreq:0000000000000000 LL_RCC_GetSystemClocksFreq
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:465    .text.LL_RCC_GetSystemClocksFreq:0000000000000090 $d
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:476    .text.LL_RCC_GetUSARTClockFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:484    .text.LL_RCC_GetUSARTClockFreq:0000000000000000 LL_RCC_GetUSARTClockFreq
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:1450   .text.LL_RCC_GetUSARTClockFreq:00000000000001fc $d
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:1464   .text.LL_RCC_GetUARTClockFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:1472   .text.LL_RCC_GetUARTClockFreq:0000000000000000 LL_RCC_GetUARTClockFreq
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:2341   .text.LL_RCC_GetUARTClockFreq:00000000000001d4 $d
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:2355   .text.LL_RCC_GetI2CClockFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:2363   .text.LL_RCC_GetI2CClockFreq:0000000000000000 LL_RCC_GetI2CClockFreq
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:3135   .text.LL_RCC_GetI2CClockFreq:000000000000019c $d
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:3156   .text.LL_RCC_GetLPUARTClockFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:3164   .text.LL_RCC_GetLPUARTClockFreq:0000000000000000 LL_RCC_GetLPUARTClockFreq
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:3666   .text.LL_RCC_GetLPUARTClockFreq:00000000000000f8 $d
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:3677   .text.LL_RCC_GetLPTIMClockFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:3685   .text.LL_RCC_GetLPTIMClockFreq:0000000000000000 LL_RCC_GetLPTIMClockFreq
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:4057   .text.LL_RCC_GetLPTIMClockFreq:00000000000000cc $d
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:4068   .text.LL_RCC_GetSAIClockFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:4076   .text.LL_RCC_GetSAIClockFreq:0000000000000000 LL_RCC_GetSAIClockFreq
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:4395   .text.LL_RCC_GetSAIClockFreq:00000000000000a4 $d
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:4405   .text.LL_RCC_GetI2SClockFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:4413   .text.LL_RCC_GetI2SClockFreq:0000000000000000 LL_RCC_GetI2SClockFreq
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:4732   .text.LL_RCC_GetI2SClockFreq:00000000000000a4 $d
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:4742   .text.LL_RCC_GetFDCANClockFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:4750   .text.LL_RCC_GetFDCANClockFreq:0000000000000000 LL_RCC_GetFDCANClockFreq
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:5215   .text.LL_RCC_GetFDCANClockFreq:00000000000000e4 $d
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:5226   .text.LL_RCC_GetRNGClockFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:5234   .text.LL_RCC_GetRNGClockFreq:0000000000000000 LL_RCC_GetRNGClockFreq
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:5438   .text.LL_RCC_GetRNGClockFreq:000000000000006c $d
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:5446   .text.LL_RCC_GetUSBClockFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:5454   .text.LL_RCC_GetUSBClockFreq:0000000000000000 LL_RCC_GetUSBClockFreq
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:5516   .text.LL_RCC_GetUSBClockFreq:000000000000006c $d
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:5524   .text.LL_RCC_GetADCClockFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:5532   .text.LL_RCC_GetADCClockFreq:0000000000000000 LL_RCC_GetADCClockFreq
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:6222   .text.LL_RCC_GetADCClockFreq:000000000000016c $d
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:6237   .text.LL_RCC_GetQUADSPIClockFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:6245   .text.LL_RCC_GetQUADSPIClockFreq:0000000000000000 LL_RCC_GetQUADSPIClockFreq
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:6559   .text.LL_RCC_GetQUADSPIClockFreq:000000000000009c $d
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:6568   .text.RCC_GetSystemClockFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:6576   .text.RCC_GetSystemClockFreq:0000000000000000 RCC_GetSystemClockFreq
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:6748   .text.RCC_GetSystemClockFreq:0000000000000054 $d
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:6755   .text.RCC_GetHCLKClockFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:6763   .text.RCC_GetHCLKClockFreq:0000000000000000 RCC_GetHCLKClockFreq
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:6801   .text.RCC_GetHCLKClockFreq:0000000000000014 $d
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:6807   .text.RCC_GetPCLK1ClockFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:6815   .text.RCC_GetPCLK1ClockFreq:0000000000000000 RCC_GetPCLK1ClockFreq
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:6853   .text.RCC_GetPCLK1ClockFreq:0000000000000014 $d
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:6859   .text.RCC_GetPCLK2ClockFreq:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:6867   .text.RCC_GetPCLK2ClockFreq:0000000000000000 RCC_GetPCLK2ClockFreq
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:6905   .text.RCC_GetPCLK2ClockFreq:0000000000000014 $d
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:6911   .text.RCC_PLL_GetFreqDomain_SYS:0000000000000000 $t
-ARM GAS  D:\apps\VSCode\data\tmp\cc5EE8OG.s 			page 229
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:18     .text.LL_RCC_DeInit:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:27     .text.LL_RCC_DeInit:0000000000000000 LL_RCC_DeInit
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:172    .text.LL_RCC_DeInit:000000000000005c $d
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:177    .text.LL_RCC_GetSystemClocksFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:185    .text.LL_RCC_GetSystemClocksFreq:0000000000000000 LL_RCC_GetSystemClocksFreq
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:465    .text.LL_RCC_GetSystemClocksFreq:0000000000000090 $d
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:476    .text.LL_RCC_GetUSARTClockFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:484    .text.LL_RCC_GetUSARTClockFreq:0000000000000000 LL_RCC_GetUSARTClockFreq
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:1450   .text.LL_RCC_GetUSARTClockFreq:00000000000001fc $d
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:1464   .text.LL_RCC_GetUARTClockFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:1472   .text.LL_RCC_GetUARTClockFreq:0000000000000000 LL_RCC_GetUARTClockFreq
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:2341   .text.LL_RCC_GetUARTClockFreq:00000000000001d4 $d
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:2355   .text.LL_RCC_GetI2CClockFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:2363   .text.LL_RCC_GetI2CClockFreq:0000000000000000 LL_RCC_GetI2CClockFreq
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:3135   .text.LL_RCC_GetI2CClockFreq:000000000000019c $d
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:3156   .text.LL_RCC_GetLPUARTClockFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:3164   .text.LL_RCC_GetLPUARTClockFreq:0000000000000000 LL_RCC_GetLPUARTClockFreq
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:3666   .text.LL_RCC_GetLPUARTClockFreq:00000000000000f8 $d
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:3677   .text.LL_RCC_GetLPTIMClockFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:3685   .text.LL_RCC_GetLPTIMClockFreq:0000000000000000 LL_RCC_GetLPTIMClockFreq
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:4057   .text.LL_RCC_GetLPTIMClockFreq:00000000000000cc $d
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:4068   .text.LL_RCC_GetSAIClockFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:4076   .text.LL_RCC_GetSAIClockFreq:0000000000000000 LL_RCC_GetSAIClockFreq
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:4395   .text.LL_RCC_GetSAIClockFreq:00000000000000a4 $d
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:4405   .text.LL_RCC_GetI2SClockFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:4413   .text.LL_RCC_GetI2SClockFreq:0000000000000000 LL_RCC_GetI2SClockFreq
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:4732   .text.LL_RCC_GetI2SClockFreq:00000000000000a4 $d
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:4742   .text.LL_RCC_GetFDCANClockFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:4750   .text.LL_RCC_GetFDCANClockFreq:0000000000000000 LL_RCC_GetFDCANClockFreq
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:5215   .text.LL_RCC_GetFDCANClockFreq:00000000000000e4 $d
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:5226   .text.LL_RCC_GetRNGClockFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:5234   .text.LL_RCC_GetRNGClockFreq:0000000000000000 LL_RCC_GetRNGClockFreq
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:5438   .text.LL_RCC_GetRNGClockFreq:000000000000006c $d
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:5446   .text.LL_RCC_GetUSBClockFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:5454   .text.LL_RCC_GetUSBClockFreq:0000000000000000 LL_RCC_GetUSBClockFreq
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:5516   .text.LL_RCC_GetUSBClockFreq:000000000000006c $d
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:5524   .text.LL_RCC_GetADCClockFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:5532   .text.LL_RCC_GetADCClockFreq:0000000000000000 LL_RCC_GetADCClockFreq
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:6222   .text.LL_RCC_GetADCClockFreq:000000000000016c $d
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:6237   .text.LL_RCC_GetQUADSPIClockFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:6245   .text.LL_RCC_GetQUADSPIClockFreq:0000000000000000 LL_RCC_GetQUADSPIClockFreq
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:6559   .text.LL_RCC_GetQUADSPIClockFreq:000000000000009c $d
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:6568   .text.RCC_GetSystemClockFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:6576   .text.RCC_GetSystemClockFreq:0000000000000000 RCC_GetSystemClockFreq
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:6748   .text.RCC_GetSystemClockFreq:0000000000000054 $d
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:6755   .text.RCC_GetHCLKClockFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:6763   .text.RCC_GetHCLKClockFreq:0000000000000000 RCC_GetHCLKClockFreq
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:6801   .text.RCC_GetHCLKClockFreq:0000000000000014 $d
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:6807   .text.RCC_GetPCLK1ClockFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:6815   .text.RCC_GetPCLK1ClockFreq:0000000000000000 RCC_GetPCLK1ClockFreq
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:6853   .text.RCC_GetPCLK1ClockFreq:0000000000000014 $d
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:6859   .text.RCC_GetPCLK2ClockFreq:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:6867   .text.RCC_GetPCLK2ClockFreq:0000000000000000 RCC_GetPCLK2ClockFreq
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:6905   .text.RCC_GetPCLK2ClockFreq:0000000000000014 $d
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:6911   .text.RCC_PLL_GetFreqDomain_SYS:0000000000000000 $t
+ARM GAS  D:\apps\VSCode\data\tmp\ccEJAZh0.s 			page 229
 
 
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:6919   .text.RCC_PLL_GetFreqDomain_SYS:0000000000000000 RCC_PLL_GetFreqDomain_SYS
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:7043   .text.RCC_PLL_GetFreqDomain_SYS:000000000000003c $d
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:7050   .text.RCC_PLL_GetFreqDomain_ADC:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:7058   .text.RCC_PLL_GetFreqDomain_ADC:0000000000000000 RCC_PLL_GetFreqDomain_ADC
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:7219   .text.RCC_PLL_GetFreqDomain_ADC:0000000000000054 $d
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:7226   .text.RCC_PLL_GetFreqDomain_48M:0000000000000000 $t
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:7234   .text.RCC_PLL_GetFreqDomain_48M:0000000000000000 RCC_PLL_GetFreqDomain_48M
-D:\apps\VSCode\data\tmp\cc5EE8OG.s:7358   .text.RCC_PLL_GetFreqDomain_48M:000000000000003c $d
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:6919   .text.RCC_PLL_GetFreqDomain_SYS:0000000000000000 RCC_PLL_GetFreqDomain_SYS
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:7043   .text.RCC_PLL_GetFreqDomain_SYS:000000000000003c $d
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:7050   .text.RCC_PLL_GetFreqDomain_ADC:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:7058   .text.RCC_PLL_GetFreqDomain_ADC:0000000000000000 RCC_PLL_GetFreqDomain_ADC
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:7219   .text.RCC_PLL_GetFreqDomain_ADC:0000000000000054 $d
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:7226   .text.RCC_PLL_GetFreqDomain_48M:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:7234   .text.RCC_PLL_GetFreqDomain_48M:0000000000000000 RCC_PLL_GetFreqDomain_48M
+D:\apps\VSCode\data\tmp\ccEJAZh0.s:7358   .text.RCC_PLL_GetFreqDomain_48M:000000000000003c $d
 
 UNDEFINED SYMBOLS
 AHBPrescTable
