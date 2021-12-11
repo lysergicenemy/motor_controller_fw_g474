@@ -46,7 +46,7 @@ extern "C"
  * @brief 
  * Update hardware current control thresholds
  * 
- * @param iMax - max current (A)
+ * @param iMax - max current (P.U.) 0 - 1.0
  * @param offset - offset factor to convert current in (A) to DAC (0-4095) value
  */
   static inline void dac_cmpr_update(float iMax, float offset)

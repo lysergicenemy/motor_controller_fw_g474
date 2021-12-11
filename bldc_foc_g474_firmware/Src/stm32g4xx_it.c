@@ -16,52 +16,16 @@
   *
   ******************************************************************************
   */
-/* USER CODE END Header */
 
-/* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "stm32g4xx_it.h"
-/* Private includes ----------------------------------------------------------*/
-/* USER CODE BEGIN Includes */
-/* USER CODE END Includes */
 
-/* Private typedef -----------------------------------------------------------*/
-/* USER CODE BEGIN TD */
-
-/* USER CODE END TD */
-
-/* Private define ------------------------------------------------------------*/
-/* USER CODE BEGIN PD */
-
-/* USER CODE END PD */
-
-/* Private macro -------------------------------------------------------------*/
-/* USER CODE BEGIN PM */
-
-/* USER CODE END PM */
-
-/* Private variables ---------------------------------------------------------*/
-/* USER CODE BEGIN PV */
-
-/* USER CODE END PV */
-
-/* Private function prototypes -----------------------------------------------*/
-/* USER CODE BEGIN PFP */
 void slowCalc(void);
-/* USER CODE END PFP */
 
-/* Private user code ---------------------------------------------------------*/
-/* USER CODE BEGIN 0 */
-
-/* USER CODE END 0 */
-
-/* External variables --------------------------------------------------------*/
-
-/* USER CODE BEGIN EV */
 extern dataLogVars_t dataLog;
 extern hall_t hall;
-
-/* USER CODE END EV */
+extern canData_t can;
+extern void can_receive_massege(void);
 
 /******************************************************************************/
 /*           Cortex-M4 Processor Interruption and Exception Handlers          */
@@ -222,7 +186,6 @@ void SysTick_Handler(void)
   */
 void EXTI9_5_IRQHandler(void)
 {
-
   // if (LL_EXTI_IsActiveFlag_0_31(LL_EXTI_LINE_7) != RESET)
   // {
   //   LL_EXTI_ClearFlag_0_31(LL_EXTI_LINE_7);
@@ -296,6 +259,25 @@ void DMA1_Channel6_IRQHandler(void)
   {
     LL_DMA_ClearFlag_TE6(DMA1);
   }
+}
+
+/**
+  * @brief This function handles FDCAN1 interrupt 0.
+  */
+void FDCAN1_IT0_IRQHandler(void)
+{
+  // new message received
+  if ((FDCAN1->IR & FDCAN_IR_RF0N) != 0)
+  {
+    // clear flag
+    FDCAN1->IR = FDCAN_IR_RF0N | FDCAN_IR_RF0L | FDCAN_IR_RF0F;
+    can.RxFlag = 1;
+    //can_receive_massege();
+  }
+  // else
+  // {
+  //   while (1){}
+  // }
 }
 
 /**

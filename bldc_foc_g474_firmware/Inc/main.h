@@ -28,6 +28,7 @@ extern "C" {
 #endif
 
 /* Includes ------------------------------------------------------------------*/
+#include "stm32g4xx_hal_fdcan.h"
 #include "stm32g4xx_ll_adc.h"
 #include "stm32g4xx_ll_hrtim.h"
 #include "stm32g4xx_ll_rcc.h"
@@ -54,6 +55,7 @@ extern "C" {
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "math.h"
+#include "string.h"
 #include "digitalFilters.h"
 #include "utils.h"
 #include "model_bldc.h"
@@ -67,7 +69,19 @@ extern "C" {
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
-
+struct canData_s
+  {
+    FDCAN_HandleTypeDef hfdcan1;
+    FDCAN_FilterTypeDef sFilterConfig;
+    FDCAN_TxHeaderTypeDef txh[2];
+    FDCAN_RxHeaderTypeDef RxHeader;
+    FDCAN_ProtocolStatusTypeDef state;
+    uint8_t TxData[8];
+    uint8_t RxData[8];
+    uint8_t TxFlag;
+    uint8_t RxFlag;
+  };
+  typedef struct canData_s canData_t;
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/
@@ -146,6 +160,10 @@ void Error_Handler(void);
 #define CMPR_IB_GPIO_Port GPIOB
 #define CMPR_IC_Pin LL_GPIO_PIN_11
 #define CMPR_IC_GPIO_Port GPIOB
+#define FDCAN_TX_Pin LL_GPIO_PIN_12
+#define FDCAN_TX_GPIO_Port GPIOA
+#define FDCAN_RX_Pin LL_GPIO_PIN_11
+#define FDCAN_RX_GPIO_Port GPIOA
 
 #ifndef NVIC_PRIORITYGROUP_0
 #define NVIC_PRIORITYGROUP_0         ((uint32_t)0x00000007) /*!< 0 bit  for pre-emption priority,

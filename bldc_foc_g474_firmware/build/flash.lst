@@ -1,0 +1,2478 @@
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"flash.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.flashUnlock,"ax",%progbits
+  18              		.align	1
+  19              		.p2align 2,,3
+  20              		.global	flashUnlock
+  21              		.arch armv7e-m
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  25              		.fpu fpv4-sp-d16
+  27              	flashUnlock:
+  28              	.LFB2053:
+  29              		.file 1 "Src/flash.c"
+   1:Src/flash.c   **** /**
+   2:Src/flash.c   ****   ******************************************************************************
+   3:Src/flash.c   ****   * File Name          : 
+   4:Src/flash.c   ****   * Description        : 
+   5:Src/flash.c   ****   ******************************************************************************
+   6:Src/flash.c   ****   *
+   7:Src/flash.c   ****   ******************************************************************************
+   8:Src/flash.c   ****   */
+   9:Src/flash.c   **** 
+  10:Src/flash.c   **** #include "flash.h"
+  11:Src/flash.c   **** 
+  12:Src/flash.c   **** #define FLASH_SIZE_DATA_REGISTER FLASHSIZE_BASE
+  13:Src/flash.c   **** 
+  14:Src/flash.c   **** #if defined(FLASH_OPTR_DBANK)
+  15:Src/flash.c   **** #define FLASH_SIZE ((((*((uint16_t *)FLASH_SIZE_DATA_REGISTER)) == 0xFFFFU)) ? (0x200UL << 10U) : (
+  16:Src/flash.c   **** #define FLASH_BANK_SIZE (FLASH_SIZE >> 1)
+  17:Src/flash.c   **** #define FLASH_PAGE_NB 128U
+  18:Src/flash.c   **** #define FLASH_PAGE_SIZE_128_BITS 0x1000U /* 4 KB */
+  19:Src/flash.c   **** #else
+  20:Src/flash.c   **** #define FLASH_SIZE ((((*((uint16_t *)FLASH_SIZE_DATA_REGISTER)) == 0xFFFFU)) ? (0x80UL << 10U) : ((
+  21:Src/flash.c   **** #define FLASH_BANK_SIZE (FLASH_SIZE)
+  22:Src/flash.c   **** #define FLASH_PAGE_NB ((FLASH_SIZE == 0x00080000U) ? 256U : 64U)
+  23:Src/flash.c   **** #endif
+  24:Src/flash.c   **** 
+  25:Src/flash.c   **** #define FLASH_PAGE_SIZE 0x800U /* 2 KB */
+  26:Src/flash.c   **** 
+  27:Src/flash.c   **** #define FLASH_TIMEOUT_VALUE 1000U /* 1 s  */
+  28:Src/flash.c   **** 
+  29:Src/flash.c   **** #define FLASH_BANK_1 0x00000001U /*!< Bank 1   */
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 2
+
+
+  30:Src/flash.c   **** #if defined(FLASH_OPTR_DBANK)
+  31:Src/flash.c   **** #define FLASH_BANK_2 0x00000002U                      /*!< Bank 2   */
+  32:Src/flash.c   **** #define FLASH_BANK_BOTH (FLASH_BANK_1 | FLASH_BANK_2) /*!< Bank1 and Bank2  */
+  33:Src/flash.c   **** #else
+  34:Src/flash.c   **** #define FLASH_BANK_BOTH FLASH_BANK_1 /*!< Bank 1   */
+  35:Src/flash.c   **** #endif
+  36:Src/flash.c   **** 
+  37:Src/flash.c   **** void flashUnlock(void)
+  38:Src/flash.c   **** {
+  30              		.loc 1 38 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+  39:Src/flash.c   ****     FLASH->KEYR = 0x45670123U;
+  35              		.loc 1 39 5 view .LVU1
+  36              		.loc 1 39 17 is_stmt 0 view .LVU2
+  37 0000 024B     		ldr	r3, .L3
+  38 0002 0349     		ldr	r1, .L3+4
+  40:Src/flash.c   ****     FLASH->KEYR = 0xCDEF89ABU;
+  39              		.loc 1 40 17 view .LVU3
+  40 0004 034A     		ldr	r2, .L3+8
+  39:Src/flash.c   ****     FLASH->KEYR = 0x45670123U;
+  41              		.loc 1 39 17 view .LVU4
+  42 0006 9960     		str	r1, [r3, #8]
+  43              		.loc 1 40 5 is_stmt 1 view .LVU5
+  44              		.loc 1 40 17 is_stmt 0 view .LVU6
+  45 0008 9A60     		str	r2, [r3, #8]
+  41:Src/flash.c   **** }
+  46              		.loc 1 41 1 view .LVU7
+  47 000a 7047     		bx	lr
+  48              	.L4:
+  49              		.align	2
+  50              	.L3:
+  51 000c 00200240 		.word	1073881088
+  52 0010 23016745 		.word	1164378403
+  53 0014 AB89EFCD 		.word	-839939669
+  54              		.cfi_endproc
+  55              	.LFE2053:
+  57              		.section	.text.flashLock,"ax",%progbits
+  58              		.align	1
+  59              		.p2align 2,,3
+  60              		.global	flashLock
+  61              		.syntax unified
+  62              		.thumb
+  63              		.thumb_func
+  64              		.fpu fpv4-sp-d16
+  66              	flashLock:
+  67              	.LFB2054:
+  42:Src/flash.c   **** 
+  43:Src/flash.c   **** void flashLock(void)
+  44:Src/flash.c   **** {
+  68              		.loc 1 44 1 is_stmt 1 view -0
+  69              		.cfi_startproc
+  70              		@ args = 0, pretend = 0, frame = 0
+  71              		@ frame_needed = 0, uses_anonymous_args = 0
+  72              		@ link register save eliminated.
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 3
+
+
+  45:Src/flash.c   ****     FLASH->CR |= FLASH_CR_LOCK;
+  73              		.loc 1 45 5 view .LVU9
+  74              		.loc 1 45 15 is_stmt 0 view .LVU10
+  75 0000 024A     		ldr	r2, .L6
+  76 0002 5369     		ldr	r3, [r2, #20]
+  77 0004 43F00043 		orr	r3, r3, #-2147483648
+  78 0008 5361     		str	r3, [r2, #20]
+  46:Src/flash.c   **** }
+  79              		.loc 1 46 1 view .LVU11
+  80 000a 7047     		bx	lr
+  81              	.L7:
+  82              		.align	2
+  83              	.L6:
+  84 000c 00200240 		.word	1073881088
+  85              		.cfi_endproc
+  86              	.LFE2054:
+  88              		.section	.text.flashReadData,"ax",%progbits
+  89              		.align	1
+  90              		.p2align 2,,3
+  91              		.global	flashReadData
+  92              		.syntax unified
+  93              		.thumb
+  94              		.thumb_func
+  95              		.fpu fpv4-sp-d16
+  97              	flashReadData:
+  98              	.LVL0:
+  99              	.LFB2055:
+  47:Src/flash.c   **** 
+  48:Src/flash.c   **** uint32_t flashReadData(uint32_t address)
+  49:Src/flash.c   **** {
+ 100              		.loc 1 49 1 is_stmt 1 view -0
+ 101              		.cfi_startproc
+ 102              		@ args = 0, pretend = 0, frame = 0
+ 103              		@ frame_needed = 0, uses_anonymous_args = 0
+ 104              		@ link register save eliminated.
+  50:Src/flash.c   ****     return (*(__IO uint32_t *)address);
+ 105              		.loc 1 50 5 view .LVU13
+ 106              		.loc 1 50 13 is_stmt 0 view .LVU14
+ 107 0000 0068     		ldr	r0, [r0]
+ 108              	.LVL1:
+  51:Src/flash.c   **** }
+ 109              		.loc 1 51 1 view .LVU15
+ 110 0002 7047     		bx	lr
+ 111              		.cfi_endproc
+ 112              	.LFE2055:
+ 114              		.section	.text.FLASH_PageErase,"ax",%progbits
+ 115              		.align	1
+ 116              		.p2align 2,,3
+ 117              		.global	FLASH_PageErase
+ 118              		.syntax unified
+ 119              		.thumb
+ 120              		.thumb_func
+ 121              		.fpu fpv4-sp-d16
+ 123              	FLASH_PageErase:
+ 124              	.LVL2:
+ 125              	.LFB2056:
+  52:Src/flash.c   **** 
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 4
+
+
+  53:Src/flash.c   **** void FLASH_PageErase(uint32_t Page, uint32_t Bank)
+  54:Src/flash.c   **** {
+ 126              		.loc 1 54 1 is_stmt 1 view -0
+ 127              		.cfi_startproc
+ 128              		@ args = 0, pretend = 0, frame = 0
+ 129              		@ frame_needed = 0, uses_anonymous_args = 0
+ 130              		@ link register save eliminated.
+  55:Src/flash.c   ****     while (FLASH->SR & FLASH_SR_BSY)
+ 131              		.loc 1 55 5 view .LVU17
+ 132              		.loc 1 55 17 is_stmt 0 view .LVU18
+ 133 0000 2C4B     		ldr	r3, .L18
+ 134              	.L10:
+  56:Src/flash.c   ****         ;
+ 135              		.loc 1 56 9 is_stmt 1 discriminator 1 view .LVU19
+  55:Src/flash.c   ****     while (FLASH->SR & FLASH_SR_BSY)
+ 136              		.loc 1 55 17 is_stmt 0 discriminator 1 view .LVU20
+ 137 0002 1A69     		ldr	r2, [r3, #16]
+  55:Src/flash.c   ****     while (FLASH->SR & FLASH_SR_BSY)
+ 138              		.loc 1 55 11 discriminator 1 view .LVU21
+ 139 0004 D203     		lsls	r2, r2, #15
+ 140 0006 FCD4     		bmi	.L10
+  57:Src/flash.c   ****     SET_BIT(FLASH->SR, FLASH_SR_PROGERR);
+ 141              		.loc 1 57 5 is_stmt 1 view .LVU22
+ 142 0008 1A69     		ldr	r2, [r3, #16]
+ 143 000a 42F00802 		orr	r2, r2, #8
+ 144 000e 1A61     		str	r2, [r3, #16]
+  58:Src/flash.c   ****     SET_BIT(FLASH->SR, FLASH_SR_PGAERR);
+ 145              		.loc 1 58 5 view .LVU23
+ 146 0010 1A69     		ldr	r2, [r3, #16]
+ 147 0012 42F02002 		orr	r2, r2, #32
+ 148 0016 1A61     		str	r2, [r3, #16]
+  59:Src/flash.c   ****     SET_BIT(FLASH->SR, FLASH_SR_PGSERR);
+ 149              		.loc 1 59 5 view .LVU24
+ 150 0018 1A69     		ldr	r2, [r3, #16]
+ 151 001a 42F08002 		orr	r2, r2, #128
+ 152 001e 1A61     		str	r2, [r3, #16]
+  60:Src/flash.c   ****     // SET_BIT(FLASH->ECCR, (FLASH_SR_OPTVERR & (FLASH_ECCR_ECCC | FLASH_ECCR_ECCD)));
+  61:Src/flash.c   ****     //CLEAR_BIT(FLASH->CR, FLASH_CR_BKER);
+  62:Src/flash.c   **** 
+  63:Src/flash.c   ****     CLEAR_BIT(FLASH->ACR, FLASH_ACR_ICEN);
+ 153              		.loc 1 63 5 view .LVU25
+ 154 0020 1A68     		ldr	r2, [r3]
+ 155 0022 22F40072 		bic	r2, r2, #512
+ 156 0026 1A60     		str	r2, [r3]
+  64:Src/flash.c   ****     CLEAR_BIT(FLASH->ACR, FLASH_ACR_DCEN);
+ 157              		.loc 1 64 5 view .LVU26
+ 158 0028 1A68     		ldr	r2, [r3]
+ 159 002a 22F48062 		bic	r2, r2, #1024
+ 160 002e 1A60     		str	r2, [r3]
+  65:Src/flash.c   **** /* Proceed to erase the page */
+  66:Src/flash.c   **** #if defined(FLASH_OPTR_DBANK)
+  67:Src/flash.c   ****     if (READ_BIT(FLASH->OPTR, FLASH_OPTR_DBANK) == 0U)
+ 161              		.loc 1 67 5 view .LVU27
+ 162              		.loc 1 67 9 is_stmt 0 view .LVU28
+ 163 0030 1A6A     		ldr	r2, [r3, #32]
+ 164              		.loc 1 67 8 view .LVU29
+ 165 0032 12F4800F 		tst	r2, #4194304
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 5
+
+
+  68:Src/flash.c   ****     {
+  69:Src/flash.c   ****         CLEAR_BIT(FLASH->CR, FLASH_CR_BKER);
+ 166              		.loc 1 69 9 view .LVU30
+ 167 0036 5A69     		ldr	r2, [r3, #20]
+  67:Src/flash.c   ****     {
+ 168              		.loc 1 67 8 view .LVU31
+ 169 0038 01D0     		beq	.L17
+  70:Src/flash.c   ****     }
+  71:Src/flash.c   ****     else
+  72:Src/flash.c   ****     {
+  73:Src/flash.c   ****         if ((Bank & FLASH_BANK_1) != 0U)
+ 170              		.loc 1 73 9 is_stmt 1 view .LVU32
+ 171              		.loc 1 73 12 is_stmt 0 view .LVU33
+ 172 003a C907     		lsls	r1, r1, #31
+ 173              	.LVL3:
+ 174              		.loc 1 73 12 view .LVU34
+ 175 003c 35D5     		bpl	.L13
+ 176              	.L17:
+  74:Src/flash.c   ****         {
+  75:Src/flash.c   ****             CLEAR_BIT(FLASH->CR, FLASH_CR_BKER);
+ 177              		.loc 1 75 13 is_stmt 1 view .LVU35
+ 178 003e 22F40062 		bic	r2, r2, #2048
+ 179 0042 5A61     		str	r2, [r3, #20]
+ 180              	.L12:
+  76:Src/flash.c   ****         }
+  77:Src/flash.c   ****         else
+  78:Src/flash.c   ****         {
+  79:Src/flash.c   ****             SET_BIT(FLASH->CR, FLASH_CR_BKER);
+  80:Src/flash.c   ****         }
+  81:Src/flash.c   ****     }
+  82:Src/flash.c   **** #endif
+  83:Src/flash.c   **** 
+  84:Src/flash.c   ****     MODIFY_REG(FLASH->CR, FLASH_CR_PNB, ((Page & 0xFFU) << FLASH_CR_PNB_Pos));
+ 181              		.loc 1 84 5 view .LVU36
+ 182 0044 1B4B     		ldr	r3, .L18
+ 183 0046 5A69     		ldr	r2, [r3, #20]
+ 184 0048 C000     		lsls	r0, r0, #3
+ 185              	.LVL4:
+ 186              		.loc 1 84 5 is_stmt 0 view .LVU37
+ 187 004a 22F47E72 		bic	r2, r2, #1016
+ 188 004e 00F4FF60 		and	r0, r0, #2040
+ 189 0052 1043     		orrs	r0, r0, r2
+ 190 0054 5861     		str	r0, [r3, #20]
+  85:Src/flash.c   ****     SET_BIT(FLASH->CR, FLASH_CR_PER);
+ 191              		.loc 1 85 5 is_stmt 1 view .LVU38
+ 192 0056 5A69     		ldr	r2, [r3, #20]
+ 193 0058 42F00202 		orr	r2, r2, #2
+ 194 005c 5A61     		str	r2, [r3, #20]
+  86:Src/flash.c   ****     SET_BIT(FLASH->CR, FLASH_CR_STRT);
+ 195              		.loc 1 86 5 view .LVU39
+ 196 005e 5A69     		ldr	r2, [r3, #20]
+ 197 0060 42F48032 		orr	r2, r2, #65536
+ 198 0064 5A61     		str	r2, [r3, #20]
+  87:Src/flash.c   ****     /* wait operation */
+  88:Src/flash.c   ****     while (FLASH->SR & FLASH_SR_BSY)
+ 199              		.loc 1 88 5 view .LVU40
+ 200              	.L14:
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 6
+
+
+  89:Src/flash.c   ****         ;
+ 201              		.loc 1 89 9 discriminator 1 view .LVU41
+  88:Src/flash.c   ****         ;
+ 202              		.loc 1 88 17 is_stmt 0 discriminator 1 view .LVU42
+ 203 0066 1A69     		ldr	r2, [r3, #16]
+  88:Src/flash.c   ****         ;
+ 204              		.loc 1 88 11 discriminator 1 view .LVU43
+ 205 0068 D203     		lsls	r2, r2, #15
+ 206 006a FCD4     		bmi	.L14
+  90:Src/flash.c   ****     CLEAR_BIT(FLASH->CR, (FLASH_CR_PER | FLASH_CR_PNB));
+ 207              		.loc 1 90 5 is_stmt 1 view .LVU44
+ 208 006c 5A69     		ldr	r2, [r3, #20]
+ 209 006e 22F47E72 		bic	r2, r2, #1016
+ 210 0072 22F00202 		bic	r2, r2, #2
+ 211 0076 5A61     		str	r2, [r3, #20]
+  91:Src/flash.c   **** 
+  92:Src/flash.c   ****     /* Reset instruction cache */
+  93:Src/flash.c   ****     do
+ 212              		.loc 1 93 5 view .LVU45
+  94:Src/flash.c   ****     {
+  95:Src/flash.c   ****         SET_BIT(FLASH->ACR, FLASH_ACR_ICRST);
+ 213              		.loc 1 95 9 view .LVU46
+ 214 0078 1A68     		ldr	r2, [r3]
+ 215 007a 42F40062 		orr	r2, r2, #2048
+ 216 007e 1A60     		str	r2, [r3]
+  96:Src/flash.c   ****         CLEAR_BIT(FLASH->ACR, FLASH_ACR_ICRST);
+ 217              		.loc 1 96 9 view .LVU47
+ 218 0080 1A68     		ldr	r2, [r3]
+ 219 0082 22F40062 		bic	r2, r2, #2048
+ 220 0086 1A60     		str	r2, [r3]
+  97:Src/flash.c   ****     } while (0);
+  98:Src/flash.c   ****     /* Enable instruction cache */
+  99:Src/flash.c   ****     SET_BIT(FLASH->ACR, FLASH_ACR_ICEN);
+ 221              		.loc 1 99 5 view .LVU48
+ 222 0088 1A68     		ldr	r2, [r3]
+ 223 008a 42F40072 		orr	r2, r2, #512
+ 224 008e 1A60     		str	r2, [r3]
+ 100:Src/flash.c   ****     /* Flush the instruction and data caches */
+ 101:Src/flash.c   ****     /* Reset data cache */
+ 102:Src/flash.c   ****     do
+ 225              		.loc 1 102 5 view .LVU49
+ 103:Src/flash.c   ****     {
+ 104:Src/flash.c   ****         SET_BIT(FLASH->ACR, FLASH_ACR_DCRST);
+ 226              		.loc 1 104 9 view .LVU50
+ 227 0090 1A68     		ldr	r2, [r3]
+ 228 0092 42F48052 		orr	r2, r2, #4096
+ 229 0096 1A60     		str	r2, [r3]
+ 105:Src/flash.c   ****         CLEAR_BIT(FLASH->ACR, FLASH_ACR_DCRST);
+ 230              		.loc 1 105 9 view .LVU51
+ 231 0098 1A68     		ldr	r2, [r3]
+ 232 009a 22F48052 		bic	r2, r2, #4096
+ 233 009e 1A60     		str	r2, [r3]
+ 106:Src/flash.c   ****     } while (0);
+ 107:Src/flash.c   ****     /* Enable data cache */
+ 108:Src/flash.c   ****     SET_BIT(FLASH->ACR, FLASH_ACR_DCEN);
+ 234              		.loc 1 108 5 view .LVU52
+ 235 00a0 1A68     		ldr	r2, [r3]
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 7
+
+
+ 236 00a2 42F48062 		orr	r2, r2, #1024
+ 237 00a6 1A60     		str	r2, [r3]
+ 109:Src/flash.c   **** }
+ 238              		.loc 1 109 1 is_stmt 0 view .LVU53
+ 239 00a8 7047     		bx	lr
+ 240              	.LVL5:
+ 241              	.L13:
+  79:Src/flash.c   ****         }
+ 242              		.loc 1 79 13 is_stmt 1 view .LVU54
+ 243 00aa 42F40062 		orr	r2, r2, #2048
+ 244 00ae 5A61     		str	r2, [r3, #20]
+ 245 00b0 C8E7     		b	.L12
+ 246              	.L19:
+ 247 00b2 00BF     		.align	2
+ 248              	.L18:
+ 249 00b4 00200240 		.word	1073881088
+ 250              		.cfi_endproc
+ 251              	.LFE2056:
+ 253              		.section	.text.FLASH_Program_DoubleWord,"ax",%progbits
+ 254              		.align	1
+ 255              		.p2align 2,,3
+ 256              		.global	FLASH_Program_DoubleWord
+ 257              		.syntax unified
+ 258              		.thumb
+ 259              		.thumb_func
+ 260              		.fpu fpv4-sp-d16
+ 262              	FLASH_Program_DoubleWord:
+ 263              	.LVL6:
+ 264              	.LFB2057:
+ 110:Src/flash.c   **** 
+ 111:Src/flash.c   **** void FLASH_Program_DoubleWord(uint32_t Address, uint64_t Data)
+ 112:Src/flash.c   **** {
+ 265              		.loc 1 112 1 view -0
+ 266              		.cfi_startproc
+ 267              		@ args = 0, pretend = 0, frame = 0
+ 268              		@ frame_needed = 0, uses_anonymous_args = 0
+ 269              		@ link register save eliminated.
+ 113:Src/flash.c   ****     while (FLASH->SR & FLASH_SR_BSY)
+ 270              		.loc 1 113 5 view .LVU56
+ 112:Src/flash.c   ****     while (FLASH->SR & FLASH_SR_BSY)
+ 271              		.loc 1 112 1 is_stmt 0 view .LVU57
+ 272 0000 10B4     		push	{r4}
+ 273              	.LCFI0:
+ 274              		.cfi_def_cfa_offset 4
+ 275              		.cfi_offset 4, -4
+ 276              		.loc 1 113 17 view .LVU58
+ 277 0002 0B4C     		ldr	r4, .L26
+ 278              	.L21:
+ 114:Src/flash.c   ****         ;
+ 279              		.loc 1 114 9 is_stmt 1 discriminator 1 view .LVU59
+ 113:Src/flash.c   ****     while (FLASH->SR & FLASH_SR_BSY)
+ 280              		.loc 1 113 17 is_stmt 0 discriminator 1 view .LVU60
+ 281 0004 2169     		ldr	r1, [r4, #16]
+ 113:Src/flash.c   ****     while (FLASH->SR & FLASH_SR_BSY)
+ 282              		.loc 1 113 11 discriminator 1 view .LVU61
+ 283 0006 C903     		lsls	r1, r1, #15
+ 284 0008 FCD4     		bmi	.L21
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 8
+
+
+ 115:Src/flash.c   ****     /* Set PG bit */
+ 116:Src/flash.c   ****     SET_BIT(FLASH->CR, FLASH_CR_PG);
+ 285              		.loc 1 116 5 is_stmt 1 view .LVU62
+ 286 000a 6169     		ldr	r1, [r4, #20]
+ 287 000c 41F00101 		orr	r1, r1, #1
+ 288 0010 6161     		str	r1, [r4, #20]
+ 117:Src/flash.c   ****     /* Program first word */
+ 118:Src/flash.c   ****     *(uint32_t *)Address = (uint32_t)Data;
+ 289              		.loc 1 118 5 view .LVU63
+ 290              		.loc 1 118 28 is_stmt 0 view .LVU64
+ 291 0012 0260     		str	r2, [r0]
+ 119:Src/flash.c   ****     /* Barrier to ensure programming is performed in 2 steps, in right order
+ 120:Src/flash.c   ****     (independently of compiler optimization behavior) */
+ 121:Src/flash.c   ****     __ISB();
+ 292              		.loc 1 121 5 is_stmt 1 view .LVU65
+ 293              	.LBB31:
+ 294              	.LBI31:
+ 295              		.file 2 "Drivers/CMSIS/Include/cmsis_gcc.h"
+   1:Drivers/CMSIS/Include/cmsis_gcc.h **** /**************************************************************************//**
+   2:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @file     cmsis_gcc.h
+   3:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @brief    CMSIS compiler GCC header file
+   4:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @version  V5.0.4
+   5:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @date     09. April 2018
+   6:Drivers/CMSIS/Include/cmsis_gcc.h ****  ******************************************************************************/
+   7:Drivers/CMSIS/Include/cmsis_gcc.h **** /*
+   8:Drivers/CMSIS/Include/cmsis_gcc.h ****  * Copyright (c) 2009-2018 Arm Limited. All rights reserved.
+   9:Drivers/CMSIS/Include/cmsis_gcc.h ****  *
+  10:Drivers/CMSIS/Include/cmsis_gcc.h ****  * SPDX-License-Identifier: Apache-2.0
+  11:Drivers/CMSIS/Include/cmsis_gcc.h ****  *
+  12:Drivers/CMSIS/Include/cmsis_gcc.h ****  * Licensed under the Apache License, Version 2.0 (the License); you may
+  13:Drivers/CMSIS/Include/cmsis_gcc.h ****  * not use this file except in compliance with the License.
+  14:Drivers/CMSIS/Include/cmsis_gcc.h ****  * You may obtain a copy of the License at
+  15:Drivers/CMSIS/Include/cmsis_gcc.h ****  *
+  16:Drivers/CMSIS/Include/cmsis_gcc.h ****  * www.apache.org/licenses/LICENSE-2.0
+  17:Drivers/CMSIS/Include/cmsis_gcc.h ****  *
+  18:Drivers/CMSIS/Include/cmsis_gcc.h ****  * Unless required by applicable law or agreed to in writing, software
+  19:Drivers/CMSIS/Include/cmsis_gcc.h ****  * distributed under the License is distributed on an AS IS BASIS, WITHOUT
+  20:Drivers/CMSIS/Include/cmsis_gcc.h ****  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  21:Drivers/CMSIS/Include/cmsis_gcc.h ****  * See the License for the specific language governing permissions and
+  22:Drivers/CMSIS/Include/cmsis_gcc.h ****  * limitations under the License.
+  23:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+  24:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+  25:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef __CMSIS_GCC_H
+  26:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_H
+  27:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+  28:Drivers/CMSIS/Include/cmsis_gcc.h **** /* ignore some GCC warnings */
+  29:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic push
+  30:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wsign-conversion"
+  31:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wconversion"
+  32:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wunused-parameter"
+  33:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+  34:Drivers/CMSIS/Include/cmsis_gcc.h **** /* Fallback for __has_builtin */
+  35:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef __has_builtin
+  36:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __has_builtin(x) (0)
+  37:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  38:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+  39:Drivers/CMSIS/Include/cmsis_gcc.h **** /* CMSIS compiler specific defines */
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 9
+
+
+  40:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __ASM
+  41:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __ASM                                  __asm
+  42:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  43:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __INLINE
+  44:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __INLINE                               inline
+  45:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  46:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __STATIC_INLINE
+  47:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __STATIC_INLINE                        static inline
+  48:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  49:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __STATIC_FORCEINLINE                 
+  50:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __STATIC_FORCEINLINE                   __attribute__((always_inline)) static inline
+  51:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif                                           
+  52:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __NO_RETURN
+  53:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __NO_RETURN                            __attribute__((__noreturn__))
+  54:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  55:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __USED
+  56:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __USED                                 __attribute__((used))
+  57:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  58:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __WEAK
+  59:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __WEAK                                 __attribute__((weak))
+  60:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  61:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __PACKED
+  62:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __PACKED                               __attribute__((packed, aligned(1)))
+  63:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  64:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __PACKED_STRUCT
+  65:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __PACKED_STRUCT                        struct __attribute__((packed, aligned(1)))
+  66:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  67:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __PACKED_UNION
+  68:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __PACKED_UNION                         union __attribute__((packed, aligned(1)))
+  69:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  70:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32        /* deprecated */
+  71:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  72:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  73:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  74:Drivers/CMSIS/Include/cmsis_gcc.h ****   struct __attribute__((packed)) T_UINT32 { uint32_t v; };
+  75:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+  76:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32(x)                  (((struct T_UINT32 *)(x))->v)
+  77:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  78:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT16_WRITE
+  79:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  80:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  81:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  82:Drivers/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT16_WRITE { uint16_t v; };
+  83:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+  84:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT16_WRITE(addr, val)    (void)((((struct T_UINT16_WRITE *)(void *)(addr))-
+  85:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  86:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT16_READ
+  87:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  88:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  89:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  90:Drivers/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT16_READ { uint16_t v; };
+  91:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+  92:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT16_READ(addr)          (((const struct T_UINT16_READ *)(const void *)(add
+  93:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  94:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32_WRITE
+  95:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  96:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 10
+
+
+  97:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  98:Drivers/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT32_WRITE { uint32_t v; };
+  99:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+ 100:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32_WRITE(addr, val)    (void)((((struct T_UINT32_WRITE *)(void *)(addr))-
+ 101:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 102:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32_READ
+ 103:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+ 104:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+ 105:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+ 106:Drivers/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT32_READ { uint32_t v; };
+ 107:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+ 108:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32_READ(addr)          (((const struct T_UINT32_READ *)(const void *)(add
+ 109:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 110:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __ALIGNED
+ 111:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __ALIGNED(x)                           __attribute__((aligned(x)))
+ 112:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 113:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __RESTRICT
+ 114:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __RESTRICT                             __restrict
+ 115:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 116:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 117:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 118:Drivers/CMSIS/Include/cmsis_gcc.h **** /* ###########################  Core Function Access  ########################### */
+ 119:Drivers/CMSIS/Include/cmsis_gcc.h **** /** \ingroup  CMSIS_Core_FunctionInterface
+ 120:Drivers/CMSIS/Include/cmsis_gcc.h ****     \defgroup CMSIS_Core_RegAccFunctions CMSIS Core Register Access Functions
+ 121:Drivers/CMSIS/Include/cmsis_gcc.h ****   @{
+ 122:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 123:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 124:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 125:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Enable IRQ Interrupts
+ 126:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Enables IRQ interrupts by clearing the I-bit in the CPSR.
+ 127:Drivers/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
+ 128:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 129:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __enable_irq(void)
+ 130:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 131:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsie i" : : : "memory");
+ 132:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 133:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 134:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 135:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 136:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Disable IRQ Interrupts
+ 137:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Disables IRQ interrupts by setting the I-bit in the CPSR.
+ 138:Drivers/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
+ 139:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 140:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __disable_irq(void)
+ 141:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 142:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsid i" : : : "memory");
+ 143:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 144:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 145:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 146:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 147:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Control Register
+ 148:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the content of the Control Register.
+ 149:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Control Register value
+ 150:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 151:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_CONTROL(void)
+ 152:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 153:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 11
+
+
+ 154:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 155:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, control" : "=r" (result) );
+ 156:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 157:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 158:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 159:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 160:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 161:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 162:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Control Register (non-secure)
+ 163:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the content of the non-secure Control Register when in secure mode.
+ 164:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               non-secure Control Register value
+ 165:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 166:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_CONTROL_NS(void)
+ 167:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 168:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 169:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 170:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, control_ns" : "=r" (result) );
+ 171:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 172:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 173:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 174:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 175:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 176:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 177:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Control Register
+ 178:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Writes the given value to the Control Register.
+ 179:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    control  Control Register value to set
+ 180:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 181:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_CONTROL(uint32_t control)
+ 182:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 183:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR control, %0" : : "r" (control) : "memory");
+ 184:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 185:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 186:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 187:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 188:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 189:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Control Register (non-secure)
+ 190:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Writes the given value to the non-secure Control Register when in secure state.
+ 191:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    control  Control Register value to set
+ 192:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 193:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_CONTROL_NS(uint32_t control)
+ 194:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 195:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR control_ns, %0" : : "r" (control) : "memory");
+ 196:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 197:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 198:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 199:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 200:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 201:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get IPSR Register
+ 202:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the content of the IPSR Register.
+ 203:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               IPSR Register value
+ 204:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 205:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_IPSR(void)
+ 206:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 207:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 208:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 209:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, ipsr" : "=r" (result) );
+ 210:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 12
+
+
+ 211:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 212:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 213:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 214:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 215:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get APSR Register
+ 216:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the content of the APSR Register.
+ 217:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               APSR Register value
+ 218:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 219:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_APSR(void)
+ 220:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 221:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 222:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 223:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, apsr" : "=r" (result) );
+ 224:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 225:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 226:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 227:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 228:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 229:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get xPSR Register
+ 230:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the content of the xPSR Register.
+ 231:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               xPSR Register value
+ 232:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 233:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_xPSR(void)
+ 234:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 235:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 236:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 237:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, xpsr" : "=r" (result) );
+ 238:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 239:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 240:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 241:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 242:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 243:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Process Stack Pointer
+ 244:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the Process Stack Pointer (PSP).
+ 245:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               PSP Register value
+ 246:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 247:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_PSP(void)
+ 248:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 249:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 250:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 251:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, psp"  : "=r" (result) );
+ 252:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 253:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 254:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 255:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 256:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 257:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 258:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Process Stack Pointer (non-secure)
+ 259:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the non-secure Process Stack Pointer (PSP) when in secure s
+ 260:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               PSP Register value
+ 261:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 262:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_PSP_NS(void)
+ 263:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 264:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 265:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 266:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, psp_ns"  : "=r" (result) );
+ 267:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 13
+
+
+ 268:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 269:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 270:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 271:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 272:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 273:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Process Stack Pointer
+ 274:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the Process Stack Pointer (PSP).
+ 275:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    topOfProcStack  Process Stack Pointer value to set
+ 276:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 277:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_PSP(uint32_t topOfProcStack)
+ 278:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 279:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR psp, %0" : : "r" (topOfProcStack) : );
+ 280:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 281:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 282:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 283:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 284:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 285:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Process Stack Pointer (non-secure)
+ 286:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the non-secure Process Stack Pointer (PSP) when in secure sta
+ 287:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    topOfProcStack  Process Stack Pointer value to set
+ 288:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 289:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_PSP_NS(uint32_t topOfProcStack)
+ 290:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 291:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR psp_ns, %0" : : "r" (topOfProcStack) : );
+ 292:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 293:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 294:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 295:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 296:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 297:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Main Stack Pointer
+ 298:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the Main Stack Pointer (MSP).
+ 299:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               MSP Register value
+ 300:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 301:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_MSP(void)
+ 302:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 303:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 304:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 305:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, msp" : "=r" (result) );
+ 306:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 307:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 308:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 309:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 310:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 311:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 312:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Main Stack Pointer (non-secure)
+ 313:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the non-secure Main Stack Pointer (MSP) when in secure stat
+ 314:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               MSP Register value
+ 315:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 316:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_MSP_NS(void)
+ 317:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 318:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 319:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 320:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, msp_ns" : "=r" (result) );
+ 321:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 322:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 323:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 324:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 14
+
+
+ 325:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 326:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 327:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Main Stack Pointer
+ 328:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the Main Stack Pointer (MSP).
+ 329:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    topOfMainStack  Main Stack Pointer value to set
+ 330:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 331:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_MSP(uint32_t topOfMainStack)
+ 332:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 333:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR msp, %0" : : "r" (topOfMainStack) : );
+ 334:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 335:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 336:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 337:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 338:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 339:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Main Stack Pointer (non-secure)
+ 340:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the non-secure Main Stack Pointer (MSP) when in secure state.
+ 341:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    topOfMainStack  Main Stack Pointer value to set
+ 342:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 343:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_MSP_NS(uint32_t topOfMainStack)
+ 344:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 345:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR msp_ns, %0" : : "r" (topOfMainStack) : );
+ 346:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 347:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 348:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 349:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 350:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 351:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 352:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Stack Pointer (non-secure)
+ 353:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the non-secure Stack Pointer (SP) when in secure state.
+ 354:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               SP Register value
+ 355:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 356:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_SP_NS(void)
+ 357:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 358:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 359:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 360:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, sp_ns" : "=r" (result) );
+ 361:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 362:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 363:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 364:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 365:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 366:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Stack Pointer (non-secure)
+ 367:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the non-secure Stack Pointer (SP) when in secure state.
+ 368:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    topOfStack  Stack Pointer value to set
+ 369:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 370:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_SP_NS(uint32_t topOfStack)
+ 371:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 372:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR sp_ns, %0" : : "r" (topOfStack) : );
+ 373:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 374:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 375:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 376:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 377:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 378:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Priority Mask
+ 379:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current state of the priority mask bit from the Priority Mask Register.
+ 380:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Priority Mask value
+ 381:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 15
+
+
+ 382:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_PRIMASK(void)
+ 383:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 384:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 385:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 386:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, primask" : "=r" (result) :: "memory");
+ 387:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 388:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 389:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 390:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 391:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 392:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 393:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Priority Mask (non-secure)
+ 394:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current state of the non-secure priority mask bit from the Priority Mask Reg
+ 395:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Priority Mask value
+ 396:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 397:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_PRIMASK_NS(void)
+ 398:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 399:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 400:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 401:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, primask_ns" : "=r" (result) :: "memory");
+ 402:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 403:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 404:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 405:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 406:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 407:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 408:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Priority Mask
+ 409:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the Priority Mask Register.
+ 410:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    priMask  Priority Mask
+ 411:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 412:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_PRIMASK(uint32_t priMask)
+ 413:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 414:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR primask, %0" : : "r" (priMask) : "memory");
+ 415:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 416:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 417:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 418:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 419:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 420:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Priority Mask (non-secure)
+ 421:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the non-secure Priority Mask Register when in secure state.
+ 422:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    priMask  Priority Mask
+ 423:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 424:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_PRIMASK_NS(uint32_t priMask)
+ 425:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 426:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR primask_ns, %0" : : "r" (priMask) : "memory");
+ 427:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 428:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 429:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 430:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 431:Drivers/CMSIS/Include/cmsis_gcc.h **** #if ((defined (__ARM_ARCH_7M__      ) && (__ARM_ARCH_7M__      == 1)) || \
+ 432:Drivers/CMSIS/Include/cmsis_gcc.h ****      (defined (__ARM_ARCH_7EM__     ) && (__ARM_ARCH_7EM__     == 1)) || \
+ 433:Drivers/CMSIS/Include/cmsis_gcc.h ****      (defined (__ARM_ARCH_8M_MAIN__ ) && (__ARM_ARCH_8M_MAIN__ == 1))    )
+ 434:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 435:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Enable FIQ
+ 436:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Enables FIQ interrupts by clearing the F-bit in the CPSR.
+ 437:Drivers/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
+ 438:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 16
+
+
+ 439:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __enable_fault_irq(void)
+ 440:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 441:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsie f" : : : "memory");
+ 442:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 443:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 444:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 445:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 446:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Disable FIQ
+ 447:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Disables FIQ interrupts by setting the F-bit in the CPSR.
+ 448:Drivers/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
+ 449:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 450:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __disable_fault_irq(void)
+ 451:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 452:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsid f" : : : "memory");
+ 453:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 454:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 455:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 456:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 457:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Base Priority
+ 458:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the Base Priority register.
+ 459:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Base Priority register value
+ 460:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 461:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_BASEPRI(void)
+ 462:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 463:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 464:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 465:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, basepri" : "=r" (result) );
+ 466:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 467:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 468:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 469:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 470:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 471:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 472:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Base Priority (non-secure)
+ 473:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the non-secure Base Priority register when in secure state.
+ 474:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Base Priority register value
+ 475:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 476:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_BASEPRI_NS(void)
+ 477:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 478:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 479:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 480:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, basepri_ns" : "=r" (result) );
+ 481:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 482:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 483:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 484:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 485:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 486:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 487:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Base Priority
+ 488:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the Base Priority register.
+ 489:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    basePri  Base Priority value to set
+ 490:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 491:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_BASEPRI(uint32_t basePri)
+ 492:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 493:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR basepri, %0" : : "r" (basePri) : "memory");
+ 494:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 495:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 17
+
+
+ 496:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 497:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 498:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 499:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Base Priority (non-secure)
+ 500:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the non-secure Base Priority register when in secure state.
+ 501:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    basePri  Base Priority value to set
+ 502:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 503:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_BASEPRI_NS(uint32_t basePri)
+ 504:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 505:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR basepri_ns, %0" : : "r" (basePri) : "memory");
+ 506:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 507:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 508:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 509:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 510:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 511:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Base Priority with condition
+ 512:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the Base Priority register only if BASEPRI masking is disable
+ 513:Drivers/CMSIS/Include/cmsis_gcc.h ****            or the new value increases the BASEPRI priority level.
+ 514:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    basePri  Base Priority value to set
+ 515:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 516:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_BASEPRI_MAX(uint32_t basePri)
+ 517:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 518:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR basepri_max, %0" : : "r" (basePri) : "memory");
+ 519:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 520:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 521:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 522:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 523:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Fault Mask
+ 524:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the Fault Mask register.
+ 525:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Fault Mask register value
+ 526:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 527:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_FAULTMASK(void)
+ 528:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 529:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 530:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 531:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, faultmask" : "=r" (result) );
+ 532:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 533:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 534:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 535:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 536:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 537:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 538:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Fault Mask (non-secure)
+ 539:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the non-secure Fault Mask register when in secure state.
+ 540:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Fault Mask register value
+ 541:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 542:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_FAULTMASK_NS(void)
+ 543:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 544:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 545:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 546:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, faultmask_ns" : "=r" (result) );
+ 547:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 548:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 549:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 550:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 551:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 552:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 18
+
+
+ 553:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Fault Mask
+ 554:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the Fault Mask register.
+ 555:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    faultMask  Fault Mask value to set
+ 556:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 557:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_FAULTMASK(uint32_t faultMask)
+ 558:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 559:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR faultmask, %0" : : "r" (faultMask) : "memory");
+ 560:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 561:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 562:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 563:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 564:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 565:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Fault Mask (non-secure)
+ 566:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the non-secure Fault Mask register when in secure state.
+ 567:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    faultMask  Fault Mask value to set
+ 568:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 569:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_FAULTMASK_NS(uint32_t faultMask)
+ 570:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 571:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR faultmask_ns, %0" : : "r" (faultMask) : "memory");
+ 572:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 573:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 574:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 575:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif /* ((defined (__ARM_ARCH_7M__      ) && (__ARM_ARCH_7M__      == 1)) || \
+ 576:Drivers/CMSIS/Include/cmsis_gcc.h ****            (defined (__ARM_ARCH_7EM__     ) && (__ARM_ARCH_7EM__     == 1)) || \
+ 577:Drivers/CMSIS/Include/cmsis_gcc.h ****            (defined (__ARM_ARCH_8M_MAIN__ ) && (__ARM_ARCH_8M_MAIN__ == 1))    ) */
+ 578:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 579:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 580:Drivers/CMSIS/Include/cmsis_gcc.h **** #if ((defined (__ARM_ARCH_8M_MAIN__ ) && (__ARM_ARCH_8M_MAIN__ == 1)) || \
+ 581:Drivers/CMSIS/Include/cmsis_gcc.h ****      (defined (__ARM_ARCH_8M_BASE__ ) && (__ARM_ARCH_8M_BASE__ == 1))    )
+ 582:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 583:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 584:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Process Stack Pointer Limit
+ 585:Drivers/CMSIS/Include/cmsis_gcc.h ****   Devices without ARMv8-M Main Extensions (i.e. Cortex-M23) lack the non-secure
+ 586:Drivers/CMSIS/Include/cmsis_gcc.h ****   Stack Pointer Limit register hence zero is returned always in non-secure
+ 587:Drivers/CMSIS/Include/cmsis_gcc.h ****   mode.
+ 588:Drivers/CMSIS/Include/cmsis_gcc.h ****   
+ 589:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the Process Stack Pointer Limit (PSPLIM).
+ 590:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               PSPLIM Register value
+ 591:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 592:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_PSPLIM(void)
+ 593:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 594:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (!(defined (__ARM_ARCH_8M_MAIN__ ) && (__ARM_ARCH_8M_MAIN__ == 1)) && \
+ 595:Drivers/CMSIS/Include/cmsis_gcc.h ****     (!defined (__ARM_FEATURE_CMSE) || (__ARM_FEATURE_CMSE < 3)))
+ 596:Drivers/CMSIS/Include/cmsis_gcc.h ****     // without main extensions, the non-secure PSPLIM is RAZ/WI
+ 597:Drivers/CMSIS/Include/cmsis_gcc.h ****   return 0U;
+ 598:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
+ 599:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 600:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, psplim"  : "=r" (result) );
+ 601:Drivers/CMSIS/Include/cmsis_gcc.h ****   return result;
+ 602:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 603:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 604:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 605:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE) && (__ARM_FEATURE_CMSE == 3))
+ 606:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 607:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Process Stack Pointer Limit (non-secure)
+ 608:Drivers/CMSIS/Include/cmsis_gcc.h ****   Devices without ARMv8-M Main Extensions (i.e. Cortex-M23) lack the non-secure
+ 609:Drivers/CMSIS/Include/cmsis_gcc.h ****   Stack Pointer Limit register hence zero is returned always.
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 19
+
+
+ 610:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 611:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the non-secure Process Stack Pointer Limit (PSPLIM) when in
+ 612:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               PSPLIM Register value
+ 613:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 614:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_PSPLIM_NS(void)
+ 615:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 616:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (!(defined (__ARM_ARCH_8M_MAIN__ ) && (__ARM_ARCH_8M_MAIN__ == 1)))
+ 617:Drivers/CMSIS/Include/cmsis_gcc.h ****   // without main extensions, the non-secure PSPLIM is RAZ/WI
+ 618:Drivers/CMSIS/Include/cmsis_gcc.h ****   return 0U;
+ 619:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
+ 620:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 621:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, psplim_ns"  : "=r" (result) );
+ 622:Drivers/CMSIS/Include/cmsis_gcc.h ****   return result;
+ 623:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 624:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 625:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 626:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 627:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 628:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 629:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Process Stack Pointer Limit
+ 630:Drivers/CMSIS/Include/cmsis_gcc.h ****   Devices without ARMv8-M Main Extensions (i.e. Cortex-M23) lack the non-secure
+ 631:Drivers/CMSIS/Include/cmsis_gcc.h ****   Stack Pointer Limit register hence the write is silently ignored in non-secure
+ 632:Drivers/CMSIS/Include/cmsis_gcc.h ****   mode.
+ 633:Drivers/CMSIS/Include/cmsis_gcc.h ****   
+ 634:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the Process Stack Pointer Limit (PSPLIM).
+ 635:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    ProcStackPtrLimit  Process Stack Pointer Limit value to set
+ 636:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 637:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_PSPLIM(uint32_t ProcStackPtrLimit)
+ 638:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 639:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (!(defined (__ARM_ARCH_8M_MAIN__ ) && (__ARM_ARCH_8M_MAIN__ == 1)) && \
+ 640:Drivers/CMSIS/Include/cmsis_gcc.h ****     (!defined (__ARM_FEATURE_CMSE) || (__ARM_FEATURE_CMSE < 3)))
+ 641:Drivers/CMSIS/Include/cmsis_gcc.h ****   // without main extensions, the non-secure PSPLIM is RAZ/WI
+ 642:Drivers/CMSIS/Include/cmsis_gcc.h ****   (void)ProcStackPtrLimit;
+ 643:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
+ 644:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR psplim, %0" : : "r" (ProcStackPtrLimit));
+ 645:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 646:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 647:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 648:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 649:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE  ) && (__ARM_FEATURE_CMSE   == 3))
+ 650:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 651:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Process Stack Pointer (non-secure)
+ 652:Drivers/CMSIS/Include/cmsis_gcc.h ****   Devices without ARMv8-M Main Extensions (i.e. Cortex-M23) lack the non-secure
+ 653:Drivers/CMSIS/Include/cmsis_gcc.h ****   Stack Pointer Limit register hence the write is silently ignored.
+ 654:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 655:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the non-secure Process Stack Pointer Limit (PSPLIM) when in s
+ 656:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    ProcStackPtrLimit  Process Stack Pointer Limit value to set
+ 657:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 658:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_PSPLIM_NS(uint32_t ProcStackPtrLimit)
+ 659:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 660:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (!(defined (__ARM_ARCH_8M_MAIN__ ) && (__ARM_ARCH_8M_MAIN__ == 1)))
+ 661:Drivers/CMSIS/Include/cmsis_gcc.h ****   // without main extensions, the non-secure PSPLIM is RAZ/WI
+ 662:Drivers/CMSIS/Include/cmsis_gcc.h ****   (void)ProcStackPtrLimit;
+ 663:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
+ 664:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR psplim_ns, %0\n" : : "r" (ProcStackPtrLimit));
+ 665:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 666:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 20
+
+
+ 667:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 668:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 669:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 670:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 671:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Main Stack Pointer Limit
+ 672:Drivers/CMSIS/Include/cmsis_gcc.h ****   Devices without ARMv8-M Main Extensions (i.e. Cortex-M23) lack the non-secure
+ 673:Drivers/CMSIS/Include/cmsis_gcc.h ****   Stack Pointer Limit register hence zero is returned always in non-secure
+ 674:Drivers/CMSIS/Include/cmsis_gcc.h ****   mode.
+ 675:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 676:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the Main Stack Pointer Limit (MSPLIM).
+ 677:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               MSPLIM Register value
+ 678:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 679:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_MSPLIM(void)
+ 680:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 681:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (!(defined (__ARM_ARCH_8M_MAIN__ ) && (__ARM_ARCH_8M_MAIN__ == 1)) && \
+ 682:Drivers/CMSIS/Include/cmsis_gcc.h ****     (!defined (__ARM_FEATURE_CMSE) || (__ARM_FEATURE_CMSE < 3)))
+ 683:Drivers/CMSIS/Include/cmsis_gcc.h ****   // without main extensions, the non-secure MSPLIM is RAZ/WI
+ 684:Drivers/CMSIS/Include/cmsis_gcc.h ****   return 0U;
+ 685:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
+ 686:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 687:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, msplim" : "=r" (result) );
+ 688:Drivers/CMSIS/Include/cmsis_gcc.h ****   return result;
+ 689:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 690:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 691:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 692:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 693:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE  ) && (__ARM_FEATURE_CMSE   == 3))
+ 694:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 695:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Main Stack Pointer Limit (non-secure)
+ 696:Drivers/CMSIS/Include/cmsis_gcc.h ****   Devices without ARMv8-M Main Extensions (i.e. Cortex-M23) lack the non-secure
+ 697:Drivers/CMSIS/Include/cmsis_gcc.h ****   Stack Pointer Limit register hence zero is returned always.
+ 698:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 699:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the non-secure Main Stack Pointer Limit(MSPLIM) when in sec
+ 700:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               MSPLIM Register value
+ 701:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 702:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_MSPLIM_NS(void)
+ 703:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 704:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (!(defined (__ARM_ARCH_8M_MAIN__ ) && (__ARM_ARCH_8M_MAIN__ == 1)))
+ 705:Drivers/CMSIS/Include/cmsis_gcc.h ****   // without main extensions, the non-secure MSPLIM is RAZ/WI
+ 706:Drivers/CMSIS/Include/cmsis_gcc.h ****   return 0U;
+ 707:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
+ 708:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 709:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, msplim_ns" : "=r" (result) );
+ 710:Drivers/CMSIS/Include/cmsis_gcc.h ****   return result;
+ 711:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 712:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 713:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 714:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 715:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 716:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 717:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Main Stack Pointer Limit
+ 718:Drivers/CMSIS/Include/cmsis_gcc.h ****   Devices without ARMv8-M Main Extensions (i.e. Cortex-M23) lack the non-secure
+ 719:Drivers/CMSIS/Include/cmsis_gcc.h ****   Stack Pointer Limit register hence the write is silently ignored in non-secure
+ 720:Drivers/CMSIS/Include/cmsis_gcc.h ****   mode.
+ 721:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 722:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the Main Stack Pointer Limit (MSPLIM).
+ 723:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    MainStackPtrLimit  Main Stack Pointer Limit value to set
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 21
+
+
+ 724:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 725:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_MSPLIM(uint32_t MainStackPtrLimit)
+ 726:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 727:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (!(defined (__ARM_ARCH_8M_MAIN__ ) && (__ARM_ARCH_8M_MAIN__ == 1)) && \
+ 728:Drivers/CMSIS/Include/cmsis_gcc.h ****     (!defined (__ARM_FEATURE_CMSE) || (__ARM_FEATURE_CMSE < 3)))
+ 729:Drivers/CMSIS/Include/cmsis_gcc.h ****   // without main extensions, the non-secure MSPLIM is RAZ/WI
+ 730:Drivers/CMSIS/Include/cmsis_gcc.h ****   (void)MainStackPtrLimit;
+ 731:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
+ 732:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR msplim, %0" : : "r" (MainStackPtrLimit));
+ 733:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 734:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 735:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 736:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 737:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE  ) && (__ARM_FEATURE_CMSE   == 3))
+ 738:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 739:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Main Stack Pointer Limit (non-secure)
+ 740:Drivers/CMSIS/Include/cmsis_gcc.h ****   Devices without ARMv8-M Main Extensions (i.e. Cortex-M23) lack the non-secure
+ 741:Drivers/CMSIS/Include/cmsis_gcc.h ****   Stack Pointer Limit register hence the write is silently ignored.
+ 742:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 743:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the non-secure Main Stack Pointer Limit (MSPLIM) when in secu
+ 744:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    MainStackPtrLimit  Main Stack Pointer value to set
+ 745:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 746:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_MSPLIM_NS(uint32_t MainStackPtrLimit)
+ 747:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 748:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (!(defined (__ARM_ARCH_8M_MAIN__ ) && (__ARM_ARCH_8M_MAIN__ == 1)))
+ 749:Drivers/CMSIS/Include/cmsis_gcc.h ****   // without main extensions, the non-secure MSPLIM is RAZ/WI
+ 750:Drivers/CMSIS/Include/cmsis_gcc.h ****   (void)MainStackPtrLimit;
+ 751:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
+ 752:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR msplim_ns, %0" : : "r" (MainStackPtrLimit));
+ 753:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 754:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 755:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 756:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 757:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif /* ((defined (__ARM_ARCH_8M_MAIN__ ) && (__ARM_ARCH_8M_MAIN__ == 1)) || \
+ 758:Drivers/CMSIS/Include/cmsis_gcc.h ****            (defined (__ARM_ARCH_8M_BASE__ ) && (__ARM_ARCH_8M_BASE__ == 1))    ) */
+ 759:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 760:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 761:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 762:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get FPSCR
+ 763:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the Floating Point Status/Control register.
+ 764:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Floating Point Status/Control register value
+ 765:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 766:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_FPSCR(void)
+ 767:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 768:Drivers/CMSIS/Include/cmsis_gcc.h **** #if ((defined (__FPU_PRESENT) && (__FPU_PRESENT == 1U)) && \
+ 769:Drivers/CMSIS/Include/cmsis_gcc.h ****      (defined (__FPU_USED   ) && (__FPU_USED    == 1U))     )
+ 770:Drivers/CMSIS/Include/cmsis_gcc.h **** #if __has_builtin(__builtin_arm_get_fpscr) 
+ 771:Drivers/CMSIS/Include/cmsis_gcc.h **** // Re-enable using built-in when GCC has been fixed
+ 772:Drivers/CMSIS/Include/cmsis_gcc.h **** // || (__GNUC__ > 7) || (__GNUC__ == 7 && __GNUC_MINOR__ >= 2)
+ 773:Drivers/CMSIS/Include/cmsis_gcc.h ****   /* see https://gcc.gnu.org/ml/gcc-patches/2017-04/msg00443.html */
+ 774:Drivers/CMSIS/Include/cmsis_gcc.h ****   return __builtin_arm_get_fpscr();
+ 775:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
+ 776:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 777:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 778:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("VMRS %0, fpscr" : "=r" (result) );
+ 779:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 780:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 22
+
+
+ 781:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
+ 782:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(0U);
+ 783:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 784:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 785:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 786:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 787:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 788:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set FPSCR
+ 789:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the Floating Point Status/Control register.
+ 790:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    fpscr  Floating Point Status/Control value to set
+ 791:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 792:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_FPSCR(uint32_t fpscr)
+ 793:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 794:Drivers/CMSIS/Include/cmsis_gcc.h **** #if ((defined (__FPU_PRESENT) && (__FPU_PRESENT == 1U)) && \
+ 795:Drivers/CMSIS/Include/cmsis_gcc.h ****      (defined (__FPU_USED   ) && (__FPU_USED    == 1U))     )
+ 796:Drivers/CMSIS/Include/cmsis_gcc.h **** #if __has_builtin(__builtin_arm_set_fpscr)
+ 797:Drivers/CMSIS/Include/cmsis_gcc.h **** // Re-enable using built-in when GCC has been fixed
+ 798:Drivers/CMSIS/Include/cmsis_gcc.h **** // || (__GNUC__ > 7) || (__GNUC__ == 7 && __GNUC_MINOR__ >= 2)
+ 799:Drivers/CMSIS/Include/cmsis_gcc.h ****   /* see https://gcc.gnu.org/ml/gcc-patches/2017-04/msg00443.html */
+ 800:Drivers/CMSIS/Include/cmsis_gcc.h ****   __builtin_arm_set_fpscr(fpscr);
+ 801:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
+ 802:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("VMSR fpscr, %0" : : "r" (fpscr) : "vfpcc", "memory");
+ 803:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 804:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
+ 805:Drivers/CMSIS/Include/cmsis_gcc.h ****   (void)fpscr;
+ 806:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 807:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 808:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 809:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 810:Drivers/CMSIS/Include/cmsis_gcc.h **** /*@} end of CMSIS_Core_RegAccFunctions */
+ 811:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 812:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 813:Drivers/CMSIS/Include/cmsis_gcc.h **** /* ##########################  Core Instruction Access  ######################### */
+ 814:Drivers/CMSIS/Include/cmsis_gcc.h **** /** \defgroup CMSIS_Core_InstructionInterface CMSIS Core Instruction Interface
+ 815:Drivers/CMSIS/Include/cmsis_gcc.h ****   Access to dedicated instructions
+ 816:Drivers/CMSIS/Include/cmsis_gcc.h ****   @{
+ 817:Drivers/CMSIS/Include/cmsis_gcc.h **** */
+ 818:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 819:Drivers/CMSIS/Include/cmsis_gcc.h **** /* Define macros for porting to both thumb1 and thumb2.
+ 820:Drivers/CMSIS/Include/cmsis_gcc.h ****  * For thumb1, use low register (r0-r7), specified by constraint "l"
+ 821:Drivers/CMSIS/Include/cmsis_gcc.h ****  * Otherwise, use general registers, specified by constraint "r" */
+ 822:Drivers/CMSIS/Include/cmsis_gcc.h **** #if defined (__thumb__) && !defined (__thumb2__)
+ 823:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_OUT_REG(r) "=l" (r)
+ 824:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_RW_REG(r) "+l" (r)
+ 825:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_USE_REG(r) "l" (r)
+ 826:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
+ 827:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_OUT_REG(r) "=r" (r)
+ 828:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_RW_REG(r) "+r" (r)
+ 829:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_USE_REG(r) "r" (r)
+ 830:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 831:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 832:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 833:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   No Operation
+ 834:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details No Operation does nothing. This instruction can be used for code alignment purposes.
+ 835:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 836:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __NOP()                             __ASM volatile ("nop")
+ 837:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 23
+
+
+ 838:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 839:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Wait For Interrupt
+ 840:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Wait For Interrupt is a hint instruction that suspends execution until one of a number o
+ 841:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 842:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __WFI()                             __ASM volatile ("wfi")
+ 843:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 844:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 845:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 846:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Wait For Event
+ 847:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Wait For Event is a hint instruction that permits the processor to enter
+ 848:Drivers/CMSIS/Include/cmsis_gcc.h ****            a low-power state until one of a number of events occurs.
+ 849:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 850:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __WFE()                             __ASM volatile ("wfe")
+ 851:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 852:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 853:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 854:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Send Event
+ 855:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Send Event is a hint instruction. It causes an event to be signaled to the CPU.
+ 856:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 857:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __SEV()                             __ASM volatile ("sev")
+ 858:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 859:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 860:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 861:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Instruction Synchronization Barrier
+ 862:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Instruction Synchronization Barrier flushes the pipeline in the processor,
+ 863:Drivers/CMSIS/Include/cmsis_gcc.h ****            so that all instructions following the ISB are fetched from cache or memory,
+ 864:Drivers/CMSIS/Include/cmsis_gcc.h ****            after the instruction has been completed.
+ 865:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 866:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __ISB(void)
+ 296              		.loc 2 866 27 view .LVU66
+ 297              	.LBB32:
+ 867:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 868:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("isb 0xF":::"memory");
+ 298              		.loc 2 868 3 view .LVU67
+ 299              		.syntax unified
+ 300              	@ 868 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 301 0014 BFF36F8F 		isb 0xF
+ 302              	@ 0 "" 2
+ 303              		.thumb
+ 304              		.syntax unified
+ 305              	.LBE32:
+ 306              	.LBE31:
+ 122:Src/flash.c   ****     /* Program second word */
+ 123:Src/flash.c   ****     *(uint32_t *)(Address + 4U) = (uint32_t)(Data >> 32U);
+ 307              		.loc 1 123 5 view .LVU68
+ 124:Src/flash.c   ****     /* wait end of operation */
+ 125:Src/flash.c   ****     while (FLASH->SR & FLASH_SR_BSY)
+ 308              		.loc 1 125 17 is_stmt 0 view .LVU69
+ 309 0018 054A     		ldr	r2, .L26
+ 310              	.LVL7:
+ 123:Src/flash.c   ****     /* wait end of operation */
+ 311              		.loc 1 123 35 view .LVU70
+ 312 001a 4360     		str	r3, [r0, #4]
+ 313              		.loc 1 125 5 is_stmt 1 view .LVU71
+ 314              	.L22:
+ 126:Src/flash.c   ****         ;
+ 315              		.loc 1 126 9 discriminator 1 view .LVU72
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 24
+
+
+ 125:Src/flash.c   ****         ;
+ 316              		.loc 1 125 17 is_stmt 0 discriminator 1 view .LVU73
+ 317 001c 1369     		ldr	r3, [r2, #16]
+ 125:Src/flash.c   ****         ;
+ 318              		.loc 1 125 11 discriminator 1 view .LVU74
+ 319 001e DB03     		lsls	r3, r3, #15
+ 320 0020 FCD4     		bmi	.L22
+ 127:Src/flash.c   ****     /* Clear PG bit */
+ 128:Src/flash.c   ****     CLEAR_BIT(FLASH->CR, FLASH_CR_PG);
+ 321              		.loc 1 128 5 is_stmt 1 view .LVU75
+ 322 0022 5369     		ldr	r3, [r2, #20]
+ 323 0024 23F00103 		bic	r3, r3, #1
+ 324 0028 5361     		str	r3, [r2, #20]
+ 129:Src/flash.c   **** }
+ 325              		.loc 1 129 1 is_stmt 0 view .LVU76
+ 326 002a 5DF8044B 		ldr	r4, [sp], #4
+ 327              	.LCFI1:
+ 328              		.cfi_restore 4
+ 329              		.cfi_def_cfa_offset 0
+ 330 002e 7047     		bx	lr
+ 331              	.L27:
+ 332              		.align	2
+ 333              	.L26:
+ 334 0030 00200240 		.word	1073881088
+ 335              		.cfi_endproc
+ 336              	.LFE2057:
+ 338              		.section	.text.GetBank,"ax",%progbits
+ 339              		.align	1
+ 340              		.p2align 2,,3
+ 341              		.global	GetBank
+ 342              		.syntax unified
+ 343              		.thumb
+ 344              		.thumb_func
+ 345              		.fpu fpv4-sp-d16
+ 347              	GetBank:
+ 348              	.LVL8:
+ 349              	.LFB2058:
+ 130:Src/flash.c   **** 
+ 131:Src/flash.c   **** /**
+ 132:Src/flash.c   ****   * @brief  Gets the bank of a given address
+ 133:Src/flash.c   ****   * @param  Addr: Address of the FLASH Memory
+ 134:Src/flash.c   ****   * @retval The bank of a given address
+ 135:Src/flash.c   ****   */
+ 136:Src/flash.c   **** 
+ 137:Src/flash.c   **** uint32_t GetBank(uint32_t Addr)
+ 138:Src/flash.c   **** {
+ 350              		.loc 1 138 1 is_stmt 1 view -0
+ 351              		.cfi_startproc
+ 352              		@ args = 0, pretend = 0, frame = 0
+ 353              		@ frame_needed = 0, uses_anonymous_args = 0
+ 354              		@ link register save eliminated.
+ 139:Src/flash.c   ****     uint32_t bank = 0;
+ 355              		.loc 1 139 5 view .LVU78
+ 140:Src/flash.c   **** 
+ 141:Src/flash.c   ****     if (READ_BIT(SYSCFG->MEMRMP, SYSCFG_MEMRMP_FB_MODE) == 0)
+ 356              		.loc 1 141 5 view .LVU79
+ 357              		.loc 1 141 9 is_stmt 0 view .LVU80
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 25
+
+
+ 358 0000 134A     		ldr	r2, .L37
+ 359 0002 144B     		ldr	r3, .L37+4
+ 360 0004 1168     		ldr	r1, [r2]
+ 361 0006 1A88     		ldrh	r2, [r3]
+ 362              		.loc 1 141 8 view .LVU81
+ 363 0008 11F4807F 		tst	r1, #256
+ 364              	.LBB35:
+ 365              	.LBB36:
+ 142:Src/flash.c   ****     {
+ 143:Src/flash.c   ****         /* No Bank swap */
+ 144:Src/flash.c   ****         if (Addr < (FLASH_BASE + FLASH_BANK_SIZE))
+ 366              		.loc 1 144 32 view .LVU82
+ 367 000c 4FF6FF71 		movw	r1, #65535
+ 368              	.LBE36:
+ 369              	.LBE35:
+ 141:Src/flash.c   ****     {
+ 370              		.loc 1 141 8 view .LVU83
+ 371 0010 0CD1     		bne	.L29
+ 372              	.LVL9:
+ 373              	.LBB39:
+ 374              	.LBI35:
+ 137:Src/flash.c   **** {
+ 375              		.loc 1 137 10 is_stmt 1 view .LVU84
+ 376              	.LBB37:
+ 377              		.loc 1 144 9 view .LVU85
+ 378              		.loc 1 144 32 is_stmt 0 view .LVU86
+ 379 0012 8A42     		cmp	r2, r1
+ 380 0014 17D0     		beq	.L33
+ 381              		.loc 1 144 34 view .LVU87
+ 382 0016 1A68     		ldr	r2, [r3]
+ 383 0018 0F4B     		ldr	r3, .L37+8
+ 384 001a 03EA4223 		and	r3, r3, r2, lsl #9
+ 385              		.loc 1 144 32 view .LVU88
+ 386 001e 03F10063 		add	r3, r3, #134217728
+ 387              	.L30:
+ 145:Src/flash.c   ****         {
+ 146:Src/flash.c   ****             bank = FLASH_BANK_1;
+ 388              		.loc 1 146 18 view .LVU89
+ 389 0022 9842     		cmp	r0, r3
+ 390 0024 2CBF     		ite	cs
+ 391 0026 0220     		movcs	r0, #2
+ 392 0028 0120     		movcc	r0, #1
+ 393              	.LVL10:
+ 394              		.loc 1 146 18 view .LVU90
+ 395 002a 7047     		bx	lr
+ 396              	.LVL11:
+ 397              	.L29:
+ 398              		.loc 1 146 18 view .LVU91
+ 399              	.LBE37:
+ 400              	.LBE39:
+ 147:Src/flash.c   ****         }
+ 148:Src/flash.c   ****         else
+ 149:Src/flash.c   ****         {
+ 150:Src/flash.c   ****             bank = FLASH_BANK_2;
+ 151:Src/flash.c   ****         }
+ 152:Src/flash.c   ****     }
+ 153:Src/flash.c   ****     else
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 26
+
+
+ 154:Src/flash.c   ****     {
+ 155:Src/flash.c   ****         /* Bank swap */
+ 156:Src/flash.c   ****         if (Addr < (FLASH_BASE + FLASH_BANK_SIZE))
+ 401              		.loc 1 156 9 is_stmt 1 view .LVU92
+ 402              		.loc 1 156 32 is_stmt 0 view .LVU93
+ 403 002c 8A42     		cmp	r2, r1
+ 404 002e 0CD0     		beq	.L35
+ 405              		.loc 1 156 34 discriminator 1 view .LVU94
+ 406 0030 1A68     		ldr	r2, [r3]
+ 407 0032 094B     		ldr	r3, .L37+8
+ 408 0034 03EA4223 		and	r3, r3, r2, lsl #9
+ 409              		.loc 1 156 32 discriminator 1 view .LVU95
+ 410 0038 03F10063 		add	r3, r3, #134217728
+ 411              	.L32:
+ 157:Src/flash.c   ****         {
+ 158:Src/flash.c   ****             bank = FLASH_BANK_2;
+ 412              		.loc 1 158 18 discriminator 4 view .LVU96
+ 413 003c 8342     		cmp	r3, r0
+ 414 003e 94BF     		ite	ls
+ 415 0040 0120     		movls	r0, #1
+ 416 0042 0220     		movhi	r0, #2
+ 417              	.LVL12:
+ 159:Src/flash.c   ****         }
+ 160:Src/flash.c   ****         else
+ 161:Src/flash.c   ****         {
+ 162:Src/flash.c   ****             bank = FLASH_BANK_1;
+ 163:Src/flash.c   ****         }
+ 164:Src/flash.c   ****     }
+ 165:Src/flash.c   **** 
+ 166:Src/flash.c   ****     return bank;
+ 167:Src/flash.c   **** }
+ 418              		.loc 1 167 1 discriminator 4 view .LVU97
+ 419 0044 7047     		bx	lr
+ 420              	.LVL13:
+ 421              	.L33:
+ 422              	.LBB40:
+ 423              	.LBB38:
+ 144:Src/flash.c   ****         {
+ 424              		.loc 1 144 32 view .LVU98
+ 425 0046 054B     		ldr	r3, .L37+12
+ 426 0048 EBE7     		b	.L30
+ 427              	.LVL14:
+ 428              	.L35:
+ 144:Src/flash.c   ****         {
+ 429              		.loc 1 144 32 view .LVU99
+ 430              	.LBE38:
+ 431              	.LBE40:
+ 156:Src/flash.c   ****         {
+ 432              		.loc 1 156 32 view .LVU100
+ 433 004a 044B     		ldr	r3, .L37+12
+ 434 004c F6E7     		b	.L32
+ 435              	.L38:
+ 436 004e 00BF     		.align	2
+ 437              	.L37:
+ 438 0050 00000140 		.word	1073807360
+ 439 0054 E075FF1F 		.word	536835552
+ 440 0058 00FEFF01 		.word	33553920
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 27
+
+
+ 441 005c 00000408 		.word	134479872
+ 442              		.cfi_endproc
+ 443              	.LFE2058:
+ 445              		.section	.text.FLASH_UpdateConfig,"ax",%progbits
+ 446              		.align	1
+ 447              		.p2align 2,,3
+ 448              		.global	FLASH_UpdateConfig
+ 449              		.syntax unified
+ 450              		.thumb
+ 451              		.thumb_func
+ 452              		.fpu fpv4-sp-d16
+ 454              	FLASH_UpdateConfig:
+ 455              	.LVL15:
+ 456              	.LFB2059:
+ 168:Src/flash.c   **** 
+ 169:Src/flash.c   **** void FLASH_UpdateConfig(foc_t *p, hall_t *hp)
+ 170:Src/flash.c   **** {
+ 457              		.loc 1 170 1 is_stmt 1 view -0
+ 458              		.cfi_startproc
+ 459              		@ args = 0, pretend = 0, frame = 56
+ 460              		@ frame_needed = 0, uses_anonymous_args = 0
+ 171:Src/flash.c   ****     if (p->driveState == STOP)
+ 461              		.loc 1 171 5 view .LVU102
+ 462              		.loc 1 171 10 is_stmt 0 view .LVU103
+ 463 0000 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
+ 464              		.loc 1 171 8 view .LVU104
+ 465 0002 03B1     		cbz	r3, .L65
+ 466 0004 7047     		bx	lr
+ 467              	.L65:
+ 468              	.LBB64:
+ 172:Src/flash.c   ****     {
+ 173:Src/flash.c   ****         __disable_irq();
+ 469              		.loc 1 173 9 is_stmt 1 view .LVU105
+ 470              	.LBB65:
+ 471              	.LBI65:
+ 140:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 472              		.loc 2 140 27 view .LVU106
+ 473              	.LBB66:
+ 142:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 474              		.loc 2 142 3 view .LVU107
+ 475              	.LBE66:
+ 476              	.LBE65:
+ 477              	.LBE64:
+ 170:Src/flash.c   ****     if (p->driveState == STOP)
+ 478              		.loc 1 170 1 is_stmt 0 view .LVU108
+ 479 0006 F0B5     		push	{r4, r5, r6, r7, lr}
+ 480              	.LCFI2:
+ 481              		.cfi_def_cfa_offset 20
+ 482              		.cfi_offset 4, -20
+ 483              		.cfi_offset 5, -16
+ 484              		.cfi_offset 6, -12
+ 485              		.cfi_offset 7, -8
+ 486              		.cfi_offset 14, -4
+ 487 0008 0546     		mov	r5, r0
+ 488 000a 8FB0     		sub	sp, sp, #60
+ 489              	.LCFI3:
+ 490              		.cfi_def_cfa_offset 80
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 28
+
+
+ 491 000c 0E46     		mov	r6, r1
+ 492              	.LBB118:
+ 493              	.LBB68:
+ 494              	.LBB67:
+ 142:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 495              		.loc 2 142 3 view .LVU109
+ 496              		.syntax unified
+ 497              	@ 142 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 498 000e 72B6     		cpsid i
+ 499              	@ 0 "" 2
+ 500              		.thumb
+ 501              		.syntax unified
+ 502              	.LBE67:
+ 503              	.LBE68:
+ 174:Src/flash.c   ****         uint32_t Address = FLASH_CONFIG_ADR_START;
+ 504              		.loc 1 174 9 is_stmt 1 view .LVU110
+ 505              	.LVL16:
+ 175:Src/flash.c   **** 
+ 176:Src/flash.c   ****         uint64_t array[(sizeof(p->config) / sizeof(uint64_t))];
+ 506              		.loc 1 176 9 view .LVU111
+ 177:Src/flash.c   ****         memcpy(array, (const void *)&p->config, sizeof(p->config));
+ 507              		.loc 1 177 9 view .LVU112
+ 508 0010 00F54974 		add	r4, r0, #804
+ 509 0014 EC46     		mov	ip, sp
+ 510 0016 00F5557E 		add	lr, r0, #852
+ 511              	.LVL17:
+ 512              	.L41:
+ 513              		.loc 1 177 9 is_stmt 0 view .LVU113
+ 514 001a 2068     		ldr	r0, [r4]	@ unaligned
+ 515 001c 6168     		ldr	r1, [r4, #4]	@ unaligned
+ 516 001e A268     		ldr	r2, [r4, #8]	@ unaligned
+ 517 0020 E368     		ldr	r3, [r4, #12]	@ unaligned
+ 518 0022 6746     		mov	r7, ip
+ 519 0024 0FC7     		stmia	r7!, {r0, r1, r2, r3}
+ 520 0026 1034     		adds	r4, r4, #16
+ 521 0028 7445     		cmp	r4, lr
+ 522 002a BC46     		mov	ip, r7
+ 523 002c F5D1     		bne	.L41
+ 524 002e 2068     		ldr	r0, [r4]	@ unaligned
+ 525 0030 6168     		ldr	r1, [r4, #4]	@ unaligned
+ 178:Src/flash.c   **** 
+ 179:Src/flash.c   ****         /* Clear OPTVERR bit set on virgin samples */
+ 180:Src/flash.c   ****         SET_BIT(FLASH->SR, FLASH_SR_OPTVERR);
+ 526              		.loc 1 180 9 view .LVU114
+ 527 0032 404B     		ldr	r3, .L67
+ 528              	.LBB69:
+ 529              	.LBB70:
+  39:Src/flash.c   ****     FLASH->KEYR = 0xCDEF89ABU;
+ 530              		.loc 1 39 17 view .LVU115
+ 531 0034 404C     		ldr	r4, .L67+4
+ 532              	.LBE70:
+ 533              	.LBE69:
+ 177:Src/flash.c   ****         memcpy(array, (const void *)&p->config, sizeof(p->config));
+ 534              		.loc 1 177 9 view .LVU116
+ 535 0036 ACE80300 		stmia	ip!, {r0, r1}
+ 536              		.loc 1 180 9 is_stmt 1 view .LVU117
+ 537 003a 1A69     		ldr	r2, [r3, #16]
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 29
+
+
+ 538              	.LBB73:
+ 539              	.LBB74:
+ 141:Src/flash.c   ****     {
+ 540              		.loc 1 141 9 is_stmt 0 view .LVU118
+ 541 003c 3F49     		ldr	r1, .L67+8
+ 542              	.LBE74:
+ 543              	.LBE73:
+ 544              	.LBB85:
+ 545              	.LBB71:
+  40:Src/flash.c   **** }
+ 546              		.loc 1 40 17 view .LVU119
+ 547 003e 4048     		ldr	r0, .L67+12
+ 548              	.LBE71:
+ 549              	.LBE85:
+ 550              		.loc 1 180 9 view .LVU120
+ 551 0040 42F40042 		orr	r2, r2, #32768
+ 552 0044 1A61     		str	r2, [r3, #16]
+ 181:Src/flash.c   ****         flashUnlock();
+ 553              		.loc 1 181 9 is_stmt 1 view .LVU121
+ 554              	.LBB86:
+ 555              	.LBI69:
+  37:Src/flash.c   **** {
+ 556              		.loc 1 37 6 view .LVU122
+ 557              	.LBB72:
+  39:Src/flash.c   ****     FLASH->KEYR = 0xCDEF89ABU;
+ 558              		.loc 1 39 5 view .LVU123
+  39:Src/flash.c   ****     FLASH->KEYR = 0xCDEF89ABU;
+ 559              		.loc 1 39 17 is_stmt 0 view .LVU124
+ 560 0046 9C60     		str	r4, [r3, #8]
+  40:Src/flash.c   **** }
+ 561              		.loc 1 40 5 is_stmt 1 view .LVU125
+  40:Src/flash.c   **** }
+ 562              		.loc 1 40 17 is_stmt 0 view .LVU126
+ 563 0048 9860     		str	r0, [r3, #8]
+ 564              	.LBE72:
+ 565              	.LBE86:
+ 182:Src/flash.c   ****         FLASH_PageErase(FLASH_CONFIG_PG_NMB, GetBank(Address));
+ 566              		.loc 1 182 9 is_stmt 1 view .LVU127
+ 567              	.LVL18:
+ 568              	.LBB87:
+ 569              	.LBI73:
+ 137:Src/flash.c   **** {
+ 570              		.loc 1 137 10 view .LVU128
+ 571              	.LBB83:
+ 139:Src/flash.c   **** 
+ 572              		.loc 1 139 5 view .LVU129
+ 141:Src/flash.c   ****     {
+ 573              		.loc 1 141 5 view .LVU130
+ 141:Src/flash.c   ****     {
+ 574              		.loc 1 141 9 is_stmt 0 view .LVU131
+ 575 004a 0B68     		ldr	r3, [r1]
+ 141:Src/flash.c   ****     {
+ 576              		.loc 1 141 8 view .LVU132
+ 577 004c 13F4807F 		tst	r3, #256
+ 578              	.LBB75:
+ 579              	.LBB76:
+ 144:Src/flash.c   ****         {
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 30
+
+
+ 580              		.loc 1 144 34 view .LVU133
+ 581 0050 3C4B     		ldr	r3, .L67+16
+ 144:Src/flash.c   ****         {
+ 582              		.loc 1 144 32 view .LVU134
+ 583 0052 4FF6FF72 		movw	r2, #65535
+ 584 0056 1988     		ldrh	r1, [r3]
+ 585              	.LBE76:
+ 586              	.LBE75:
+ 141:Src/flash.c   ****     {
+ 587              		.loc 1 141 8 view .LVU135
+ 588 0058 59D0     		beq	.L66
+ 156:Src/flash.c   ****         {
+ 589              		.loc 1 156 9 is_stmt 1 view .LVU136
+ 156:Src/flash.c   ****         {
+ 590              		.loc 1 156 32 is_stmt 0 view .LVU137
+ 591 005a 9142     		cmp	r1, r2
+ 592 005c 65D0     		beq	.L52
+ 156:Src/flash.c   ****         {
+ 593              		.loc 1 156 34 view .LVU138
+ 594 005e 1A68     		ldr	r2, [r3]
+ 595 0060 3949     		ldr	r1, .L67+20
+ 156:Src/flash.c   ****         {
+ 596              		.loc 1 156 12 view .LVU139
+ 597 0062 3A4B     		ldr	r3, .L67+24
+ 156:Src/flash.c   ****         {
+ 598              		.loc 1 156 34 view .LVU140
+ 599 0064 01EA4221 		and	r1, r1, r2, lsl #9
+ 156:Src/flash.c   ****         {
+ 600              		.loc 1 156 32 view .LVU141
+ 601 0068 01F10061 		add	r1, r1, #134217728
+ 602              	.LBB80:
+ 603              	.LBB77:
+ 150:Src/flash.c   ****         }
+ 604              		.loc 1 150 18 view .LVU142
+ 605 006c 9942     		cmp	r1, r3
+ 606 006e 94BF     		ite	ls
+ 607 0070 0121     		movls	r1, #1
+ 608 0072 0221     		movhi	r1, #2
+ 609              	.L43:
+ 610              	.LVL19:
+ 150:Src/flash.c   ****         }
+ 611              		.loc 1 150 18 view .LVU143
+ 612              	.LBE77:
+ 613              	.LBE80:
+ 166:Src/flash.c   **** }
+ 614              		.loc 1 166 5 is_stmt 1 view .LVU144
+ 166:Src/flash.c   **** }
+ 615              		.loc 1 166 5 is_stmt 0 view .LVU145
+ 616              	.LBE83:
+ 617              	.LBE87:
+ 618              		.loc 1 182 9 view .LVU146
+ 619 0074 FE20     		movs	r0, #254
+ 620 0076 FFF7FEFF 		bl	FLASH_PageErase
+ 621              	.LVL20:
+ 183:Src/flash.c   **** 
+ 184:Src/flash.c   ****         for (uint32_t i = 0; i < (sizeof(p->config) / sizeof(uint64_t)); i++, Address += sizeof(uin
+ 622              		.loc 1 184 9 is_stmt 1 view .LVU147
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 31
+
+
+ 623              	.LBB88:
+ 624              		.loc 1 184 14 view .LVU148
+ 625              		.loc 1 184 14 is_stmt 0 view .LVU149
+ 626              	.LBE88:
+ 174:Src/flash.c   **** 
+ 627              		.loc 1 174 18 view .LVU150
+ 628 007a 344B     		ldr	r3, .L67+24
+ 629              	.LBB99:
+ 630              	.LBB89:
+ 631              	.LBB90:
+ 113:Src/flash.c   ****         ;
+ 632              		.loc 1 113 17 view .LVU151
+ 633 007c 2D4A     		ldr	r2, .L67
+ 634              	.LBE90:
+ 635              	.LBE89:
+ 636              		.loc 1 184 9 view .LVU152
+ 637 007e DFF8D4C0 		ldr	ip, .L67+32
+ 638 0082 ADF10800 		sub	r0, sp, #8
+ 639              	.LVL21:
+ 640              	.L46:
+ 185:Src/flash.c   ****         {
+ 186:Src/flash.c   ****             FLASH_Program_DoubleWord(Address, array[i]);
+ 641              		.loc 1 186 13 is_stmt 1 discriminator 3 view .LVU153
+ 642 0086 50F8087F 		ldr	r7, [r0, #8]!
+ 643 008a 4468     		ldr	r4, [r0, #4]
+ 644              	.LVL22:
+ 645              	.LBB96:
+ 646              	.LBI89:
+ 111:Src/flash.c   **** {
+ 647              		.loc 1 111 6 discriminator 3 view .LVU154
+ 648              	.L44:
+ 649              	.LBB93:
+ 114:Src/flash.c   ****     /* Set PG bit */
+ 650              		.loc 1 114 9 view .LVU155
+ 113:Src/flash.c   ****         ;
+ 651              		.loc 1 113 17 is_stmt 0 view .LVU156
+ 652 008c 1169     		ldr	r1, [r2, #16]
+ 113:Src/flash.c   ****         ;
+ 653              		.loc 1 113 11 view .LVU157
+ 654 008e C903     		lsls	r1, r1, #15
+ 655 0090 FCD4     		bmi	.L44
+ 116:Src/flash.c   ****     /* Program first word */
+ 656              		.loc 1 116 5 is_stmt 1 view .LVU158
+ 657 0092 5169     		ldr	r1, [r2, #20]
+ 658 0094 41F00101 		orr	r1, r1, #1
+ 659 0098 5161     		str	r1, [r2, #20]
+ 118:Src/flash.c   ****     /* Barrier to ensure programming is performed in 2 steps, in right order
+ 660              		.loc 1 118 5 view .LVU159
+ 118:Src/flash.c   ****     /* Barrier to ensure programming is performed in 2 steps, in right order
+ 661              		.loc 1 118 28 is_stmt 0 view .LVU160
+ 662 009a 1F60     		str	r7, [r3]
+ 121:Src/flash.c   ****     /* Program second word */
+ 663              		.loc 1 121 5 is_stmt 1 view .LVU161
+ 664              	.LBB91:
+ 665              	.LBI91:
+ 866:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 666              		.loc 2 866 27 view .LVU162
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 32
+
+
+ 667              	.LBB92:
+ 668              		.loc 2 868 3 view .LVU163
+ 669              		.syntax unified
+ 670              	@ 868 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 671 009c BFF36F8F 		isb 0xF
+ 672              	@ 0 "" 2
+ 673              		.thumb
+ 674              		.syntax unified
+ 675              	.LBE92:
+ 676              	.LBE91:
+ 123:Src/flash.c   ****     /* wait end of operation */
+ 677              		.loc 1 123 5 view .LVU164
+ 123:Src/flash.c   ****     /* wait end of operation */
+ 678              		.loc 1 123 35 is_stmt 0 view .LVU165
+ 679 00a0 5C60     		str	r4, [r3, #4]
+ 125:Src/flash.c   ****         ;
+ 680              		.loc 1 125 5 is_stmt 1 view .LVU166
+ 681              	.L45:
+ 126:Src/flash.c   ****     /* Clear PG bit */
+ 682              		.loc 1 126 9 view .LVU167
+ 125:Src/flash.c   ****         ;
+ 683              		.loc 1 125 17 is_stmt 0 view .LVU168
+ 684 00a2 1169     		ldr	r1, [r2, #16]
+ 125:Src/flash.c   ****         ;
+ 685              		.loc 1 125 11 view .LVU169
+ 686 00a4 C903     		lsls	r1, r1, #15
+ 687 00a6 FCD4     		bmi	.L45
+ 128:Src/flash.c   **** }
+ 688              		.loc 1 128 5 is_stmt 1 view .LVU170
+ 689 00a8 5469     		ldr	r4, [r2, #20]
+ 690              	.LVL23:
+ 128:Src/flash.c   **** }
+ 691              		.loc 1 128 5 is_stmt 0 view .LVU171
+ 692              	.LBE93:
+ 693              	.LBE96:
+ 184:Src/flash.c   ****         {
+ 694              		.loc 1 184 87 view .LVU172
+ 695 00aa 0833     		adds	r3, r3, #8
+ 696              	.LVL24:
+ 697              	.LBB97:
+ 698              	.LBB94:
+ 128:Src/flash.c   **** }
+ 699              		.loc 1 128 5 view .LVU173
+ 700 00ac 24F00104 		bic	r4, r4, #1
+ 701              	.LBE94:
+ 702              	.LBE97:
+ 184:Src/flash.c   ****         {
+ 703              		.loc 1 184 9 view .LVU174
+ 704 00b0 6345     		cmp	r3, ip
+ 705              	.LBB98:
+ 706              	.LBB95:
+ 128:Src/flash.c   **** }
+ 707              		.loc 1 128 5 view .LVU175
+ 708 00b2 5461     		str	r4, [r2, #20]
+ 709              	.LVL25:
+ 128:Src/flash.c   **** }
+ 710              		.loc 1 128 5 view .LVU176
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 33
+
+
+ 711              	.LBE95:
+ 712              	.LBE98:
+ 184:Src/flash.c   ****         {
+ 713              		.loc 1 184 9 view .LVU177
+ 714 00b4 E7D1     		bne	.L46
+ 715              	.LBE99:
+ 716              	.LBB100:
+ 717              	.LBB101:
+ 718              	.LBB102:
+ 113:Src/flash.c   ****         ;
+ 719              		.loc 1 113 17 view .LVU178
+ 720 00b6 1F4A     		ldr	r2, .L67
+ 721              	.LBE102:
+ 722              	.LBE101:
+ 187:Src/flash.c   ****         }
+ 188:Src/flash.c   ****         Address = FLASH_CONFIG_ADR_START + sizeof(p->config);
+ 189:Src/flash.c   ****         for (uint32_t i = 0; i < (sizeof(hp->offsetAvg) / sizeof(hp->offsetAvg[0])); i++, Address +
+ 723              		.loc 1 189 9 view .LVU179
+ 724 00b8 254F     		ldr	r7, .L67+28
+ 725 00ba 06F17000 		add	r0, r6, #112
+ 726              	.L49:
+ 190:Src/flash.c   ****         {
+ 191:Src/flash.c   ****             //uint64_t hData = ((uint32_t)hp->offsetAvg[i] << 32 ) | ((uint32_t)hp->offsetAvg[i+1] 
+ 192:Src/flash.c   ****             FLASH_Program_DoubleWord(Address, *(uint32_t *)&hp->offsetAvg[i]);
+ 727              		.loc 1 192 13 is_stmt 1 discriminator 3 view .LVU180
+ 728              		.loc 1 192 47 is_stmt 0 discriminator 3 view .LVU181
+ 729 00be 50F804CF 		ldr	ip, [r0, #4]!
+ 730              	.LVL26:
+ 731              	.LBB108:
+ 732              	.LBI101:
+ 111:Src/flash.c   **** {
+ 733              		.loc 1 111 6 is_stmt 1 discriminator 3 view .LVU182
+ 734              	.L47:
+ 735              	.LBB105:
+ 114:Src/flash.c   ****     /* Set PG bit */
+ 736              		.loc 1 114 9 view .LVU183
+ 113:Src/flash.c   ****         ;
+ 737              		.loc 1 113 17 is_stmt 0 view .LVU184
+ 738 00c2 1469     		ldr	r4, [r2, #16]
+ 113:Src/flash.c   ****         ;
+ 739              		.loc 1 113 11 view .LVU185
+ 740 00c4 14F48034 		ands	r4, r4, #65536
+ 741 00c8 FBD1     		bne	.L47
+ 116:Src/flash.c   ****     /* Program first word */
+ 742              		.loc 1 116 5 is_stmt 1 view .LVU186
+ 743 00ca 5169     		ldr	r1, [r2, #20]
+ 744 00cc 41F00101 		orr	r1, r1, #1
+ 745 00d0 5161     		str	r1, [r2, #20]
+ 118:Src/flash.c   ****     /* Barrier to ensure programming is performed in 2 steps, in right order
+ 746              		.loc 1 118 5 view .LVU187
+ 118:Src/flash.c   ****     /* Barrier to ensure programming is performed in 2 steps, in right order
+ 747              		.loc 1 118 26 is_stmt 0 view .LVU188
+ 748 00d2 C3F800C0 		str	ip, [r3]
+ 121:Src/flash.c   ****     /* Program second word */
+ 749              		.loc 1 121 5 is_stmt 1 view .LVU189
+ 750              	.LBB103:
+ 751              	.LBI103:
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 34
+
+
+ 866:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 752              		.loc 2 866 27 view .LVU190
+ 753              	.LBB104:
+ 754              		.loc 2 868 3 view .LVU191
+ 755              		.syntax unified
+ 756              	@ 868 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 757 00d6 BFF36F8F 		isb 0xF
+ 758              	@ 0 "" 2
+ 759              		.thumb
+ 760              		.syntax unified
+ 761              	.LBE104:
+ 762              	.LBE103:
+ 123:Src/flash.c   ****     /* wait end of operation */
+ 763              		.loc 1 123 5 view .LVU192
+ 123:Src/flash.c   ****     /* wait end of operation */
+ 764              		.loc 1 123 33 is_stmt 0 view .LVU193
+ 765 00da 5C60     		str	r4, [r3, #4]
+ 125:Src/flash.c   ****         ;
+ 766              		.loc 1 125 5 is_stmt 1 view .LVU194
+ 767              	.L48:
+ 126:Src/flash.c   ****     /* Clear PG bit */
+ 768              		.loc 1 126 9 view .LVU195
+ 125:Src/flash.c   ****         ;
+ 769              		.loc 1 125 17 is_stmt 0 view .LVU196
+ 770 00dc 1469     		ldr	r4, [r2, #16]
+ 125:Src/flash.c   ****         ;
+ 771              		.loc 1 125 11 view .LVU197
+ 772 00de 14F48034 		ands	r4, r4, #65536
+ 773 00e2 FBD1     		bne	.L48
+ 128:Src/flash.c   **** }
+ 774              		.loc 1 128 5 is_stmt 1 view .LVU198
+ 775 00e4 5169     		ldr	r1, [r2, #20]
+ 776              	.LBE105:
+ 777              	.LBE108:
+ 189:Src/flash.c   ****         {
+ 778              		.loc 1 189 99 is_stmt 0 view .LVU199
+ 779 00e6 0833     		adds	r3, r3, #8
+ 780              	.LVL27:
+ 781              	.LBB109:
+ 782              	.LBB106:
+ 128:Src/flash.c   **** }
+ 783              		.loc 1 128 5 view .LVU200
+ 784 00e8 21F00101 		bic	r1, r1, #1
+ 785              	.LBE106:
+ 786              	.LBE109:
+ 189:Src/flash.c   ****         {
+ 787              		.loc 1 189 9 view .LVU201
+ 788 00ec BB42     		cmp	r3, r7
+ 789              	.LBB110:
+ 790              	.LBB107:
+ 128:Src/flash.c   **** }
+ 791              		.loc 1 128 5 view .LVU202
+ 792 00ee 5161     		str	r1, [r2, #20]
+ 793              	.LVL28:
+ 128:Src/flash.c   **** }
+ 794              		.loc 1 128 5 view .LVU203
+ 795              	.LBE107:
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 35
+
+
+ 796              	.LBE110:
+ 189:Src/flash.c   ****         {
+ 797              		.loc 1 189 9 view .LVU204
+ 798 00f0 E5D1     		bne	.L49
+ 799              	.LBE100:
+ 193:Src/flash.c   ****         }
+ 194:Src/flash.c   ****         flashLock();
+ 800              		.loc 1 194 9 is_stmt 1 view .LVU205
+ 801              	.LBB111:
+ 802              	.LBI111:
+  43:Src/flash.c   **** {
+ 803              		.loc 1 43 6 view .LVU206
+ 804              	.LBB112:
+  45:Src/flash.c   **** }
+ 805              		.loc 1 45 5 view .LVU207
+  45:Src/flash.c   **** }
+ 806              		.loc 1 45 15 is_stmt 0 view .LVU208
+ 807 00f2 5369     		ldr	r3, [r2, #20]
+ 808              	.LVL29:
+  45:Src/flash.c   **** }
+ 809              		.loc 1 45 15 view .LVU209
+ 810              	.LBE112:
+ 811              	.LBE111:
+ 195:Src/flash.c   ****         p->paramIdState = ID_ENTER;
+ 196:Src/flash.c   ****         p->paramIdRunState = ID_RUN_HALL_FWD;
+ 812              		.loc 1 196 28 view .LVU210
+ 813 00f4 0121     		movs	r1, #1
+ 814              	.LBB114:
+ 815              	.LBB113:
+  45:Src/flash.c   **** }
+ 816              		.loc 1 45 15 view .LVU211
+ 817 00f6 43F00043 		orr	r3, r3, #-2147483648
+ 818 00fa 5361     		str	r3, [r2, #20]
+ 819              	.LBE113:
+ 820              	.LBE114:
+ 195:Src/flash.c   ****         p->paramIdState = ID_ENTER;
+ 821              		.loc 1 195 9 is_stmt 1 view .LVU212
+ 195:Src/flash.c   ****         p->paramIdState = ID_ENTER;
+ 822              		.loc 1 195 25 is_stmt 0 view .LVU213
+ 823 00fc 6C70     		strb	r4, [r5, #1]
+ 824              		.loc 1 196 9 is_stmt 1 view .LVU214
+ 825              		.loc 1 196 28 is_stmt 0 view .LVU215
+ 826 00fe A970     		strb	r1, [r5, #2]
+ 197:Src/flash.c   ****         hp->offsetState = 0;
+ 827              		.loc 1 197 9 is_stmt 1 view .LVU216
+ 828              		.loc 1 197 25 is_stmt 0 view .LVU217
+ 829 0100 7473     		strb	r4, [r6, #13]
+ 198:Src/flash.c   ****         p->driveState = STOP;
+ 830              		.loc 1 198 9 is_stmt 1 view .LVU218
+ 831              		.loc 1 198 23 is_stmt 0 view .LVU219
+ 832 0102 2C70     		strb	r4, [r5]
+ 199:Src/flash.c   ****         p->data.flashUpdateFlag = 1;
+ 833              		.loc 1 199 9 is_stmt 1 view .LVU220
+ 834              		.loc 1 199 33 is_stmt 0 view .LVU221
+ 835 0104 85F80611 		strb	r1, [r5, #262]
+ 200:Src/flash.c   ****         __enable_irq();
+ 836              		.loc 1 200 9 is_stmt 1 view .LVU222
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 36
+
+
+ 837              	.LBB115:
+ 838              	.LBI115:
+ 129:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 839              		.loc 2 129 27 view .LVU223
+ 840              	.LBB116:
+ 131:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 841              		.loc 2 131 3 view .LVU224
+ 842              		.syntax unified
+ 843              	@ 131 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 844 0108 62B6     		cpsie i
+ 845              	@ 0 "" 2
+ 846              		.thumb
+ 847              		.syntax unified
+ 848              	.LBE116:
+ 849              	.LBE115:
+ 850              	.LBE118:
+ 201:Src/flash.c   ****     }
+ 202:Src/flash.c   **** }
+ 851              		.loc 1 202 1 is_stmt 0 view .LVU225
+ 852 010a 0FB0     		add	sp, sp, #60
+ 853              	.LCFI4:
+ 854              		.cfi_remember_state
+ 855              		.cfi_def_cfa_offset 20
+ 856              		@ sp needed
+ 857 010c F0BD     		pop	{r4, r5, r6, r7, pc}
+ 858              	.LVL30:
+ 859              	.L66:
+ 860              	.LCFI5:
+ 861              		.cfi_restore_state
+ 862              	.LBB119:
+ 863              	.LBB117:
+ 864              	.LBB84:
+ 865              	.LBB81:
+ 866              	.LBI75:
+ 137:Src/flash.c   **** {
+ 867              		.loc 1 137 10 is_stmt 1 view .LVU226
+ 868              	.LBB78:
+ 144:Src/flash.c   ****         {
+ 869              		.loc 1 144 9 view .LVU227
+ 144:Src/flash.c   ****         {
+ 870              		.loc 1 144 32 is_stmt 0 view .LVU228
+ 871 010e 9142     		cmp	r1, r2
+ 872 0110 0DD0     		beq	.L50
+ 144:Src/flash.c   ****         {
+ 873              		.loc 1 144 34 view .LVU229
+ 874 0112 1A68     		ldr	r2, [r3]
+ 875 0114 0C49     		ldr	r1, .L67+20
+ 144:Src/flash.c   ****         {
+ 876              		.loc 1 144 12 view .LVU230
+ 877 0116 0D4B     		ldr	r3, .L67+24
+ 144:Src/flash.c   ****         {
+ 878              		.loc 1 144 34 view .LVU231
+ 879 0118 01EA4221 		and	r1, r1, r2, lsl #9
+ 144:Src/flash.c   ****         {
+ 880              		.loc 1 144 32 view .LVU232
+ 881 011c 01F10061 		add	r1, r1, #134217728
+ 882              	.LBE78:
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 37
+
+
+ 883              	.LBE81:
+ 162:Src/flash.c   ****         }
+ 884              		.loc 1 162 18 view .LVU233
+ 885 0120 9942     		cmp	r1, r3
+ 886 0122 94BF     		ite	ls
+ 887 0124 0221     		movls	r1, #2
+ 888 0126 0121     		movhi	r1, #1
+ 889 0128 A4E7     		b	.L43
+ 890              	.LVL31:
+ 891              	.L52:
+ 162:Src/flash.c   ****         }
+ 892              		.loc 1 162 18 view .LVU234
+ 893 012a 0121     		movs	r1, #1
+ 894 012c A2E7     		b	.L43
+ 895              	.LVL32:
+ 896              	.L50:
+ 897              	.LBB82:
+ 898              	.LBB79:
+ 150:Src/flash.c   ****         }
+ 899              		.loc 1 150 18 view .LVU235
+ 900 012e 0221     		movs	r1, #2
+ 901 0130 A0E7     		b	.L43
+ 902              	.L68:
+ 903 0132 00BF     		.align	2
+ 904              	.L67:
+ 905 0134 00200240 		.word	1073881088
+ 906 0138 23016745 		.word	1164378403
+ 907 013c 00000140 		.word	1073807360
+ 908 0140 AB89EFCD 		.word	-839939669
+ 909 0144 E075FF1F 		.word	536835552
+ 910 0148 00FEFF01 		.word	33553920
+ 911 014c 00F00708 		.word	134737920
+ 912 0150 68F00708 		.word	134738024
+ 913 0154 38F00708 		.word	134737976
+ 914              	.LBE79:
+ 915              	.LBE82:
+ 916              	.LBE84:
+ 917              	.LBE117:
+ 918              	.LBE119:
+ 919              		.cfi_endproc
+ 920              	.LFE2059:
+ 922              		.section	.text.FLASH_LoadConfig,"ax",%progbits
+ 923              		.align	1
+ 924              		.p2align 2,,3
+ 925              		.global	FLASH_LoadConfig
+ 926              		.syntax unified
+ 927              		.thumb
+ 928              		.thumb_func
+ 929              		.fpu fpv4-sp-d16
+ 931              	FLASH_LoadConfig:
+ 932              	.LVL33:
+ 933              	.LFB2060:
+ 203:Src/flash.c   **** 
+ 204:Src/flash.c   **** void FLASH_LoadConfig(foc_t *p, hall_t *hp)
+ 205:Src/flash.c   **** {
+ 934              		.loc 1 205 1 is_stmt 1 view -0
+ 935              		.cfi_startproc
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 38
+
+
+ 936              		@ args = 0, pretend = 0, frame = 0
+ 937              		@ frame_needed = 0, uses_anonymous_args = 0
+ 938              		@ link register save eliminated.
+ 206:Src/flash.c   ****     /* Check if flash data is empty */
+ 207:Src/flash.c   ****     if (flashReadData(FLASH_CONFIG_ADR_START) != 0xFFFFFFFF)
+ 939              		.loc 1 207 5 view .LVU237
+ 940              	.LBB120:
+ 941              	.LBI120:
+  48:Src/flash.c   **** {
+ 942              		.loc 1 48 10 view .LVU238
+ 943              	.LBB121:
+  50:Src/flash.c   **** }
+ 944              		.loc 1 50 5 view .LVU239
+ 945              	.LBE121:
+ 946              	.LBE120:
+ 205:Src/flash.c   ****     /* Check if flash data is empty */
+ 947              		.loc 1 205 1 is_stmt 0 view .LVU240
+ 948 0000 F0B4     		push	{r4, r5, r6, r7}
+ 949              	.LCFI6:
+ 950              		.cfi_def_cfa_offset 16
+ 951              		.cfi_offset 4, -16
+ 952              		.cfi_offset 5, -12
+ 953              		.cfi_offset 6, -8
+ 954              		.cfi_offset 7, -4
+ 955              	.LBB123:
+ 956              	.LBB122:
+  50:Src/flash.c   **** }
+ 957              		.loc 1 50 13 view .LVU241
+ 958 0002 144E     		ldr	r6, .L80
+ 959 0004 3368     		ldr	r3, [r6]
+ 960              	.LVL34:
+  50:Src/flash.c   **** }
+ 961              		.loc 1 50 13 view .LVU242
+ 962              	.LBE122:
+ 963              	.LBE123:
+ 964              		.loc 1 207 8 view .LVU243
+ 965 0006 0133     		adds	r3, r3, #1
+ 966 0008 01D1     		bne	.L79
+ 208:Src/flash.c   ****     {
+ 209:Src/flash.c   ****         uint32_t Address = FLASH_CONFIG_ADR_START;
+ 210:Src/flash.c   ****         memcpy((void *)&p->config, (const void *)Address, sizeof(p->config));
+ 211:Src/flash.c   **** 
+ 212:Src/flash.c   ****         Address = FLASH_CONFIG_ADR_START + sizeof(p->config);
+ 213:Src/flash.c   ****         for (uint32_t i = 0; i < (sizeof(hp->offsetAvg) / sizeof(hp->offsetAvg[0])); i++, Address +
+ 214:Src/flash.c   ****         {
+ 215:Src/flash.c   ****             uint32_t u = flashReadData(Address);
+ 216:Src/flash.c   ****             hp->offsetAvg[i] = *(float*)&u;
+ 217:Src/flash.c   ****         }
+ 218:Src/flash.c   ****     }
+ 219:Src/flash.c   **** }
+ 967              		.loc 1 219 1 view .LVU244
+ 968 000a F0BC     		pop	{r4, r5, r6, r7}
+ 969              	.LCFI7:
+ 970              		.cfi_remember_state
+ 971              		.cfi_restore 7
+ 972              		.cfi_restore 6
+ 973              		.cfi_restore 5
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 39
+
+
+ 974              		.cfi_restore 4
+ 975              		.cfi_def_cfa_offset 0
+ 976 000c 7047     		bx	lr
+ 977              	.L79:
+ 978              	.LCFI8:
+ 979              		.cfi_restore_state
+ 980              	.LBB124:
+ 209:Src/flash.c   ****         memcpy((void *)&p->config, (const void *)Address, sizeof(p->config));
+ 981              		.loc 1 209 9 is_stmt 1 view .LVU245
+ 982              	.LVL35:
+ 210:Src/flash.c   **** 
+ 983              		.loc 1 210 9 view .LVU246
+ 984 000e DFF850C0 		ldr	ip, .L80+12
+ 985 0012 0F46     		mov	r7, r1
+ 986 0014 00F54974 		add	r4, r0, #804
+ 987              	.LVL36:
+ 988              	.L71:
+ 210:Src/flash.c   **** 
+ 989              		.loc 1 210 9 is_stmt 0 view .LVU247
+ 990 0018 3546     		mov	r5, r6
+ 991 001a 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
+ 992 001c 6545     		cmp	r5, ip
+ 993 001e 2060     		str	r0, [r4]	@ unaligned
+ 994 0020 6160     		str	r1, [r4, #4]	@ unaligned
+ 995 0022 A260     		str	r2, [r4, #8]	@ unaligned
+ 996 0024 E360     		str	r3, [r4, #12]	@ unaligned
+ 997 0026 2E46     		mov	r6, r5
+ 998 0028 04F11004 		add	r4, r4, #16
+ 999 002c F4D1     		bne	.L71
+ 1000 002e 03CE     		ldmia	r6!, {r0, r1}
+ 212:Src/flash.c   ****         for (uint32_t i = 0; i < (sizeof(hp->offsetAvg) / sizeof(hp->offsetAvg[0])); i++, Address +
+ 1001              		.loc 1 212 17 view .LVU248
+ 1002 0030 094D     		ldr	r5, .L80+4
+ 1003              	.LBB125:
+ 213:Src/flash.c   ****         {
+ 1004              		.loc 1 213 9 view .LVU249
+ 1005 0032 0A4E     		ldr	r6, .L80+8
+ 1006              	.LBE125:
+ 210:Src/flash.c   **** 
+ 1007              		.loc 1 210 9 view .LVU250
+ 1008 0034 6160     		str	r1, [r4, #4]	@ unaligned
+ 212:Src/flash.c   ****         for (uint32_t i = 0; i < (sizeof(hp->offsetAvg) / sizeof(hp->offsetAvg[0])); i++, Address +
+ 1009              		.loc 1 212 9 is_stmt 1 view .LVU251
+ 1010              	.LVL37:
+ 213:Src/flash.c   ****         {
+ 1011              		.loc 1 213 9 view .LVU252
+ 1012              	.LBB130:
+ 213:Src/flash.c   ****         {
+ 1013              		.loc 1 213 14 view .LVU253
+ 213:Src/flash.c   ****         {
+ 1014              		.loc 1 213 14 is_stmt 0 view .LVU254
+ 1015              	.LBE130:
+ 210:Src/flash.c   **** 
+ 1016              		.loc 1 210 9 view .LVU255
+ 1017 0036 2060     		str	r0, [r4]	@ unaligned
+ 1018              	.LBB131:
+ 213:Src/flash.c   ****         {
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 40
+
+
+ 1019              		.loc 1 213 23 view .LVU256
+ 1020 0038 0021     		movs	r1, #0
+ 1021              	.LVL38:
+ 1022              	.L72:
+ 1023              	.LBB126:
+ 215:Src/flash.c   ****             hp->offsetAvg[i] = *(float*)&u;
+ 1024              		.loc 1 215 13 is_stmt 1 view .LVU257
+ 1025              	.LBB127:
+ 1026              	.LBI127:
+  48:Src/flash.c   **** {
+ 1027              		.loc 1 48 10 view .LVU258
+ 1028              	.LBB128:
+  50:Src/flash.c   **** }
+ 1029              		.loc 1 50 5 view .LVU259
+  50:Src/flash.c   **** }
+ 1030              		.loc 1 50 13 is_stmt 0 view .LVU260
+ 1031 003a 55F8082B 		ldr	r2, [r5], #8
+ 1032              	.LVL39:
+  50:Src/flash.c   **** }
+ 1033              		.loc 1 50 13 view .LVU261
+ 1034              	.LBE128:
+ 1035              	.LBE127:
+ 216:Src/flash.c   ****         }
+ 1036              		.loc 1 216 13 is_stmt 1 view .LVU262
+ 216:Src/flash.c   ****         }
+ 1037              		.loc 1 216 30 is_stmt 0 view .LVU263
+ 1038 003e 01F11C03 		add	r3, r1, #28
+ 1039 0042 07EB8303 		add	r3, r7, r3, lsl #2
+ 1040              	.LBE126:
+ 213:Src/flash.c   ****         {
+ 1041              		.loc 1 213 9 view .LVU264
+ 1042 0046 B542     		cmp	r5, r6
+ 1043              	.LBB129:
+ 216:Src/flash.c   ****         }
+ 1044              		.loc 1 216 30 view .LVU265
+ 1045 0048 5A60     		str	r2, [r3, #4]	@ float
+ 1046              	.LVL40:
+ 216:Src/flash.c   ****         }
+ 1047              		.loc 1 216 30 view .LVU266
+ 1048              	.LBE129:
+ 213:Src/flash.c   ****         {
+ 1049              		.loc 1 213 87 view .LVU267
+ 1050 004a 01F10101 		add	r1, r1, #1
+ 1051              	.LVL41:
+ 213:Src/flash.c   ****         {
+ 1052              		.loc 1 213 9 view .LVU268
+ 1053 004e F4D1     		bne	.L72
+ 1054              	.LBE131:
+ 1055              	.LBE124:
+ 1056              		.loc 1 219 1 view .LVU269
+ 1057 0050 F0BC     		pop	{r4, r5, r6, r7}
+ 1058              	.LCFI9:
+ 1059              		.cfi_restore 7
+ 1060              		.cfi_restore 6
+ 1061              		.cfi_restore 5
+ 1062              		.cfi_restore 4
+ 1063              		.cfi_def_cfa_offset 0
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 41
+
+
+ 1064              	.LVL42:
+ 1065              		.loc 1 219 1 view .LVU270
+ 1066 0052 7047     		bx	lr
+ 1067              	.L81:
+ 1068              		.align	2
+ 1069              	.L80:
+ 1070 0054 00F00708 		.word	134737920
+ 1071 0058 38F00708 		.word	134737976
+ 1072 005c 68F00708 		.word	134738024
+ 1073 0060 30F00708 		.word	134737968
+ 1074              		.cfi_endproc
+ 1075              	.LFE2060:
+ 1077              		.comm	foc_atan2,4,4
+ 1078              		.comm	foc_sincos,4,4
+ 1079              		.comm	foc_bldcpwm_update,4,4
+ 1080              		.comm	foc_pwm_update,4,4
+ 1081              		.comm	foc_pwm_on,4,4
+ 1082              		.comm	foc_pwm_off,4,4
+ 1083              		.comm	foc_pwm_init,4,4
+ 1084              		.text
+ 1085              	.Letext0:
+ 1086              		.file 3 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 1087              		.file 4 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 1088              		.file 5 "Drivers/CMSIS/Include/core_cm4.h"
+ 1089              		.file 6 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h"
+ 1090              		.file 7 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h"
+ 1091              		.file 8 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_hrtim.h"
+ 1092              		.file 9 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dma.h"
+ 1093              		.file 10 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_tim.h"
+ 1094              		.file 11 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h"
+ 1095              		.file 12 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\lock.h"
+ 1096              		.file 13 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\_types.h"
+ 1097              		.file 14 "d:\\apps\\embedded_gcc\\arm_gcc\\lib\\gcc\\arm-none-eabi\\8.2.1\\include\\stddef.h"
+ 1098              		.file 15 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\sys\\reent.h"
+ 1099              		.file 16 "d:\\apps\\embedded_gcc\\arm_gcc\\arm-none-eabi\\include\\math.h"
+ 1100              		.file 17 "Inc/digitalFilters.h"
+ 1101              		.file 18 "Inc/hall.h"
+ 1102              		.file 19 "Inc/foc.h"
+ARM GAS  D:\apps\VSCode\data\tmp\ccwvBuxX.s 			page 42
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 flash.c
+D:\apps\VSCode\data\tmp\ccwvBuxX.s:18     .text.flashUnlock:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccwvBuxX.s:27     .text.flashUnlock:0000000000000000 flashUnlock
+D:\apps\VSCode\data\tmp\ccwvBuxX.s:51     .text.flashUnlock:000000000000000c $d
+D:\apps\VSCode\data\tmp\ccwvBuxX.s:58     .text.flashLock:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccwvBuxX.s:66     .text.flashLock:0000000000000000 flashLock
+D:\apps\VSCode\data\tmp\ccwvBuxX.s:84     .text.flashLock:000000000000000c $d
+D:\apps\VSCode\data\tmp\ccwvBuxX.s:89     .text.flashReadData:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccwvBuxX.s:97     .text.flashReadData:0000000000000000 flashReadData
+D:\apps\VSCode\data\tmp\ccwvBuxX.s:115    .text.FLASH_PageErase:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccwvBuxX.s:123    .text.FLASH_PageErase:0000000000000000 FLASH_PageErase
+D:\apps\VSCode\data\tmp\ccwvBuxX.s:249    .text.FLASH_PageErase:00000000000000b4 $d
+D:\apps\VSCode\data\tmp\ccwvBuxX.s:254    .text.FLASH_Program_DoubleWord:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccwvBuxX.s:262    .text.FLASH_Program_DoubleWord:0000000000000000 FLASH_Program_DoubleWord
+D:\apps\VSCode\data\tmp\ccwvBuxX.s:334    .text.FLASH_Program_DoubleWord:0000000000000030 $d
+D:\apps\VSCode\data\tmp\ccwvBuxX.s:339    .text.GetBank:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccwvBuxX.s:347    .text.GetBank:0000000000000000 GetBank
+D:\apps\VSCode\data\tmp\ccwvBuxX.s:438    .text.GetBank:0000000000000050 $d
+D:\apps\VSCode\data\tmp\ccwvBuxX.s:446    .text.FLASH_UpdateConfig:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccwvBuxX.s:454    .text.FLASH_UpdateConfig:0000000000000000 FLASH_UpdateConfig
+D:\apps\VSCode\data\tmp\ccwvBuxX.s:905    .text.FLASH_UpdateConfig:0000000000000134 $d
+D:\apps\VSCode\data\tmp\ccwvBuxX.s:923    .text.FLASH_LoadConfig:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccwvBuxX.s:931    .text.FLASH_LoadConfig:0000000000000000 FLASH_LoadConfig
+D:\apps\VSCode\data\tmp\ccwvBuxX.s:1070   .text.FLASH_LoadConfig:0000000000000054 $d
+                            *COM*:0000000000000004 foc_atan2
+                            *COM*:0000000000000004 foc_sincos
+                            *COM*:0000000000000004 foc_bldcpwm_update
+                            *COM*:0000000000000004 foc_pwm_update
+                            *COM*:0000000000000004 foc_pwm_on
+                            *COM*:0000000000000004 foc_pwm_off
+                            *COM*:0000000000000004 foc_pwm_init
+
+NO UNDEFINED SYMBOLS

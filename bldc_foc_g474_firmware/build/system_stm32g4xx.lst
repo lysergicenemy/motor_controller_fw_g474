@@ -1,4 +1,4 @@
-ARM GAS  D:\apps\VSCode\data\tmp\ccjIvKja.s 			page 1
+ARM GAS  D:\apps\VSCode\data\tmp\ccbYBGYQ.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjIvKja.s 			page 1
   27:Src/system_stm32g4xx.c ****   *-----------------------------------------------------------------------------
   28:Src/system_stm32g4xx.c ****   *        System Clock source                    | HSI
   29:Src/system_stm32g4xx.c ****   *-----------------------------------------------------------------------------
-ARM GAS  D:\apps\VSCode\data\tmp\ccjIvKja.s 			page 2
+ARM GAS  D:\apps\VSCode\data\tmp\ccbYBGYQ.s 			page 2
 
 
   30:Src/system_stm32g4xx.c ****   *        SYSCLK(Hz)                             | 16000000
@@ -118,7 +118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjIvKja.s 			page 1
   84:Src/system_stm32g4xx.c **** 
   85:Src/system_stm32g4xx.c **** #if !defined  (HSI_VALUE)
   86:Src/system_stm32g4xx.c ****   #define HSI_VALUE    16000000U /*!< Value of the Internal oscillator in Hz*/
-ARM GAS  D:\apps\VSCode\data\tmp\ccjIvKja.s 			page 3
+ARM GAS  D:\apps\VSCode\data\tmp\ccbYBGYQ.s 			page 3
 
 
   87:Src/system_stm32g4xx.c **** #endif /* HSI_VALUE */
@@ -178,7 +178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjIvKja.s 			page 1
  141:Src/system_stm32g4xx.c ****   */
  142:Src/system_stm32g4xx.c **** 
  143:Src/system_stm32g4xx.c **** /** @addtogroup STM32G4xx_System_Private_FunctionPrototypes
-ARM GAS  D:\apps\VSCode\data\tmp\ccjIvKja.s 			page 4
+ARM GAS  D:\apps\VSCode\data\tmp\ccbYBGYQ.s 			page 4
 
 
  144:Src/system_stm32g4xx.c ****   * @{
@@ -238,7 +238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjIvKja.s 			page 1
   52 0018 00ED00E0 		.word	-536810240
   53              		.cfi_endproc
   54              	.LFE130:
-ARM GAS  D:\apps\VSCode\data\tmp\ccjIvKja.s 			page 5
+ARM GAS  D:\apps\VSCode\data\tmp\ccbYBGYQ.s 			page 5
 
 
   56              		.section	.text.SystemCoreClockUpdate,"ax",%progbits
@@ -298,7 +298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjIvKja.s 			page 1
  214:Src/system_stm32g4xx.c ****   uint32_t tmp, pllvco, pllr, pllsource, pllm;
   72              		.loc 1 214 3 view .LVU9
  215:Src/system_stm32g4xx.c **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccjIvKja.s 			page 6
+ARM GAS  D:\apps\VSCode\data\tmp\ccbYBGYQ.s 			page 6
 
 
  216:Src/system_stm32g4xx.c ****   /* Get SYSCLK source -------------------------------------------------------*/
@@ -358,7 +358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjIvKja.s 			page 1
   91 0018 154A     		ldr	r2, .L12
   92              		.loc 1 251 22 view .LVU16
   93 001a 1748     		ldr	r0, .L12+8
-ARM GAS  D:\apps\VSCode\data\tmp\ccjIvKja.s 			page 7
+ARM GAS  D:\apps\VSCode\data\tmp\ccbYBGYQ.s 			page 7
 
 
   94              		.loc 1 251 28 view .LVU17
@@ -418,7 +418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjIvKja.s 			page 1
  133 0042 0F4A     		ldrne	r2, .L12+16
  134 0044 0B49     		ldr	r1, .L12+4
  135              	.LVL5:
-ARM GAS  D:\apps\VSCode\data\tmp\ccjIvKja.s 			page 8
+ARM GAS  D:\apps\VSCode\data\tmp\ccbYBGYQ.s 			page 8
 
 
  232:Src/system_stm32g4xx.c ****       if (pllsource == 0x02UL) /* HSI used as PLL clock source */
@@ -478,7 +478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjIvKja.s 			page 1
  172              		.loc 1 217 3 is_stmt 0 view .LVU50
  173 0068 054B     		ldr	r3, .L12+16
  174 006a 0249     		ldr	r1, .L12+4
-ARM GAS  D:\apps\VSCode\data\tmp\ccjIvKja.s 			page 9
+ARM GAS  D:\apps\VSCode\data\tmp\ccbYBGYQ.s 			page 9
 
 
  175 006c D4E7     		b	.L6
@@ -538,25 +538,25 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccjIvKja.s 			page 1
  236              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
  237              		.file 5 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h"
  238              		.file 6 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h"
-ARM GAS  D:\apps\VSCode\data\tmp\ccjIvKja.s 			page 10
+ARM GAS  D:\apps\VSCode\data\tmp\ccbYBGYQ.s 			page 10
 
 
-ARM GAS  D:\apps\VSCode\data\tmp\ccjIvKja.s 			page 11
+ARM GAS  D:\apps\VSCode\data\tmp\ccbYBGYQ.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 system_stm32g4xx.c
-D:\apps\VSCode\data\tmp\ccjIvKja.s:18     .text.SystemInit:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccjIvKja.s:27     .text.SystemInit:0000000000000000 SystemInit
-D:\apps\VSCode\data\tmp\ccjIvKja.s:52     .text.SystemInit:0000000000000018 $d
-D:\apps\VSCode\data\tmp\ccjIvKja.s:57     .text.SystemCoreClockUpdate:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccjIvKja.s:65     .text.SystemCoreClockUpdate:0000000000000000 SystemCoreClockUpdate
-D:\apps\VSCode\data\tmp\ccjIvKja.s:179    .text.SystemCoreClockUpdate:0000000000000070 $d
-D:\apps\VSCode\data\tmp\ccjIvKja.s:223    .rodata.APBPrescTable:0000000000000000 APBPrescTable
-D:\apps\VSCode\data\tmp\ccjIvKja.s:202    .rodata.AHBPrescTable:0000000000000000 AHBPrescTable
-D:\apps\VSCode\data\tmp\ccjIvKja.s:195    .data.SystemCoreClock:0000000000000000 SystemCoreClock
-D:\apps\VSCode\data\tmp\ccjIvKja.s:191    .data.SystemCoreClock:0000000000000000 $d
-D:\apps\VSCode\data\tmp\ccjIvKja.s:198    .rodata.AHBPrescTable:0000000000000000 $d
-D:\apps\VSCode\data\tmp\ccjIvKja.s:220    .rodata.APBPrescTable:0000000000000000 $d
+D:\apps\VSCode\data\tmp\ccbYBGYQ.s:18     .text.SystemInit:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccbYBGYQ.s:27     .text.SystemInit:0000000000000000 SystemInit
+D:\apps\VSCode\data\tmp\ccbYBGYQ.s:52     .text.SystemInit:0000000000000018 $d
+D:\apps\VSCode\data\tmp\ccbYBGYQ.s:57     .text.SystemCoreClockUpdate:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccbYBGYQ.s:65     .text.SystemCoreClockUpdate:0000000000000000 SystemCoreClockUpdate
+D:\apps\VSCode\data\tmp\ccbYBGYQ.s:179    .text.SystemCoreClockUpdate:0000000000000070 $d
+D:\apps\VSCode\data\tmp\ccbYBGYQ.s:223    .rodata.APBPrescTable:0000000000000000 APBPrescTable
+D:\apps\VSCode\data\tmp\ccbYBGYQ.s:202    .rodata.AHBPrescTable:0000000000000000 AHBPrescTable
+D:\apps\VSCode\data\tmp\ccbYBGYQ.s:195    .data.SystemCoreClock:0000000000000000 SystemCoreClock
+D:\apps\VSCode\data\tmp\ccbYBGYQ.s:191    .data.SystemCoreClock:0000000000000000 $d
+D:\apps\VSCode\data\tmp\ccbYBGYQ.s:198    .rodata.AHBPrescTable:0000000000000000 $d
+D:\apps\VSCode\data\tmp\ccbYBGYQ.s:220    .rodata.APBPrescTable:0000000000000000 $d
 
 NO UNDEFINED SYMBOLS

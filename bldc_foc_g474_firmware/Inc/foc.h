@@ -815,6 +815,8 @@ struct data_s
     float halfPwmPeriod;                           // Variable: half of PWM period in timer tics
     float bldc_commCntr, bldc_commCntrRef;
     float duty, dutyRef, dutyRmp, dutyStart;
+    float smpFreq, tS;      // samplingFreq = pwmFreq / adcPostScaler, tS - inv value (1/sampFreq)
+    uint32_t adcPostScaler; // Determines how many PWM periods used for 1 ADC conversion(control loop cycle)
 };
 typedef volatile struct data_s data_t;
 #define DATA_DEFAULTS      \
@@ -848,6 +850,7 @@ typedef volatile struct data_s data_t;
             0,             \
             0, 0,          \
             0, 0, 0, 0,    \
+            0, 0, 0,       \
     }
 
 /*********************************************************************
@@ -946,12 +949,11 @@ struct config_s
     decMode_t decMode;                  // Axis decoupling mode
     float currentMaxPos, currentMaxNeg; // Current limits (POS: ESC -> MOTOR) (NEG: ESC -> SUPPLY)
     float speedMax;                     // Motor maximal electrical speed rad/s
-    float pwmFreq, smpFreq, tS;         // Inverter PWM frequency. In most cases samplingFreq = pwmFreq, tS - inv value (1/sampFreq)
+    float pwmFreq;                      // Inverter PWM frequency
     float adcFullScaleCurrent;          // (Vadc/2) / R_CurrSense / OP_AMP_GAIN
     float adcFullScaleVoltage;          // Vadc * K_VOLT_DIV
     float deadTime, Rds_on;             // deadtime and Mosfet Rds(on). nS, Ohm
     float Rs, Ld, Lq, Kv, pp;           // Motor phase resistance(Ohm), inductance(H) and pole pairs.
-    uint32_t adcPostScaler;             // Determines how many PWM periods used for 1 ADC conversion. It configured in Foc_Init()
 };
 typedef volatile struct config_s config_t;
 #define CONFIG_DEFAULTS    \
@@ -960,12 +962,11 @@ typedef volatile struct config_s config_t;
             0, 0,          \
             0, 0,          \
             0,             \
-            0, 0, 0,       \
+            0,             \
             0,             \
             0,             \
             0, 0,          \
             0, 0, 0, 0, 0, \
-            0,             \
     }
 /*********************************************************************
  * General control struct

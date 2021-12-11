@@ -44,9 +44,11 @@ Src/adc.c \
 Src/hrtim.c \
 Src/sys.c \
 Src/usart.c \
+Src/fdcan.c \
 Src/cordic.c \
 Src/dac.c \
 Src/comp.c \
+Src/flash.c \
 Src/stm32g4xx_it.c \
 Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.c \
 Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_exti.c \
@@ -60,11 +62,11 @@ Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c \
 Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_cordic.c \
 Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_dac.c \
 Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_comp.c \
+Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c \
+Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c \
 Src/system_stm32g4xx.c \
 Src/tim.c \
-Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c \
-Src/utils.c \
-Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_lptim.c
+Src/utils.c
 
 # ASM sources
 ASM_SOURCES =  \

@@ -6,23 +6,20 @@
  * 3. Sensorless operation, sensored (Hall sensors signals extrapolation)
  * 4. Motor parameter identification (Rs,Ld,Lq, Kv(Flux Linkage), Hall sensors table)
  * 5. Open-loop modes (V/Hz, I/Hz)
- * 6. Sensorless 6-step bldc mode (zc + bemf integration)
+ * 6. Sensorless 6-step bldc mode (zc + bemf integration) + hardware PCMC
  * 7. Simulation virtual motor
- * 8. Hardware cycle-by-cycle current limiting
- * 9. BDCM control
+ * 8. BDCM control + hardware PCMC
  * */
 
 /**
  * TODO:
- * 1. Add CAN. CanOpen. CiA 402 (IEC 61800-7-201/301)
+ * 1. Add CANOpen. CiA 402 (IEC 61800-7-201/301)
  * 8. SpeedRef - ERADS, replace to M/ERPM
  * 10. Separated hwconfig and focconfig
  * 11. Add Motor inertia (J) estimation for auto tune speed controller:
  *     https://e2e.ti.com/blogs_/b/industrial_strength/posts/teaching-your-pi-controller-to-behave-part-viii
- * 11. Add dutyCycle control mode in FOC
  * 12. Add PPM protocol support
- * 13. switch observer type in STOP case than switch to DQ - fix error
- * 14. Add DC/DC converter mode (Buck, Boost, Interleaved, AFE)
+ * 14. Add DC/DC converter mode (Buck, Boost, Interleaved)
  * 
  * */
 
@@ -35,6 +32,8 @@
 #include "cordic.h"
 #include "dac.h"
 #include "comp.h"
+#include "flash.h"
+#include "fdcan.h"
 #include "sys.h"
 
 void CoreInit(void);
@@ -44,10 +43,11 @@ void Foc_connect_hardware(void);
 
 dataLogVars_t dataLog;       /* DataLogger struct */
 adcData_t adcData;           /* ADC data struct */
-ntc_t ntcPcb;                /* NTC temp sensing struct*/
+ntc_t ntcPcb;                /* NTC temp sensing struct */
 modelBLDC_t bldc1;           /* BLDC motor mathematical model */
 hall_t hall = HALL_DEFAULTS; /* Hall sensors module */
 foc_t foc1 = FOC_DEFAULTS;   /* Field-oriented control algorithms */
+extern canData_t can;
 
 volatile uint32_t start_cc;       /* Var. Data Watchpoint and Trace Unit */
 volatile uint32_t stop_cc;        /* Var. Data Watchpoint and Trace Unit */
@@ -55,11 +55,11 @@ volatile uint32_t execTime0;      /* Var. Data Watchpoint and Trace Unit */
 volatile uint32_t execTime1;      /* Var. Data Watchpoint and Trace Unit */
 volatile uint8_t e = 0;           /* First enter flag */
 volatile uint8_t systemReset = 0; /* MCU reset request */
-volatile float ledDelay = 0;      /* Delay betwen toggle led, s */
 
+// Auxiliary globals
+volatile float ledDelay = 0;      /* Delay betwen toggle led, s */
 volatile uint32_t pwmInputPeriod; /* Period of PWM-input signal */
 volatile uint32_t pwmInputValue;  /* Duty of PWM-input signal */
-// Auxiliary globals
 volatile uint32_t dac_value;
 volatile uint32_t angleIncDelay = 0;
 
@@ -111,6 +111,7 @@ int main(void)
     /* Check CPU reset request */
     if (systemReset != 0)
     {
+      //FLASH_UpdateConfig(&foc1, &hall);
       NVIC_SystemReset();
     }
     /* Check motor parameters identification complete */
@@ -179,6 +180,7 @@ void CoreInit(void)
   LL_RCC_SetLPTIMClockSource(LL_RCC_LPTIM1_CLKSOURCE_PCLK1);
   LL_RCC_SetADCClockSource(LL_RCC_ADC12_CLKSOURCE_PLL);
   LL_RCC_SetADCClockSource(LL_RCC_ADC345_CLKSOURCE_PLL);
+  LL_RCC_SetFDCANClockSource(LL_RCC_FDCAN_CLKSOURCE_PCLK1);
 }
 
 void Foc_connect_hardware(void)
@@ -200,6 +202,7 @@ void CoreStart(void)
   MX_ADC2_Init();
   MX_HRTIM1_Init();
   MX_USART2_UART_Init();
+  MX_FDCAN1_Init();
   MX_TIM7_Init();
   MX_TIM6_Init();
   MX_TIM2_Init();
@@ -209,12 +212,12 @@ void CoreStart(void)
   MX_COMP1_Init();
   MX_COMP4_Init();
   MX_COMP6_Init();
-  foc_pwm_init(foc1.config.pwmFreq, foc1.config.deadTime, foc1.config.adcPostScaler, &foc1.data.halfPwmPeriod);
+  foc_pwm_init(foc1.config.pwmFreq, foc1.config.deadTime, foc1.data.adcPostScaler, &foc1.data.halfPwmPeriod);
   tim2_start();
   tim7_start();
   tim6_start();
   dac_start();
-  cmpr_start();
+  cmpr_start(); // TODO: before PWM
   adc_start();
 }
 
@@ -227,10 +230,10 @@ void ADC1_2_IRQHandler(void)
   LL_ADC_ClearFlag_JEOS(ADC2);
 
   /* heartbit */
-  foc1.data.isrCntr0++;                                                 // ISR counter for toggle LED
-  foc1.data.isrCntr1++;                                                 // ISR counter for bldc startUP
-  foc1.data.isrCntr2++;                                                 // ISR counter for param identification case in FOC mode
-  if (foc1.data.isrCntr0 >= (uint32_t)(ledDelay * foc1.config.smpFreq)) // Status LED control
+  foc1.data.isrCntr0++;                                               // ISR counter for toggle LED
+  foc1.data.isrCntr1++;                                               // ISR counter for bldc startUP
+  foc1.data.isrCntr2++;                                               // ISR counter for param identification case in FOC mode
+  if (foc1.data.isrCntr0 >= (uint32_t)(ledDelay * foc1.data.smpFreq)) // Status LED control
   {
     LL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
     foc1.data.isrCntr0 = 0;
@@ -265,6 +268,8 @@ void ADC1_2_IRQHandler(void)
     foc1.pi_iq.OutPreSat = 0.f;
     foc1.pi_spd.Ui = 0.f;
     foc1.pi_spd.OutPreSat = 0.f;
+    foc1.volt.usd = 0.f;
+    foc1.volt.usq = 0.f;
     foc1.data.angle = 0.f;
     ledDelay = 0.f;
     foc1.flags.bldcStartup = 1;
@@ -304,6 +309,8 @@ void ADC1_2_IRQHandler(void)
       foc_pwm_update(0, 0, 0, foc1.data.halfPwmPeriod);
       break;
     case FOC:
+      // calc angle and speed
+      Foc_update_angle_speed(&foc1);
       foc_pwm_update(0, 0, 0, foc1.data.halfPwmPeriod);
       break;
 
@@ -349,7 +356,7 @@ void ADC1_2_IRQHandler(void)
       foc1.lpf_id.out = 0.f;
       foc1.volt.DcBusVolt = foc1.lpf_vdc.out;
       // set duty
-      ramp_calc(&foc1.data.duty, foc1.data.dutyRef, foc1.data.dutyRmp, foc1.config.tS);
+      ramp_calc(&foc1.data.duty, foc1.data.dutyRef, foc1.data.dutyRmp, foc1.data.tS);
       foc1.data.duty = SAT(foc1.data.duty, 1.f, -1.f);
       foc_pwm_update(foc1.data.duty, 0, -foc1.data.duty, foc1.data.halfPwmPeriod);
       // Check protection
@@ -374,7 +381,7 @@ void ADC1_2_IRQHandler(void)
       foc1.cmtn.Bs = (float)(adcData.v_v) * (1.f / 4096.f) * foc1.config.adcFullScaleVoltage;
       foc1.cmtn.Cs = (float)(adcData.v_w) * (1.f / 4096.f) * foc1.config.adcFullScaleVoltage;
       // set duty
-      ramp_calc(&foc1.data.duty, foc1.data.dutyRef, foc1.data.dutyRmp, foc1.config.tS);
+      ramp_calc(&foc1.data.duty, foc1.data.dutyRef, foc1.data.dutyRmp, foc1.data.tS);
       foc1.data.duty = SAT(foc1.data.duty, 1.f, -1.f);
       // calc commutation module
       Bldc_update_commutation(&foc1, &hall);
@@ -410,7 +417,7 @@ void ADC1_2_IRQHandler(void)
       foc1.volt.DcBusVolt = foc1.lpf_vdc.out;
       // calc duty cycle control
       float voltage_scale = (foc1.flags.overmodulation == 1) ? (2.f / 3.f) : ONE_BY_SQRT3;
-      ramp_calc(&foc1.data.duty, foc1.data.dutyRef, foc1.data.dutyRmp, foc1.config.tS);
+      ramp_calc(&foc1.data.duty, foc1.data.dutyRef, foc1.data.dutyRmp, foc1.data.tS);
       foc1.volt.usd = foc1.data.udRef;
       foc1.volt.usq = foc1.data.duty * foc1.volt.DcBusVolt * voltage_scale;
       foc1.volt.magMaxD = foc1.volt.dutyMax * voltage_scale * foc1.volt.DcBusVolt;
@@ -473,7 +480,7 @@ void ADC1_2_IRQHandler(void)
       // calc sin/cos
       foc_sincos(foc1.data.angle, &foc1.data.sinTheta, &foc1.data.cosTheta);
       // calc current controller
-      ramp_calc(&foc1.pi_iq.Ref, foc1.data.iqRef, foc1.data.iqRmp, foc1.config.tS);
+      ramp_calc(&foc1.pi_iq.Ref, foc1.data.iqRef, foc1.data.iqRmp, foc1.data.tS);
       foc1.pi_id.Ref = foc1.data.idRef;
       foc1.pi_iq.Ref = (fabsf(foc1.data.iqRef) > 0.1f) ? foc1.pi_iq.Ref : 0.f;
       Foc_update_cc(&foc1);
@@ -530,8 +537,8 @@ void ADC1_2_IRQHandler(void)
       // calc sin/cos
       foc_sincos(foc1.data.angle, &foc1.data.sinTheta, &foc1.data.cosTheta);
       // calc speed controller
-      ramp_s_calc(&foc1.pi_spd.Ref, foc1.data.speedRef, foc1.data.spdRmp, foc1.config.tS); // S-curve profile ramp
-      //ramp_calc(&foc1.pi_spd.Ref, foc1.data.speedRef, foc1.data.spdRmp, foc1.config.tS); // trapezoidal profile ramp
+      ramp_s_calc(&foc1.pi_spd.Ref, foc1.data.speedRef, foc1.data.spdRmp, foc1.data.tS); // S-curve profile ramp
+      //ramp_calc(&foc1.pi_spd.Ref, foc1.data.speedRef, foc1.data.spdRmp, foc1.data.tS); // trapezoidal profile ramp
       foc1.data.spdLoopCntr++;
       if (foc1.data.spdLoopCntr >= 10)
       {
@@ -585,7 +592,7 @@ void ADC1_2_IRQHandler(void)
 
   case PARAM_ID_RL:
     // Angle generator
-    angle_gen(&foc1.data.angle, foc1.data.freq, foc1.config.tS);
+    angle_gen(&foc1.data.angle, foc1.data.freq, foc1.data.tS);
     // PARK transform for phase currents
     volatile float s = 0.f;
     volatile float c = 1.f;
@@ -621,7 +628,7 @@ void ADC1_2_IRQHandler(void)
       break;
     case ID_RS:
       // calc PI current controllers for D/Q axis
-      ramp_calc(&foc1.pi_id.Ref, foc1.data.idRef, foc1.data.idRef * 10.f, foc1.config.tS);
+      ramp_calc(&foc1.pi_id.Ref, foc1.data.idRef, foc1.data.idRef * 10.f, foc1.data.tS);
       foc1.pi_iq.Ref = 0.f;
       foc1.pi_id.Fdb = foc1.data.isd;
       foc1.pi_iq.Fdb = foc1.data.isq;
@@ -649,7 +656,7 @@ void ADC1_2_IRQHandler(void)
       foc1.svgen.udc = foc1.volt.DcBusVolt;
       foc1.calc.svgen(&foc1.svgen);
       // calc Rs
-      if (foc1.data.isrCntr2 >= (uint32_t)(0.5f * foc1.config.smpFreq)) // wait 500 ms, until current is stable
+      if (foc1.data.isrCntr2 >= (uint32_t)(0.5f * foc1.data.smpFreq)) // wait 500 ms, until current is stable
       {
         // mosfetRds * Idc + deadtime * udc - produce additional voltage drop
         //float Vdt = (foc1.config.deadTime * 1e-9f) * foc1.config.pwmFreq * foc1.volt.DcBusVolt;
@@ -657,8 +664,8 @@ void ADC1_2_IRQHandler(void)
         //foc1.data.id_UdErr = (foc1.config.sim == 0) ? foc1.data.id_UdErr : 0.f;
         //foc1.data.id_RsBank = ((foc1.volt.usd * 0.5f) - foc1.data.id_UdErr) / foc1.lpf_id.out;
         foc1.data.id_RsBank = foc1.data.vd / foc1.data.isd;
-        UTILS_LP_FAST(foc1.data.id_Rs, foc1.data.id_RsBank, foc1.config.tS / (0.05f + foc1.config.tS));
-        if (foc1.data.isrCntr2 >= (uint32_t)(1.f * foc1.config.smpFreq))
+        UTILS_LP_FAST(foc1.data.id_Rs, foc1.data.id_RsBank, foc1.data.tS / (0.05f + foc1.data.tS));
+        if (foc1.data.isrCntr2 >= (uint32_t)(1.f * foc1.data.smpFreq))
         {
           foc1.pi_id.Ref = 0.f;
           foc1.data.isrCntr2 = 0;
@@ -686,7 +693,7 @@ void ADC1_2_IRQHandler(void)
       }
       // calc UdRef
       foc_sincos(foc1.data.angle, &foc1.data.sinTheta, &foc1.data.cosTheta);
-      foc1.data.id_Ud = (foc1.data.isrCntr2 >= (uint32_t)(0.5f * foc1.config.smpFreq)) ? foc1.data.sinTheta * foc1.data.udRef : 0.f;
+      foc1.data.id_Ud = (foc1.data.isrCntr2 >= (uint32_t)(0.5f * foc1.data.smpFreq)) ? foc1.data.sinTheta * foc1.data.udRef : 0.f;
       foc1.data.id_Uq = 0.f;
       // Saturation
       foc1.volt.usd = foc1.data.id_Ud;
@@ -714,18 +721,15 @@ void ADC1_2_IRQHandler(void)
       foc1.svgen.udc = foc1.volt.DcBusVolt;
       foc1.calc.svgen(&foc1.svgen);
       // identify Ls
-      if (foc1.data.isrCntr2 >= (uint32_t)(1.f * foc1.config.smpFreq))
+      if (foc1.data.isrCntr2 >= (uint32_t)(1.f * foc1.data.smpFreq))
       {
-        //UTILS_LP_FAST(foc1.data.id_UdAmpl, fabsf(foc1.volt.usd * 0.5f), foc1.config.tS / (0.02f + foc1.config.tS));
-        UTILS_LP_FAST(foc1.data.id_UdAmpl, fabsf(foc1.data.vd), foc1.config.tS / (0.05f + foc1.config.tS));
-        UTILS_LP_FAST(foc1.data.id_IdAmpl, fabsf(foc1.data.isd), foc1.config.tS / (0.05f + foc1.config.tS));
+        //UTILS_LP_FAST(foc1.data.id_UdAmpl, fabsf(foc1.volt.usd * 0.5f), foc1.data.tS / (0.02f + foc1.data.tS));
+        UTILS_LP_FAST(foc1.data.id_UdAmpl, fabsf(foc1.data.vd), foc1.data.tS / (0.05f + foc1.data.tS));
+        UTILS_LP_FAST(foc1.data.id_IdAmpl, fabsf(foc1.data.isd), foc1.data.tS / (0.05f + foc1.data.tS));
         UTILS_NAN_ZERO(foc1.data.id_UdAmpl);
         UTILS_NAN_ZERO(foc1.data.id_IdAmpl);
-        if (foc1.data.isrCntr2 >= (uint32_t)(1.4f * foc1.config.pwmFreq * foc1.config.adcPostScaler))
-        {
-          foc1.data.id_uMag = (foc1.data.id_UdAmpl > foc1.data.id_uMag) ? foc1.data.id_UdAmpl : foc1.data.id_uMag;
-          foc1.data.id_iMag = (foc1.data.id_IdAmpl > foc1.data.id_iMag) ? foc1.data.id_IdAmpl : foc1.data.id_iMag;
-        }
+        foc1.data.id_uMag = (foc1.data.id_UdAmpl > foc1.data.id_uMag) ? foc1.data.id_UdAmpl : foc1.data.id_uMag;
+        foc1.data.id_iMag = (foc1.data.id_IdAmpl > foc1.data.id_iMag) ? foc1.data.id_IdAmpl : foc1.data.id_iMag;
         dataLog.trigger = 1;
         foc1.data.id_Zs = foc1.data.id_uMag / foc1.data.id_iMag;            // Z = Ud / Id
         foc1.data.id_Xs = sqrtf(SQ(foc1.data.id_Zs) - SQ(foc1.data.id_Rs)); // XL = sqrt(Z^2 - R^2)
@@ -733,7 +737,7 @@ void ADC1_2_IRQHandler(void)
         foc1.data.id_Ld = foc1.data.id_Ls;
         UTILS_NAN_ZERO(foc1.data.id_Ld);
       }
-      if (foc1.data.isrCntr2 > (uint32_t)(1.5f * foc1.config.smpFreq))
+      if (foc1.data.isrCntr2 > (uint32_t)(1.5f * foc1.data.smpFreq))
       {
         if (foc1.flags.inductanceRatio == 0)
         {
@@ -762,7 +766,7 @@ void ADC1_2_IRQHandler(void)
       // calc UdRef
       foc_sincos(foc1.data.angle, &foc1.data.sinTheta, &foc1.data.cosTheta);
       foc1.data.id_Ud = 0.f;
-      foc1.data.id_Uq = (foc1.data.isrCntr2 >= (uint32_t)(0.5f * foc1.config.smpFreq)) ? foc1.data.sinTheta * foc1.data.udRef : 0.f;
+      foc1.data.id_Uq = (foc1.data.isrCntr2 >= (uint32_t)(0.5f * foc1.data.smpFreq)) ? foc1.data.sinTheta * foc1.data.udRef : 0.f;
       // Saturation
       foc1.volt.usd = foc1.data.id_Ud;
       foc1.volt.usq = foc1.data.id_Uq;
@@ -789,12 +793,12 @@ void ADC1_2_IRQHandler(void)
       foc1.svgen.udc = foc1.volt.DcBusVolt;
       foc1.calc.svgen(&foc1.svgen);
       // identify Ls
-      if (foc1.data.isrCntr2 >= (uint32_t)(1.f * foc1.config.smpFreq))
+      if (foc1.data.isrCntr2 >= (uint32_t)(1.f * foc1.data.smpFreq))
       {
         //UTILS_LP_FAST(foc1.data.id_UdAmpl, fabsf(foc1.data.id_Uq), 0.0005f);
-        UTILS_LP_FAST(foc1.data.id_UdAmpl, fabsf(foc1.data.vq), foc1.config.tS / (0.05f + foc1.config.tS));
-        UTILS_LP_FAST(foc1.data.id_IdAmpl, fabsf(foc1.data.isq), foc1.config.tS / (0.05f + foc1.config.tS));
-        if (foc1.data.isrCntr2 >= (uint32_t)(1.4f * foc1.config.pwmFreq * foc1.config.adcPostScaler))
+        UTILS_LP_FAST(foc1.data.id_UdAmpl, fabsf(foc1.data.vq), foc1.data.tS / (0.05f + foc1.data.tS));
+        UTILS_LP_FAST(foc1.data.id_IdAmpl, fabsf(foc1.data.isq), foc1.data.tS / (0.05f + foc1.data.tS));
+        if (foc1.data.isrCntr2 >= (uint32_t)(1.4f * foc1.config.pwmFreq * foc1.data.adcPostScaler))
         {
           foc1.data.id_uMag = (foc1.data.id_UdAmpl > foc1.data.id_uMag) ? foc1.data.id_UdAmpl : foc1.data.id_uMag;
           foc1.data.id_iMag = (foc1.data.id_IdAmpl > foc1.data.id_iMag) ? foc1.data.id_IdAmpl : foc1.data.id_iMag;
@@ -810,7 +814,7 @@ void ADC1_2_IRQHandler(void)
         foc1.data.id_Ls = foc1.data.id_Xs / (M_2PI * foc1.data.freq);                                   // L = XL / (2*pi*f)
         foc1.data.id_Lq = foc1.data.id_Ls;
       }
-      foc1.paramIdState = (foc1.data.isrCntr2 >= (uint32_t)(1.5f * foc1.config.smpFreq)) ? ID_CMPLT : ID_LQ;
+      foc1.paramIdState = (foc1.data.isrCntr2 >= (uint32_t)(1.5f * foc1.data.smpFreq)) ? ID_CMPLT : ID_LQ;
       break;
     case ID_CMPLT:
       /* Clear PWM signals, calc DQ-cureents PI gains, calc observer gains */
@@ -824,13 +828,13 @@ void ADC1_2_IRQHandler(void)
       foc1.data.udRef = 0.f;
       foc1.data.isrCntr2 = 0;
       // calc D-Q axis current PI controllers gains
-      float wcc = (0.05f * (1.f / foc1.config.tS)) * M_2PI;
+      float wcc = (0.05f * (1.f / foc1.data.tS)) * M_2PI;
       foc1.pi_id.Kp = foc1.pi_iq.Kp = (foc1.data.id_Ld * wcc);
-      foc1.pi_id.Ki = foc1.pi_iq.Ki = foc1.data.id_Rs * wcc * foc1.config.tS;
+      foc1.pi_id.Ki = foc1.pi_iq.Ki = foc1.data.id_Rs * wcc * foc1.data.tS;
       foc1.pi_id.Kc = 1.f / foc1.pi_id.Kp;
       foc1.pi_iq.Kc = 1.f / foc1.pi_iq.Kp;
       // observer gains calc
-      foc1.smo.Fsmopos = expf((-foc1.data.id_Rs / foc1.data.id_Ld) * foc1.config.tS);
+      foc1.smo.Fsmopos = expf((-foc1.data.id_Rs / foc1.data.id_Ld) * foc1.data.tS);
       foc1.smo.Gsmopos = (1.0f / foc1.data.id_Rs) * (1.0f - foc1.smo.Fsmopos);
       foc1.flux.R = foc1.data.id_Rs * 1.5f;
       foc1.flux.L = foc1.data.id_Ld * 1.5f;
@@ -880,13 +884,13 @@ void ADC1_2_IRQHandler(void)
       foc1.data.angle = 0.f;
       foc1.data.iqRmp = 20.f;
       angleIncDelay++;
-      foc1.paramIdRunState = (angleIncDelay >= (uint32_t)(2.f * foc1.config.smpFreq)) ? ID_RUN_HALL_FWD : foc1.paramIdRunState;
+      foc1.paramIdRunState = (angleIncDelay >= (uint32_t)(2.f * foc1.data.smpFreq)) ? ID_RUN_HALL_FWD : foc1.paramIdRunState;
     }
     // Angle generator
     if (foc1.paramIdRunState == ID_RUN_HALL_FWD || foc1.paramIdRunState == ID_RUN_HALL_RVS || foc1.paramIdRunState == ID_RUN_FLUX_OL)
     {
       if (foc1.paramIdRunState == ID_RUN_FLUX_OL)
-        ramp_calc(&foc1.data.freq, foc1.data.freqRef, foc1.data.freqRmp, foc1.config.tS);
+        ramp_calc(&foc1.data.freq, foc1.data.freqRef, foc1.data.freqRmp, foc1.data.tS);
 
       foc1.data.angle += foc1.data.freqStep * foc1.data.freq;
       if (foc1.data.angle < -MF_PI)
@@ -901,7 +905,7 @@ void ADC1_2_IRQHandler(void)
       foc1.data.angle = 0.f;
       UTILS_LP_FAST(foc1.cgtc.udZero, foc1.pi_id.Out, 0.005f);
       angleIncDelay++;
-      if (angleIncDelay >= (uint32_t)(2.0f * foc1.config.smpFreq))
+      if (angleIncDelay >= (uint32_t)(2.0f * foc1.data.smpFreq))
       {
         foc1.paramIdRunState = ID_RUN_COG_CALC;
         angleIncDelay = 0;
@@ -911,7 +915,7 @@ void ADC1_2_IRQHandler(void)
     if (foc1.paramIdRunState == ID_RUN_COG_CALC)
     {
       angleIncDelay++;
-      if (angleIncDelay >= (uint32_t)(0.05f * foc1.config.smpFreq))
+      if (angleIncDelay >= (uint32_t)(0.05f * foc1.data.smpFreq))
       {
         foc1.data.angle += (M_2PI / 100.f);
         if (foc1.data.angle < -MF_PI)
@@ -938,7 +942,7 @@ void ADC1_2_IRQHandler(void)
     foc1.data.isd = foc1.data.isa * foc1.data.cosTheta + foc1.data.isb * foc1.data.sinTheta;
     foc1.data.isq = -foc1.data.isa * foc1.data.sinTheta + foc1.data.isb * foc1.data.cosTheta;
     // calc PI current controllers for D/Q axis
-    ramp_calc(&foc1.pi_id.Ref, foc1.data.idRef, foc1.data.iqRmp, foc1.config.tS);
+    ramp_calc(&foc1.pi_id.Ref, foc1.data.idRef, foc1.data.iqRmp, foc1.data.tS);
     //foc1.pi_id.Ref = foc1.data.idRef;
     foc1.pi_iq.Ref = foc1.data.iqRef;
     foc1.pi_id.Fdb = foc1.data.isd;
@@ -1061,13 +1065,13 @@ void ADC1_2_IRQHandler(void)
     }
     if (foc1.paramIdRunState == ID_RUN_FLUX_OL)
     {
-      if (angleIncDelay < (uint32_t)(1.f * foc1.config.smpFreq))
+      if (angleIncDelay < (uint32_t)(1.f * foc1.data.smpFreq))
       {
         angleIncDelay++;
         foc1.data.freqRef = 0.f;
         foc1.data.freq = 0.f;
       }
-      if (angleIncDelay >= (uint32_t)(1.f * foc1.config.smpFreq))
+      if (angleIncDelay >= (uint32_t)(1.f * foc1.data.smpFreq))
       {
         foc1.data.freqRef = (foc1.config.speedMax * 0.1f) / M_2PI; // measuring speed is 10% of max
       }
@@ -1084,10 +1088,10 @@ void ADC1_2_IRQHandler(void)
           foc1.pll.SpeedPll = foc1.data.freq * M_2PI;
           foc1.data.speedRpm = (foc1.pll.SpeedPll * RADS2RPM) / foc1.config.pp;
           volatile float ol_kv_raw = (foc1.data.speedRpm / (foc1.data.duty * foc1.volt.DcBusVolt)) / (foc1.config.pp / 2.f);
-          UTILS_LP_FAST(foc1.config.Kv, ol_kv_raw, foc1.config.tS / (0.1f + foc1.config.tS));
+          UTILS_LP_FAST(foc1.config.Kv, ol_kv_raw, foc1.data.tS / (0.1f + foc1.data.tS));
           UTILS_NAN_ZERO(foc1.config.Kv);
         }
-        if (angleIncDelay >= (uint32_t)(3.f * foc1.config.smpFreq) && foc1.flags.fluxDetectedOpenLoop == 0)
+        if (angleIncDelay >= (uint32_t)(3.f * foc1.data.smpFreq) && foc1.flags.fluxDetectedOpenLoop == 0)
         {
           foc1.flux.fluxLinkage = 60.f / (SQRT3 * M_2PI * foc1.config.Kv * foc1.config.pp);
           foc1.flux.gamma = (1000.f / (SQ(foc1.flux.fluxLinkage))) * 0.5f;
@@ -1303,6 +1307,39 @@ void slowCalc(void)
     raw_pwmInput = (pwmInputValue < 25) ? 0 : raw_pwmInput;
     UTILS_LP_FAST(foc1.data.speedRef, raw_pwmInput, 0.01f);
   }
+  /* CAN transmit section */
+  static uint32_t isrCntrCAN;
+  isrCntrCAN++;
+  if (isrCntrCAN >= 50) // every 50 ms
+  {
+    isrCntrCAN = 0;
+    uint8_t TxData[8];
+    TxData[0] = (uint8_t)foc1.driveState;
+    TxData[1] = (uint8_t)((foc1.volt.DcBusVolt / foc1.config.adcFullScaleVoltage) * 255.f);
+    TxData[2] = (uint8_t)((foc1.data.iAvg / foc1.config.adcFullScaleCurrent) * 255.f);
+    TxData[3] = (uint8_t)(foc1.data.speedRpm * 0.02f);
+    TxData[4] = (uint8_t)(ntcPcb.temp);
+    TxData[5] = (uint8_t)(foc1.data.Pem * 0.1f);
+    TxData[6] = (uint8_t)(foc1.data.Te * 10.f);
+    TxData[7] = (uint8_t)(foc1.data.duty * 255.f);
+    can_transmit_massege(can.txh[0], 0x1F, TxData, 8, 0xCC);
+    uint8_t *canDataP = (uint8_t *)&foc1.data.isrCntr1;
+    can_transmit_massege(can.txh[0], 0x1A, canDataP, 4, 0xCC);
+  }
+  /* CAN receive section */
+  can_receive_massege();
+  if ((can.RxHeader.Identifier == 0x321) && (can.RxHeader.IdType == FDCAN_STANDARD_ID))
+  {
+    if (can.RxData[0] == 1)
+    {
+      ledDelay = (float)can.RxData[1] * (1.f / 256.f);
+    }
+    if (can.RxData[0] == 0)
+    {
+      LL_GPIO_ResetOutputPin(LED_FAULT_GPIO_Port, LED_FAULT_Pin);
+      ledDelay = (float)can.RxData[1] * (1.f / 256.f);
+    }
+  }
 }
 
 /* ISR for PWM-input signal */
@@ -1326,8 +1363,4 @@ void TIM2_IRQHandler(void)
 
 void Error_Handler(void)
 {
-  /* USER CODE BEGIN Error_Handler_Debug */
-  /* User can add his own implementation to report the HAL error return state */
-
-  /* USER CODE END Error_Handler_Debug */
 }

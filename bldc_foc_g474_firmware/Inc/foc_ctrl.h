@@ -130,15 +130,15 @@ static inline void Foc_update_openLoopStart(foc_t *p)
         p->data.freqRmp = fabsf(p->data.freqRef * 5.f);                             // 0.2s startUp time
         ol_timeout++;
         // Align process
-        if (ol_timeout < (uint32_t)(1.f * p->config.smpFreq))
+        if (ol_timeout < (uint32_t)(1.f * p->data.smpFreq))
         {
             p->data.angle = 0.f;
-            ramp_calc(&p->pi_iq.Ref, iqRefShdw, fabsf(iqRefShdw), p->config.tS);
+            ramp_calc(&p->pi_iq.Ref, iqRefShdw, fabsf(iqRefShdw), p->data.tS);
         }
         // Ramp up speed
         else
         {
-            ramp_calc(&p->data.freq, p->data.freqRef, p->data.freqRmp, p->config.tS);
+            ramp_calc(&p->data.freq, p->data.freqRef, p->data.freqRmp, p->data.tS);
             // Angle generator
             p->data.angle += p->data.freqStep * p->data.freq;
             if (p->data.angle < -MF_PI)
@@ -149,7 +149,7 @@ static inline void Foc_update_openLoopStart(foc_t *p)
         // detect succesfull startup
         if (p->pll.SpeedAbs > (fabsf(p->data.freqRef) * M_2PI * 0.9f))
         {
-            //ramp_calc(&p->data.idRef, 0.f, 2.f, p->config.tS);
+            //ramp_calc(&p->data.idRef, 0.f, 2.f, p->data.tS);
             p->flags.sensorlessStartup = 1;
             p->pi_iq.Ref = (p->driveState == RUN_CURRENT) ? p->data.iqRef : 0.f;
             p->pi_spd.Ui = (p->driveState == RUN_SPD) ? iqRefShdw : 0.f;
@@ -158,7 +158,7 @@ static inline void Foc_update_openLoopStart(foc_t *p)
             ol_timeout = 0;
         }
         // detect no succesfull startup
-        if (ol_timeout > (uint32_t)(2.f * p->config.smpFreq) && p->pll.SpeedAbs < (fabsf(p->data.freqRef) * M_2PI * 0.9f))
+        if (ol_timeout > (uint32_t)(2.f * p->data.smpFreq) && p->pll.SpeedAbs < (fabsf(p->data.freqRef) * M_2PI * 0.9f))
         {
             // restart process
             p->data.freq = 0.f;
@@ -195,14 +195,14 @@ static inline void Foc_update_cc(foc_t *p)
         p->pi_id.Ref = p->mtpa.id_MTPA;
         p->pi_iq.Ref = p->mtpa.iq_MTPA;
     }
+    // calc D-axis current injection in low speed region
     else if (p->config.sensorType == SENSORLESS && p->flags.sensorlessInjectionD == 1)
     {
         //p->pi_id.Ref = (p->pll.SpeedAbs < p->data.wMinSensorless) ? p->pi_iq.Ref - ((p->pi_iq.Ref / p->data.wMinSensorless) * p->pll.SpeedPll) : 0.f;
         p->pi_id.Ref = (p->pll.SpeedAbs < (p->data.wMinSensorless)) ? p->pi_iq.Ref : p->pi_id.Ref;
         p->pi_id.Ref = (p->pll.SpeedAbs > (p->data.wMinSensorless * 1.5f)) ? 0.f : p->pi_id.Ref;
     }
-
-    // calc Cogging torque compensation
+    // calc Cogging torque compensation. EXPERIMENTAL
     if (p->cgtc.en == 1)
     {
         p->cgtc.angle = p->data.angle;
@@ -217,16 +217,16 @@ static inline void Foc_update_cc(foc_t *p)
         p->data.uqDec = 0.f;
         break;
     case DEC_CROSS:
-        p->data.udDec = p->data.isq * p->pll.SpeedPll * p->config.Lq;
-        p->data.uqDec = p->data.isd * p->pll.SpeedPll * p->config.Ld;
+        p->data.udDec = p->pi_iq.Ref * p->pll.SpeedPll * p->config.Lq;
+        p->data.uqDec = p->pi_id.Ref * p->pll.SpeedPll * p->config.Ld;
         break;
     case DEC_BEMF:
         p->data.udDec = 0.f;
         p->data.uqDec = p->pll.SpeedPll * p->flux.fluxLinkage;
         break;
     case DEC_CROSS_BEMF:
-        p->data.udDec = p->data.isq * p->pll.SpeedPll * p->config.Lq;
-        p->data.uqDec = p->pll.SpeedPll * (p->data.isd * p->config.Ld + p->flux.fluxLinkage);
+        p->data.udDec = p->pi_iq.Ref * p->pll.SpeedPll * p->config.Lq;
+        p->data.uqDec = p->pll.SpeedPll * (p->pi_id.Ref * p->config.Ld + p->flux.fluxLinkage);
         break;
     default:
         break;
@@ -267,9 +267,9 @@ static inline void Foc_update_angle_speed(foc_t *p)
     {
     case MANUAL:
         // ramp generator
-        ramp_s_calc(&p->data.freq, p->data.freqRef, p->data.freqRmp, p->config.tS);
+        ramp_s_calc(&p->data.freq, p->data.freqRef, p->data.freqRmp, p->data.tS);
         // Angle generator
-        angle_gen(&p->data.angle, p->data.freq, p->config.tS);
+        angle_gen(&p->data.angle, p->data.freq, p->data.tS);
         p->pll.SpeedPll = p->data.freq * M_2PI;
         break;
     case HALL:
@@ -333,9 +333,9 @@ static inline void Bldc_update_commutation(foc_t *p, hall_t *ph)
     {
     case MANUAL:
         // ramp generator
-        ramp_s_calc(&p->data.freq, p->data.freqRef, p->data.freqRmp, p->config.tS);
+        ramp_s_calc(&p->data.freq, p->data.freqRef, p->data.freqRmp, p->data.tS);
         // Angle generator
-        angle_gen(&p->data.angle, p->data.freq, p->config.tS);
+        angle_gen(&p->data.angle, p->data.freq, p->data.tS);
         p->cmtn.cmtnState = (uint8_t)(p->data.angle + MF_PI);
         p->cmtn.cmtnState = SAT(p->cmtn.cmtnState, 5, 0);
         break;
@@ -374,11 +374,31 @@ static inline void Bldc_update_commutation(foc_t *p, hall_t *ph)
             p->cmtn.cmtnState = (p->cmtn.cmtnState <= 0) ? 5 : p->cmtn.cmtnState - 1;
     }
     /* Check stacked rotor. 50ms timeout  */
-    if (p->data.isrCntr1 >= (uint32_t)(0.05f * p->config.smpFreq) && p->config.sensorType == SENSORLESS)
+    if (p->data.isrCntr1 >= (uint32_t)(0.05f * p->data.smpFreq) && p->config.sensorType == SENSORLESS)
     {
         p->flags.bldcStartup = 1;
         p->data.isrCntr1 = 0;
     }
+}
+
+/** Run D/Q currents controller
+ * PARK -> DECOUPLING -> PI -> DQ_Limiter -> IPARK
+ * @input:  idRef, iqRef, isa, isb, sinTheta, cosTheta (must be updated before call)
+ * @output: usa, usb - referance alpha/beta components of phase voltages
+ */
+static inline void Foc_main_task(foc_t *p)
+{
+    
+}
+
+/** Run D/Q currents controller
+ * PARK -> DECOUPLING -> PI -> DQ_Limiter -> IPARK
+ * @input:  idRef, iqRef, isa, isb, sinTheta, cosTheta (must be updated before call)
+ * @output: usa, usb - referance alpha/beta components of phase voltages
+ */
+static inline void Foc_slow_task(foc_t *p)
+{
+    
 }
 
 static inline void Foc_Init(foc_t *p)
@@ -389,11 +409,11 @@ static inline void Foc_Init(foc_t *p)
      *  Example: ADC postScaler = 0, means we calc FOC loop 1 times for 1 PWM cycles
      *           ADC postScaler = 1, means we calc FOC loop 1 times for 2 PWM cycles
      */
-    p->config.adcPostScaler = (uint32_t)(p->config.pwmFreq / 40001.f);
-    p->config.smpFreq = p->config.pwmFreq / (float)(p->config.adcPostScaler + 1);
-    p->config.tS = 1.f / p->config.smpFreq;
-    p->data.freqStep = M_2PI * p->config.tS;
-    /* Max duty cycle*/
+    p->data.adcPostScaler = (uint32_t)(p->config.pwmFreq / 40001.f);
+    p->data.smpFreq = p->config.pwmFreq / (float)(p->data.adcPostScaler + 1);
+    p->data.tS = 1.f / p->data.smpFreq;
+    p->data.freqStep = M_2PI * p->data.tS;
+    /* Max duty cycle */
     p->volt.dutyMax = 0.975f;
     /* Set flags */
     p->flags.sensorlessStartup = 1;
@@ -407,30 +427,30 @@ static inline void Foc_Init(foc_t *p)
      *  RULE: if current sampling 1 times for 1 PWM period
      *  use wcc 5% of sampling frequency. Also try from 0.025 to 0.1
      */
-    float wcc = (0.05f * p->config.smpFreq) * M_2PI;
+    float wcc = (0.05f * p->data.smpFreq) * M_2PI;
     p->pi_id.Kp = p->pi_iq.Kp = (p->config.Ld * wcc);
-    p->pi_id.Ki = p->pi_iq.Ki = p->config.Rs * wcc * p->config.tS;
+    p->pi_id.Ki = p->pi_iq.Ki = p->config.Rs * wcc * p->data.tS;
     p->pi_id.Kc = p->pi_id.Ki / p->pi_id.Kp;
     p->pi_iq.Kc = p->pi_iq.Ki / p->pi_iq.Kp;
     p->pi_id.OutMin = p->pi_iq.OutMin = (p->config.mode == FOC) ? -p->config.adcFullScaleVoltage : 0;
     p->pi_id.OutMax = p->pi_iq.OutMax = (p->config.mode == FOC) ? p->config.adcFullScaleVoltage : 1.f;
     /* Init speed PI controller */
     p->pi_spd.Kp = 0.025f;
-    p->pi_spd.Ki = 1.f * p->config.tS;
+    p->pi_spd.Ki = 1.f * p->data.tS;
     p->pi_spd.Kd = 0.5f;
     p->config.currentMaxNeg = (p->config.currentMaxNeg > 0.f) ? -p->config.currentMaxNeg : p->config.currentMaxNeg;
     p->pi_spd.OutMin = (p->config.mode == FOC) ? -(fabsf(p->config.currentMaxNeg)) : 0.f;
     p->pi_spd.OutMax = (p->config.mode == FOC) ? p->config.currentMaxPos : 0.99f;
     /* Init SMOPOS constants */
-    p->smo.Fsmopos = expf((-p->config.Rs / p->config.Lq) * p->config.tS);
+    p->smo.Fsmopos = expf((-p->config.Rs / p->config.Lq) * p->data.tS);
     p->smo.Gsmopos = (1.f / p->config.Rs) * (1.f - p->smo.Fsmopos);
     p->smo.lpfWc = M_2PI * 5.f; // low-pass filter cutoff frequency
-    p->smo.lpfTf = p->config.tS / ((1.f / p->smo.lpfWc) + p->config.tS);
+    p->smo.lpfTf = p->data.tS / ((1.f / p->smo.lpfWc) + p->data.tS);
     /* Init Flux observer constants */
     p->flux.R = p->config.Rs * 1.5f;
     p->flux.L = ((p->config.Ld + p->config.Lq) * 0.5f) * 1.5f; // take average inductance of Ld and Lq
     p->flux.fluxLinkage = 60.f / (SQRT3 * M_2PI * p->config.Kv * p->config.pp);
-    p->flux.dt = p->config.tS;
+    p->flux.dt = p->data.tS;
     p->flux.gamma = (1000.f / (p->flux.fluxLinkage * p->flux.fluxLinkage)) * 0.5f; //300000.f;
     p->data.wMinSensorless = 0.25f * p->flux.gamma * SQ(p->flux.fluxLinkage);
     /* Init MTPA */
@@ -442,7 +462,7 @@ static inline void Foc_Init(foc_t *p)
     p->mtpa.iMax = p->prot.ocpThld * 0.9f; // 90% of overcurrent threshold
     p->mtpa.k_mtpa = 0.25f * (p->mtpa.lambdaPM / p->mtpa.Ldq_diff);
     /* Init PLL */
-    p->pll.dt = p->config.tS;
+    p->pll.dt = p->data.tS;
     p->pll.Kp = 2000.f;
     p->pll.Ki = 30000.f;
     /* saturation protection thresholds */
@@ -453,7 +473,7 @@ static inline void Foc_Init(foc_t *p)
     /** BEMF filters init
      * Tf = 1 / (Fc * 2 * pi)
      *   */
-    p->cmtn.lpf_bemfA.T = p->config.tS / ((1.f / (1.5f * p->config.speedMax)) + p->config.tS);
+    p->cmtn.lpf_bemfA.T = p->data.tS / ((1.f / (1.5f * p->config.speedMax)) + p->data.tS);
     p->cmtn.lpf_bemfB.T = p->cmtn.lpf_bemfA.T;
     p->cmtn.lpf_bemfC.T = p->cmtn.lpf_bemfA.T;
     p->cmtn.cmtnTh = 0.01f;
@@ -461,15 +481,15 @@ static inline void Foc_Init(foc_t *p)
     p->data.bldc_commCntrRef = 350.f;
     p->data.dutyStart = 0.1f; // 10% of max value
     // Filters data init which execute in main ADC-ISR
-    p->lpf_id.T = p->config.tS / (0.005f + p->config.tS);     // time constant in descrete time dominian for D-axis current LPF
-    p->lpf_iq.T = p->config.tS / (0.005f + p->config.tS);     // time constant in descrete time dominian for Q-axis current LPF
-    p->lpf_vdc.T = p->config.tS / (0.1f + p->config.tS);      // time constant in descrete time dominian for DC-Bus voltage LPF
-    p->lpf_offsetIa.T = p->config.tS / (0.2f + p->config.tS); // time constant in descrete time dominian for D-axis current LPF
-    p->lpf_offsetIb.T = p->config.tS / (0.2f + p->config.tS); // time constant in descrete time dominian for Q-axis current LPF
-    p->lpf_offsetIc.T = p->config.tS / (0.2f + p->config.tS); // time constant in descrete time dominian for Q-axis current LPF
-    p->lpf_offsetVa.T = p->config.tS / (0.2f + p->config.tS); // time constant in descrete time dominian for D-axis current LPF
-    p->lpf_offsetVb.T = p->config.tS / (0.2f + p->config.tS); // time constant in descrete time dominian for Q-axis current LPF
-    p->lpf_offsetVc.T = p->config.tS / (0.2f + p->config.tS); // time constant in descrete time dominian for Q-axis current LPF
+    p->lpf_id.T = p->data.tS / (0.005f + p->data.tS);     // time constant in descrete time dominian for D-axis current LPF
+    p->lpf_iq.T = p->data.tS / (0.005f + p->data.tS);     // time constant in descrete time dominian for Q-axis current LPF
+    p->lpf_vdc.T = p->data.tS / (0.1f + p->data.tS);      // time constant in descrete time dominian for DC-Bus voltage LPF
+    p->lpf_offsetIa.T = p->data.tS / (0.2f + p->data.tS); // time constant in descrete time dominian for D-axis current LPF
+    p->lpf_offsetIb.T = p->data.tS / (0.2f + p->data.tS); // time constant in descrete time dominian for Q-axis current LPF
+    p->lpf_offsetIc.T = p->data.tS / (0.2f + p->data.tS); // time constant in descrete time dominian for Q-axis current LPF
+    p->lpf_offsetVa.T = p->data.tS / (0.2f + p->data.tS); // time constant in descrete time dominian for D-axis current LPF
+    p->lpf_offsetVb.T = p->data.tS / (0.2f + p->data.tS); // time constant in descrete time dominian for Q-axis current LPF
+    p->lpf_offsetVc.T = p->data.tS / (0.2f + p->data.tS); // time constant in descrete time dominian for Q-axis current LPF
     // Filters data init which execute in 1ms ISR
     float Ts_1ms = 1.f / 1000.f;
     p->lpf_Iavg.T = Ts_1ms / (0.02f + Ts_1ms); // time constant in descrete time dominian for total current LPF

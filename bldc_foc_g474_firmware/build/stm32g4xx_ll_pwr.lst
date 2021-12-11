@@ -1,4 +1,4 @@
-ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 1
+ARM GAS  D:\apps\VSCode\data\tmp\ccM5ObKW.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 1
   27:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_pwr.c ****   */
   28:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_pwr.c **** 
   29:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_pwr.c **** #if defined(PWR)
-ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 2
+ARM GAS  D:\apps\VSCode\data\tmp\ccM5ObKW.s 			page 2
 
 
   30:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_pwr.c **** 
@@ -118,7 +118,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 1
   15:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****         (++) AHB & APB peripherals, 1 dummy read is necessary
   16:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
   17:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****     [..]
-ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 3
+ARM GAS  D:\apps\VSCode\data\tmp\ccM5ObKW.s 			page 3
 
 
   18:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****       Workarounds:
@@ -178,7 +178,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 1
   72:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @{
   73:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
   74:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB1_GRP1_PERIPH_ALL            0xFFFFFFFFU
-ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 4
+ARM GAS  D:\apps\VSCode\data\tmp\ccM5ObKW.s 			page 4
 
 
   75:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_AHB1_GRP1_PERIPH_DMA1           RCC_AHB1ENR_DMA1EN
@@ -238,7 +238,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 1
  129:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #endif /* QUADSPI */
  130:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
  131:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @}
-ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 5
+ARM GAS  D:\apps\VSCode\data\tmp\ccM5ObKW.s 			page 5
 
 
  132:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
@@ -298,7 +298,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 1
  186:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /** @defgroup BUS_LL_EC_APB2_GRP1_PERIPH  APB2 GRP1 PERIPH
  187:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @{
  188:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
-ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 6
+ARM GAS  D:\apps\VSCode\data\tmp\ccM5ObKW.s 			page 6
 
 
  189:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** #define LL_APB2_GRP1_PERIPH_ALL            0xFFFFFFFFU
@@ -358,7 +358,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 1
  243:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval None
  244:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
  245:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** __STATIC_INLINE void LL_AHB1_GRP1_EnableClock(uint32_t Periphs)
-ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 7
+ARM GAS  D:\apps\VSCode\data\tmp\ccM5ObKW.s 			page 7
 
 
  246:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** {
@@ -418,7 +418,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 1
  300:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
  301:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
  302:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 8
+ARM GAS  D:\apps\VSCode\data\tmp\ccM5ObKW.s 			page 8
 
 
  303:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @brief  Force AHB1 peripherals reset.
@@ -478,7 +478,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 1
  357:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1SMENR    CORDICSMEN    LL_AHB1_GRP1_EnableClockStopSleep\n
  358:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1SMENR    FMACSMEN      LL_AHB1_GRP1_EnableClockStopSleep\n
  359:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1SMENR    FLASHSMEN     LL_AHB1_GRP1_EnableClockStopSleep\n
-ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 9
+ARM GAS  D:\apps\VSCode\data\tmp\ccM5ObKW.s 			page 9
 
 
  360:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB1SMENR    SRAM1SMEN     LL_AHB1_GRP1_DisableClockStopSleep\n
@@ -538,7 +538,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 1
  414:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
  415:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
  416:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
-ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 10
+ARM GAS  D:\apps\VSCode\data\tmp\ccM5ObKW.s 			page 10
 
 
  417:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @brief  Enable AHB2 peripherals clock.
@@ -598,7 +598,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 1
  471:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2ENR      ADC12EN       LL_AHB2_GRP1_IsEnabledClock\n
  472:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2ENR      ADC345EN      LL_AHB2_GRP1_IsEnabledClock\n
  473:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2ENR      DAC1EN        LL_AHB2_GRP1_IsEnabledClock\n
-ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 11
+ARM GAS  D:\apps\VSCode\data\tmp\ccM5ObKW.s 			page 11
 
 
  474:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2ENR      DAC2EN        LL_AHB2_GRP1_IsEnabledClock\n
@@ -658,7 +658,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 1
  528:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOG
  529:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_ADC12
  530:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_ADC345 (*)
-ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 12
+ARM GAS  D:\apps\VSCode\data\tmp\ccM5ObKW.s 			page 12
 
 
  531:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_DAC1
@@ -718,7 +718,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 1
  585:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   SET_BIT(RCC->AHB2RSTR, Periphs);
  586:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** }
  587:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** 
-ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 13
+ARM GAS  D:\apps\VSCode\data\tmp\ccM5ObKW.s 			page 13
 
 
  588:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** /**
@@ -778,7 +778,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 1
  642:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2SMENR    ADC345SMEN    LL_AHB2_GRP1_EnableClockStopSleep\n
  643:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2SMENR    DAC1SMEN      LL_AHB2_GRP1_EnableClockStopSleep\n
  644:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2SMENR    DAC2SMEN      LL_AHB2_GRP1_EnableClockStopSleep\n
-ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 14
+ARM GAS  D:\apps\VSCode\data\tmp\ccM5ObKW.s 			page 14
 
 
  645:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB2SMENR    DAC3SMEN      LL_AHB2_GRP1_EnableClockStopSleep\n
@@ -838,7 +838,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 1
  699:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
  700:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOA
  701:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOB
-ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 15
+ARM GAS  D:\apps\VSCode\data\tmp\ccM5ObKW.s 			page 15
 
 
  702:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOC
@@ -898,7 +898,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 1
  756:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @rmtoll AHB3ENR      FMCEN         LL_AHB3_GRP1_IsEnabledClock\n
  757:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         AHB3ENR      QSPIEN        LL_AHB3_GRP1_IsEnabledClock
  758:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
-ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 16
+ARM GAS  D:\apps\VSCode\data\tmp\ccM5ObKW.s 			page 16
 
 
  759:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_AHB3_GRP1_PERIPH_FMC (*)
@@ -958,7 +958,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 1
  813:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @retval None
  814:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   */
  815:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** __STATIC_INLINE void LL_AHB3_GRP1_ReleaseReset(uint32_t Periphs)
-ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 17
+ARM GAS  D:\apps\VSCode\data\tmp\ccM5ObKW.s 			page 17
 
 
  816:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h **** {
@@ -1018,7 +1018,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 1
  870:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     TIM6EN        LL_APB1_GRP1_EnableClock\n
  871:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     TIM7EN        LL_APB1_GRP1_EnableClock\n
  872:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     CRSEN         LL_APB1_GRP1_EnableClock\n
-ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 18
+ARM GAS  D:\apps\VSCode\data\tmp\ccM5ObKW.s 			page 18
 
 
  873:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     RTCAPBEN      LL_APB1_GRP1_EnableClock\n
@@ -1078,7 +1078,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 1
  927:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR2     I2C4EN        LL_APB1_GRP2_EnableClock\n
  928:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR2     UCPD1EN       LL_APB1_GRP2_EnableClock
  929:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
-ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 19
+ARM GAS  D:\apps\VSCode\data\tmp\ccM5ObKW.s 			page 19
 
 
  930:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP2_PERIPH_LPUART1
@@ -1138,7 +1138,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 1
  984:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_UART4 (*)
  985:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_UART5 (*)
  986:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_I2C1
-ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 20
+ARM GAS  D:\apps\VSCode\data\tmp\ccM5ObKW.s 			page 20
 
 
  987:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_I2C2
@@ -1198,7 +1198,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 1
 1041:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     PWREN         LL_APB1_GRP1_DisableClock\n
 1042:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     I2C3EN        LL_APB1_GRP1_DisableClock\n
 1043:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1ENR1     LPTIM1EN      LL_APB1_GRP1_DisableClock
-ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 21
+ARM GAS  D:\apps\VSCode\data\tmp\ccM5ObKW.s 			page 21
 
 
 1044:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
@@ -1258,7 +1258,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 1
 1098:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1RSTR1     TIM4RST        LL_APB1_GRP1_ForceReset\n
 1099:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1RSTR1     TIM5RST        LL_APB1_GRP1_ForceReset\n
 1100:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1RSTR1     TIM6RST        LL_APB1_GRP1_ForceReset\n
-ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 22
+ARM GAS  D:\apps\VSCode\data\tmp\ccM5ObKW.s 			page 22
 
 
 1101:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         APB1RSTR1     TIM7RST        LL_APB1_GRP1_ForceReset\n
@@ -1318,7 +1318,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 1
   60:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_pwr.c **** 
   61:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_pwr.c ****   /* Release reset of PWR clock */
   62:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_pwr.c ****   LL_APB1_GRP1_ReleaseReset(LL_APB1_GRP1_PERIPH_PWR);
-ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 23
+ARM GAS  D:\apps\VSCode\data\tmp\ccM5ObKW.s 			page 23
 
 
   51              		.loc 1 62 3 is_stmt 1 view .LVU5
@@ -1378,7 +1378,7 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 1
 1195:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_SPI3
 1196:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USART2
 1197:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USART3
-ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 24
+ARM GAS  D:\apps\VSCode\data\tmp\ccM5ObKW.s 			page 24
 
 
 1198:Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_UART4 (*)
@@ -1428,13 +1428,13 @@ ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 1
   80              		.file 6 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h"
   81              		.file 7 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h"
   82              		.file 8 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h"
-ARM GAS  D:\apps\VSCode\data\tmp\ccyagyHq.s 			page 25
+ARM GAS  D:\apps\VSCode\data\tmp\ccM5ObKW.s 			page 25
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32g4xx_ll_pwr.c
-D:\apps\VSCode\data\tmp\ccyagyHq.s:18     .text.LL_PWR_DeInit:0000000000000000 $t
-D:\apps\VSCode\data\tmp\ccyagyHq.s:27     .text.LL_PWR_DeInit:0000000000000000 LL_PWR_DeInit
-D:\apps\VSCode\data\tmp\ccyagyHq.s:71     .text.LL_PWR_DeInit:0000000000000018 $d
+D:\apps\VSCode\data\tmp\ccM5ObKW.s:18     .text.LL_PWR_DeInit:0000000000000000 $t
+D:\apps\VSCode\data\tmp\ccM5ObKW.s:27     .text.LL_PWR_DeInit:0000000000000000 LL_PWR_DeInit
+D:\apps\VSCode\data\tmp\ccM5ObKW.s:71     .text.LL_PWR_DeInit:0000000000000018 $d
 
 NO UNDEFINED SYMBOLS

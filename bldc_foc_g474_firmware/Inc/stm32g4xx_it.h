@@ -59,6 +59,7 @@ void SysTick_Handler(void);
 void ADC1_2_IRQHandler(void) __attribute__((section (".ccmram"))); 
 void EXTI9_5_IRQHandler(void);
 void TIM7_DAC_IRQHandler(void);
+void FDCAN1_IT0_IRQHandler(void);
 void HRTIM1_FLT_IRQHandler(void);
 /* USER CODE BEGIN EFP */
 
